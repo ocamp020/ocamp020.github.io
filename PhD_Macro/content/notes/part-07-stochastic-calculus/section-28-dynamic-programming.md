@@ -11,7 +11,7 @@ for the whole sequence of actions at once.
 
 ## Discrete time overview
 
-\subsubsection*{Dynamic Programming}
+### Dynamic Programming
 
 To build up to the concepts of dynamic programming in continuous time
 we will first consider a simple discrete time problem of a firm that
@@ -186,7 +186,8 @@ version of the model.
     c & =\theta k^{\alpha}l^{1-\alpha}-\beta\alpha\theta k^{\alpha}l^{1-\alpha}
     \end{align*}
 
-\subsubsection*{Optimal Stopping Time }
+<a id="ref-subsec-optimal-stopping-time" class="course-anchor"></a>
+### Optimal Stopping Time
 
 There is another type of problem that deserves special treatment.
 Optimal stopping time problems are at the core of the continuous time
@@ -200,6 +201,7 @@ choice is to do nothing. To characterize these problems let $\Omega\left(x\right
 be the termination payoff received once the action is taken (and time
 is stopped). It depends on the value of state $x$. The Bellman equation
 is now:
+<a id="ref-eq-000020bellman-000020for-000020stopping-000020time-000020in-000020discrete-000020time" class="course-anchor"></a>
 \begin{equation}
 V\left(x\right)=\max\left\{ \Omega\left(x\right),\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{'}\right)|x,u\right]\right\}
 \end{equation}
@@ -292,6 +294,7 @@ Rearranging we get:
 \end{equation}
 Taking the limit as $\Delta t\to0$ we get our continuous time Bellman
 equation:
+<a id="ref-eq-000020continuous-000020time-000020bellman" class="course-anchor"></a>
 \begin{equation}
 \rho V\left(x\right)=\max_{u}\pi\left(u,x\right)+\frac{1}{dt}E\left[dV\left(x\right)|x,u\right]
 \end{equation}
@@ -300,7 +303,7 @@ where
 \frac{E\left[dV\right]}{dt}=\lim_{\Delta t\to0}\frac{1}{\Delta t}E\left[\Delta V\right]
 \]
 
-Equation () works
+Equation ([Equation](#ref-eq-000020continuous-000020time-000020bellman)) works
 just like a non-arbitrage condition. We can thing of the agent as
 holding an asset with value $V$. The LHS gives the normal rate of
 return per unit time that the agent requires to hold the asset, given
@@ -310,38 +313,40 @@ capital gains (brought up by changes in the value of the asset).
 
 We can further characterize the problem given knowledge of the stochastic
 process that $x$ follows. This will allow us to evaluate the expectation
-in (). If $x$
-follows an Ito process, as in equation (),
+in ([Equation](#ref-eq-000020continuous-000020time-000020bellman)). If $x$
+follows an Ito process, as in equation ([Equation](section-26-stochastic-processes.md#ref-eq-000020def-000020ito-000020process)),
 then Ito's Lemma gives the following result:
 \begin{align*}
 dV & =\left(\mu\left(x,t\right)V^{'}+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{''}\right)dt+\sigma\left(x,t\right)V^{'}dW\\
 E\left[dV\right] & =\left(\mu\left(x,t\right)V^{'}+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{''}\right)dt
 \end{align*}
 Replacing we get the Hamilton-Jacobi-Bellman equation:
+<a id="ref-eq-000020hjb" class="course-anchor"></a>
 \begin{equation}
 \rho V\left(x\right)=\max_{u}\pi\left(u,x\right)+\mu\left(x,t\right)V^{'}\left(x\right)+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{''}\left(x\right)
 \end{equation}
 We can take FOC with respect to $u$ and then get a differential equation
 for $V$ that we can solve.
 
-If $x$ follows a Poisson process, like the one in equation (),
-we can obtain a similar result. From equation ()
+If $x$ follows a Poisson process, like the one in equation ([Equation](section-26-stochastic-processes.md#ref-eq-000020poisson-000020process)),
+we can obtain a similar result. From equation ([Equation](section-27-ito-s-lemma.md#ref-eq-000020ito-s-000020lemma-000020for-000020poisson))
 we can compute $E\left[dV\right]$:
 \[
 E\left[dV\right]=\left(f\left(x,t\right)V^{'}\left(x\right)\right)dt+\lambda E_{u}\left[V\left(x+ug\left(x,t\right)\right)-V\left(x\right)\right]dt
 \]
 
-\subsubsection*{Optimal Stopping Time and the Smooth Pasting Condition}
+### Optimal Stopping Time and the Smooth Pasting Condition
 
-We now go back to the stopping time problem reviewed in Section .
+We now go back to the stopping time problem reviewed in [Optimal Stopping Time](#ref-subsec-optimal-stopping-time).
 Consider then the problem of an agent that is engaged in some activity
 (say running a firm). The agent gets a flow payoff of $\pi\left(x\right)$
 if she continues with the activity, and $\Omega\left(x,t\right)$
 if she quits the activity (stops). The value of the agent is:
+<a id="ref-eq-bellman-000020eq-000020stopping-000020time" class="course-anchor"></a>
 \begin{equation}
 V\left(x,t\right)=\max\left\{ \Omega\left(x,t\right),\pi\left(x\right)\Delta t+\frac{1}{1+\rho\Delta t}E\left[V\left(x+dx,t+\Delta t\right)\right]\right\}
 \end{equation}
-where $x$ follows a diffusion process and in equation ().
+where $x$ follows a diffusion process and in equation ([Equation](section-26-stochastic-processes.md#ref-eq-000020def-000020ito-000020process)).
 We assume that $\Omega$ is continuous and weakly increasing in $x$.
 
 In order to solve the problem we need to find regions of $x$ where
@@ -474,7 +479,7 @@ the optimality of the strategy of stopping at $x^{\star}\left(t\right)$.
     \[
     V^{P}\left(x\right)=E\left[\int_{0}^{\infty}e^{-\rho t}e^{x}dt\right]
     \]
-    We can solve this expectation using the results in example .
+    We can solve this expectation using the results in [Example](section-27-ito-s-lemma.md#ref-ex-000020expected-000020value-000020of-000020geometric-000020brownian-000020motion).
     We get:
     \[
     V^{P}\left(x\right)=\frac{x}{\rho-\left(\mu+\frac{1}{2}\sigma^{2}\right)}

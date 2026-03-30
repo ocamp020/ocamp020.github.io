@@ -1,3 +1,4 @@
+<a id="ref-sec-non-stochastic-dp" class="course-anchor"></a>
 # Non-Stochastic Dynamic Programming
 
 > Part: Dynamic Programming
@@ -11,8 +12,7 @@ v\left(x\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta v
 where the solution is given by a function $v$ satisfying the equation.
 The final objective is to establish conditions for a solution to exist
 and characterize the properties of such a solution. To do this some
-mathematical background has to be set up, this is done in Section
-where the contraction mapping
+mathematical background has to be set up, this is done in [Contraction Mapping Theorem](#ref-sec-contraction-mapping-theorem) where the contraction mapping
 theorem is stated and proven, and sufficient conditions for an operator
 to be a contraction are established.
 
@@ -20,7 +20,7 @@ Once the basic tools are in place the problem at hand is to express
 usual sequential problems (stated in terms of infinite sums) in a
 recursive way, the equivalence between the two representations of
 the problem is established by optimality principle which is presented
-in Section , along with it the conditions
+in [The Bellman Equation](#ref-sec-the-bellman-equation), along with it the conditions
 for existence of a solution and the properties it can inherit from
 the objective function $F$ and the correspondence $\Gamma$ are listed.
 
@@ -29,6 +29,7 @@ Section 3.2 and all of chapter 4 of [Stokey et al. (1989)](https://books.google.
 Most proofs are relegated to the book because their treatment would
 require more time than the one the course has.
 
+<a id="ref-sec-contraction-mapping-theorem" class="course-anchor"></a>
 ## Contraction Mapping Theorem
 
 Three results are covered in this section that will be essential for
@@ -360,6 +361,7 @@ for vector valued functions. I first define the relevant set of functions.
     \end{eqnarray*}
     This is the definition of $T$ being a contraction with modulus $\beta$.
 
+<a id="ref-sec-the-bellman-equation" class="course-anchor"></a>
 ## The Bellman Equation
 
 We start with the infinite horizon consumption savings model. This
@@ -470,10 +472,12 @@ $g$, for that extra results are needed.
 
 The problem to be studied in terms of infinite sequences is of the
 form:
+<a id="ref-eq-000020sp" class="course-anchor"></a>
 \begin{equation}
 v^{\star}\left(x_{0}\right)=\sup_{\left\{ x_{t+1}\right\} _{t=0}^{\infty}}\sum_{t=0}^{\infty}\beta^{t}F\left(x_{t},x_{t+1}\right)\qquad\mbox{s.t. }x_{t+1}\in\Gamma\left(x_{t}\right)
 \end{equation}
 Corresponding to this problem is the following functional equation:
+<a id="ref-eq-000020fe" class="course-anchor"></a>
 \begin{equation}
 v\left(x\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta v\left(y\right)\right\}
 \end{equation}
@@ -522,13 +526,13 @@ the following limit exists (although it might be infinite):
     Assumption A.2 holds if $F$ is bounded and $\beta\in\left(0,1\right)$.
 
 Under assumptions A.1 and A.2 $\Pi\left(x_{0}\right)$ is nonempty
-valued and problem () is well posed, moreover they
+valued and problem ([Equation](#ref-eq-000020sp)) is well posed, moreover they
 are enough to guarantee that the function $v^{\star}$ satisfies equation
-().
+([Equation](#ref-eq-000020fe)).
 !!! abstract "Proposition"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.1 and
-    A.2, then $v^{\star}$ is a solution to the FE ():
+    A.2, then $v^{\star}$ is a solution to the FE ([Equation](#ref-eq-000020fe)):
     \[
     v^{\star}\left(x\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta v^{\star}\left(y\right)\right\}
     \]
@@ -538,7 +542,7 @@ is needed.
 !!! abstract "Proposition"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.1 and
-    A.2, if $v$ is a solution to the FE () and for
+    A.2, if $v$ is a solution to the FE ([Equation](#ref-eq-000020fe)) and for
     all $x_{0}\in X$ and $\underline{x}\in\Pi\left(x_{0}\right)$ it
     holds that:
     \[
@@ -549,24 +553,25 @@ is needed.
 The previous two propositions establish equivalence between the value
 of the two problems. It can also be shown that the optimizer of the
 SP problem also solves the FE in the following sense:
+<a id="ref-eq-000020" class="course-anchor"></a>
 !!! abstract "Proposition"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.1 and
     A.2. Let $\underline{x}^{\star}\in\Pi\left(x_{0}\right)$ be a feasible
-    plan that attains the supremum in (), then:
+    plan that attains the supremum in ([Equation](#ref-eq-000020sp)), then:
     \begin{equation}
     v^{\star}\left(x_{t}^{\star}\right)=F\left(x_{t}^{\star},x_{t+1}^{\star}\right)+\beta v^{\star}\left(x_{t+1}^{\star}\right)
     \end{equation}
 
 Again, under an extra boundedness condition a plan that solves the
-problem in () also solves the problem in the SP.
+problem in ([Equation](#ref-eq-000020fe)) also solves the problem in the SP.
 !!! abstract "Proposition"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.1 and
     A.2. Let $\underline{x}^{\star}\in\Pi\left(x_{0}\right)$ be a feasible
-    plan that satisfies equation () and for which
+    plan that satisfies equation ([Equation](#ref-eq-000020)) and for which
     $\limsup\beta^{t}v^{\star}\left(x_{t}^{\star}\right)\leq0$, then
-    $\underline{x}^{\star}$ attains the supremum in ()
+    $\underline{x}^{\star}$ attains the supremum in ([Equation](#ref-eq-000020sp))
     for initial state $x_{0}$.
 
 Now we can define the optimal policy correspondence as:
@@ -579,12 +584,13 @@ that any optimal plan of the sequence problem is generated by $G^{\star}$
 and that if a plan is generated by $G^{\star}$ and satisfies the
 additional boundedness condition then it is also optimal.
 
-Now we can concentrate in studying the properties of the DP in ().
+Now we can concentrate in studying the properties of the DP in ([Equation](#ref-eq-000020fe)).
 
 ## Bounded problems
 
 Now we concentrate in establishing properties of the solution to the
 following problem:
+<a id="ref-eq-000020fe-1" class="course-anchor"></a>
 \begin{equation}
 v\left(x\right)=\max_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta v\left(y\right)\right\}
 \end{equation}
@@ -609,15 +615,16 @@ The function $F:\mbox{Gr}\left(\Gamma\right)\to\mathbb{R}$ is bounded
 and continuous and $\beta\in\left(0,1\right)$.
 
 Because $F$ is bounded and continuous it is natural to think that
-the solution to equation () lies in the set $C\left(X\right)$.
+the solution to equation ([Equation](#ref-eq-000020fe-1)) lies in the set $C\left(X\right)$.
 What follows it to establish the existence of a solution by means
 of the contraction mapping theorem.
 
 Define a mapping $T:C\left(X\right)\to C\left(X\right)$ as:
+<a id="ref-eq-000020mapping-000020t" class="course-anchor"></a>
 \begin{equation}
 Tf\left(x\right)=\max_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta f\left(y\right)\right\}
 \end{equation}
-The solution to () is then a $v\in C\left(X\right)$
+The solution to ([Equation](#ref-eq-000020fe-1)) is then a $v\in C\left(X\right)$
 such that $v=Tv$. The following proposition establishes that $T$
 is a contraction from $C\left(X\right)$ into itself and also some
 properties of the policy correspondence $G$.
@@ -628,9 +635,9 @@ properties of the policy correspondence $G$.
     function on $X$ along with the sup norm. Then:
     
     
-    1. $T$ defined in () maps $C\left(X\right)$
+    1. $T$ defined in ([Equation](#ref-eq-000020mapping-000020t)) maps $C\left(X\right)$
     into itself.
-    1. $T$ defined in () has a unique fixed
+    1. $T$ defined in ([Equation](#ref-eq-000020mapping-000020t)) has a unique fixed
     point $v\in C\left(X\right)$, and for all $v_{0}\in C\left(X\right)$
     \[
     \left\Vert T^{n}v_{0}-v\right\Vert \leq\beta^{n}\left\Vert v_{0}-v\right\Vert
@@ -691,7 +698,7 @@ $\Gamma$ is monotone in the sense that if $x\leq x^{'}$ the $\Gamma\left(x\right
 !!! abstract "Proposition"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.3 to A.6,
-    and let $v$ be the unique solution to (), then
+    and let $v$ be the unique solution to ([Equation](#ref-eq-000020fe-1)), then
     $v$ is strictly increasing.
 
 ??? success "Proof"
@@ -724,7 +731,7 @@ $\Gamma$ has a convex graph.
 !!! abstract "Proposition"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.3, A.4,
-    A.7 and A.8, and let $v$ be the unique solution to (),
+    A.7 and A.8, and let $v$ be the unique solution to ([Equation](#ref-eq-000020fe-1)),
     then $v$ is strictly concave and $G$ is a continuous single valued
     function.
 
@@ -781,7 +788,7 @@ $\mbox{Gr}\left(A\right)$.
 !!! abstract "Proposition"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.3, A.4,
-    and A.7 to A.9, and let $v$ be the unique solution to ().
+    and A.7 to A.9, and let $v$ be the unique solution to ([Equation](#ref-eq-000020fe-1)).
     If $x_{0}\in\mbox{Int}X$ and $g\left(x_{0}\right)\in\mbox{Int}\Gamma\left(x_{0}\right)$
     then $v$ is continuously differentiable at $x_{0}$ with derivatives
     given by:

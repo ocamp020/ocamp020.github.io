@@ -1,3 +1,4 @@
+<a id="ref-sec-the-stieltjes-integral" class="course-anchor"></a>
 # The Stieltjes integral
 
 > Part: Random Variables and Probability
@@ -122,7 +123,7 @@ show the generality of this type of measure:
     \]
     Because $f$ is non-negative and integrable wrt all Lebesgue-measurable
     subsets of $\left[a,b\right]$ $\left({\cal B}_{\left[a,b\right]}\right)$
-    we know by proposition ()
+    we know by proposition ([Proposition](section-24-the-lebesgue-integral.md#ref-prop-000020inducing-000020a-000020measure))
     that
     \[
     \mu_{F}\left(A\right)=\int_{A}f\left(x\right)dx

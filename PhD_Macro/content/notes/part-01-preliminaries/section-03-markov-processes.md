@@ -1,8 +1,9 @@
+<a id="ref-sec-markov-processes" class="course-anchor"></a>
 # Markov Processes
 
 > Part: Preliminaries
 
-As we will see in Section  a great
+As we will see in [The Bellman Equation](../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.md#ref-sec-the-bellman-equation) a great
 deal of problems can be expressed in a recursive setting, and the
 use of recursive methods can provide solution to problems that would
 otherwise be impossible to handle. When dealing with random variables
@@ -16,8 +17,9 @@ depends on the realization of the previous element. Markov processes
 are processes that behave in this way.
 
 The objective is to introduce shocks to a dynamic program, so we start
-by considering the deterministic dynamic program of Section ,
+by considering the deterministic dynamic program of [The Bellman Equation](../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.md#ref-sec-the-bellman-equation),
 characterized by the Bellman equation:
+<a id="ref-eq-000020fe-2" class="course-anchor"></a>
 \begin{equation}
 v\left(x\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta v\left(y\right)\right\}
 \end{equation}
@@ -26,12 +28,13 @@ the problem, $z$ is a state of the problem and its drawn each period
 from a distribution characterized by the measure $\lambda$. Formally
 consider $\left(Z,{\cal Z},\lambda\right)$ a probability space, then
 we can define the problem to be::
+<a id="ref-eq-000020fe-3" class="course-anchor"></a>
 \begin{equation}
 v\left(x,z\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y,z\right)+\beta\int v\left(y,z^{'}\right)\lambda\left(dz^{'}\right)\right\}
 \end{equation}
 Recall that $\lambda:{\cal Z}\to\mathbb{R}_{+}$ maps sets of the
 $\sigma$-algebra ${\cal Z}$ to real numbers. The problem above can
-be solved using the results of Sections () to (),
+be solved using the results of Sections ([Measure](../part-06-random-variables-and-probability/section-22-measure.md#ref-sec-measure)) to ([The Stieltjes integral](../part-06-random-variables-and-probability/section-25-the-stieltjes-integral.md#ref-sec-the-stieltjes-integral)),
 but it is not general enough for our purposes because the distribution
 of $z$ is fixed, and each draw is taken (each period) from the same
 distribution.
@@ -42,6 +45,7 @@ $Q:Z\times{\cal Z}\to\mathbb{R}$, such that for all $z\in Z$ it
 holds that $Q\left(z,\cdot\right)$ is a probability distribution
 for $z^{'}$. This is called a transition function and it allows to
 express the problem as:
+<a id="ref-eq-000020fe-3-1" class="course-anchor"></a>
 \begin{equation}
 v\left(x,z\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y,z\right)+\beta\int v\left(y,z^{'}\right)Q\left(z,dz^{'}\right)\right\}
 \end{equation}
@@ -141,7 +145,7 @@ proofs go in measure theory.
     is also measurable because the sum and scalar product of measurable
     functions is also measurable .
     - Let $f$ be an arbitrary nonnegative, extended real value, measurable
-    function. By proposition
+    function. By [Proposition](../part-06-random-variables-and-probability/section-23-measurable-functions.md#ref-simple-000020functions-000020and-000020measurability)
     we know that $f$ can be expressed as the limit of point-wise convergent
     sequence of simple functions because it is measurable and nonnegative.
     So for all $z$ we have:
@@ -152,8 +156,8 @@ proofs go in measure theory.
     & = & \lim T\phi_{n}\left(z\right)
     \end{eqnarray*}
     where the third step of interchanging the limit and the integral follows
-    from Lebesgue's Monotone Convergence theorem. (Note: The theorem states that if $\left\ f_n\right\ $ is a monotone increasing sequence of nonnegative measurable functions then that converges pointwise to $f$ then $\int fd\mu=\lim\int f_nd\mu$. Recall from proposition that the sequence $\left\ \phi_n\right\ $ of simple functions can be chosen to be monotone increasing.) Finally the pointwise limit of measurable functions is a measurable
-    function (Proposition ).
+    from Lebesgue's Monotone Convergence theorem. (Note: The theorem states that if $\left\ f_n\right\ $ is a monotone increasing sequence of nonnegative measurable functions then that converges pointwise to $f$ then $\int fd\mu=\lim\int f_nd\mu$. Recall from [Proposition](../part-06-random-variables-and-probability/section-23-measurable-functions.md#ref-simple-000020functions-000020and-000020measurability) that the sequence $\left\ \phi_n\right\ $ of simple functions can be chosen to be monotone increasing.) Finally the pointwise limit of measurable functions is a measurable
+    function ([Proposition](../part-06-random-variables-and-probability/section-23-measurable-functions.md#ref-prop-000020pointwise-000020limit-000020and-000020measurablility)).
     The result follows because $T\phi_{n}$ is measurable by the previous
     case.
     \end{casenv}
@@ -246,12 +250,14 @@ of $z$ in the $n^{th}$ period.
 
 As a side note a transition function can have stronger properties
 that are of great use in stochastic dynamic programming:
+<a id="ref-def-feller-property" class="course-anchor"></a>
 !!! info "Definition: Feller Property"
 
     A transition
     function $Q$ has the feller property if its Markov operator maps
     the set of continuous bounded function into itself. $T:C\left(Z\right)\to C\left(Z\right)$.
 
+<a id="ref-def-000020monotonicity-000020markov-000020" class="course-anchor"></a>
 !!! info "Definition"
 
     **(Monotone
@@ -271,6 +277,7 @@ be a measurable space and for $t<\infty$ let $\left(Z^{t},{\cal Z}^{t}\right)=\l
 be a product space. Now let $Q$ be a transition function on $\left(Z,{\cal Z}\right)$.
 A probability measure on the sequence given $z_{0}$, the initial
 value of the variable is:
+<a id="ref-def-probability-measure-sequences" class="course-anchor"></a>
 !!! info "Definition"
 
     **(Probability measure
@@ -314,6 +321,7 @@ the existence of a measure for infinite sequences that coincides with
 our notion of measure for finite-measurable rectangles.
 
 Now we can define what a stochastic process is:
+<a id="ref-def-stochastic-process" class="course-anchor"></a>
 !!! info "Definition: Stochastic Process"
 
     Let $\left(\Omega,{\cal F},P\right)$
@@ -704,6 +712,7 @@ set and a limit distribution always exist, but they need not be unique,
 and although the sequence $\left\{ \Pi^{n}\right\} $ need not converge,
 the sequence $\left\{ \frac{1}{n}\underset{k=0}{\overset{n}{\sum}}\Pi^{k}\right\} $
 always converges, and its limit gives away the invariant distributions.
+<a id="ref-thm-000020markov-000020chains" class="course-anchor"></a>
 !!! abstract "Theorem"
 
     Let $Z=\left(z_{1},\ldots,z_{l}\right)$
@@ -726,10 +735,11 @@ We can strengthen these results by imposing extra structure on $\Pi$.
 We can get uniqueness of the ergodic set and the invariant distribution
 under a ``reachability'' condition (at least one state should be
 reachable in finite time starting from anywhere).
+<a id="ref-thm-000020markov-000020chains-0000202" class="course-anchor"></a>
 !!! abstract "Theorem"
 
     Let $Z$ and $\Pi$
-    as in Theorem . $\Pi$ has a
+    as in [Theorem](#ref-thm-000020markov-000020chains). $\Pi$ has a
     unique ergodic set if and only if there exists a state $z_{j}$ such
     that for all $i\in\left(1,\ldots,l\right)$ there exist $n\geq1$
     such that $\pi_{ij}^{\left(n\right)}>0$.
@@ -740,10 +750,11 @@ reachable in finite time starting from anywhere).
 
 The previous result still does not rule out cyclicality in the ergodic
 set. We can get this under a ``mixing'' condition.
+<a id="ref-thm-000020markov-000020chains-0000203" class="course-anchor"></a>
 !!! abstract "Theorem"
 
     Let $Z$ and $\Pi$
-    as in Theorem . For $n=1,2,\ldots$
+    as in [Theorem](#ref-thm-000020markov-000020chains). For $n=1,2,\ldots$
     and $j=1,\ldots,l$ define $\epsilon_{j}^{\left(n\right)}=\underset{i}{\min}\pi_{ij}^{\left(n\right)}$
     and $\epsilon^{\left(n\right)}=\underset{j=1}{\overset{l}{\sum}}\epsilon_{j}^{\left(n\right)}$.
     $Z$ has a unique ergodic set without cyclically moving subsets if
@@ -833,6 +844,7 @@ the conditional distributions $\left(Q\left(z_{n},\cdot\right)\right)$
 and unconditional distributions $\left(T^{\star}\lambda_{n}\right)$.
 It turns out that continuity is enough to guarantee that an invariant
 distribution exists.
+<a id="ref-thm-feller-invariant-distribution" class="course-anchor"></a>
 !!! abstract "Theorem"
 
     If $Z\subseteq\mathbb{R}^{l}$
@@ -843,7 +855,7 @@ distribution exists.
 Yet, continuity is not enough to rule out the existence of many invariant
 distributions or of cycling sets. Monotonicity is needed for this.
 As before it is first useful to take a detour on what monotonicity
-(as in Definition )
+(as in [Definition: Monotone transition functions](#ref-def-000020monotonicity-000020markov-000020))
 implies for distribution functions. We then have to impose an ordering
 of distribution functions to be able to talk about monotonicity.
 !!! info "Definition: First Order Stochastic Dominance"
@@ -856,6 +868,7 @@ of distribution functions to be able to talk about monotonicity.
 In what follows we call a sequence $\left\{ \lambda_{n}\right\} $
 monotone if $\lambda_{n+1}\geq\lambda_{n}$ for all $n$, or if $\lambda_{n+1}\leq\lambda_{n}$
 for all $n$. We can now establish the following result:
+<a id="ref-prop-monotonicity-markov" class="course-anchor"></a>
 !!! abstract "Proposition"
 
     The following three statements are
@@ -873,8 +886,8 @@ of the Markov operator directly into monotonicity of the transition
 function (``better'' states lead to ``better'' distributions).
 
 Now we introduce the final condition needed for the main result of
-this section. It is a mixing condition akin to that in Theorems
-and , along with a restriction
+this section. It is a mixing condition akin to that in Theorems [Theorem](#ref-thm-000020markov-000020chains-0000202)
+and [Theorem](#ref-thm-000020markov-000020chains-0000203), along with a restriction
 on the form of the set $Z$. To see why it is necessary to go SLP
 exercises 12.12 and 12.13.
 \begin{assumption*}
@@ -901,6 +914,7 @@ it is possible to do it from anywhere (under a monotonicity assumption).
     \]
 
 Finally we establish the convergence result.
+<a id="ref-thm-monotone-invariant-distribution" class="course-anchor"></a>
 !!! abstract "Theorem"
 
     Let $Z=\left[a,b\right]\in\mathbb{R}^{l}$
@@ -911,12 +925,12 @@ Finally we establish the convergence result.
 
 This completes the tools we need to tackle stochastic dynamic programming
 problems. In that note, it is interesting to note the similarities
-between Theorem  and the
+between [Theorem](#ref-thm-monotone-invariant-distribution) and the
 contraction mapping theorem and Blackwell's conditions used below
 to establish a unique solution for Bellman equations and the convergence
 to that solution from any starting point by iteratively applying the
-Bellman operator(see Section ).
-While Theorem  does not
+Bellman operator(see [Contraction Mapping Theorem](../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.md#ref-sec-contraction-mapping-theorem)).
+While [Theorem](#ref-thm-monotone-invariant-distribution) does not
 establish a sense of distance (inherent in complete metric spaces)
 it does provide a very similar answer to the question of the existence
 and uniqueness of a fixed point characterizing the solution to a functional

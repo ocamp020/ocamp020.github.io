@@ -173,7 +173,7 @@ y_{s}=z_{s}\left(\alpha_{s}^{1/\theta_{s}}n_{s}^{(\theta_{s}-1)/\theta_{s}}\;+\;
     \]
     Then the second-order approximation becomes
     \[
-    d\log Y\;\approx\;\lambda_{0}\Delta\log z_{0}\;-\;\frac{1}{2}\left[\sum_{s=1}^{S}(1-\theta_{s})\lambda_{s}\omega_{s0}(1-\omega_{s0})\;+\;(1-\theta_{C})\,\mathrm{Var}_{\beta}(\Omega_{:,0})\right](/PhD_Macro/d\log z_{0})^{2},
+    d\log Y\;\approx\;\lambda_{0}\Delta\log z_{0}\;-\;\frac{1}{2}\left[\sum_{s=1}^{S}(1-\theta_{s})\lambda_{s}\omega_{s0}(1-\omega_{s0})\;+\;(1-\theta_{C})\,\mathrm{Var}_{\beta}(\Omega_{:,0})\right](d\log z_{0})^{2},
     \]
     where $\Omega_{:,0}=(\omega_{10},\dots,\omega_{S0})$ the first column
     of the input-output matrix, that has the energy intensities of the

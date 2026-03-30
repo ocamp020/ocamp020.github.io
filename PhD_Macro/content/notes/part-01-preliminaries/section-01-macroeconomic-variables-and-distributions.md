@@ -29,7 +29,7 @@ of outcomes. Methodologically, these two types of aggregates are brought
 together by the study of Markov processes and their stationary distributions.
 The following Sections are devoted to establishing the properties
 of Markov processes and their relationship to theories of individual
-behavior and the distribution of outcomes they imply. Part
+behavior and the distribution of outcomes they imply. [Random Variables and Probability](../part-06-random-variables-and-probability/section-22-measure.md#ref-part-random-variables-and-probability)
 covers the basics of measure theory and probability needed for the
 study of Markov processes.
 

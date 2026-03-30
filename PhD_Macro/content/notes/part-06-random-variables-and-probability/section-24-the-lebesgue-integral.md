@@ -30,13 +30,14 @@ is then the limit of this sum as the values $y_{i}$ are closer together.
 
 The introduction before of simple functions makes sense when defining
 the Lebesgue integral. Its definition seems intuitive for this class
-of functions and Proposition
+of functions and [Proposition](section-23-measurable-functions.md#ref-simple-000020functions-000020and-000020measurability)
 creates a bridge between them and the more general class of measurable
 functions, thus allowing to extend the Lebesgue integral to this broader
 family.
 
 In what follows we restrict attention to non-negative, real valued
 functions.
+<a id="ref-eq-000020lebesgue-000020integral-000020-000020simple-000020fun" class="course-anchor"></a>
 !!! info "Definition: Lebesgue integral for simple functions"
 
     Let $\left(S,{\cal A},\mu\right)$
@@ -52,7 +53,7 @@ functions.
     \]
     These sets can be empty if there is no element of $s$ in $A$ for
     which $f$ takes a given value. The Lebesgue integral is defined as
-    long as the series in ()
+    long as the series in ([Equation](#ref-eq-000020lebesgue-000020integral-000020-000020simple-000020fun))
     is absolutely convergent. If $f$ takes finitely many values and $\mu$
     is finite (or a probability measure) this condition is satisfied.
 
@@ -94,7 +95,7 @@ properties:
 This definition precludes the integral from being infinite, as shown
 in [Kolmogorov and Fomin (2012, Sec. 29.1)](https://books.google.com/books?id=cbbCAgAAQBAJ), the limit above
 exists provided that the functions $f_{n}$ are integrable (recall
-that it was asked of the sum in ()
+that it was asked of the sum in ([Equation](#ref-eq-000020lebesgue-000020integral-000020-000020simple-000020fun))
 to be finite), moreover it is independent of the choice of sequence
 approximating $f$, this sequence can be furthermore be chosen to
 be strictly increasing ([Stokey et al. 1989](https://books.google.com/books?id=tWYo0QolyLAC)). Yet, the concept of the Lebesgue
@@ -130,6 +131,7 @@ integrals. They are not of particular interest in this course.
 
 Finally it is noted that a non-negative integrable function induces
 a measure on a space, the following proposition makes this clear.
+<a id="ref-prop-000020inducing-000020a-000020measure" class="course-anchor"></a>
 !!! abstract "Proposition"
 
     Let $f$ be a non-negative,

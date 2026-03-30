@@ -165,6 +165,7 @@ complicated.
 In what follows all simple functions will be considered measurable.
 The importance of simple functions is given by the applications of
 the following proposition.
+<a id="ref-prop-000020pointwise-000020limit-000020and-000020measurablility" class="course-anchor"></a>
 !!! abstract "Proposition"
 
     Let
@@ -189,6 +190,7 @@ the following proposition.
 
 The main application is the following result that gives a characterization
 of measurable functions in terms of simple functions:
+<a id="ref-simple-000020functions-000020and-000020measurability" class="course-anchor"></a>
 !!! abstract "Proposition"
 
     A function

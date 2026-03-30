@@ -18,13 +18,73 @@
   }
 
   function convertInternalLinks(markdown) {
-    markdown = markdown.replace(/href="([^"]+)\.md"/g, function (_, target) {
-      return 'href="' + target + '.html"';
+    markdown = markdown.replace(/href="([^"]+)\.md(#[^"]*)?"/g, function (_, target, hash) {
+      return 'href="' + target + '.html' + (hash || "") + '"';
     });
-    markdown = markdown.replace(/\]\(([^)]+)\.md\)/g, function (_, target) {
-      return "](" + target + ".html)";
+    markdown = markdown.replace(/\]\(([^)\s]+)\.md(#[^)]+)?\)/g, function (_, target, hash) {
+      return "](" + target + ".html" + (hash || "") + ")";
     });
     return markdown;
+  }
+
+  function protectInlineDollarMath(text, stash) {
+    let out = "";
+    let i = 0;
+
+    while (i < text.length) {
+      const char = text[i];
+      const prev = i > 0 ? text[i - 1] : "";
+      if (char === "$" && prev !== "\\" && text[i + 1] !== "$") {
+        let j = i + 1;
+        while (j < text.length) {
+          if (text[j] === "\n") {
+            j = -1;
+            break;
+          }
+          if (text[j] === "$" && text[j - 1] !== "\\" && text[j + 1] !== "$") {
+            break;
+          }
+          j += 1;
+        }
+        if (j > i && j < text.length && text[j] === "$") {
+          out += stash(text.slice(i, j + 1));
+          i = j + 1;
+          continue;
+        }
+      }
+      out += char;
+      i += 1;
+    }
+
+    return out;
+  }
+
+  function protectMath(markdown) {
+    const mathBlocks = [];
+    const stash = (value) => {
+      const token = "@@MATH" + mathBlocks.length + "@@";
+      mathBlocks.push(value);
+      return token;
+    };
+
+    let text = markdown;
+    text = text.replace(/\\begin\{(align\*?|equation\*?|gather\*?|multline\*?|eqnarray\*?|cases|split)\}[\s\S]*?\\end\{\1\}/g, stash);
+    text = text.replace(/\\\[[\s\S]*?\\\]/g, stash);
+    text = text.replace(/\$\$[\s\S]*?\$\$/g, stash);
+    text = text.replace(/\\\([\s\S]*?\\\)/g, stash);
+    text = protectInlineDollarMath(text, stash);
+    return { text, mathBlocks };
+  }
+
+  function restoreMath(html, mathBlocks) {
+    return html.replace(/@@MATH(\d+)@@/g, function (_, index) {
+      return mathBlocks[Number(index)] || "";
+    });
+  }
+
+  function renderMarked(markdown) {
+    const protectedMath = protectMath(markdown);
+    return restoreMath(marked.parse(protectedMath.text), protectedMath.mathBlocks);
   }
 
   function dedent(lines) {
@@ -95,7 +155,7 @@
   }
 
   function renderCallout(segment) {
-    const bodyHtml = segment.body ? marked.parse(segment.body) : "";
+    const bodyHtml = segment.body ? renderMarked(segment.body) : "";
     if (segment.type === "details") {
       return (
         '<details class="course-proof">' +
@@ -118,7 +178,7 @@
     return segments
       .map((segment) => {
         if (segment.type === "markdown") {
-          return marked.parse(segment.body);
+          return renderMarked(segment.body);
         }
         return renderCallout(segment);
       })
@@ -152,9 +212,22 @@
   }
 
   function enhanceMath(container) {
-    if (window.MathJax && window.MathJax.typesetPromise) {
-      window.MathJax.typesetPromise([container]);
+    if (!window.MathJax) {
+      return;
     }
+
+    const startup = window.MathJax.startup && window.MathJax.startup.promise
+      ? window.MathJax.startup.promise
+      : Promise.resolve();
+
+    startup
+      .then(() => {
+        if (window.MathJax.typesetPromise) {
+          return window.MathJax.typesetPromise([container]);
+        }
+        return Promise.resolve();
+      })
+      .catch((error) => console.error(error));
   }
 
   function enhancePartMeta(container) {

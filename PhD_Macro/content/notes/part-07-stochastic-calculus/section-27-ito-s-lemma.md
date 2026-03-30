@@ -122,6 +122,7 @@ V\left[x\right] & =E\left[x^{2}\right]-E\left[x\right]^{2}\\
 \end{align*}
 
 Some applications are shown below:
+<a id="ref-ex-000020expected-000020value-000020of-000020geometric-000020brownian-000020motion" class="course-anchor"></a>
 !!! example "Example"
 
     Consider
@@ -180,12 +181,15 @@ dH & =H_{t}dt+H_{x}dx\\
 \end{align*}
 The expected value of this change must take into account the probability
 of a jump in $q$ (given by $\lambda dt$), so we have:
+<a id="ref-eq-000020ito-s-000020lemma-000020for-000020poisson" class="course-anchor"></a>
 \begin{equation}
 E\left[dH\right]=\left(H_{t}+f\left(x,t\right)H_{x}\right)dt+\lambda E_{u}\left[H\left(x+ug\left(x,t\right),t\right)-H\left(x,t\right)\right]dt
 \end{equation}
 it follows, by using the identity function that $E\left[dx\right]=f\left(x,t\right)dt+\lambda E_{u}\left[ug\left(x,t\right)\right]dt$.
 
 We can apply this result to a couple examples taken from [Dixit and Pindyck (1994)](http://www.jstor.org/stable/j.ctt7sncv):
+<a id="ref-example-000020poisson-000020process-000020-000020present-000020value-000020of-000020wage" class="course-anchor"></a>
+<a id="ref-eq-000020bellman-000020equation-000020present-000020value-000020of-000020wage-000020poisson" class="course-anchor"></a>
 !!! example "Example"
 
     Consider

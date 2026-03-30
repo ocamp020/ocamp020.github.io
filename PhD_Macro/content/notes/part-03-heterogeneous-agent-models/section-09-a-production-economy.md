@@ -19,7 +19,7 @@ to a production economy. Production is (on purpose) just as in the
 neoclassical growth model: there is a representative firm operating
 a constant returns to scale technology, $Y=f\left(z,K,L\right)$.
 As it turns out, doing this greatly simplifies market clearing. The
-reason is in the discussion in Section .
+reason is in the discussion in [Profit Maximization: A note](../part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.md#ref-subsec-profit-maximization-crs).
 The scale of operations of a firm with a constant-returns-to-scale
 technology is undefined, and so prices have to be such that the firm
 is indifferent between any scale. For this to happen, prices must

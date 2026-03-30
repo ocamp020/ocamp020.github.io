@@ -1,3 +1,5 @@
+<a id="ref-part-random-variables-and-probability" class="course-anchor"></a>
+<a id="ref-sec-measure" class="course-anchor"></a>
 # Measure
 
 > Part: Random Variables and Probability
@@ -98,7 +100,7 @@ What follows is to define the measure of a measurable set.
 
 ## Measures
 
-\subsubsection{Measures in $\sigma$-algebras}
+### Measures in $\sigma$-algebras
 
 Given a measurable space $\left(S,{\cal A}\right)$ a measure is nothing
 but a function $\mu:{\cal A}\to\overline{\mathbb{R}}$ with certain
@@ -222,7 +224,7 @@ of functions, and of the Lebesgue integral:
     [Stokey et al. (1989, Sec. 7.2)](https://books.google.com/books?id=tWYo0QolyLAC). Satisfying these two properties makes a
     measure continuous.
 
-\subsubsection{Measures in algebras and extensions {[}Optional{]}}
+### Measures in algebras and extensions [Optional]
 
 So far we have defined a measure on an $\sigma$-algebra, but a $\sigma$-algebra
 is usually a large collection of sets and defining a function on such
@@ -309,7 +311,7 @@ environments.
 Once the measure is extended to the $\sigma$-algebra all the results
 obtained above apply.
 
-\subsubsection{Completion of a measure {[}Optional{]}}
+### Completion of a measure [Optional]
 
 One small detail is left to be checked. Sometimes there is a set $B\subseteq S$
 such that $B\subseteq A\in{\cal A}$ and $\mu\left(A\right)=0$, but

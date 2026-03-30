@@ -17,7 +17,7 @@ We will write the (recursive) household problem later, but first we
 need to discuss the implications of aggregate shocks.
 
 The re-introduction of aggregate productivity means that we are back
-at the problem of Section ,
+at the problem of [Stochastic Recursive Competitive Equilibrium](../part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.md#ref-sec-stochastic-recursive-competitive-equilibrium),
 but with the added difficulty of having a time-varying distribution
 of households. The key issue is, as before, determining what is the
 relevant state of the household problem. The state must (*i*)
@@ -25,7 +25,7 @@ contain all the information needed to solve the problem, including
 prices, and (*ii*) be updated to compute continuation values,
 as well as expectations over prices and other variables.
 
-In Section
+In [Stochastic Recursive Competitive Equilibrium](../part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.md#ref-sec-stochastic-recursive-competitive-equilibrium)
 this problem was solved by keeping track of the aggregate capital
 stock $K$ and imposing consistency between the transition function
 of the aggregate capital stock and the savings function of the representative
@@ -115,7 +115,7 @@ function that is consistent with household optimization.
 The main break-through in [Krusell and Smith (1998)](https://doi.org/10.1086/250034) is providing
 a computational method that can approximate the solution to the RCE.
 The key of the algorithm is already present in the discussion of the
-RCE in Section
+RCE in [Stochastic Recursive Competitive Equilibrium](../part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.md#ref-sec-stochastic-recursive-competitive-equilibrium)
 and of the S-RCE of the Aiyagari economy above. The distribution of
 households is only really needed to compute the aggregate capital
 level, $K$. Notably, this corresponds to the first moment of the
@@ -176,7 +176,7 @@ turns out, it is sufficient to only keep track of the first moment
 of the wealth distribution in order to accurately approximate the
 aggregate states of the model. That is, aggregate capital is (approximately)
 the relevant aggregate state for the households in the economy, just
-at in the neoclassical growth model of Section .
+at in the neoclassical growth model of [Stochastic Recursive Competitive Equilibrium](../part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.md#ref-sec-stochastic-recursive-competitive-equilibrium).
 However, we know while there is exact aggregation in the neoclassical
 growth model (allowing for a representative agent), there is no such
 aggregation result in the Aiyagari economy. This led Krusell and Smith

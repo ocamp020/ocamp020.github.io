@@ -108,7 +108,7 @@ in equilibrium. If they did they would want to scale up production
 without bound, along with input demand. Because firms make no profits,
 differences in ownership $\left\{ \theta_{i,h}^{x},\theta_{i,j}^{y}\right\} $
 are now irrelevant. In this case, input demand is determined by cost
-minimization. See Section  for
+minimization. See [Profit Maximization: A note](../part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.md#ref-subsec-profit-maximization-crs) for
 more on this.
 
 If we further assume that the production technology is common across

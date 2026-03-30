@@ -1,3 +1,4 @@
+<a id="ref-sec-stochastic-recursive-competitive-equilibrium" class="course-anchor"></a>
 # Stochastic Recursive Competitive Equilibrium
 
 > Part: Dynamic Programming
@@ -179,14 +180,14 @@ as part of the equilibrium defined below.
 An Recursive Competitive Equilibrium (RCE) is a set of a value function
 $V$, policy functions $g_{k}$ and $g_{\ell}$, updating functions
 $G_{k}$ and price and profit functions $R$, $W$, and $\Pi$, such
-that: (Note: The definition of an RCE can be equivalently be done in terms of stochastic processes for the equilibrium variables (capital, labor, prices, etc.). That is, the equilibrium is the processes for quantities and prices. These stochastic processes are the equivalent of the sequences of quantities and prices that define a non-stochastic equilibrium. However, defining the equilibrium in that way is cumbersome. The stochastic processes are all constructed from the underlying Markov process for $z$ and the policy and price functions that define the RCE. The construction is carried out as shown in Section .)
+that: (Note: The definition of an RCE can be equivalently be done in terms of stochastic processes for the equilibrium variables (capital, labor, prices, etc.). That is, the equilibrium is the processes for quantities and prices. These stochastic processes are the equivalent of the sequences of quantities and prices that define a non-stochastic equilibrium. However, defining the equilibrium in that way is cumbersome. The stochastic processes are all constructed from the underlying Markov process for $z$ and the policy and price functions that define the RCE. The construction is carried out as shown in [Markov Processes over States](section-05-stochastic-dynamic-programming.md#ref-subsec-markov-processes-over-states).)
 
 1. The value function $V$ and policy functions $\left\{ g_{a},g_{\ell}\right\} $
 solve the household's dynamic programming problem, taking as given
 the updating and price functions $G_{k}$, $R$, $W$, $\Pi$.
 1. The firms *behave optimally* taking prices as given. This implies
 that the pricing functions $R$ and $W$ satisfy the firm's first
-order conditions (from cost-minization, see section )
+order conditions (from cost-minization, see [Profit Maximization: A note](#ref-subsec-profit-maximization-crs))
 \[
 R\left(z,K\right)=f_{k}\left(z,K,G_{\ell}\left(z,K\right)\right)-\delta\qquad W\left(z,K\right)=f_{\ell}\left(z,K,G_{\ell}\left(z,K\right)\right),
 \]
@@ -285,8 +286,8 @@ context of the problem. We interpret $z$ as productivity and hence
 it makes sense to interpret higher values of $z$ as being better.
 For the resulting solution to be monotone in the states $\left(k,z,K\right)$
 we need the payoffs to be monotone (as we usually assume), the transition
-function $Q$ to be monotone (see Definition
-and Proposition ).
+function $Q$ to be monotone (see [Definition: Monotone transition functions](../part-01-preliminaries/section-03-markov-processes.md#ref-def-000020monotonicity-000020markov-000020)
+and [Proposition](../part-01-preliminaries/section-03-markov-processes.md#ref-prop-monotonicity-markov)).
 
 Crucially, the conditions imposed over the Markov process for $z$
 already guarantee that it is a stationary process with a unique invariant
@@ -316,12 +317,13 @@ into values for quantities $\left(K\right)$ and prices $\left(r,w\right)$.
 When these functions are measurable with respect to the underlying
 productivity process they form themselves a stochastic processes (the
 sequence of the random variables for quantities and prices). The construction
-of these stochastic processes is carried out as in Section .
+of these stochastic processes is carried out as in [Markov Processes over States](section-05-stochastic-dynamic-programming.md#ref-subsec-markov-processes-over-states).
 Then, the stationary equilibrium is an endogenously determined probability
 distribution over the state variables, with the properties of a Markov
 chain induced by the policy functions and the exogenous process for
 shocks.
 
+<a id="ref-subsec-profit-maximization-crs" class="course-anchor"></a>
 ## Profit Maximization: A note
 
 !!! note "Remark"
@@ -624,8 +626,7 @@ long vector
 \vec{s}=\left(\left(k_{1},z_{1}\right),\left(k_{1},z_{2}\right),\ldots,\left(k_{1},z_{J}\right),\left(k_{2},z_{1}\right),\ldots,\left(k_{2},z_{J}\right),\ldots,\left(k_{I},z_{1}\right),\ldots,\left(k_{I},z_{J}\right)\right).
 \]
 The Markov transition matrix is therefore a square matrix with $I\times J$
-rows and columns. We can build the matrix following the steps in Section
-. The key is that $z$ evolves
+rows and columns. We can build the matrix following the steps in [Markov Processes over States](section-05-stochastic-dynamic-programming.md#ref-subsec-markov-processes-over-states). The key is that $z$ evolves
 independently following the transition matrix $\Pi$, while $k$ evolves
 deterministically. The matrix is then
 \[
@@ -763,7 +764,7 @@ where $V^{B}\left(s\right)$ and $V^{A}\left(s\right)$ are the values
 in each economy of being in state $s$, and $c^{B}$ and $c^{A}$
 are the consumption contingent plans in each economy. These can be
 obtained from the solution to the recursive problem (recall that the
-principle of optimality applies, Section ).
+principle of optimality applies, [The Principle of Optimality](section-05-stochastic-dynamic-programming.md#ref-subsec-the-principle-of-optimality-stochastic)).
 
 The consumption-equivalent welfare $\text{CE}\left(s\right)$ at state
 $s$, is such that consumers are indifferent between the two economies

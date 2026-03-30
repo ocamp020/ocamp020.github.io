@@ -1,3 +1,4 @@
+<a id="ref-part-heterogeneous-agent-models" class="course-anchor"></a>
 # The Income Fluctuations Model and Precautionary Savings
 
 > Part: Heterogeneous Agent Models

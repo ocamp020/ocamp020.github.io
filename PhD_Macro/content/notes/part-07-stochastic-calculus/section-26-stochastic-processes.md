@@ -239,7 +239,7 @@ the increments of the Weiner process $W$. This process satisfies:
 E\left[dx\right]=\mu dt\qquad V\left[dx\right]=\sigma^{2}dt
 \]
 
-\subsubsection{Random walk approximation of a Brownian motion}
+### Random walk approximation of a Brownian motion
 
 As mentioned above we can use the similarities between the increments
 of a Brownian motion and the increments of a random walk to approximate
@@ -316,6 +316,7 @@ and $-h$ with probability $1-p$.
 Ito processes are the generalization of Brownian motions. Their drift
 and variance is allowed to depend on the level of the process and
 the time:
+<a id="ref-eq-000020def-000020ito-000020process" class="course-anchor"></a>
 \begin{equation}
 dx=\mu\left(x,t\right)dt+\sigma\left(x,t\right)dW
 \end{equation}
@@ -389,6 +390,7 @@ u & \text{with prob. }\lambda dt
 \]
 We can now define a more general process that depends on the Jump
 process $q$:
+<a id="ref-eq-000020poisson-000020process" class="course-anchor"></a>
 \begin{equation}
 dx=f\left(x,t\right)dt+g\left(x,t\right)dq
 \end{equation}

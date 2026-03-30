@@ -62,6 +62,7 @@ The measure $v_{k}$ is a Bonacich-type centrality index: Sector $k$
 is central when it is an important supplier to sectors that are themselves
 important in production. We can prove this in general from the definitions
 of the input-output matrix $\Omega$ and the Leontief inverse $\Psi$.
+<a id="ref-prop-000020domar-centrality" class="course-anchor"></a>
 !!! abstract "Proposition"
 
     **(Domar weights are weighted downstream centrality measures**)
@@ -133,7 +134,7 @@ producer, either directly or through a chain of intermediate-input
 linkages.
 
 Now fix the column index $k$. The column sum of $\Psi$ tells us
-how important sector $k$ is for the economy as a whole. Proposition~
+how important sector $k$ is for the economy as a whole. [Proposition](#ref-prop-000020domar-centrality)
 shows that the Domar weight of a sector captures this idea, since
 $\lambda_{k}$ is a weighted sum of all the ways in which $k$ enters
 goods that are ultimately absorbed in final demand.

@@ -35,6 +35,13 @@ a {
   color: var(--course-ink-soft);
 }
 
+.course-anchor {
+  display: block;
+  visibility: hidden;
+  margin-top: -5.75rem;
+  padding-top: 5.75rem;
+}
+
 img,
 svg {
   max-width: 100%;
