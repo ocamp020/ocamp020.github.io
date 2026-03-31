@@ -37,9 +37,13 @@ a {
 
 .course-anchor {
   display: block;
+  position: relative;
+  top: -5.75rem;
   visibility: hidden;
-  margin-top: -5.75rem;
-  padding-top: 5.75rem;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
 }
 
 img,
@@ -484,7 +488,8 @@ svg {
 }
 
 .course-callout-body {
-  padding: 0.15rem 1rem 0.8rem;
+  padding: 0.7rem 1rem 0.9rem;
+  min-width: 0;
 }
 
 .course-proof summary {
@@ -493,6 +498,20 @@ svg {
 
 .course-proof .course-callout-body {
   padding-top: 0.75rem;
+}
+
+.course-callout-body > :first-child {
+  margin-top: 0;
+}
+
+.course-callout-body > :last-child {
+  margin-bottom: 0;
+}
+
+.course-callout-body mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .course-content .mermaid {
