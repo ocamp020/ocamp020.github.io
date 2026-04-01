@@ -23,8 +23,8 @@ The problem of the household is (by construction) almost identical
 to the household problem in the Recursive Competitive Equilibrium
 of the neoclassical growth problem:
 \begin{align*}
-V\left(\epsilon,a\right) & =\max_{\left\{ c,\ell,a^{'}\right\} }\,u\left(c,\ell\right)+\beta E\left[V\left(\epsilon^{'},a^{'}\right)|\epsilon\right]\\
-& \text{s.t. }c+a^{'}=\left(1+r\right)a+wf\left(\epsilon,\ell\right)\qquad a^{'}\geq\underline{a}
+V\left(\epsilon,a\right) & =\max_{\left\{ c,\ell,a^{\prime}\right\} }\,u\left(c,\ell\right)+\beta E\left[V\left(\epsilon^{\prime},a^{\prime}\right)|\epsilon\right]\\
+& \text{s.t. }c+a^{\prime}=\left(1+r\right)a+wf\left(\epsilon,\ell\right)\qquad a^{\prime}\geq\underline{a}
 \end{align*}
 In this problem the household is subject to shocks $\epsilon$ to
 their earning ability, as before we assume that $\epsilon$ follows
@@ -51,7 +51,7 @@ to idiosyncratic factors (captured by $\epsilon$) with prices held
 constant (and equal for all households).
 
 These aspects matter because they introduce a new motive for savings
-that has been termed ``*precautionary savings*.'' To understand
+that has been termed "*precautionary savings*." To understand
 this motive for savings we start by contrasting the heterogeneous
 agent model we introduce here with the neoclassical growth model and
 its representative agent to then contrast them with what is happening
@@ -65,7 +65,7 @@ returns in the future. These returns corresponded to the marginal
 product of the capital being accumulated through savings. The representative
 household's Euler equation is
 \[
-u_{c}\left(C,L\right)=\left(1+r\right)\beta E\left[u_{c}\left(C^{'},L^{'}\right)\right].
+u_{c}\left(C,L\right)=\left(1+r\right)\beta E\left[u_{c}\left(C^{\prime},L^{\prime}\right)\right].
 \]
 In steady state with no aggregate fluctuations (the corresponding
 version of the stationary recursive competitive equilibrium we will
@@ -113,8 +113,8 @@ as we see below.
 
 The introduction of *idiosyncratic and uninsurable risk* to
 the model (via income fluctuations and incomplete markets) results
-in a new saving motive for households. They want to have savings ``just
-in case something happens.'' Under this logic, assets are not accumulated
+in a new saving motive for households. They want to have savings "just
+in case something happens." Under this logic, assets are not accumulated
 with the objective of using them (say for production) but rather with
 the object of not using them! Savings, even in non-state-contingent
 assets provide a form of self-insurance against idiosyncratic income
@@ -130,7 +130,7 @@ economy.
 
 The households' Euler equation is
 \[
-u_{c}\left(c_{i},\ell_{i}\right)=\left(1+r\right)\beta E_{\epsilon_{i}^{'}}\left[u_{c}\left(c_{i}^{'},\ell_{i}^{'}\right)|\epsilon_{i}\right].
+u_{c}\left(c_{i},\ell_{i}\right)=\left(1+r\right)\beta E_{\epsilon_{i}^{\prime}}\left[u_{c}\left(c_{i}^{\prime},\ell_{i}^{\prime}\right)|\epsilon_{i}\right].
 \]
 Even though prices and aggregates do not change, the expectation over
 future idiosyncratic shocks is still relevant. Moreover, because households
@@ -211,24 +211,24 @@ economy with returns to private equity.
 Consider a concrete example where utility is $u\left(c\right)=\log c$.
 In this case the Euler equation becomes
 \[
-\frac{1}{c_{i}}\;=\;\left(1+r\right)\beta E_{\epsilon_{i}^{'}}\left[\frac{1}{c_{i}^{'}}|\epsilon_{i}\right].
+\frac{1}{c_{i}}\;=\;\left(1+r\right)\beta E_{\epsilon_{i}^{\prime}}\left[\frac{1}{c_{i}^{\prime}}|\epsilon_{i}\right].
 \]
 Recall that agents are risk averse, so that marginal utility is convex
 (as utility is concave). In this case this has an immediate consequence
 for the expected marginal utility of future consumption (see Jensen's
 inequality),
 \[
-E_{\epsilon_{i}^{'}}\left[\frac{1}{c_{i}^{'}}|\epsilon_{i}\right]\;=\;\frac{1}{E_{\epsilon_{i}^{'}}\left[c_{i}^{'}|\epsilon_{i}\right]}\left(1+\Delta\right),
+E_{\epsilon_{i}^{\prime}}\left[\frac{1}{c_{i}^{\prime}}|\epsilon_{i}\right]\;=\;\frac{1}{E_{\epsilon_{i}^{\prime}}\left[c_{i}^{\prime}|\epsilon_{i}\right]}\left(1+\Delta\right),
 \]
 with larger $\Delta$ capturing more consumption risk for the agent
-(note that if there is no risk then $E_{\epsilon_{i}^{'}}\left[\frac{1}{c_{i}^{'}}|\epsilon_{i}\right]=\frac{1}{E_{\epsilon_{i}^{'}}\left[c_{i}^{'}|\epsilon_{i}\right]}$
+(note that if there is no risk then $E_{\epsilon_{i}^{\prime}}\left[\frac{1}{c_{i}^{\prime}}|\epsilon_{i}\right]=\frac{1}{E_{\epsilon_{i}^{\prime}}\left[c_{i}^{\prime}|\epsilon_{i}\right]}$
 and $\Delta=0$.
 
 Replacing back we get a condition relating the expected growth rate
 of consumption, its drift, with the discounted returns and the risk
 faced by the agent:
 \[
-\underbrace{\frac{E_{\epsilon_{i}^{'}}\left[c_{i}^{'}|\epsilon_{i}\right]}{c_{i}}}_{\text{Consumption Drift}}=\;\left(1+r\right)\beta\left(1+\Delta\right)\;>\;\left(1+r\right)\beta.
+\underbrace{\frac{E_{\epsilon_{i}^{\prime}}\left[c_{i}^{\prime}|\epsilon_{i}\right]}{c_{i}}}_{\text{Consumption Drift}}=\;\left(1+r\right)\beta\left(1+\Delta\right)\;>\;\left(1+r\right)\beta.
 \]
 So, the risk faced by consumers makes it so that the expected drift
 of consumption is necessarily higher than $\left(1+r\right)\beta$.
@@ -243,7 +243,7 @@ This ends up violating the transversality conditions of the problem,
 so that it has no well-defined value. It must be that $\left(1+r\right)\beta<1$.
 In this case there is heterogeneity in the drift of consumption between
 agents. Agents facing little risk, like wealthy agents who can self-insure
-against income fluctuations, have a low $\Delta$ (the ``Jensen''
+against income fluctuations, have a low $\Delta$ (the "Jensen"
 wedge in the Euler equation), that is, low precautionary motives for
 savings. Their savings are instead dictated by the usual present bias
 versus return tradeoff. Because $\beta\left(1+r\right)<1$, this tradeoff

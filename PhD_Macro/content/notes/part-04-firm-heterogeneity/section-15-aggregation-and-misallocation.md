@@ -65,7 +65,7 @@ We can get a different and more informative expression if we focus
 on the distribution of firm productivity and separate from the number
 of firms:
 \[
-Y=\overbrace{Z}^{\mathclap{\text{Avg. Prod.}}}\underbrace{M^{1-\alpha}}_{\mathclap{\text{Firm Scale}}}N^{\alpha}.
+Y=\overbrace{Z}^{\text{Avg. Prod.}}\underbrace{M^{1-\alpha}}_{\text{Firm Scale}}N^{\alpha}.
 \]
 Here, $Z$ is the average productivity across firms in the economy,
 we define it as
@@ -110,7 +110,7 @@ N=\int_{0}^{M}n_{i}di=\frac{y_{i}}{z_{i}}di=\int_{0}^{M}z_{i}^{\varepsilon-1}\le
 \]
 Therefore, aggregate output (or utility) is
 \[
-Y=\overbrace{Z}^{\mathclap{\text{Avg. Prod.}}}\underbrace{M^{\frac{1}{\varepsilon-1}}}_{\mathclap{\text{Taste for Variety}}}N,
+Y=\overbrace{Z}^{\text{Avg. Prod.}}\underbrace{M^{\frac{1}{\varepsilon-1}}}_{\text{Taste for Variety}}N,
 \]
 where $Z=\left(E\left[z^{\varepsilon-1}\right]\right)^{\frac{1}{\varepsilon-1}}=\left(\int z^{\varepsilon-1}d\Gamma\left(z\right)\right)^{\frac{1}{\varepsilon-1}}$
 is the average productivity.
@@ -122,7 +122,7 @@ and $\tilde{y}_{i}=y_{i}^{\frac{\varepsilon-1}{\varepsilon}}$. In
 this case the aggregation gives the same result as in the span of
 control model
 \[
-\tilde{Y}=\overbrace{\tilde{Z}}^{\mathclap{\text{Avg. Prod.}}}\underbrace{M^{\frac{1}{\varepsilon}}}_{\mathclap{\text{Taste for Variety}}}N^{\frac{\varepsilon-1}{\varepsilon}}
+\tilde{Y}=\overbrace{\tilde{Z}}^{\text{Avg. Prod.}}\underbrace{M^{\frac{1}{\varepsilon}}}_{\text{Taste for Variety}}N^{\frac{\varepsilon-1}{\varepsilon}}
 \]
 with $\alpha=\frac{\varepsilon-1}{\varepsilon}$ and $\tilde{Z}=Z^{\frac{\varepsilon-1}{\varepsilon}}$.
 
@@ -228,7 +228,7 @@ But, notice that $\kappa$ is the average labor productivity in the
 undistorted (planner's) economy. So it must be true that $Y^{p}=\kappa N.$
 Replacing we get
 \[
-\frac{Y^{d}}{Y^{p}}=\int_{0}^{M}\theta_{i}^{\alpha}\underbrace{\frac{n_{i}^{p}}{N}}_{\mathclap{\text{Efficient Labor Weights}}}di
+\frac{Y^{d}}{Y^{p}}=\int_{0}^{M}\theta_{i}^{\alpha}\underbrace{\frac{n_{i}^{p}}{N}}_{\text{Efficient Labor Weights}}di
 \]
 Moreover, this ratio is also equal to the ratio of TFP between the
 distorted and the undistorted economies because the total labor input
@@ -297,7 +297,7 @@ Q=\left(\int x_{i}^{\mu}di\right)^{1/\mu}.
 \]
 
 To distinguish $Q$ from the unadjusted capital stock, $K=\int k_{i}di,$
-we refer to the former as the ``quality-adjusted capital stock,''
+we refer to the former as the "quality-adjusted capital stock,"
 since its level depends on the allocation of capital across entrepreneurs.
 Total Factor Productivity in the intermediate goods sector can be
 written as
@@ -331,11 +331,11 @@ This makes the entrepreneurial problem be
 \pi\left(a,z\right)=\max_{k\leq\vartheta(z)a}\left\{ p\left(zk\right)\times zk-\left(r+\delta\right)k\right\} ,
 \]
 where $\delta$ is the depreciation rate. The price of the differentiated
-good can be written as $p\left(zk\right)=\text{\ensuremath{\mathcal{R}}}\times\left(zk\right)^{\mu-1},$
-where $\text{\ensuremath{\mathcal{R}}}\equiv\alpha Q^{\alpha-\mu}L^{1-\alpha}$,
+good can be written as $p\left(zk\right)=\text{\mathcal{R}}\times\left(zk\right)^{\mu-1},$
+where $\text{\mathcal{R}}\equiv\alpha Q^{\alpha-\mu}L^{1-\alpha}$,
 yielding the solution
 \[
-k\left(a,z\right)=\min\left[\left(\frac{\mu\text{\ensuremath{\mathcal{R}}}z^{\mu}}{r+\delta}\right)^{\frac{1}{1-\mu}},\vartheta\left(z\right)a\right].
+k\left(a,z\right)=\min\left[\left(\frac{\mu\text{\mathcal{R}}z^{\mu}}{r+\delta}\right)^{\frac{1}{1-\mu}},\vartheta\left(z\right)a\right].
 \]
 However, this makes it difficult to aggregate because the level of
 capital (and hence the scale of each entrepreneurial firm) depends

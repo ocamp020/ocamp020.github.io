@@ -46,7 +46,7 @@ choosing prices à la Bertrand or quantities à la Cournot. The optimal
 choice is to set prices as a markup over the marginal cost, with the
 markup determined by the elasticity of demand $\varepsilon_{i}\equiv-\left(\frac{\partial\log p_{i}}{\partial\log y_{i}}\right)^{-1}$,
 \[
-p_{i}=\frac{1}{1-\frac{1}{\varepsilon_{i}}}C_{i}^{'}\left(y_{i}\right),
+p_{i}=\frac{1}{1-\frac{1}{\varepsilon_{i}}}C_{i}^{\prime}\left(y_{i}\right),
 \]
 The markup is $\mu_{i}^{m}=\nicefrac{1}{1-\frac{1}{\varepsilon_{i}}}$.
 The difference between forms of competition is the value of the elasticity
@@ -72,19 +72,19 @@ varieties of goods.
 Lets start with Bertrand. The first order condition of the firm is
 \begin{align*}
 \frac{\partial}{\partial p_{i}}\left(p_{i}y_{i}-C_{i}\left(y_{i}\right)\right) & =0\\
-y_{i}+p_{i}\frac{\partial y_{i}}{\partial p_{i}}-C_{i}^{'}\left(y_{i}\right)\frac{\partial y_{i}}{\partial p_{i}} & =0\\
-1+\frac{p_{i}}{y_{i}}\frac{\partial y_{i}}{\partial p_{i}}-\frac{C_{i}^{'}\left(y_{i}\right)}{p_{i}}\frac{p_{i}}{y_{i}}\frac{\partial y_{i}}{\partial p_{i}} & =0\\
-1+\left(\frac{\partial\log p_{i}}{\partial\log y_{i}}\right)^{-1}\left(1-\frac{C_{i}^{'}\left(y_{i}\right)}{p_{i}}\right) & =0\\
-1-\varepsilon_{i}\left(1-\frac{C_{i}^{'}\left(y_{i}\right)}{p_{i}}\right) & =0\\
-\frac{1}{1-\frac{1}{\varepsilon_{i}}}C_{i}^{'}\left(y_{i}\right) & =p_{i}
+y_{i}+p_{i}\frac{\partial y_{i}}{\partial p_{i}}-C_{i}^{\prime}\left(y_{i}\right)\frac{\partial y_{i}}{\partial p_{i}} & =0\\
+1+\frac{p_{i}}{y_{i}}\frac{\partial y_{i}}{\partial p_{i}}-\frac{C_{i}^{\prime}\left(y_{i}\right)}{p_{i}}\frac{p_{i}}{y_{i}}\frac{\partial y_{i}}{\partial p_{i}} & =0\\
+1+\left(\frac{\partial\log p_{i}}{\partial\log y_{i}}\right)^{-1}\left(1-\frac{C_{i}^{\prime}\left(y_{i}\right)}{p_{i}}\right) & =0\\
+1-\varepsilon_{i}\left(1-\frac{C_{i}^{\prime}\left(y_{i}\right)}{p_{i}}\right) & =0\\
+\frac{1}{1-\frac{1}{\varepsilon_{i}}}C_{i}^{\prime}\left(y_{i}\right) & =p_{i}
 \end{align*}
 The same result arises under Cournot (but in fewer steps).
 \begin{align*}
 \frac{\partial}{\partial y_{i}}\left(p_{i}y_{i}-C_{i}\left(y_{i}\right)\right) & =0\\
-p_{i}+y_{i}\frac{\partial p_{i}}{\partial y_{i}}-C_{i}^{'}\left(y_{i}\right) & =0\\
-1+\frac{y_{i}}{p_{i}}\frac{\partial p_{i}}{\partial y_{i}}-\frac{C_{i}^{'}\left(y_{i}\right)}{p_{i}} & =0\\
-1-\frac{1}{\varepsilon_{i}}-\frac{C_{i}^{'}\left(y_{i}\right)}{p_{i}} & =0\\
-\frac{1}{1-\frac{1}{\varepsilon_{i}}}C_{i}^{'}\left(y_{i}\right) & =p_{i}
+p_{i}+y_{i}\frac{\partial p_{i}}{\partial y_{i}}-C_{i}^{\prime}\left(y_{i}\right) & =0\\
+1+\frac{y_{i}}{p_{i}}\frac{\partial p_{i}}{\partial y_{i}}-\frac{C_{i}^{\prime}\left(y_{i}\right)}{p_{i}} & =0\\
+1-\frac{1}{\varepsilon_{i}}-\frac{C_{i}^{\prime}\left(y_{i}\right)}{p_{i}} & =0\\
+\frac{1}{1-\frac{1}{\varepsilon_{i}}}C_{i}^{\prime}\left(y_{i}\right) & =p_{i}
 \end{align*}
 
 **Cost minimization with constant-returns-to-scale**
@@ -95,7 +95,7 @@ of profit maximization that gives markups (as above).
 
 A special case arises when the production function of the firm has
 constant returns to scale. In this case the marginal cost is constant,
-that is, $C_{i}^{'}\left(y\right)=c_{i}$. The linearity of the cost
+that is, $C_{i}^{\prime}\left(y\right)=c_{i}$. The linearity of the cost
 function is an immediate consequence of the cost function inheriting
 the homogeneity of degree one of the production function.
 

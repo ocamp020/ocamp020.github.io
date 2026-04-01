@@ -26,7 +26,7 @@ is indifferent between any scale. For this to happen, prices must
 reflect the marginal product of inputs.
 
 Aiyagari also interprets the value of $\epsilon$ as the value of
-``labor efficiency'' instead of a direct income endowment. Under this
+"labor efficiency" instead of a direct income endowment. Under this
 interpretation, income depends on labor efficiency $\left(\epsilon\right)$
 and the market wage $\left(w\right)$. We assume for simplicity that
 individuals do not care about leisure and thus supply one unit of
@@ -37,8 +37,8 @@ households.
 
 The household's problem is then
 \begin{align*}
-V\left(\epsilon,a\right) & =\max_{\left\{ c,a^{'}\right\} }\,u\left(c\right)+\beta E\left[V\left(\epsilon^{'},a^{'}\right)|\epsilon\right]\\
-& \text{s.t. }c+a^{'}=\left(1+r\right)a+w\epsilon\qquad a^{'}\geq\underline{a}
+V\left(\epsilon,a\right) & =\max_{\left\{ c,a^{\prime}\right\} }\,u\left(c\right)+\beta E\left[V\left(\epsilon^{\prime},a^{\prime}\right)|\epsilon\right]\\
+& \text{s.t. }c+a^{\prime}=\left(1+r\right)a+w\epsilon\qquad a^{\prime}\geq\underline{a}
 \end{align*}
 The borrowing limit must satisfy
 \[
@@ -46,7 +46,7 @@ The borrowing limit must satisfy
 \]
 The Euler equation is, as before,
 \[
-u^{'}\left(\left(1+r\right)a+w\epsilon\right)=\beta E\left[V_{a}\left(\epsilon^{'},a^{'}\right)|\epsilon\right].
+u^{\prime}\left(\left(1+r\right)a+w\epsilon\right)=\beta E\left[V_{a}\left(\epsilon^{\prime},a^{\prime}\right)|\epsilon\right].
 \]
 
 As above, the households take the (constant) prices as given. Their
@@ -65,7 +65,7 @@ r=f_{k}\left(z,K,L\right)-\delta\qquad w=f_{L}\left(z,K,L\right).
 **Stationary recursive competitive equilibrium**
 
 A S-RCE is a set of a value function $\left(V\right)$, a policy function
-$\left(a^{'}\right)$, a distribution $\left(\Gamma\right)$, and
+$\left(a^{\prime}\right)$, a distribution $\left(\Gamma\right)$, and
 prices $\left(r,w\right)$ such that:
 
 1. Given $\left(r,w\right)$ the value and policy functions solve the
@@ -73,10 +73,10 @@ agent's problem (the dynamic programming problem above).
 1. Given the policy function, $\Gamma$ is a fixed point of the adjoint
 Markov operator of the endogenous Markov process defined by the (exogenous)
 Markov process for $\epsilon$ with Transition function $Q$ and the
-(endogenous) policy function for $a^{'}$.
+(endogenous) policy function for $a^{\prime}$.
 1. The capital and labor markets clear. That is, aggregate capital reflects
 the aggregate assets of the households and aggregate labor demand
-equals the supply of ``efficiency units of labor'' from the household
+equals the supply of "efficiency units of labor" from the household
 \[
 K=\int\int a\cdot d\Gamma\left(\epsilon,a\right)\qquad L=\int\int\epsilon\cdot d\Gamma\left(\epsilon,a\right).
 \]
@@ -92,9 +92,9 @@ r=f_{k}\left(z,K,L\right)-\delta\qquad w=f_{L}\left(z,K,L\right).
 \BlankLine
 \SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
 \Input{Guess for price $(r)$}
-\Output{$V,a^{'},\Gamma,r$}
+\Output{$V,a^{\prime},\Gamma,r$}
 \BlankLine
-1. Solve the DP problem of the agent given $(r,w)$: \\ $\qquad (V,a^{'})=T(V;r)$ \textcolor{gray}{(a fixed point problem)} \;
+1. Solve the DP problem of the agent given $(r,w)$: \\ $\qquad (V,a^{\prime})=T(V;r)$ \textcolor{gray}{(a fixed point problem)} \;
 \smallskip
 2. Find stationary distribution method \textcolor{gray}{(or update dist. N times)} \;
 \smallskip

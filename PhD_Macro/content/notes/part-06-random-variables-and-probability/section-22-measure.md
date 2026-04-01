@@ -24,7 +24,7 @@ that the appropriate family of sets to be consider is that of $\sigma$-algebra.
     We say that ${\cal A}$ is closed under countable union.
     
     
-      1. ${\cal A}$ is closed under countable intersection because $\mbox{\ensuremath{\cap}}A_{n}=\left(\cup A_{n}^{c}\right)^{c}$.
+      1. ${\cal A}$ is closed under countable intersection because $\mbox{\cap}A_{n}=\left(\cup A_{n}^{c}\right)^{c}$.
     
     
     If ${\cal A}$ is only closed under finite union (or intersection)
@@ -328,17 +328,17 @@ sets or behaviors of measure zero is of no consequence.
     \]
     The completion of $\sigma$-algebra ${\cal A}$ is:
     \[
-    {\cal A}^{'}=\left\{ B^{'}\subseteq S\,|\,B^{'}=\left(A\cup C_{1}\right)\backslash C_{2}\qquad A\in{\cal A}\quad\land\quad C_{1},C_{2}\in{\cal C}\right\}
+    {\cal A}^{\prime}=\left\{ B^{\prime}\subseteq S\,|\,B^{\prime}=\left(A\cup C_{1}\right)\backslash C_{2}\qquad A\in{\cal A}\quad\land\quad C_{1},C_{2}\in{\cal C}\right\}
     \]
-    By letting $C_{1}=C_{2}=\emptyset$ we get ${\cal A}\subseteq{\cal A}^{'}$,
-    ${\cal A}^{'}$ includes all sets in $2^{S}$ that differ from a set
+    By letting $C_{1}=C_{2}=\emptyset$ we get ${\cal A}\subseteq{\cal A}^{\prime}$,
+    ${\cal A}^{\prime}$ includes all sets in $2^{S}$ that differ from a set
     in ${\cal A}$ by a set of measure $0$.
 
 !!! info "Definition: Completion of a measure"
 
     Let $\left(S,{\cal A},\mu\right)$
-    be a measure space and ${\cal A}^{'}$ the completion of ${\cal A}$.
-    $\mu\left(B^{'}\right)=\mu\left(B\right)$ for any $B^{'}\in{\cal A}^{'}$
+    be a measure space and ${\cal A}^{\prime}$ the completion of ${\cal A}$.
+    $\mu\left(B^{\prime}\right)=\mu\left(B\right)$ for any $B^{\prime}\in{\cal A}^{\prime}$
     that differs from $B\in{\cal A}$ by a set of measure $0$.
 
 The Caratheodory and Hahn extension theorems also apply for completions.

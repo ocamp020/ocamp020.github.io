@@ -121,7 +121,7 @@ the antiderivative of $f$.
     \]
     or better:
     \[
-    \varphi^{'}\left(x\right)=\frac{1}{2}\frac{\sigma^{2}}{\mu}\varphi^{''}\left(x\right)
+    \varphi^{\prime}\left(x\right)=\frac{1}{2}\frac{\sigma^{2}}{\mu}\varphi^{"}\left(x\right)
     \]
     We can solve this equation:
     \[
@@ -139,15 +139,15 @@ the antiderivative of $f$.
     \end{align*}
     Using now a second order Taylor expansion around $\overline{x}-h$:
     \begin{align*}
-    \left(1-p\right)\varphi\left(\overline{x}-h\right) & =p\left(\varphi\left(\overline{x}-h\right)-h\varphi^{'}\left(\overline{x}-h\right)+\frac{1}{2}h^{2}\varphi^{''}\left(\overline{x}-h\right)\right)\\
-    \left(1-2p\right)\varphi\left(\overline{x}-h\right) & =-ph\varphi^{'}\left(\overline{x}-h\right)+p\frac{1}{2}h^{2}\varphi^{''}\left(\overline{x}-h\right)\\
-    -\frac{\mu}{\sigma}\sqrt{\Delta t}\varphi\left(\overline{x}-h\right) & =-\frac{1}{2}\left(1+\frac{\mu}{\sigma}\sqrt{\Delta t}\right)\sigma\sqrt{\Delta t}\varphi^{'}\left(\overline{x}-h\right)+\frac{1}{4}\left(1+\frac{\mu}{\sigma}\sqrt{\Delta t}\right)\sigma^{2}\Delta t\varphi^{''}\left(\overline{x}-h\right)\\
-    -\frac{2\mu}{\sigma^{2}}\varphi\left(\overline{x}-h\right) & =-\left(1+\frac{\mu}{\sigma}\sqrt{\Delta t}\right)\varphi^{'}\left(\overline{x}-h\right)+\frac{1}{2}\left(1+\frac{\mu}{\sigma}\sqrt{\Delta t}\right)\sigma\sqrt{\Delta t}\varphi^{''}\left(\overline{x}-h\right)
+    \left(1-p\right)\varphi\left(\overline{x}-h\right) & =p\left(\varphi\left(\overline{x}-h\right)-h\varphi^{\prime}\left(\overline{x}-h\right)+\frac{1}{2}h^{2}\varphi^{"}\left(\overline{x}-h\right)\right)\\
+    \left(1-2p\right)\varphi\left(\overline{x}-h\right) & =-ph\varphi^{\prime}\left(\overline{x}-h\right)+p\frac{1}{2}h^{2}\varphi^{"}\left(\overline{x}-h\right)\\
+    -\frac{\mu}{\sigma}\sqrt{\Delta t}\varphi\left(\overline{x}-h\right) & =-\frac{1}{2}\left(1+\frac{\mu}{\sigma}\sqrt{\Delta t}\right)\sigma\sqrt{\Delta t}\varphi^{\prime}\left(\overline{x}-h\right)+\frac{1}{4}\left(1+\frac{\mu}{\sigma}\sqrt{\Delta t}\right)\sigma^{2}\Delta t\varphi^{"}\left(\overline{x}-h\right)\\
+    -\frac{2\mu}{\sigma^{2}}\varphi\left(\overline{x}-h\right) & =-\left(1+\frac{\mu}{\sigma}\sqrt{\Delta t}\right)\varphi^{\prime}\left(\overline{x}-h\right)+\frac{1}{2}\left(1+\frac{\mu}{\sigma}\sqrt{\Delta t}\right)\sigma\sqrt{\Delta t}\varphi^{"}\left(\overline{x}-h\right)
     \end{align*}
     taking $\Delta t\to0$ we get:
     \begin{align*}
-    \frac{2\mu}{\sigma^{2}}\varphi\left(\overline{x}\right) & =\varphi^{'}\left(\overline{x}\right)\\
-    \gamma\varphi\left(\overline{x}\right) & =\varphi^{'}\left(\overline{x}\right)
+    \frac{2\mu}{\sigma^{2}}\varphi\left(\overline{x}\right) & =\varphi^{\prime}\left(\overline{x}\right)\\
+    \gamma\varphi\left(\overline{x}\right) & =\varphi^{\prime}\left(\overline{x}\right)
     \end{align*}
     Replacing for the solution of $\varphi$ we find that $B=0$. Then
     $A$ is found to guarantee that $\varphi$ integrates to one. This

@@ -87,15 +87,15 @@ affect the value of aggregate output or prices. The elasticity is
 \begin{align*}
 \varepsilon_{i} & =-\left(\frac{y_{i}}{p_{i}}\frac{\partial p_{i}}{\partial y_{i}}\right)^{-1}\\
 & =-\left(\frac{y_{i}}{p_{i}}\frac{\partial\Upsilon'\left(\frac{y_{i}}{Y}\right)\frac{P}{D}}{\partial y_{i}}\right)^{-1}\\
-& =-\left(\frac{y_{i}}{p_{i}}\Upsilon''\left(\frac{y_{i}}{Y}\right)\frac{P}{D}\frac{1}{Y}\right)^{-1}\\
-& =-\left(\frac{y_{i}}{Y}\right)^{-1}\frac{\Upsilon'\left(\frac{y_{i}}{Y}\right)}{\Upsilon''\left(\frac{y_{i}}{Y}\right)}
+& =-\left(\frac{y_{i}}{p_{i}}\Upsilon"\left(\frac{y_{i}}{Y}\right)\frac{P}{D}\frac{1}{Y}\right)^{-1}\\
+& =-\left(\frac{y_{i}}{Y}\right)^{-1}\frac{\Upsilon'\left(\frac{y_{i}}{Y}\right)}{\Upsilon"\left(\frac{y_{i}}{Y}\right)}
 \end{align*}
 So, knowing the properties of the first two derivatives of $\Upsilon$
 is enough to know the behavior of firms.
 
 When goods are substitutes we have $\Upsilon'\left(x\right)>0$ and
-$\Upsilon''\left(x\right)<0$. When they are complements we have $\Upsilon'\left(x\right)<0$
-and $\Upsilon''\left(x\right)>0$. So we know that the elasticity
+$\Upsilon"\left(x\right)<0$. When they are complements we have $\Upsilon'\left(x\right)<0$
+and $\Upsilon"\left(x\right)>0$. So we know that the elasticity
 is positive (recall we fixed the sign, the demand curve is downward
 sloping). The key question is whether it is increasing or decreasing
 in the variety's (relative) output.
@@ -160,7 +160,7 @@ aggregates. We now have
 so that we can break the elasticity into two terms, the effect of
 a change in the variety's elasticity and the effect on aggregate production,
 \[
-\varepsilon_{i}^{-1}=\underbrace{\frac{1}{\varepsilon}}_{\mathclap{\text{Elast. of Subs.}}}+\left(\frac{1}{\eta}-\frac{1}{\varepsilon}\right)\underbrace{\frac{y_{i}}{Y}\frac{\partial Y}{\partial y_{i}}}_{\mathclap{\text{Elast. of Agg. Output}}}.
+\varepsilon_{i}^{-1}=\underbrace{\frac{1}{\varepsilon}}_{\text{Elast. of Subs.}}+\left(\frac{1}{\eta}-\frac{1}{\varepsilon}\right)\underbrace{\frac{y_{i}}{Y}\frac{\partial Y}{\partial y_{i}}}_{\text{Elast. of Agg. Output}}.
 \]
 The elasticity of the aggregate output is with respect to variety
 $i$ is
@@ -210,7 +210,7 @@ is $\sum_{i}c_{i}y_{i}$.
 
 Because the market aggregator has constant-returns-to-scale, the market's
 marginal cost is equal to the output-weighted average of the individual
-marginal costs, that we label $c_{i}\equiv C_{i}^{'}\left(y_{i}\right)$,
+marginal costs, that we label $c_{i}\equiv C_{i}^{\prime}\left(y_{i}\right)$,
 \[
 \overline{c}=\sum_{i=1}^{N}c_{i}\frac{y_{i}}{Y}.
 \]

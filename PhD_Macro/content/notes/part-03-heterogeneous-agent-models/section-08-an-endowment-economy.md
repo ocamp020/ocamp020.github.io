@@ -31,10 +31,10 @@ are restricted, so that there is a limit to how many jelly beans can
 be obtained by a household in the market.
 
 Therefore, the contracts take the form of saving/debt contracts, where
-the household exchanges an amount $a^{'}$ of jelly beans today in
-exchange for $\left(1+r\right)a^{'}$ jelly beans in the future. When
-$a^{'}>0$ the household is saving and will receive payment in the
-future. When $a^{'}<0$ the household is in debt and receives jelly
+the household exchanges an amount $a^{\prime}$ of jelly beans today in
+exchange for $\left(1+r\right)a^{\prime}$ jelly beans in the future. When
+$a^{\prime}>0$ the household is saving and will receive payment in the
+future. When $a^{\prime}<0$ the household is in debt and receives jelly
 beans today in exchange for a payment in the future. This problem
 can be equivalently formulated in terms of (zero-coupon) bond contracts
 with a unit bond having a price of $q$. Letting $q=\nicefrac{1}{1+r}$
@@ -48,15 +48,15 @@ is high and borrow if $\epsilon$ is low.
 
 The problem of the households is then
 \begin{align*}
-V\left(\epsilon,a\right) & =\max_{\left\{ c,a^{'}\right\} }\,u\left(c\right)+\beta E\left[V\left(\epsilon^{'},a^{'}\right)|\epsilon\right]\\
-& \text{s.t. }c+a^{'}=\left(1+r\right)a+\epsilon\qquad a^{'}\geq\underline{a}
+V\left(\epsilon,a\right) & =\max_{\left\{ c,a^{\prime}\right\} }\,u\left(c\right)+\beta E\left[V\left(\epsilon^{\prime},a^{\prime}\right)|\epsilon\right]\\
+& \text{s.t. }c+a^{\prime}=\left(1+r\right)a+\epsilon\qquad a^{\prime}\geq\underline{a}
 \end{align*}
 With respect to the workhorse model above, there is no labor choice
-and the ``wage'' is equal to 1, making income equal to $\epsilon$.
+and the "wage" is equal to 1, making income equal to $\epsilon$.
 As before, households live forever and there is no aggregate risk.
 The Euler equation of a household is
 \[
-u^{'}\left(c\right)=\beta E_{\epsilon^{'}}\left[V_{a}\left(\epsilon^{'},a^{'}\right)|\epsilon\right]=\beta\left(1+r\right)E\left[u^{'}\left(\left(1+r\right)a^{'}+\epsilon^{'}-g_{a}\left(\epsilon^{'},a^{'}\right)\right)\right],
+u^{\prime}\left(c\right)=\beta E_{\epsilon^{\prime}}\left[V_{a}\left(\epsilon^{\prime},a^{\prime}\right)|\epsilon\right]=\beta\left(1+r\right)E\left[u^{\prime}\left(\left(1+r\right)a^{\prime}+\epsilon^{\prime}-g_{a}\left(\epsilon^{\prime},a^{\prime}\right)\right)\right],
 \]
 where $g_{a}$ is the policy function for savings.
 
@@ -101,39 +101,39 @@ We can update the distribution of households by following their actions.
 Let $S\times A\in{\cal S}\times{\cal A}$ be a set in the $\sigma$-algebras.
 We want to know if there are households coming into the set $S\times A$.
 From the Markov kernel (or transition function) of $\epsilon$ we
-have the probability that $\epsilon^{'}\in S$:
+have the probability that $\epsilon^{\prime}\in S$:
 \[
-\text{Pr}\left(\epsilon^{'}\in S|\epsilon\right)=\int_{\epsilon^{'}\in S}Q\left(\epsilon^{'}|\epsilon\right)d\epsilon.
+\text{Pr}\left(\epsilon^{\prime}\in S|\epsilon\right)=\int_{\epsilon^{\prime}\in S}Q\left(\epsilon^{\prime}|\epsilon\right)d\epsilon.
 \]
-Then, we define an indicator function to know if $a^{'}\in A$
+Then, we define an indicator function to know if $a^{\prime}\in A$
 \[
 g\left(\epsilon,a,A\right)=\begin{cases}
-1 & \text{if }a^{'}=g_{a}\left(\epsilon,a\right)\in A\\
+1 & \text{if }a^{\prime}=g_{a}\left(\epsilon,a\right)\in A\\
 0 & \text{otw}
 \end{cases}.
 \]
 With this we can update the distribution for all $\left(S,A\right)\in{\cal S\times A}$:
 \[
-\Gamma^{'}\left(S,A\right)=\int_{\overline{S}}\int_{\overline{A}}\underbrace{g\left(\epsilon,a,A\right)\cdot\text{Pr}\left(\epsilon^{'}\in S|\epsilon\right)}_{\text{Markov Kernel}:P\left(\epsilon^{'}a^{'}|\epsilon,a\right)}\cdot d\Gamma\left(\epsilon,a\right).
+\Gamma^{\prime}\left(S,A\right)=\int_{\overline{S}}\int_{\overline{A}}\underbrace{g\left(\epsilon,a,A\right)\cdot\text{Pr}\left(\epsilon^{\prime}\in S|\epsilon\right)}_{\text{Markov Kernel}:P\left(\epsilon^{\prime}a^{\prime}|\epsilon,a\right)}\cdot d\Gamma\left(\epsilon,a\right).
 \]
 
 This is the adjoint Markov operator of the Markov kernel (or transition
 function) $Q$ of the joint process for $\left(\epsilon,a\right)$.
 The stationary distribution of states across households is the fixed
-point of this operator ($\Gamma$ such that $\Gamma^{'}=\Gamma$).
+point of this operator ($\Gamma$ such that $\Gamma^{\prime}=\Gamma$).
 
 When the exogenous state is discrete (as is often the case) updating
 is simpler. We can work with: ${\cal S}=\left\{ \left\{ \epsilon_{1}\right\} ,\ldots,\left\{ \epsilon_{n}\right\} ,\ldots,\left\{ \epsilon_{N}\right\} \right\} $
 instead of the $\sigma$-algebra and update according to
 
 \[
-\Gamma^{'}\left(\epsilon^{'},A\right)=\sum_{\overline{S}}\int_{\overline{A}}g\left(\epsilon,a,A\right)\cdot\underbrace{Q\left(\epsilon^{'}|\epsilon\right)}_{\text{Markov Transition Matrix}}\cdot d\Gamma\left(\epsilon,a\right)
+\Gamma^{\prime}\left(\epsilon^{\prime},A\right)=\sum_{\overline{S}}\int_{\overline{A}}g\left(\epsilon,a,A\right)\cdot\underbrace{Q\left(\epsilon^{\prime}|\epsilon\right)}_{\text{Markov Transition Matrix}}\cdot d\Gamma\left(\epsilon,a\right)
 \]
 
 **Stationary recursive competitive equilibrium**
 
 A S-RCE is a set of a value function $\left(V\right)$, a policy function
-$\left(a^{'}\right)$, a distribution $\left(\Gamma\right)$, and
+$\left(a^{\prime}\right)$, a distribution $\left(\Gamma\right)$, and
 a price $\left(r\right)$ such that:
 
 1. Given $r$ the value and policy functions solve the agent's problem
@@ -144,7 +144,7 @@ Markov operator of the endogenous Markov process defined above.
 clears:
 
 \[
-\underbrace{\int\int a^{'}\left(\epsilon,a\right)\cdot d\Gamma\left(\epsilon,a\right)}_{\text{Net Supply of Assets}}=0\longleftrightarrow\underbrace{\int\int c\left(\epsilon,a\right)\cdot d\Gamma\left(\epsilon,a\right)}_{\text{Demand for Goods}}=\underbrace{\int\int\epsilon\cdot d\Gamma\left(\epsilon,a\right)}_{\text{Supply of Goods }}
+\underbrace{\int\int a^{\prime}\left(\epsilon,a\right)\cdot d\Gamma\left(\epsilon,a\right)}_{\text{Net Supply of Assets}}=0\longleftrightarrow\underbrace{\int\int c\left(\epsilon,a\right)\cdot d\Gamma\left(\epsilon,a\right)}_{\text{Demand for Goods}}=\underbrace{\int\int\epsilon\cdot d\Gamma\left(\epsilon,a\right)}_{\text{Supply of Goods }}
 \]
 
 The definition of equilibrium also gives us an algorithm to find it.
@@ -156,13 +156,13 @@ The definition of equilibrium also gives us an algorithm to find it.
 \BlankLine
 \SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
 \Input{Guess for price $(r)$}
-\Output{$V,a^{'},\Gamma,r$}
+\Output{$V,a^{\prime},\Gamma,r$}
 \BlankLine
-1. Solve the DP problem of the agent given $r$: \\ $\qquad (V,a^{'})=T(V;r)$ (a fixed point problem) \;
+1. Solve the DP problem of the agent given $r$: \\ $\qquad (V,a^{\prime})=T(V;r)$ (a fixed point problem) \;
 \smallskip
 2. Find stationary distribution by iterating over the adjoint Markov operator \;
 \smallskip
-3. Check market clearing:  $\sum_{i}\sum_j a^{'}(\vec{\epsilon}_i,\vec{a}_j)\cdot\Gamma(i,j)$ \;
+3. Check market clearing:  $\sum_{i}\sum_j a^{\prime}(\vec{\epsilon}_i,\vec{a}_j)\cdot\Gamma(i,j)$ \;
 \smallskip
 4. Update prices to clear market \\ $\qquad$ Manually by tatonnement or with a Root finder \;
 \smallskip

@@ -279,10 +279,10 @@ We can apply this result to a couple examples taken from [Dixit and Pindyck (199
     Now the firm shuts down with a certain probability, given by the arrival
     of the Poisson shock. Then:
     \[
-    V=E\left[\int_{0}^{\infty}e^{-\rho t}\pi dt\right]=\int_{0}^{\infty}\Pr\left[\text{No shock until time \ensuremath{t}}\right]e^{-\rho t}\pi dt
+    V=E\left[\int_{0}^{\infty}e^{-\rho t}\pi dt\right]=\int_{0}^{\infty}\Pr\left[\text{No shock until time t}\right]e^{-\rho t}\pi dt
     \]
     The probability of there being no shocks is known:
     \[
-    \Pr\left[\text{No shock until time \ensuremath{t}}\right]=e^{-\lambda t}
+    \Pr\left[\text{No shock until time t}\right]=e^{-\lambda t}
     \]
     Replacing gives the desired result.

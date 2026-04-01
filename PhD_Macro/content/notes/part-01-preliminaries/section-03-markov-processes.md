@@ -30,7 +30,7 @@ consider $\left(Z,{\cal Z},\lambda\right)$ a probability space, then
 we can define the problem to be::
 <a id="ref-eq-000020fe-3" class="course-anchor"></a>
 \begin{equation}
-v\left(x,z\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y,z\right)+\beta\int v\left(y,z^{'}\right)\lambda\left(dz^{'}\right)\right\}
+v\left(x,z\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y,z\right)+\beta\int v\left(y,z^{\prime}\right)\lambda\left(dz^{\prime}\right)\right\}
 \end{equation}
 Recall that $\lambda:{\cal Z}\to\mathbb{R}_{+}$ maps sets of the
 $\sigma$-algebra ${\cal Z}$ to real numbers. The problem above can
@@ -39,15 +39,15 @@ but it is not general enough for our purposes because the distribution
 of $z$ is fixed, and each draw is taken (each period) from the same
 distribution.
 
-In general we want the distribution of $z^{'}$ to be influenced by
+In general we want the distribution of $z^{\prime}$ to be influenced by
 the previous draw $z$, for this we need a special type of function,
 $Q:Z\times{\cal Z}\to\mathbb{R}$, such that for all $z\in Z$ it
 holds that $Q\left(z,\cdot\right)$ is a probability distribution
-for $z^{'}$. This is called a transition function and it allows to
+for $z^{\prime}$. This is called a transition function and it allows to
 express the problem as:
 <a id="ref-eq-000020fe-3-1" class="course-anchor"></a>
 \begin{equation}
-v\left(x,z\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y,z\right)+\beta\int v\left(y,z^{'}\right)Q\left(z,dz^{'}\right)\right\}
+v\left(x,z\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y,z\right)+\beta\int v\left(y,z^{\prime}\right)Q\left(z,dz^{\prime}\right)\right\}
 \end{equation}
 The objective is now to characterize transition functions and the
 properties of the process that they generate.
@@ -69,9 +69,9 @@ properties of the process that they generate.
 The interpretation is that for all current value of the random variable
 the transition function induces a probability measure for next period's
 value of the variable. Then $Q\left(a,A\right)$ is the probability
-that $z^{'}\in A$ if the current value of the variable is $a$.
+that $z^{\prime}\in A$ if the current value of the variable is $a$.
 \[
-Q\left(a,A\right)=\Pr\left(z^{'}\in A|z=a\right)
+Q\left(a,A\right)=\Pr\left(z^{\prime}\in A|z=a\right)
 \]
 
 Any transition function defines two operators that will be of great
@@ -86,7 +86,7 @@ importance later.
     1. The Markov operator of $Q$ is an operator $T$ defined on the set
     of ${\cal Z}$-measurable functions:
     \[
-    Tf\left(z\right)=\int f\left(z^{'}\right)Q\left(z,dz^{'}\right)
+    Tf\left(z\right)=\int f\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)
     \]
     for all $z\in Z$. $T$ is the expected value of $f$ in the next
     period if today's realization is $z$.
@@ -95,7 +95,7 @@ importance later.
     \[
     T^{\star}\lambda\left(A\right)=\int Q\left(z,A\right)\lambda\left(dz\right)
     \]
-    for all $A\in{\cal Z}$. $T$ gives the probability that $z^{'}\in A$
+    for all $A\in{\cal Z}$. $T$ gives the probability that $z^{\prime}\in A$
     if the current value of $z$ is drawn from probability distribution
     $\lambda$.
 
@@ -128,7 +128,7 @@ proofs go in measure theory.
     - Let $A\in{\cal Z}$ and $f=\chi_{A}$, where $\chi_{A}$ is by construction
     measurable and nonnegative. Then:
     \[
-    Tf\left(z\right)=\int f\left(z^{'}\right)Q\left(z,dz^{'}\right)=\int\chi_{A}\left(z^{'}\right)Q\left(z,dz^{'}\right)=\int_{A}Q\left(z,dz^{'}\right)=Q\left(z,A\right)
+    Tf\left(z\right)=\int f\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)=\int\chi_{A}\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)=\int_{A}Q\left(z,dz^{\prime}\right)=Q\left(z,A\right)
     \]
     Because $Q\left(\cdot,A\right)$ is measurable (as a function of $z$
     for fixed $A$) by definition we establish measurability of $Tf$.
@@ -136,9 +136,9 @@ proofs go in measure theory.
     functions such that: $f\left(z\right)=\underset{i=1}{\overset{n}{\sum}}a_{i}\chi_{A_{i}}\left(z\right)$.
     Then the Markov operator gives:
     \begin{eqnarray*}
-    Tf\left(z\right) & = & \int f\left(z^{'}\right)Q\left(z,dz^{'}\right)\\
-    & = & \int\sum_{i=1}^{n}a_{i}\chi_{A_{i}}\left(z^{'}\right)Q\left(z,dz^{'}\right)\\
-    & = & \sum_{i=1}^{n}a_{i}\int_{A}\chi_{A_{i}}\left(z^{'}\right)Q\left(z,dz^{'}\right)\\
+    Tf\left(z\right) & = & \int f\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
+    & = & \int\sum_{i=1}^{n}a_{i}\chi_{A_{i}}\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
+    & = & \sum_{i=1}^{n}a_{i}\int_{A}\chi_{A_{i}}\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
     & = & \sum_{i=1}^{n}a_{i}T\chi_{A_{i}}
     \end{eqnarray*}
     By the previous case each $T\chi_{A_{i}}$ is measurable. Then, $Tf$
@@ -150,13 +150,13 @@ proofs go in measure theory.
     sequence of simple functions because it is measurable and nonnegative.
     So for all $z$ we have:
     \begin{eqnarray*}
-    Tf\left(z\right) & = & \int f\left(z^{'}\right)Q\left(z,dz^{'}\right)\\
-    & = & \int\lim\phi_{n}\left(z^{'}\right)Q\left(z,dz^{'}\right)\\
-    & = & \lim\int\phi_{n}\left(z^{'}\right)Q\left(z,dz^{'}\right)\\
+    Tf\left(z\right) & = & \int f\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
+    & = & \int\lim\phi_{n}\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
+    & = & \lim\int\phi_{n}\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
     & = & \lim T\phi_{n}\left(z\right)
     \end{eqnarray*}
     where the third step of interchanging the limit and the integral follows
-    from Lebesgue's Monotone Convergence theorem. (Note: The theorem states that if $\left\ f_n\right\ $ is a monotone increasing sequence of nonnegative measurable functions then that converges pointwise to $f$ then $\int fd\mu=\lim\int f_nd\mu$. Recall from [Proposition](../part-06-random-variables-and-probability/section-23-measurable-functions.md#ref-simple-000020functions-000020and-000020measurability) that the sequence $\left\ \phi_n\right\ $ of simple functions can be chosen to be monotone increasing.) Finally the pointwise limit of measurable functions is a measurable
+    from Lebesgue's Monotone Convergence theorem. (Note: The theorem states that if $\left\{ f_{n}\right\} $ is a monotone increasing sequence of nonnegative measurable functions then that converges pointwise to $f$ then $\int fd\mu=\lim\int f_{n}d\mu$. Recall from [Proposition](../part-06-random-variables-and-probability/section-23-measurable-functions.md#ref-simple-000020functions-000020and-000020measurability) that the sequence $\left\{ \phi_{n}\right\} $ of simple functions can be chosen to be monotone increasing.) Finally the pointwise limit of measurable functions is a measurable
     function ([Proposition](../part-06-random-variables-and-probability/section-23-measurable-functions.md#ref-prop-000020pointwise-000020limit-000020and-000020measurablility)).
     The result follows because $T\phi_{n}$ is measurable by the previous
     case.
@@ -219,7 +219,7 @@ tomorrow can be computed with either operator.
     (or more generally $f\in M^{+}\left(Z,{\cal Z}\right)$) it holds
     that:
     \[
-    \int\left(Tf\left(z\right)\right)\lambda\left(dz\right)=\int f\left(z^{'}\right)T^{\star}\lambda\left(dz^{'}\right)=\int\int f\left(z^{'}\right)Q\left(z,dz^{'}\right)\lambda\left(dz\right)
+    \int\left(Tf\left(z\right)\right)\lambda\left(dz\right)=\int f\left(z^{\prime}\right)T^{\star}\lambda\left(dz^{\prime}\right)=\int\int f\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)\lambda\left(dz\right)
     \]
 
 Then to obtain the expected value of function $f$ tomorrow given
@@ -234,7 +234,7 @@ of random variables by iterating over $Q$ with the Markov operator.
 \begin{eqnarray*}
 Q^{1}\left(z,A\right) & = & Q\left(z,A\right)\\
 & \vdots\\
-Q^{n+1}\left(z,A\right) & = & \left(TQ^{n}\left(\cdot,A\right)\right)\left(z\right)=\int Q^{n}\left(z^{'},A\right)Q\left(z,dz^{'}\right)
+Q^{n+1}\left(z,A\right) & = & \left(TQ^{n}\left(\cdot,A\right)\right)\left(z\right)=\int Q^{n}\left(z^{\prime},A\right)Q\left(z,dz^{\prime}\right)
 \end{eqnarray*}
 Then if a shock is drawn sequentially from $Q$ the function $Q^{n}\left(z,A\right)$
 will give the probability of going from initial point $z$ to a value
@@ -431,7 +431,7 @@ Before characterizing the transition function of a Markov chain it
 is useful to recall that the natural $\sigma$-algebra over $Z$ is
 ${\cal Z}=2^{Z}$ (the power set), and that the space of probabilities
 distributions over $Z$ is formed by vectors $p\in\mathbb{R}^{l}$
-such that $p_{i}\geq0$ and $\underset{i=1}{\overset{l}{\sum}}p_{i}=1$ (Note: Formally $p\in\Delta^l$, where $\Delta^l=\left\ p\in\mathbbR_+^l|\underseti=1\oversetl\sump_i=1\right\ $ is the $l-1$ dimensional simplex. This same set is particularly useful in characterizing price systems in finite dimensional exchange economies.). The transition function of the Markov process can be then characterized
+such that $p_{i}\geq0$ and $\underset{i=1}{\overset{l}{\sum}}p_{i}=1$ (Note: Formally $p\in\Delta^{l}$, where $\Delta^{l}=\left\{ p\in\mathbb{R}_{+}^{l}|\underset{i=1}{\overset{l}{\sum}}p_{i}=1\right\} $ is the $l-1$ dimensional simplex. This same set is particularly useful in characterizing price systems in finite dimensional exchange economies.). The transition function of the Markov process can be then characterized
 by a matrix:
 !!! info "Definition: Markov Matrix / Stochastic Matrix"
 
@@ -465,18 +465,18 @@ of a Markov chain making use of the Markov matrix (Markov!).
 1. Recall that The Markov operator of $Q$ is an operator $T$ defined
 on the set of ${\cal Z}$-measurable functions:
 \[
-Tf\left(z\right)=\int f\left(z^{'}\right)Q\left(z,dz^{'}\right)
+Tf\left(z\right)=\int f\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)
 \]
 for all $z\in Z$. $T$ is the expected value of $f$ in the next
 period if today's realization is $z$. For Markov chains the function
 $f$ can be reduced to a row-vector $\vec{f}=\left(f\left(z_{1}\right),\ldots,f\left(z_{l}\right)\right)\in\mathbb{R}^{l}$,
 which reduces the integral to:
 \[
-Tf\left(z_{i}\right)=\vec{f}\pi_{i}^{'}
+Tf\left(z_{i}\right)=\vec{f}\pi_{i}^{\prime}
 \]
 more generally we have:
 \[
-Tf=\vec{f}\Pi^{'}
+Tf=\vec{f}\Pi^{\prime}
 \]
 the $i^{th}$ element of $Tf$ (which is an $l$-dimensional vector)
 corresponds to: $E\left[f\left(z_{t+1}\right)|z_{t}=z_{i}\right]$.
@@ -485,7 +485,7 @@ defined on probability measures on $\left(Z,{\cal Z}\right)$:
 \[
 T^{\star}\lambda\left(A\right)=\int Q\left(z,A\right)\lambda\left(dz\right)
 \]
-for all $A\in{\cal Z}$. $T$ gives the probability that $z^{'}\in A$
+for all $A\in{\cal Z}$. $T$ gives the probability that $z^{\prime}\in A$
 if the current value of $z$ is drawn from probability distribution
 $\lambda$. Because the space is finite we can represent probabilities
 distributions as vectors in $\Delta^{l}$. Let $p\in\Delta^{l}$ be
@@ -499,7 +499,7 @@ row-vector) corresponds to the unconditional probability that $z_{t+1}=z_{j}$:
 $\Pr\left(z_{t+1}=z_{j}\right)$.
 
 It shouldn't be a surprise that the Markov operator is characterized
-by $\Pi^{'}$ and the adjoint operator by its transpose $\Pi$. (Note: If vectors are assumed to be columns instead of rows then $Tf=\Pi f$ and $T^\starp=\Pi^'p$. The adjoint is characterized as the transpose of the Markov operator in any case.)
+by $\Pi^{\prime}$ and the adjoint operator by its transpose $\Pi$. (Note: If vectors are assumed to be columns instead of rows then $Tf=\Pi f$ and $T^{\star}p=\Pi^{\prime}p$. The adjoint is characterized as the transpose of the Markov operator in any case.)
 
 As with general Markov processes there is a special interest in the
 limit behavior of the adjoint operator $\left(\underset{n\to\infty}{\lim}\Pi^{n}p\right)$,
@@ -516,7 +516,7 @@ never leaves once it takes a value in them. Formally:
 
     A set $E\subseteq Z$ is ergodic if and only
     if $Q\left(z_{i},E\right)=1$ for all $z_{i}\in E$ and there does
-    not exist a proper subset $E^{'}\subset E$ that is ergodic.
+    not exist a proper subset $E^{\prime}\subset E$ that is ergodic.
 
 The ergodic sets are important because they tell us sections of the
 state space that are of interest. Only ergodic sets have positive
@@ -733,7 +733,7 @@ always converges, and its limit gives away the invariant distributions.
 
 We can strengthen these results by imposing extra structure on $\Pi$.
 We can get uniqueness of the ergodic set and the invariant distribution
-under a ``reachability'' condition (at least one state should be
+under a "reachability" condition (at least one state should be
 reachable in finite time starting from anywhere).
 <a id="ref-thm-000020markov-000020chains-0000202" class="course-anchor"></a>
 !!! abstract "Theorem"
@@ -749,7 +749,7 @@ reachable in finite time starting from anywhere).
     (so for any $p_{0}\in\Delta^{l}$ we have $p_{0}\overline{\Pi}=p^{\star}$).
 
 The previous result still does not rule out cyclicality in the ergodic
-set. We can get this under a ``mixing'' condition.
+set. We can get this under a "mixing" condition.
 <a id="ref-thm-000020markov-000020chains-0000203" class="course-anchor"></a>
 !!! abstract "Theorem"
 
@@ -878,12 +878,12 @@ for all $n$. We can now establish the following result:
     increasing then $Tf$ is also weakly increasing.
     1. Let $\lambda,\mu\in\Lambda\left(Z,{\cal Z}\right)$. If $\mu\geq\lambda$
     then $T^{\star}\mu\geq T^{\star}\lambda$.
-    1. If $z\geq z^{'}$ then $Q\left(z,\cdot\right)\geq Q\left(z^{'},\cdot\right)$
+    1. If $z\geq z^{\prime}$ then $Q\left(z,\cdot\right)\geq Q\left(z^{\prime},\cdot\right)$
     (in the stochastic dominance sense)
 
 The last statement is particularly useful because it translates monotonicity
 of the Markov operator directly into monotonicity of the transition
-function (``better'' states lead to ``better'' distributions).
+function ("better" states lead to "better" distributions).
 
 Now we introduce the final condition needed for the main result of
 this section. It is a mixing condition akin to that in Theorems [Theorem](#ref-thm-000020markov-000020chains-0000202)
@@ -893,16 +893,16 @@ exercises 12.12 and 12.13.
 \begin{assumption*}
 **(Mixing Property)** The set $Z=\left[a,b\right]$ is a closed
 and bounded rectangle in $\mathbb{R}^{l}$ characterized by $a$ and
-$b$, (Note: A set $Z\subseteq\mathbbR^l$ is a closed and bounded rectangle if there are two vectors $a,b\in\mathbbR^l$ such that$a\leq b$ and $Z=\left[a_1,b_1\right]\times\ldots\times\left[a_l,b_l\right]$.) and there exists $c\in Z$, $\epsilon>0$ and $N\geq1$ such that:
+$b$, (Note: A set $Z\subseteq\mathbb{R}^{l}$ is a closed and bounded rectangle if there are two vectors $a,b\in\mathbb{R}^{l}$ such that$a\leq b$ and $Z=\left[a_{1},b_{1}\right]\times\ldots\times\left[a_{l},b_{l}\right]$.) and there exists $c\in Z$, $\epsilon>0$ and $N\geq1$ such that:
 \[
 Q^{N}\left(a,\left[c,b\right]\right)\geq\epsilon\qquad Q^{N}\left(b,\left[a,c\right]\right)\geq\epsilon
 \]
 \end{assumption*}
-Under this assumption it is possible to reach the ``upper'' region
+Under this assumption it is possible to reach the "upper" region
 of the rectangle, $\left[c,b\right]$, in finite time starting from
-the ``lower'' corner $\left(a\right)$, and it is possible to reach
-the ``lower'' region of the rectangle, $\left[a,c\right]$, in finite
-time starting from the ``upper'' corner $\left(b\right)$. It is
+the "lower" corner $\left(a\right)$, and it is possible to reach
+the "lower" region of the rectangle, $\left[a,c\right]$, in finite
+time starting from the "upper" corner $\left(b\right)$. It is
 possible to show that if one can move through the set from the corners
 it is possible to do it from anywhere (under a monotonicity assumption).
 !!! abstract "Proposition"
@@ -910,7 +910,7 @@ it is possible to do it from anywhere (under a monotonicity assumption).
     Let $Q$ satisfy monotonicity and the previous assumption for some
     tuple $\left(c,\epsilon,N\right)$, then:
     \[
-    Q^{N}\left(z,\left[c,b\right]\right)\geq\epsilon\qquad Q^{N}\left(z,\left[a,c\right]\right)\geq\epsilon\qquad\text{for all \ensuremath{z\in Z}}
+    Q^{N}\left(z,\left[c,b\right]\right)\geq\epsilon\qquad Q^{N}\left(z,\left[a,c\right]\right)\geq\epsilon\qquad\text{for all z\in Z}
     \]
 
 Finally we establish the convergence result.

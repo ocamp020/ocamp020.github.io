@@ -77,11 +77,11 @@ that:
 (noting that the instantaneous payoff before investing is zero). We
 can use Ito's lemma to expand the RHS:
 \[
-\rho V=\mu xV^{'}+\frac{1}{2}\sigma^{2}x^{2}V^{''}
+\rho V=\mu xV^{\prime}+\frac{1}{2}\sigma^{2}x^{2}V^{"}
 \]
 There are three boundary conditions that must hold:
 \[
-V\left(0\right)=0\qquad V\left(x^{\star}\right)=x^{\star}-I\qquad V^{'}\left(x^{\star}\right)=1
+V\left(0\right)=0\qquad V\left(x^{\star}\right)=x^{\star}-I\qquad V^{\prime}\left(x^{\star}\right)=1
 \]
 The first one follows from 0 being an absorbing state (because of
 the properties of the geometric brownian motion). The second one is
@@ -94,7 +94,7 @@ V\left(x\right)=Ax^{\beta}
 for some $A$ and $\beta$ to be found later. This clearly solves
 the HJB equation. Replacing we can solve for $\beta$:
 \begin{align*}
-\rho V & =\mu xV^{'}+\frac{1}{2}\sigma^{2}x^{2}V^{''}\\
+\rho V & =\mu xV^{\prime}+\frac{1}{2}\sigma^{2}x^{2}V^{"}\\
 \rho Ax^{\beta} & =\mu\beta Ax^{\beta}+\frac{1}{2}\sigma^{2}A\beta\left(\beta-1\right)x^{\beta}\\
 \rho & =\mu\beta+\frac{1}{2}\sigma^{2}\beta\left(\beta-1\right)\\
 0 & =-\rho+\left(\mu-\frac{1}{2}\sigma^{2}\right)\beta+\frac{1}{2}\sigma^{2}\beta^{2}

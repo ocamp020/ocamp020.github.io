@@ -11,11 +11,11 @@ Formally:
 !!! info "Definition: Measurable function"
 
     Let $\left(S,{\cal A},\mu\right)$
-    and $\left(S^{'},{\cal A}^{'},\mu^{'}\right)$ be measure spaces and
-    $f:S\to S^{'}$ a function. $f$ is measurable if and only if $f^{-1}\left(A^{'}\right)\in{\cal A}$
-    for all $A^{'}\in{\cal A}^{'}$.
+    and $\left(S^{\prime},{\cal A}^{\prime},\mu^{\prime}\right)$ be measure spaces and
+    $f:S\to S^{\prime}$ a function. $f$ is measurable if and only if $f^{-1}\left(A^{\prime}\right)\in{\cal A}$
+    for all $A^{\prime}\in{\cal A}^{\prime}$.
 
-A special case of notable importance is that of $\left(S^{'},{\cal A}^{'},\mu^{'}\right)=\left(\mathbb{R},{\cal B},\lambda\right)$,
+A special case of notable importance is that of $\left(S^{\prime},{\cal A}^{\prime},\mu^{\prime}\right)=\left(\mathbb{R},{\cal B},\lambda\right)$,
 where $\lambda$ is the Lebesgue measure on the plane. This are real
 valued functions. In this case the ${\cal B}$-measurable sets in
 $\mathbb{R}$ can be characterized in the following way:
@@ -50,7 +50,7 @@ can characterize formally what a random variable is.
     1. The probability measure for $f$ is then: $\mu\left(B\right)=P\left(f^{-1}\left(B\right)\right)=P\left(\left\{ s\in S|f\left(s\right)\in B\right\} \right)$,
     for $B\in{\cal B}$.
     1. The distribution function for $f$ is: $G\left(b\right)=\mu\left(\left(-\infty,b\right]\right)$,
-    for $b\in\text{\ensuremath{\mathbb{R}}}$.
+    for $b\in\text{\mathbb{R}}$.
 
 Generally it is very hard to find a function that is not measurable.
 The details of the example will depend on the spaces considered. For
@@ -249,9 +249,9 @@ around measurability.
     Suppose not, then there exists $x\in E$ such that $f\left(x\right)\neq g\left(x\right)$.
     Let $\epsilon=\left|f\left(x\right)-g\left(x\right)\right|$, because
     $f$ and $g$ are continuous there exists $\delta$ such that for
-    $x^{'}\in B_{\delta}\left(x\right)$ it holds that $\left|f\left(x\right)-f\left(x^{'}\right)\right|<\frac{\epsilon}{2}$
-    and $\left|g\left(x\right)-g\left(x^{'}\right)\right|<\frac{\epsilon}{2}$.
-    Then for all $x^{'}\in B_{\delta}\left(x\right)$ it holds that $f\left(x^{'}\right)\neq g\left(x^{'}\right)$,
+    $x^{\prime}\in B_{\delta}\left(x\right)$ it holds that $\left|f\left(x\right)-f\left(x^{\prime}\right)\right|<\frac{\epsilon}{2}$
+    and $\left|g\left(x\right)-g\left(x^{\prime}\right)\right|<\frac{\epsilon}{2}$.
+    Then for all $x^{\prime}\in B_{\delta}\left(x\right)$ it holds that $f\left(x^{\prime}\right)\neq g\left(x^{\prime}\right)$,
     but $B_{\delta}\left(x\right)$ has strictly positive measure, contradicting
     $f$ and $g$ being equivalent.
 

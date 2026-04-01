@@ -114,14 +114,14 @@ In a nested-CES economy we can further show that
 \[
 d\log Y\;\approx\;-\frac{1}{2}\sum_{s=0}^{S}\lambda_{s}\theta_{s}\text{Var}_{\Omega_{(s,:)}}\left(\sum_{k=0}^{S}\Psi_{(:,k)}d\log\mu_{k}\right).
 \]
-From [Baqaee and Rubbo (2023)](https://doi.org/10.1146/annurev-economics-082322-012833): ``Unlike for productivity shocks,
+From [Baqaee and Rubbo (2023)](https://doi.org/10.1146/annurev-economics-082322-012833): "Unlike for productivity shocks,
 where the second-order effects originating from each producer j are
 positive if, and only if, its inputs are substitutes, for wedges the
 second-order terms are always (weakly) negative, and more so when
 goods are better substitutes. Intuitively, expenditure switch- ing
 by consumers and producers inefficiently reallocates quantities away
 from sectors with higher relative markup. This effect is stronger
-when elasticities of substitution, $\theta_{s}$, are larger.''
+when elasticities of substitution, $\theta_{s}$, are larger."
 
 ## Hsieh-Klenow: A CES horizontal economy.
 

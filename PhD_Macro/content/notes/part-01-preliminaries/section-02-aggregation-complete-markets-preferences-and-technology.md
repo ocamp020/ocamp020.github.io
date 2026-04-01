@@ -86,9 +86,9 @@ household.
 
 One immediate way in which we get aggregation is all firms and households
 are identical. This implies that the production technologies do not
-depend on the identity of the firm $\left(F_{h,t}^{x}\left(\cdot\right)=F_{h^{'},t}^{x}\left(\cdot\right),\,F_{j,t}^{y}\left(\cdot\right)=F_{j^{'},t}^{y}\left(\cdot\right)\right)$,
+depend on the identity of the firm $\left(F_{h,t}^{x}\left(\cdot\right)=F_{h^{\prime},t}^{x}\left(\cdot\right),\,F_{j,t}^{y}\left(\cdot\right)=F_{j^{\prime},t}^{y}\left(\cdot\right)\right)$,
 and the utility function and endowments do not depend on the identity
-of the household $\left(U^{i}\left(\cdot\right)=U^{i'}\left(\cdot\right),\:\theta_{i,h}^{x}=\theta_{i,j}^{y}=\frac{1}{I},\:k_{i,0}=k_{i^{'},0},\:\overline{n}_{i,t}=\overline{n}_{i^{'},t}\right)$,
+of the household $\left(U^{i}\left(\cdot\right)=U^{i'}\left(\cdot\right),\:\theta_{i,h}^{x}=\theta_{i,j}^{y}=\frac{1}{I},\:k_{i,0}=k_{i^{\prime},0},\:\overline{n}_{i,t}=\overline{n}_{i^{\prime},t}\right)$,
 with the common utility function strictly concave so that it admits
 a unique solution. In this case all individual firms and households
 make the same choices. In this case the distribution of agents in

@@ -96,7 +96,7 @@ show the generality of this type of measure:
 
     Let $F$ be an absolutely continuous non-decreasing function on $\left[\alpha,\beta\right)$.
     Absolutely continuous functions have a finite derivative a.e. let
-    this derivative be $f=F^{'}$. Then the Stieltjes measure $\mu_{F}$
+    this derivative be $f=F^{\prime}$. Then the Stieltjes measure $\mu_{F}$
     is defined for all Lebesgue measurable sets and:
     \[
     \mu_{F}\left(A\right)=\int_{A}f\left(x\right)dx
@@ -108,10 +108,10 @@ show the generality of this type of measure:
     
     \begin{thm}
     **(Lebesgue) **If $F$ is absolutely continuous on $\left[a,b\right]$
-    then the derivative $F^{'}$ is integrable on $\left[a,b\right]$
+    then the derivative $F^{\prime}$ is integrable on $\left[a,b\right]$
     and:
     \[
-    F\left(\beta\right)-F\left(\alpha\right)=\int_{\alpha}^{\beta}F^{'}\left(x\right)dx
+    F\left(\beta\right)-F\left(\alpha\right)=\int_{\alpha}^{\beta}F^{\prime}\left(x\right)dx
     \]
     \end{thm}
     \begin{proof}

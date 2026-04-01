@@ -4,14 +4,14 @@
 
 Models following the work of [Lucas (1978)](https://doi.org/10.2307/3003596) and [Hopenhayn (1992)](https://doi.org/10.2307/2951541)
 have competitive firms that operate technologies with decreasing returns
-to scale and whose owners (or managers) differ in their ``managerial
-talent.'' This is captured by differences in firms' productivity $\left(z_{i}\right)$.
-More ``talented'' managers have a larger ``span of control,'' that
+to scale and whose owners (or managers) differ in their "managerial
+talent." This is captured by differences in firms' productivity $\left(z_{i}\right)$.
+More "talented" managers have a larger "span of control," that
 is, their optimal firm size is larger. The decreasing returns to scale
 determine how differences in talent (productivity) translate into
 differences in size, but they also imply that firms make profits in
 equilibrium. However, these profits are not the result of market power
-but of the returns to the ``managerial input.'' These are rents to
+but of the returns to the "managerial input." These are rents to
 the fixed input that the manager owns.
 
 While we will not cover these models in detail, we a brief description
@@ -52,13 +52,13 @@ to corner solution in scale)
 
 The first order conditions are
 \begin{align*}
-zg^{'}\left(f\left(\kappa\right)n\right)f^{'}\left(\kappa\right) & =r\\
-zg^{'}\left(f\left(\kappa\right)n\right)f\left(\kappa\right) & =w+r\kappa
+zg^{\prime}\left(f\left(\kappa\right)n\right)f^{\prime}\left(\kappa\right) & =r\\
+zg^{\prime}\left(f\left(\kappa\right)n\right)f\left(\kappa\right) & =w+r\kappa
 \end{align*}
 We can use these conditions to solve for the optimal capital-per-worker.
 Dividing them gets us
 \[
-\frac{f\left(\kappa\right)}{f^{'}\left(\kappa\right)}-\kappa=\frac{w}{r}
+\frac{f\left(\kappa\right)}{f^{\prime}\left(\kappa\right)}-\kappa=\frac{w}{r}
 \]
 Recall that firms face competitive input markets, so prices $w$ and
 $r$ are common across firms. They also operate the same technology.
@@ -69,7 +69,7 @@ Lets call that level $\kappa^{\star}$.
 The scale of the firm is then pinned down by solving for $y^{\star}\left(z\right)$
 out of
 \[
-zg^{'}\left(y^{\star}\left(z\right)\right)f^{'}\left(\kappa^{\star}\right)=r
+zg^{\prime}\left(y^{\star}\left(z\right)\right)f^{\prime}\left(\kappa^{\star}\right)=r
 \]
 once we have $y^{\star}\left(z\right)$ we can also get $n^{\star}\left(z\right)=\nicefrac{y^{\star}\left(z\right)}{f\left(\kappa^{\star}\right)}$.
 
@@ -103,11 +103,11 @@ that satisfies them is $g\left(x\right)=Ax^{\alpha}$ for some constant
 $A>0$ and a power $\alpha\in\left(0,1\right)$. We can verify this
 directly. The optimal (inner) output size is
 \[
-y^{\star}\left(z\right)=\left(\alpha Az\frac{f^{'}\left(\kappa^{\star}\right)}{r}\right)^{\frac{1}{1-\alpha}}
+y^{\star}\left(z\right)=\left(\alpha Az\frac{f^{\prime}\left(\kappa^{\star}\right)}{r}\right)^{\frac{1}{1-\alpha}}
 \]
 and so the optimal labor demand is
 \[
-n^{\star}\left(z\right)=\left(\frac{\alpha Az}{r}\right)^{\frac{1}{1-\alpha}}\left(f^{'}\left(\kappa^{\star}\right)\right)^{\frac{\alpha}{1-\alpha}}\left(\frac{w}{r}+\kappa^{\star}\right).
+n^{\star}\left(z\right)=\left(\frac{\alpha Az}{r}\right)^{\frac{1}{1-\alpha}}\left(f^{\prime}\left(\kappa^{\star}\right)\right)^{\frac{\alpha}{1-\alpha}}\left(\frac{w}{r}+\kappa^{\star}\right).
 \]
 Even though this expression looks daunting, it delivers the result
 we want immediately, because it implies that the labor (size) of the
@@ -149,7 +149,7 @@ the role of fixed set-up costs in determining firm entry.
 We can further simply the problem if we assume that the firm operates
 only with labor, so that $y=n$. Then the managerial technology is
 $z_{i}n^{\alpha}$. Because there is no capital, the first order condition
-is now $zg^{'}\left(n\right)=w$. Solving it gives us a closed-form
+is now $zg^{\prime}\left(n\right)=w$. Solving it gives us a closed-form
 expression for the size of the firm as a function of managerial talent:
 \[
 n^{\star}\left(z\right)=\left(\frac{\alpha z}{w}\right)^{\frac{1}{1-\alpha}}.
@@ -169,7 +169,7 @@ $\left(\tilde{n}>n\right)$ it must have managerial talent $\tilde{z}$
 above $\frac{w}{\alpha}n^{1-\alpha}$. We know the share of firms
 satisfying that condition:
 \[
-\underbrace{\Pr\left(\tilde{z}>\frac{w}{\alpha}n^{1-\alpha}\right)}_{\text{Counter CDF of \ensuremath{z}}}=\left(\frac{w}{\alpha}n^{1-\alpha}\right)^{-\xi}=\left(\frac{w}{\alpha}\right)^{-\xi}n^{-\xi\left(1-\alpha\right)}
+\underbrace{\Pr\left(\tilde{z}>\frac{w}{\alpha}n^{1-\alpha}\right)}_{\text{Counter CDF of z}}=\left(\frac{w}{\alpha}n^{1-\alpha}\right)^{-\xi}=\left(\frac{w}{\alpha}\right)^{-\xi}n^{-\xi\left(1-\alpha\right)}
 \]
 this gives us our result. The employment of firms is distributed Pareto
 with power $p=\xi\left(1-\alpha\right)$.

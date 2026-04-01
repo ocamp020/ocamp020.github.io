@@ -47,7 +47,7 @@ problems the more complicated sequential problem (where outcomes can
 depend on the full histories of shocks) .
 
 In setting up dynamic problems our focus will be in obtaining policy
-functions $\ensuremath{g:S\text{(state space)}\rightarrow X\text{(outcome space)}}$
+functions $g:S\text{(state space)}\rightarrow X\text{(outcome space)}$
 that are (literally) the description of behavior offered by our theory.
 We will use these policy functions to construct Markov processes for
 $X$ consistent with individual optimality (and later with equilibrium
@@ -57,10 +57,10 @@ distribution over outcomes (cross-sectional or over time).
 
 As a way to introduce these ideas I recommend some readings:
 
-- Tom Sargent's ``[Macroeconomics After Lucas](http://www.tomsargent.com/research/Macro_after_Lucas.pdf)''
-where he develops the idea of what he calls ``equilibrium Markov processes''
+- Tom Sargent's "[Macroeconomics After Lucas](http://www.tomsargent.com/research/Macro_after_Lucas.pdf)"
+where he develops the idea of what he calls "equilibrium Markov processes"
 being a the core of the modern practice of macroeconomics.
-- Ben Moll's ``[Distributional Macroeconomics](https://benjaminmoll.com/wp-content/uploads/2019/07/DM_long.pdf)''
+- Ben Moll's "[Distributional Macroeconomics](https://benjaminmoll.com/wp-content/uploads/2019/07/DM_long.pdf)"
 where he develops the idea of the link between studying aggregate
 fluctuations and distributions over population outcomes.
 
@@ -97,7 +97,7 @@ is hard. We are going to circumvent this problem.
 
 Further assume that the stochastic process that productivity follows
 is completely characterized by the conditional probability distribution
-$\Pr^{z}\left(z^{'}|z\right)$. Technically, we assume that for any
+$\Pr^{z}\left(z^{\prime}|z\right)$. Technically, we assume that for any
 sequence of productivities, it is sufficient to condition on the last
 realization to obtain the conditional distribution of future realizations:
 $\Pr^{z}\left(z_{t+1}|z_{t},z_{t-1},z_{t-2},\ldots\right)=\Pr^{z}\left(z_{t+1}|z_{t}\right)$.
@@ -108,7 +108,7 @@ with some other conditions that we won't check now) means that we
 can safely replace the complicated sequential problem above with a
 dynamic programming problem:
 \[
-v(z,a)\;=\;\max_{\left\{ c,a^{'}\right\} }\quad\log(c)\,+\,\beta\mathbb{E}_{z^{'}}\left[\,v\left(z^{'},a^{'}\right)\,|z\right]\qquad\text{s.t. }c+a^{'}\,=\,za;
+v(z,a)\;=\;\max_{\left\{ c,a^{\prime}\right\} }\quad\log(c)\,+\,\beta\mathbb{E}_{z^{\prime}}\left[\,v\left(z^{\prime},a^{\prime}\right)\,|z\right]\qquad\text{s.t. }c+a^{\prime}\,=\,za;
 \]
 where the expected value uses the conditional probability defined
 above.
@@ -117,10 +117,10 @@ Turns out that the solution to this problem is surprisingly simple
 and does not depend on the process followed by productivity. The agent
 wants to save a constant fraction of output every period (regardless
 of the realization of productivity and hence of the level of output).
-This result of an optimal constant savings rate is where the ``Solow''
+This result of an optimal constant savings rate is where the "Solow"
 moniker comes from. The policy function is
 \[
-a^{'}\;=\;\overbrace{\quad g\left(z,a\right)\quad}^{\text{Policy Function}}\;=\;\underbrace{\;\beta\;}_{\mathclap{\text{Savings Rate}}}\cdot\overbrace{\;za\;}^{\mathclap{\text{Output}}}.
+a^{\prime}\;=\;\overbrace{\quad g\left(z,a\right)\quad}^{\text{Policy Function}}\;=\;\underbrace{\;\beta\;}_{\text{Savings Rate}}\cdot\overbrace{\;za\;}^{\text{Output}}.
 \]
 
 **Note:**
@@ -133,7 +133,7 @@ We can now use this policy function to define a Markov process over
 the states of the agent. This would be a bivariate process over $\left(z,a\right)$
 so that
 \[
-\Pr\left(\left(z^{'},a^{'}\right)\;|\;\left(z,a\right)\right)=\Pr\left(z^{'}\;|\;z\right)\,\cdot\,\chi\left(a^{'}=z\cdot a\right),
+\Pr\left(\left(z^{\prime},a^{\prime}\right)\;|\;\left(z,a\right)\right)=\Pr\left(z^{\prime}\;|\;z\right)\,\cdot\,\chi\left(a^{\prime}=z\cdot a\right),
 \]
 where $\chi\left(\text{exp}\right)$ is a logical function that gives
 a one is the expression $\text{exp}$ is true and zero if it is false
@@ -162,34 +162,34 @@ of heterogeneity.
 
 The savings choice in the example above defines deterministically
 future assets. That is, conditional on the current state $\left(z,a\right)$
-the future assets $\left(a^{'}\right)$ are known with certainty.
+the future assets $\left(a^{\prime}\right)$ are known with certainty.
 This leads to the Markov process defined for the joint evolution of
 the state vector $\left(z,a\right)$ derived above. However, a more
 general class of models introduces uncertainty over the evolution
 of the endogenous states. In the context of our example, the agents
 knows their savings $\left(s\right)$ but savings do not determine
 future assets, instead, they determine the probability distribution
-over future assets, $Q\left(a^{'}|s\right)$. (Note: Even more generally, the probability distribution of future assets can depend on the future realizations of productivity, $Q\left(a^'|s,z^'\right)$.) This would be the case if there stochastic depreciation (or appreciation)
+over future assets, $Q\left(a^{\prime}|s\right)$. (Note: Even more generally, the probability distribution of future assets can depend on the future realizations of productivity, $Q\left(a^{\prime}|s,z^{\prime}\right)$.) This would be the case if there stochastic depreciation (or appreciation)
 of assets across periods, equivalently if the outcome of the savings
 process was uncertain. In this case problem becomes
 \[
-v(z,a)\;=\;\max_{\left\{ c,s\right\} }\quad\log(c)\,+\,\beta\mathbb{E}_{\left(z^{'},a^{'}\right)}\left[\,v\left(z^{'},a^{'}\right)\,|z,s\right]\qquad\text{s.t. }c+s\,=\,za;
+v(z,a)\;=\;\max_{\left\{ c,s\right\} }\quad\log(c)\,+\,\beta\mathbb{E}_{\left(z^{\prime},a^{\prime}\right)}\left[\,v\left(z^{\prime},a^{\prime}\right)\,|z,s\right]\qquad\text{s.t. }c+s\,=\,za;
 \]
 where the expected value depends on the conditional probabilities
-of $z^{'}$ and $a^{'}$:
+of $z^{\prime}$ and $a^{\prime}$:
 \[
-\mathbb{E}_{\left(z^{'},a^{'}\right)}\left[\,v\left(z^{'},a^{'}\right)\,|\,z,s\right]\,=\,\int_{z^{'}}\int_{a^{'}}\:v\left(z^{'},a^{'}\right)\:Q\left(da^{'}\;|\;s\right)\Pr\left(dz^{'}\;|\;z\right).
+\mathbb{E}_{\left(z^{\prime},a^{\prime}\right)}\left[\,v\left(z^{\prime},a^{\prime}\right)\,|\,z,s\right]\,=\,\int_{z^{\prime}}\int_{a^{\prime}}\:v\left(z^{\prime},a^{\prime}\right)\:Q\left(da^{\prime}\;|\;s\right)\Pr\left(dz^{\prime}\;|\;z\right).
 \]
 The solution to this problem is a policy function for savings $\left(s\right)$
 and not for future assets directly, cal it $g^{s}\left(z,a\right)$.
 With it at hand we can construct the Markov process for the state
 vector as
 \[
-\Pr\left(\left(z^{'},a^{'}\right)\;|\;\left(z,a\right)\right)\,=\,\Pr\left(z^{'}\;|\;z\right)\,\cdot\,Q\left(a^{'}\;|\;s=g^{s}\left(z,a\right)\right).
+\Pr\left(\left(z^{\prime},a^{\prime}\right)\;|\;\left(z,a\right)\right)\,=\,\Pr\left(z^{\prime}\;|\;z\right)\,\cdot\,Q\left(a^{\prime}\;|\;s=g^{s}\left(z,a\right)\right).
 \]
 
 A final alternative is to allow the choices of the agent to influence
 the distribution of future shocks. In this way, while shocks are still
 exogenous their distribution is partly determined by the agent. This
 amounts to making the probability of future realization of $z$ dependent
-on current $z$ and the choices of the agent $a^{'}$: $\Pr^{z}\left(\cdot|z,a^{'}\right)$.
+on current $z$ and the choices of the agent $a^{\prime}$: $\Pr^{z}\left(\cdot|z,a^{\prime}\right)$.

@@ -116,7 +116,7 @@ use backwards induction to solve the problem. In this case the value
 of the firm itself is also independent of time, because each period
 is just like the next. We then have:
 \begin{equation}
-V\left(x\right)=\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{'}\right)|x,u\right]
+V\left(x\right)=\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{\prime}\right)|x,u\right]
 \end{equation}
 the problem is now to find a function $V$ that satisfies the equation
 above. The details behind the solution to this problem can be found
@@ -158,7 +158,7 @@ version of the model.
     no disutility of it, hence there is a corner solution for labor indicating
     $l=1$, so with the guess the problem becomes
     \[
-    a_{0}+a_{1}\log k=\max_{k^{'}\in\left[0,\theta k^{\alpha}l^{1-\alpha}\right]}\log\left(\theta k^{\alpha}l^{1-\alpha}-k^{\prime}\right)+\beta\left(a_{0}+a_{1}\log k^{\prime}\right)
+    a_{0}+a_{1}\log k=\max_{k^{\prime}\in\left[0,\theta k^{\alpha}l^{1-\alpha}\right]}\log\left(\theta k^{\alpha}l^{1-\alpha}-k^{\prime}\right)+\beta\left(a_{0}+a_{1}\log k^{\prime}\right)
     \]
     Then the FOC is
     \[
@@ -203,13 +203,13 @@ is stopped). It depends on the value of state $x$. The Bellman equation
 is now:
 <a id="ref-eq-000020bellman-000020for-000020stopping-000020time-000020in-000020discrete-000020time" class="course-anchor"></a>
 \begin{equation}
-V\left(x\right)=\max\left\{ \Omega\left(x\right),\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{'}\right)|x,u\right]\right\}
+V\left(x\right)=\max\left\{ \Omega\left(x\right),\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{\prime}\right)|x,u\right]\right\}
 \end{equation}
 We can now define a stopping time as a random variable that signals
 the decision to stop and take the termination payoff $\Omega\left(x\right)$.
 So:
 \begin{equation}
-T^{\star}=\left\{ x|\Omega\left(x\right)\geq\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{'}\right)|x,u\right]\right\}
+T^{\star}=\left\{ x|\Omega\left(x\right)\geq\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{\prime}\right)|x,u\right]\right\}
 \end{equation}
 In general $T^{\star}$ can take many forms, but in most (if not all)
 of the relevant economic applications it will take the form: $T^{\star}=\left[\overline{x},\infty\right)$,
@@ -286,11 +286,11 @@ unit of time, so the effective discount rate for the period of length
 $\Delta t$ is: $\frac{1}{1-\rho\Delta t}$. This leads to the following
 Bellman-type equation
 \begin{equation}
-V\left(x\right)=\max_{u}\pi\left(u,x\right)\Delta t+\left(\frac{1}{1+\rho\Delta t}\right)E\left[V\left(x^{'}\right)|x,u\right]
+V\left(x\right)=\max_{u}\pi\left(u,x\right)\Delta t+\left(\frac{1}{1+\rho\Delta t}\right)E\left[V\left(x^{\prime}\right)|x,u\right]
 \end{equation}
 Rearranging we get:
 \begin{equation}
-\rho V\left(x\right)=\max_{u}\left(1+\rho\Delta t\right)\pi\left(u,x\right)+\frac{E\left[\left(V\left(x^{'}\right)-V\left(x\right)\right)|x,u\right]}{\Delta t}
+\rho V\left(x\right)=\max_{u}\left(1+\rho\Delta t\right)\pi\left(u,x\right)+\frac{E\left[\left(V\left(x^{\prime}\right)-V\left(x\right)\right)|x,u\right]}{\Delta t}
 \end{equation}
 Taking the limit as $\Delta t\to0$ we get our continuous time Bellman
 equation:
@@ -317,13 +317,13 @@ in ([Equation](#ref-eq-000020continuous-000020time-000020bellman)). If $x$
 follows an Ito process, as in equation ([Equation](section-26-stochastic-processes.md#ref-eq-000020def-000020ito-000020process)),
 then Ito's Lemma gives the following result:
 \begin{align*}
-dV & =\left(\mu\left(x,t\right)V^{'}+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{''}\right)dt+\sigma\left(x,t\right)V^{'}dW\\
-E\left[dV\right] & =\left(\mu\left(x,t\right)V^{'}+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{''}\right)dt
+dV & =\left(\mu\left(x,t\right)V^{\prime}+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{"}\right)dt+\sigma\left(x,t\right)V^{\prime}dW\\
+E\left[dV\right] & =\left(\mu\left(x,t\right)V^{\prime}+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{"}\right)dt
 \end{align*}
 Replacing we get the Hamilton-Jacobi-Bellman equation:
 <a id="ref-eq-000020hjb" class="course-anchor"></a>
 \begin{equation}
-\rho V\left(x\right)=\max_{u}\pi\left(u,x\right)+\mu\left(x,t\right)V^{'}\left(x\right)+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{''}\left(x\right)
+\rho V\left(x\right)=\max_{u}\pi\left(u,x\right)+\mu\left(x,t\right)V^{\prime}\left(x\right)+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{"}\left(x\right)
 \end{equation}
 We can take FOC with respect to $u$ and then get a differential equation
 for $V$ that we can solve.
@@ -332,7 +332,7 @@ If $x$ follows a Poisson process, like the one in equation ([Equation](section-2
 we can obtain a similar result. From equation ([Equation](section-27-ito-s-lemma.md#ref-eq-000020ito-s-000020lemma-000020for-000020poisson))
 we can compute $E\left[dV\right]$:
 \[
-E\left[dV\right]=\left(f\left(x,t\right)V^{'}\left(x\right)\right)dt+\lambda E_{u}\left[V\left(x+ug\left(x,t\right)\right)-V\left(x\right)\right]dt
+E\left[dV\right]=\left(f\left(x,t\right)V^{\prime}\left(x\right)\right)dt+\lambda E_{u}\left[V\left(x+ug\left(x,t\right)\right)-V\left(x\right)\right]dt
 \]
 
 ### Optimal Stopping Time and the Smooth Pasting Condition
@@ -353,7 +353,7 @@ In order to solve the problem we need to find regions of $x$ where
 it is best for the agent to continue and those for which it is best
 to stop. If $x$ is in the continuation region then:
 \[
-V\left(x\right)=\pi\left(x\right)\Delta t+\frac{1}{1+\rho\Delta t}E\left[V\left(x^{'}\right)\right]
+V\left(x\right)=\pi\left(x\right)\Delta t+\frac{1}{1+\rho\Delta t}E\left[V\left(x^{\prime}\right)\right]
 \]
 From above we know that this implies that for $x$ in the continuation
 region we have (by applying Ito's lemma):
@@ -371,7 +371,7 @@ that:
 \[
 V\left(x^{\star}\left(t\right),t\right)=\Omega\left(x^{\star}\left(t\right),t\right)
 \]
-this is called ``value-matching''. Continuity at $x^{\star}$ is
+this is called "value-matching". Continuity at $x^{\star}$ is
 actually necessary for a solution. Suppose for a contradiction that
 it is optimal to stop for $x<x^{\star}\left(t\right)$, but that $V\left(x^{\star}\left(t\right),t\right)<\Omega\left(x^{\star}\left(t\right),t\right)$,
 because $V$ has to be continuous in the domain $x\geq x^{\star}\left(t\right)$
@@ -387,7 +387,7 @@ the value of $x^{\star}\left(t\right)$ is still unknown. The condition
 that allows us to solve the problem (of jointly finding $V$ and $x^{\star}$)
 is to impose further smoothness to our value function, it must not
 only be continuous, but continuously differentiable. This condition
-is called ``smooth pasting'' and it requires the first derivative
+is called "smooth pasting" and it requires the first derivative
 of the value function to be continuous, that is:
 \[
 V_{x}\left(x^{\star}\left(t\right),t\right)=\Omega_{x}\left(x^{\star}\left(t\right),t\right)

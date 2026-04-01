@@ -68,20 +68,20 @@ $z$ gets too low or too high. Then the inaction region is: $\left(\underline{z},
 
 The HJB equation for $z\in\left(\underline{z},\bar{z}\right)$ is:
 \[
-\rho V\left(z\right)=\pi\left(z\right)+\mu V^{'}\left(z\right)+\frac{1}{2}\sigma^{2}V^{''}\left(z\right)
+\rho V\left(z\right)=\pi\left(z\right)+\mu V^{\prime}\left(z\right)+\frac{1}{2}\sigma^{2}V^{"}\left(z\right)
 \]
 The boundary conditions for $V$ are value matching and smooth pasting
 at $\underline{z}$ and $\overline{z}$:
 \begin{align*}
 V\left(\underline{z}\right) & =V\left(z^{\star}\right)-c\\
 V\left(\overline{z}\right) & =V\left(z^{\star}\right)-c\\
-V^{'}\left(\underline{z}\right) & =0\\
-V^{'}\left(\bar{z}\right) & =0
+V^{\prime}\left(\underline{z}\right) & =0\\
+V^{\prime}\left(\bar{z}\right) & =0
 \end{align*}
 while $z^{\star}$ is optimally found to maximize $V$. So it must
 satisfy:
 \[
-V^{'}\left(z^{\star}\right)=0
+V^{\prime}\left(z^{\star}\right)=0
 \]
 
 The solution to the HJB equation is, just as before:

@@ -159,14 +159,14 @@ only the aggregate (average) capital is relevant: $K_{t}=\int a_{t}d\Gamma_{t}$.
 Because of this, an individual household only needs to keep track
 of aggregate capital and not of the whole distribution. Crucially,
 knowing the aggregate capital is enough to compute the relevant prices
-in the economy. This makes the state $s_{t}=\left(a,z,K\right)$. (Note: The state is often written as $\left(k,z,K\right)$ emphasizing the difference between the ``little $k$'' faced by an individual household and the ``big $K$'' faced by the economy as a whole.)
+in the economy. This makes the state $s_{t}=\left(a,z,K\right)$. (Note: The state is often written as $\left(k,z,K\right)$ emphasizing the difference between the "little $k$" faced by an individual household and the "big $K$" faced by the economy as a whole.)
 
 The household's recursive problem is then
 
 \begin{align*}
-V(\underbrace{\quad a\quad}_{\text{Ind. State}},\underbrace{\;z\;,\;K\;}_{\text{Agg. States}}) & =\max_{\left\{ c,\ell,a^{'}\right\} }\,u\left(c,\ell\right)+\beta\int_{z^{'}}V\left(a^{'},z^{'},K^{'}\right)Q\left(z,dz^{'}\right)\\
-\text{s.t.} & \qquad c+a^{'}=\left(1+R\left(z,K\right)\right)a+W\left(z,K\right)\ell+\Pi\left(z,K\right);\\
-& \qquad K^{'}=G_{k}\left(z,K\right).
+V(\underbrace{\quad a\quad}_{\text{Ind. State}},\underbrace{\;z\;,\;K\;}_{\text{Agg. States}}) & =\max_{\left\{ c,\ell,a^{\prime}\right\} }\,u\left(c,\ell\right)+\beta\int_{z^{\prime}}V\left(a^{\prime},z^{\prime},K^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
+\text{s.t.} & \qquad c+a^{\prime}=\left(1+R\left(z,K\right)\right)a+W\left(z,K\right)\ell+\Pi\left(z,K\right);\\
+& \qquad K^{\prime}=G_{k}\left(z,K\right).
 \end{align*}
 
 This problem looks a lot like the dynamic programming problems we
@@ -269,7 +269,7 @@ converges to a stationary equilibrium. The objective of this subsection
 is to discuss what that means.
 
 First we discuss informally what the regularity conditions are. What
-we want is to establish conditions that produce ``well-behaved''
+we want is to establish conditions that produce "well-behaved"
 policy functions for the endogenous states (capital in this case),
 that is, continuous and monotone. The problem must also satisfy standard
 Inada and transversality conditions that guarantee that it is effectively
@@ -281,7 +281,7 @@ See the Theorem of the Maximum for more on this. It also requires
 that the Markov Process for $z$ satisfies the Feller property (because
 of the expectation in the value function).
 
-Monotonicity requires having a sense of what is ``better'' in the
+Monotonicity requires having a sense of what is "better" in the
 context of the problem. We interpret $z$ as productivity and hence
 it makes sense to interpret higher values of $z$ as being better.
 For the resulting solution to be monotone in the states $\left(k,z,K\right)$
@@ -485,8 +485,8 @@ all the equilibrium functions. We further simplify the problem by
 getting rid of the labor choice. This simplifies the exposition. The
 planner's problem is to choose aggregate quantities subject to feasibility:
 \begin{align*}
-V(K,z) & =\max_{\left\{ C,K\right\} }\,u\left(C\right)+\beta\int_{z^{'}}V\left(K^{'},z^{'}\right)Q\left(z,dz^{'}\right)\\
-\text{s.t.} & \qquad C+K^{'}=f\left(z,K\right)+\left(1-\delta\right)K.
+V(K,z) & =\max_{\left\{ C,K\right\} }\,u\left(C\right)+\beta\int_{z^{\prime}}V\left(K^{\prime},z^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
+\text{s.t.} & \qquad C+K^{\prime}=f\left(z,K\right)+\left(1-\delta\right)K.
 \end{align*}
 The solution to the planner's problem immediately gives us the equilibrium
 for individual quantities $\left\{ c,a,k\right\} $ and prices $\left\{ r\right\} $
@@ -545,18 +545,18 @@ accuracy at the end of this section).
 
 The discrete problem is
 \[
-V\left(k_{i},z_{j}\right)=\max_{k^{'}\in\left\{ k_{1},\ldots,k_{I}\right\} }\,U\left(z_{j}k_{i}^{\alpha}+\left(1-\delta\right)k_{i}-k^{'}\right)+\beta\sum_{j^{'}=1}^{J}\Pi_{jj'}V\left(k^{'},z_{j^{'}}\right)
+V\left(k_{i},z_{j}\right)=\max_{k^{\prime}\in\left\{ k_{1},\ldots,k_{I}\right\} }\,U\left(z_{j}k_{i}^{\alpha}+\left(1-\delta\right)k_{i}-k^{\prime}\right)+\beta\sum_{j^{\prime}=1}^{J}\Pi_{jj'}V\left(k^{\prime},z_{j^{\prime}}\right)
 \]
 where we have replaced the constraint, leaving consumption implicitly
 defined by the choice of capital which is now discrete. Conveniently,
 everything in the problem is now a vector or a matrix:
 \[
-V=\left[V_{ij}\right];\qquad\vec{k}=\left[k_{1},\ldots,k_{I}\right]^{T};\qquad\vec{z}=\left[z_{1},\ldots,z_{J}\right]^{T};\qquad\Pi=\left[\Pi_{jj^{'}}=Q\left(z_{j},\left\{ z_{j^{'}}\right\} \right)\right];
+V=\left[V_{ij}\right];\qquad\vec{k}=\left[k_{1},\ldots,k_{I}\right]^{T};\qquad\vec{z}=\left[z_{1},\ldots,z_{J}\right]^{T};\qquad\Pi=\left[\Pi_{jj^{\prime}}=Q\left(z_{j},\left\{ z_{j^{\prime}}\right\} \right)\right];
 \]
 \[
-U=\left[U_{ijh}=u\left(z_{j}k_{i}^{\alpha}\qquad\vec{k}=\left[k_{1},\ldots,k_{I}\right]^{T}-k_{h}^{'}\right)\right];
+U=\left[U_{ijh}=u\left(z_{j}k_{i}^{\alpha}\qquad\vec{k}=\left[k_{1},\ldots,k_{I}\right]^{T}-k_{h}^{\prime}\right)\right];
 \]
-This allows us to solve the problem of choosing $k^{'}\in\left\{ k_{1},\ldots,k_{I}\right\} $
+This allows us to solve the problem of choosing $k^{\prime}\in\left\{ k_{1},\ldots,k_{I}\right\} $
 for every pair of $\left(k_{i},z_{j}\right)$ in two different ways.
 Either looping through all the pairs of states, or collapsing the
 matrix of payoffs along its third dimension.
@@ -605,7 +605,7 @@ In order to evaluate the accuracy of the solution we make use of **Euler
 Residuals**. These are the residuals in the first order conditions
 of the actual problem, which should be zero for the correct solution.
 \[
-\mathbf{Res}\left(k,z_{j}|g\right)=\underbrace{\frac{\beta\sum_{j^{'}=1}^{J}\Pi_{jj^{'}}U^{'}\left(f\left(z_{j^{'}},g\left(k,z_{j}\right)\right)+\left(1-\delta\right)k-g\left(g\left(k,z_{j}\right),z_{j^{'}}\right)\right)\frac{\partial f\left(z_{j^{'}},g\left(k,z_{j}\right)\right)}{dk}}{U^{'}\left(f\left(z_{j},k\right)+\left(1-\delta\right)k-g\left(k,z_{j}\right)\right)}-1}_{\text{\
+\mathbf{Res}\left(k,z_{j}|g\right)=\underbrace{\frac{\beta\sum_{j^{\prime}=1}^{J}\Pi_{jj^{\prime}}U^{\prime}\left(f\left(z_{j^{\prime}},g\left(k,z_{j}\right)\right)+\left(1-\delta\right)k-g\left(g\left(k,z_{j}\right),z_{j^{\prime}}\right)\right)\frac{\partial f\left(z_{j^{\prime}},g\left(k,z_{j}\right)\right)}{dk}}{U^{\prime}\left(f\left(z_{j},k\right)+\left(1-\delta\right)k-g\left(k,z_{j}\right)\right)}-1}_{\text{\
 \]
 We can evaluate these residuals for values of capital in the grid
 used to solve the problem. The Euler residuals can help diagnose if
@@ -630,7 +630,7 @@ rows and columns. We can build the matrix following the steps in [Markov Process
 independently following the transition matrix $\Pi$, while $k$ evolves
 deterministically. The matrix is then
 \[
-\Psi_{\left(ij,i^{'}j^{'}\right)}=\Pi_{jj^{'}}\chi_{\left\{ i^{'}=G_{kp}\left(i,j\right)\right\} }.
+\Psi_{\left(ij,i^{\prime}j^{\prime}\right)}=\Pi_{jj^{\prime}}\chi_{\left\{ i^{\prime}=G_{kp}\left(i,j\right)\right\} }.
 \]
 The properties of the stochastic process for capital and productivity
 then follow from this matrix. For instance, the stationary distribution
@@ -677,9 +677,9 @@ V^{\star}\left(s,b\right) & = & \max_{d\in\left\{ 0,1\right\} }\left\{ \left(1-d
 \end{eqnarray*}
 The value of having access to the financial markets is
 \begin{eqnarray*}
-V\left(s,b\right) & = & \underset{\left\{ c,b'\right\} }{\max}\left\{ \frac{c\left(s,b\right)^{1-\sigma}-1}{1-\sigma}+\beta\sum_{s^{'}\in S}\pi\left(s,s^{'}\right)V^{\star}\left(s',b'\right)\right\} \\
-& \mbox{s.t.} & c\left(s,b\right)\leq y\left(s\right)+b-q\left(s,b\right)b^{'}\left(s,b\right)\\
-&  & -B\leq b^{'}\left(s,b\right)\qquad\text{[B: borrowing limit]}\\
+V\left(s,b\right) & = & \underset{\left\{ c,b'\right\} }{\max}\left\{ \frac{c\left(s,b\right)^{1-\sigma}-1}{1-\sigma}+\beta\sum_{s^{\prime}\in S}\pi\left(s,s^{\prime}\right)V^{\star}\left(s',b'\right)\right\} \\
+& \mbox{s.t.} & c\left(s,b\right)\leq y\left(s\right)+b-q\left(s,b\right)b^{\prime}\left(s,b\right)\\
+&  & -B\leq b^{\prime}\left(s,b\right)\qquad\text{[B: borrowing limit]}\\
 &  & 0\leq c\left(s,b\right).
 \end{eqnarray*}
 The value of going into autarky is
@@ -698,7 +698,7 @@ fair manner, meaning that their prices reflect the expected costs
 of default and so they break even in expectation. The profits of one
 of these financial intermediaries are
 \[
-\text{Pr}=qb^{'}-\frac{1-\delta}{1+r}b^{'},
+\text{Pr}=qb^{\prime}-\frac{1-\delta}{1+r}b^{\prime},
 \]
 where $\delta$ is the (endogenously determined) probability of default
 taken as given by the intermediary. This probability comes, in equilibrium,
@@ -706,7 +706,7 @@ from the optimal default choice of the government, $g^{D}\left(s,b\right)$,
 and satisfies
 
 \[
-\delta=E_{s^{'}}\left[g^{D}\left(s^{'},b^{'}\right)|s\right]\qquad\text{where }g^{D}\left(s^{'},b^{'}\right)=\begin{cases}
+\delta=E_{s^{\prime}}\left[g^{D}\left(s^{\prime},b^{\prime}\right)|s\right]\qquad\text{where }g^{D}\left(s^{\prime},b^{\prime}\right)=\begin{cases}
 1 & \text{if default}\\
 0 & \text{if no default }
 \end{cases}.
@@ -716,14 +716,14 @@ and so the debt price is (in equilibrium):
 
 \begin{eqnarray*}
 q\left(s,b'\right) & = & \begin{cases}
-\frac{1-\underset{s^{'}\in S}{\sum}\pi\left(s'\right)g^{D}\left(s',b'\right)}{R} & \mbox{ if }b'<0\\
+\frac{1-\underset{s^{\prime}\in S}{\sum}\pi\left(s'\right)g^{D}\left(s',b'\right)}{R} & \mbox{ if }b'<0\\
 \frac{1}{R} & \mbox{ if }b'\geq0
 \end{cases}
 \end{eqnarray*}
 
 A **Recursive Competitive Equilibrium** is then a set of value
 functions $\left\{ V^{\star},V^{A},V\right\} $, policy functions
-$\left\{ g^{c},g^{b},g^{D}\right\} $, and a price functional $\left\{ q\left(s,b^{'}\right)\right\} $
+$\left\{ g^{c},g^{b},g^{D}\right\} $, and a price functional $\left\{ q\left(s,b^{\prime}\right)\right\} $
 such that
 
 1. The value functions solve the Bellman equations of the government
@@ -739,19 +739,19 @@ implications of the models. We now turn briefly to how to make welfare
 comparisons between models. This is most often needed when evaluating
 policy changes, or counterfactuals in which missing markets are completed.
 In these scenarios there are two specifications of the economy, a
-``benchmark'' economy that we call $B$, and an alternative economy
+"benchmark" economy that we call $B$, and an alternative economy
 that we call $A$. The question at hand is *how much* better
 (or worse) are consumers when moving from economy $B$ to economy
 $A$.
 
 The challenge for welfare comparisons resides in how to make sense
 of the units of value functions (indirect utility). The most standard
-solution is to compute welfare in ``consumption-equivalent'' units.
+solution is to compute welfare in "consumption-equivalent" units.
 That is, what percentage of consumption are consumers willing to give
 up *in all states and times* to avoid the change (in case welfare
 is lower in $A$ relative to $B$) or how much they need to be compensated
 with for not making the change (in case welfare is higher in $A$
-relative to $B$). The derivation follows closely the concept of ``certainty-equivalent''
+relative to $B$). The derivation follows closely the concept of "certainty-equivalent"
 for lotteries.
 
 To compute the consumption-equivalent welfare gain (or loss) between

@@ -25,7 +25,7 @@ first go over the definition of a random variable.
     1. The probability measure for $x$ is then: $\mu\left(B\right)=P\left(x^{-1}\left(B\right)\right)=P\left(\left\{ \omega\in\Omega|x\left(\omega\right)\in B\right\} \right)$,
     for $B\in{\cal B}$.
     1. The distribution function for $f$ is: $G\left(b\right)=\mu\left(\left(-\infty,b\right]\right)$,
-    for $b\in\text{\ensuremath{\mathbb{R}}}$.
+    for $b\in\text{\mathbb{R}}$.
 
 Now we can work on adding the time dimension to the definition of
 a random variable. In general time can be discrete or continuous,
@@ -279,7 +279,7 @@ p & =\frac{1}{2}\left(1\pm\sqrt{1-\frac{\sigma^{2}}{\left(\sigma^{2}+\mu^{2}\Del
 where the approximation follows if $\Delta t$ is small enough relative
 to $\nicefrac{\sigma^{2}}{\mu^{2}}$, because we are taking $\Delta t$
 close to zero this assumption is satisfied. We further choose only
-the ``+'' root because that way $p\geq\nicefrac{1}{2}$ when $\mu\geq0$.
+the "+" root because that way $p\geq\nicefrac{1}{2}$ when $\mu\geq0$.
 
 Now we can find a value for $h$:
 \begin{align*}

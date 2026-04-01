@@ -13,12 +13,12 @@ The basic problem takes one of two forms:
 <a id="ref-eq-dp-stochastic-type-1" class="course-anchor"></a>
 <a id="ref-eq-dp-stochastic-type-2" class="course-anchor"></a>
 \begin{align}
-v\left(k,z\right) & =\max_{k^{'}\in\left[0,zf\left(k\right)\right]}\left\{ U\left(zf\left(k\right)-k^{'}\right)+\beta\int_{z}v\left(k^{'},z^{'}\right)Q\left(z,dz^{'}\right)\right\} \\
-v\left(k,z\right) & =\max_{y\in\left[0,f\left(k\right)\right]}\left\{ U\left(f\left(k\right)-y\right)+\beta\int_{z}v\left(y-z^{'},z^{'}\right)Q\left(z,dz^{'}\right)\right\}
+v\left(k,z\right) & =\max_{k^{\prime}\in\left[0,zf\left(k\right)\right]}\left\{ U\left(zf\left(k\right)-k^{\prime}\right)+\beta\int_{z}v\left(k^{\prime},z^{\prime}\right)Q\left(z,dz^{\prime}\right)\right\} \\
+v\left(k,z\right) & =\max_{y\in\left[0,f\left(k\right)\right]}\left\{ U\left(f\left(k\right)-y\right)+\beta\int_{z}v\left(y-z^{\prime},z^{\prime}\right)Q\left(z,dz^{\prime}\right)\right\}
 \end{align}
 The key mathematical feature in the two models is the expectation
 over future values of the state $z$ taking as given the state's current
-value. The conditional distribution of $z^{'}$ is given by the transition
+value. The conditional distribution of $z^{\prime}$ is given by the transition
 function $Q$.
 
 The key economic difference between the two problems is the degree
@@ -27,7 +27,7 @@ the future value of state $k$ is perfectly controlled and there is
 only uncertainty over the future value of $z$. In the second problem
 the value of the first state is only known until the following period.
 Only the choice $y$ is known by the decision maker, but the value
-of $k^{'}=y-z^{'}$ depends on $z^{'}$.
+of $k^{\prime}=y-z^{\prime}$ depends on $z^{\prime}$.
 
 The second problem is of course more general and it also allows for
 more flexible numerical methods for the solution of the functional
@@ -127,7 +127,7 @@ we must also define a law of motion for the endogenous state variable
 \[
 \phi:X\times X\times Z\to X
 \]
-so that $x^{'}=\phi\left(x,y,z^{'}\right)$ is the next period's endogenous
+so that $x^{\prime}=\phi\left(x,y,z^{\prime}\right)$ is the next period's endogenous
 state. This law of motion interacts with the contingent choices of
 the control, $y$, to generate a contingent plan, that is now
 !!! info "Definition: Contingency Feasible Plan'"
@@ -145,7 +145,7 @@ The implication of the changes to the problem is that we now have
 two stochastic processes. One is the exogenous state variable $z$,
 that we treat just as before. In the first type of problem this process
 is enough to describe the problem as it completely describes the process
-of choices, $y$, and hence of the endogenous state $x^{'}=y$. In
+of choices, $y$, and hence of the endogenous state $x^{\prime}=y$. In
 this more general case we have to interface the process for $z$ through
 the law of motion $\phi$ to obtain the process for $x$ given a plan
 $\pi$.
@@ -168,12 +168,12 @@ about the previous shocks.
 The problem is now
 <a id="ref-eq-dp-stochastic" class="course-anchor"></a>
 \begin{equation}
-v\left(x,z\right)=\max_{y\in\Gamma\left(x,z\right)}\left\{ F\left(x,y,z\right)+\beta\int v\left(y,z^{'}\right)Q\left(z,dz^{'}\right)\right\} ,
+v\left(x,z\right)=\max_{y\in\Gamma\left(x,z\right)}\left\{ F\left(x,y,z\right)+\beta\int v\left(y,z^{\prime}\right)Q\left(z,dz^{\prime}\right)\right\} ,
 \end{equation}
 with its associated policy function (or in general a correspondence)
 <a id="ref-eq-pf-stochastic" class="course-anchor"></a>
 \begin{equation}
-G\left(x,z\right)=\left\{ y\in\Gamma\left(x,z\right)\;|\;v\left(x,z\right)=F\left(x,y,z\right)+\beta\int v\left(y,z^{'}\right)Q\left(z,dz^{'}\right)\right\} .
+G\left(x,z\right)=\left\{ y\in\Gamma\left(x,z\right)\;|\;v\left(x,z\right)=F\left(x,y,z\right)+\beta\int v\left(y,z^{\prime}\right)Q\left(z,dz^{\prime}\right)\right\} .
 \end{equation}
 
 The policy function $G$ is the object of interest for most problems
@@ -184,7 +184,7 @@ model at the core of representative and heterogeneous agent models.
 In the second type of problem in ([Equation](#ref-eq-dp-stochastic-type-2))
 the recursive formulation introduces the law of motion $\phi$:
 \begin{equation}
-v\left(x,z\right)=\max_{y\in\Gamma\left(x,z\right)}\left\{ F\left(x,y,z\right)+\beta\int v\left(\phi\left(x,y,z^{'}\right),z^{'}\right)Q\left(z,dz^{'}\right)\right\} .
+v\left(x,z\right)=\max_{y\in\Gamma\left(x,z\right)}\left\{ F\left(x,y,z\right)+\beta\int v\left(\phi\left(x,y,z^{\prime}\right),z^{\prime}\right)Q\left(z,dz^{\prime}\right)\right\} .
 \end{equation}
 
 <a id="ref-subsec-the-principle-of-optimality-stochastic" class="course-anchor"></a>
@@ -273,11 +273,11 @@ So, out of the solution of the dynamic problem comes a stochastic
 process for states. In this case the process is quite straightforward:
 the exogenous state evolves according to $Q\left(z,\cdot\right)$
 and the endogenous state evolves deterministically because the decision
-maker has full control over it $\left(\phi\left(x,y,z^{'}\right)=y\right)$.
+maker has full control over it $\left(\phi\left(x,y,z^{\prime}\right)=y\right)$.
 Because the evolution of the endogenous state is deterministic it
 either is in a set $A\in{\cal X}$, or it is not. If it is, then the
 transition function $P$ just needs to care about the conditional
-probability of $z^{'}\in B\in{\cal Z}$ given the current value of
+probability of $z^{\prime}\in B\in{\cal Z}$ given the current value of
 the exogenous state, $z$.
 
 This construction of the Markov process will be crucial for the study
@@ -313,27 +313,27 @@ When $P$ also satisfies the Monotone property the invariant distribution
 is unique and the distribution of states converges to it, as in [Theorem](../part-01-preliminaries/section-03-markov-processes.md#ref-thm-monotone-invariant-distribution) when $X$ and $Z$ are
 rectangles in Euclidean spaces.
 
-When the endogenous state evolves according to the law of motion $\phi\left(x,y,z^{'}\right)$
+When the endogenous state evolves according to the law of motion $\phi\left(x,y,z^{\prime}\right)$
 we must adjust the construction of the transition function for the
-states. The key difference is that $x^{'}$ is now stochastic and
+states. The key difference is that $x^{\prime}$ is now stochastic and
 the is therefore a distribution over its possible values given the
 previous state $\left(x,z\right)$. This distribution is constructed
 from $G$ and $Q$ similar to the case above.
 
 To better understand the construction of the Markov process take a
 step back. The transition function $P\left(\left(x,z\right),A\times B\right)$
-is answering the question of how likely is it that $\left(x^{'},z^{'}\right)\in A\times B$
-given the values of $\left(x,z\right)$. But the value of $x^{'}=\phi\left(x,y,z^{'}\right)$
-depends on $z^{'}$. In fact, $z^{'}$ is the only unknown given that
+is answering the question of how likely is it that $\left(x^{\prime},z^{\prime}\right)\in A\times B$
+given the values of $\left(x,z\right)$. But the value of $x^{\prime}=\phi\left(x,y,z^{\prime}\right)$
+depends on $z^{\prime}$. In fact, $z^{\prime}$ is the only unknown given that
 we have $\left(x,z\right)$. So, we can ask what is the set of values
-of $z^{'}$ that would make $x^{'}\in A$ hold and then see if those
-values of $z^{'}$ are also in $B$. Call that set $H$ and define
+of $z^{\prime}$ that would make $x^{\prime}\in A$ hold and then see if those
+values of $z^{\prime}$ are also in $B$. Call that set $H$ and define
 it (in general as a correspondence) as
 \[
-H\left(\left(x,z\right),A\right)=\left\{ z^{'}\in Z\,|\,x^{'}=\phi\left(x,G\left(x,z\right),z^{'}\right)\in A\right\} .
+H\left(\left(x,z\right),A\right)=\left\{ z^{\prime}\in Z\,|\,x^{\prime}=\phi\left(x,G\left(x,z\right),z^{\prime}\right)\in A\right\} .
 \]
-The probability that $\left(x^{'},z^{'}\right)\in A\times B$ given
-$\left(x,z\right)$ is then the probability that $z^{'}\in H\cap B$
+The probability that $\left(x^{\prime},z^{\prime}\right)\in A\times B$ given
+$\left(x,z\right)$ is then the probability that $z^{\prime}\in H\cap B$
 given $z$, so we define the transition function as
 \[
 P\left(\left(x,z\right),A\times B\right)=Q\left(z,H\left(\left(x,z\right),A\right)\cap B\right).

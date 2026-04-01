@@ -49,10 +49,10 @@ p_{i}=\lambda\left(\int_{0}^{1}y_{i}^{\frac{\varepsilon-1}{\varepsilon}}di\right
 \]
 Hence, optimality requires that between any pair of goods $\left(i,j\right)$
 \[
-\underbrace{\frac{p_{i}}{p_{j}}}_{\mathclap{\text{MRT}}}=\underbrace{\left(\frac{y_{i}}{y_{j}}\right)^{\frac{-1}{\varepsilon}}}_{\text{MRS}}\longrightarrow\frac{y_{i}}{y_{j}}=\left(\frac{p_{i}}{p_{j}}\right)^{-\varepsilon}.
+\underbrace{\frac{p_{i}}{p_{j}}}_{\text{MRT}}=\underbrace{\left(\frac{y_{i}}{y_{j}}\right)^{\frac{-1}{\varepsilon}}}_{\text{MRS}}\longrightarrow\frac{y_{i}}{y_{j}}=\left(\frac{p_{i}}{p_{j}}\right)^{-\varepsilon}.
 \]
 From this we see that $\varepsilon=\frac{\log y_{i}}{\log p_{j}}$
-is the elasticity of substitution between goods $i$ and $j$. (Note: A better definition has the elasticity be the change in relative demand in response to changes in relative prices: $\varepsilon=-\frac\partial\log\nicefracy_iy_j\partial\log\nicefracp_ip_j$.) Moreover, the elasticity of substitution is constant across pairs.
+is the elasticity of substitution between goods $i$ and $j$. (Note: A better definition has the elasticity be the change in relative demand in response to changes in relative prices: $\varepsilon=-\frac{\partial\log\nicefrac{y_{i}}{y_{j}}}{\partial\log\nicefrac{p_{i}}{p_{j}}}$.) Moreover, the elasticity of substitution is constant across pairs.
 This is what gives its name to the aggregator as the Constant-Elasticity-of-Substitution
 (CES) aggregator.
 
@@ -109,9 +109,9 @@ and profits are
 \pi_{i}=\left(\mu-1\right)c_{i}y_{i}.
 \]
 We can further solve for the price index in terms of the marginal
-costs $c_{i}=C_{i}^{'}\left(y_{i}\right)$:
+costs $c_{i}=C_{i}^{\prime}\left(y_{i}\right)$:
 \[
-\overline{P}=\underbrace{\frac{\varepsilon}{\varepsilon-1}}_{\text{Agg. Markup}}\times\underbrace{\left(\int_{0}^{1}c_{i}^{1-\varepsilon}di\right)^{\frac{1}{1-\varepsilon}}}_{\text{Agg. Mrg. Cost \ensuremath{\left(\overline{C}\right)}}}.
+\overline{P}=\underbrace{\frac{\varepsilon}{\varepsilon-1}}_{\text{Agg. Markup}}\times\underbrace{\left(\int_{0}^{1}c_{i}^{1-\varepsilon}di\right)^{\frac{1}{1-\varepsilon}}}_{\text{Agg. Mrg. Cost \left(\overline{C}\right)}}.
 \]
 
 **Bertrand and Cournot in monopolistic competition**
@@ -123,9 +123,9 @@ curvature in the firm's problem. In the case of Bertrand competition
 \]
 The first order condition gives
 \begin{align*}
-\left(1-\varepsilon\right)p_{i}^{-\varepsilon}\left(\frac{1}{\overline{P}}\right)^{1-\varepsilon}\left(\overline{P}\,\overline{Y}\right)+\varepsilon p_{i}^{-\varepsilon-1}C_{i}^{'}\left(\left(\frac{p_{i}}{\overline{P}}\right)^{-\varepsilon}\overline{Y}\right)\left(\frac{1}{\overline{P}}\right)^{-\varepsilon}\overline{Y} & =0\\
-\left(1-\varepsilon\right)+\varepsilon\frac{1}{p_{i}}C_{i}^{'}\left(y_{i}\right) & =0\\
-p_{i} & =\frac{\varepsilon}{\varepsilon-1}C_{i}^{'}\left(y_{i}\right)
+\left(1-\varepsilon\right)p_{i}^{-\varepsilon}\left(\frac{1}{\overline{P}}\right)^{1-\varepsilon}\left(\overline{P}\,\overline{Y}\right)+\varepsilon p_{i}^{-\varepsilon-1}C_{i}^{\prime}\left(\left(\frac{p_{i}}{\overline{P}}\right)^{-\varepsilon}\overline{Y}\right)\left(\frac{1}{\overline{P}}\right)^{-\varepsilon}\overline{Y} & =0\\
+\left(1-\varepsilon\right)+\varepsilon\frac{1}{p_{i}}C_{i}^{\prime}\left(y_{i}\right) & =0\\
+p_{i} & =\frac{\varepsilon}{\varepsilon-1}C_{i}^{\prime}\left(y_{i}\right)
 \end{align*}
 
 In the case of Cournot competition
@@ -134,9 +134,9 @@ In the case of Cournot competition
 \]
 The first order condition gives
 \begin{align*}
-\frac{\varepsilon-1}{\varepsilon}y_{i}^{\frac{\varepsilon-1}{\varepsilon}-1}\left(\frac{1}{\overline{Y}}\right)^{\frac{\varepsilon-1}{\varepsilon}}\left(\overline{P}\,\overline{Y}\right)-C_{i}^{'}\left(y_{i}\right) & =0\\
-\frac{\varepsilon-1}{\varepsilon}\left(\frac{y_{i}}{\overline{Y}}\right)^{-\frac{1}{\varepsilon}}\overline{P}-C_{i}^{'}\left(y_{i}\right) & =0\\
-p_{i} & =\frac{\varepsilon}{\varepsilon-1}C_{i}^{'}\left(y_{i}\right)
+\frac{\varepsilon-1}{\varepsilon}y_{i}^{\frac{\varepsilon-1}{\varepsilon}-1}\left(\frac{1}{\overline{Y}}\right)^{\frac{\varepsilon-1}{\varepsilon}}\left(\overline{P}\,\overline{Y}\right)-C_{i}^{\prime}\left(y_{i}\right) & =0\\
+\frac{\varepsilon-1}{\varepsilon}\left(\frac{y_{i}}{\overline{Y}}\right)^{-\frac{1}{\varepsilon}}\overline{P}-C_{i}^{\prime}\left(y_{i}\right) & =0\\
+p_{i} & =\frac{\varepsilon}{\varepsilon-1}C_{i}^{\prime}\left(y_{i}\right)
 \end{align*}
 This establishes that under monopolistic competition with constant
 elasticity of demand Bertrand and Cournot competition are equivalent.
@@ -148,7 +148,7 @@ differences in marginal costs. More productive firms have lower costs
 and therefore charge lower prices. This translates into more productive
 firms operating at a larger scale, determined by the solution to
 \[
-\left(\frac{y_{i}}{\overline{Y}}\right)^{\frac{-1}{\varepsilon}}\overline{P}=\frac{\varepsilon}{\varepsilon-1}C_{i}^{'}\left(y_{i}\right).
+\left(\frac{y_{i}}{\overline{Y}}\right)^{\frac{-1}{\varepsilon}}\overline{P}=\frac{\varepsilon}{\varepsilon-1}C_{i}^{\prime}\left(y_{i}\right).
 \]
 In the special case of constant marginal costs and replacing by the
 aggregate price we have

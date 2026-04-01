@@ -120,10 +120,10 @@ that $x=Tx$.
     implies $\rho\left(Tv,v\right)=0$. By definition this is $Tv=v$,
     a fixed point.
     
-    To show uniqueness suppose for a contradiction that there is $v^{'}\neq v$
-    such that $Tv^{'}=v^{'}$, then:
+    To show uniqueness suppose for a contradiction that there is $v^{\prime}\neq v$
+    such that $Tv^{\prime}=v^{\prime}$, then:
     \[
-    0\neq\rho\left(v^{'},v\right)=\rho\left(Tv^{'},Tv\right)\leq\beta\rho\left(v^{'},v\right)
+    0\neq\rho\left(v^{\prime},v\right)=\rho\left(Tv^{\prime},Tv\right)\leq\beta\rho\left(v^{\prime},v\right)
     \]
     But this contradicts $\beta<1$. Then $v$ is the unique fixed point.
     
@@ -148,17 +148,17 @@ to locate the fixed point in a given subset of $S$.
     a contraction mapping with fixed point $v\in S$.
     
     
-    1. If $S^{'}\subseteq S$ is closed and $T\left(S^{'}\right)\subseteq S^{'}$,
-    then $v\in S^{'}$.
-    1. If in addition there exists $S^{''}\subseteq S^{'}$ such that $T\left(S^{'}\right)\subseteq S^{''}$,
-    then $v\in S^{''}$.
+    1. If $S^{\prime}\subseteq S$ is closed and $T\left(S^{\prime}\right)\subseteq S^{\prime}$,
+    then $v\in S^{\prime}$.
+    1. If in addition there exists $S^{"}\subseteq S^{\prime}$ such that $T\left(S^{\prime}\right)\subseteq S^{"}$,
+    then $v\in S^{"}$.
 
 ??? success "Proof"
 
-    Let $v_{0}\in S^{'}$ and $\left\{ T^{n}v_{0}\right\} $ a sequence
-    in $S^{'}$ so that $T^{n}v_{0}\to v$, because $S^{'}$ is closed
-    it follows that $v\in S^{'}$. If in addition $T\left(S^{'}\right)\subseteq S^{''}$
-    then it follows that $v=Tv\in S^{''}$.
+    Let $v_{0}\in S^{\prime}$ and $\left\{ T^{n}v_{0}\right\} $ a sequence
+    in $S^{\prime}$ so that $T^{n}v_{0}\to v$, because $S^{\prime}$ is closed
+    it follows that $v\in S^{\prime}$. If in addition $T\left(S^{\prime}\right)\subseteq S^{"}$
+    then it follows that $v=Tv\in S^{"}$.
 
 Finally a set of sufficiency conditions are established for a mapping
 on the space of bounded functions to be a contraction. In most economic
@@ -277,7 +277,7 @@ for vector valued functions. I first define the relevant set of functions.
     1. Because the space $\left(B\left(X\right),\left\Vert f\right\Vert _{\infty}\right)$
     is complete, the above implies that the sequences $\left\{ f_{1n}\right\} $
     and $\left\{ f_{2n}\right\} $ are convergent in the sup norm. $\exists_{f_{1},f_{2}\in B\left(X\right)}f_{1n}\to f_{1}\land f_{2n}\to f_{2}$.
-    Denote $f:S\to\mathbb{R}^{2}$ as $f\left(x\right)=\left[f_{1}\left(x\right)\mbox{ }f_{2}\left(x\right)\right]^{'}$.
+    Denote $f:S\to\mathbb{R}^{2}$ as $f\left(x\right)=\left[f_{1}\left(x\right)\mbox{ }f_{2}\left(x\right)\right]^{\prime}$.
     1. Let $\epsilon>0$. By convergence of $\left\{ f_{1n}\right\} $ and
     $\left\{ f_{2n}\right\} $ there exist numbers $N_{1}$ and $N_{2}$
     such that:
@@ -316,7 +316,7 @@ for vector valued functions. I first define the relevant set of functions.
     taken in the vector sense, i.e. $f_{1}\left(x\right)\leq g_{1}\left(x\right)$
     and $f_{2}\left(x\right)\leq g_{2}\left(x\right)$).
     1. (Discounting) there exists some $\beta\in\left(0,1\right)$ such that
-    $T\left(f+A\right)\leq Tf\left(x\right)+\beta A$ for $f\in S$, $A=\left[a\mbox{ }a\right]^{'}\in\mathbb{R}_{+}^{2}$
+    $T\left(f+A\right)\leq Tf\left(x\right)+\beta A$ for $f\in S$, $A=\left[a\mbox{ }a\right]^{\prime}\in\mathbb{R}_{+}^{2}$
     and $x\in X$.
     
     Then $T$ is a contraction in $S$ with modulus $\beta$.
@@ -327,7 +327,7 @@ for vector valued functions. I first define the relevant set of functions.
     
     
     1. Let $f,g\in S$, and define $A=\left[\begin{array}{cc}
-    \left\Vert f-g\right\Vert  & \left\Vert f-g\right\Vert \end{array}\right]^{'}$, it holds that:
+    \left\Vert f-g\right\Vert  & \left\Vert f-g\right\Vert \end{array}\right]^{\prime}$, it holds that:
     \begin{eqnarray*}
     f_{1}\left(x\right)-g_{1}\left(x\right) & \leq & \left|f_{1}\left(x\right)-g_{1}\left(x\right)\right|\leq\underset{x\in X}{\sup}\left|f_{1}\left(x\right)-g_{1}\left(x\right)\right|\\
     & \leq & \max\left\{ \underset{x\in X}{\sup}\left|f_{1}\left(x\right)-g_{1}\left(x\right)\right|,\underset{x\in X}{\sup}\left|f_{2}\left(x\right)-g_{2}\left(x\right)\right|\right\} =\left\Vert f-g\right\Vert _{\infty}
@@ -438,11 +438,11 @@ existence of a solution and to obtain a method to find it.
 Let $u$ and $f$ be bounded and continuous functions and define an
 operator $T:C\left(X\right)\to C\left(X\right)$ as:
 \[
-Tv\left(k\right)=\max_{0\leq k^{'}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{'}\right)+\beta v\left(k^{'}\right)\right\}
+Tv\left(k\right)=\max_{0\leq k^{\prime}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta v\left(k^{\prime}\right)\right\}
 \]
 boundedness of $Tv$ is immediate for the sum of bounded is also bounded.
 Continuity is a consequence of the ToM, the objective function is
-continuous and the correspondence $\Gamma\left(k\right)=\left\{ k^{'}|0\leq k^{'}\leq f\left(k\right)\right\} $
+continuous and the correspondence $\Gamma\left(k\right)=\left\{ k^{\prime}|0\leq k^{\prime}\leq f\left(k\right)\right\} $
 is continuous and compact valued because $f$ is continuous and bounded.
 
 The solution to the functional equation, $v$, is then a fixed point
@@ -454,11 +454,11 @@ are immediate:
 1. (monotonicity) Let $v,w\in C\left(X\right)$ and $v\left(k\right)\leq w\left(k\right)$
 for all $k$. Then:
 \[
-Tv\left(k\right)=\max_{0\leq k^{'}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{'}\right)+\beta v\left(k^{'}\right)\right\} \leq\max_{0\leq k^{'}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{'}\right)+\beta w\left(k^{'}\right)\right\} =Tw\left(k\right)
+Tv\left(k\right)=\max_{0\leq k^{\prime}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta v\left(k^{\prime}\right)\right\} \leq\max_{0\leq k^{\prime}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta w\left(k^{\prime}\right)\right\} =Tw\left(k\right)
 \]
 1. (discounting) Let $v\in C\left(X\right)$ and $a>0$. Then:
 \[
-T\left(v+a\right)\left(k\right)=\max_{0\leq k^{'}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{'}\right)+\beta\left(v\left(k^{'}\right)+a\right)\right\} =\max_{0\leq k^{'}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{'}\right)+\beta v\left(k^{'}\right)\right\} +\beta a
+T\left(v+a\right)\left(k\right)=\max_{0\leq k^{\prime}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta\left(v\left(k^{\prime}\right)+a\right)\right\} =\max_{0\leq k^{\prime}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta v\left(k^{\prime}\right)\right\} +\beta a
 \]
 In particular:
 \[
@@ -694,7 +694,7 @@ first $l$ arguments.
 
 **Assumption A.6:**
 
-$\Gamma$ is monotone in the sense that if $x\leq x^{'}$ the $\Gamma\left(x\right)\subseteq\Gamma\left(x^{'}\right)$.
+$\Gamma$ is monotone in the sense that if $x\leq x^{\prime}$ the $\Gamma\left(x\right)\subseteq\Gamma\left(x^{\prime}\right)$.
 !!! abstract "Proposition"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.3 to A.6,
@@ -703,19 +703,19 @@ $\Gamma$ is monotone in the sense that if $x\leq x^{'}$ the $\Gamma\left(x\right
 
 ??? success "Proof"
 
-    Let $C^{'}\left(X\right)\subseteq C\left(X\right)$ be the set of
-    bounded, continuous and non-decreasing functions and $C^{''}\left(X\right)\subseteq C^{'}\left(X\right)$
-    the set of strictly increasing functions. Clearly $C^{'}\left(X\right)$
+    Let $C^{\prime}\left(X\right)\subseteq C\left(X\right)$ be the set of
+    bounded, continuous and non-decreasing functions and $C^{"}\left(X\right)\subseteq C^{\prime}\left(X\right)$
+    the set of strictly increasing functions. Clearly $C^{\prime}\left(X\right)$
     is closed. By the corollary of the contraction mapping theorem it
-    suffices to show that $T\left(C^{'}\left(X\right)\right)\subseteq C^{''}\left(X\right)$.
+    suffices to show that $T\left(C^{\prime}\left(X\right)\right)\subseteq C^{"}\left(X\right)$.
     
-    Let $f\in C^{'}\left(X\right)$ and consider $x<x^{'}$. We want to
+    Let $f\in C^{\prime}\left(X\right)$ and consider $x<x^{\prime}$. We want to
     show that $Tf$ is strictly increasing. This follows with A.5 and
     A.6:
     \[
-    Tf\left(x\right)=\max_{y\in\Gamma\left(x\right)}F\left(x,y\right)+\beta f\left(y\right)\leq\max_{y\in\Gamma\left(x^{'}\right)}F\left(x,y\right)+\beta f\left(y\right)<\max_{y\in\Gamma\left(x^{'}\right)}F\left(x^{'},y\right)+\beta f\left(y\right)=Tf\left(x^{'}\right)
+    Tf\left(x\right)=\max_{y\in\Gamma\left(x\right)}F\left(x,y\right)+\beta f\left(y\right)\leq\max_{y\in\Gamma\left(x^{\prime}\right)}F\left(x,y\right)+\beta f\left(y\right)<\max_{y\in\Gamma\left(x^{\prime}\right)}F\left(x^{\prime},y\right)+\beta f\left(y\right)=Tf\left(x^{\prime}\right)
     \]
-    where the first inequality follows from $\Gamma\left(x\right)\subseteq\Gamma\left(x^{'}\right)$,
+    where the first inequality follows from $\Gamma\left(x\right)\subseteq\Gamma\left(x^{\prime}\right)$,
     a larger choice set implies a higher than or equal maximum, the second
     inequality follows from $F$ being strictly increasing.
 
@@ -737,15 +737,15 @@ $\Gamma$ has a convex graph.
 
 ??? success "Proof"
 
-    Let $C^{'}\left(X\right)$ be the set of concave, bounded and continuous
-    functions and $C^{''}\left(X\right)$ the set of strictly concave,
-    bounded and continuous functions. The set $C^{'}\left(X\right)\subseteq C\left(X\right)$
-    is closed and that $C^{''}\left(X\right)\subseteq C^{'}\left(X\right)$.
+    Let $C^{\prime}\left(X\right)$ be the set of concave, bounded and continuous
+    functions and $C^{"}\left(X\right)$ the set of strictly concave,
+    bounded and continuous functions. The set $C^{\prime}\left(X\right)\subseteq C\left(X\right)$
+    is closed and that $C^{"}\left(X\right)\subseteq C^{\prime}\left(X\right)$.
     To show that $v$ is strictly concave we use the corollary of the
     contraction mapping theorem.
     
-    We want to show that for all $f\in C^{'}\left(X\right)$ it follows
-    that $Tf\in C^{''}\left(X\right)$ where
+    We want to show that for all $f\in C^{\prime}\left(X\right)$ it follows
+    that $Tf\in C^{"}\left(X\right)$ where
     \[
     Tf\left(x\right)=Tf\left(x\right)=\max_{y\in\Gamma\left(x\right)}F\left(x,y\right)+\beta f\left(y\right)
     \]
@@ -768,10 +768,10 @@ $\Gamma$ has a convex graph.
     \[
     Tf\left(x_{\lambda}\right)>\lambda Tf\left(x_{1}\right)+\left(1-\lambda\right)Tf\left(x_{2}\right)
     \]
-    Then the ``image'' of any concave function is a strictly concave
-    function. This proves that $Tf\in C^{''}\left(X\right)$. Then by
+    Then the "image" of any concave function is a strictly concave
+    function. This proves that $Tf\in C^{"}\left(X\right)$. Then by
     the corollary of the contraction mapping theorem the unique fix point
-    of $T$ belongs to $C^{''}$. That is, $v$ is strictly concave.
+    of $T$ belongs to $C^{"}$. That is, $v$ is strictly concave.
     
     Finally, consider the policy function $G\left(x\right)=\underset{y\in\Gamma\left(x\right)}{\mbox{argmax}}F\left(x,y\right)+v\left(y\right)$.
     Because $F$ and $v$ are strictly concave the single valuedness and

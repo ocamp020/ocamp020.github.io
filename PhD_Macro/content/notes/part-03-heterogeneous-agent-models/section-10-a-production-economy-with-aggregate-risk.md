@@ -56,7 +56,7 @@ saving choices that respond to the aggregate state of the economy.
 **Recursive competitive equilibrium**
 
 A RCE is a set of a value function $\left(V\right)$, a policy function
-$\left(a^{'}\right)$, a state-dependent transition function for the
+$\left(a^{\prime}\right)$, a state-dependent transition function for the
 distribution $\left(T^{\star}\right)$, and price functions $\left(R,W\right)$
 such that:
 
@@ -64,11 +64,11 @@ such that:
 for the distribution $\left(T^{\star}\right)$, the value and policy
 functions solve the households' dynamic programming problem
 \begin{align*}
-V\left(\underbrace{\epsilon,a}_{\text{Ind. State}},\underbrace{z,\Gamma}_{\text{Agg. State}}\right) & =\max_{\left\{ c,a^{'}\right\} }\,u\left(c\right)+\beta E\left[V\left(\epsilon^{'},a^{'},z^{'},\Gamma^{'}\right)|\epsilon,z,\Gamma\right]\\
-& \text{s.t. }c+a^{'}=\left(1+R\left(z,\Gamma\right)\right)a+W\left(z,\Gamma\right)\epsilon\qquad a^{'}\geq\underline{a}\qquad\Gamma^{'}=T^{\star}\Gamma
+V\left(\underbrace{\epsilon,a}_{\text{Ind. State}},\underbrace{z,\Gamma}_{\text{Agg. State}}\right) & =\max_{\left\{ c,a^{\prime}\right\} }\,u\left(c\right)+\beta E\left[V\left(\epsilon^{\prime},a^{\prime},z^{\prime},\Gamma^{\prime}\right)|\epsilon,z,\Gamma\right]\\
+& \text{s.t. }c+a^{\prime}=\left(1+R\left(z,\Gamma\right)\right)a+W\left(z,\Gamma\right)\epsilon\qquad a^{\prime}\geq\underline{a}\qquad\Gamma^{\prime}=T^{\star}\Gamma
 \end{align*}
 $T^{\star}$'s dependence on the aggregate state is omitted from the
-notation for simplicity. Alternatively, we can write $\Gamma^{'}=H\left(z,\Gamma\right)$
+notation for simplicity. Alternatively, we can write $\Gamma^{\prime}=H\left(z,\Gamma\right)$
 for a transition function $H$. We can also write prices as functions
 of productivity and aggregate capital, $r=R\left(z,K\right)$ and
 $w=W\left(z,K\right)$.
@@ -76,20 +76,20 @@ $w=W\left(z,K\right)$.
 to the adjoint Markov operator of the endogenous Markov process defined
 by the (exogenous) Markov processes for $\epsilon$ and $z$ with
 Transition function $Q$ and $Q_{z}$ and the (endogenous) policy
-function for $a^{'}$.
+function for $a^{\prime}$.
 \[
-\Gamma^{'}\left(S_{\epsilon},A\right)=T^{\star}\Gamma\left(S_{\epsilon},A\right)=\int_{\overline{S}}\int_{\overline{A}}\underbrace{g\left(\epsilon,a,z,\Gamma\right)\cdot\text{Pr}\left(\epsilon^{'}\in S_{\epsilon}|\epsilon\right)}_{\text{Markov Kernel}:P\left(\epsilon^{'},a^{'}|\epsilon,a;z,\Gamma\right)}\cdot d\Gamma\left(\epsilon,a\right)
+\Gamma^{\prime}\left(S_{\epsilon},A\right)=T^{\star}\Gamma\left(S_{\epsilon},A\right)=\int_{\overline{S}}\int_{\overline{A}}\underbrace{g\left(\epsilon,a,z,\Gamma\right)\cdot\text{Pr}\left(\epsilon^{\prime}\in S_{\epsilon}|\epsilon\right)}_{\text{Markov Kernel}:P\left(\epsilon^{\prime},a^{\prime}|\epsilon,a;z,\Gamma\right)}\cdot d\Gamma\left(\epsilon,a\right)
 \]
 where
 \[
 g\left(\epsilon,a,z,\Gamma,A\right)=\begin{cases}
-1 & \text{if }a^{'}=g_{a}\left(\epsilon,a,z,\Gamma\right)\in A\\
+1 & \text{if }a^{\prime}=g_{a}\left(\epsilon,a,z,\Gamma\right)\in A\\
 0 & \text{otw}
 \end{cases}.
 \]
 1. The capital and labor markets clear. That is, aggregate capital reflects
 the aggregate assets of the households and aggregate labor demand
-equals the supply of ``efficiency units of labor'' from the household
+equals the supply of "efficiency units of labor" from the household
 \[
 K=\int\int a\cdot d\Gamma\left(\epsilon,a\right)\qquad L=\int\int\epsilon\cdot d\Gamma\left(\epsilon,a\right)\left(=1\right).
 \]
@@ -139,7 +139,7 @@ with knowledge of the transition function $T^{\star}$, households
 use a (log-)linear model to forecast future moments of the distribution
 using its current moments and the aggregate productivity. For instance
 \[
-\log K^{'}=f\left(z,\log K,\left(\log K\right)^{2}\right)=\alpha\left(z\right)+\beta\left(z\right)\log K+\gamma\left(z\right)\left(\log K\right)^{2},
+\log K^{\prime}=f\left(z,\log K,\left(\log K\right)^{2}\right)=\alpha\left(z\right)+\beta\left(z\right)\log K+\gamma\left(z\right)\left(\log K\right)^{2},
 \]
 where the coefficients depend on the values of $z$. The solution
 method proposed in the paper finds coefficients that (almost exactly)
@@ -156,9 +156,9 @@ capital.
 \BlankLine
 \SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
 \Input{Guess for coeficients $\alpha(z),\;\beta(z)$}
-\Output{$V,a^{'},\Gamma$}
+\Output{$V,a^{\prime},\Gamma$}
 \BlankLine
-1. Solve the DP problem of the agent given market clearing prices $(R(z,K),W(z,K))$ and the transition function for $K$ parameterized by $\alpha(z),\;\beta(z)$: \\ $\qquad (V,a^{'})=T(V;\alpha,\beta)$ \textcolor{gray}{(a fixed point problem)}. Note that markets will clear by construction. \;
+1. Solve the DP problem of the agent given market clearing prices $(R(z,K),W(z,K))$ and the transition function for $K$ parameterized by $\alpha(z),\;\beta(z)$: \\ $\qquad (V,a^{\prime})=T(V;\alpha,\beta)$ \textcolor{gray}{(a fixed point problem)}. Note that markets will clear by construction. \;
 \smallskip
 2. Use the policy function and the Markov processes for $\epsilon$ and $z$ to simulate a long panel of the economy. \, In doing this update the distribution using the appropriate Markov operator.  Use the distribution to compute aggregate capital. \,Record the time series for aggregate capital and productivity.  \;
 \smallskip
@@ -180,14 +180,14 @@ at in the neoclassical growth model of [Stochastic Recursive Competitive Equilib
 However, we know while there is exact aggregation in the neoclassical
 growth model (allowing for a representative agent), there is no such
 aggregation result in the Aiyagari economy. This led Krusell and Smith
-to term their result ``*approximate aggregation*.'' They write
+to term their result "*approximate aggregation*." They write
 \begin{quote}
-``Our main insight is that the macroeconomic model with heterogeneity
+"Our main insight is that the macroeconomic model with heterogeneity
 features approximate aggregation. By approximate aggregation, we mean
 that, in equilibrium, all aggregate variables---consumption, the
 capital stock, and relative prices---can be almost perfectly de-
 scribed as a function of two simple statistics: the mean of the wealth
-distribution and the aggregate productivity shock.''
+distribution and the aggregate productivity shock."
 \end{quote}
 This result makes the model solvable in practice by reducing the dimensionality
 of the problem.
@@ -202,7 +202,7 @@ as scaled-versions of the representative household (except for those
 that are borrowing-constrained). [Krusell and Smith (1998)](https://doi.org/10.1086/250034) explain
 it as follows:
 \begin{quote}
-``The key insight is related to earlier findings from similar models
+"The key insight is related to earlier findings from similar models
 that utility costs from fluctuations in consumption are quite small
 and **that self-insurance with only one asset is quite effective**.
 Self-insurance in our model is not very effective in terms of smoothing
@@ -220,7 +220,7 @@ held by these agents is always very small (this is particularly true
 in the model with a realistic wealth distribution). Because it is
 so small, **higher-order moments of the wealth distribution
 simply do not affect the accumulation pattern of total capital, even
-though these moments do move significantly over time**.'' {[}emphasis
+though these moments do move significantly over time**." {[}emphasis
 added{]}
 \end{quote}
 This is (at its core) the same reason behind the inability of Aiyagari
@@ -241,7 +241,7 @@ baseline Aiyagari economy inability to reproduce the observed levels
 of wealth inequality that Krusell and Smith obtain their (in)famous
 irrelevance result. They write
 \begin{quote}
-``When the representative-agent model is altered only by adding idiosyncratic,
+"When the representative-agent model is altered only by adding idiosyncratic,
 uninsurable risk, the resulting stationary wealth distribution is
 quite unrealistic: there are too few very poor agents, and much too
 little concentration of wealth among the very richest. For this reason,
@@ -249,14 +249,14 @@ we consider a version of the model with preference heterogeneity {[}...{]}
 We show that this model does succeed quite well in matching the key
 features of the wealth distribution. {[}...{]} in the aggregate, we
 observe a significant departure from permanent income behavior, in
-contrast to standard representative-agent models.''
+contrast to standard representative-agent models."
 \end{quote}
 In fact, the extended model in [Krusell and Smith (1997)](https://doi.org/10.1017/S1365100597003052) also attempts
 to better match the observed distribution of wealth (an elusive target
 for the literature). They also find a relevant role for heterogeneity
 in shaping the aggregates of the economy. The reason wealth concentration
 matters is that it generates (endogenously) a mass of households that
-act in a ``hand-to-mouth'' fashion. These households are not able
+act in a "hand-to-mouth" fashion. These households are not able
 to effectively insure against aggregate fluctuations and behave markedly
 different from the representative agent (that is never against the
 borrowing constraint and behaves like a permanent-income agent, smoothing
@@ -266,11 +266,11 @@ Similarly, [Angeletos (2007)](https://doi.org/10.1016/j.red.2006.11.001) shows t
 risk in the form of risky portfolios implies significant departures
 from the representative agent baseline. He writes
 \begin{quote}
-``{[}S{]}ignificant general-equilibrium effects on savings and income
+"{[}S{]}ignificant general-equilibrium effects on savings and income
 are both empirically plausible and consistent with low private-equity
 premia {[}...{]} the macroeconomic effects of idiosyncratic investment
 risk can be both qualitatively distinct from those of idiosyncratic
-labor-income risk and quantitatively significant.''
+labor-income risk and quantitatively significant."
 \end{quote}
 Other papers that highlight the importance of heterogeneity for aggregate
 fluctuations are: [Kaplan et al. (2018)](https://doi.org/10.1257/aer.20160042), [Ahn et al. (2018)](https://doi.org/10.1086/696046)
