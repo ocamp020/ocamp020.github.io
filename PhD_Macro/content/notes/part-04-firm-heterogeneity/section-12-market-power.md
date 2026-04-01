@@ -48,7 +48,7 @@ markup determined by the elasticity of demand $\varepsilon_{i}\equiv-\left(\frac
 \[
 p_{i}=\frac{1}{1-\frac{1}{\varepsilon_{i}}}C_{i}^{\prime}\left(y_{i}\right),
 \]
-The markup is $\mu_{i}^{m}=\nicefrac{1}{1-\frac{1}{\varepsilon_{i}}}$.
+The markup is $\mu_{i}^{m}=\frac{1}{1-\frac{1}{\varepsilon_{i}}}$.
 The difference between forms of competition is the value of the elasticity
 of demand and hence markups, prices, and output levels.
 
@@ -103,7 +103,7 @@ Moreover, we can choose a single input, say labor, and express all
 choices of the firm directly over that input, as the value of other
 inputs and of total output vary linearly with it. This is the underlying
 reason for many applications to focus on simple production functions
-that are linear on labor and have a marginal cost of $\nicefrac{w}{z}$,
+that are linear on labor and have a marginal cost of $\frac{w}{z}$,
 with $z$ being the firm's productivity.
 
 Consider the problem of a firm that use multiple inputs $\left\{ x_{k}\right\} _{k=1}^{K}$
@@ -141,8 +141,8 @@ terms of labor alone:
 \[
 y_{i}=\tilde{z}_{i}F\left(\frac{x_{1}}{n_{i}},\ldots,\frac{x_{K}}{n_{i}},1\right)n_{i}=z_{i}n_{i}
 \]
-where we define the effective productivity of labor as $z_{i}\equiv\tilde{z}_{i}F\left(\nicefrac{x_{1}}{n_{i}},\ldots,\nicefrac{x_{K}}{n_{i}},1\right)$
-with the ratios $\nicefrac{x_{k}}{n_{i}}$ given by the solution to
+where we define the effective productivity of labor as $z_{i}\equiv\tilde{z}_{i}F\left(\frac{x_{1}}{n_{i}},\ldots,\frac{x_{K}}{n_{i}},1\right)$
+with the ratios $\frac{x_{k}}{n_{i}}$ given by the solution to
 the system defined above. Thus, $z_{i}$ is a function of productivity
 $\tilde{z}_{i}$ and the price of the other inputs. It is now possible
 to use this linear production function in labor instead of the original

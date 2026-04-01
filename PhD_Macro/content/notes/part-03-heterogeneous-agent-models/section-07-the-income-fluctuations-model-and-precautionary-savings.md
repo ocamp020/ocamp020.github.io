@@ -72,7 +72,7 @@ version of the stationary recursive competitive equilibrium we will
 study below) we have the standard result that the return on assets
 is equal to the (inverse of the) inter-temporal rate of discount
 \[
-1+r=\nicefrac{1}{\beta}.
+1+r=\frac{1}{\beta}.
 \]
 This is a no-arbitrage expression. Without any risk (exogenous variation
 in future values of consumption and leisure), the household is indifferent
@@ -80,7 +80,7 @@ between saving an extra unit of goods or not. In other words, because
 $\left(1+r\right)\beta=1$ the discounted value of the returns is
 the same as the present cost of the goods being saved. This indifference
 condition prevents the (representative) household from engaging in
-arbitrage. For instance, if $1+r<\nicefrac{1}{\beta}$ the household
+arbitrage. For instance, if $1+r<\frac{1}{\beta}$ the household
 would want to borrow infinitely. The linearity (lack of curvature)
 of the household's budget introduces the same forced discussed before
 in the context of a firm with constant returns to scale technology.
@@ -148,27 +148,27 @@ What happens then with the relationship between the rate of return
 and the rate of discount in equilibrium? [Aiyagari (1994)](https://doi.org/10.2307/2118417)
 shows that it must be that case that
 \[
-1+r<\nicefrac{1}{\beta}.
+1+r<\frac{1}{\beta}.
 \]
 The reason is a combination of the fact that households are heterogeneous
 (facing idiosyncratic labor income risk) and that the presence of
 the borrowing constraint that introduces a key asymmetry to the problem.
-It cannot be that $1+r>\nicefrac{1}{\beta}$ because then the Euler
+It cannot be that $1+r>\frac{1}{\beta}$ because then the Euler
 equation would imply that consumption must have an upward drift (that
 is, that it must be expected to increase). This means that households
 want to save always. Because households are infinitely lived, this
 implies that assets (and consumption) tend to infinity. This cannot
 be a solution. See [Aiyagari (1994, footnote 20)](https://doi.org/10.2307/2118417) for a formal
-argument. The same thing occurs if $1+r=\nicefrac{1}{\beta}$. The
+argument. The same thing occurs if $1+r=\frac{1}{\beta}$. The
 reason lies in the desire for self-insurance as the household wants
 to have constant (expected) marginal utility over time. Once again,
 because the household is infinitely lived, they face the risk of an
 arbitrarily long sequence of low-income shocks. In order to insure
 against that, the household needs an arbitrarily large stock of savings.
-This is feasible because, with $1+r=\nicefrac{1}{\beta}$, it is costless
+This is feasible because, with $1+r=\frac{1}{\beta}$, it is costless
 for the household to transform current consumption into savings.
 
-Therefore, it must be that $1+r<\nicefrac{1}{\beta}$ in equilibrium.
+Therefore, it must be that $1+r<\frac{1}{\beta}$ in equilibrium.
 Under complete markets this would lead the household to accumulate
 infinite debt. The borrowing constraint prevents this from happening.
 Instead, there is a positive mass of households who de-accumulate
@@ -187,13 +187,13 @@ capture the role of precautionary savings. [Angeletos (2007)](https://doi.org/10
 later showed that, even though aggregate assets are always higher
 under labor-income risk, they can be increased or decreased under
 capital-income risk (also called investment or production risk), even
-though $1+r<\nicefrac{1}{\beta}$ still holds.
+though $1+r<\frac{1}{\beta}$ still holds.
 
 The relationship between the rate of return and the rate of discount
 also has implications for a long-standing debate on the return to
 equity and the return to safe assets. While the observed risk-free
-interest rates (i.e. those on Treasury bills), were around 1\
-average real return to equity was around 7\
+interest rates (i.e. those on Treasury bills), were around 1\%, the
+average real return to equity was around 7\%. This gap could not be
 matched by calibrating existing representative-agent models. In particular,
 these models predicted risk-free rates and equity premiums that were
 too large and too small, respectively. [Huggett (1993)](https://doi.org/10.1016/0165-1889(93)90024-M) provides

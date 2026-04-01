@@ -153,7 +153,7 @@ In this case the distribution of wealth does not matter for aggregates.
     market prices and their problems differ only in the parallel shifts
     of their budget constraints. This implies that the allocation of a
     household that has resources $Y_{i}$, corresponding to a fraction
-    $\omega_{i}=\nicefrac{Y_{i}}{Y}$ of the aggregate resources, is equal
+    $\omega_{i}=\frac{Y_{i}}{Y}$ of the aggregate resources, is equal
     to a fraction $\omega_{i}$ of the aggregate allocation:
     \[
     x\left(\vec{p},Y_{i}\right)=\omega_{i}x\left(\vec{p},Y\right).

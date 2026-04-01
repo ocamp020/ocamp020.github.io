@@ -48,9 +48,9 @@ type of problem shown above. Even though it is less general, the basic
 concepts are clearer in it and it maps better to the neoclassical
 growth model, leading example to come.
 
-We start by defining measurable spaces for the endogenous state $\left(X,{\cal X}\right)$
-and the exogenous (stochastic) state $\left(Z,{\cal Z}\right)$, as
-well as their product that forms the state space of the problem $\left(S,{\cal S}\right)=\left(X\times Z,{\cal X}\times{\cal Z}\right)$.
+We start by defining measurable spaces for the endogenous state $\left(X,\mathcal{X}\right)$
+and the exogenous (stochastic) state $\left(Z,\mathcal{Z}\right)$, as
+well as their product that forms the state space of the problem $\left(S,\mathcal{S}\right)=\left(X\times Z,\mathcal{X}\times\mathcal{Z}\right)$.
 We also impose that $Q$ is a stationary transition function, particularly
 that it satisfies the Feller property ([Definition: Feller Property](../part-01-preliminaries/section-03-markov-processes.md#ref-def-feller-property))
 preserving continuity and boundedness.
@@ -77,7 +77,7 @@ This requires dusting off the notation on stochastic processes developed
 after [Definition: Stochastic Process](../part-01-preliminaries/section-03-markov-processes.md#ref-def-stochastic-process).
 !!! info "Definition: Contingency Feasible Plan"
 
-    Let $\left(Z^{t},{\cal Z}^{t}\right)$
+    Let $\left(Z^{t},\mathcal{Z}^{t}\right)$
     be a measurable space over the partial history of shocks in periods
     1 through $t$. A feasible plan is a value $\pi_{0}\in\Gamma\left(x_{0},z_{0}\right)$
     and a sequence of measurable functions $\pi_{t}:Z^{t}\to\Gamma\left(\pi_{t-1}\left(z^{t-1}\right),z_{t}\right)$.
@@ -87,13 +87,13 @@ after [Definition: Stochastic Process](../part-01-preliminaries/section-03-marko
 The measurability conditions over the (choice) functions $\pi_{t}$
 implies that we can compute probabilities over the outcomes (decisions)
 given the probabilities on paths implied by $Q$. Recall that $Q$
-is a function over $\left(Z,{\cal Z}\right)$ so that, given $s_{0}$,
-we can define the probability measure $\mu^{t}\left(z_{0},\cdot\right):{\cal Z}^{t}\to\left[0,1\right]$
+is a function over $\left(Z,\mathcal{Z}\right)$ so that, given $s_{0}$,
+we can define the probability measure $\mu^{t}\left(z_{0},\cdot\right):\mathcal{Z}^{t}\to\left[0,1\right]$
 as in [Definition: Probability measure on finite sequence](../part-01-preliminaries/section-03-markov-processes.md#ref-def-probability-measure-sequences). This function
 establishes probabilities over sequences of shocks $z^{t}$ and allows
 to compute expectations over payoffs $F\left(\cdot\right)$ provided
 that $F$ is measurable with respect to the appropriate $\sigma$-algebra
-on $A$ (defined as ${\cal A}=\left\{ C\in{\cal X\times X\times Z}|C\in A\right\} $)
+on $A$ (defined as $\mathcal{A}=\left\{ C\in{\mathcal{X}\times X\times Z}|C\in A\right\} $)
 and that the function $F$ is integrable (either by being always positive
 or negative, or by being integrable with respect to $\mu^{t}$ given
 any feasible plan $\pi\in\Pi\left(s_{0}\right)$). These conditions
@@ -132,7 +132,7 @@ state. This law of motion interacts with the contingent choices of
 the control, $y$, to generate a contingent plan, that is now
 !!! info "Definition: Contingency Feasible Plan'"
 
-    Let $\left(Z^{t},{\cal Z}^{t}\right)$
+    Let $\left(Z^{t},\mathcal{Z}^{t}\right)$
     be a measurable space over the partial history of shocks in periods
     1 through $t$. A feasible plan is a value $\pi_{0}\in\Gamma\left(x_{0},z_{0}\right)$
     and a sequence of measurable functions $\pi_{t}:Z^{t}\to\Gamma\left(x_{t}^{\pi}\left(z^{t}\right),z_{t}\right)$,
@@ -206,10 +206,10 @@ theorem gives conditions for this, the proof is in Theorem 9.2 of
 [Stokey et al. (1989)](https://books.google.com/books?id=tWYo0QolyLAC).
 !!! abstract "Theorem"
 
-    Let $\left(X,{\cal X}\right)$, $\left(Z,{\cal Z}\right)$, Q, $F$,
+    Let $\left(X,\mathcal{X}\right)$, $\left(Z,\mathcal{Z}\right)$, Q, $F$,
     $\Gamma$, and $\beta$ be given. $\Gamma$ is non-empty valued and
-    allows for a measurable selection. $F$ is ${\cal A}$-measurable
-    and integrable (see Assumption 9.2 in \citealp{SLP89}). Let $v^{\star}$
+    allows for a measurable selection. $F$ is $\mathcal{A}$-measurable
+    and integrable (see Assumption 9.2 in [Stokey et al. 1989](https://books.google.com/books?id=tWYo0QolyLAC)). Let $v^{\star}$
     be as in ([Equation](#ref-eq-sequential-problem-stochastic)) and $v$ as in
     ([Equation](#ref-eq-dp-stochastic)) such that
     \[
@@ -252,21 +252,21 @@ process with some transition function $P$.
 The main result here is
 !!! abstract "Theorem"
 
-    Let $\left(X,{\cal X}\right)$ and $\left(Z,{\cal Z}\right)$ be measurable
-    spaces with their product space $\left(S,{\cal S}\right)$ also measurable.
-    Let $Q:Z\times{\cal Z}\to\left[0,1\right]$ be a transition function
+    Let $\left(X,\mathcal{X}\right)$ and $\left(Z,\mathcal{Z}\right)$ be measurable
+    spaces with their product space $\left(S,\mathcal{S}\right)$ also measurable.
+    Let $Q:Z\times\mathcal{Z}\to\left[0,1\right]$ be a transition function
     for the exogenous state $z$ and $G:S\to X$ a policy function for
     the endogenous state $x$.
     
-    If $G$ is measurable with respect to ${\cal Z}$ then the function
-    $P:S\times{\cal S}\to\left[0,1\right]$ defined as
+    If $G$ is measurable with respect to $\mathcal{Z}$ then the function
+    $P:S\times\mathcal{S}\to\left[0,1\right]$ defined as
     \[
     P\left(\left(x,z\right),A\times B\right)=\begin{cases}
     Q\left(z,B\right) & \text{ if }G\left(x,z\right)\in A\\
     0 & \text{ if }G\left(x,z\right)\notin A
     \end{cases}
     \]
-    is a transition function on the state space $\left(S,{\cal S}\right)$
+    is a transition function on the state space $\left(S,\mathcal{S}\right)$
     defining a Markov process.
 
 So, out of the solution of the dynamic problem comes a stochastic
@@ -275,9 +275,9 @@ the exogenous state evolves according to $Q\left(z,\cdot\right)$
 and the endogenous state evolves deterministically because the decision
 maker has full control over it $\left(\phi\left(x,y,z^{\prime}\right)=y\right)$.
 Because the evolution of the endogenous state is deterministic it
-either is in a set $A\in{\cal X}$, or it is not. If it is, then the
+either is in a set $A\in\mathcal{X}$, or it is not. If it is, then the
 transition function $P$ just needs to care about the conditional
-probability of $z^{\prime}\in B\in{\cal Z}$ given the current value of
+probability of $z^{\prime}\in B\in\mathcal{Z}$ given the current value of
 the exogenous state, $z$.
 
 This construction of the Markov process will be crucial for the study
@@ -290,10 +290,10 @@ by $P$. Unsurprisingly, $P$ inherits its properties from $Q$.
     Consider the following conditions:
     
     1. $X$ is a convex Borel set in $\mathbb{R}^{\ell}$ with Borel subsets
-    ${\cal X}$;
-    1. either $Z$ is countable with ${\cal Z}=2^{Z}$ its power set (set
+    $\mathcal{X}$;
+    1. either $Z$ is countable with $\mathcal{Z}=2^{Z}$ its power set (set
     of all subsets) or $Z$ is a compact (Borel) set in $\mathbb{R}^{k}$with
-    Borel subsets ${\cal Z}$ and $Q$ satisfies the Feller property;
+    Borel subsets $\mathcal{Z}$ and $Q$ satisfies the Feller property;
     1. $G$ is continuous.
     
     If all conditions are satisfied, then $P$ satisfies the Feller property.

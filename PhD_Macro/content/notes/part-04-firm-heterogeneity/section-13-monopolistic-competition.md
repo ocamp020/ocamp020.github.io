@@ -52,7 +52,7 @@ Hence, optimality requires that between any pair of goods $\left(i,j\right)$
 \underbrace{\frac{p_{i}}{p_{j}}}_{\text{MRT}}=\underbrace{\left(\frac{y_{i}}{y_{j}}\right)^{\frac{-1}{\varepsilon}}}_{\text{MRS}}\longrightarrow\frac{y_{i}}{y_{j}}=\left(\frac{p_{i}}{p_{j}}\right)^{-\varepsilon}.
 \]
 From this we see that $\varepsilon=\frac{\log y_{i}}{\log p_{j}}$
-is the elasticity of substitution between goods $i$ and $j$. (Note: A better definition has the elasticity be the change in relative demand in response to changes in relative prices: $\varepsilon=-\frac{\partial\log\nicefrac{y_{i}}{y_{j}}}{\partial\log\nicefrac{p_{i}}{p_{j}}}$.) Moreover, the elasticity of substitution is constant across pairs.
+is the elasticity of substitution between goods $i$ and $j$. (Note: A better definition has the elasticity be the change in relative demand in response to changes in relative prices: $\varepsilon=-\frac{\partial\log\frac{y_{i}}{y_{j}}}{\partial\log\frac{p_{i}}{p_{j}}}$.) Moreover, the elasticity of substitution is constant across pairs.
 This is what gives its name to the aggregator as the Constant-Elasticity-of-Substitution
 (CES) aggregator.
 
@@ -267,7 +267,7 @@ which is the expression used above.
 Consider an economy with an infinite number of firms that produce
 differentiated goods using a linear technology in labor and that differ
 in their productivity, as captured by their constant marginal costs,
-$c_{i}=\nicefrac{w}{z_{i}}$ with $w$ the market wage. The index
+$c_{i}=\frac{w}{z_{i}}$ with $w$ the market wage. The index
 of the firm reflects their marginal costs and so $c_{i}<c_{j}$ if
 and only if $i<j$. Opening a firm to produce has a fixed cost of
 $\psi\geq0$. The demand for differentiated goods comes from a representative
@@ -364,7 +364,7 @@ The constrained optimum should have all active firms be identical
 them). They also must be making exactly zero profits. The problem
 is to choose the number of firms as well as firm quantities and prices
 to maximize $\overline{Y}$ (the utility level). The resource constraint
-implies that $\overline{Y}=\nicefrac{I}{\overline{P}}$, and so, with
+implies that $\overline{Y}=\frac{I}{\overline{P}}$, and so, with
 fixed income, we know that the utility is maximized as we minimize
 aggregate prices.
 

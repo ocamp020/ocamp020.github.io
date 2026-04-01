@@ -285,7 +285,7 @@ agents because their wealth is not readily accessible to produce insurance
 
 **Modern solution methods**
 
-In a concurrent article, [Haan (1997)](https://doi.org/10.1017/S1365100597003040) develops an alternative
+In a concurrent article, [Den Haan (1997)](https://doi.org/10.1017/S1365100597003040) develops an alternative
 solution method that parametrizes the distribution of wealth on a
 standard polynomial basis, this reduces the dimensionality of the
 problem. Rather than track the infinite-dimensional distribution and

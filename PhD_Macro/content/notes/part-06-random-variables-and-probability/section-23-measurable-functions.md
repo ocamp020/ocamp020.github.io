@@ -10,19 +10,19 @@ is measurable if the sets that induce a given outcome are measurable.
 Formally:
 !!! info "Definition: Measurable function"
 
-    Let $\left(S,{\cal A},\mu\right)$
-    and $\left(S^{\prime},{\cal A}^{\prime},\mu^{\prime}\right)$ be measure spaces and
-    $f:S\to S^{\prime}$ a function. $f$ is measurable if and only if $f^{-1}\left(A^{\prime}\right)\in{\cal A}$
-    for all $A^{\prime}\in{\cal A}^{\prime}$.
+    Let $\left(S,\mathcal{A},\mu\right)$
+    and $\left(S^{\prime},\mathcal{A}^{\prime},\mu^{\prime}\right)$ be measure spaces and
+    $f:S\to S^{\prime}$ a function. $f$ is measurable if and only if $f^{-1}\left(A^{\prime}\right)\in\mathcal{A}$
+    for all $A^{\prime}\in\mathcal{A}^{\prime}$.
 
-A special case of notable importance is that of $\left(S^{\prime},{\cal A}^{\prime},\mu^{\prime}\right)=\left(\mathbb{R},{\cal B},\lambda\right)$,
+A special case of notable importance is that of $\left(S^{\prime},\mathcal{A}^{\prime},\mu^{\prime}\right)=\left(\mathbb{R},\mathcal{B},\lambda\right)$,
 where $\lambda$ is the Lebesgue measure on the plane. This are real
-valued functions. In this case the ${\cal B}$-measurable sets in
+valued functions. In this case the $\mathcal{B}$-measurable sets in
 $\mathbb{R}$ can be characterized in the following way:
 !!! abstract "Theorem"
 
-    Let $\left(S,{\cal A},\mu\right)$ be a measure space and $f:S\to\mathbb{R}$.
-    $f$ is $\mu$-measurable if and only if $f^{-1}\left(\left(-\infty,c\right)\right)=\left\{ x\in S|f\left(x\right)<c\right\} \in{\cal A}$
+    Let $\left(S,\mathcal{A},\mu\right)$ be a measure space and $f:S\to\mathbb{R}$.
+    $f$ is $\mu$-measurable if and only if $f^{-1}\left(\left(-\infty,c\right)\right)=\left\{ x\in S|f\left(x\right)<c\right\} \in\mathcal{A}$
     for all $c\in\mathbb{R}$.
 
 ??? success "Proof"
@@ -36,25 +36,25 @@ Also when the measure space in question is a probability space one
 can characterize formally what a random variable is.
 !!! info "Definition: Random variable"
 
-    Let $\left(S,{\cal A},P\right)$ be a probability
+    Let $\left(S,\mathcal{A},P\right)$ be a probability
     space and $f:S\to\mathbb{R}$ a real valued function. $f$ is a random
     variable if and only if $f$ is measurable, that is, if and only if
-    $f^{-1}\left(B\right)\in{\cal A}$ for all $B\in{\cal B}$, where
-    ${\cal B}$ is the Borel $\sigma$-algebra on $\mathbb{R}$. We further
+    $f^{-1}\left(B\right)\in\mathcal{A}$ for all $B\in\mathcal{B}$, where
+    $\mathcal{B}$ is the Borel $\sigma$-algebra on $\mathbb{R}$. We further
     establish the same notation:
     
     1. An outcome is an element $s\in S$.
-    1. An event is a measurable subset of $S$: $A\in{\cal A}$.
+    1. An event is a measurable subset of $S$: $A\in\mathcal{A}$.
     1. The real number $f\left(s\right)$ is a realization of the random
     variable.
     1. The probability measure for $f$ is then: $\mu\left(B\right)=P\left(f^{-1}\left(B\right)\right)=P\left(\left\{ s\in S|f\left(s\right)\in B\right\} \right)$,
-    for $B\in{\cal B}$.
+    for $B\in\mathcal{B}$.
     1. The distribution function for $f$ is: $G\left(b\right)=\mu\left(\left(-\infty,b\right]\right)$,
     for $b\in\text{\mathbb{R}}$.
 
 Generally it is very hard to find a function that is not measurable.
 The details of the example will depend on the spaces considered. For
-example if $f:\mathbb{R}\to\mathbb{R}$ and ${\cal A}$ is the set
+example if $f:\mathbb{R}\to\mathbb{R}$ and $\mathcal{A}$ is the set
 of all open (or closed) sets in $\mathbb{R}$ the definition of measurability
 is equivalent to that of continuity (the pre-image of an open set
 has to be open) and then all functions that are not continuous are
@@ -90,7 +90,7 @@ results show how difficult it is to generate them:
     Suppose its not, then there exists numbers $b\leq a$ such that $f\left(b\right)>c\geq f\left(a\right)$,
     contradicting monotonicity.
     
-    All these sets are in ${\cal B}$, then $f$ is ${\cal B}$-measurable.
+    All these sets are in $\mathcal{B}$, then $f$ is $\mathcal{B}$-measurable.
 
 !!! abstract "Corollary"
 
@@ -101,33 +101,33 @@ results show how difficult it is to generate them:
 !!! abstract "Proposition"
 
     Let $S=\left\{ s_{1},s_{2},\ldots\right\} $ be a countable set (potentially
-    infinite) and ${\cal A}=2^{S}$ a $\sigma$-algebra on $S$. Then
+    infinite) and $\mathcal{A}=2^{S}$ a $\sigma$-algebra on $S$. Then
     all functions $f:S\to\mathbb{R}$ are measurable.
 
 ??? success "Proof"
 
     The proof is immediate because the pre-image of a Borel set is a subset
-    of $S$, then it belongs to ${\cal A}=2^{S}$.
+    of $S$, then it belongs to $\mathcal{A}=2^{S}$.
 
 In a more general way one can establish the measurability of a function
 by relating to a class of well behave 'simple' functions. The base
 for this class is the indicator function.
 !!! info "Definition: Indicator Function"
 
-    Let $\left(S,{\cal A}\right)$ be a
+    Let $\left(S,\mathcal{A}\right)$ be a
     measurable space. An indicator function $\chi_{A}:S\to\mathbb{R}$
     is:
     \[
     \chi_{A}\left(s\right)=\begin{cases}
-    1 & \mbox{ if }s\in A\\
-    0 & \mbox{ if }s\notin A
+    1 &   if  s\in A\\
+    0 &   if  s\notin A
     \end{cases}
     \]
-    Clearly $\chi_{A}$ is measurable if and only if $A\in{\cal A}$.
+    Clearly $\chi_{A}$ is measurable if and only if $A\in\mathcal{A}$.
 
 !!! info "Definition: Simple Function"
 
-    Let $\left(S,{\cal A}\right)$ be a measurable
+    Let $\left(S,\mathcal{A}\right)$ be a measurable
     space. A simple function is a function that takes at most countably
     many values. When the function takes finitely many values it can be
     expressed as:
@@ -150,15 +150,15 @@ complicated.
     Both directions are proven.
     
     
-    1. Let $\phi$ be measurable, and $\left\{ y_{n}\right\} \in{\cal B}$,
-    then its pre-image is measurable wrt ${\cal A}$.
-    1. Let the sets be measurable, that is$A_{i}\in{\cal A}$, and consider
-    $B\in{\cal B}$ a Borel set. Then
+    1. Let $\phi$ be measurable, and $\left\{ y_{n}\right\} \in\mathcal{B}$,
+    then its pre-image is measurable wrt $\mathcal{A}$.
+    1. Let the sets be measurable, that is$A_{i}\in\mathcal{A}$, and consider
+    $B\in\mathcal{B}$ a Borel set. Then
     \[
     \phi^{-1}\left(B\right)=\left\{ s\in S|\phi\left(s\right)=y_{i}\in B\right\} =\bigcup_{y_{i}\in B}A_{i}.
     \]
-    Because each $A_{i}\in{\cal A}_{i}$ and the union is taken over no
-    more than countably many sets we have $\bigcup_{y_{i}\in B}A_{i}\in{\cal A}$
+    Because each $A_{i}\in\mathcal{A}_{i}$ and the union is taken over no
+    more than countably many sets we have $\bigcup_{y_{i}\in B}A_{i}\in\mathcal{A}$
     by definition of a $\sigma$-algebra. This proves measurability of
     $\phi^{-1}\left(B\right)$.
 
@@ -169,7 +169,7 @@ the following proposition.
 !!! abstract "Proposition"
 
     Let
-    $\left(S,{\cal A}\right)$ be a measurable space and let $\left\{ f_{n}\right\} $
+    $\left(S,\mathcal{A}\right)$ be a measurable space and let $\left\{ f_{n}\right\} $
     be a sequence of measurable functions converging pointwise to $f$,
     that is $\lim f_{n}\left(s\right)=f\left(s\right)$ for all $s$.
     Then $f$ is also measurable.
@@ -209,7 +209,7 @@ of measurable functions in terms of simple functions:
     \[
     \frac{m}{n}\leq f\left(s\right)<\frac{m+1}{n}
     \]
-    Let $f_{n}\left(s\right)=\nicefrac{m}{n}$, because $n$ is fixed
+    Let $f_{n}\left(s\right)=\frac{m}{n}$, because $n$ is fixed
     and $m\in\mathbb{N}\cup\left\{ 0\right\} $ it follows that $f_{n}$
     can take at most countably many values, hence it is simple. $f_{n}$
     is also measurable because
@@ -235,7 +235,7 @@ Other results will follow and are left stated without proof:
     1. $f+g$ is measurable.
     1. $\alpha f$ is measurable.
     1. $fg$ is measurable.
-    1. $\nicefrac{1}{f}$ is measurable provided that $f\left(s\right)\neq0$.
+    1. $\frac{1}{f}$ is measurable provided that $f\left(s\right)\neq0$.
 
 Finally continuity of functions is used to strengthen the intuition
 around measurability.

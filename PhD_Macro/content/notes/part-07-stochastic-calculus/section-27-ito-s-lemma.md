@@ -30,7 +30,7 @@ A second order Taylor expansion of $F$ gives:
 \[
 dF=\frac{\partial F}{\partial x}dx+\frac{\partial F}{\partial t}dt+\frac{1}{2}\left(\frac{\partial^{2}F}{\partial x^{2}}\left(dx\right)^{2}+\frac{\partial^{2}F}{\partial t^{2}}\left(dt\right)^{2}+\frac{\partial^{2}F}{\partial t^{2}}\left(dx\right)\left(dt\right)\right)
 \]
-As shown in \O (2003, Sec. 4.1) $dWdt=dt^{2}=0$, they
+As shown in Oksendal (2003, Sec. 4.1) $dWdt=dt^{2}=0$, they
 can be safely ignored because they depend on terms of order higher
 than $dt$. That leaves us with:
 \begin{equation}
@@ -43,7 +43,7 @@ From the definition of our Ito process we get:
 \end{align*}
 We can again drop the terms involving $\left(dt\right)^{2}$ and $\left(dtdW\right)$,
 and also show that $\left(dW\right)^{2}=dt$ (recall that $E\left[\left(dW\right)^{2}\right]=dt$).
-The proof is not hard and can be found in \O (2003, Sec. 4.1).
+The proof is not hard and can be found in Oksendal (2003, Sec. 4.1).
 Replacing:
 \begin{align}
 dF & =\left(\frac{\partial F}{\partial x}dx+\frac{\partial F}{\partial t}dt\right)+\frac{1}{2}\frac{\partial^{2}F}{\partial x^{2}}\left(\sigma^{2}\left(x,t\right)dt\right)\nonumber \\

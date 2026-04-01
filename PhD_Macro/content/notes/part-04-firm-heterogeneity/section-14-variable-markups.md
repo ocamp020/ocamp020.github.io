@@ -7,7 +7,7 @@ Firms of different sizes can differ in the markups they charge. This
 is not the case in the monopolistic competition framework above because
 of two reasons. First, the demand faced by each producer had constant
 elasticity, and so the markup was constant. Recall that optimal markups
-are $\mu=\nicefrac{1}{\left(1-\frac{1}{\varepsilon}\right)}$. Second,
+are $\mu=\frac{1}{\left(1-\frac{1}{\varepsilon}\right)}$. Second,
 there were no strategic interactions between firms. The number of
 firms (or products) was assumed to be large enough to make no firm
 have an effect on the aggregate. If firms are large enough to internalize

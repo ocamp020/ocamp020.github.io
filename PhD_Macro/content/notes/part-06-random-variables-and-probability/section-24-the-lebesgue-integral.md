@@ -40,7 +40,7 @@ functions.
 <a id="ref-eq-000020lebesgue-000020integral-000020-000020simple-000020fun" class="course-anchor"></a>
 !!! info "Definition: Lebesgue integral for simple functions"
 
-    Let $\left(S,{\cal A},\mu\right)$
+    Let $\left(S,\mathcal{A},\mu\right)$
     be a measure space and $f:S\to\mathbb{R}_{+}$ a simple, $\mu$-measurable
     function that takes no more than countably many values $\left\{ y_{1},y_{2},\ldots\right\} $.
     The Lebesgue integral over the set $A\subseteq S$ is defined as:
@@ -68,7 +68,7 @@ properties:
 !!! abstract "Proposition"
 
     Let $f$ and $g$ be non-negative, measurable, simple and integrable
-    functions on $\left(S,{\cal A},\mu\right)$, a measure space, and
+    functions on $\left(S,\mathcal{A},\mu\right)$, a measure space, and
     $c\geq0$ a constant. Then:
     
     
@@ -83,7 +83,7 @@ properties:
 
 !!! info "Definition: Lebesgue integral - Nonnegative functions"
 
-    Let $\left(S,{\cal A},\mu\right)$
+    Let $\left(S,\mathcal{A},\mu\right)$
     be a measure space. A measurable function $f:S\to\mathbb{R}$ is said
     to be integrable on a set $A$ if there exists a sequence $\left\{ f_{n}\right\} $
     of integrable simple functions converging uniformly to $f$ on $A$.
@@ -120,7 +120,7 @@ integrals. They are not of particular interest in this course.
       1. If $f$ is bounded and measurable then it is integrable.
     
     1. If $f\leq g$ a.e. then $\int f\left(s\right)d\mu\leq\int g\left(s\right)d\mu$.
-    1. If $A\subseteq B$ with $A,B\in{\cal A}$ then $\int_{A}f\left(s\right)d\mu\leq\int_{B}f\left(s\right)d\mu$
+    1. If $A\subseteq B$ with $A,B\in\mathcal{A}$ then $\int_{A}f\left(s\right)d\mu\leq\int_{B}f\left(s\right)d\mu$
     1. Let $A=\cup A_{n}$ where $\left\{ A_{n}\right\} $ is a finite or
     countable sequence of disjoint sets. If $f$ is integrable on $A$
     then $f$ is integrable on $A_{n}$ for all $n$ and:
@@ -135,16 +135,16 @@ a measure on a space, the following proposition makes this clear.
 !!! abstract "Proposition"
 
     Let $f$ be a non-negative,
-    integrable function, then $\lambda:{\cal A}\to\mathbb{R}$ defined
+    integrable function, then $\lambda:\mathcal{A}\to\mathbb{R}$ defined
     as:
     \[
     \lambda\left(A\right)=\int_{A}f\left(s\right)d\mu
     \]
-    is a measure on $\left(S,{\cal A}\right)$.
+    is a measure on $\left(S,\mathcal{A}\right)$.
 
 !!! info "Definition: Lebesgue integral"
 
-    Let $\left(S,{\cal A},\mu\right)$ be
+    Let $\left(S,\mathcal{A},\mu\right)$ be
     a measure space. A measurable function $f:S\to\mathbb{R}$ is said
     to be integrable if the following two integrals are finite:
     \[
@@ -153,11 +153,11 @@ a measure on a space, the following proposition makes this clear.
     where:
     \[
     f^{+}\left(s\right)=\begin{cases}
-    f\left(s\right) & \mbox{ if }f\left(s\right)\geq0\\
-    0 & \mbox{ if }f\left(s\right)<0
+    f\left(s\right) &   if  f\left(s\right)\geq0\\
+    0 &   if  f\left(s\right)<0
     \end{cases}\qquad f^{+}\left(s\right)=\begin{cases}
-    0 & \mbox{ if }f\left(s\right)\geq0\\
-    -f\left(s\right) & \mbox{ if }f\left(s\right)<0
+    0 &   if  f\left(s\right)\geq0\\
+    -f\left(s\right) &   if  f\left(s\right)<0
     \end{cases}
     \]
     The integral of $f$ is defined as:
@@ -165,7 +165,7 @@ a measure on a space, the following proposition makes this clear.
     \int f\left(s\right)d\mu=\int f^{+}\left(s\right)d\mu-\int f^{-}\left(s\right)d\mu
     \end{equation}
 
-Recall that when $\left(S,{\cal A},\mu\right)$ is a probability space
+Recall that when $\left(S,\mathcal{A},\mu\right)$ is a probability space
 the function $f$ is called a random variable, the definitions above
 are then the definitions of the expected value of a random variable,
 this expected value exists when $f$ is integrable, we have seen that

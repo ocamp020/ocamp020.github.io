@@ -277,7 +277,7 @@ for vector valued functions. I first define the relevant set of functions.
     1. Because the space $\left(B\left(X\right),\left\Vert f\right\Vert _{\infty}\right)$
     is complete, the above implies that the sequences $\left\{ f_{1n}\right\} $
     and $\left\{ f_{2n}\right\} $ are convergent in the sup norm. $\exists_{f_{1},f_{2}\in B\left(X\right)}f_{1n}\to f_{1}\land f_{2n}\to f_{2}$.
-    Denote $f:S\to\mathbb{R}^{2}$ as $f\left(x\right)=\left[f_{1}\left(x\right)\mbox{ }f_{2}\left(x\right)\right]^{\prime}$.
+    Denote $f:S\to\mathbb{R}^{2}$ as $f\left(x\right)=\left[f_{1}\left(x\right) f_{2}\left(x\right)\right]^{\prime}$.
     1. Let $\epsilon>0$. By convergence of $\left\{ f_{1n}\right\} $ and
     $\left\{ f_{2n}\right\} $ there exist numbers $N_{1}$ and $N_{2}$
     such that:
@@ -316,7 +316,7 @@ for vector valued functions. I first define the relevant set of functions.
     taken in the vector sense, i.e. $f_{1}\left(x\right)\leq g_{1}\left(x\right)$
     and $f_{2}\left(x\right)\leq g_{2}\left(x\right)$).
     1. (Discounting) there exists some $\beta\in\left(0,1\right)$ such that
-    $T\left(f+A\right)\leq Tf\left(x\right)+\beta A$ for $f\in S$, $A=\left[a\mbox{ }a\right]^{\prime}\in\mathbb{R}_{+}^{2}$
+    $T\left(f+A\right)\leq Tf\left(x\right)+\beta A$ for $f\in S$, $A=\left[a a\right]^{\prime}\in\mathbb{R}_{+}^{2}$
     and $x\in X$.
     
     Then $T$ is a contraction in $S$ with modulus $\beta$.
@@ -382,12 +382,12 @@ technology is described by a function $f$.
 
 The problem of an agent endowed with $k_{0}$ units of capital is:
 \[
-v\left(k_{0}\right)=\max_{\left\{ c_{t},k_{t+1}\right\} _{t=0}^{\infty}}\sum_{t=0}^{\infty}\beta^{t}u\left(c_{t}\right)\qquad\mbox{s.t. }c_{t}+k_{t+1}\leq f\left(k_{t}\right)\quad c_{t},k_{t}\geq0\quad k_{0}\mbox{ given}
+v\left(k_{0}\right)=\max_{\left\{ c_{t},k_{t+1}\right\} _{t=0}^{\infty}}\sum_{t=0}^{\infty}\beta^{t}u\left(c_{t}\right)\qquad s.t.  c_{t}+k_{t+1}\leq f\left(k_{t}\right)\quad c_{t},k_{t}\geq0\quad k_{0}  given
 \]
 Provided that $u$ is strictly increasing, a sustained assumption,
 we can eliminate consumption as before to get:
 \[
-v\left(k_{0}\right)=\max_{\left\{ k_{t+1}\right\} }\sum_{t=0}^{\infty}\beta^{t}u\left(f\left(k_{t}\right)-k_{t+1}\right)\qquad\mbox{s.t. }0\leq k_{t+1}\leq f\left(k_{t}\right)\quad k_{0}\mbox{ given}
+v\left(k_{0}\right)=\max_{\left\{ k_{t+1}\right\} }\sum_{t=0}^{\infty}\beta^{t}u\left(f\left(k_{t}\right)-k_{t+1}\right)\qquad s.t.  0\leq k_{t+1}\leq f\left(k_{t}\right)\quad k_{0}  given
 \]
 
 In the sequence problem, much like in the finite horizon problem before,
@@ -410,7 +410,7 @@ function is the maximum value given to the agent if she starts in
 a given period with initial capital $k$. Knowing $v$ it is possible
 to cast the following problem:
 \[
-\max_{0\leq k_{1}\leq f\left(k_{0}\right)}\mbox{ }\left\{ u\left(f\left(k_{0}\right)-k_{1}\right)+\beta v\left(k_{1}\right)\right\}
+\max_{0\leq k_{1}\leq f\left(k_{0}\right)} \left\{ u\left(f\left(k_{0}\right)-k_{1}\right)+\beta v\left(k_{1}\right)\right\}
 \]
 If we knew $v$ the problem above could be solved. The solution to
 the problem is a policy function $g:\mathbb{R}_{+}\to\mathbb{R}_{+}$
@@ -423,7 +423,7 @@ and the value in period 0 (given by $u\left(f\left(k_{0}\right)-k_{1}\right)$)
 then the value of the whole problem is given by the maximum above.
 But that is the definition of $v$, then:
 \[
-v\left(k_{0}\right)=\max_{0\leq k_{1}\leq f\left(k_{0}\right)}\mbox{ }\left\{ u\left(f\left(k_{0}\right)-k_{1}\right)+\beta v\left(k_{1}\right)\right\}
+v\left(k_{0}\right)=\max_{0\leq k_{1}\leq f\left(k_{0}\right)} \left\{ u\left(f\left(k_{0}\right)-k_{1}\right)+\beta v\left(k_{1}\right)\right\}
 \]
 This is a functional equation, where $f$ and $u$ are known functions,
 $k_{1}$ is a variable of choice and $k_{0}$ is given. Then this
@@ -438,7 +438,7 @@ existence of a solution and to obtain a method to find it.
 Let $u$ and $f$ be bounded and continuous functions and define an
 operator $T:C\left(X\right)\to C\left(X\right)$ as:
 \[
-Tv\left(k\right)=\max_{0\leq k^{\prime}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta v\left(k^{\prime}\right)\right\}
+Tv\left(k\right)=\max_{0\leq k^{\prime}\leq f\left(k\right)} \left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta v\left(k^{\prime}\right)\right\}
 \]
 boundedness of $Tv$ is immediate for the sum of bounded is also bounded.
 Continuity is a consequence of the ToM, the objective function is
@@ -454,11 +454,11 @@ are immediate:
 1. (monotonicity) Let $v,w\in C\left(X\right)$ and $v\left(k\right)\leq w\left(k\right)$
 for all $k$. Then:
 \[
-Tv\left(k\right)=\max_{0\leq k^{\prime}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta v\left(k^{\prime}\right)\right\} \leq\max_{0\leq k^{\prime}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta w\left(k^{\prime}\right)\right\} =Tw\left(k\right)
+Tv\left(k\right)=\max_{0\leq k^{\prime}\leq f\left(k\right)} \left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta v\left(k^{\prime}\right)\right\} \leq\max_{0\leq k^{\prime}\leq f\left(k\right)} \left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta w\left(k^{\prime}\right)\right\} =Tw\left(k\right)
 \]
 1. (discounting) Let $v\in C\left(X\right)$ and $a>0$. Then:
 \[
-T\left(v+a\right)\left(k\right)=\max_{0\leq k^{\prime}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta\left(v\left(k^{\prime}\right)+a\right)\right\} =\max_{0\leq k^{\prime}\leq f\left(k\right)}\mbox{ }\left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta v\left(k^{\prime}\right)\right\} +\beta a
+T\left(v+a\right)\left(k\right)=\max_{0\leq k^{\prime}\leq f\left(k\right)} \left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta\left(v\left(k^{\prime}\right)+a\right)\right\} =\max_{0\leq k^{\prime}\leq f\left(k\right)} \left\{ u\left(f\left(k\right)-k^{\prime}\right)+\beta v\left(k^{\prime}\right)\right\} +\beta a
 \]
 In particular:
 \[
@@ -474,7 +474,7 @@ The problem to be studied in terms of infinite sequences is of the
 form:
 <a id="ref-eq-000020sp" class="course-anchor"></a>
 \begin{equation}
-v^{\star}\left(x_{0}\right)=\sup_{\left\{ x_{t+1}\right\} _{t=0}^{\infty}}\sum_{t=0}^{\infty}\beta^{t}F\left(x_{t},x_{t+1}\right)\qquad\mbox{s.t. }x_{t+1}\in\Gamma\left(x_{t}\right)
+v^{\star}\left(x_{0}\right)=\sup_{\left\{ x_{t+1}\right\} _{t=0}^{\infty}}\sum_{t=0}^{\infty}\beta^{t}F\left(x_{t},x_{t+1}\right)\qquad s.t.  x_{t+1}\in\Gamma\left(x_{t}\right)
 \end{equation}
 Corresponding to this problem is the following functional equation:
 <a id="ref-eq-000020fe" class="course-anchor"></a>
@@ -484,7 +484,7 @@ v\left(x\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta v
 Above, $X$ is the set of possible values for $x$, and it is not
 necessarily an euclidean space, $\Gamma:X\rightrightarrows X$ is
 a correspondence that assigns feasible values of the choice variable
-and $F:\mbox{Gr}\left(\Gamma\right)\to\mathbb{R}$ is a return or
+and $F: Gr \left(\Gamma\right)\to\mathbb{R}$ is a return or
 payoff function. $\beta>0$ is a discount factor.
 
 Some conditions have to be met for both problems to give the same
@@ -505,7 +505,7 @@ for $x$, given an starting point $x_{0}$.
     The set of all possible feasible sequences starting at $x_{0}\in X$
     is:
     \[
-    \Pi\left(x_{0}\right)=\left\{ \left\{ x_{t}\right\} _{t=0}^{\infty}|x_{t+1}\in\Gamma\left(x_{t}\right)\quad\land\quad x_{0}\mbox{ given}\right\}
+    \Pi\left(x_{0}\right)=\left\{ \left\{ x_{t}\right\} _{t=0}^{\infty}|x_{t+1}\in\Gamma\left(x_{t}\right)\quad\land\quad x_{0}  given \right\}
     \]
     and $\underline{x}=\left(x_{0},x_{1},x_{2},\ldots\right)$ is an element.
 
@@ -611,7 +611,7 @@ nonempty, compact valued and continuous correspondence.
 
 **Assumption A.4:**
 
-The function $F:\mbox{Gr}\left(\Gamma\right)\to\mathbb{R}$ is bounded
+The function $F: Gr \left(\Gamma\right)\to\mathbb{R}$ is bounded
 and continuous and $\beta\in\left(0,1\right)$.
 
 Because $F$ is bounded and continuous it is natural to think that
@@ -667,11 +667,11 @@ properties of the policy correspondence $G$.
       1. (monotonicity) Let $f,g\in C\left(X\right)$ and $f\left(x\right)\leq g\left(x\right)$
     for all $x$. Then:
     \[
-    Tf\left(x\right)=\max_{y\in\Gamma\left(x\right)}\mbox{ }\left\{ F\left(x,y\right)+\beta f\left(y\right)\right\} \leq\max_{y\in\Gamma\left(x\right)}\mbox{ }\left\{ F\left(x,y\right)+\beta g\left(y\right)\right\} =Tg\left(x\right)
+    Tf\left(x\right)=\max_{y\in\Gamma\left(x\right)} \left\{ F\left(x,y\right)+\beta f\left(y\right)\right\} \leq\max_{y\in\Gamma\left(x\right)} \left\{ F\left(x,y\right)+\beta g\left(y\right)\right\} =Tg\left(x\right)
     \]
       1. (discounting) Let $f\in C\left(X\right)$ and $a>0$. Then:
     \[
-    T\left(f+a\right)\left(x\right)=\max_{y\in\Gamma\left(x\right)}\mbox{ }\left\{ F\left(x,y\right)+\beta\left(f\left(y\right)+a\right)\right\} =\max_{y\in\Gamma\left(x\right)}\mbox{ }\left\{ F\left(x,y\right)+\beta f\left(y\right)\right\} +\beta a
+    T\left(f+a\right)\left(x\right)=\max_{y\in\Gamma\left(x\right)} \left\{ F\left(x,y\right)+\beta\left(f\left(y\right)+a\right)\right\} =\max_{y\in\Gamma\left(x\right)} \left\{ F\left(x,y\right)+\beta f\left(y\right)\right\} +\beta a
     \]
     In particular:
     \[
@@ -773,7 +773,7 @@ $\Gamma$ has a convex graph.
     the corollary of the contraction mapping theorem the unique fix point
     of $T$ belongs to $C^{"}$. That is, $v$ is strictly concave.
     
-    Finally, consider the policy function $G\left(x\right)=\underset{y\in\Gamma\left(x\right)}{\mbox{argmax}}F\left(x,y\right)+v\left(y\right)$.
+    Finally, consider the policy function $G\left(x\right)=\underset{y\in\Gamma\left(x\right)}{ argmax }F\left(x,y\right)+v\left(y\right)$.
     Because $F$ and $v$ are strictly concave the single valuedness and
     continuity of $G$ follow as an immediate consequence of the ToM under
     convexity part (ii).
@@ -784,12 +784,12 @@ the use of first order conditions.
 **Assumption A.9:**
 
 $F$ is continuously differentiable on the interior of its domain,
-$\mbox{Gr}\left(A\right)$.
+$ Gr \left(A\right)$.
 !!! abstract "Proposition"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.3, A.4,
     and A.7 to A.9, and let $v$ be the unique solution to ([Equation](#ref-eq-000020fe-1)).
-    If $x_{0}\in\mbox{Int}X$ and $g\left(x_{0}\right)\in\mbox{Int}\Gamma\left(x_{0}\right)$
+    If $x_{0}\in Int X$ and $g\left(x_{0}\right)\in Int \Gamma\left(x_{0}\right)$
     then $v$ is continuously differentiable at $x_{0}$ with derivatives
     given by:
     \[

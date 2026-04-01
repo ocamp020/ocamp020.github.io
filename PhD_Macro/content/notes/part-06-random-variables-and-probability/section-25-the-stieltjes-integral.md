@@ -9,8 +9,8 @@ measures and probability measures. To introduce the concept consider
 a real valued random variable that takes values on a closed interval
 $\left[a,b\right]$, this is for example the result of coin toss when
 catalogued as $0$ or $1$, the underlying probability space is formed
-by $S=\left\{ H,T\right\} $, ${\cal A}=\left\{ \emptyset,S,\left\{ H\right\} ,\left\{ T\right\} \right\} $
-and a probability measure on ${\cal A}$, a function $\mu:{\cal A}\to\left[0,1\right]$
+by $S=\left\{ H,T\right\} $, $\mathcal{A}=\left\{ \emptyset,S,\left\{ H\right\} ,\left\{ T\right\} \right\} $
+and a probability measure on $\mathcal{A}$, a function $\mu:\mathcal{A}\to\left[0,1\right]$
 such that $\mu\left(\left\{ H\right\} \right),\mu\left(\left\{ T\right\} \right)\geq0$,
 $\mu\left(S\right)=\mu\left(\left\{ H\right\} \right)+\mu\left(\left\{ T\right\} \right)=1$
 and $\mu\left(\emptyset\right)=0$. The random variable is then a
@@ -22,9 +22,9 @@ $c$, the function that answers that question is called the cumulative
 distribution function. In this example we have:
 \[
 F\left(c\right)=\Pr\left(f\left(s\right)\leq c\right)=\begin{cases}
-0 & \mbox{ if }c<0\\
-\mu\left(H\right) & \mbox{ if }0\leq c<1\\
-1 & \mbox{ if }1\leq c
+0 &   if  c<0\\
+\mu\left(H\right) &   if  0\leq c<1\\
+1 &   if  1\leq c
 \end{cases}
 \]
 Because the measure $\mu$ is non-negative it is clear that $F$ has
@@ -42,10 +42,10 @@ directly with its probability measure, as we saw before it is this
 latter object the one that defines the expected value.
 
 Now we turn to define formally the Stieltjes integral. Let $F:\left[a,b\right]\to\mathbb{R}$
-be a non-decreasing and right-continuous function. Let ${\cal A}$
+be a non-decreasing and right-continuous function. Let $\mathcal{A}$
 be an algebra of all subintervals of $\left[\alpha,\beta\right)$
 (including open, closed and half-open intervals). Define a measure
-on ${\cal A}$ by:
+on $\mathcal{A}$ by:
 \begin{eqnarray*}
 m\left(\alpha,\beta\right) & = & F\left(\beta\right)-F\left(\alpha+0\right)\\
 m\left[\alpha,\beta\right] & = & F\left(\beta+0\right)-F\left(\alpha\right)\\
@@ -56,7 +56,7 @@ where $F\left(x+0\right)=\lim_{\epsilon\to0;\epsilon>0}F\left(x+\epsilon\right)$
 is the right limit of $F$ at $x$.
 
 Now consider the Lebesgue extension of $m$, call it $\mu_{F}$ and
-the $\sigma$-algebra of all $\mu_{F}$-measurable, call it ${\cal A}_{F}$.
+the $\sigma$-algebra of all $\mu_{F}$-measurable, call it $\mathcal{A}_{F}$.
 This set  contains all subintervals of $\left[\alpha,\beta\right)$
 and hence all the Borel sets of $\left[\alpha,\beta\right)$.
 !!! info "Definition: Stieltjes measure"
@@ -122,13 +122,13 @@ show the generality of this type of measure:
     m\left(\alpha,\beta\right)=m\left[\alpha,\beta\right]=m\left(\alpha,\beta\right]=m\left[\alpha,\beta\right)=\int_{\alpha}^{\beta}f\left(x\right)dx
     \]
     Because $f$ is non-negative and integrable wrt all Lebesgue-measurable
-    subsets of $\left[a,b\right]$ $\left({\cal B}_{\left[a,b\right]}\right)$
+    subsets of $\left[a,b\right]$ $\left(\mathcal{B}_{\left[a,b\right]}\right)$
     we know by proposition ([Proposition](section-24-the-lebesgue-integral.md#ref-prop-000020inducing-000020a-000020measure))
     that
     \[
     \mu_{F}\left(A\right)=\int_{A}f\left(x\right)dx
     \]
-    is a measure on $\left(\left[a,b\right],{\cal B}_{\left[a,b\right]}\right)$
+    is a measure on $\left(\left[a,b\right],\mathcal{B}_{\left[a,b\right]}\right)$
     that coincides with $m$, because the extension is unique we get that
     $\mu_{F}$ is the Stieltjes measure we are looking for.
     

@@ -6,7 +6,7 @@ Consider the problem of a firm that is thinking about investing in
 a new project. The payoff that the project generates varies stochastically,
 but its cost is fixed. To be precise: the firm can, at any point in
 time, pay a fixed cost $I$ to invest on a project that will have
-a payoff $x\left(t\right)$. Firm\textquoteright s investment opportunity
+a payoff $x\left(t\right)$. Firm' s investment opportunity
 is a perpetual call option, that is, the right but not the obligation
 to buy a share of some asset at a pre-specified price.
 

@@ -130,7 +130,7 @@ version of the model.
 
     Consider an economy in which the representative consumer lives forever.
     There is a good in each period that can be consumed or saved as capital
-    as well as labor. The consumer\textquoteright s utility function is
+    as well as labor. The consumer' s utility function is
     \[
     V\left(\overline{k}_{0}\right)=\sum_{t=0}^{\infty}\beta^{t}\log c_{t}
     \]
@@ -141,13 +141,13 @@ version of the model.
     c_{t}+k_{t+1}\leq\theta k_{t}^{\alpha}l_{t}^{1-\alpha}
     \]
     Here $\theta>0$ and $0<\alpha<1.$ We can formulate the problem
-    of maximizing the representative consumer\textquoteright s utility
+    of maximizing the representative consumer' s utility
     subject to feasibility conditions as a dynamic programming problem.
-    The appropriate Bellman\textquoteright s equation is:
+    The appropriate Bellman' s equation is:
     
     \begin{align*}
     V\left(k\right) & =\max_{c,k^{\prime},l}\left\{ \log c+\beta V\left(k^{\prime}\right)\right\} \\
-    \mbox{s.t. } & c+k^{\prime}\leq\theta k^{\alpha}l^{1-\alpha}\\
+    s.t.   & c+k^{\prime}\leq\theta k^{\alpha}l^{1-\alpha}\\
     & c,k^{\prime}\geq0\\
     & 0\leq l\leq1
     \end{align*}

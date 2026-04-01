@@ -266,7 +266,7 @@ steps. First, the employment share of a firm is
 \]
 Second, the relative TFPR is defined as
 \[
-\frac{\text{TFPR}_{i}}{\overline{\text{TFPR}}}=\frac{\nicefrac{y_{i}}{n_{i}}}{\nicefrac{Y}{N}}=\frac{\frac{\left(1+\tau_{i}\right)w}{\alpha}}{\frac{Y}{N}}=\left(1+\tau_{i}\right)\left(\int_{0}^{M}\frac{\left(\frac{z_{i}}{1+\tau_{i}}\right)^{\frac{1}{1-\alpha}}}{\int_{0}^{M}\left(\frac{z_{i}}{1+\tau_{i}}\right)^{\frac{1}{1-\alpha}}di}\left(1+\tau_{i}\right)di\right)^{-1}.
+\frac{\text{TFPR}_{i}}{\overline{\text{TFPR}}}=\frac{\frac{y_{i}}{n_{i}}}{\frac{Y}{N}}=\frac{\frac{\left(1+\tau_{i}\right)w}{\alpha}}{\frac{Y}{N}}=\left(1+\tau_{i}\right)\left(\int_{0}^{M}\frac{\left(\frac{z_{i}}{1+\tau_{i}}\right)^{\frac{1}{1-\alpha}}}{\int_{0}^{M}\left(\frac{z_{i}}{1+\tau_{i}}\right)^{\frac{1}{1-\alpha}}di}\left(1+\tau_{i}\right)di\right)^{-1}.
 \]
 Finally, we can bring them together to express
 \[
@@ -331,11 +331,11 @@ This makes the entrepreneurial problem be
 \pi\left(a,z\right)=\max_{k\leq\vartheta(z)a}\left\{ p\left(zk\right)\times zk-\left(r+\delta\right)k\right\} ,
 \]
 where $\delta$ is the depreciation rate. The price of the differentiated
-good can be written as $p\left(zk\right)=\text{\mathcal{R}}\times\left(zk\right)^{\mu-1},$
-where $\text{\mathcal{R}}\equiv\alpha Q^{\alpha-\mu}L^{1-\alpha}$,
+good can be written as $p\left(zk\right)=\mathcal{R}\times\left(zk\right)^{\mu-1},$
+where $\mathcal{R}\equiv\alpha Q^{\alpha-\mu}L^{1-\alpha}$,
 yielding the solution
 \[
-k\left(a,z\right)=\min\left[\left(\frac{\mu\text{\mathcal{R}}z^{\mu}}{r+\delta}\right)^{\frac{1}{1-\mu}},\vartheta\left(z\right)a\right].
+k\left(a,z\right)=\min\left[\left(\frac{\mu\mathcal{R}z^{\mu}}{r+\delta}\right)^{\frac{1}{1-\mu}},\vartheta\left(z\right)a\right].
 \]
 However, this makes it difficult to aggregate because the level of
 capital (and hence the scale of each entrepreneurial firm) depends
@@ -395,7 +395,7 @@ of the final good, and (ii) it does not take into account changes
 in aggregate capital in the efficient economy with respect to the
 equilibrium of the distorted economy. In the benchmark calibration
 of [Guvenen et al. (2023)](https://doi.org/10.1093/qje/qjac047) this variable has value of $\Omega_{Q}=0.35$,
-implying TFP gains of 35\
+implying TFP gains of 35\% in the $Q$ sector coming from eliminating
 the collateral constraints.
 
 **Aggregate TFP.**
@@ -416,7 +416,7 @@ as
 \Omega_{Y}\equiv1-\frac{TFP}{TFP^{\star}}=1-\left(\frac{TFP_{Q}}{TFP_{Q}^{\star}}\right)^{\alpha}.
 \end{equation}
 In the benchmark calibration, the total productivity gain from eliminating
-the collateral constraints in the $Q$ sector amounts to $16\
+the collateral constraints in the $Q$ sector amounts to $16\%$ higher
 TFP.
 
 The previous sections studied aggregation and misallocation in economies

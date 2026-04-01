@@ -11,19 +11,19 @@ but it does not change any of the main ideas. For convenience we will
 first go over the definition of a random variable.
 !!! info "Definition: Random variable"
 
-    Let $\left(\Omega,{\cal A},P\right)$ be
+    Let $\left(\Omega,\mathcal{A},P\right)$ be
     a probability space and $x:\Omega\to\mathbb{R}$ a real valued function.
     $x$ is a random variable if and only if $x$ is measurable, that
-    is, if and only if $x^{-1}\left(B\right)\in{\cal A}$ for all $B\in{\cal B}$,
-    where ${\cal B}$ is the Borel $\sigma$-algebra on $\mathbb{R}$.
+    is, if and only if $x^{-1}\left(B\right)\in\mathcal{A}$ for all $B\in\mathcal{B}$,
+    where $\mathcal{B}$ is the Borel $\sigma$-algebra on $\mathbb{R}$.
     We further establish the same notation:
     
     1. An outcome is an element $\omega\in\Omega$.
-    1. An event is a measurable subset of $\Omega$: $A\in{\cal A}$.
+    1. An event is a measurable subset of $\Omega$: $A\in\mathcal{A}$.
     1. The real number $x\left(\omega\right)$ is a realization of the random
     variable.
     1. The probability measure for $x$ is then: $\mu\left(B\right)=P\left(x^{-1}\left(B\right)\right)=P\left(\left\{ \omega\in\Omega|x\left(\omega\right)\in B\right\} \right)$,
-    for $B\in{\cal B}$.
+    for $B\in\mathcal{B}$.
     1. The distribution function for $f$ is: $G\left(b\right)=\mu\left(\left(-\infty,b\right]\right)$,
     for $b\in\text{\mathbb{R}}$.
 
@@ -43,10 +43,10 @@ that does not provide information about the value of future realizations.
 This is achieved using a filtration.
 !!! info "Definition: Filtration"
 
-    Let ${\cal A}$ be a $\sigma$-algebra. The
-    set $\mathbb{A}=\left\{ {\cal A}_{t}|t\geq0\right\} $ is a filtration
-    if ${\cal A}_{t}\subseteq{\cal A}$ and ${\cal A}_{s}\subseteq{\cal A}_{t}$**
-    **for all $t\geq0$ and $s\leq t$. ${\cal A}_{t}$ is the set of events
+    Let $\mathcal{A}$ be a $\sigma$-algebra. The
+    set $\mathbb{A}=\left\{ \mathcal{A}_{t}|t\geq0\right\} $ is a filtration
+    if $\mathcal{A}_{t}\subseteq\mathcal{A}$ and $\mathcal{A}_{s}\subseteq\mathcal{A}_{t}$**
+    **for all $t\geq0$ and $s\leq t$. $\mathcal{A}_{t}$ is the set of events
     known at time $t$.
 
 Now we can define a stochastic process as a function that is measurable
@@ -55,16 +55,16 @@ in a filtered space.
 
     Let $\left(\Omega,\mathbb{A},P\right)$
     be a filtered probability space with a time index $t\in\mathbb{R}_{+}$,
-    and let ${\cal B}_{+}$ be the Borel sets of $\mathbb{R}_{+}$. A
+    and let $\mathcal{B}_{+}$ be the Borel sets of $\mathbb{R}_{+}$. A
     stochastic process is a function $x:\left[0,\infty\right)\times\Omega\to\mathbb{R}$
-    that is measurable with respect to ${\cal B}_{+}\times{\cal A}$ (that
+    that is measurable with respect to $\mathcal{B}_{+}\times\mathcal{A}$ (that
     is, $x$ is jointly measurable in $\left(t,\omega\right)$). Moreover:
     
     1. For all $t\in\mathbb{R}_{+}$ and $\omega\in\Omega$, $x\left(t,\omega\right)$
-    is measurable with respect to ${\cal A}_{t}$, where ${\cal A}_{t}$
+    is measurable with respect to $\mathcal{A}_{t}$, where $\mathcal{A}_{t}$
     is in the filtration $\mathbb{A}$.
     1. For all $t\in\mathbb{R}_{+}$, $x\left(t,\cdot\right):\Omega\to\mathbb{R}$
-    is an ordinary random variable on the probability space $\left(\Omega,{\cal A}_{t},P_{t}\right)$.
+    is an ordinary random variable on the probability space $\left(\Omega,\mathcal{A}_{t},P_{t}\right)$.
     1. For all $\omega\in\Omega$, $x\left(\cdot,\omega\right):\mathbb{R}_{+}\to\mathbb{R}$
     is a Borel measurable function. This is called the **sample
     path **of $x$.
@@ -79,9 +79,9 @@ non-stationary variables usually related to random walks.
 To fix ideas we start with the simple example of a (fair) coin toss.
 There are two possible outcomes, so $\Omega=\left\{ H,T\right\} $,
 when tossing the coin is always possible to know which outcome occurred,
-and whether or not the coin was tossed, this gives: ${\cal A}=\left\{ \left\{ H\right\} ,\left\{ T\right\} ,\emptyset,\Omega\right\} $.
+and whether or not the coin was tossed, this gives: $\mathcal{A}=\left\{ \left\{ H\right\} ,\left\{ T\right\} ,\emptyset,\Omega\right\} $.
 Finally the probability distribution $P$ assigns values to sets in
-the $\sigma$-algebra ${\cal A}$:
+the $\sigma$-algebra $\mathcal{A}$:
 \[
 P\left(\left\{ H\right\} \right)=P\left(\left\{ T\right\} \right)=\frac{1}{2}\qquad P\left(\emptyset\right)=0\qquad P\left(\Omega\right)=1
 \]
@@ -89,11 +89,11 @@ P\left(\left\{ H\right\} \right)=P\left(\left\{ T\right\} \right)=\frac{1}{2}\qq
 Now we can define a random variable $\epsilon:\Omega\to\mathbb{R}$
 as: $\epsilon\left(H\right)=1$ and $\epsilon\left(T\right)=-1$.
 $\epsilon$ is a random variable with respect to the probability space
-$\left(\Omega,{\cal A},P\right)$. As will be the case almost always
+$\left(\Omega,\mathcal{A},P\right)$. As will be the case almost always
 we can dispense of the outcome space $\Omega$ for most applications
 and just refer to the random variable and the probability distribution
 induced over its values. In this way we have: $\epsilon\in\left\{ -1,1\right\} $
-with $\Pr\left(\epsilon=1\right)=\Pr\left(\epsilon=-1\right)=\nicefrac{1}{2}$.
+with $\Pr\left(\epsilon=1\right)=\Pr\left(\epsilon=-1\right)=\frac{1}{2}$.
 
 Furthermore we can extend this example to define the stochastic process
 that comes up from the repeated coin toss. In this case time is discrete
@@ -107,19 +107,19 @@ $\left(\Omega,\mathbb{A},P\right)$, where:
 \Omega=\left\{ \left(H,H,H\right),\left(H,H,T\right),\left(H,T,H\right),\left(H,T,T\right),\left(T,H,H\right),\left(T,T,H\right),\left(T,H,T\right),\left(T,T,T\right)\right\}
 \]
 \[
-{\cal A}=2^{\Omega}\qquad P\left(\omega\right)=\frac{1}{8}\quad\forall_{\omega\in\Omega}
+\mathcal{A}=2^{\Omega}\qquad P\left(\omega\right)=\frac{1}{8}\quad\forall_{\omega\in\Omega}
 \]
 The filtration is established taking into account that at each point
 in time only the outcome of current and past tosses is known:
 \[
-{\cal A}_{1}=\left\{ \emptyset,\Omega,\left\{ \left(H,H,H\right),\left(H,H,T\right),\left(H,T,H\right),\left(H,T,T\right)\right\} ,\left\{ \left(T,H,H\right),\left(T,T,H\right),\left(T,H,T\right),\left(T,T,T\right)\right\} \right\}
+\mathcal{A}_{1}=\left\{ \emptyset,\Omega,\left\{ \left(H,H,H\right),\left(H,H,T\right),\left(H,T,H\right),\left(H,T,T\right)\right\} ,\left\{ \left(T,H,H\right),\left(T,T,H\right),\left(T,H,T\right),\left(T,T,T\right)\right\} \right\}
 \]
 
 \[
-{\cal A}_{2}=\left\{ \emptyset,\Omega,\left\{ \left(H,H,H\right),\left(H,H,T\right)\right\} ,\left\{ \left(T,H,H\right),\left(T,H,T\right)\right\} ,\left\{ \left(H,T,H\right),\left(H,T,T\right)\right\} ,\left\{ \left(T,T,H\right),\left(T,T,T\right)\right\} \right\}
+\mathcal{A}_{2}=\left\{ \emptyset,\Omega,\left\{ \left(H,H,H\right),\left(H,H,T\right)\right\} ,\left\{ \left(T,H,H\right),\left(T,H,T\right)\right\} ,\left\{ \left(H,T,H\right),\left(H,T,T\right)\right\} ,\left\{ \left(T,T,H\right),\left(T,T,T\right)\right\} \right\}
 \]
 \[
-{\cal A}_{3}={\cal A}
+\mathcal{A}_{3}=\mathcal{A}
 \]
 So, in the first $\sigma$-algebra all outcomes for which the first
 toss comes up heads are indistinguishable from each other, in the
@@ -166,7 +166,7 @@ This process can be generalized in many ways. The most useful one
 for our purposes is to allow for drift, which can be done by changing
 the probabilities of the random variable $\epsilon_{t}$, letting
 $\Pr\left(\epsilon_{t}=1\right)=p$ and $\Pr\left(\epsilon_{t}=-1\right)=1-p$
-achieves the desired result. If $p>\nicefrac{1}{2}$ the process will
+achieves the desired result. If $p>\frac{1}{2}$ the process will
 have positive drift.
 
 ## Brownian motion (Wiener processes)
@@ -203,7 +203,7 @@ motions using random walks as $\Delta t\to0$.
 
 To see that this representation implies the third property consider
 a time interval that starts at $t$ and ends at $T$, and divide into
-$n$ intervals of length $\Delta t=\nicefrac{T}{n}$. Then we have:
+$n$ intervals of length $\Delta t=\frac{T}{n}$. Then we have:
 \[
 W\left(t+T\right)-W\left(t\right)=\sum_{i=1}^{n}\epsilon_{i}\sqrt{\Delta t}
 \]
@@ -277,9 +277,9 @@ p & =\frac{1}{2}\left(1\pm\sqrt{1-\frac{\sigma^{2}}{\left(\sigma^{2}+\mu^{2}\Del
 & \approx\frac{1}{2}\left(1\pm\frac{\mu}{\sigma}\sqrt{\Delta t}\right)
 \end{align*}
 where the approximation follows if $\Delta t$ is small enough relative
-to $\nicefrac{\sigma^{2}}{\mu^{2}}$, because we are taking $\Delta t$
+to $\frac{\sigma^{2}}{\mu^{2}}$, because we are taking $\Delta t$
 close to zero this assumption is satisfied. We further choose only
-the "+" root because that way $p\geq\nicefrac{1}{2}$ when $\mu\geq0$.
+the "+" root because that way $p\geq\frac{1}{2}$ when $\mu\geq0$.
 
 Now we can find a value for $h$:
 \begin{align*}
@@ -291,7 +291,7 @@ Now we can find a value for $h$:
 \sigma\sqrt{\Delta t} & \approx h
 \end{align*}
 As before we can disregard the term $\left(\frac{\mu}{\sigma}\right)^{2}\Delta t$
-as long as $\Delta t$ is small enough relative to $\nicefrac{\sigma^{2}}{\mu^{2}}$.
+as long as $\Delta t$ is small enough relative to $\frac{\sigma^{2}}{\mu^{2}}$.
 
 As an exercise can verify that the first equation also holds:
 \begin{align*}
@@ -358,7 +358,7 @@ the examples below.
     \[
     \frac{dx}{x}=\mu dt+\sigma dW
     \]
-    So the percentage increment, $\nicefrac{dx}{x}$, are normally distributed
+    So the percentage increment, $\frac{dx}{x}$, are normally distributed
     with mean $\mu\Delta t$ and variance $\sigma^{2}\Delta t$.
 
 !!! example "Example: Ornstein-Uhlenbeck process"

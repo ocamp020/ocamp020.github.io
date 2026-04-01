@@ -37,7 +37,7 @@ output as
 \[
 z_{i}g\left(y_{i}\right)=z_{i}g\left(f\left(\kappa_{i}\right)n_{i}\right),
 \]
-where $\kappa=\nicefrac{k}{n}$ is capital per-worker and $f\left(x\right)=F\left(x,1\right)$.
+where $\kappa=\frac{k}{n}$ is capital per-worker and $f\left(x\right)=F\left(x,1\right)$.
 This turns to be convenient because we isolate the labor demand of
 firms as being affected directly by $g$. This matters because the
 objective of this theory is to explain the distribution of firm size,
@@ -71,7 +71,7 @@ out of
 \[
 zg^{\prime}\left(y^{\star}\left(z\right)\right)f^{\prime}\left(\kappa^{\star}\right)=r
 \]
-once we have $y^{\star}\left(z\right)$ we can also get $n^{\star}\left(z\right)=\nicefrac{y^{\star}\left(z\right)}{f\left(\kappa^{\star}\right)}$.
+once we have $y^{\star}\left(z\right)$ we can also get $n^{\star}\left(z\right)=\frac{y^{\star}\left(z\right)}{f\left(\kappa^{\star}\right)}$.
 
 Lucas then uses this solution to ask about the properties of $g$
 that are needed for the distribution of firms to satisfy the patterns

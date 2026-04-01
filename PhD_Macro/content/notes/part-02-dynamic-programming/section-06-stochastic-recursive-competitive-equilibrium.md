@@ -605,7 +605,7 @@ In order to evaluate the accuracy of the solution we make use of **Euler
 Residuals**. These are the residuals in the first order conditions
 of the actual problem, which should be zero for the correct solution.
 \[
-\mathbf{Res}\left(k,z_{j}|g\right)=\underbrace{\frac{\beta\sum_{j^{\prime}=1}^{J}\Pi_{jj^{\prime}}U^{\prime}\left(f\left(z_{j^{\prime}},g\left(k,z_{j}\right)\right)+\left(1-\delta\right)k-g\left(g\left(k,z_{j}\right),z_{j^{\prime}}\right)\right)\frac{\partial f\left(z_{j^{\prime}},g\left(k,z_{j}\right)\right)}{dk}}{U^{\prime}\left(f\left(z_{j},k\right)+\left(1-\delta\right)k-g\left(k,z_{j}\right)\right)}-1}_{\text{\
+\mathbf{Res}\left(k,z_{j}|g\right)=\underbrace{\frac{\beta\sum_{j^{\prime}=1}^{J}\Pi_{jj^{\prime}}U^{\prime}\left(f\left(z_{j^{\prime}},g\left(k,z_{j}\right)\right)+\left(1-\delta\right)k-g\left(g\left(k,z_{j}\right),z_{j^{\prime}}\right)\right)\frac{\partial f\left(z_{j^{\prime}},g\left(k,z_{j}\right)\right)}{dk}}{U^{\prime}\left(f\left(z_{j},k\right)+\left(1-\delta\right)k-g\left(k,z_{j}\right)\right)}-1}_{\text{\% Error in Euler Equation}}
 \]
 We can evaluate these residuals for values of capital in the grid
 used to solve the problem. The Euler residuals can help diagnose if
@@ -678,7 +678,7 @@ V^{\star}\left(s,b\right) & = & \max_{d\in\left\{ 0,1\right\} }\left\{ \left(1-d
 The value of having access to the financial markets is
 \begin{eqnarray*}
 V\left(s,b\right) & = & \underset{\left\{ c,b'\right\} }{\max}\left\{ \frac{c\left(s,b\right)^{1-\sigma}-1}{1-\sigma}+\beta\sum_{s^{\prime}\in S}\pi\left(s,s^{\prime}\right)V^{\star}\left(s',b'\right)\right\} \\
-& \mbox{s.t.} & c\left(s,b\right)\leq y\left(s\right)+b-q\left(s,b\right)b^{\prime}\left(s,b\right)\\
+&  s.t.  & c\left(s,b\right)\leq y\left(s\right)+b-q\left(s,b\right)b^{\prime}\left(s,b\right)\\
 &  & -B\leq b^{\prime}\left(s,b\right)\qquad\text{[B: borrowing limit]}\\
 &  & 0\leq c\left(s,b\right).
 \end{eqnarray*}
@@ -716,8 +716,8 @@ and so the debt price is (in equilibrium):
 
 \begin{eqnarray*}
 q\left(s,b'\right) & = & \begin{cases}
-\frac{1-\underset{s^{\prime}\in S}{\sum}\pi\left(s'\right)g^{D}\left(s',b'\right)}{R} & \mbox{ if }b'<0\\
-\frac{1}{R} & \mbox{ if }b'\geq0
+\frac{1-\underset{s^{\prime}\in S}{\sum}\pi\left(s'\right)g^{D}\left(s',b'\right)}{R} &   if  b'<0\\
+\frac{1}{R} &   if  b'\geq0
 \end{cases}
 \end{eqnarray*}
 
@@ -768,7 +768,7 @@ principle of optimality applies, [The Principle of Optimality](section-05-stocha
 
 The consumption-equivalent welfare $\text{CE}\left(s\right)$ at state
 $s$, is such that consumers are indifferent between the two economies
-when, in the benchmark economy, they give/receive $100\times\text{CE}\
+when, in the benchmark economy, they give/receive $100\times\text{CE}\%$
 more/less consumption in all states and times:
 \[
 E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(\left(1+\text{CE}\left(s\right)\right)c_{t}^{B}\left(s^{t}\right)\right)\right|s_{0}=s\right]=E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(c_{t}^{A}\left(s^{t}\right)\right)\right|s_{0}=s\right].
@@ -823,7 +823,7 @@ $C^{B}=\int c^{B}\left(s\right)d\Gamma^{B}\left(s\right)$ and $C^{A}=\int c^{A}\
 We can now think of the welfare gain as happening in steps. First,
 we move the level of consumption without changing its distribution
 over states. This amounts to scaling consumption in the benchmark
-economy by $\nicefrac{C^{A}}{C^{B}}$. That is, define
+economy by $\frac{C^{A}}{C^{B}}$. That is, define
 \[
 \hat{c}^{B}\left(\cdot\right)=\frac{C^{A}}{C^{B}}c^{B}\left(\cdot\right);
 \]
@@ -895,7 +895,7 @@ some own housing, some rent (and some houses are larger than others).
 Whether the model economy exhibits ex-ante or ex-post heterogeneity
 (or both), agents are subject to shocks to their ability to generate
 income (say unemployment and employment as in the original work of
-\citealp{Imrohoroglu_1992_JEDC}), or to their age (some are young,
+[Imrohoroglu 1992](https://doi.org/10.1016/0165-1889(92)90006-Z)), or to their age (some are young,
 some are old), or to their health, etc. The distribution of these
 shocks along with the endogenous response of the different agents
 leads to an endogenous distribution across states. In the absence

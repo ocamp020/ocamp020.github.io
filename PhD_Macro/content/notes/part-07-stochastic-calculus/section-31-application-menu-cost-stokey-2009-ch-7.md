@@ -8,13 +8,13 @@ aggregate (industry-wide or economy-wide) price index, where the latter
 is a geometric Brownian motion. Recall that if the price follows a
 GBM then its log follows a brownian motion. It is then convenient
 to work with the prices in log form. Let $p\left(t\right)$ be the
-log of the firm\textquoteright s nominal price and $\overline{p}\left(t\right)$
+log of the firm' s nominal price and $\overline{p}\left(t\right)$
 the log of the aggregate price index. Then:
 \[
 d\overline{p}=-\mu dt+\sigma dW_{p}
 \]
 
-The initial value for the firm\textquoteright s (log) nominal price
+The initial value for the firm' s (log) nominal price
 $p_{0}$ is given. The firm can change its nominal price at any time,
 but to do so it must pay a fixed adjustment cost $c>0$. This cost
 is constant over time and measured in real terms. Because control
@@ -27,7 +27,7 @@ times at which to adjust the price, or of choosing an inaction region,
 such that the price is adjusted when some condition is met.
 
 The problem can be formulated in terms of that one state variable
-because the profit flow at any date depends only on the firm\textquoteright s
+because the profit flow at any date depends only on the firm' s
 relative price. Let:
 \[
 z\left(t\right)=p\left(t\right)-\overline{p}\left(t\right)

@@ -37,7 +37,7 @@ $a^{\prime}>0$ the household is saving and will receive payment in the
 future. When $a^{\prime}<0$ the household is in debt and receives jelly
 beans today in exchange for a payment in the future. This problem
 can be equivalently formulated in terms of (zero-coupon) bond contracts
-with a unit bond having a price of $q$. Letting $q=\nicefrac{1}{1+r}$
+with a unit bond having a price of $q$. Letting $q=\frac{1}{1+r}$
 the problem would be buying a bond that pays one unit of future jelly
 beans paying $q$ jelly beans today. This latter formulation is the
 one used in [Huggett (1993)](https://doi.org/10.1016/0165-1889(93)90024-M).
@@ -62,7 +62,7 @@ where $g_{a}$ is the policy function for savings.
 
 The borrowing constraint must satisfy:
 \[
-\underline{a}\geq\nicefrac{-\epsilon_{min}}{r}.
+\underline{a}\geq\frac{-\epsilon_{min}}{r}.
 \]
 This is called the *natural borrowing limit*. It is the highest
 amount of debt that can be rolled-over forever if the household faces
@@ -91,14 +91,14 @@ the key equilibrium condition for this economy.
 Formally, we define $\overline{S}$ as the set of exogenous states
 and $\left[\underline{a},\overline{a}\right]$ be the domain of assets
 (Exercise: Show that there is an endogenous upper bound for the distribution
-of assets. See \citealt[Theorem 2]{Hugget_1993_JEDC}, \citealt[footnote 18]{Aiyagari_1994_QJE},
-\citealt[Proposition 2]{Achdou_etal_2022_REStud)}). Let ${\cal S}$
-and ${\cal A}$ be $\sigma$-algebras over $\overline{S}$ and $\left[\underline{a},\overline{a}\right]$
+of assets. See [Huggett 1993, Theorem 2](https://doi.org/10.1016/0165-1889(93)90024-M), [Aiyagari 1994, footnote 18](https://doi.org/10.2307/2118417),
+[Achdou et al. 2022, Proposition 2](https://doi.org/10.1093/restud/rdab002)). Let $\mathcal{S}$
+and $\mathcal{A}$ be $\sigma$-algebras over $\overline{S}$ and $\left[\underline{a},\overline{a}\right]$
 respectively. The distribution of agents is a measurable function
-$\Gamma:{\cal S}\times A\to\left[0,1\right]$ that integrates to 1.
+$\Gamma:\mathcal{S}\times A\to\left[0,1\right]$ that integrates to 1.
 
 We can update the distribution of households by following their actions.
-Let $S\times A\in{\cal S}\times{\cal A}$ be a set in the $\sigma$-algebras.
+Let $S\times A\in\mathcal{S}\times\mathcal{A}$ be a set in the $\sigma$-algebras.
 We want to know if there are households coming into the set $S\times A$.
 From the Markov kernel (or transition function) of $\epsilon$ we
 have the probability that $\epsilon^{\prime}\in S$:
@@ -112,7 +112,7 @@ g\left(\epsilon,a,A\right)=\begin{cases}
 0 & \text{otw}
 \end{cases}.
 \]
-With this we can update the distribution for all $\left(S,A\right)\in{\cal S\times A}$:
+With this we can update the distribution for all $\left(S,A\right)\in{\mathcal{S}\times A}$:
 \[
 \Gamma^{\prime}\left(S,A\right)=\int_{\overline{S}}\int_{\overline{A}}\underbrace{g\left(\epsilon,a,A\right)\cdot\text{Pr}\left(\epsilon^{\prime}\in S|\epsilon\right)}_{\text{Markov Kernel}:P\left(\epsilon^{\prime}a^{\prime}|\epsilon,a\right)}\cdot d\Gamma\left(\epsilon,a\right).
 \]
@@ -123,7 +123,7 @@ The stationary distribution of states across households is the fixed
 point of this operator ($\Gamma$ such that $\Gamma^{\prime}=\Gamma$).
 
 When the exogenous state is discrete (as is often the case) updating
-is simpler. We can work with: ${\cal S}=\left\{ \left\{ \epsilon_{1}\right\} ,\ldots,\left\{ \epsilon_{n}\right\} ,\ldots,\left\{ \epsilon_{N}\right\} \right\} $
+is simpler. We can work with: $\mathcal{S}=\left\{ \left\{ \epsilon_{1}\right\} ,\ldots,\left\{ \epsilon_{n}\right\} ,\ldots,\left\{ \epsilon_{N}\right\} \right\} $
 instead of the $\sigma$-algebra and update according to
 
 \[
