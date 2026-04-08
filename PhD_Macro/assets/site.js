@@ -271,7 +271,7 @@
           .join("");
         return (
           '<section class="course-sidebar-part">' +
-          '<h3 class="course-sidebar-part-title"><a class="course-sidebar-part-link ' + partActive + '" href="' + part.url + '">' + escapeHtml(part.title) + "</a></h3>' +
+          '<h3 class="course-sidebar-part-title"><a class="course-sidebar-part-link ' + partActive + '" href="' + part.url + '">' + escapeHtml(part.title) + '</a></h3>' +
           '<ul class="course-sidebar-list">' + links + "</ul>" +
           "</section>"
         );
