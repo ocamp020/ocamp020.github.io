@@ -25,7 +25,11 @@ for existence of a solution and the properties it can inherit from
 the objective function $F$ and the correspondence $\Gamma$ are listed.
 
 All the exposition of the theoretical aspects follows (very) closely
-Section 3.2 and all of chapter 4 of [Stokey et al. (1989)](https://books.google.com/books?id=tWYo0QolyLAC). (Note: There is no reason to deviate.)
+Section 3.2 and all of chapter 4 of [Stokey et al. (1989)](https://books.google.com/books?id=tWYo0QolyLAC).
+
+!!! note "Note"
+    There is no reason to deviate.
+
 Most proofs are relegated to the book because their treatment would
 require more time than the one the course has.
 
@@ -38,7 +42,7 @@ contraction mapping theorem, its corollary and the Blackwell sufficiency
 conditions. Before stating them recall the definition of a complete
 metric space and of a contraction mapping (or simply contraction)
 in a metric space:
-!!! info "Definition"
+!!! info "Definition 4.1"
 
     A metric space is a pair $\left(S,\rho\right)$ of a set and a metric
     (or distance) $\rho:S\times S\to\mathbb{R}$ such that for all $x,y,z\in S$:
@@ -50,7 +54,7 @@ in a metric space:
 A metric space is furthermore complete if all Cauchy sequences in
 $S$ converge to an element in $S$.
 
-!!! info "Definition"
+!!! info "Definition 4.2"
 
     Let $\left(S,\rho\right)$ be a metric space and $T:S\to S$ a function
     mapping $S$ into itself. $T$ is a contraction (with modulus $\beta$)
@@ -60,14 +64,14 @@ $S$ converge to an element in $S$.
     \rho\left(Tx,Ty\right)\leq\beta\rho\left(x,y\right)
     \]
     The iterates of $T$ are the mappings $\left\{ T^{n}\right\} $ defined
-    by $T^{0}x=x$ and $T^{n}x=T\left(T^{n-1}x\right)$ fro $n=1,2,\ldots$.
+    by $T^{0}x=x$ and $T^{n}x=T\left(T^{n-1}x\right)$ for $n=1,2,\ldots$.
 
 The contraction mapping theorem establishes the existence and uniqueness
 of a fixed point in $S$ for any contraction mapping, moreover it
 provides a simple algorithm to approximate the fixed point from any
 arbitrary point in the space. A fixed point is a point $x\in S$ such
 that $x=Tx$.
-!!! abstract "Theorem: Contraction Mapping Theorem"
+!!! abstract "Theorem 4.1: Contraction Mapping Theorem"
 
     Let $\left(S,\rho\right)$
     be a complete metric space and $T:S\to S$ a contraction with modulus
@@ -103,7 +107,7 @@ that $x=Tx$.
     & \leq & \frac{\beta^{n}}{1-\beta}\rho\left(v_{1},v_{0}\right)
     \end{eqnarray*}
     Because $\frac{\rho\left(v_{1},v_{0}\right)}{1-\beta}$ is fixed,
-    and finite, and $\beta^{n}\to0$ its clear that for any $\epsilon>0$
+    and finite, and $\beta^{n}\to0$, it is clear that for any $\epsilon>0$
     there exists $N$ large enough for $\rho\left(v_{m},v_{n}\right)\leq\epsilon$
     for all $m,n\geq N$. Then $\left\{ v_{n}\right\} $ is Cauchy and
     there exists $v\in S$ such that $v_{n}\to v$ because $S$ is complete.
@@ -142,7 +146,7 @@ yet its results can be strengthened by further characterizing the
 fixed point. So far it has been established its existence in $S$
 and its uniqueness, the following corollary to the theorem allows
 to locate the fixed point in a given subset of $S$.
-!!! abstract "Corollary"
+!!! abstract "Corollary 4.1"
 
     Let $\left(S,\rho\right)$ be a complete metric space and $T:S\to S$
     a contraction mapping with fixed point $v\in S$.
@@ -163,10 +167,10 @@ to locate the fixed point in a given subset of $S$.
 Finally a set of sufficiency conditions are established for a mapping
 on the space of bounded functions to be a contraction. In most economic
 applications these conditions are trivial to check.
-!!! abstract "Theorem: Blackwell conditions"
+!!! abstract "Theorem 4.2: Blackwell conditions"
 
     Let $X\subseteq\mathbb{R}^{l}$ and
-    $B\left(X\right)$ be the the space of bounded functions on $X$ $\left(f:X\to\mathbb{R}\right)$
+    $B\left(X\right)$ be the space of bounded functions on $X$ $\left(f:X\to\mathbb{R}\right)$
     with the sup-norm. Let $T:B\left(X\right)\to B\left(X\right)$, $T$
     is a contraction (with modulus $\beta$) if it satisfies the following
     two conditions:
@@ -208,7 +212,7 @@ applications these conditions are trivial to check.
 
 I also present a modified version of Blackwell's sufficiency conditions
 for vector valued functions. I first define the relevant set of functions.
-!!! abstract "Proposition"
+!!! abstract "Proposition 4.1"
 
     Let $X\subset\mathbb{R}^{n}$ and $B\left(X\right)=\left\{ f|f:X\to\mathbb{R}\land\exists_{M_{f}}\forall_{x\in X}\left|f\left(x\right)\right|\leq M_{f}\right\} $
     the set of bounded functions defined on the set $X$. The space $S=B\left(X\right)\times B\left(X\right)$
@@ -249,7 +253,7 @@ for vector valued functions. I first define the relevant set of functions.
     norm.
     1. Clearly the sum and scalar product of bounded functions is bounded.
 
-!!! abstract "Proposition"
+!!! abstract "Proposition 4.2"
 
     Consider $\left(S,\rho\right)$ with $S=B\left(X\right)\times B\left(X\right)$
     and $\rho\left(f,g\right)=\left\Vert f-g\right\Vert $. $\left(S,\rho\right)$
@@ -303,7 +307,7 @@ for vector valued functions. I first define the relevant set of functions.
     1. The above proves that a Cauchy sequence converges on $S$ over the
     given norm.
 
-!!! abstract "Theorem: Extended Blackwell"
+!!! abstract "Theorem 4.3: Extended Blackwell"
 
     Consider $\left(S,\rho\right)$ with
     $S=B\left(X\right)\times B\left(X\right)$ and $\rho\left(f,g\right)=\left\Vert f-g\right\Vert $.
@@ -474,12 +478,12 @@ The problem to be studied in terms of infinite sequences is of the
 form:
 <a id="ref-eq-000020sp" class="course-anchor"></a>
 \begin{equation}
-v^{\star}\left(x_{0}\right)=\sup_{\left\{ x_{t+1}\right\} _{t=0}^{\infty}}\sum_{t=0}^{\infty}\beta^{t}F\left(x_{t},x_{t+1}\right)\qquad s.t.  x_{t+1}\in\Gamma\left(x_{t}\right)
+v^{\star}\left(x_{0}\right)=\sup_{\left\{ x_{t+1}\right\} _{t=0}^{\infty}}\sum_{t=0}^{\infty}\beta^{t}F\left(x_{t},x_{t+1}\right)\qquad s.t.  x_{t+1}\in\Gamma\left(x_{t}\right)\tag{4.1}
 \end{equation}
 Corresponding to this problem is the following functional equation:
 <a id="ref-eq-000020fe" class="course-anchor"></a>
 \begin{equation}
-v\left(x\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta v\left(y\right)\right\}
+v\left(x\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta v\left(y\right)\right\} \tag{4.2}
 \end{equation}
 Above, $X$ is the set of possible values for $x$, and it is not
 necessarily an euclidean space, $\Gamma:X\rightrightarrows X$ is
@@ -489,7 +493,7 @@ payoff function. $\beta>0$ is a discount factor.
 
 Some conditions have to be met for both problems to give the same
 solution, in the sense that $v\left(x\right)=v^{\star}\left(x\right)$
-and that the optimal choice of one problem is the the same as the
+and that the optimal choice of one problem is the same as the
 choice for the other. This equivalence between both problems is called
 the *principle of optimality*. After the validity of the principle
 has been established the properties of the solution to FE can be studied.
@@ -500,7 +504,7 @@ proof.
 
 It will be convenient to define the set of all possible feasible sequences
 for $x$, given an starting point $x_{0}$.
-!!! info "Definition"
+!!! info "Definition 4.3"
 
     The set of all possible feasible sequences starting at $x_{0}\in X$
     is:
@@ -509,40 +513,39 @@ for $x$, given an starting point $x_{0}$.
     \]
     and $\underline{x}=\left(x_{0},x_{1},x_{2},\ldots\right)$ is an element.
 
-**Assumption A.1:**
+!!! assumption "Assumption: A.1"
 
-$\Gamma$ is a nonempty valued correspondence.
+    $\Gamma$ is a nonempty valued correspondence.
 
-**Assumption A.2:**
+!!! assumption "Assumption: A.2"
 
-For all $x_{0}\in X$ and $\underline{x}\in\Pi\left(x_{0}\right)$
-the following limit exists (although it might be infinite):
-\[
-\lim_{n\to\infty}\sum_{t=0}^{n}\beta^{t}F\left(x_{t},x_{t+1}\right)
-\]
+    For all $x_{0}\in X$ and $\underline{x}\in\Pi\left(x_{0}\right)$
+    the following limit exists (although it might be infinite):
+    \[
+    \lim_{n\to\infty}\sum_{t=0}^{n}\beta^{t}F\left(x_{t},x_{t+1}\right)
+    \]
 
 !!! note "Remark"
 
     Assumption A.2 holds if $F$ is bounded and $\beta\in\left(0,1\right)$.
 
 Under assumptions A.1 and A.2 $\Pi\left(x_{0}\right)$ is nonempty
-valued and problem ([Equation](#ref-eq-000020sp)) is well posed, moreover they
-are enough to guarantee that the function $v^{\star}$ satisfies equation
-([Equation](#ref-eq-000020fe)).
-!!! abstract "Proposition"
+valued and problem [(4.1)](#ref-eq-000020sp) is well posed, moreover they
+are enough to guarantee that the function $v^{\star}$ satisfies [equation (4.2)](#ref-eq-000020fe).
+!!! abstract "Proposition 4.3"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.1 and
-    A.2, then $v^{\star}$ is a solution to the FE ([Equation](#ref-eq-000020fe)):
+    A.2, then $v^{\star}$ is a solution to the FE [(4.2)](#ref-eq-000020fe):
     \[
     v^{\star}\left(x\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta v^{\star}\left(y\right)\right\}
     \]
 
 For $v^{\star}$ to be the only solution to the FE an extra condition
 is needed.
-!!! abstract "Proposition"
+!!! abstract "Proposition 4.4"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.1 and
-    A.2, if $v$ is a solution to the FE ([Equation](#ref-eq-000020fe)) and for
+    A.2, if $v$ is a solution to the FE [(4.2)](#ref-eq-000020fe) and for
     all $x_{0}\in X$ and $\underline{x}\in\Pi\left(x_{0}\right)$ it
     holds that:
     \[
@@ -554,24 +557,24 @@ The previous two propositions establish equivalence between the value
 of the two problems. It can also be shown that the optimizer of the
 SP problem also solves the FE in the following sense:
 <a id="ref-eq-000020" class="course-anchor"></a>
-!!! abstract "Proposition"
+!!! abstract "Proposition 4.5"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.1 and
     A.2. Let $\underline{x}^{\star}\in\Pi\left(x_{0}\right)$ be a feasible
-    plan that attains the supremum in ([Equation](#ref-eq-000020sp)), then:
+    plan that attains the supremum in [(4.1)](#ref-eq-000020sp), then:
     \begin{equation}
-    v^{\star}\left(x_{t}^{\star}\right)=F\left(x_{t}^{\star},x_{t+1}^{\star}\right)+\beta v^{\star}\left(x_{t+1}^{\star}\right)
+    v^{\star}\left(x_{t}^{\star}\right)=F\left(x_{t}^{\star},x_{t+1}^{\star}\right)+\beta v^{\star}\left(x_{t+1}^{\star}\right)\tag{4.3}
     \end{equation}
 
 Again, under an extra boundedness condition a plan that solves the
-problem in ([Equation](#ref-eq-000020fe)) also solves the problem in the SP.
-!!! abstract "Proposition"
+problem in [(4.2)](#ref-eq-000020fe) also solves the problem in the SP.
+!!! abstract "Proposition 4.6"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.1 and
     A.2. Let $\underline{x}^{\star}\in\Pi\left(x_{0}\right)$ be a feasible
-    plan that satisfies equation ([Equation](#ref-eq-000020)) and for which
+    plan that satisfies [equation (4.3)](#ref-eq-000020) and for which
     $\limsup\beta^{t}v^{\star}\left(x_{t}^{\star}\right)\leq0$, then
-    $\underline{x}^{\star}$ attains the supremum in ([Equation](#ref-eq-000020sp))
+    $\underline{x}^{\star}$ attains the supremum in [(4.1)](#ref-eq-000020sp)
     for initial state $x_{0}$.
 
 Now we can define the optimal policy correspondence as:
@@ -584,7 +587,7 @@ that any optimal plan of the sequence problem is generated by $G^{\star}$
 and that if a plan is generated by $G^{\star}$ and satisfies the
 additional boundedness condition then it is also optimal.
 
-Now we can concentrate in studying the properties of the DP in ([Equation](#ref-eq-000020fe)).
+Now we can concentrate in studying the properties of the DP in [(4.2)](#ref-eq-000020fe).
 
 ## Bounded problems
 
@@ -592,7 +595,7 @@ Now we concentrate in establishing properties of the solution to the
 following problem:
 <a id="ref-eq-000020fe-1" class="course-anchor"></a>
 \begin{equation}
-v\left(x\right)=\max_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta v\left(y\right)\right\}
+v\left(x\right)=\max_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta v\left(y\right)\right\} \tag{4.4}
 \end{equation}
 \[
 G\left(x\right)=\left\{ y\in\Gamma\left(x\right)|v\left(x\right)=F\left(x,y\right)+\beta v\left(y\right)\right\}
@@ -604,40 +607,40 @@ sections to be valid on the original sequence problem. Additional
 assumptions are also imposed that ensure that the previous ones are
 met.
 
-**Assumption A.3:**
+!!! assumption "Assumption: A.3"
 
-$X$ is a a convex subset of $\mathbb{R}^{l}$ and $\Gamma$ is a
-nonempty, compact valued and continuous correspondence.
+    $X$ is a convex subset of $\mathbb{R}^{l}$ and $\Gamma$ is a
+    nonempty, compact valued and continuous correspondence.
 
-**Assumption A.4:**
+!!! assumption "Assumption: A.4"
 
-The function $F: Gr \left(\Gamma\right)\to\mathbb{R}$ is bounded
-and continuous and $\beta\in\left(0,1\right)$.
+    The function $F: Gr \left(\Gamma\right)\to\mathbb{R}$ is bounded
+    and continuous and $\beta\in\left(0,1\right)$.
 
 Because $F$ is bounded and continuous it is natural to think that
-the solution to equation ([Equation](#ref-eq-000020fe-1)) lies in the set $C\left(X\right)$.
+the solution to [equation (4.4)](#ref-eq-000020fe-1) lies in the set $C\left(X\right)$.
 What follows it to establish the existence of a solution by means
 of the contraction mapping theorem.
 
 Define a mapping $T:C\left(X\right)\to C\left(X\right)$ as:
 <a id="ref-eq-000020mapping-000020t" class="course-anchor"></a>
 \begin{equation}
-Tf\left(x\right)=\max_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta f\left(y\right)\right\}
+Tf\left(x\right)=\max_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta f\left(y\right)\right\} \tag{4.5}
 \end{equation}
-The solution to ([Equation](#ref-eq-000020fe-1)) is then a $v\in C\left(X\right)$
+The solution to [(4.4)](#ref-eq-000020fe-1) is then a $v\in C\left(X\right)$
 such that $v=Tv$. The following proposition establishes that $T$
 is a contraction from $C\left(X\right)$ into itself and also some
 properties of the policy correspondence $G$.
-!!! abstract "Proposition"
+!!! abstract "Proposition 4.7"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.3 and
     A.4, and consider $C\left(X\right)$ the space of continuous bounded
     function on $X$ along with the sup norm. Then:
     
     
-    1. $T$ defined in ([Equation](#ref-eq-000020mapping-000020t)) maps $C\left(X\right)$
+    1. $T$ defined in [(4.5)](#ref-eq-000020mapping-000020t) maps $C\left(X\right)$
     into itself.
-    1. $T$ defined in ([Equation](#ref-eq-000020mapping-000020t)) has a unique fixed
+    1. $T$ defined in [(4.5)](#ref-eq-000020mapping-000020t) has a unique fixed
     point $v\in C\left(X\right)$, and for all $v_{0}\in C\left(X\right)$
     \[
     \left\Vert T^{n}v_{0}-v\right\Vert \leq\beta^{n}\left\Vert v_{0}-v\right\Vert
@@ -687,18 +690,19 @@ Additional assumption will help to characterize $v$ and $G$ better.
 The corollary of the contraction mapping theorem is the tool to be
 used now. First monotonicity can be inherited by the solution.
 
-**Assumption A.5:**
+!!! assumption "Assumption: A.5"
 
-For all $y$ $F\left(\cdot,y\right)$ is strictly increasing in its
-first $l$ arguments.
+    For all $y$, $F\left(\cdot,y\right)$ is strictly increasing in its
+    first $l$ arguments.
 
-**Assumption A.6:**
+!!! assumption "Assumption: A.6"
 
-$\Gamma$ is monotone in the sense that if $x\leq x^{\prime}$ the $\Gamma\left(x\right)\subseteq\Gamma\left(x^{\prime}\right)$.
-!!! abstract "Proposition"
+    $\Gamma$ is monotone in the sense that if $x\leq x^{\prime}$, then $\Gamma\left(x\right)\subseteq\Gamma\left(x^{\prime}\right)$.
+
+!!! abstract "Proposition 4.8"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.3 to A.6,
-    and let $v$ be the unique solution to ([Equation](#ref-eq-000020fe-1)), then
+    and let $v$ be the unique solution to [(4.4)](#ref-eq-000020fe-1), then
     $v$ is strictly increasing.
 
 ??? success "Proof"
@@ -721,17 +725,18 @@ $\Gamma$ is monotone in the sense that if $x\leq x^{\prime}$ the $\Gamma\left(x\
 
 It is also possible to induce convexity as follows:
 
-**Assumption A.7:**
+!!! assumption "Assumption: A.7"
 
-$F$ is strictly concave in both arguments.
+    $F$ is strictly concave in both arguments.
 
-**Assumption A.8:**
+!!! assumption "Assumption: A.8"
 
-$\Gamma$ has a convex graph.
-!!! abstract "Proposition"
+    $\Gamma$ has a convex graph.
+
+!!! abstract "Proposition 4.9"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.3, A.4,
-    A.7 and A.8, and let $v$ be the unique solution to ([Equation](#ref-eq-000020fe-1)),
+    A.7 and A.8, and let $v$ be the unique solution to [(4.4)](#ref-eq-000020fe-1),
     then $v$ is strictly concave and $G$ is a continuous single valued
     function.
 
@@ -781,14 +786,15 @@ $\Gamma$ has a convex graph.
 Finally there are conditions for $v$ to be differentiable, allowing
 the use of first order conditions.
 
-**Assumption A.9:**
+!!! assumption "Assumption: A.9"
 
-$F$ is continuously differentiable on the interior of its domain,
-$ Gr \left(A\right)$.
-!!! abstract "Proposition"
+    $F$ is continuously differentiable on the interior of its domain,
+    $ Gr \left(A\right)$.
+
+!!! abstract "Proposition 4.10"
 
     Let $X$, $\Gamma$, $F$ and $\beta$ satisfy assumption A.3, A.4,
-    and A.7 to A.9, and let $v$ be the unique solution to ([Equation](#ref-eq-000020fe-1)).
+    and A.7 to A.9, and let $v$ be the unique solution to [(4.4)](#ref-eq-000020fe-1).
     If $x_{0}\in Int X$ and $g\left(x_{0}\right)\in Int \Gamma\left(x_{0}\right)$
     then $v$ is continuously differentiable at $x_{0}$ with derivatives
     given by:

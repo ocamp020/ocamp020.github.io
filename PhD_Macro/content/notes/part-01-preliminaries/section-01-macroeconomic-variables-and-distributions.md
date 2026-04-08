@@ -13,7 +13,7 @@ the distributions of outcomes across people (or firms) and across
 time. This means that when we say we study the business cycle, we
 develop theories of the stochastic process followed by output over
 time. When we study inequality, we develop theories of the distribution
-if income or wealth across individuals. When we study firms dynamics,
+of income or wealth across individuals. When we study firm dynamics,
 we develop theories of the stochastic processes followed by firm size
 and output together with the distribution of these variables across
 firms.
@@ -29,7 +29,7 @@ of outcomes. Methodologically, these two types of aggregates are brought
 together by the study of Markov processes and their stationary distributions.
 The following Sections are devoted to establishing the properties
 of Markov processes and their relationship to theories of individual
-behavior and the distribution of outcomes they imply. [Random Variables and Probability](../part-06-random-variables-and-probability/section-22-measure.md#ref-part-random-variables-and-probability)
+behavior and the distribution of outcomes they imply. [Part 6](../part-06-random-variables-and-probability/section-22-measure.md#ref-part-random-variables-and-probability)
 covers the basics of measure theory and probability needed for the
 study of Markov processes.
 
@@ -169,7 +169,12 @@ general class of models introduces uncertainty over the evolution
 of the endogenous states. In the context of our example, the agents
 knows their savings $\left(s\right)$ but savings do not determine
 future assets, instead, they determine the probability distribution
-over future assets, $Q\left(a^{\prime}|s\right)$. (Note: Even more generally, the probability distribution of future assets can depend on the future realizations of productivity, $Q\left(a^{\prime}|s,z^{\prime}\right)$.) This would be the case if there stochastic depreciation (or appreciation)
+over future assets, $Q\left(a^{\prime}|s\right)$.
+
+!!! note "Note"
+    Even more generally, the probability distribution of future assets can depend on the future realizations of productivity, $Q\left(a^{\prime}|s,z^{\prime}\right)$.
+
+This would be the case if there stochastic depreciation (or appreciation)
 of assets across periods, equivalently if the outcome of the savings
 process was uncertain. In this case problem becomes
 \[

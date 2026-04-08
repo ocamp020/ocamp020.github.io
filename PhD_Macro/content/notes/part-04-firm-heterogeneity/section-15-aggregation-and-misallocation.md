@@ -351,7 +351,10 @@ or distortions, we infer the underlying distortions and wedges in
 the economy by studying the extent to which the marginal revenue products
 of capital and labor differ across firms. This is based on the insight
 that without any distortions, the marginal revenue products of capital
-and labor have to be equalized across all firms. (Note: This is the case in the monopolistic competition models, such as in [Hsieh and Klenow (2009)](https://doi.org/10.1162/qjec.2009.124.4.1403). Alternatively, in environments like the ones in [Lucas (1978)](http://www.jstor.org/stable/3003596) and [Restuccia and Rogerson (2008)](https://doi.org/10.1016/j.red.2008.05.002), in which firms feature decreasing returns to scale but produce the same homogeneous good, the marginal products of capital and labor have to be equalized in the non-distorted economy)
+and labor have to be equalized across all firms.
+
+!!! note "Note"
+    This is the case in the monopolistic competition models, such as in [Hsieh and Klenow (2009)](https://doi.org/10.1162/qjec.2009.124.4.1403). Alternatively, in environments like the ones in [Lucas (1978)](http://www.jstor.org/stable/3003596) and [Restuccia and Rogerson (2008)](https://doi.org/10.1016/j.red.2008.05.002), in which firms feature decreasing returns to scale but produce the same homogeneous good, the marginal products of capital and labor have to be equalized in the non-distorted economy
 
 **TFP in the $Q$ sector.**
 
@@ -413,7 +416,7 @@ of the economy as $\text{TFP}^{\star}\equiv\left(\text{TFP}^{\star}\right)^{\alp
 and the aggregate TFP gain from eliminating distortions in the economy
 as
 \begin{equation}
-\Omega_{Y}\equiv1-\frac{TFP}{TFP^{\star}}=1-\left(\frac{TFP_{Q}}{TFP_{Q}^{\star}}\right)^{\alpha}.
+\Omega_{Y}\equiv1-\frac{TFP}{TFP^{\star}}=1-\left(\frac{TFP_{Q}}{TFP_{Q}^{\star}}\right)^{\alpha}. \tag{15.1}
 \end{equation}
 In the benchmark calibration, the total productivity gain from eliminating
 the collateral constraints in the $Q$ sector amounts to $16\%$ higher

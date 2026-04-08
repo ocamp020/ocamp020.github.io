@@ -12,7 +12,10 @@ a sector on aggregate output. The reason is that changes in Domar
 weights are second order if the allocation of the economy is already
 efficient. This result is known as Hulten's theorem and can be verified
 directly as an application of the envelope theorem. We now prove it
-following [Carvalho and Tahbaz-Salehi (2019)](https://doi.org/10.1146/annurev-economics-080218-030212). (Note: Historically, [Domar (1961)](https://doi.org/10.2307/2228246) proposed aggregation by sales-weighting sectoral productivity changes in order to account for intermediate goods in growth accounting. [Hulten (1978)](https://doi.org/10.2307/2297252) showed that, under efficiency, this is exactly the right local aggregation rule. So Domar provided the index-number intuition (defining aggregation in terms of index-numbers defined as weighted geometric averages), while Hulten provided the general-equilibrium justification.)
+following [Carvalho and Tahbaz-Salehi (2019)](https://doi.org/10.1146/annurev-economics-080218-030212).
+
+!!! note "Note"
+    Historically, [Domar (1961)](https://doi.org/10.2307/2228246) proposed aggregation by sales-weighting sectoral productivity changes in order to account for intermediate goods in growth accounting. [Hulten (1978)](https://doi.org/10.2307/2297252) showed that, under efficiency, this is exactly the right local aggregation rule. So Domar provided the index-number intuition (defining aggregation in terms of index-numbers defined as weighted geometric averages), while Hulten provided the general-equilibrium justification.
 
 **A general economy.**
 
@@ -98,7 +101,7 @@ W=\phi Y.
 \]
 
 We can now state and prove Hulten's theorem.
-!!! abstract "Proposition: Hulten's Theorem"
+!!! abstract "Proposition 19.1: Hulten's Theorem"
 
     In an efficient economy,
     \[

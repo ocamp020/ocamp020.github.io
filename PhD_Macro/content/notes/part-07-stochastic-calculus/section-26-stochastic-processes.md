@@ -9,7 +9,7 @@ process is similar to a random variable, with the difference that
 it also depends on time. Adding the time dimension adds notation,
 but it does not change any of the main ideas. For convenience we will
 first go over the definition of a random variable.
-!!! info "Definition: Random variable"
+!!! info "Definition 26.1: Random variable"
 
     Let $\left(\Omega,\mathcal{A},P\right)$ be
     a probability space and $x:\Omega\to\mathbb{R}$ a real valued function.
@@ -41,7 +41,7 @@ variable through time. We need a way of determining where the random
 variable is at a certain point in time, and where it has been, but
 that does not provide information about the value of future realizations.
 This is achieved using a filtration.
-!!! info "Definition: Filtration"
+!!! info "Definition 26.2: Filtration"
 
     Let $\mathcal{A}$ be a $\sigma$-algebra. The
     set $\mathbb{A}=\left\{ \mathcal{A}_{t}|t\geq0\right\} $ is a filtration
@@ -51,7 +51,7 @@ This is achieved using a filtration.
 
 Now we can define a stochastic process as a function that is measurable
 in a filtered space.
-!!! info "Definition: Stochastic Process"
+!!! info "Definition 26.3: Stochastic Process"
 
     Let $\left(\Omega,\mathbb{A},P\right)$
     be a filtered probability space with a time index $t\in\mathbb{R}_{+}$,
@@ -140,7 +140,7 @@ to define a random walk. Random walks are particularly useful to understand
 the behavior of continuous time stochastic processes. As we will see
 the building block of most of them is the continuous time approximation
 of a random walk.
-!!! example "Example: Random Walk Process"
+!!! example "Example 26.1: Random Walk Process"
 
     Consider a stochastic process $x$.
     Denote by $x_{t}$ the value of $x$ at time $t$, and fix the initial
@@ -209,7 +209,7 @@ W\left(t+T\right)-W\left(t\right)=\sum_{i=1}^{n}\epsilon_{i}\sqrt{\Delta t}
 \]
 What we want to show is that $W\left(t+T\right)-W\left(t\right)\sim N\left(0,t\right)$.
 To prove this we can use the Central Limit Theorem:
-!!! abstract "Theorem: Central Limit Theorem"
+!!! abstract "Theorem 26.1: Central Limit Theorem"
 
     If $\left\{ \epsilon_{1},\epsilon_{2},\epsilon_{3},\ldots\right\} $
     are iid (but not necessarily normal) with $E\left[\epsilon_{i}\right]=\mu<\infty$
@@ -318,7 +318,7 @@ and variance is allowed to depend on the level of the process and
 the time:
 <a id="ref-eq-000020def-000020ito-000020process" class="course-anchor"></a>
 \begin{equation}
-dx=\mu\left(x,t\right)dt+\sigma\left(x,t\right)dW
+dx=\mu\left(x,t\right)dt+\sigma\left(x,t\right)dW\tag{26.1}
 \end{equation}
 where the functions $\mu$ and $\sigma$ give the value of the mean
 and standard deviations of the increments of the process $x$:
@@ -335,7 +335,7 @@ x\left(t\right)=x\left(0\right)+\int_{0}^{t}\mu\left(x,s\right)ds+\int_{0}^{t}\s
 where the last term is a stochastic integral. Stochastic integrals
 play an important role in the theory of stochastic processes, for
 now it suffices to state the following result.
-!!! abstract "Proposition"
+!!! abstract "Proposition 26.1"
 
     Let $x\left(t\right)$ be an integrable function, then $E\left[\int_{0}^{t}x\left(s\right)dW\left(s\right)\right]=0$.
 
@@ -345,7 +345,7 @@ properties can be found in [Stokey (2009, Sec. 3.2)](http://www.jstor.org/stable
 
 Two Ito process are of particular importance. They are presented in
 the examples below.
-!!! example "Example: Geometric Brownian notion"
+!!! example "Example 26.2: Geometric Brownian notion"
 
     A Geometric Brownian motion is
     an Ito process with $\mu\left(x,t\right)=\mu x$ and $\sigma\left(x,t\right)=\sigma x$,
@@ -361,7 +361,7 @@ the examples below.
     So the percentage increment, $\frac{dx}{x}$, are normally distributed
     with mean $\mu\Delta t$ and variance $\sigma^{2}\Delta t$.
 
-!!! example "Example: Ornstein-Uhlenbeck process"
+!!! example "Example 26.3: Ornstein-Uhlenbeck process"
 
     Unlike the previous processes
     an OU process is mean reverting, similar to an AR(1) process in discrete
@@ -392,7 +392,7 @@ We can now define a more general process that depends on the Jump
 process $q$:
 <a id="ref-eq-000020poisson-000020process" class="course-anchor"></a>
 \begin{equation}
-dx=f\left(x,t\right)dt+g\left(x,t\right)dq
+dx=f\left(x,t\right)dt+g\left(x,t\right)dq\tag{26.2}
 \end{equation}
 where absent a jump $x$ evolves deterministically according to the
 function $f$, and when there is a jump it moves according to function

@@ -59,7 +59,7 @@ Now consider the Lebesgue extension of $m$, call it $\mu_{F}$ and
 the $\sigma$-algebra of all $\mu_{F}$-measurable, call it $\mathcal{A}_{F}$.
 This set  contains all subintervals of $\left[\alpha,\beta\right)$
 and hence all the Borel sets of $\left[\alpha,\beta\right)$.
-!!! info "Definition: Stieltjes measure"
+!!! info "Definition 25.1: Stieltjes measure"
 
     The measure $\mu_{F}$ described above
     is called the (Lebesgue-)Stieltjes measure and $F$ its generating
@@ -67,13 +67,13 @@ and hence all the Borel sets of $\left[\alpha,\beta\right)$.
 
 This concept is easily extended to the whole real line. Some examples
 show the generality of this type of measure:
-!!! example "Example"
+!!! example "Example 25.1"
 
     Let $F\left(x\right)=x$, then the Stieltjes measure is nothing but
     the Lebesgue measure on the real line, that is, the extension of the
     concept of length of an interval.
 
-!!! example "Example"
+!!! example "Example 25.2"
 
     Let $F$ be a jump function with discontinuity points $\left\{ x_{1},x_{2},\ldots\right\} $
     and corresponding jumps $\left\{ h_{1},h_{2},\ldots\right\} $. The
@@ -92,7 +92,7 @@ show the generality of this type of measure:
     a jump function is called a discrete measure. All discrete random
     variables have CDF that are jump functions.
 
-!!! example "Example"
+!!! example "Example 25.3"
 
     Let $F$ be an absolutely continuous non-decreasing function on $\left[\alpha,\beta\right)$.
     Absolutely continuous functions have a finite derivative a.e. let
@@ -106,8 +106,8 @@ show the generality of this type of measure:
     
     The result follows from Lebesgue theorem:
     
-    \begin{thm}
-    **(Lebesgue) **If $F$ is absolutely continuous on $\left[a,b\right]$
+    \begin{thm}[Lebesgue]
+    If $F$ is absolutely continuous on $\left[a,b\right]$
     then the derivative $F^{\prime}$ is integrable on $\left[a,b\right]$
     and:
     \[
@@ -123,7 +123,7 @@ show the generality of this type of measure:
     \]
     Because $f$ is non-negative and integrable wrt all Lebesgue-measurable
     subsets of $\left[a,b\right]$ $\left(\mathcal{B}_{\left[a,b\right]}\right)$
-    we know by proposition ([Proposition](section-24-the-lebesgue-integral.md#ref-prop-000020inducing-000020a-000020measure))
+    we know by proposition ([Proposition 24.3](section-24-the-lebesgue-integral.md#ref-prop-000020inducing-000020a-000020measure))
     that
     \[
     \mu_{F}\left(A\right)=\int_{A}f\left(x\right)dx
@@ -136,7 +136,7 @@ show the generality of this type of measure:
     to continuous random variables.
 
 Now we can define the integral with respect to a Stieltjes measure:
-!!! info "Definition: Lebesgue-Stieltjes integral"
+!!! info "Definition 25.2: Lebesgue-Stieltjes integral"
 
     Let $\mu_{F}$ be Stieltjes
     measure with generating function $F$, and let $g$ be a $\mu_{F}$-measurable

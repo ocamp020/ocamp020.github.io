@@ -4,7 +4,7 @@
 
 The economy in the previous section already showcases all the key
 ingredients of household heterogeneity. However, there is no production
-and hence no way to to talk about returns. The $r$ in the previous
+and hence no way to talk about returns. The $r$ in the previous
 model is better understood as an attribute of a financial contract,
 but not a rate of return on a productive investment. This ultimately
 prevents us from drawing a clear parallel between the heterogeneous

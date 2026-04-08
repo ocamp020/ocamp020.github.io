@@ -5,9 +5,9 @@
 The previous subsection solved the equilibrium without using the language
 of networks. We can now reinterpret those same objects in a way that
 makes the propagation mechanism transparent.
-!!! info "Definition"
+!!! info "Definition 17.1: Input-output matrix"
 
-    **(Input-output matrix**) For each pair of sectors $(s,k)$,
+    For each pair of sectors $(s,k)$,
     define the expenditure share of sector $s$ on input $k$ by
     \[
     \omega_{sk}\equiv\frac{p_{k}x_{sk}}{p_{s}y_{s}}.
@@ -21,7 +21,7 @@ for the production of sector $s$.
 In the Domar economy with Cobb-Douglas technology, $\omega_{sk}=a_{sk}$
 for every $s,k$, so the technological coefficient matrix and the
 input-output matrix coincide with $\Omega=A$.
-!!! info "Definition: Leontief inverse"
+!!! info "Definition 17.2: Leontief inverse"
 
     The *Leontief inverse* is the matrix
     \[
@@ -48,9 +48,9 @@ as an intermediate input. The edge weight is $\omega_{sk}$.
 
 A node is central when many important paths run through it. This is
 exactly what the column sums of the Leontief inverse measure.
-!!! info "Definition"
+!!! info "Definition 17.3: Downstream centrality"
 
-    **(Downstream centrality**) For each sector $k$, define its
+    For each sector $k$, define its
     downstream centrality by
     \[
     v_{k}\;\equiv\;\sum_{s=1}^{S}\psi_{sk}.
@@ -63,9 +63,8 @@ is central when it is an important supplier to sectors that are themselves
 important in production. We can prove this in general from the definitions
 of the input-output matrix $\Omega$ and the Leontief inverse $\Psi$.
 <a id="ref-prop-000020domar-centrality" class="course-anchor"></a>
-!!! abstract "Proposition"
+!!! abstract "Proposition 17.1: Domar weights are weighted downstream centrality measures"
 
-    **(Domar weights are weighted downstream centrality measures**)
     Consider a competitive economy with constant returns to scale. Let
     $\Omega=[\omega_{sk}]$ denote the input-output matrix, $\Psi=(I-\Omega)^{-1}$
     the Leontief inverse, $\beta_{s}\equiv\frac{p_{s}c_{s}}{Y}$ the final
@@ -134,7 +133,7 @@ producer, either directly or through a chain of intermediate-input
 linkages.
 
 Now fix the column index $k$. The column sum of $\Psi$ tells us
-how important sector $k$ is for the economy as a whole. [Proposition](#ref-prop-000020domar-centrality)
+how important sector $k$ is for the economy as a whole. [Proposition 17.1](#ref-prop-000020domar-centrality)
 shows that the Domar weight of a sector captures this idea, since
 $\lambda_{k}$ is a weighted sum of all the ways in which $k$ enters
 goods that are ultimately absorbed in final demand.

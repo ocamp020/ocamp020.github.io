@@ -8,7 +8,7 @@ exogenous changes, and not by the response in the allocation, which
 is already efficient. The second-order effects depend on how the allocation
 changes in response to shocks:
 \begin{align}
-d\log Y & =\;\sum_{s=1}^{S}\lambda_{s}\,d\log z_{s}\;+\;\sum_{f=1}^{F}\Lambda_{f}\,d\log N_{f}\\
+d\log Y & =\;\sum_{s=1}^{S}\lambda_{s}\,d\log z_{s}\;+\;\sum_{f=1}^{F}\Lambda_{f}\,d\log N_{f} \tag{20.1}\\
 & \qquad\;+\;\frac{1}{2}\sum_{s=1}^{S}\lambda_{s}d\log\lambda_{s}\,d\log z_{s}\;+\;\frac{1}{2}\sum_{f=1}^{F}\Lambda_{f}d\log\Lambda_{f}\,d\log N_{f}\,.\nonumber
 \end{align}
 This expression tells us that the change in sales shares (and factor
@@ -129,8 +129,7 @@ y_{s}=z_{s}\left(\alpha_{s}^{1/\theta_{s}}n_{s}^{(\theta_{s}-1)/\theta_{s}}\;+\;
     \]
     Hence changes in sales shares are pinned down by the interaction of
     price dispersion and substitution elasticities.
-    \begin{prop}
-    **(Second-order technology shocks in a nested CES economy**)
+    \begin{prop}[Second-order technology shocks in a nested CES economy]
     Consider the efficient economy with $\mu=1$ and fixed labor supply.
     Then, around the efficient allocation, a second-order approximation
     to the effect of productivity shocks on aggregate output is

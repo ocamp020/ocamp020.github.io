@@ -15,7 +15,11 @@ but of the returns to the "managerial input." These are rents to
 the fixed input that the manager owns.
 
 While we will not cover these models in detail, we a brief description
-of the problem is useful. (Note: This description follows the lecture notes by Chris Edmond: [http://www.chrisedmond.net/phd2014/90065\_lecture1.pdf](http://www.chrisedmond.net/phd2014/90065_lecture1.pdf).)
+of the problem is useful.
+
+!!! note "Note"
+    This description follows the lecture notes by Chris Edmond: [http://www.chrisedmond.net/phd2014/90065\_lecture1.pdf](http://www.chrisedmond.net/phd2014/90065_lecture1.pdf).
+
 I focus on [Lucas (1978)](https://doi.org/10.2307/3003596). Lucas' model is static and is concerned
 with explaining the distribution of firms. Consider a firm that produces
 in two stages, first it combines capital and labor with a standard

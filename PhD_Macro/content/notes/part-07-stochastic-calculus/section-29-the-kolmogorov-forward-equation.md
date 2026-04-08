@@ -7,7 +7,7 @@ Forward Equation, which describes the dynamics of the probability
 distribution of a random variable (given its initial value). Moreover,
 it characterizes the stationary distribution of the variable if such
 distribution exists. This is of particular importance for models with
-heterogenous agents because the distribution of the agents in the
+heterogeneous agents because the distribution of the agents in the
 economy is obtained via the KFE.
 
 Given some initial conditions $x_{0}$ and $t_{0}$ the objective
@@ -97,7 +97,7 @@ rearranging gives:
 \]
 where $\int^{x}f\left(\xi\right)d\xi=F\left(x\right)$, being $F$
 the antiderivative of $f$.
-!!! example "Example"
+!!! example "Example 29.1"
 
     **Dynamics and Barriers **Consider a brownian motion with two
     reflecting barriers $\overline{x}$ and $\underline{x}$. The process

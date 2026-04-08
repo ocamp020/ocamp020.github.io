@@ -11,7 +11,7 @@
   }
 
   function typeClass(type) {
-    if (type === "abstract" || type === "info" || type === "example" || type === "note") {
+    if (type === "abstract" || type === "info" || type === "example" || type === "note" || type === "assumption") {
       return type;
     }
     return "note";
@@ -87,6 +87,12 @@
     return restoreMath(marked.parse(protectedMath.text), protectedMath.mathBlocks);
   }
 
+  function renderInlineMarkdown(markdown) {
+    const html = renderMarked(markdown).trim();
+    const singleParagraph = html.match(/^<p>([\s\S]*)<\/p>$/);
+    return singleParagraph ? singleParagraph[1] : html;
+  }
+
   function dedent(lines) {
     return lines
       .map((line) => {
@@ -155,11 +161,12 @@
   }
 
   function renderCallout(segment) {
-    const bodyHtml = segment.body ? renderMarked(segment.body) : "";
+    const bodyHtml = segment.body ? renderMarkdown(segment.body) : "";
+    const titleHtml = renderInlineMarkdown(segment.title);
     if (segment.type === "details") {
       return (
         '<details class="course-proof">' +
-        '<summary>' + escapeHtml(segment.title) + "</summary>" +
+        '<summary>' + titleHtml + "</summary>" +
         '<div class="course-callout-body">' + bodyHtml + "</div>" +
         "</details>"
       );
@@ -167,7 +174,7 @@
 
     return (
       '<section class="course-callout is-' + typeClass(segment.style) + '">' +
-      '<div class="course-callout-title">' + escapeHtml(segment.title) + "</div>" +
+      '<div class="course-callout-title">' + titleHtml + "</div>" +
       '<div class="course-callout-body">' + bodyHtml + "</div>" +
       "</section>"
     );
@@ -255,6 +262,7 @@
 
     const partsHtml = nav.parts
       .map((part) => {
+        const partActive = part.url === currentPath ? "is-active" : "";
         const links = part.sections
           .map((section) => {
             const active = section.url === currentPath ? "is-active" : "";
@@ -263,7 +271,7 @@
           .join("");
         return (
           '<section class="course-sidebar-part">' +
-          '<h3 class="course-sidebar-part-title">' + escapeHtml(part.title) + "</h3>" +
+          '<h3 class="course-sidebar-part-title"><a class="course-sidebar-part-link ' + partActive + '" href="' + part.url + '">' + escapeHtml(part.title) + "</a></h3>' +
           '<ul class="course-sidebar-list">' + links + "</ul>" +
           "</section>"
         );
@@ -313,7 +321,7 @@
   }
 
   async function loadNav() {
-    const response = await fetch(navUrl);
+    const response = await fetch(navUrl, { cache: "no-store" });
     if (!response.ok) {
       throw new Error("Unable to load navigation");
     }
@@ -326,17 +334,26 @@
       return;
     }
 
-    const response = await fetch(article.dataset.markdownPath);
-    if (!response.ok) {
-      article.innerHTML = "<p>Unable to load this section.</p>";
-      return;
-    }
+    try {
+      const response = await fetch(article.dataset.markdownPath, { cache: "no-store" });
+      if (!response.ok) {
+        article.innerHTML =
+          "<p>Unable to load this section.</p>" +
+          "<p><strong>Check:</strong> the local server root and the markdown path for this page.</p>";
+        return;
+      }
 
-    const markdown = await response.text();
-    article.innerHTML = renderMarkdown(markdown);
-    enhancePartMeta(article);
-    enhanceMermaid(article);
-    enhanceMath(article);
+      const markdown = await response.text();
+      article.innerHTML = renderMarkdown(markdown);
+      enhancePartMeta(article);
+      enhanceMermaid(article);
+      enhanceMath(article);
+    } catch (error) {
+      console.error(error);
+      article.innerHTML =
+        "<p>Unable to render this section.</p>" +
+        "<p><strong>Likely causes:</strong> the markdown fetch failed, or a required script such as <code>marked</code> did not load.</p>";
+    }
   }
 
   function bindSearch() {
@@ -378,7 +395,11 @@
       console.error(error);
     }
 
-    await renderArticle();
+    try {
+      await renderArticle();
+    } catch (error) {
+      console.error(error);
+    }
     bindSearch();
   }
 

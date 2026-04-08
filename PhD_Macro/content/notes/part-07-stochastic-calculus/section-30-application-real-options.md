@@ -69,7 +69,7 @@ of the future, which implies that the firm wants to wait forever.
 Now we can solve the stochastic version of the problem. It is no longer
 possible to find $T^{\star}$ directly, but we can still find the
 threshold value $x^{\star}$. To do it we first define the HJB equation,
-recall from equation ([Equation](section-28-dynamic-programming.md#ref-eq-000020continuous-000020time-000020bellman))
+recall from [equation (28.9)](section-28-dynamic-programming.md#ref-eq-000020continuous-000020time-000020bellman)
 that:
 \[
 \rho Vdt=E\left[dV\right]

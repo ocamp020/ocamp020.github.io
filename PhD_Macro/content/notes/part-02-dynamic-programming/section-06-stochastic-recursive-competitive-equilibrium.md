@@ -13,7 +13,12 @@ in the course.
 
 We start by describing the Neoclassical Growth Model, which constitutes
 the backbone of most models used in macroeconomics. The economy is
-populated by a representative firm and a representative household. (Note: A more formal and complete formulation of the model would introduce a continuum of agents (or households) and firms who populate the economy. The households would be price takers and their preferences would have to be homothetic. The price-taking assumption makes their constraints linear, or put another way homogeneous of degree one, the homotheticity ensures that their choices are scale free, so that the choice of an agent with half the income of another agent is to consume half as much of every good. The firms would also be price takers and operate a technology that has constant-returns-to-scale (homogeneous of degree one). This ensures that the production choices of the firms scale one-to-one. These assumptions are enough for aggregation into a representative household and a representative firm.) For now, there is no government. We first outline the problem of
+populated by a representative firm and a representative household.
+
+!!! note "Note"
+    A more formal and complete formulation of the model would introduce a continuum of agents (or households) and firms who populate the economy. The households would be price takers and their preferences would have to be homothetic. The price-taking assumption makes their constraints linear, or put another way homogeneous of degree one, the homotheticity ensures that their choices are scale free, so that the choice of an agent with half the income of another agent is to consume half as much of every good. The firms would also be price takers and operate a technology that has constant-returns-to-scale (homogeneous of degree one). This ensures that the production choices of the firms scale one-to-one. These assumptions are enough for aggregation into a representative household and a representative firm.
+
+For now, there is no government. We first outline the problem of
 the firm and the household and then discuss how to cast them recursively,
 how to understand the stationary equilibrium, and how to compute the
 solution.
@@ -59,7 +64,7 @@ and $S^{t}$ the space of all histories, and $\mu_{t}\left(z^{t}\right)$
 give the probability of history $z^{t}$ $\left(\sum_{z^{t}\in S^{t}}\mu\left(z^{t}\right)=1\right)$.
 Then, the problem of the household can be formally written as
 \begin{align*}
-v\left(a_{0}\right) & =\max_{\left\{ a_{t}\left(\cdot\right),c_{t}\left(\cdot\right),\ell_{t}\left(\cdot\right)\right\} }\sum_{t=0}^{\infty}\sum_{z^{t}\in Z^{t}}\beta^{t}u\left(c_{t}\left(z^{t}\right),\ell^{t}\left(z^{t}\right)\right)\mu_{t}\left(z^{t}\right)\\
+v\left(a_{0}\right) & =\max_{\left\{ a_{t}\left(\cdot\right),c_{t}\left(\cdot\right),\ell_{t}\left(\cdot\right)\right\} }\sum_{t=0}^{\infty}\sum_{z^{t}\in Z^{t}}\beta^{t}u\left(c_{t}\left(z^{t}\right),\ell_{t}\left(z^{t}\right)\right)\mu_{t}\left(z^{t}\right)\\
 \text{s.t. } & \sum_{t=0}^{\infty}\sum_{z^{t}\in Z^{t}}p_{t}\left(z^{t}\right)\left[\left(1+r_{t}\left(z^{t}\right)\right)a_{t}\left(z^{t-1}\right)+w_{t}\left(z^{t}\right)\ell_{t}\left(z^{t}\right)+\pi_{t}\left(z^{t}\right)-c_{t}\left(z^{t}\right)-a_{t+1}\left(z^{t}\right)\right]\geq0,
 \end{align*}
 where we abuse notation by writing $a_{0}\left(z^{-1}\right)=k_{0}$
@@ -68,7 +73,7 @@ stochastic discount factor).
 
 An Arrow-Debreu equilibrium of this economy is therefore defined as
 sequences of functions that depend on histories of shocks. That is,
-an equilibrium is a set sequences for quantities $\left\{ a_{t}\left(\cdot\right),c_{t}\left(\cdot\right),\ell_{t}\left(\cdot\right),k_{t}\left(\cdot\right),\ell_{t}^{d}\left(\cdot\right),\pi_{t}\left(\cdot\right)\right\} $
+an equilibrium is a set of sequences for quantities $\left\{ a_{t}\left(\cdot\right),c_{t}\left(\cdot\right),\ell_{t}\left(\cdot\right),k_{t}\left(\cdot\right),\ell_{t}^{d}\left(\cdot\right),\pi_{t}\left(\cdot\right)\right\} $
 and prices $\left\{ p_{t}\left(\cdot\right),r_{t}\left(\cdot\right),w_{t}\left(\cdot\right)\right\} $
 such that
 
@@ -92,8 +97,8 @@ c_{t}\left(z^{t}\right)+a_{t+1}\left(z^{t}\right)=f\left(z_{t},k_{t}\left(z^{t}\
 In the Arrow-Debreu equilibrium all trading happens at time 0, taking
 as given $\left(k_{0},z_{0}\right)$. We can alternatively define
 a sequential markets equilibrium for this economy. This definition
-avoids introducing the stochastic discount factor. We instead have
-the equilibrium be a set sequences for quantities $\left\{ a_{t}\left(\cdot\right),c_{t}\left(\cdot\right),\ell_{t}\left(\cdot\right),k_{t}\left(\cdot\right),\ell_{t}^{d}\left(\cdot\right),\pi_{t}\left(\cdot\right)\right\} $
+avoids introducing the stochastic discount factor. We instead define
+the equilibrium as a set of sequences for quantities $\left\{ a_{t}\left(\cdot\right),c_{t}\left(\cdot\right),\ell_{t}\left(\cdot\right),k_{t}\left(\cdot\right),\ell_{t}^{d}\left(\cdot\right),\pi_{t}\left(\cdot\right)\right\} $
 and prices $\left\{ r_{t}\left(\cdot\right),w_{t}\left(\cdot\right)\right\} $
 such that
 
@@ -101,8 +106,8 @@ such that
 taking as given prices $\left\{ r_{t}\left(\cdot\right),w_{t}\left(\cdot\right)\right\} $
 and transfers $\left\{ \pi_{t}\left(s^{t}\right)\right\} $.
 \begin{align*}
-v\left(a_{0}\right) & =\max_{\left\{ a_{t}\left(\cdot\right),c_{t}\left(\cdot\right),\ell_{t}\left(\cdot\right)\right\} }\sum_{t=0}^{\infty}\sum_{z^{t}\in Z^{t}}\beta^{t}u\left(c_{t}\left(z^{t}\right),\ell^{t}\left(z^{t}\right)\right)\mu_{t}\left(z^{t}\right)\\
-\text{s.t. } & \left(1+r_{t}\left(z^{t}\right)\right)a_{t}\left(z^{t-1}\right)+w_{t}\left(z^{t}\right)\ell_{t}\left(z^{t}\right)+\pi_{t}\left(z^{t}\right)\geq c_{t}\left(z^{t}\right)a_{t+1}\left(z^{t}\right)\qquad\forall_{t}\forall_{z^{t}\in Z^{t}},
+v\left(a_{0}\right) & =\max_{\left\{ a_{t}\left(\cdot\right),c_{t}\left(\cdot\right),\ell_{t}\left(\cdot\right)\right\} }\sum_{t=0}^{\infty}\sum_{z^{t}\in Z^{t}}\beta^{t}u\left(c_{t}\left(z^{t}\right),\ell_{t}\left(z^{t}\right)\right)\mu_{t}\left(z^{t}\right)\\
+\text{s.t. } & \left(1+r_{t}\left(z^{t}\right)\right)a_{t}\left(z^{t-1}\right)+w_{t}\left(z^{t}\right)\ell_{t}\left(z^{t}\right)+\pi_{t}\left(z^{t}\right)\geq c_{t}\left(z^{t}\right)+a_{t+1}\left(z^{t}\right)\qquad\forall_{t}\forall_{z^{t}\in Z^{t}},
 \end{align*}
 1. Firms maximize their period profits with $\left\{ k_{t}\left(\cdot\right),\ell_{t}^{d}\left(\cdot\right)\right\} $
 taking as given prices $\left\{ r_{t}\left(\cdot\right),w_{t}\left(\cdot\right)\right\} $
@@ -119,7 +124,7 @@ c_{t}\left(z^{t}\right)+a_{t+1}\left(z^{t}\right)=f\left(z_{t},k_{t}\left(z^{t}\
 1. The initial conditions are satisfied, so that $a_{0}\left(z^{-1}\right)=k_{0}$.
 
 The sequential problem of the agents in this economy must therefore
-keep track of an impossible large state vector because the optimal
+keep track of an impossibly large state vector because the optimal
 choices depend on its complete history. Tackling this problem proves
 to be impractical if not impossible. Because of that we seek to re-formulate
 the household's problem in its recursive form. Doing so will also
@@ -159,7 +164,10 @@ only the aggregate (average) capital is relevant: $K_{t}=\int a_{t}d\Gamma_{t}$.
 Because of this, an individual household only needs to keep track
 of aggregate capital and not of the whole distribution. Crucially,
 knowing the aggregate capital is enough to compute the relevant prices
-in the economy. This makes the state $s_{t}=\left(a,z,K\right)$. (Note: The state is often written as $\left(k,z,K\right)$ emphasizing the difference between the "little $k$" faced by an individual household and the "big $K$" faced by the economy as a whole.)
+in the economy. This makes the state $s_{t}=\left(a,z,K\right)$.
+
+!!! note "Note"
+    The state is often written as $\left(k,z,K\right)$ emphasizing the difference between the "little $k$" faced by an individual household and the "big $K$" faced by the economy as a whole.
 
 The household's recursive problem is then
 
@@ -180,7 +188,10 @@ as part of the equilibrium defined below.
 An Recursive Competitive Equilibrium (RCE) is a set of a value function
 $V$, policy functions $g_{k}$ and $g_{\ell}$, updating functions
 $G_{k}$ and price and profit functions $R$, $W$, and $\Pi$, such
-that: (Note: The definition of an RCE can be equivalently be done in terms of stochastic processes for the equilibrium variables (capital, labor, prices, etc.). That is, the equilibrium is the processes for quantities and prices. These stochastic processes are the equivalent of the sequences of quantities and prices that define a non-stochastic equilibrium. However, defining the equilibrium in that way is cumbersome. The stochastic processes are all constructed from the underlying Markov process for $z$ and the policy and price functions that define the RCE. The construction is carried out as shown in [Markov Processes over States](section-05-stochastic-dynamic-programming.md#ref-subsec-markov-processes-over-states).)
+that:
+
+!!! note "Note"
+    The definition of an RCE can be equivalently be done in terms of stochastic processes for the equilibrium variables (capital, labor, prices, etc.). That is, the equilibrium is the processes for quantities and prices. These stochastic processes are the equivalent of the sequences of quantities and prices that define a non-stochastic equilibrium. However, defining the equilibrium in that way is cumbersome. The stochastic processes are all constructed from the underlying Markov process for $z$ and the policy and price functions that define the RCE. The construction is carried out as shown in [Markov Processes over States](section-05-stochastic-dynamic-programming.md#ref-subsec-markov-processes-over-states).
 
 1. The value function $V$ and policy functions $\left\{ g_{a},g_{\ell}\right\} $
 solve the household's dynamic programming problem, taking as given
@@ -286,8 +297,8 @@ context of the problem. We interpret $z$ as productivity and hence
 it makes sense to interpret higher values of $z$ as being better.
 For the resulting solution to be monotone in the states $\left(k,z,K\right)$
 we need the payoffs to be monotone (as we usually assume), the transition
-function $Q$ to be monotone (see [Definition: Monotone transition functions](../part-01-preliminaries/section-03-markov-processes.md#ref-def-000020monotonicity-000020markov-000020)
-and [Proposition](../part-01-preliminaries/section-03-markov-processes.md#ref-prop-monotonicity-markov)).
+function $Q$ to be monotone (see [Definition 3.4](../part-01-preliminaries/section-03-markov-processes.md#ref-def-000020monotonicity-000020markov-000020)
+and [Proposition 3.6](../part-01-preliminaries/section-03-markov-processes.md#ref-prop-monotonicity-markov)).
 
 Crucially, the conditions imposed over the Markov process for $z$
 already guarantee that it is a stationary process with a unique invariant
@@ -339,13 +350,13 @@ price-taking firm. This assumption has important consequences for
 how we set up the firms' problem. The objective of this note is to
 make these consequences apparent. Before tackling them, it is useful
 to state Euler's theorem for homogeneous functions.
-!!! info "Definition: Homogeneous Function"
+!!! info "Definition 6.1: Homogeneous Function"
 
     A function $f:\mathbb{R}^{N}\to\mathbb{R}$
     is homogeneous of degree $g>0$ if $f\left(\lambda\cdot\vec{x}\right)=\lambda^{g}\cdot f\left(\vec{x}\right)$
     for $\lambda>0$.
 
-!!! abstract "Theorem: Euler's Theorem for Homogeneous Functions"
+!!! abstract "Theorem 6.1: Euler's Theorem for Homogeneous Functions"
 
     Let $f:\mathbb{R}^{N}\to\mathbb{R}$
     be differentiable function homogeneous of degree $g$. Then $\frac{\partial f\left(x\right)}{\partial x_{i}}$

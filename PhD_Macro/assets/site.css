@@ -28,6 +28,7 @@ body {
     linear-gradient(180deg, #ece3d7 0%, #f6f0e6 22%, #f8f3ea 100%);
   color: var(--course-ink);
   font-family: "Source Sans 3", sans-serif;
+  font-size: 17px;
   line-height: 1.65;
 }
 
@@ -335,6 +336,22 @@ svg {
   color: var(--course-ink);
 }
 
+.course-sidebar-part-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 0.2rem 0.15rem;
+}
+
+.course-sidebar-part-link:hover {
+  color: var(--course-ink-soft);
+}
+
+.course-sidebar-part-link.is-active {
+  color: var(--course-accent);
+}
+
 .course-sidebar-list {
   margin: 0;
   padding: 0;
@@ -470,6 +487,10 @@ svg {
 
 .course-callout.is-note {
   background: rgba(104, 112, 103, 0.08);
+}
+
+.course-callout.is-assumption {
+  background: rgba(50, 92, 140, 0.08);
 }
 
 .course-proof {

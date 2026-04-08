@@ -8,7 +8,7 @@ outcomes. One can think of a function as mapping certain events in
 a given measure space to outcomes in another measure space. A function
 is measurable if the sets that induce a given outcome are measurable.
 Formally:
-!!! info "Definition: Measurable function"
+!!! info "Definition 23.1: Measurable function"
 
     Let $\left(S,\mathcal{A},\mu\right)$
     and $\left(S^{\prime},\mathcal{A}^{\prime},\mu^{\prime}\right)$ be measure spaces and
@@ -19,7 +19,7 @@ A special case of notable importance is that of $\left(S^{\prime},\mathcal{A}^{\
 where $\lambda$ is the Lebesgue measure on the plane. This are real
 valued functions. In this case the $\mathcal{B}$-measurable sets in
 $\mathbb{R}$ can be characterized in the following way:
-!!! abstract "Theorem"
+!!! abstract "Theorem 23.1"
 
     Let $\left(S,\mathcal{A},\mu\right)$ be a measure space and $f:S\to\mathbb{R}$.
     $f$ is $\mu$-measurable if and only if $f^{-1}\left(\left(-\infty,c\right)\right)=\left\{ x\in S|f\left(x\right)<c\right\} \in\mathcal{A}$
@@ -34,7 +34,7 @@ $\mathbb{R}$ can be characterized in the following way:
 
 Also when the measure space in question is a probability space one
 can characterize formally what a random variable is.
-!!! info "Definition: Random variable"
+!!! info "Definition 23.2: Random variable"
 
     Let $\left(S,\mathcal{A},P\right)$ be a probability
     space and $f:S\to\mathbb{R}$ a real valued function. $f$ is a random
@@ -61,7 +61,7 @@ has to be open) and then all functions that are not continuous are
 not measurable. It is clear that more complete $\sigma$-algebras
 make more difficult to generate counterexamples. The following three
 results show how difficult it is to generate them:
-!!! abstract "Proposition"
+!!! abstract "Proposition 23.1"
 
     Let $f:\mathbb{R}\to\mathbb{R}$.
     
@@ -92,13 +92,13 @@ results show how difficult it is to generate them:
     
     All these sets are in $\mathcal{B}$, then $f$ is $\mathcal{B}$-measurable.
 
-!!! abstract "Corollary"
+!!! abstract "Corollary 23.1"
 
     The composition of measurable functions is measurable. In particular
     the composition of a continuous function with a measurable function
     is measurable.
 
-!!! abstract "Proposition"
+!!! abstract "Proposition 23.2"
 
     Let $S=\left\{ s_{1},s_{2},\ldots\right\} $ be a countable set (potentially
     infinite) and $\mathcal{A}=2^{S}$ a $\sigma$-algebra on $S$. Then
@@ -112,7 +112,7 @@ results show how difficult it is to generate them:
 In a more general way one can establish the measurability of a function
 by relating to a class of well behave 'simple' functions. The base
 for this class is the indicator function.
-!!! info "Definition: Indicator Function"
+!!! info "Definition 23.3: Indicator Function"
 
     Let $\left(S,\mathcal{A}\right)$ be a
     measurable space. An indicator function $\chi_{A}:S\to\mathbb{R}$
@@ -125,7 +125,7 @@ for this class is the indicator function.
     \]
     Clearly $\chi_{A}$ is measurable if and only if $A\in\mathcal{A}$.
 
-!!! info "Definition: Simple Function"
+!!! info "Definition 23.4: Simple Function"
 
     Let $\left(S,\mathcal{A}\right)$ be a measurable
     space. A simple function is a function that takes at most countably
@@ -139,7 +139,7 @@ for this class is the indicator function.
 
 Characterizing the measurability of simple functions is slightly more
 complicated.
-!!! abstract "Proposition"
+!!! abstract "Proposition 23.3"
 
     A simple function taking values $\left\{ y_{1},y_{2},\ldots\right\} $
     is measurable if and only if the sets $A_{i}=\left\{ s\in S|\phi\left(s\right)=y_{n}\right\} $
@@ -165,8 +165,8 @@ complicated.
 In what follows all simple functions will be considered measurable.
 The importance of simple functions is given by the applications of
 the following proposition.
-<a id="ref-prop-000020pointwise-000020limit-000020and-000020measurablility" class="course-anchor"></a>
-!!! abstract "Proposition"
+<a id="ref-prop-000020pointwise-000020limit-000020and-000020measurability" class="course-anchor"></a>
+!!! abstract "Proposition 23.4"
 
     Let
     $\left(S,\mathcal{A}\right)$ be a measurable space and let $\left\{ f_{n}\right\} $
@@ -178,12 +178,12 @@ the following proposition.
 
     The proof can be found in [Stokey et al. (1989, Sec. 7.3)](https://books.google.com/books?id=tWYo0QolyLAC) or in [Kolmogorov and Fomin (2012, Sec. 28.1)](https://books.google.com/books?id=cbbCAgAAQBAJ).
 
-!!! abstract "Corollary"
+!!! abstract "Corollary 23.2"
 
     If $f$ is non-negative one can choose the sequence $\left\{ f_{n}\right\} $
     to be strictly increasing.
 
-!!! abstract "Corollary"
+!!! abstract "Corollary 23.3"
 
     If $f$ is bounded one can choose the sequence $\left\{ f_{n}\right\} $
     to converge uniformly.
@@ -191,7 +191,7 @@ the following proposition.
 The main application is the following result that gives a characterization
 of measurable functions in terms of simple functions:
 <a id="ref-simple-000020functions-000020and-000020measurability" class="course-anchor"></a>
-!!! abstract "Proposition"
+!!! abstract "Proposition 23.5"
 
     A function
     $f$ is measurable if and only if it an be represented as the limit
@@ -227,7 +227,7 @@ of measurable functions in terms of simple functions:
     \]
 
 Other results will follow and are left stated without proof:
-!!! abstract "Proposition"
+!!! abstract "Proposition 23.6"
 
     Let $f,g$ be measurable functions and $\alpha\in\mathbb{R}$ then:
     
@@ -239,7 +239,7 @@ Other results will follow and are left stated without proof:
 
 Finally continuity of functions is used to strengthen the intuition
 around measurability.
-!!! abstract "Proposition"
+!!! abstract "Proposition 23.7"
 
     Let $f,g$ be equivalent function defined on an interval $E$, that
     is they are equal a.e. If $f$ and $g$ are continuous then they coincide.
@@ -255,7 +255,7 @@ around measurability.
     but $B_{\delta}\left(x\right)$ has strictly positive measure, contradicting
     $f$ and $g$ being equivalent.
 
-!!! abstract "Proposition"
+!!! abstract "Proposition 23.8"
 
     A function $f$ equivalent to a measurable function $g$ is measurable.
 
@@ -267,7 +267,7 @@ around measurability.
     is the first one (taking into account the completion of the $\sigma$-algebra).
     This proves measurability.
 
-!!! abstract "Corollary"
+!!! abstract "Corollary 23.4"
 
     A function $f$ equivalent to a continuous function is measurable.
 
@@ -279,7 +279,7 @@ This implies that if a function is continuous a.e. then it is measurable,
 again the behavior of functions in sets of measure zero carries no
 consequence. It turns out that this corollary can be strengthened.
 The result is powerful and is stated without a proof:
-!!! abstract "Theorem: Luzin"
+!!! abstract "Theorem 23.2: Luzin"
 
     Let $f:\left[a,b\right]\to\mathbb{R}$ be a function.
     $f$ is measurable if and only if for all $\epsilon>0$ there exists

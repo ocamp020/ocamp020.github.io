@@ -114,7 +114,7 @@ The following is an important result that links the sales shares $\{\lambda_{s}\
 to the matrix $\Psi$ defined above. We return to this later when
 we relate the results of this economy to concepts from network and
 graph theory.
-!!! abstract "Proposition"
+!!! abstract "Proposition 16.1"
 
     The vector of sales shares then satisfies
     \[
@@ -141,7 +141,7 @@ With this, we can solve for the output of each sector in terms of
 productivity. A sector's output depends on its own productivity shock
 and on the productivity of the sectors that are upstream from it in
 production.
-!!! abstract "Proposition: Sectoral Output"
+!!! abstract "Proposition 16.2: Sectoral Output"
 
     Sectoral output can be written as
     \[
@@ -174,7 +174,7 @@ aggregate and solve for $Y$. Changes in aggregate output are weighted
 averages of sectoral productivity changes, where the weights are gross
 sales relative to GDP rather than value-added shares. In this Cobb-Douglas
 economy the weights $\lambda_{s}$ are constant.
-!!! abstract "Proposition: Aggregation"
+!!! abstract "Proposition 16.3: Aggregation"
 
     Aggregate output satisfies
     \[

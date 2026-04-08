@@ -5,23 +5,23 @@
 
 As we will see in [The Bellman Equation](../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.md#ref-sec-the-bellman-equation) a great
 deal of problems can be expressed in a recursive setting, and the
-use of recursive methods can provide solution to problems that would
+use of recursive methods can provide solutions to problems that would
 otherwise be impossible to handle. When dealing with random variables
-the same topic arises, in particular one can think of a sequence made
-by the realizations of a random variable, because the sequence is
-ordered one can also think of each element of the sequence being realized
-sequentially, in this way its natural to consider the case in which
-one element of the sequence depends on the value of the previous element.
-More formally, when the distribution of one element of the sequence
-depends on the realization of the previous element. Markov processes
-are processes that behave in this way.
+the same issue arises. In particular, one can think of a sequence
+formed by the realizations of a random variable. Because the sequence
+is ordered, one can think of each element as being realized sequentially.
+In this way, it is natural to consider the case in which one element
+of the sequence depends on the value of the previous element. More
+formally, Markov processes are those in which the distribution of
+one element of the sequence depends on the realization of the previous
+one.
 
 The objective is to introduce shocks to a dynamic program, so we start
 by considering the deterministic dynamic program of [The Bellman Equation](../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.md#ref-sec-the-bellman-equation),
 characterized by the Bellman equation:
 <a id="ref-eq-000020fe-2" class="course-anchor"></a>
 \begin{equation}
-v\left(x\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta v\left(y\right)\right\}
+v\left(x\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y\right)+\beta v\left(y\right)\right\} \tag{3.1}
 \end{equation}
 The idea is to add a random variable whose realization $z$ will affect
 the problem, $z$ is a state of the problem and its drawn each period
@@ -30,11 +30,11 @@ consider $\left(Z,\mathcal{Z},\lambda\right)$ a probability space, then
 we can define the problem to be::
 <a id="ref-eq-000020fe-3" class="course-anchor"></a>
 \begin{equation}
-v\left(x,z\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y,z\right)+\beta\int v\left(y,z^{\prime}\right)\lambda\left(dz^{\prime}\right)\right\}
+v\left(x,z\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y,z\right)+\beta\int v\left(y,z^{\prime}\right)\lambda\left(dz^{\prime}\right)\right\} \tag{3.2}
 \end{equation}
 Recall that $\lambda:\mathcal{Z}\to\mathbb{R}_{+}$ maps sets of the
 $\sigma$-algebra $\mathcal{Z}$ to real numbers. The problem above can
-be solved using the results of Sections ([Measure](../part-06-random-variables-and-probability/section-22-measure.md#ref-sec-measure)) to ([The Stieltjes integral](../part-06-random-variables-and-probability/section-25-the-stieltjes-integral.md#ref-sec-the-stieltjes-integral)),
+be solved using the results of Sections ([Section 22: Measure](../part-06-random-variables-and-probability/section-22-measure.md#ref-sec-measure)) to ([Section 25: The Stieltjes integral](../part-06-random-variables-and-probability/section-25-the-stieltjes-integral.md#ref-sec-the-stieltjes-integral)),
 but it is not general enough for our purposes because the distribution
 of $z$ is fixed, and each draw is taken (each period) from the same
 distribution.
@@ -47,20 +47,20 @@ for $z^{\prime}$. This is called a transition function and it allows to
 express the problem as:
 <a id="ref-eq-000020fe-3-1" class="course-anchor"></a>
 \begin{equation}
-v\left(x,z\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y,z\right)+\beta\int v\left(y,z^{\prime}\right)Q\left(z,dz^{\prime}\right)\right\}
+v\left(x,z\right)=\sup_{y\in\Gamma\left(x\right)}\left\{ F\left(x,y,z\right)+\beta\int v\left(y,z^{\prime}\right)Q\left(z,dz^{\prime}\right)\right\} \tag{3.3}
 \end{equation}
 The objective is now to characterize transition functions and the
 properties of the process that they generate.
 
 ## Transition functions
 
-!!! info "Definition: Transition Function"
+!!! info "Definition 3.1: Transition Function"
 
     Let $\left(Z,\mathcal{Z}\right)$ be a
     measurable space. A transition function is a function $Q:Z\times\mathcal{Z}\to\left[0,1\right]$
     such that:
-    
-    
+
+
     1. For each $z\in Z$ the function $Q\left(z,\cdot\right)$ is a probability
     measure on $\left(Z,\mathcal{Z}\right)$.
     1. For each $A\in\mathcal{Z}$ the function $Q\left(\cdot,A\right)$ is
@@ -76,13 +76,13 @@ Q\left(a,A\right)=\Pr\left(z^{\prime}\in A|z=a\right)
 
 Any transition function defines two operators that will be of great
 importance later.
-!!! info "Definition"
+!!! info "Definition 3.2"
 
     Let $Q$ be a transition function on a measurable space $\left(Z,\mathcal{Z}\right)$.
     Define $\mathcal{F}$ as the set of $\mathcal{Z}$-measurable functions
     and $\Lambda$ the set of probability measures on $\left(Z,\mathcal{Z}\right)$.
-    
-    
+
+
     1. The Markov operator of $Q$ is an operator $T$ defined on the set
     of $\mathcal{Z}$-measurable functions:
     \[
@@ -107,7 +107,7 @@ be useful it is first necessary to check that they are sufficiently
 well behaved. The following propositions will establish that the operators
 can be used recursively and their proof will be instructive of how
 proofs go in measure theory.
-!!! abstract "Proposition"
+!!! abstract "Proposition 3.1"
 
     Let $\left(Z,\mathcal{Z}\right)$ be a measurable space and $Q$ a transition
     function on that space with Markov operator $T$. Then $T:M^{+}\left(Z,\mathcal{Z}\right)\to M^{+}\left(Z,\mathcal{Z}\right)$
@@ -119,11 +119,11 @@ proofs go in measure theory.
     The proof is done iteratively, first for indicator functions, then
     it is generalized to simple functions and then to arbitrary nonnegative
     measurable functions.
-    
+
     First, for any $f\in M^{+}$ we have that $Tf$ is a nonnegative function
     of extended real value, this follows immediately, then it is left
     to check that $Tf$ is also measurable.
-    
+
     \begin{casenv}
     - Let $A\in\mathcal{Z}$ and $f=\chi_{A}$, where $\chi_{A}$ is by construction
     measurable and nonnegative. Then:
@@ -145,7 +145,7 @@ proofs go in measure theory.
     is also measurable because the sum and scalar product of measurable
     functions is also measurable .
     - Let $f$ be an arbitrary nonnegative, extended real value, measurable
-    function. By [Proposition](../part-06-random-variables-and-probability/section-23-measurable-functions.md#ref-simple-000020functions-000020and-000020measurability)
+    function. By [Proposition 23.5](../part-06-random-variables-and-probability/section-23-measurable-functions.md#ref-simple-000020functions-000020and-000020measurability)
     we know that $f$ can be expressed as the limit of point-wise convergent
     sequence of simple functions because it is measurable and nonnegative.
     So for all $z$ we have:
@@ -156,13 +156,18 @@ proofs go in measure theory.
     & = & \lim T\phi_{n}\left(z\right)
     \end{eqnarray*}
     where the third step of interchanging the limit and the integral follows
-    from Lebesgue's Monotone Convergence theorem. (Note: The theorem states that if $\left\{ f_{n}\right\} $ is a monotone increasing sequence of nonnegative measurable functions then that converges pointwise to $f$ then $\int fd\mu=\lim\int f_{n}d\mu$. Recall from [Proposition](../part-06-random-variables-and-probability/section-23-measurable-functions.md#ref-simple-000020functions-000020and-000020measurability) that the sequence $\left\{ \phi_{n}\right\} $ of simple functions can be chosen to be monotone increasing.) Finally the pointwise limit of measurable functions is a measurable
-    function ([Proposition](../part-06-random-variables-and-probability/section-23-measurable-functions.md#ref-prop-000020pointwise-000020limit-000020and-000020measurablility)).
+    from Lebesgue's Monotone Convergence theorem.
+
+    !!! note "Note"
+        The theorem states that if $\left\{ f_{n}\right\} $ is a monotone increasing sequence of nonnegative measurable functions that converges pointwise to $f$, then $\int fd\mu=\lim\int f_{n}d\mu$. Recall from [Proposition 23.5](../part-06-random-variables-and-probability/section-23-measurable-functions.md#ref-simple-000020functions-000020and-000020measurability) that the sequence $\left\{ \phi_{n}\right\} $ of simple functions can be chosen to be monotone increasing.
+
+    Finally the pointwise limit of measurable functions is a measurable
+    function ([Proposition 23.4](../part-06-random-variables-and-probability/section-23-measurable-functions.md#ref-prop-000020pointwise-000020limit-000020and-000020measurability)).
     The result follows because $T\phi_{n}$ is measurable by the previous
     case.
     \end{casenv}
 
-!!! abstract "Corollary"
+!!! abstract "Corollary 3.1"
 
     Let $\left(Z,\mathcal{Z}\right)$ be a measurable space and $Q$ a transition
     function on that space with Markov operator $T$. Then $T:B\left(Z,\mathcal{Z}\right)\to B\left(Z,\mathcal{Z}\right)$
@@ -181,7 +186,7 @@ if $f\in B\left(Z,\mathcal{Z}\right)$ then $Tf\in B\left(Z,\mathcal{Z}\right)$,
 which allows to evaluate $T\left(Tf\right)$, and so on. It will also
 be important to apply the adjoint operator iteratively to a probability
 measure. The following proposition will enable us to do so.
-!!! abstract "Proposition"
+!!! abstract "Proposition 3.2"
 
     Let $\left(Z,\mathcal{Z}\right)$ be a measurable space and $Q$ a transition
     function on that space with Adjoint operator $T^{\star}$. Then $T^{\star}:\Lambda\left(Z,\mathcal{Z}\right)\to\Lambda\left(Z,\mathcal{Z}\right)$
@@ -191,8 +196,8 @@ measure. The following proposition will enable us to do so.
 ??? success "Proof"
 
     Let $\lambda\in\Lambda\left(Z,\mathcal{Z}\right)$ and consider $T^{\star}\lambda\left(A\right)=\int Q\left(z,A\right)d\lambda\left(dz\right)$.
-    
-    
+
+
     1. $T^{\star}\lambda\geq0$ for all $\left(z,A\right)$ because $Q\left(z,A\right)\geq0$.
     1. $T^{\star}\lambda\left(\emptyset\right)=\int Q\left(z,\emptyset\right)\lambda\left(dz\right)=\int0\lambda\left(dz\right)=0$,
     because $Q\left(z,\cdot\right)$ is a probability measure.
@@ -212,7 +217,7 @@ measure. The following proposition will enable us to do so.
 The following result establishes a duality between the Markov operator
 and its adjoint, in words it says that the expected value of a function
 tomorrow can be computed with either operator.
-!!! abstract "Proposition"
+!!! abstract "Proposition 3.3"
 
     Let $\left(Z,\mathcal{Z}\right)$ be a measurable space and $Q$ a transition
     function on that space. Then for any function $f\in B\left(Z,\mathcal{Z}\right)$
@@ -241,7 +246,7 @@ will give the probability of going from initial point $z$ to a value
 in set $A$ in exactly $n$ periods. Its easy to show that each $Q^{n}$
 is a transition function.
 
-Finally its clear that starting from an initial probability $\left(\lambda\right)$
+Finally, it is clear that starting from an initial probability $\left(\lambda\right)$
 the Adjoint operator can be used to define a sequence of probability
 measures $\left\{ \lambda^{n}\right\} $ as $\lambda^{n}=T^{\star}\lambda^{n-1}$,
 we interpret $\lambda$ as the distribution of the state $z$ in the
@@ -251,17 +256,16 @@ of $z$ in the $n^{th}$ period.
 As a side note a transition function can have stronger properties
 that are of great use in stochastic dynamic programming:
 <a id="ref-def-feller-property" class="course-anchor"></a>
-!!! info "Definition: Feller Property"
+!!! info "Definition 3.3: Feller Property"
 
     A transition
     function $Q$ has the feller property if its Markov operator maps
     the set of continuous bounded function into itself. $T:C\left(Z\right)\to C\left(Z\right)$.
 
 <a id="ref-def-000020monotonicity-000020markov-000020" class="course-anchor"></a>
-!!! info "Definition"
+!!! info "Definition 3.4: Monotone transition functions"
 
-    **(Monotone
-    transition functions) **A transition function $Q$ is said to be monotone
+    A transition function $Q$ is said to be monotone
     if its Markov operator maps nondecreasing functions to nondecreasing
     functions.
 
@@ -278,10 +282,9 @@ be a product space. Now let $Q$ be a transition function on $\left(Z,\mathcal{Z}
 A probability measure on the sequence given $z_{0}$, the initial
 value of the variable is:
 <a id="ref-def-probability-measure-sequences" class="course-anchor"></a>
-!!! info "Definition"
+!!! info "Definition 3.5: Probability measure on finite sequence"
 
-    **(Probability measure
-    on finite sequence) **$\mu^{t}:Z\times\mathcal{Z}^{t}\to\left[0,1\right]$
+    $\mu^{t}:Z\times\mathcal{Z}^{t}\to\left[0,1\right]$
     is the probability distribution for the finite sequence and its defined
     as:
     \[
@@ -301,7 +304,7 @@ that $\sigma$-algebra.
 To do this define the set of finite-measurable rectangles. These sets
 establish outcomes for the variables for the first $T$ periods, leaving
 unspecified what happens to the sequence afterwards.
-!!! info "Definition: Finite-Measurable Rectangles"
+!!! info "Definition 3.6: Finite-Measurable Rectangles"
 
     $B$ is a finite measurable
     rectangle if its of the form:
@@ -322,7 +325,7 @@ our notion of measure for finite-measurable rectangles.
 
 Now we can define what a stochastic process is:
 <a id="ref-def-stochastic-process" class="course-anchor"></a>
-!!! info "Definition: Stochastic Process"
+!!! info "Definition 3.7: Stochastic Process"
 
     Let $\left(\Omega,\mathcal{F},P\right)$
     be a probability space. A stochastic process on $\left(\Omega,\mathcal{F},P\right)$
@@ -330,7 +333,7 @@ Now we can define what a stochastic process is:
     a measurable space $\left(Z,\mathcal{Z}\right)$and a sequence of functions
     $\sigma_{t}:\Omega\to Z$ such that each $\sigma_{t}$ is $\mathcal{F}_{t}$-measurable.
 
-!!! info "Definition: Sample Path"
+!!! info "Definition 3.8: Sample Path"
 
     Let $\omega\in\Omega$, then $\left(\sigma_{1}\left(\omega\right),\sigma_{2}\left(\omega\right),\ldots\right)$
     is called the sample path of the stochastic process given $\omega$.
@@ -349,7 +352,7 @@ have followed.
 
 Given a stochastic process we can use probability measure $P$ to
 induce measures on finite sets of sample paths.
-!!! info "Definition: Probabilities on Paths"
+!!! info "Definition 3.9: Probabilities on Paths"
 
     Let $C\in\mathcal{Z}^{n}$ we can define:
     \[
@@ -358,14 +361,14 @@ induce measures on finite sets of sample paths.
     This is the probability that an event occurs and the sample path lies
     in $C$ between periods $t+1$ and $t+n$.
 
-!!! info "Definition: Stationary Stochastic Process"
+!!! info "Definition 3.10: Stationary Stochastic Process"
 
     A stochastic process is said
     to be stationary if $P_{t+1,\ldots,t+n}\left(C\right)$ is independent
     of $t$ for all $n$ and $C$. That is, if it does not matter the
     point in time where we start the sequence.
 
-!!! info "Definition: Conditional probability"
+!!! info "Definition 3.11: Conditional probability"
 
     Let $P_{t+1,\ldots,t+n}\left(C|a_{t-s},\ldots,a_{t-1},a_{t}\right)$
     be the conditional probability of the event $\left\{ \omega\in\Omega | \left(\sigma_{t+1}\left(\omega\right),\ldots\sigma_{t+n}\left(\omega\right)\right)\in C\right\} $
@@ -373,7 +376,7 @@ induce measures on finite sets of sample paths.
     happened.
 
 Now we can define what a Markov process is:
-!!! info "Definition: Markov Process"
+!!! info "Definition 3.12: Markov Process"
 
     A stochastic process is a Markov process
     if:
@@ -415,7 +418,7 @@ for $C\in\mathcal{Z}$.
 We now zoom into a special type of Markov process that is particularly
 useful in applications of dynamic programming. A Markov chain (or
 finite state Markov chain):
-!!! info "Definition: Markov Chain"
+!!! info "Definition 3.13: Markov Chain"
 
     A Markov chain is a Markov process defined
     on a space $Z=\left\{ z_{1},\ldots,z_{l}\right\} $ with finite dimension
@@ -431,9 +434,14 @@ Before characterizing the transition function of a Markov chain it
 is useful to recall that the natural $\sigma$-algebra over $Z$ is
 $\mathcal{Z}=2^{Z}$ (the power set), and that the space of probabilities
 distributions over $Z$ is formed by vectors $p\in\mathbb{R}^{l}$
-such that $p_{i}\geq0$ and $\underset{i=1}{\overset{l}{\sum}}p_{i}=1$ (Note: Formally $p\in\Delta^{l}$, where $\Delta^{l}=\left\{ p\in\mathbb{R}_{+}^{l}|\underset{i=1}{\overset{l}{\sum}}p_{i}=1\right\} $ is the $l-1$ dimensional simplex. This same set is particularly useful in characterizing price systems in finite dimensional exchange economies.). The transition function of the Markov process can be then characterized
+such that $p_{i}\geq0$ and $\underset{i=1}{\overset{l}{\sum}}p_{i}=1$
+
+!!! note "Note"
+    Formally $p\in\Delta^{l}$, where $\Delta^{l}=\left\{ p\in\mathbb{R}_{+}^{l}|\underset{i=1}{\overset{l}{\sum}}p_{i}=1\right\} $ is the $l-1$ dimensional simplex. This same set is particularly useful in characterizing price systems in finite dimensional exchange economies.
+
+. The transition function of the Markov process can be then characterized
 by a matrix:
-!!! info "Definition: Markov Matrix / Stochastic Matrix"
+!!! info "Definition 3.14: Markov Matrix / Stochastic Matrix"
 
     A square matrix $\Pi=\left[\pi_{ij}\right]$
     of dimensions $l\times l$ is considered a Markov (or stochastic)
@@ -499,20 +507,23 @@ row-vector) corresponds to the unconditional probability that $z_{t+1}=z_{j}$:
 $\Pr\left(z_{t+1}=z_{j}\right)$.
 
 It shouldn't be a surprise that the Markov operator is characterized
-by $\Pi^{\prime}$ and the adjoint operator by its transpose $\Pi$. (Note: If vectors are assumed to be columns instead of rows then $Tf=\Pi f$ and $T^{\star}p=\Pi^{\prime}p$. The adjoint is characterized as the transpose of the Markov operator in any case.)
+by $\Pi^{\prime}$ and the adjoint operator by its transpose $\Pi$.
+
+!!! note "Note"
+    If vectors are assumed to be columns instead of rows then $Tf=\Pi f$ and $T^{\star}p=\Pi^{\prime}p$. The adjoint is characterized as the transpose of the Markov operator in any case.
 
 As with general Markov processes there is a special interest in the
-limit behavior of the adjoint operator $\left(\underset{n\to\infty}{\lim}\Pi^{n}p\right)$,
+limit behavior of the adjoint operator $\left(\underset{n\to\infty}{\lim}p\Pi^{n}\right)$,
 in particular the existence and properties of an invariant distribution,
 that is $p^{\star}$ such that $p^{\star}=p^{\star}\Pi$ (generally
-$\lambda^{\star}=T\lambda^{\star}$). The problem of finding an invariant
+$\lambda^{\star}=T^{\star}\lambda^{\star}$). The problem of finding an invariant
 distribution is frequently cast as an eigenvector problem. $p^{\star}$
 is the eigenvector associated with any unit-eigenvalue of $\Pi$.
 
 Another property that will be of interest is the presence of Ergodic
 sets. These are subsets of the space $E\subseteq Z$ that the process
 never leaves once it takes a value in them. Formally:
-!!! info "Definition: Ergodic Set"
+!!! info "Definition 3.15: Ergodic Set"
 
     A set $E\subseteq Z$ is ergodic if and only
     if $Q\left(z_{i},E\right)=1$ for all $z_{i}\in E$ and there does
@@ -528,10 +539,9 @@ the existence and uniqueness of ergodic sets, invariant distributions,
 and the convergence of the sequences $\left\{ \frac{1}{n}\underset{k=0}{\overset{n}{\sum}}\Pi^{k}\right\} $
 and $\left\{ \Pi^{n}\right\} $. (clearly if the second sequence converges
 so does the first one).
-!!! example "Example"
+!!! example "Example 3.1: Uniqueness of ergodic set, convergence of $\left\{ \Pi^{n}\right\} $"
 
-    \textbf{(Uniqueness of ergodic set, convergence of $\left\{ \Pi^{n}\right\} $)
-    }Let $l=2$ and consider the Markov matrix:
+    Let $l=2$ and consider the Markov matrix:
     \[
     \Pi=\left[\begin{array}{cc}
     \frac{3}{4} & \frac{1}{4}\\
@@ -551,10 +561,9 @@ so does the first one).
 
 **Note: **Convergence is easily defined in this setup because
 the limit is taken element wise.
-!!! example "Example"
+!!! example "Example 3.2: Uniqueness of a ergodic set, convergence of $\left\{ \Pi^{n}\right\} $"
 
-    \textbf{(Uniqueness of a ergodic set, convergence of $\left\{ \Pi^{n}\right\} $)
-    }Let $l=3$ and $\gamma\in\left(0,1\right)$. Consider the Markov
+    Let $l=3$ and $\gamma\in\left(0,1\right)$. Consider the Markov
     matrix:
     \[
     \Pi=\left[\begin{array}{ccc}
@@ -583,10 +592,9 @@ the limit is taken element wise.
     \]
     and the invariant distribution is $p^{\star}=\left(0,\frac{1}{2},\frac{1}{2}\right)$.
 
-!!! example "Example"
+!!! example "Example 3.3: Cyclical sets , convergence of $\left\{ \frac{1}{n}\underset{k=0}{\overset{n}{\sum}}\Pi^{k}\right\} $"
 
-    \textbf{(Cyclical sets , convergence of $\left\{ \frac{1}{n}\underset{k=0}{\overset{n}{\sum}}\Pi^{k}\right\} $)
-    }Consider an $l$-dimensional Markov chain and order its states into
+    Consider an $l$-dimensional Markov chain and order its states into
     two subsets, the first one with $k$ elements and the second one with
     $l-k$ elements. Suppose the Markov matrix has the form:
     \[
@@ -613,7 +621,7 @@ the limit is taken element wise.
     In this example the sequence $\left\{ \Pi^{n}\right\} $ does not
     converge but its odd and even elements do, then the sequence $\left\{ \frac{1}{n}\underset{k=0}{\overset{n}{\sum}}\Pi^{k}\right\} $
     does converge.
-    
+
     For example if $l=4$, $k=2$ and $\Pi_{1}=\Pi_{2}$:
     \[
     \lim_{n\to\infty}\Pi^{2n}=\left[\begin{array}{cccc}
@@ -639,10 +647,9 @@ the limit is taken element wise.
     An invariant distribution is found as one of the rows of the last
     limit: $p^{\star}=\left(\frac{1}{4},\frac{1}{4},\frac{1}{4},\frac{1}{4}\right)$.
 
-!!! example "Example"
+!!! example "Example 3.4: Two ergodic sets, Infinitely many invariant distributions"
 
-    **(Two ergodic sets, Infinitely many invariant distributions)
-    **Consider an $l$-dimensional Markov chain and order its states into
+    Consider an $l$-dimensional Markov chain and order its states into
     two subsets, the first one with $k$ elements and the second one with
     $l-k$ elements. Suppose the Markov matrix has the form:
     \[
@@ -651,8 +658,8 @@ the limit is taken element wise.
     0 & \Pi_{2}
     \end{array}\right]
     \]
-    where the first matrix $\Pi_{1}$ is of dimension $k\times\left(l-k\right)$
-    and matrix $\Pi_{2}$ of dimension $\left(l-k\right)\times k$. Clearly
+    where the first matrix $\Pi_{1}$ is of dimension $k\times k$
+    and matrix $\Pi_{2}$ of dimension $\left(l-k\right)\times\left(l-k\right)$. Clearly
     once the process enters the first subset it never leaves it. The same
     goes for the second subset. Then they are both ergodic. Also $\Pi^{n}=\left[\begin{array}{cc}
     \Pi_{1}^{n} & 0\\
@@ -675,10 +682,9 @@ the limit is taken element wise.
     and $p_{2}^{\star}=\left(0,0,\frac{1}{2},\frac{1}{2}\right)$.
     But any convex combination of them is also an invariant distribution.
 
-!!! example "Example"
+!!! example "Example 3.5: Two ergodic sets, Infinitely many invariant distributions"
 
-    **(Two ergodic sets, Infinitely many invariant distributions)
-    **Let $l=3$, $\gamma\in\left(0,2\right)$ and $\alpha,\beta\geq0$
+    Let $l=3$, $\gamma\in\left(0,2\right)$ and $\alpha,\beta\geq0$
     such that $\alpha+\beta=1$. Consider the Markov matrix:
     \[
     \Pi=\left[\begin{array}{ccc}
@@ -711,22 +717,22 @@ all the possible outcomes of a Markov chain. In particular, an ergodic
 set and a limit distribution always exist, but they need not be unique,
 and although the sequence $\left\{ \Pi^{n}\right\} $ need not converge,
 the sequence $\left\{ \frac{1}{n}\underset{k=0}{\overset{n}{\sum}}\Pi^{k}\right\} $
-always converges, and its limit gives away the invariant distributions.
+always converges, and its limit characterizes the invariant distributions.
 <a id="ref-thm-000020markov-000020chains" class="course-anchor"></a>
-!!! abstract "Theorem"
+!!! abstract "Theorem 3.1"
 
     Let $Z=\left(z_{1},\ldots,z_{l}\right)$
     and denote the stochastic matrix by its elements: $\Pi=\left[\pi_{ij}\right]$.
     The powers of $\Pi$ are also denoted by its elements $\Pi^{n}=\left[\pi_{ij}^{\left(n\right)}\right]$.
-    
+
     1. $Z$ can be partitioned into $M\geq1$ ergodic sets and a transient
     set (an ergodic set always exists).
     1. The sequence $\left\{ \frac{1}{n}\underset{k=0}{\overset{n}{\sum}}\Pi^{k}\right\} $
     always converges to a Markov matrix $\overline{\Pi}$.
-    
+
       1. For any $p_{0}\in\Delta^{l}$ and $p_{k}=p_{0}\Pi^{k}$ it holds that:
     $\frac{1}{n}\underset{k=0}{\overset{n}{\sum}}p_{k}\to p_{0}\overline{\Pi}$.
-    
+
     1. Each row of $\overline{\Pi}$ is an invariant distribution, and every
     invariant distribution is a convex combination of the rows of $\overline{\Pi}$
     (so $p_{0}\overline{\Pi}$ is an invariant distribution for all $p_{0}\in\Delta^{l}$).
@@ -736,14 +742,14 @@ We can get uniqueness of the ergodic set and the invariant distribution
 under a "reachability" condition (at least one state should be
 reachable in finite time starting from anywhere).
 <a id="ref-thm-000020markov-000020chains-0000202" class="course-anchor"></a>
-!!! abstract "Theorem"
+!!! abstract "Theorem 3.2"
 
     Let $Z$ and $\Pi$
-    as in [Theorem](#ref-thm-000020markov-000020chains). $\Pi$ has a
+    as in [Theorem 3.1](#ref-thm-000020markov-000020chains). $\Pi$ has a
     unique ergodic set if and only if there exists a state $z_{j}$ such
     that for all $i\in\left(1,\ldots,l\right)$ there exist $n\geq1$
     such that $\pi_{ij}^{\left(n\right)}>0$.
-    
+
     Moreover, if this is the case $\Pi$ has a unique invariant distribution
     $p^{\star}$ and all rows of $\overline{\Pi}$ are equal to $p^{\star}$
     (so for any $p_{0}\in\Delta^{l}$ we have $p_{0}\overline{\Pi}=p^{\star}$).
@@ -751,15 +757,15 @@ reachable in finite time starting from anywhere).
 The previous result still does not rule out cyclicality in the ergodic
 set. We can get this under a "mixing" condition.
 <a id="ref-thm-000020markov-000020chains-0000203" class="course-anchor"></a>
-!!! abstract "Theorem"
+!!! abstract "Theorem 3.3"
 
     Let $Z$ and $\Pi$
-    as in [Theorem](#ref-thm-000020markov-000020chains). For $n=1,2,\ldots$
+    as in [Theorem 3.1](#ref-thm-000020markov-000020chains). For $n=1,2,\ldots$
     and $j=1,\ldots,l$ define $\epsilon_{j}^{\left(n\right)}=\underset{i}{\min}\pi_{ij}^{\left(n\right)}$
     and $\epsilon^{\left(n\right)}=\underset{j=1}{\overset{l}{\sum}}\epsilon_{j}^{\left(n\right)}$.
     $Z$ has a unique ergodic set without cyclically moving subsets if
     and only if for some $N\geq1$ it holds that $\epsilon^{\left(N\right)}>0$.
-    
+
     Moreover, if this is the case $\Pi$ has a unique invariant distribution
     $p^{\star}$ and the sequence $\left\{ \Pi^{n}\right\} $ converges
     (so for any $p_{0}\in\Delta^{l}$ we have $\lim p_{0}\Pi^{n}=p^{\star}$).
@@ -785,7 +791,7 @@ with $\lambda_{0}$ given, converges. We must first define what it
 means for a sequence of distributions to converge. The simplest definition
 comes in the form of set-wise convergence (the equivalent of point-wise
 convergence for functions):
-!!! info "Definition: Set-wise Convergence"
+!!! info "Definition 3.16: Set-wise Convergence"
 
     Let $\left(Z,\mathcal{Z}\right)$ be
     a measurable space and $\Lambda\left(Z,\mathcal{Z}\right)$ the set of
@@ -795,7 +801,7 @@ convergence for functions):
 
 This notion of convergence is intuitive but it turns out to be too
 strong for most applications. The following proposition shows why:
-!!! info "Definition"
+!!! abstract "Proposition 3.4"
 
     Let $\left(Z,\mathcal{Z}\right)$ be a measurable space and $\Lambda\left(Z,\mathcal{Z}\right)$
     the set of probability distributions. Consider a sequence $\left\{ \lambda_{n}\right\} \subseteq\Lambda\left(Z,\mathcal{Z}\right)$.
@@ -806,7 +812,7 @@ strong for most applications. The following proposition shows why:
 Thus asking for set-wise convergence requires the expected value of
 a large class of functions to converge. A way to weaken this is to
 limit the space of functions for which convergence is required.
-!!! info "Definition: Weak Convergence"
+!!! info "Definition 3.17: Weak Convergence"
 
     Let $\left(Z,\rho\right)$ be a metric
     space and $\mathcal{Z}$ the Borel set of $Z$. Define $\Lambda\left(Z,\mathcal{Z}\right)$
@@ -829,10 +835,10 @@ adjoint operator $T^{\star}:\Lambda\left(Z,\mathcal{Z}\right)\to\Lambda\left(Z,\
 We also define the inner product $\left\langle f,\lambda\right\rangle =\int f\left(z\right)d\lambda$.
 
 We first expand on the Feller property through the following proposition:
-!!! abstract "Proposition"
+!!! abstract "Proposition 3.5"
 
     The following three statements are equivalent:
-    
+
     1. (Feller property) If $f\in C\left(Z\right)$ then $Tf\in C\left(Z\right)$.
     1. If $z_{n}\to z$ then $Q\left(z_{n},\cdot\right)\to Q\left(z,\cdot\right)$
     (that is for all $A\in\mathcal{Z}$).
@@ -845,7 +851,7 @@ and unconditional distributions $\left(T^{\star}\lambda_{n}\right)$.
 It turns out that continuity is enough to guarantee that an invariant
 distribution exists.
 <a id="ref-thm-feller-invariant-distribution" class="course-anchor"></a>
-!!! abstract "Theorem"
+!!! abstract "Theorem 3.4"
 
     If $Z\subseteq\mathbb{R}^{l}$
     is compact and $Q$ satisfies the Feller property then an invariant
@@ -855,10 +861,10 @@ distribution exists.
 Yet, continuity is not enough to rule out the existence of many invariant
 distributions or of cycling sets. Monotonicity is needed for this.
 As before it is first useful to take a detour on what monotonicity
-(as in [Definition: Monotone transition functions](#ref-def-000020monotonicity-000020markov-000020))
+(as in [Definition 3.4](#ref-def-000020monotonicity-000020markov-000020))
 implies for distribution functions. We then have to impose an ordering
 of distribution functions to be able to talk about monotonicity.
-!!! info "Definition: First Order Stochastic Dominance"
+!!! info "Definition 3.18: First Order Stochastic Dominance"
 
     A distribution $\mu$
     (first order stochastically) dominates $\lambda$ $\left(\mu\geq\lambda\right)$
@@ -869,11 +875,11 @@ In what follows we call a sequence $\left\{ \lambda_{n}\right\} $
 monotone if $\lambda_{n+1}\geq\lambda_{n}$ for all $n$, or if $\lambda_{n+1}\leq\lambda_{n}$
 for all $n$. We can now establish the following result:
 <a id="ref-prop-monotonicity-markov" class="course-anchor"></a>
-!!! abstract "Proposition"
+!!! abstract "Proposition 3.6"
 
     The following three statements are
     equivalent:
-    
+
     1. (Monotone property) If $f\in B\left(Z,\mathcal{Z}\right)$ is weakly
     increasing then $Tf$ is also weakly increasing.
     1. Let $\lambda,\mu\in\Lambda\left(Z,\mathcal{Z}\right)$. If $\mu\geq\lambda$
@@ -886,18 +892,24 @@ of the Markov operator directly into monotonicity of the transition
 function ("better" states lead to "better" distributions).
 
 Now we introduce the final condition needed for the main result of
-this section. It is a mixing condition akin to that in Theorems [Theorem](#ref-thm-000020markov-000020chains-0000202)
-and [Theorem](#ref-thm-000020markov-000020chains-0000203), along with a restriction
+this section. It is a mixing condition akin to that in Theorems [Theorem 3.2](#ref-thm-000020markov-000020chains-0000202)
+and [Theorem 3.3](#ref-thm-000020markov-000020chains-0000203), along with a restriction
 on the form of the set $Z$. To see why it is necessary to go SLP
 exercises 12.12 and 12.13.
-\begin{assumption*}
-**(Mixing Property)** The set $Z=\left[a,b\right]$ is a closed
-and bounded rectangle in $\mathbb{R}^{l}$ characterized by $a$ and
-$b$, (Note: A set $Z\subseteq\mathbb{R}^{l}$ is a closed and bounded rectangle if there are two vectors $a,b\in\mathbb{R}^{l}$ such that$a\leq b$ and $Z=\left[a_{1},b_{1}\right]\times\ldots\times\left[a_{l},b_{l}\right]$.) and there exists $c\in Z$, $\epsilon>0$ and $N\geq1$ such that:
-\[
-Q^{N}\left(a,\left[c,b\right]\right)\geq\epsilon\qquad Q^{N}\left(b,\left[a,c\right]\right)\geq\epsilon
-\]
-\end{assumption*}
+!!! assumption "Assumption: Mixing Property"
+
+    The set $Z=\left[a,b\right]$ is a closed
+    and bounded rectangle in $\mathbb{R}^{l}$ characterized by $a$ and
+    $b$,
+
+    !!! note "Note"
+        A set $Z\subseteq\mathbb{R}^{l}$ is a closed and bounded rectangle if there are two vectors $a,b\in\mathbb{R}^{l}$ such that$a\leq b$ and $Z=\left[a_{1},b_{1}\right]\times\ldots\times\left[a_{l},b_{l}\right]$.
+
+    and there exists $c\in Z$, $\epsilon>0$ and $N\geq1$ such that:
+    \[
+    Q^{N}\left(a,\left[c,b\right]\right)\geq\epsilon\qquad Q^{N}\left(b,\left[a,c\right]\right)\geq\epsilon
+    \]
+
 Under this assumption it is possible to reach the "upper" region
 of the rectangle, $\left[c,b\right]$, in finite time starting from
 the "lower" corner $\left(a\right)$, and it is possible to reach
@@ -905,7 +917,7 @@ the "lower" region of the rectangle, $\left[a,c\right]$, in finite
 time starting from the "upper" corner $\left(b\right)$. It is
 possible to show that if one can move through the set from the corners
 it is possible to do it from anywhere (under a monotonicity assumption).
-!!! abstract "Proposition"
+!!! abstract "Proposition 3.7"
 
     Let $Q$ satisfy monotonicity and the previous assumption for some
     tuple $\left(c,\epsilon,N\right)$, then:
@@ -915,7 +927,7 @@ it is possible to do it from anywhere (under a monotonicity assumption).
 
 Finally we establish the convergence result.
 <a id="ref-thm-monotone-invariant-distribution" class="course-anchor"></a>
-!!! abstract "Theorem"
+!!! abstract "Theorem 3.5"
 
     Let $Z=\left[a,b\right]\in\mathbb{R}^{l}$
     be a rectangle. If $Q$ is monotone and satisfies the Feller property
@@ -925,12 +937,12 @@ Finally we establish the convergence result.
 
 This completes the tools we need to tackle stochastic dynamic programming
 problems. In that note, it is interesting to note the similarities
-between [Theorem](#ref-thm-monotone-invariant-distribution) and the
+between [Theorem 3.5](#ref-thm-monotone-invariant-distribution) and the
 contraction mapping theorem and Blackwell's conditions used below
 to establish a unique solution for Bellman equations and the convergence
 to that solution from any starting point by iteratively applying the
 Bellman operator(see [Contraction Mapping Theorem](../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.md#ref-sec-contraction-mapping-theorem)).
-While [Theorem](#ref-thm-monotone-invariant-distribution) does not
+While [Theorem 3.5](#ref-thm-monotone-invariant-distribution) does not
 establish a sense of distance (inherent in complete metric spaces)
 it does provide a very similar answer to the question of the existence
 and uniqueness of a fixed point characterizing the solution to a functional

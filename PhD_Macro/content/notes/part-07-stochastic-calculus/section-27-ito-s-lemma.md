@@ -13,7 +13,7 @@ process.
 Consider a function $F\left(x,t\right)$ that depends on a stochastic
 process $x$. $x$ is assumed to be an Ito process following:
 \begin{equation}
-dx=\mu\left(x,t\right)dt+\sigma\left(x,t\right)dW
+dx=\mu\left(x,t\right)dt+\sigma\left(x,t\right)dW \tag{27.1}
 \end{equation}
 Normal calculus rules would give the differential of $F$ as:
 \[
@@ -34,7 +34,7 @@ As shown in Oksendal (2003, Sec. 4.1) $dWdt=dt^{2}=0$, they
 can be safely ignored because they depend on terms of order higher
 than $dt$. That leaves us with:
 \begin{equation}
-dF=\frac{\partial F}{\partial x}dx+\frac{\partial F}{\partial t}dt+\frac{1}{2}\frac{\partial^{2}F}{\partial x^{2}}\left(dx\right)^{2}
+dF=\frac{\partial F}{\partial x}dx+\frac{\partial F}{\partial t}dt+\frac{1}{2}\frac{\partial^{2}F}{\partial x^{2}}\left(dx\right)^{2} \tag{27.2}
 \end{equation}
 From the definition of our Ito process we get:
 \begin{align*}
@@ -47,7 +47,7 @@ The proof is not hard and can be found in Oksendal (2003, Sec. 4.1).
 Replacing:
 \begin{align}
 dF & =\left(\frac{\partial F}{\partial x}dx+\frac{\partial F}{\partial t}dt\right)+\frac{1}{2}\frac{\partial^{2}F}{\partial x^{2}}\left(\sigma^{2}\left(x,t\right)dt\right)\nonumber \\
-dF & =\left(\frac{\partial F}{\partial t}+\mu\left(x,t\right)\frac{\partial F}{\partial x}+\frac{1}{2}\sigma^{2}\left(x,t\right)\frac{\partial^{2}F}{\partial x^{2}}\right)dt+\sigma\left(x,t\right)\frac{\partial F}{\partial x}dW
+dF & =\left(\frac{\partial F}{\partial t}+\mu\left(x,t\right)\frac{\partial F}{\partial x}+\frac{1}{2}\sigma^{2}\left(x,t\right)\frac{\partial^{2}F}{\partial x^{2}}\right)dt+\sigma\left(x,t\right)\frac{\partial F}{\partial x}dW \tag{27.3}
 \end{align}
 
 This derivation (Ito's Formula) means that $y=F\left(x,t\right)$
@@ -123,7 +123,7 @@ V\left[x\right] & =E\left[x^{2}\right]-E\left[x\right]^{2}\\
 
 Some applications are shown below:
 <a id="ref-ex-000020expected-000020value-000020of-000020geometric-000020brownian-000020motion" class="course-anchor"></a>
-!!! example "Example"
+!!! example "Example 27.1"
 
     Consider
     an asset that gives flow payoffs $x$ that evolve according to a geometric
@@ -137,7 +137,7 @@ Some applications are shown below:
     E\left[\int_{0}^{\infty}e^{-\rho t}x\left(t\right)dt\right]=\int_{0}^{\infty}e^{-\rho t}E\left[x\left(t\right)\right]dt=\int_{0}^{\infty}x\left(0\right)e^{-\left(\rho-\mu\right)t}dt=\frac{x_{0}}{\rho-\mu}
     \]
 
-!!! example "Example"
+!!! example "Example 27.2"
 
     Now consider an agent that receives flow consumption of $x$, which
     evolves again as a geometric brownian motion. The agent's utility
@@ -183,14 +183,14 @@ The expected value of this change must take into account the probability
 of a jump in $q$ (given by $\lambda dt$), so we have:
 <a id="ref-eq-000020ito-s-000020lemma-000020for-000020poisson" class="course-anchor"></a>
 \begin{equation}
-E\left[dH\right]=\left(H_{t}+f\left(x,t\right)H_{x}\right)dt+\lambda E_{u}\left[H\left(x+ug\left(x,t\right),t\right)-H\left(x,t\right)\right]dt
+E\left[dH\right]=\left(H_{t}+f\left(x,t\right)H_{x}\right)dt+\lambda E_{u}\left[H\left(x+ug\left(x,t\right),t\right)-H\left(x,t\right)\right]dt\tag{27.4}
 \end{equation}
 it follows, by using the identity function that $E\left[dx\right]=f\left(x,t\right)dt+\lambda E_{u}\left[ug\left(x,t\right)\right]dt$.
 
 We can apply this result to a couple examples taken from [Dixit and Pindyck (1994)](http://www.jstor.org/stable/j.ctt7sncv):
 <a id="ref-example-000020poisson-000020process-000020-000020present-000020value-000020of-000020wage" class="course-anchor"></a>
 <a id="ref-eq-000020bellman-000020equation-000020present-000020value-000020of-000020wage-000020poisson" class="course-anchor"></a>
-!!! example "Example"
+!!! example "Example 27.3"
 
     Consider
     an individual that lives forever and receives a wage $w\left(t\right)$
@@ -215,7 +215,7 @@ We can apply this result to a couple examples taken from [Dixit and Pindyck (199
     \end{align*}
     Taking the limit as $\Delta t\to0$ we get:
     \begin{equation}
-    \rho V=w+\frac{E\left[dV\right]}{dt}
+    \rho V=w+\frac{E\left[dV\right]}{dt}\tag{27.5}
     \end{equation}
     Staying in the job works just like an asset, with a normal return
     at rate $\rho$ being equal to the sum of the dividend (in this case
@@ -240,7 +240,7 @@ We can apply this result to a couple examples taken from [Dixit and Pindyck (199
     $V$ is equal to an asset that pays the current wage forever plus
     the capitalized value of the average raise in wages per unit of time.
 
-!!! example "Example"
+!!! example "Example 27.4"
 
     Consider now a firm that produces using capital. As long as capital
     is operational a flow profit of $\pi$ is obtained, but capital becomes

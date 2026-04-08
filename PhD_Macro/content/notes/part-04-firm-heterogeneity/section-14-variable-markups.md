@@ -22,7 +22,10 @@ monetary policy, and international trade.
 
 We start extending the framework of [Dixit and Stiglitz (1977)](https://www.jstor.org/stable/1831401)
 to allow for a demand system with variable elasticity of demand. In
-this we follow [Kimball (1995)](https://doi.org/10.2307/2078048). (Note: Other formulations are reviewed by Costas Arkolakis and Monica Morlacco, see [their notes on variable elasticity of demand](https://www.dropbox.com/s/h82n1m6btln7h07/Arkolakis_Morlacco_08_2017.pdf?raw=1).)
+this we follow [Kimball (1995)](https://doi.org/10.2307/2078048).
+
+!!! note "Note"
+    Other formulations are reviewed by Costas Arkolakis and Monica Morlacco, see [their notes on variable elasticity of demand](https://www.dropbox.com/s/h82n1m6btln7h07/Arkolakis_Morlacco_08_2017.pdf?raw=1).
 
 In order to have variable elasticity of demand we need a new formulation
 of the aggregator. There is an aggregate (or composite) good $Y$

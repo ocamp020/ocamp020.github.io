@@ -94,17 +94,17 @@ The firm discounts the future at rate $\frac{1}{1+\rho}$ and receives
 a final payoff pf $\Omega_{T}\left(x_{T}\right)$ in the last period.
 The objective is:
 \begin{equation}
-V_{0}\left(x_{0}\right)=\max_{\left\{ u_{t}\right\} _{t=0}^{T-1}}E\left[\sum_{t=0}^{T-1}\left(\frac{1}{1+\rho}\right)^{t}\pi\left(u_{t},x_{t}\right)+\left(\frac{1}{1+\rho}\right)^{T}\Omega_{T}\left(x_{T}\right)\right]
+V_{0}\left(x_{0}\right)=\max_{\left\{ u_{t}\right\} _{t=0}^{T-1}}E\left[\sum_{t=0}^{T-1}\left(\frac{1}{1+\rho}\right)^{t}\pi\left(u_{t},x_{t}\right)+\left(\frac{1}{1+\rho}\right)^{T}\Omega_{T}\left(x_{T}\right)\right] \tag{28.1}
 \end{equation}
 dynamic programming allows us to write the problem recursively. In
 the last period we have:
 \begin{equation}
-V_{T-1}\left(x_{T-1}\right)=\max_{u_{T-1}}\pi\left(u_{T-1},x_{T-1}\right)+\left(\frac{1}{1+\rho}\right)E\left[\Omega_{T}\left(x_{T}\right)|x_{T-1},u_{T-1}\right]
+V_{T-1}\left(x_{T-1}\right)=\max_{u_{T-1}}\pi\left(u_{T-1},x_{T-1}\right)+\left(\frac{1}{1+\rho}\right)E\left[\Omega_{T}\left(x_{T}\right)|x_{T-1},u_{T-1}\right] \tag{28.2}
 \end{equation}
 For all other periods we can use the notion of continuation payoffs
 to obtain:
 \begin{equation}
-V_{t}\left(x_{t}\right)=\max_{u_{t}}\pi\left(u_{t},x_{t}\right)+\left(\frac{1}{1+\rho}\right)E\left[V_{t+1}\left(x_{t+1}\right)|x_{t},u_{t}\right]
+V_{t}\left(x_{t}\right)=\max_{u_{t}}\pi\left(u_{t},x_{t}\right)+\left(\frac{1}{1+\rho}\right)E\left[V_{t+1}\left(x_{t+1}\right)|x_{t},u_{t}\right] \tag{28.3}
 \end{equation}
 The problem can then be solved by backwards induction, choosing contingent
 plans for $u_{t}\left(x_{t}\right)$ one period at a time, instead
@@ -116,7 +116,7 @@ use backwards induction to solve the problem. In this case the value
 of the firm itself is also independent of time, because each period
 is just like the next. We then have:
 \begin{equation}
-V\left(x\right)=\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{\prime}\right)|x,u\right]
+V\left(x\right)=\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{\prime}\right)|x,u\right] \tag{28.4}
 \end{equation}
 the problem is now to find a function $V$ that satisfies the equation
 above. The details behind the solution to this problem can be found
@@ -126,7 +126,7 @@ This setup is very versatile and can be applied to firm problems as
 the one above, but it is also at the core of modern macroeconomic
 theory. The following examples make this point in a non-stochastic
 version of the model.
-!!! example "Example"
+!!! example "Example 28.1"
 
     Consider an economy in which the representative consumer lives forever.
     There is a good in each period that can be consumed or saved as capital
@@ -203,20 +203,20 @@ is stopped). It depends on the value of state $x$. The Bellman equation
 is now:
 <a id="ref-eq-000020bellman-000020for-000020stopping-000020time-000020in-000020discrete-000020time" class="course-anchor"></a>
 \begin{equation}
-V\left(x\right)=\max\left\{ \Omega\left(x\right),\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{\prime}\right)|x,u\right]\right\}
+V\left(x\right)=\max\left\{ \Omega\left(x\right),\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{\prime}\right)|x,u\right]\right\} \tag{28.5}
 \end{equation}
 We can now define a stopping time as a random variable that signals
 the decision to stop and take the termination payoff $\Omega\left(x\right)$.
 So:
 \begin{equation}
-T^{\star}=\left\{ x|\Omega\left(x\right)\geq\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{\prime}\right)|x,u\right]\right\}
+T^{\star}=\left\{ x|\Omega\left(x\right)\geq\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{\prime}\right)|x,u\right]\right\} \tag{28.6}
 \end{equation}
 In general $T^{\star}$ can take many forms, but in most (if not all)
 of the relevant economic applications it will take the form: $T^{\star}=\left[\overline{x},\infty\right)$,
 $T^{\star}=\left(-\infty,\underline{x}\right]$ or $T^{\star}=\left(-\infty,\underline{x}\right]\cup\left[\overline{x},\infty\right)$.
 As an example we apply these ideas to the problem of search and unemployment,
 the McCall search model.
-!!! example "Example"
+!!! example "Example 28.2"
 
     Consider the following infinite horizon model. An agent searches for
     a job. Each period the agent receives a wage offer from a distribution
@@ -286,24 +286,24 @@ unit of time, so the effective discount rate for the period of length
 $\Delta t$ is: $\frac{1}{1-\rho\Delta t}$. This leads to the following
 Bellman-type equation
 \begin{equation}
-V\left(x\right)=\max_{u}\pi\left(u,x\right)\Delta t+\left(\frac{1}{1+\rho\Delta t}\right)E\left[V\left(x^{\prime}\right)|x,u\right]
+V\left(x\right)=\max_{u}\pi\left(u,x\right)\Delta t+\left(\frac{1}{1+\rho\Delta t}\right)E\left[V\left(x^{\prime}\right)|x,u\right] \tag{28.7}
 \end{equation}
 Rearranging we get:
 \begin{equation}
-\rho V\left(x\right)=\max_{u}\left(1+\rho\Delta t\right)\pi\left(u,x\right)+\frac{E\left[\left(V\left(x^{\prime}\right)-V\left(x\right)\right)|x,u\right]}{\Delta t}
+\rho V\left(x\right)=\max_{u}\left(1+\rho\Delta t\right)\pi\left(u,x\right)+\frac{E\left[\left(V\left(x^{\prime}\right)-V\left(x\right)\right)|x,u\right]}{\Delta t} \tag{28.8}
 \end{equation}
 Taking the limit as $\Delta t\to0$ we get our continuous time Bellman
 equation:
 <a id="ref-eq-000020continuous-000020time-000020bellman" class="course-anchor"></a>
 \begin{equation}
-\rho V\left(x\right)=\max_{u}\pi\left(u,x\right)+\frac{1}{dt}E\left[dV\left(x\right)|x,u\right]
+\rho V\left(x\right)=\max_{u}\pi\left(u,x\right)+\frac{1}{dt}E\left[dV\left(x\right)|x,u\right]\tag{28.9}
 \end{equation}
 where
 \[
 \frac{E\left[dV\right]}{dt}=\lim_{\Delta t\to0}\frac{1}{\Delta t}E\left[\Delta V\right]
 \]
 
-Equation ([Equation](#ref-eq-000020continuous-000020time-000020bellman)) works
+[Equation (28.9)](#ref-eq-000020continuous-000020time-000020bellman) works
 just like a non-arbitrage condition. We can thing of the agent as
 holding an asset with value $V$. The LHS gives the normal rate of
 return per unit time that the agent requires to hold the asset, given
@@ -313,8 +313,8 @@ capital gains (brought up by changes in the value of the asset).
 
 We can further characterize the problem given knowledge of the stochastic
 process that $x$ follows. This will allow us to evaluate the expectation
-in ([Equation](#ref-eq-000020continuous-000020time-000020bellman)). If $x$
-follows an Ito process, as in equation ([Equation](section-26-stochastic-processes.md#ref-eq-000020def-000020ito-000020process)),
+in [(28.9)](#ref-eq-000020continuous-000020time-000020bellman). If $x$
+follows an Ito process, as in [equation (26.1)](section-26-stochastic-processes.md#ref-eq-000020def-000020ito-000020process),
 then Ito's Lemma gives the following result:
 \begin{align*}
 dV & =\left(\mu\left(x,t\right)V^{\prime}+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{"}\right)dt+\sigma\left(x,t\right)V^{\prime}dW\\
@@ -323,13 +323,13 @@ E\left[dV\right] & =\left(\mu\left(x,t\right)V^{\prime}+\frac{1}{2}\sigma^{2}\le
 Replacing we get the Hamilton-Jacobi-Bellman equation:
 <a id="ref-eq-000020hjb" class="course-anchor"></a>
 \begin{equation}
-\rho V\left(x\right)=\max_{u}\pi\left(u,x\right)+\mu\left(x,t\right)V^{\prime}\left(x\right)+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{"}\left(x\right)
+\rho V\left(x\right)=\max_{u}\pi\left(u,x\right)+\mu\left(x,t\right)V^{\prime}\left(x\right)+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{"}\left(x\right)\tag{28.10}
 \end{equation}
 We can take FOC with respect to $u$ and then get a differential equation
 for $V$ that we can solve.
 
-If $x$ follows a Poisson process, like the one in equation ([Equation](section-26-stochastic-processes.md#ref-eq-000020poisson-000020process)),
-we can obtain a similar result. From equation ([Equation](section-27-ito-s-lemma.md#ref-eq-000020ito-s-000020lemma-000020for-000020poisson))
+If $x$ follows a Poisson process, like the one in [equation (26.2)](section-26-stochastic-processes.md#ref-eq-000020poisson-000020process),
+we can obtain a similar result. From [equation (27.4)](section-27-ito-s-lemma.md#ref-eq-000020ito-s-000020lemma-000020for-000020poisson)
 we can compute $E\left[dV\right]$:
 \[
 E\left[dV\right]=\left(f\left(x,t\right)V^{\prime}\left(x\right)\right)dt+\lambda E_{u}\left[V\left(x+ug\left(x,t\right)\right)-V\left(x\right)\right]dt
@@ -344,9 +344,9 @@ if she continues with the activity, and $\Omega\left(x,t\right)$
 if she quits the activity (stops). The value of the agent is:
 <a id="ref-eq-bellman-000020eq-000020stopping-000020time" class="course-anchor"></a>
 \begin{equation}
-V\left(x,t\right)=\max\left\{ \Omega\left(x,t\right),\pi\left(x\right)\Delta t+\frac{1}{1+\rho\Delta t}E\left[V\left(x+dx,t+\Delta t\right)\right]\right\}
+V\left(x,t\right)=\max\left\{ \Omega\left(x,t\right),\pi\left(x\right)\Delta t+\frac{1}{1+\rho\Delta t}E\left[V\left(x+dx,t+\Delta t\right)\right]\right\} \tag{28.11}
 \end{equation}
-where $x$ follows a diffusion process and in equation ([Equation](section-26-stochastic-processes.md#ref-eq-000020def-000020ito-000020process)).
+where $x$ follows a diffusion process and in [equation (26.1)](section-26-stochastic-processes.md#ref-eq-000020def-000020ito-000020process).
 We assume that $\Omega$ is continuous and weakly increasing in $x$.
 
 In order to solve the problem we need to find regions of $x$ where
@@ -444,7 +444,7 @@ which is the case if there is a downward kink. \\
 Then there cannot be a downward kink, because it would contradict
 the optimality of the strategy of stopping at $x^{\star}\left(t\right)$.
 
-!!! example "Example"
+!!! example "Example 28.3"
 
     Consider a firm that has flow revenues of $e^{x_{t}}$, and that can
     be closed at any time and sold for a value $\Omega>0$. The owner
@@ -479,7 +479,7 @@ the optimality of the strategy of stopping at $x^{\star}\left(t\right)$.
     \[
     V^{P}\left(x\right)=E\left[\int_{0}^{\infty}e^{-\rho t}e^{x}dt\right]
     \]
-    We can solve this expectation using the results in [Example](section-27-ito-s-lemma.md#ref-ex-000020expected-000020value-000020of-000020geometric-000020brownian-000020motion).
+    We can solve this expectation using the results in [Example 27.1](section-27-ito-s-lemma.md#ref-ex-000020expected-000020value-000020of-000020geometric-000020brownian-000020motion).
     We get:
     \[
     V^{P}\left(x\right)=\frac{x}{\rho-\left(\mu+\frac{1}{2}\sigma^{2}\right)}

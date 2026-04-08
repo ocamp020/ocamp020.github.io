@@ -3,6 +3,7 @@
     {
       "title": "Preliminaries",
       "description": "Aggregation benchmarks, distributions, and the Markov-process foundation of the course.",
+      "url": "/PhD_Macro/notes/part-01-preliminaries/",
       "sections": [
         {
           "title": "Macroeconomic Variables and Distributions",
@@ -21,6 +22,7 @@
     {
       "title": "Dynamic Programming",
       "description": "Bellman equations, recursive methods, and competitive equilibrium in dynamic settings.",
+      "url": "/PhD_Macro/notes/part-02-dynamic-programming/",
       "sections": [
         {
           "title": "Non-Stochastic Dynamic Programming",
@@ -39,6 +41,7 @@
     {
       "title": "Heterogeneous Agent Models",
       "description": "Precautionary savings, incomplete markets, production economies, and aggregate risk.",
+      "url": "/PhD_Macro/notes/part-03-heterogeneous-agent-models/",
       "sections": [
         {
           "title": "The Income Fluctuations Model and Precautionary Savings",
@@ -61,6 +64,7 @@
     {
       "title": "Firm Heterogeneity",
       "description": "Span of control, monopolistic competition, variable markups, and misallocation.",
+      "url": "/PhD_Macro/notes/part-04-firm-heterogeneity/",
       "sections": [
         {
           "title": "Span of Control",
@@ -87,6 +91,7 @@
     {
       "title": "Input-Output Networks and Economic Activity",
       "description": "Domar aggregation, Hulten's theorem, propagation, and distortions in networks.",
+      "url": "/PhD_Macro/notes/part-05-input-output-networks-and-economic-activity/",
       "sections": [
         {
           "title": "A Domar Economy",
@@ -117,6 +122,7 @@
     {
       "title": "Random Variables and Probability",
       "description": "Measure theory, measurable functions, and integration tools for macro theory.",
+      "url": "/PhD_Macro/notes/part-06-random-variables-and-probability/",
       "sections": [
         {
           "title": "Measure",
@@ -139,6 +145,7 @@
     {
       "title": "Stochastic Calculus",
       "description": "Ito processes, dynamic programming in continuous time, and applications.",
+      "url": "/PhD_Macro/notes/part-07-stochastic-calculus/",
       "sections": [
         {
           "title": "Stochastic Processes",

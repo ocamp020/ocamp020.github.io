@@ -30,7 +30,7 @@ is then the limit of this sum as the values $y_{i}$ are closer together.
 
 The introduction before of simple functions makes sense when defining
 the Lebesgue integral. Its definition seems intuitive for this class
-of functions and [Proposition](section-23-measurable-functions.md#ref-simple-000020functions-000020and-000020measurability)
+of functions and [Proposition 23.5](section-23-measurable-functions.md#ref-simple-000020functions-000020and-000020measurability)
 creates a bridge between them and the more general class of measurable
 functions, thus allowing to extend the Lebesgue integral to this broader
 family.
@@ -38,14 +38,14 @@ family.
 In what follows we restrict attention to non-negative, real valued
 functions.
 <a id="ref-eq-000020lebesgue-000020integral-000020-000020simple-000020fun" class="course-anchor"></a>
-!!! info "Definition: Lebesgue integral for simple functions"
+!!! info "Definition 24.1: Lebesgue integral for simple functions"
 
     Let $\left(S,\mathcal{A},\mu\right)$
     be a measure space and $f:S\to\mathbb{R}_{+}$ a simple, $\mu$-measurable
     function that takes no more than countably many values $\left\{ y_{1},y_{2},\ldots\right\} $.
     The Lebesgue integral over the set $A\subseteq S$ is defined as:
     \begin{equation}
-    \int_{A}f\left(s\right)d\mu=\sum_{n}y_{n}\mu\left(A_{n}\right)
+    \int_{A}f\left(s\right)d\mu=\sum_{n}y_{n}\mu\left(A_{n}\right)\tag{24.1}
     \end{equation}
     where the sets $A_{n}$ are defined as:
     \[
@@ -53,7 +53,7 @@ functions.
     \]
     These sets can be empty if there is no element of $s$ in $A$ for
     which $f$ takes a given value. The Lebesgue integral is defined as
-    long as the series in ([Equation](#ref-eq-000020lebesgue-000020integral-000020-000020simple-000020fun))
+    long as the series in [(24.1)](#ref-eq-000020lebesgue-000020integral-000020-000020simple-000020fun)
     is absolutely convergent. If $f$ takes finitely many values and $\mu$
     is finite (or a probability measure) this condition is satisfied.
 
@@ -65,7 +65,7 @@ for all $s\in S$, then:
 
 It can be shown that the lebesgue integral satisfies some natural
 properties:
-!!! abstract "Proposition"
+!!! abstract "Proposition 24.1"
 
     Let $f$ and $g$ be non-negative, measurable, simple and integrable
     functions on $\left(S,\mathcal{A},\mu\right)$, a measure space, and
@@ -81,7 +81,7 @@ properties:
 
     [Kolmogorov and Fomin (2012, Sec. 29.1)](https://books.google.com/books?id=cbbCAgAAQBAJ).
 
-!!! info "Definition: Lebesgue integral - Nonnegative functions"
+!!! info "Definition 24.2: Lebesgue integral - Nonnegative functions"
 
     Let $\left(S,\mathcal{A},\mu\right)$
     be a measure space. A measurable function $f:S\to\mathbb{R}$ is said
@@ -89,13 +89,13 @@ properties:
     of integrable simple functions converging uniformly to $f$ on $A$.
     The Lebesgue integral is defined as:
     \begin{equation}
-    \int_{A}f\left(s\right)d\mu=\lim\int_{A}f_{n}\left(s\right)d\mu
+    \int_{A}f\left(s\right)d\mu=\lim\int_{A}f_{n}\left(s\right)d\mu \tag{24.2}
     \end{equation}
 
 This definition precludes the integral from being infinite, as shown
 in [Kolmogorov and Fomin (2012, Sec. 29.1)](https://books.google.com/books?id=cbbCAgAAQBAJ), the limit above
 exists provided that the functions $f_{n}$ are integrable (recall
-that it was asked of the sum in ([Equation](#ref-eq-000020lebesgue-000020integral-000020-000020simple-000020fun))
+that it was asked of the sum in [(24.1)](#ref-eq-000020lebesgue-000020integral-000020-000020simple-000020fun)
 to be finite), moreover it is independent of the choice of sequence
 approximating $f$, this sequence can be furthermore be chosen to
 be strictly increasing ([Stokey et al. 1989](https://books.google.com/books?id=tWYo0QolyLAC)). Yet, the concept of the Lebesgue
@@ -105,7 +105,7 @@ definition in [Stokey et al. (1989)](https://books.google.com/books?id=tWYo0Qoly
 What follows is a list of properties of the Lebesgue integral which
 should be familiar if there is any knowledge of the behavior of Riemann
 integrals. They are not of particular interest in this course.
-!!! abstract "Proposition"
+!!! abstract "Proposition 24.2"
 
     Properties of the Lebesgue integral for non-negative measurable functions:
     
@@ -132,7 +132,7 @@ integrals. They are not of particular interest in this course.
 Finally it is noted that a non-negative integrable function induces
 a measure on a space, the following proposition makes this clear.
 <a id="ref-prop-000020inducing-000020a-000020measure" class="course-anchor"></a>
-!!! abstract "Proposition"
+!!! abstract "Proposition 24.3"
 
     Let $f$ be a non-negative,
     integrable function, then $\lambda:\mathcal{A}\to\mathbb{R}$ defined
@@ -142,7 +142,7 @@ a measure on a space, the following proposition makes this clear.
     \]
     is a measure on $\left(S,\mathcal{A}\right)$.
 
-!!! info "Definition: Lebesgue integral"
+!!! info "Definition 24.3: Lebesgue integral"
 
     Let $\left(S,\mathcal{A},\mu\right)$ be
     a measure space. A measurable function $f:S\to\mathbb{R}$ is said
@@ -162,7 +162,7 @@ a measure on a space, the following proposition makes this clear.
     \]
     The integral of $f$ is defined as:
     \begin{equation}
-    \int f\left(s\right)d\mu=\int f^{+}\left(s\right)d\mu-\int f^{-}\left(s\right)d\mu
+    \int f\left(s\right)d\mu=\int f^{+}\left(s\right)d\mu-\int f^{-}\left(s\right)d\mu \tag{24.3}
     \end{equation}
 
 Recall that when $\left(S,\mathcal{A},\mu\right)$ is a probability space

@@ -52,7 +52,12 @@ Hence, optimality requires that between any pair of goods $\left(i,j\right)$
 \underbrace{\frac{p_{i}}{p_{j}}}_{\text{MRT}}=\underbrace{\left(\frac{y_{i}}{y_{j}}\right)^{\frac{-1}{\varepsilon}}}_{\text{MRS}}\longrightarrow\frac{y_{i}}{y_{j}}=\left(\frac{p_{i}}{p_{j}}\right)^{-\varepsilon}.
 \]
 From this we see that $\varepsilon=\frac{\log y_{i}}{\log p_{j}}$
-is the elasticity of substitution between goods $i$ and $j$. (Note: A better definition has the elasticity be the change in relative demand in response to changes in relative prices: $\varepsilon=-\frac{\partial\log\frac{y_{i}}{y_{j}}}{\partial\log\frac{p_{i}}{p_{j}}}$.) Moreover, the elasticity of substitution is constant across pairs.
+is the elasticity of substitution between goods $i$ and $j$.
+
+!!! note "Note"
+    A better definition has the elasticity be the change in relative demand in response to changes in relative prices: $\varepsilon=-\frac{\partial\log\frac{y_{i}}{y_{j}}}{\partial\log\frac{p_{i}}{p_{j}}}$.
+
+Moreover, the elasticity of substitution is constant across pairs.
 This is what gives its name to the aggregator as the Constant-Elasticity-of-Substitution
 (CES) aggregator.
 

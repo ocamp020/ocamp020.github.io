@@ -10,7 +10,7 @@ Before we define a measure recall that a measure has for domain a
 collection of sets. For a measure to have some desirable properties
 this collection of sets cannot be left unrestricted. It turns out
 that the appropriate family of sets to be consider is that of $\sigma$-algebra.
-!!! info "Definition: $\sigma$-algebra"
+!!! info "Definition 22.1: $\sigma$-algebra"
 
     Let $S$ be a set and $\mathcal{A}\subseteq2^{S}$
     a family of its subsets. $\mathcal{A}$ is a $\sigma$-algebra if and
@@ -69,7 +69,7 @@ is again a $\sigma$-algebra.
 
 Now that we have defined a $\sigma$-algebra its possible to say what
 a measurable set and a measurable space are:
-!!! info "Definition: Measurable Space"
+!!! info "Definition 22.2: Measurable Space"
 
     A pair $\left(S,\mathcal{A}\right)$ where
     $S$ is any set and $\mathcal{A}$ is a $\sigma$-algebra is called a
@@ -83,7 +83,7 @@ is not measurable in the last example above, because its impossible
 to know if a $4$ was the outcome of the throw.
 
 A $\sigma$-algebra of special importance is the Borel $\sigma$-algebra.
-!!! info "Definition: Borel $\sigma$-algebra"
+!!! info "Definition 22.3: Borel $\sigma$-algebra"
 
     Let $S=\mathbb{R}$ and $\mathcal{A}$
     be the set of open and half open intervals. The Borel algebra, noted
@@ -105,7 +105,7 @@ What follows is to define the measure of a measurable set.
 Given a measurable space $\left(S,\mathcal{A}\right)$ a measure is nothing
 but a function $\mu:\mathcal{A}\to\overline{\mathbb{R}}$ with certain
 restrictions that guarantee its consistency:
-!!! info "Definition: Measure"
+!!! info "Definition 22.4: Measure"
 
     Let $\left(S,\mathcal{A}\right)$ be a measurable
     space. A measure is an extended real-valued function $\mu:\mathcal{A}\to\overline{\mathbb{R}}$
@@ -124,7 +124,7 @@ restrictions that guarantee its consistency:
     be a finite measure, and if $\mu\left(S\right)=1$ then $\mu$ is
     said to be a probability measure.
 
-!!! info "Definition: Measure Space"
+!!! info "Definition 22.5: Measure Space"
 
     A triple $\left(S,\mathcal{A},\mu\right)$ where
     $S$ is a set, $\mathcal{A}$ is a $\sigma$-algebra of its subsets and
@@ -134,7 +134,7 @@ restrictions that guarantee its consistency:
 An important concept is that of almost everywhere and almost surely.
 These are qualifiers for a given proposition that can be evaluated
 in sets of $\mathcal{A}$.
-!!! info "Definition: Almost Everywhere and Almost Surely"
+!!! info "Definition 22.6: Almost Everywhere and Almost Surely"
 
     Let $\left(S,\mathcal{A},\mu\right)$
     be a measure space. A proposition is said to hold almost everywhere
@@ -153,7 +153,7 @@ zero.
 There are some properties of a measure that are useful to keep in
 mind, a crucial one is used for Bayes law and the definition of conditional
 probability.
-!!! abstract "Proposition"
+!!! abstract "Proposition 22.1"
 
     Let $\left(S,\mathcal{A},\mu\right)$ be a measure space and $B\in\mathcal{A}$
     a set. Define $\lambda:\mathcal{A}\to\overline{\mathbb{R}}$ as $\lambda\left(A\right)=\mu\left(A\cap B\right)$.
@@ -184,7 +184,7 @@ probability.
 
 Another useful property is given by the following proposition, it
 reflects the intuitive property of measures being 'increasing':
-!!! abstract "Proposition"
+!!! abstract "Proposition 22.2"
 
     Let $\left(S,\mathcal{A},\mu\right)$ be a measure space and $A,B\in\mathcal{A}$
     sets. If $A\subseteq B$ then $\mu\left(A\right)\leq\mu\left(B\right)$,
@@ -203,7 +203,7 @@ reflects the intuitive property of measures being 'increasing':
 
 The following property is widely used to establish properties of limits
 of functions, and of the Lebesgue integral:
-!!! abstract "Proposition"
+!!! abstract "Proposition 22.3"
 
     Let $\left(S,\mathcal{A},\mu\right)$ be a measure space:
     
@@ -236,7 +236,7 @@ of the more complicated spaces, and also allow for an extension to
 $\sigma$-algebras, once the measure is properly constructed.
 
 We start by defining a measure on an algebra.
-!!! info "Definition: Measure"
+!!! info "Definition 22.7: Measure"
 
     Let $\left(S,\mathcal{A}\right)$ be a measurable
     space. A measure is an extended real-valued function $\mu:\mathcal{A}\to\overline{\mathbb{R}}$
@@ -258,7 +258,7 @@ We start by defining a measure on an algebra.
     Condition (iii) also includes finite union of disjoint sets as a special
     case.
 
-!!! info "Definition: $\sigma$-finite measure"
+!!! info "Definition 22.8: $\sigma$-finite measure"
 
     Let $S$ be a set, $\mathcal{A}$
     an algebra of its subsets and $\mu$ a measure defined on $\mathcal{A}$.
@@ -267,7 +267,7 @@ We start by defining a measure on an algebra.
     $\mu$ is $\sigma$-finite
 
 It is now possible to extend the notion of this measure to a $\sigma$-algebra.
-!!! abstract "Theorem"
+!!! abstract "Theorem 22.1"
 
     \textbf{\textup{(Caratheodory extension theorem) }}\textup{Let $S$
     be a set, $\mathcal{A}$ an algebra of its subsets and $\mu$ a measure
@@ -276,7 +276,7 @@ It is now possible to extend the notion of this measure to a $\sigma$-algebra.
     such that $\mu^{\star}\left(A\right)=\mu\left(A\right)$ for all $A\in\mathcal{A}$.}
 
 The problem of uniqueness is also solved.
-!!! abstract "Theorem"
+!!! abstract "Theorem 22.2"
 
     \textbf{\textup{(Hahn extension theorem) }}\textup{Let $S$ be a set,
     $\mathcal{A}$ an algebra of its subsets, $\mu$ a measure defined on
@@ -319,7 +319,7 @@ if $B\notin\mathcal{A}$ then its measure is undefined, while it should
 be clearly zero. The completion of a $\sigma$-algebra to include
 these type of 'harmless' sets is what follows. As before, including
 sets or behaviors of measure zero is of no consequence.
-!!! info "Definition: Completion of a $\sigma$-algebra"
+!!! info "Definition 22.9: Completion of a $\sigma$-algebra"
 
     Let $\left(S,\mathcal{A},\mu\right)$
     be a measure space. Define a collection $\mathcal{C}$ as:
@@ -334,7 +334,7 @@ sets or behaviors of measure zero is of no consequence.
     $\mathcal{A}^{\prime}$ includes all sets in $2^{S}$ that differ from a set
     in $\mathcal{A}$ by a set of measure $0$.
 
-!!! info "Definition: Completion of a measure"
+!!! info "Definition 22.10: Completion of a measure"
 
     Let $\left(S,\mathcal{A},\mu\right)$
     be a measure space and $\mathcal{A}^{\prime}$ the completion of $\mathcal{A}$.

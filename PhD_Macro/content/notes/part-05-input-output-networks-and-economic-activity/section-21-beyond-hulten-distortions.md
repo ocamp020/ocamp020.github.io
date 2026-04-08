@@ -214,9 +214,9 @@ references are introductory although they present all the relevant
 results. All the material is also covered in a more advanced manner
 in [Kolmogorov and Fomin (1999)](https://books.google.com/books?id=OyWeDwfQmeQC).
 
-The aim of the course is not to dwell in the mathematical details
-of the theory but rather present the most useful results for applications
-in economic theory, because of this many of the proofs will be omitted
-only including those that are either instructive of the way the theory
-is developed. [Kolmogorov and Fomin (2012)](https://books.google.com/books?id=cbbCAgAAQBAJ) is a good source
+The aim of the course is not to dwell on the mathematical details
+of the theory but rather to present the most useful results for applications
+in economic theory. Because of this, many of the proofs will be omitted,
+and we will only include those that are especially instructive for
+how the theory is developed. [Kolmogorov and Fomin (2012)](https://books.google.com/books?id=cbbCAgAAQBAJ) is a good source
 for detailed (and easy to understand) proofs.

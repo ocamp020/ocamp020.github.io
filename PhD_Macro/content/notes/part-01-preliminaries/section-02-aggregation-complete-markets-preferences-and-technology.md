@@ -9,7 +9,10 @@ However, there are many questions for which these distributional concerns
 are not of first order importance. Representative agent models are
 often used to address those questions. Before going into the material
 of the course, it is useful to stop and ask: When can we aggregate?
-Why do we use representative agent models? (Note: This section draws heavily Larry Jones lecture notes found in [https://sites.google.com/umn.edu/larryjones/teaching](https://sites.google.com/umn.edu/larryjones/teaching))
+Why do we use representative agent models?
+
+!!! note "Note"
+    This section draws heavily Larry Jones lecture notes found in [https://sites.google.com/umn.edu/larryjones/teaching](https://sites.google.com/umn.edu/larryjones/teaching)
 
 The answer to this questions takes the form of (mathematical) conditions
 under which the outcome (the equilibrium) of a model with full heterogeneity
@@ -57,7 +60,7 @@ and endowments $\left\{ k_{i,0},\left\{ \overline{n}_{i,t}\right\} _{t=0}^{\inft
 solves (given endowments and prices)
 \begin{align*}
 \max & U^{i}\left(\cdot\right)\\
-& \text{s.t. }\sum_{t=0}^{\infty}p_{t}^{c}c_{i,t}+p_{t}^{x}x_{i,t}\leq\sum_{t=0}^{\infty}w_{t}n_{i,t}+r_{t}k_{it}+\theta_{i,h}^{x}\pi_{h,t}^{x}++\theta_{i,j}^{y}\pi_{j,t}^{y}\\
+& \text{s.t. }\sum_{t=0}^{\infty}p_{t}^{c}c_{i,t}+p_{t}^{x}x_{i,t}\leq\sum_{t=0}^{\infty}w_{t}n_{i,t}+r_{t}k_{it}+\theta_{i,h}^{x}\pi_{h,t}^{x}+\theta_{i,j}^{y}\pi_{j,t}^{y}\\
 & \phantom{\text{s.t. }}k_{i,t+1}\leq\left(1-\delta\right)k_{i,t}+x_{i,t}\\
 & \phantom{\text{s.t. }}n_{i,t}\leq\overline{n}_{i,t}
 \end{align*}
@@ -128,55 +131,55 @@ productivity.
 When utility is common across households $\left(U^{i}\left(\cdot\right)=U^{i'}\left(\cdot\right)\right)$
 and homothetic aggregation holds even under heterogeneous endowments.
 In this case the distribution of wealth does not matter for aggregates.
-!!! info "Definition: Homothetic Preferences"
+!!! info "Definition 2.1: Homothetic Preferences"
 
     A preference relation $\succeq$
     is homothetic if and only if $x\succeq y$ if and only if $\lambda x\succeq\lambda y$
     for all $\lambda\geq0$.
-    
-    The implication of homotheticity is that if two bundles are in the
-    same indifference curve, then any scaled version of the bundles are
-    also in the same indifference curve. That is, if $U\left(x\right)=U\left(y\right)$
-    then $U\left(\lambda x\right)=U\left(\lambda y\right)$. The most
-    common example of homothetic utility functions is homogeneous functions,
-    so that $U\left(\lambda x\right)=\lambda^{\alpha}U\left(x\right)$
-    for some $\alpha\geq0$, for this to happen $U\left(\cdot\right)$
-    must be a homogeneous function. In words, the shape of indifference
-    curves does not depend on the scale of the consumption bundles.
-    
-    How does homotheticity deliver aggregation? It implies that the Marshallian
-    demands are proportional to total income: $x\left(\vec{p},Y\right)=\phi\left(\vec{p}\right)\times Y$,
-    where $\vec{p}$ is the vector of prices of the bundle $x$ and $Y$
-    is total resources (or lifetime income or wealth). That is, the demand
-    of individuals with different income are always scaled versions of
-    one another, as the slope of the budget constraint is given by common
-    market prices and their problems differ only in the parallel shifts
-    of their budget constraints. This implies that the allocation of a
-    household that has resources $Y_{i}$, corresponding to a fraction
-    $\omega_{i}=\frac{Y_{i}}{Y}$ of the aggregate resources, is equal
-    to a fraction $\omega_{i}$ of the aggregate allocation:
-    \[
-    x\left(\vec{p},Y_{i}\right)=\omega_{i}x\left(\vec{p},Y\right).
-    \]
-    The implication is that aggregate allocations correspond exactly to
-    the weighted sum over individual allocations:
-    \[
-    x\left(\vec{p},\sum_{i=1}^{I}Y_{i}\right)=\sum_{i=1}^{I}x\left(\vec{p},Y_{i}\right).
-    \]
-    
-    In our problem above the differences between households correspond
-    only to differences in lifetime resources coming from differences
-    in the endowment of initial capital and potential labor supply (you
-    can see this by expressing the budget constraint in the Beckerian
-    fashion, buying leisure out of the value of the time endowment, and
-    replacing the investment choices).
-    
-    Gorman shows that exact aggregation (so that aggregates depend only
-    on the aggregate amount of resources and not on their distribution)
-    requires that Engel curves are linear with common slopes across individuals.
-    For this to happen the indirect utility must be of the Gorman polar
-    form,
-    \[
-    v_{i}\left(\vec{p},Y_{i}\right)=\varphi_{i}\left(\vec{p}\right)+\eta\left(\vec{p}\right)Y_{i}.
-    \]
-    Homothetic preferences are a special case of this in which $\varphi_{i}\left(\vec{p}\right)=0$.
+
+The implication of homotheticity is that if two bundles are in the
+same indifference curve, then any scaled version of the bundles are
+also in the same indifference curve. That is, if $U\left(x\right)=U\left(y\right)$
+then $U\left(\lambda x\right)=U\left(\lambda y\right)$. The most
+common example of homothetic utility functions is homogeneous functions,
+so that $U\left(\lambda x\right)=\lambda^{\alpha}U\left(x\right)$
+for some $\alpha\geq0$, for this to happen $U\left(\cdot\right)$
+must be a homogeneous function. In words, the shape of indifference
+curves does not depend on the scale of the consumption bundles.
+
+How does homotheticity deliver aggregation? It implies that the Marshallian
+demands are proportional to total income: $x\left(\vec{p},Y\right)=\phi\left(\vec{p}\right)\times Y$,
+where $\vec{p}$ is the vector of prices of the bundle $x$ and $Y$
+is total resources (or lifetime income or wealth). That is, the demand
+of individuals with different income are always scaled versions of
+one another, as the slope of the budget constraint is given by common
+market prices and their problems differ only in the parallel shifts
+of their budget constraints. This implies that the allocation of a
+household that has resources $Y_{i}$, corresponding to a fraction
+$\omega_{i}=\frac{Y_{i}}{Y}$ of the aggregate resources, is equal
+to a fraction $\omega_{i}$ of the aggregate allocation:
+\[
+x\left(\vec{p},Y_{i}\right)=\omega_{i}x\left(\vec{p},Y\right).
+\]
+The implication is that aggregate allocations correspond exactly to
+the weighted sum over individual allocations:
+\[
+x\left(\vec{p},\sum_{i=1}^{I}Y_{i}\right)=\sum_{i=1}^{I}x\left(\vec{p},Y_{i}\right).
+\]
+
+In our problem above the differences between households correspond
+only to differences in lifetime resources coming from differences
+in the endowment of initial capital and potential labor supply (you
+can see this by expressing the budget constraint in the Beckerian
+fashion, buying leisure out of the value of the time endowment, and
+replacing the investment choices).
+
+Gorman shows that exact aggregation (so that aggregates depend only
+on the aggregate amount of resources and not on their distribution)
+requires that Engel curves are linear with common slopes across individuals.
+For this to happen the indirect utility must be of the Gorman polar
+form,
+\[
+v_{i}\left(\vec{p},Y_{i}\right)=\varphi_{i}\left(\vec{p}\right)+\eta\left(\vec{p}\right)Y_{i}.
+\]
+Homothetic preferences are a special case of this in which $\varphi_{i}\left(\vec{p}\right)=0$.
