@@ -1,0 +1,177 @@
+{
+  "parts": [
+    {
+      "title": "Preliminaries",
+      "description": "Aggregation benchmarks, distributions, and the Markov-process foundation of the course.",
+      "url": "/PhD_Macro/notes/part-01-preliminaries/",
+      "sections": [
+        {
+          "title": "Macroeconomic Variables and Distributions",
+          "url": "/PhD_Macro/notes/part-01-preliminaries/section-01-macroeconomic-variables-and-distributions.html"
+        },
+        {
+          "title": "Aggregation: Complete Markets, Preferences, and Technology",
+          "url": "/PhD_Macro/notes/part-01-preliminaries/section-02-aggregation-complete-markets-preferences-and-technology.html"
+        },
+        {
+          "title": "Markov Processes",
+          "url": "/PhD_Macro/notes/part-01-preliminaries/section-03-markov-processes.html"
+        }
+      ]
+    },
+    {
+      "title": "Dynamic Programming",
+      "description": "Bellman equations, recursive methods, and competitive equilibrium in dynamic settings.",
+      "url": "/PhD_Macro/notes/part-02-dynamic-programming/",
+      "sections": [
+        {
+          "title": "Non-Stochastic Dynamic Programming",
+          "url": "/PhD_Macro/notes/part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.html"
+        },
+        {
+          "title": "Stochastic Dynamic Programming",
+          "url": "/PhD_Macro/notes/part-02-dynamic-programming/section-05-stochastic-dynamic-programming.html"
+        },
+        {
+          "title": "Stochastic Recursive Competitive Equilibrium",
+          "url": "/PhD_Macro/notes/part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.html"
+        }
+      ]
+    },
+    {
+      "title": "Heterogeneous Agent Models",
+      "description": "Precautionary savings, incomplete markets, production economies, and aggregate risk.",
+      "url": "/PhD_Macro/notes/part-03-heterogeneous-agent-models/",
+      "sections": [
+        {
+          "title": "The Income Fluctuations Model and Precautionary Savings",
+          "url": "/PhD_Macro/notes/part-03-heterogeneous-agent-models/section-07-the-income-fluctuations-model-and-precautionary-savings.html"
+        },
+        {
+          "title": "An Endowment Economy",
+          "url": "/PhD_Macro/notes/part-03-heterogeneous-agent-models/section-08-an-endowment-economy.html"
+        },
+        {
+          "title": "A Production Economy",
+          "url": "/PhD_Macro/notes/part-03-heterogeneous-agent-models/section-09-a-production-economy.html"
+        },
+        {
+          "title": "A Production Economy with Aggregate Risk",
+          "url": "/PhD_Macro/notes/part-03-heterogeneous-agent-models/section-10-a-production-economy-with-aggregate-risk.html"
+        }
+      ]
+    },
+    {
+      "title": "Firm Heterogeneity",
+      "description": "Span of control, monopolistic competition, variable markups, and misallocation.",
+      "url": "/PhD_Macro/notes/part-04-firm-heterogeneity/",
+      "sections": [
+        {
+          "title": "Span of Control",
+          "url": "/PhD_Macro/notes/part-04-firm-heterogeneity/section-11-span-of-control.html"
+        },
+        {
+          "title": "Market Power",
+          "url": "/PhD_Macro/notes/part-04-firm-heterogeneity/section-12-market-power.html"
+        },
+        {
+          "title": "Monopolistic Competition",
+          "url": "/PhD_Macro/notes/part-04-firm-heterogeneity/section-13-monopolistic-competition.html"
+        },
+        {
+          "title": "Variable Markups",
+          "url": "/PhD_Macro/notes/part-04-firm-heterogeneity/section-14-variable-markups.html"
+        },
+        {
+          "title": "Aggregation and Misallocation",
+          "url": "/PhD_Macro/notes/part-04-firm-heterogeneity/section-15-aggregation-and-misallocation.html"
+        }
+      ]
+    },
+    {
+      "title": "Input-Output Networks and Economic Activity",
+      "description": "Domar aggregation, Hulten's theorem, propagation, and distortions in networks.",
+      "url": "/PhD_Macro/notes/part-05-input-output-networks-and-economic-activity/",
+      "sections": [
+        {
+          "title": "A Domar Economy",
+          "url": "/PhD_Macro/notes/part-05-input-output-networks-and-economic-activity/section-16-a-domar-economy.html"
+        },
+        {
+          "title": "Input-Output Networks",
+          "url": "/PhD_Macro/notes/part-05-input-output-networks-and-economic-activity/section-17-input-output-networks.html"
+        },
+        {
+          "title": "Examples of Input-Output Networks",
+          "url": "/PhD_Macro/notes/part-05-input-output-networks-and-economic-activity/section-18-examples-of-input-output-networks.html"
+        },
+        {
+          "title": "Hulten's Theorem for Efficient Economies",
+          "url": "/PhD_Macro/notes/part-05-input-output-networks-and-economic-activity/section-19-hulten-s-theorem-for-efficient-economies.html"
+        },
+        {
+          "title": "Beyond Hulten: Second order effects",
+          "url": "/PhD_Macro/notes/part-05-input-output-networks-and-economic-activity/section-20-beyond-hulten-second-order-effects.html"
+        },
+        {
+          "title": "Beyond Hulten: Distortions",
+          "url": "/PhD_Macro/notes/part-05-input-output-networks-and-economic-activity/section-21-beyond-hulten-distortions.html"
+        }
+      ]
+    },
+    {
+      "title": "Random Variables and Probability",
+      "description": "Measure theory, measurable functions, and integration tools for macro theory.",
+      "url": "/PhD_Macro/notes/part-06-random-variables-and-probability/",
+      "sections": [
+        {
+          "title": "Measure",
+          "url": "/PhD_Macro/notes/part-06-random-variables-and-probability/section-22-measure.html"
+        },
+        {
+          "title": "Measurable functions",
+          "url": "/PhD_Macro/notes/part-06-random-variables-and-probability/section-23-measurable-functions.html"
+        },
+        {
+          "title": "The Lebesgue integral",
+          "url": "/PhD_Macro/notes/part-06-random-variables-and-probability/section-24-the-lebesgue-integral.html"
+        },
+        {
+          "title": "The Stieltjes integral",
+          "url": "/PhD_Macro/notes/part-06-random-variables-and-probability/section-25-the-stieltjes-integral.html"
+        }
+      ]
+    },
+    {
+      "title": "Stochastic Calculus",
+      "description": "Ito processes, dynamic programming in continuous time, and applications.",
+      "url": "/PhD_Macro/notes/part-07-stochastic-calculus/",
+      "sections": [
+        {
+          "title": "Stochastic Processes",
+          "url": "/PhD_Macro/notes/part-07-stochastic-calculus/section-26-stochastic-processes.html"
+        },
+        {
+          "title": "Ito's Lemma",
+          "url": "/PhD_Macro/notes/part-07-stochastic-calculus/section-27-ito-s-lemma.html"
+        },
+        {
+          "title": "Dynamic Programming",
+          "url": "/PhD_Macro/notes/part-07-stochastic-calculus/section-28-dynamic-programming.html"
+        },
+        {
+          "title": "The Kolmogorov Forward Equation",
+          "url": "/PhD_Macro/notes/part-07-stochastic-calculus/section-29-the-kolmogorov-forward-equation.html"
+        },
+        {
+          "title": "Application: Real Options",
+          "url": "/PhD_Macro/notes/part-07-stochastic-calculus/section-30-application-real-options.html"
+        },
+        {
+          "title": "Application: Menu cost Stokey (2009, Ch. 7)",
+          "url": "/PhD_Macro/notes/part-07-stochastic-calculus/section-31-application-menu-cost-stokey-2009-ch-7.html"
+        }
+      ]
+    }
+  ]
+}
