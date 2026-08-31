@@ -1,0 +1,2496 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Searchable course website generated from Ocampo-Macro_Notes.tex">
+      
+      
+      
+        <link rel="canonical" href="https://ocamp020.github.io/PhD_Macro/notes/part-07-stochastic-calculus/section-26-stochastic-processes.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="section-27-ito-s-lemma.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Stochastic Processes - EC9604 Advanced Macroeconomics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stochastic-processes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-header__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EC9604 Advanced Macroeconomics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Stochastic Processes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-nav__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EC9604 Advanced Macroeconomics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-01-preliminaries/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preliminaries
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Preliminaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-01-macroeconomic-variables-and-distributions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macroeconomic Variables and Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-02-aggregation-complete-markets-preferences-and-technology.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation: Complete Markets, Preferences, and Technology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-03-markov-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markov Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-02-dynamic-programming/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dynamic Programming
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-05-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Recursive Competitive Equilibrium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-03-heterogeneous-agent-models/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heterogeneous Agent Models
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Heterogeneous Agent Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-07-the-income-fluctuations-model-and-precautionary-savings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Income Fluctuations Model and Precautionary Savings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-08-an-endowment-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    An Endowment Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-09-a-production-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-10-a-production-economy-with-aggregate-risk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy with Aggregate Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-04-firm-heterogeneity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firm Heterogeneity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Firm Heterogeneity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-11-span-of-control.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Span of Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-12-market-power.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Market Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-13-monopolistic-competition.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monopolistic Competition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-14-variable-markups.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variable Markups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-15-aggregation-and-misallocation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation and Misallocation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-05-input-output-networks-and-economic-activity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks and Economic Activity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input-Output Networks and Economic Activity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-16-a-domar-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Domar Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-17-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-18-examples-of-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples of Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-19-hulten-s-theorem-for-efficient-economies.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hulten's Theorem for Efficient Economies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-20-beyond-hulten-second-order-effects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Second order effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-21-beyond-hulten-distortions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Distortions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-06-random-variables-and-probability/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Variables and Probability
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Random Variables and Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-22-measure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-23-measurable-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measurable functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-24-the-lebesgue-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Lebesgue integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-25-the-stieltjes-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Stieltjes integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Calculus
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Calculus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="section-26-stochastic-processes.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discrete-time-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discrete time examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brownian-motion-wiener-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brownian motion (Wiener processes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Brownian motion (Wiener processes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#random-walk-approximation-of-a-brownian-motion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Random walk approximation of a Brownian motion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ito-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ito processes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jump-processes-poisson-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jump processes - Poisson Processes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-27-ito-s-lemma.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ito's Lemma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-28-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-29-the-kolmogorov-forward-equation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Kolmogorov Forward Equation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-30-application-real-options.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Real Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-31-application-menu-cost-stokey-2009-ch-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Menu cost Stokey (2009, Ch. 7)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discrete-time-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discrete time examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brownian-motion-wiener-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brownian motion (Wiener processes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Brownian motion (Wiener processes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#random-walk-approximation-of-a-brownian-motion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Random walk approximation of a Brownian motion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ito-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ito processes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jump-processes-poisson-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jump processes - Poisson Processes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div class="section-meta">
+  <a href="index.html">Part 7: Stochastic Calculus</a>
+  <span>Section 26</span>
+</div>
+
+<h1 id="stochastic-processes">Stochastic Processes<a class="headerlink" href="#stochastic-processes" title="Permanent link">&para;</a></h1>
+<h2 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">&para;</a></h2>
+<p>The idea now is to study sequences of random variables. A stochastic
+process is similar to a random variable, with the difference that
+it also depends on time. Adding the time dimension adds notation,
+but it does not change any of the main ideas. For convenience we will
+first go over the definition of a random variable.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 26.1: Random variable</p>
+<p>Let <span class="arithmatex">\(\left(\Omega,\mathcal{A},P\right)\)</span> be
+a probability space and <span class="arithmatex">\(x:\Omega\to\mathbb{R}\)</span> a real valued function.
+<span class="arithmatex">\(x\)</span> is a random variable if and only if <span class="arithmatex">\(x\)</span> is measurable, that
+is, if and only if <span class="arithmatex">\(x^{-1}\left(B\right)\in\mathcal{A}\)</span> for all <span class="arithmatex">\(B\in\mathcal{B}\)</span>,
+where <span class="arithmatex">\(\mathcal{B}\)</span> is the Borel <span class="arithmatex">\(\sigma\)</span>-algebra on <span class="arithmatex">\(\mathbb{R}\)</span>.
+We further establish the same notation:</p>
+<ol>
+<li>An outcome is an element <span class="arithmatex">\(\omega\in\Omega\)</span>.</li>
+<li>An event is a measurable subset of <span class="arithmatex">\(\Omega\)</span>: <span class="arithmatex">\(A\in\mathcal{A}\)</span>.</li>
+<li>The real number <span class="arithmatex">\(x\left(\omega\right)\)</span> is a realization of the random
+    variable.</li>
+<li>The probability measure for <span class="arithmatex">\(x\)</span> is then: <span class="arithmatex">\(\mu\left(B\right)=P\left(x^{-1}\left(B\right)\right)=P\left(\left\lbrace  \omega\in\Omega|x\left(\omega\right)\in B\right\rbrace \right)\)</span>,
+    for <span class="arithmatex">\(B\in\mathcal{B}\)</span>.</li>
+<li>The distribution function for <span class="arithmatex">\(f\)</span> is: <span class="arithmatex">\(G\left(b\right)=\mu\left(\left(-\infty,b\right]\right)\)</span>,
+    for <span class="arithmatex">\(b\in\text{\mathbb{R}}\)</span>.</li>
+</ol>
+</div>
+<p>Now we can work on adding the time dimension to the definition of
+a random variable. In general time can be discrete or continuous,
+but in what follows we will assume that time is continuous starting
+at 0 and going on forever, so <span class="arithmatex">\(t\in\left[0,\infty\right)\)</span>. Intuitively
+a stochastic process is formed by function <span class="arithmatex">\(x:\left[0,\infty\right)\times\Omega\to\mathbb{R}\)</span>
+that gives a realization for every outcome and time. At every point
+in time the random variable takes a variable, the sequence of those
+values forms the realization (path) of the stochastic process.</p>
+<p>The question is on how to measure the possible outcomes of the random
+variable through time. We need a way of determining where the random
+variable is at a certain point in time, and where it has been, but
+that does not provide information about the value of future realizations.
+This is achieved using a filtration.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 26.2: Filtration</p>
+<p>Let <span class="arithmatex">\(\mathcal{A}\)</span> be a <span class="arithmatex">\(\sigma\)</span>-algebra. The
+set <span class="arithmatex">\(\mathbb{A}=\left\lbrace  \mathcal{A}_{t}|t\geq0\right\rbrace\)</span> is a filtration
+if <span class="arithmatex">\(\mathcal{A}_{t}\subseteq\mathcal{A}\)</span> and <span class="arithmatex">\(\mathcal{A}_{s}\subseteq\mathcal{A}_{t}\)</span><strong>
+</strong>for all <span class="arithmatex">\(t\geq0\)</span> and <span class="arithmatex">\(s\leq t\)</span>. <span class="arithmatex">\(\mathcal{A}_{t}\)</span> is the set of events
+known at time <span class="arithmatex">\(t\)</span>.</p>
+</div>
+<p>Now we can define a stochastic process as a function that is measurable
+in a filtered space.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 26.3: Stochastic Process</p>
+<p>Let <span class="arithmatex">\(\left(\Omega,\mathbb{A},P\right)\)</span>
+be a filtered probability space with a time index <span class="arithmatex">\(t\in\mathbb{R}_{+}\)</span>,
+and let <span class="arithmatex">\(\mathcal{B}_{+}\)</span> be the Borel sets of <span class="arithmatex">\(\mathbb{R}_{+}\)</span>. A
+stochastic process is a function <span class="arithmatex">\(x:\left[0,\infty\right)\times\Omega\to\mathbb{R}\)</span>
+that is measurable with respect to <span class="arithmatex">\(\mathcal{B}_{+}\times\mathcal{A}\)</span> (that
+is, <span class="arithmatex">\(x\)</span> is jointly measurable in <span class="arithmatex">\(\left(t,\omega\right)\)</span>). Moreover:</p>
+<ol>
+<li>For all <span class="arithmatex">\(t\in\mathbb{R}_{+}\)</span> and <span class="arithmatex">\(\omega\in\Omega\)</span>, <span class="arithmatex">\(x\left(t,\omega\right)\)</span>
+    is measurable with respect to <span class="arithmatex">\(\mathcal{A}_{t}\)</span>, where <span class="arithmatex">\(\mathcal{A}_{t}\)</span>
+    is in the filtration <span class="arithmatex">\(\mathbb{A}\)</span>.</li>
+<li>For all <span class="arithmatex">\(t\in\mathbb{R}_{+}\)</span>, <span class="arithmatex">\(x\left(t,\cdot\right):\Omega\to\mathbb{R}\)</span>
+    is an ordinary random variable on the probability space <span class="arithmatex">\(\left(\Omega,\mathcal{A}_{t},P_{t}\right)\)</span>.</li>
+<li>For all <span class="arithmatex">\(\omega\in\Omega\)</span>, <span class="arithmatex">\(x\left(\cdot,\omega\right):\mathbb{R}_{+}\to\mathbb{R}\)</span>
+    is a Borel measurable function. This is called the <strong>sample
+    path </strong>of <span class="arithmatex">\(x\)</span>.</li>
+</ol>
+</div>
+<h2 id="discrete-time-examples">Discrete time examples<a class="headerlink" href="#discrete-time-examples" title="Permanent link">&para;</a></h2>
+<p>It is not hard to come up with examples of discrete time stochastic
+processes. They are often used to model the behavior of many stationary
+economic variables by means of ARMA(p,q) representations, as well
+non-stationary variables usually related to random walks.</p>
+<p>To fix ideas we start with the simple example of a (fair) coin toss.
+There are two possible outcomes, so <span class="arithmatex">\(\Omega=\left\lbrace  H,T\right\rbrace\)</span>,
+when tossing the coin is always possible to know which outcome occurred,
+and whether or not the coin was tossed, this gives: <span class="arithmatex">\(\mathcal{A}=\left\lbrace  \left\lbrace  H\right\rbrace ,\left\lbrace  T\right\rbrace ,\emptyset,\Omega\right\rbrace\)</span>.
+Finally the probability distribution <span class="arithmatex">\(P\)</span> assigns values to sets in
+the <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{A}\)</span>:</p>
+<div class="arithmatex">\[
+P\left(\left\lbrace  H\right\rbrace \right)=P\left(\left\lbrace  T\right\rbrace \right)=\frac{1}{2}\qquad P\left(\emptyset\right)=0\qquad P\left(\Omega\right)=1
+\]</div>
+<p>Now we can define a random variable <span class="arithmatex">\(\epsilon:\Omega\to\mathbb{R}\)</span>
+as: <span class="arithmatex">\(\epsilon\left(H\right)=1\)</span> and <span class="arithmatex">\(\epsilon\left(T\right)=-1\)</span>.
+<span class="arithmatex">\(\epsilon\)</span> is a random variable with respect to the probability space
+<span class="arithmatex">\(\left(\Omega,\mathcal{A},P\right)\)</span>. As will be the case almost always
+we can dispense of the outcome space <span class="arithmatex">\(\Omega\)</span> for most applications
+and just refer to the random variable and the probability distribution
+induced over its values. In this way we have: <span class="arithmatex">\(\epsilon\in\left\lbrace  -1,1\right\rbrace\)</span>
+with <span class="arithmatex">\(\Pr\left(\epsilon=1\right)=\Pr\left(\epsilon=-1\right)=\frac{1}{2}\)</span>.</p>
+<p>Furthermore we can extend this example to define the stochastic process
+that comes up from the repeated coin toss. In this case time is discrete
+and finite <span class="arithmatex">\(t\in\left\lbrace  1,2,3\right\rbrace\)</span> and at each time a coin is
+tossed, then the random variable variable <span class="arithmatex">\(\epsilon_{t}\)</span> is defined
+as the value of <span class="arithmatex">\(\epsilon\)</span> given the outcome of the <span class="arithmatex">\(t^{th}\)</span> coin
+toss. The sequence <span class="arithmatex">\(\left\lbrace  \epsilon_{t}\right\rbrace _{t=1}^{3}\)</span> is a
+stochastic process with respect to the filtered probability space
+<span class="arithmatex">\(\left(\Omega,\mathbb{A},P\right)\)</span>, where:</p>
+<div class="arithmatex">\[
+\Omega=\left\lbrace  \left(H,H,H\right),\left(H,H,T\right),\left(H,T,H\right),\left(H,T,T\right),\left(T,H,H\right),\left(T,T,H\right),\left(T,H,T\right),\left(T,T,T\right)\right\rbrace
+\]</div>
+<div class="arithmatex">\[
+\mathcal{A}=2^{\Omega}\qquad P\left(\omega\right)=\frac{1}{8}\quad\forall_{\omega\in\Omega}
+\]</div>
+<p>The filtration is established taking into account that at each point
+in time only the outcome of current and past tosses is known:</p>
+<div class="arithmatex">\[
+\mathcal{A}_{1}=\left\lbrace  \emptyset,\Omega,\left\lbrace  \left(H,H,H\right),\left(H,H,T\right),\left(H,T,H\right),\left(H,T,T\right)\right\rbrace ,\left\lbrace  \left(T,H,H\right),\left(T,T,H\right),\left(T,H,T\right),\left(T,T,T\right)\right\rbrace \right\rbrace
+\]</div>
+<div class="arithmatex">\[
+\mathcal{A}_{2}=\left\lbrace  \emptyset,\Omega,\left\lbrace  \left(H,H,H\right),\left(H,H,T\right)\right\rbrace ,\left\lbrace  \left(T,H,H\right),\left(T,H,T\right)\right\rbrace ,\left\lbrace  \left(H,T,H\right),\left(H,T,T\right)\right\rbrace ,\left\lbrace  \left(T,T,H\right),\left(T,T,T\right)\right\rbrace \right\rbrace
+\]</div>
+<div class="arithmatex">\[
+\mathcal{A}_{3}=\mathcal{A}
+\]</div>
+<p>So, in the first <span class="arithmatex">\(\sigma\)</span>-algebra all outcomes for which the first
+toss comes up heads are indistinguishable from each other, in the
+second <span class="arithmatex">\(\sigma\)</span>-algebra one can distinguish between outcomes that
+have the sequence <span class="arithmatex">\(\left\lbrace  H,T\right\rbrace\)</span> and <span class="arithmatex">\(\left\lbrace  H,H\right\rbrace\)</span>,
+but no information is given about the outcome of third toss. This
+same ideas apply if time goes on forever, so we can define our stochastic
+process over <span class="arithmatex">\(t\in\mathbb{N}\)</span>.</p>
+<p>In the previous example the stochastic process obtained satisfies
+the property of being iid (identically and independently distributed).
+The values of the stochastic process at each point in time are independent
+from its previous values, and they all have the same probabilities
+of occurring.</p>
+<p>We now use our stochastic process <span class="arithmatex">\(\left\lbrace  \epsilon_{t}\right\rbrace\)</span>
+to define a random walk. Random walks are particularly useful to understand
+the behavior of continuous time stochastic processes. As we will see
+the building block of most of them is the continuous time approximation
+of a random walk.</p>
+<div class="admonition example">
+<p class="admonition-title">Example 26.1: Random Walk Process</p>
+<p>Consider a stochastic process <span class="arithmatex">\(x\)</span>.
+Denote by <span class="arithmatex">\(x_{t}\)</span> the value of <span class="arithmatex">\(x\)</span> at time <span class="arithmatex">\(t\)</span>, and fix the initial
+value <span class="arithmatex">\(x_{0}\)</span>. <span class="arithmatex">\(x_{t}\)</span> is assumed to evolve according to:</p>
+<div class="arithmatex">\[
+x_{t}=x_{t-1}+\epsilon_{t}\qquad\text{for }t\geq1
+\]</div>
+<p><span class="arithmatex">\(\epsilon_{t}\)</span> is a random variable that can take two values <span class="arithmatex">\(\left\lbrace  -1,1\right\rbrace\)</span>,
+and its probability distribution is independent of time, so that:
+<span class="arithmatex">\(\Pr\left(\epsilon_{t}=1\right)=\Pr\left(\epsilon_{t}=-1\right)=\frac{1}{2}\)</span>.</p>
+<p>Given the starting value <span class="arithmatex">\(x_{0}\)</span> the variable <span class="arithmatex">\(x_{t}\)</span> can only take
+on discrete values. For instance, for <span class="arithmatex">\(x_{0}=0\)</span> and <span class="arithmatex">\(t\)</span> odd they
+are <span class="arithmatex">\(\left\lbrace  -t,\ldots,-1,0,1,\ldots,t\right\rbrace\)</span>, and for <span class="arithmatex">\(t\)</span> even
+they are <span class="arithmatex">\(\left\lbrace  -t,\ldots,-2,0,2,\ldots,t\right\rbrace\)</span>. These values
+tell you which paths of the process cam be known at time <span class="arithmatex">\(t\)</span>.</p>
+<p>Finally, this process has no drift. Given an initial value <span class="arithmatex">\(x_{0}\)</span>
+the expected value of <span class="arithmatex">\(x_{t}\)</span> for any <span class="arithmatex">\(t\)</span> is <span class="arithmatex">\(x_{0}\left(E\left[x_{t}\right]=x_{0}\right)\)</span>,
+this follows from the expected value of each change being <span class="arithmatex">\(E\left[x_{t}-x_{t-1}\right]=E\left[\epsilon_{t}\right]=0\)</span>.</p>
+</div>
+<p>This process can be generalized in many ways. The most useful one
+for our purposes is to allow for drift, which can be done by changing
+the probabilities of the random variable <span class="arithmatex">\(\epsilon_{t}\)</span>, letting
+<span class="arithmatex">\(\Pr\left(\epsilon_{t}=1\right)=p\)</span> and <span class="arithmatex">\(\Pr\left(\epsilon_{t}=-1\right)=1-p\)</span>
+achieves the desired result. If <span class="arithmatex">\(p&gt;\frac{1}{2}\)</span> the process will
+have positive drift.</p>
+<h2 id="brownian-motion-wiener-processes">Brownian motion (Wiener processes)<a class="headerlink" href="#brownian-motion-wiener-processes" title="Permanent link">&para;</a></h2>
+<p>A Brownian motion, or Weiner process, is a continuous time stochastic
+process <span class="arithmatex">\(\left(W\left(t\right)\right)\)</span> that satisfies three properties:</p>
+<ol>
+<li><span class="arithmatex">\(W\left(t\right)\)</span> has continuous sample paths.</li>
+<li><span class="arithmatex">\(W\left(t\right)\)</span> has stationary independent increments.</li>
+<li>Increments of <span class="arithmatex">\(W\left(t\right)\)</span> over a finite interval of time are
+    normally distributed with variance that increases linearly in time.</li>
+</ol>
+<p>The first property implies that a Brownian motion has no jumps, so
+as the time interval goes to zero the change in the process must also
+go to zero. The second and third properties imply that the change
+in <span class="arithmatex">\(W\left(t\right)\)</span> over some interval of length <span class="arithmatex">\(\Delta t\)</span> must
+satisfy:</p>
+<div class="arithmatex">\[
+\Delta W=\epsilon_{t}\sqrt{\Delta t}\qquad\epsilon_{t}\sim N\left(0,1\right)
+\]</div>
+<p>which we write as <span class="arithmatex">\(dW=\epsilon_{t}\sqrt{dt}\)</span> as <span class="arithmatex">\(\Delta t\to0\)</span>.
+This implies that:</p>
+<div class="arithmatex">\[
+E\left[dW\right]=E\left[\epsilon_{t}\right]\sqrt{dt}=0\qquad V\left[dW\right]=E\left[\epsilon_{t}^{2}\right]dt=dt
+\]</div>
+<p>Moreover we assume that <span class="arithmatex">\(\epsilon_{t}\)</span> is serially uncorrelated,
+i.e., <span class="arithmatex">\(E\left[\epsilon_{t}\epsilon_{s}\right]=0\)</span> for <span class="arithmatex">\(t\neq s\)</span>,
+so the values of <span class="arithmatex">\(dW\)</span> for any two different time intervals are independent.</p>
+<p>Its easy to note the relation between the Brownian motion and the
+random walk processes. In discrete time we had <span class="arithmatex">\(\Delta x_{t}=x_{t}-x_{t-1}=\epsilon_{t}\Delta t\)</span>,
+where <span class="arithmatex">\(\Delta t=1\)</span>. We will use this fact when approximating Brownian
+motions using random walks as <span class="arithmatex">\(\Delta t\to0\)</span>.</p>
+<p>To see that this representation implies the third property consider
+a time interval that starts at <span class="arithmatex">\(t\)</span> and ends at <span class="arithmatex">\(T\)</span>, and divide into
+<span class="arithmatex">\(n\)</span> intervals of length <span class="arithmatex">\(\Delta t=\frac{T}{n}\)</span>. Then we have:</p>
+<div class="arithmatex">\[
+W\left(t+T\right)-W\left(t\right)=\sum_{i=1}^{n}\epsilon_{i}\sqrt{\Delta t}
+\]</div>
+<p>What we want to show is that <span class="arithmatex">\(W\left(t+T\right)-W\left(t\right)\sim N\left(0,t\right)\)</span>.
+To prove this we can use the Central Limit Theorem:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 26.1: Central Limit Theorem</p>
+<p>If <span class="arithmatex">\(\left\lbrace  \epsilon_{1},\epsilon_{2},\epsilon_{3},\ldots\right\rbrace\)</span>
+are iid (but not necessarily normal) with <span class="arithmatex">\(E\left[\epsilon_{i}\right]=\mu&lt;\infty\)</span>
+and <span class="arithmatex">\(V\left[\epsilon_{i}\right]=\sigma^{2}&lt;\infty\)</span>, then <span class="arithmatex">\(Z_{n}=\frac{1}{\sqrt{n}}\frac{\underset{i=1}{\overset{n}{\sum}}\epsilon_{i}-n\mu}{\sigma}\to N\left(0,1\right)\)</span>
+as <span class="arithmatex">\(n\to\infty\)</span>.</p>
+</div>
+<p>Note that <span class="arithmatex">\(\epsilon_{i}\)</span> already satisfies being iid and <span class="arithmatex">\(E\left[\epsilon_{i}\right]=0\)</span>
+and <span class="arithmatex">\(V\left[\epsilon_{i}\right]=1\)</span>, so <span class="arithmatex">\(Z_{n}=\sqrt{n}\underset{i=1}{\overset{n}{\sum}}\epsilon_{i}\)</span>.
+Then we can write:</p>
+<div class="arithmatex">\[
+W\left(t+T\right)-W\left(t\right)=\sqrt{T}Z_{n}
+\]</div>
+<p>By the CLT this converges to a <span class="arithmatex">\(N\left(0,T\right)\)</span> as <span class="arithmatex">\(n\to\infty\)</span>.</p>
+<p>A Brownian motion can be generalized to have drift <span class="arithmatex">\(\mu\)</span> and variance
+<span class="arithmatex">\(\sigma^{2}\)</span>. This is done by adjusting the way the increments of
+the stochastic process work:</p>
+<div class="arithmatex">\[
+dx=\mu dt+\sigma dW
+\]</div>
+<p>In this case the increments are given by a non-stochastic component
+<span class="arithmatex">\(\mu dt\)</span>, which indicates that the process will drift by <span class="arithmatex">\(\mu\)</span> per
+unit of time deterministically if there are no shocks, and by a stochastic
+component <span class="arithmatex">\(\sigma dW\)</span>, where <span class="arithmatex">\(\sigma\)</span> is scaling the variance of
+the increments of the Weiner process <span class="arithmatex">\(W\)</span>. This process satisfies:</p>
+<div class="arithmatex">\[
+E\left[dx\right]=\mu dt\qquad V\left[dx\right]=\sigma^{2}dt
+\]</div>
+<h3 id="random-walk-approximation-of-a-brownian-motion">Random walk approximation of a Brownian motion<a class="headerlink" href="#random-walk-approximation-of-a-brownian-motion" title="Permanent link">&para;</a></h3>
+<p>As mentioned above we can use the similarities between the increments
+of a Brownian motion and the increments of a random walk to approximate
+continuous time processes using discrete time ones. This is important
+because of two reasons: it helps explain the mechanics of the continuous
+time model, and it provides an algorithm for simulation in the computer.</p>
+<p>Our objective is to approximate the a Brownian motion with drift:</p>
+<div class="arithmatex">\[
+dx=\mu dt+\sigma dW
+\]</div>
+<p>We will approximate with a discrete time process <span class="arithmatex">\(y\)</span> whose increments
+are <span class="arithmatex">\(h\)</span> with probability <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(-h\)</span> with probability <span class="arithmatex">\(1-p\)</span>.
+This gives:</p>
+<div class="arithmatex">\[
+E\left[\Delta y\right]=ph-\left(1-p\right)h=\left(2p-1\right)h
+\]</div>
+<div class="arithmatex">\[
+V\left[\Delta y\right]=E\left[\left(\Delta y\right)^{2}\right]-\left(E\left[\Delta y\right]\right)^{2}=\left(1-\left(2p-1\right)^{2}\right)h^{2}
+\]</div>
+<p>In order to get the approximation we need to choose values for <span class="arithmatex">\(h\)</span>,
+<span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(\Delta t\)</span> so that:</p>
+<div class="arithmatex">\[\begin{align*}
+\mu\Delta t &amp; =\left(2p-1\right)h\\
+\sigma^{2}\Delta t &amp; =4p\left(1-p\right)h^{2}
+\end{align*}\]</div>
+<p>Solving for <span class="arithmatex">\(p\)</span> we get:</p>
+<div class="arithmatex">\[
+p^{2}-p+\frac{\sigma^{2}}{4\left(\sigma^{2}+\mu^{2}\Delta t\right)}=0
+\]</div>
+<p>The roots of these equation are:</p>
+<div class="arithmatex">\[\begin{align*}
+p &amp; =\frac{1}{2}\left(1\pm\sqrt{1-\frac{\sigma^{2}}{\left(\sigma^{2}+\mu^{2}\Delta t\right)}}\right)\\
+&amp; =\frac{1}{2}\left(1\pm\frac{\mu\sqrt{\Delta t}}{\sqrt{\sigma^{2}+\mu^{2}\Delta t}}\right)\\
+&amp; \approx\frac{1}{2}\left(1\pm\frac{\mu}{\sigma}\sqrt{\Delta t}\right)
+\end{align*}\]</div>
+<p>where the approximation follows if <span class="arithmatex">\(\Delta t\)</span> is small enough relative
+to <span class="arithmatex">\(\frac{\sigma^{2}}{\mu^{2}}\)</span>, because we are taking <span class="arithmatex">\(\Delta t\)</span>
+close to zero this assumption is satisfied. We further choose only
+the "+" root because that way <span class="arithmatex">\(p\geq\frac{1}{2}\)</span> when <span class="arithmatex">\(\mu\geq0\)</span>.</p>
+<p>Now we can find a value for <span class="arithmatex">\(h\)</span>:</p>
+<div class="arithmatex">\[\begin{align*}
+\sigma^{2}\Delta t &amp; =4p\left(1-p\right)h^{2}\\
+\sigma^{2}\Delta t &amp; =2\left(1+\frac{\mu}{\sigma}\sqrt{\Delta t}\right)\left(1-\frac{1}{2}\left(1+\frac{\mu}{\sigma}\sqrt{\Delta t}\right)\right)h^{2}\\
+\sigma^{2}\Delta t &amp; =\left(1+\frac{\mu}{\sigma}\sqrt{\Delta t}\right)\left(1-\frac{\mu}{\sigma}\sqrt{\Delta t}\right)h^{2}\\
+\sigma^{2}\Delta t &amp; =\left(1-\left(\frac{\mu}{\sigma}\right)^{2}\Delta t\right)h^{2}\\
+\sigma^{2}\Delta t &amp; \approx h^{2}\\
+\sigma\sqrt{\Delta t} &amp; \approx h
+\end{align*}\]</div>
+<p>As before we can disregard the term <span class="arithmatex">\(\left(\frac{\mu}{\sigma}\right)^{2}\Delta t\)</span>
+as long as <span class="arithmatex">\(\Delta t\)</span> is small enough relative to <span class="arithmatex">\(\frac{\sigma^{2}}{\mu^{2}}\)</span>.</p>
+<p>As an exercise can verify that the first equation also holds:</p>
+<div class="arithmatex">\[\begin{align*}
+\mu\Delta t &amp; =\left(2p-1\right)h\\
+\mu\Delta t &amp; =\left(2p-1\right)\sigma\sqrt{\Delta t}\\
+\frac{\mu}{\sigma}\sqrt{\Delta t} &amp; =2p-1\\
+\frac{1}{2}\left(1+\frac{\mu}{\sigma}\sqrt{\Delta t}\right) &amp; =p
+\end{align*}\]</div>
+<p>In order to simulate a Brownian motion with parameters <span class="arithmatex">\(\left(\mu,\sigma\right)\)</span>
+we can do as follows:</p>
+<ol>
+<li>Set a <span class="arithmatex">\(\Delta t\)</span> small relative to <span class="arithmatex">\(\frac{\sigma^{2}}{\mu^{2}}\)</span>.</li>
+<li>Set <span class="arithmatex">\(p=\frac{1}{2}\left(1+\frac{\mu}{\sigma}\sqrt{\Delta t}\right)\)</span>
+    and <span class="arithmatex">\(h=\sigma\sqrt{\Delta t}\)</span>.</li>
+<li>Simulate the increments of <span class="arithmatex">\(x\)</span> by drawing realization of a random
+    variable <span class="arithmatex">\(\epsilon_{t}\)</span> that takes value <span class="arithmatex">\(h\)</span> with probability <span class="arithmatex">\(p\)</span>
+    and <span class="arithmatex">\(-h\)</span> with probability <span class="arithmatex">\(1-p\)</span>.</li>
+</ol>
+<h2 id="ito-processes">Ito processes<a class="headerlink" href="#ito-processes" title="Permanent link">&para;</a></h2>
+<p>Ito processes are the generalization of Brownian motions. Their drift
+and variance is allowed to depend on the level of the process and
+the time:
+<a id="ref-eq-000020def-000020ito-000020process" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+dx=\mu\left(x,t\right)dt+\sigma\left(x,t\right)dW\tag{26.1}
+\end{equation}\]</div>
+<p>where the functions <span class="arithmatex">\(\mu\)</span> and <span class="arithmatex">\(\sigma\)</span> give the value of the mean
+and standard deviations of the increments of the process <span class="arithmatex">\(x\)</span>:</p>
+<div class="arithmatex">\[\begin{align*}
+\mu\left(x,t\right) &amp; =\lim_{\Delta\to0^{+}}\frac{1}{\Delta}E\left[x\left(t+\Delta\right)-x\left(t\right)|x\left(t\right)=x\right]\\
+\left(\sigma\left(x,t\right)\right)^{2} &amp; =\lim_{\Delta\to0^{+}}\frac{1}{\Delta}E\left[\left(x\left(t+\Delta\right)-x\left(t\right)\right)^{2}|x\left(t\right)=x\right]
+\end{align*}\]</div>
+<p>For future reference note that an Ito process can also be represented
+as:</p>
+<div class="arithmatex">\[
+x\left(t\right)=x\left(0\right)+\int_{0}^{t}\mu\left(x,s\right)ds+\int_{0}^{t}\sigma\left(x,s\right)dW\left(s\right)
+\]</div>
+<p>where the last term is a stochastic integral. Stochastic integrals
+play an important role in the theory of stochastic processes, for
+now it suffices to state the following result.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 26.1</p>
+<p>Let <span class="arithmatex">\(x\left(t\right)\)</span> be an integrable function, then <span class="arithmatex">\(E\left[\int_{0}^{t}x\left(s\right)dW\left(s\right)\right]=0\)</span>.</p>
+</div>
+<p>This proposition states that the expected value of a stochastic integral
+is identically zero. The derivation of the result, along with other
+properties can be found in <a href="http://www.jstor.org/stable/j.ctt7sfgq">Stokey (2009, Sec. 3.2)</a>.</p>
+<p>Two Ito process are of particular importance. They are presented in
+the examples below.</p>
+<div class="admonition example">
+<p class="admonition-title">Example 26.2: Geometric Brownian notion</p>
+<p>A Geometric Brownian motion is
+an Ito process with <span class="arithmatex">\(\mu\left(x,t\right)=\mu x\)</span> and <span class="arithmatex">\(\sigma\left(x,t\right)=\sigma x\)</span>,
+so:</p>
+<div class="arithmatex">\[
+dx=\mu xdt+\sigma xdW
+\]</div>
+<p>A geometric Brownian motion can be thought of as a Brownian motion
+where the properties apply to percentage increments instead of increments:</p>
+<div class="arithmatex">\[
+\frac{dx}{x}=\mu dt+\sigma dW
+\]</div>
+<p>So the percentage increment, <span class="arithmatex">\(\frac{dx}{x}\)</span>, are normally distributed
+with mean <span class="arithmatex">\(\mu\Delta t\)</span> and variance <span class="arithmatex">\(\sigma^{2}\Delta t\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 26.3: Ornstein-Uhlenbeck process</p>
+<p>Unlike the previous processes
+an OU process is mean reverting, similar to an AR(1) process in discrete
+time. An OU process is an Ito process with <span class="arithmatex">\(\mu\left(x,t\right)=\mu\left(\overline{x}-x\right)\)</span>
+and <span class="arithmatex">\(\sigma\left(x,t\right)=\sigma\)</span>. If <span class="arithmatex">\(x&gt;\overline{x}\)</span> then the
+process drifts down, and if <span class="arithmatex">\(x&lt;\overline{x}\)</span> the process drifts up.</p>
+<div class="arithmatex">\[
+dx=\mu\left(\overline{x}-x\right)dt+\sigma dW
+\]</div>
+</div>
+<h2 id="jump-processes-poisson-processes">Jump processes - Poisson Processes<a class="headerlink" href="#jump-processes-poisson-processes" title="Permanent link">&para;</a></h2>
+<p>Jump processes are a type of stochastic process that has discontinuous
+paths. Jump process change by discrete amounts when a certain outcome
+occurs. The most important Jump process is the Poisson process, which
+is just a jump process such that the time of the jumps follows a Poisson
+distribution. To define it let <span class="arithmatex">\(\lambda\)</span> be the mean arrival rate
+of a jump and <span class="arithmatex">\(u\)</span> the size of the change of the process (usually
+<span class="arithmatex">\(u=1\)</span>, but in general <span class="arithmatex">\(u\)</span> can be itself a random variable). Then
+for some process <span class="arithmatex">\(q\)</span> we have:</p>
+<div class="arithmatex">\[
+dq=\begin{cases}
+0 &amp; \text{with prob. }1-\lambda dt\\
+u &amp; \text{with prob. }\lambda dt
+\end{cases}
+\]</div>
+<p>We can now define a more general process that depends on the Jump
+process <span class="arithmatex">\(q\)</span>:
+<a id="ref-eq-000020poisson-000020process" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+dx=f\left(x,t\right)dt+g\left(x,t\right)dq\tag{26.2}
+\end{equation}\]</div>
+<p>where absent a jump <span class="arithmatex">\(x\)</span> evolves deterministically according to the
+function <span class="arithmatex">\(f\)</span>, and when there is a jump it moves according to function
+<span class="arithmatex">\(g\)</span>,</p>
+<div class="arithmatex">\[
+E\left[dx\right]=f\left(x,t\right)dt+\lambda E_{u}\left[g\left(x,t\right)u\right]dt.
+\]</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="section-27-ito-s-lemma.html" class="md-footer__link md-footer__link--next" aria-label="Next: Ito&#39;s Lemma">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Ito's Lemma
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Sergio Ocampo Díaz · Western University
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2223 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Searchable course website generated from Ocampo-Macro_Notes.tex">
+      
+      
+      
+        <link rel="canonical" href="https://ocamp020.github.io/PhD_Macro/notes/part-06-random-variables-and-probability/section-23-measurable-functions.html">
+      
+      
+        <link rel="prev" href="section-22-measure.html">
+      
+      
+        <link rel="next" href="section-24-the-lebesgue-integral.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Measurable functions - EC9604 Advanced Macroeconomics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#measurable-functions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-header__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EC9604 Advanced Macroeconomics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Measurable functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-nav__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EC9604 Advanced Macroeconomics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-01-preliminaries/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preliminaries
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Preliminaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-01-macroeconomic-variables-and-distributions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macroeconomic Variables and Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-02-aggregation-complete-markets-preferences-and-technology.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation: Complete Markets, Preferences, and Technology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-03-markov-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markov Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-02-dynamic-programming/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dynamic Programming
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-05-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Recursive Competitive Equilibrium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-03-heterogeneous-agent-models/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heterogeneous Agent Models
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Heterogeneous Agent Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-07-the-income-fluctuations-model-and-precautionary-savings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Income Fluctuations Model and Precautionary Savings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-08-an-endowment-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    An Endowment Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-09-a-production-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-10-a-production-economy-with-aggregate-risk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy with Aggregate Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-04-firm-heterogeneity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firm Heterogeneity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Firm Heterogeneity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-11-span-of-control.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Span of Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-12-market-power.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Market Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-13-monopolistic-competition.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monopolistic Competition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-14-variable-markups.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variable Markups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-15-aggregation-and-misallocation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation and Misallocation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-05-input-output-networks-and-economic-activity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks and Economic Activity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input-Output Networks and Economic Activity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-16-a-domar-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Domar Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-17-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-18-examples-of-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples of Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-19-hulten-s-theorem-for-efficient-economies.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hulten's Theorem for Efficient Economies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-20-beyond-hulten-second-order-effects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Second order effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-21-beyond-hulten-distortions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Distortions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Variables and Probability
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Random Variables and Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-22-measure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="section-23-measurable-functions.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measurable functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-24-the-lebesgue-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Lebesgue integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-25-the-stieltjes-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Stieltjes integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-07-stochastic-calculus/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Calculus
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Calculus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-26-stochastic-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-27-ito-s-lemma.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ito's Lemma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-28-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-29-the-kolmogorov-forward-equation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Kolmogorov Forward Equation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-30-application-real-options.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Real Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-31-application-menu-cost-stokey-2009-ch-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Menu cost Stokey (2009, Ch. 7)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div class="section-meta">
+  <a href="index.html">Part 6: Random Variables and Probability</a>
+  <span>Section 23</span>
+</div>
+
+<h1 id="measurable-functions">Measurable functions<a class="headerlink" href="#measurable-functions" title="Permanent link">&para;</a></h1>
+<p>A measurable function is a type of function for which it is possible
+to know (to measure) the conditions (the set) that originates certain
+outcomes. One can think of a function as mapping certain events in
+a given measure space to outcomes in another measure space. A function
+is measurable if the sets that induce a given outcome are measurable.
+Formally:</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 23.1: Measurable function</p>
+<p>Let <span class="arithmatex">\(\left(S,\mathcal{A},\mu\right)\)</span>
+and <span class="arithmatex">\(\left(S^{\prime},\mathcal{A}^{\prime},\mu^{\prime}\right)\)</span> be measure spaces and
+<span class="arithmatex">\(f:S\to S^{\prime}\)</span> a function. <span class="arithmatex">\(f\)</span> is measurable if and only if <span class="arithmatex">\(f^{-1}\left(A^{\prime}\right)\in\mathcal{A}\)</span>
+for all <span class="arithmatex">\(A^{\prime}\in\mathcal{A}^{\prime}\)</span>.</p>
+</div>
+<p>A special case of notable importance is that of <span class="arithmatex">\(\left(S^{\prime},\mathcal{A}^{\prime},\mu^{\prime}\right)=\left(\mathbb{R},\mathcal{B},\lambda\right)\)</span>,
+where <span class="arithmatex">\(\lambda\)</span> is the Lebesgue measure on the plane. This are real
+valued functions. In this case the <span class="arithmatex">\(\mathcal{B}\)</span>-measurable sets in
+<span class="arithmatex">\(\mathbb{R}\)</span> can be characterized in the following way:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 23.1</p>
+<p>Let <span class="arithmatex">\(\left(S,\mathcal{A},\mu\right)\)</span> be a measure space and <span class="arithmatex">\(f:S\to\mathbb{R}\)</span>.
+<span class="arithmatex">\(f\)</span> is <span class="arithmatex">\(\mu\)</span>-measurable if and only if <span class="arithmatex">\(f^{-1}\left(\left(-\infty,c\right)\right)=\left\lbrace  x\in S|f\left(x\right)&lt;c\right\rbrace \in\mathcal{A}\)</span>
+for all <span class="arithmatex">\(c\in\mathbb{R}\)</span>.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>This theorem is stated as the definition of a real valued function
+<span class="arithmatex">\(f\)</span> being <span class="arithmatex">\(\mu\)</span>-measurable in <a href="https://books.google.com/books?id=tWYo0QolyLAC">Stokey et al. (1989)</a>, but a formal proof
+is presented in <a href="https://books.google.com/books?id=cbbCAgAAQBAJ">Kolmogorov and Fomin (2012, Sec. 28, Thm. 1)</a>.
+It can also be stated with any of the inequalities <span class="arithmatex">\(\geq,\leq,&gt;,&lt;\)</span>.</p>
+</details>
+<p>Also when the measure space in question is a probability space one
+can characterize formally what a random variable is.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 23.2: Random variable</p>
+<p>Let <span class="arithmatex">\(\left(S,\mathcal{A},P\right)\)</span> be a probability
+space and <span class="arithmatex">\(f:S\to\mathbb{R}\)</span> a real valued function. <span class="arithmatex">\(f\)</span> is a random
+variable if and only if <span class="arithmatex">\(f\)</span> is measurable, that is, if and only if
+<span class="arithmatex">\(f^{-1}\left(B\right)\in\mathcal{A}\)</span> for all <span class="arithmatex">\(B\in\mathcal{B}\)</span>, where
+<span class="arithmatex">\(\mathcal{B}\)</span> is the Borel <span class="arithmatex">\(\sigma\)</span>-algebra on <span class="arithmatex">\(\mathbb{R}\)</span>. We further
+establish the same notation:</p>
+<ol>
+<li>An outcome is an element <span class="arithmatex">\(s\in S\)</span>.</li>
+<li>An event is a measurable subset of <span class="arithmatex">\(S\)</span>: <span class="arithmatex">\(A\in\mathcal{A}\)</span>.</li>
+<li>The real number <span class="arithmatex">\(f\left(s\right)\)</span> is a realization of the random
+    variable.</li>
+<li>The probability measure for <span class="arithmatex">\(f\)</span> is then: <span class="arithmatex">\(\mu\left(B\right)=P\left(f^{-1}\left(B\right)\right)=P\left(\left\lbrace  s\in S|f\left(s\right)\in B\right\rbrace \right)\)</span>,
+    for <span class="arithmatex">\(B\in\mathcal{B}\)</span>.</li>
+<li>The distribution function for <span class="arithmatex">\(f\)</span> is: <span class="arithmatex">\(G\left(b\right)=\mu\left(\left(-\infty,b\right]\right)\)</span>,
+    for <span class="arithmatex">\(b\in\text{\mathbb{R}}\)</span>.</li>
+</ol>
+</div>
+<p>Generally it is very hard to find a function that is not measurable.
+The details of the example will depend on the spaces considered. For
+example if <span class="arithmatex">\(f:\mathbb{R}\to\mathbb{R}\)</span> and <span class="arithmatex">\(\mathcal{A}\)</span> is the set
+of all open (or closed) sets in <span class="arithmatex">\(\mathbb{R}\)</span> the definition of measurability
+is equivalent to that of continuity (the pre-image of an open set
+has to be open) and then all functions that are not continuous are
+not measurable. It is clear that more complete <span class="arithmatex">\(\sigma\)</span>-algebras
+make more difficult to generate counterexamples. The following three
+results show how difficult it is to generate them:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 23.1</p>
+<p>Let <span class="arithmatex">\(f:\mathbb{R}\to\mathbb{R}\)</span>.</p>
+<ol>
+<li>If <span class="arithmatex">\(f\)</span> is continuous then <span class="arithmatex">\(f\)</span> is measurable with respect to the
+    Borel sets.</li>
+<li>If <span class="arithmatex">\(f\)</span> is monotone then <span class="arithmatex">\(f\)</span> is measurable with respect to the Borel
+    sets.</li>
+</ol>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>Each case is proven:</p>
+<ol>
+<li>Let <span class="arithmatex">\(f\)</span> be continuous. Consider the set <span class="arithmatex">\(f^{-1}\left(\left(-\infty,c\right)\right)\)</span>
+    for any <span class="arithmatex">\(c\in\mathbb{R}\)</span>. The set <span class="arithmatex">\(\left(-\infty,c\right)\)</span> is open,
+    because <span class="arithmatex">\(f\)</span> is continuous then its pre-image is open, then it is
+    a Borel set. Then its measurable.</li>
+<li>
+<p>Let <span class="arithmatex">\(f\)</span> be monotone increasing. Consider the set <span class="arithmatex">\(f^{-1}\left(\left(-\infty,c\right)\right)\)</span>
+    for arbitrary <span class="arithmatex">\(c\in\mathbb{R}\)</span>. Then, <span class="arithmatex">\(f^{-1}\left(\left(-\infty,c\right)\right)=\left(-\infty,a\right)\)</span>
+    or <span class="arithmatex">\(f^{-1}\left(\left(-\infty,c\right)\right)=\left(-\infty,a\right]\)</span>
+    or <span class="arithmatex">\(f^{-1}\left(\left(-\infty,c\right)\right)=\left(-\infty,\infty\right)\)</span>
+    or <span class="arithmatex">\(f^{-1}\left(\left(-\infty,c\right)\right)=\emptyset\)</span> for some
+    <span class="arithmatex">\(a\in\mathbb{R}\)</span>. Monotonicity ensures that if <span class="arithmatex">\(a\in f^{-1}\left(\left(-\infty,c\right)\right)\)</span>
+    and <span class="arithmatex">\(b\leq a\)</span> then <span class="arithmatex">\(b\in f^{-1}\left(\left(-\infty,c\right)\right)\)</span>.
+    Suppose its not, then there exists numbers <span class="arithmatex">\(b\leq a\)</span> such that <span class="arithmatex">\(f\left(b\right)&gt;c\geq f\left(a\right)\)</span>,
+    contradicting monotonicity.</p>
+<p>All these sets are in <span class="arithmatex">\(\mathcal{B}\)</span>, then <span class="arithmatex">\(f\)</span> is <span class="arithmatex">\(\mathcal{B}\)</span>-measurable.</p>
+</li>
+</ol>
+</details>
+<div class="admonition abstract">
+<p class="admonition-title">Corollary 23.1</p>
+<p>The composition of measurable functions is measurable. In particular
+the composition of a continuous function with a measurable function
+is measurable.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 23.2</p>
+<p>Let <span class="arithmatex">\(S=\left\lbrace  s_{1},s_{2},\ldots\right\rbrace\)</span> be a countable set (potentially
+infinite) and <span class="arithmatex">\(\mathcal{A}=2^{S}\)</span> a <span class="arithmatex">\(\sigma\)</span>-algebra on <span class="arithmatex">\(S\)</span>. Then
+all functions <span class="arithmatex">\(f:S\to\mathbb{R}\)</span> are measurable.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>The proof is immediate because the pre-image of a Borel set is a subset
+of <span class="arithmatex">\(S\)</span>, then it belongs to <span class="arithmatex">\(\mathcal{A}=2^{S}\)</span>.</p>
+</details>
+<p>In a more general way one can establish the measurability of a function
+by relating to a class of well behave 'simple' functions. The base
+for this class is the indicator function.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 23.3: Indicator Function</p>
+<p>Let <span class="arithmatex">\(\left(S,\mathcal{A}\right)\)</span> be a
+measurable space. An indicator function <span class="arithmatex">\(\chi_{A}:S\to\mathbb{R}\)</span>
+is:</p>
+<div class="arithmatex">\[
+\chi_{A}\left(s\right)=\begin{cases}
+1 &amp;   if  s\in A\\
+0 &amp;   if  s\notin A
+\end{cases}
+\]</div>
+<p>Clearly <span class="arithmatex">\(\chi_{A}\)</span> is measurable if and only if <span class="arithmatex">\(A\in\mathcal{A}\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 23.4: Simple Function</p>
+<p>Let <span class="arithmatex">\(\left(S,\mathcal{A}\right)\)</span> be a measurable
+space. A simple function is a function that takes at most countably
+many values. When the function takes finitely many values it can be
+expressed as:</p>
+<div class="arithmatex">\[
+\phi\left(s\right)=\sum_{i=1}^{n}\alpha_{i}\chi_{A_{i}}\left(s\right)
+\]</div>
+<p>where <span class="arithmatex">\(\left\lbrace  A_{i}\right\rbrace\)</span> is a sequence of subsets of <span class="arithmatex">\(S\)</span> and
+<span class="arithmatex">\(\alpha_{i}\in\mathbb{R}\)</span>.</p>
+</div>
+<p>Characterizing the measurability of simple functions is slightly more
+complicated.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 23.3</p>
+<p>A simple function taking values <span class="arithmatex">\(\left\lbrace  y_{1},y_{2},\ldots\right\rbrace\)</span>
+is measurable if and only if the sets <span class="arithmatex">\(A_{i}=\left\lbrace  s\in S|\phi\left(s\right)=y_{n}\right\rbrace\)</span>
+are measurable.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>Both directions are proven.</p>
+<ol>
+<li>Let <span class="arithmatex">\(\phi\)</span> be measurable, and <span class="arithmatex">\(\left\lbrace  y_{n}\right\rbrace \in\mathcal{B}\)</span>,
+    then its pre-image is measurable wrt <span class="arithmatex">\(\mathcal{A}\)</span>.</li>
+<li>
+<p>Let the sets be measurable, that is <span class="arithmatex">\(A_{i}\in\mathcal{A}\)</span>, and consider
+    <span class="arithmatex">\(B\in\mathcal{B}\)</span> a Borel set. Then</p>
+<div class="arithmatex">\[
+\phi^{-1}\left(B\right)=\left\lbrace  s\in S|\phi\left(s\right)=y_{i}\in B\right\rbrace =\bigcup_{y_{i}\in B}A_{i}.
+\]</div>
+<p>Because each <span class="arithmatex">\(A_{i}\in\mathcal{A}_{i}\)</span> and the union is taken over no
+more than countably many sets we have <span class="arithmatex">\(\bigcup_{y_{i}\in B}A_{i}\in\mathcal{A}\)</span>
+by definition of a <span class="arithmatex">\(\sigma\)</span>-algebra. This proves measurability of
+<span class="arithmatex">\(\phi^{-1}\left(B\right)\)</span>.</p>
+</li>
+</ol>
+</details>
+<p>In what follows all simple functions will be considered measurable.
+The importance of simple functions is given by the applications of
+the following proposition.
+<a id="ref-prop-000020pointwise-000020limit-000020and-000020measurability" class="course-anchor"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 23.4</p>
+<p>Let
+<span class="arithmatex">\(\left(S,\mathcal{A}\right)\)</span> be a measurable space and let <span class="arithmatex">\(\left\lbrace  f_{n}\right\rbrace\)</span>
+be a sequence of measurable functions converging pointwise to <span class="arithmatex">\(f\)</span>,
+that is <span class="arithmatex">\(\lim f_{n}\left(s\right)=f\left(s\right)\)</span> for all <span class="arithmatex">\(s\)</span>.
+Then <span class="arithmatex">\(f\)</span> is also measurable.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>The proof can be found in <a href="https://books.google.com/books?id=tWYo0QolyLAC">Stokey et al. (1989, Sec. 7.3)</a> or in <a href="https://books.google.com/books?id=cbbCAgAAQBAJ">Kolmogorov and Fomin (2012, Sec. 28.1)</a>.</p>
+</details>
+<div class="admonition abstract">
+<p class="admonition-title">Corollary 23.2</p>
+<p>If <span class="arithmatex">\(f\)</span> is non-negative one can choose the sequence <span class="arithmatex">\(\left\lbrace  f_{n}\right\rbrace\)</span>
+to be strictly increasing.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Corollary 23.3</p>
+<p>If <span class="arithmatex">\(f\)</span> is bounded one can choose the sequence <span class="arithmatex">\(\left\lbrace  f_{n}\right\rbrace\)</span>
+to converge uniformly.</p>
+</div>
+<p>The main application is the following result that gives a characterization
+of measurable functions in terms of simple functions:
+<a id="ref-simple-000020functions-000020and-000020measurability" class="course-anchor"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 23.5</p>
+<p>A function
+<span class="arithmatex">\(f\)</span> is measurable if and only if it an be represented as the limit
+of a uniformly converging sequence of measurable simple functions.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>The first direction is immediate from the previous proposition. If
+<span class="arithmatex">\(f\)</span> is the limit of measurable functions then <span class="arithmatex">\(f\)</span> is also measurable.</p>
+<p>Let <span class="arithmatex">\(f\)</span> be measurable. It is left to construct a converging sequence
+of simple functions that converges to <span class="arithmatex">\(f\)</span>. wlog let <span class="arithmatex">\(f\left(s\right)\geq0\)</span>
+for all <span class="arithmatex">\(s\)</span>, then by the Archimedean principle there exists a non-negative
+integer <span class="arithmatex">\(m\)</span> such that</p>
+<div class="arithmatex">\[
+\frac{m}{n}\leq f\left(s\right)&lt;\frac{m+1}{n}
+\]</div>
+<p>Let <span class="arithmatex">\(f_{n}\left(s\right)=\frac{m}{n}\)</span>, because <span class="arithmatex">\(n\)</span> is fixed
+and <span class="arithmatex">\(m\in\mathbb{N}\cup\left\lbrace  0\right\rbrace\)</span> it follows that <span class="arithmatex">\(f_{n}\)</span>
+can take at most countably many values, hence it is simple. <span class="arithmatex">\(f_{n}\)</span>
+is also measurable because</p>
+<div class="arithmatex">\[
+f_{n}^{-1}\left(\left(-\infty,c\right)\right)=\left\lbrace  s\in S|f_{n}\left(s\right)\leq c\right\rbrace =\left\lbrace  s\in S|f_{n}\left(s\right)\leq\frac{m^{\star}}{n}\right\rbrace =\left\lbrace  s\in S|f_{n}\left(s\right)&lt;\frac{m^{\star}+1}{n}\right\rbrace
+\]</div>
+<p>For <span class="arithmatex">\(m^{\star}\)</span> chosen by the Archimedean principle. The last set
+is <span class="arithmatex">\(f^{-1}\left(\left(-\infty,\frac{m^{\star}+1}{n}\right)\right)\)</span>
+which is measurable by assumption. Then <span class="arithmatex">\(f_{n}\)</span> is measurable for
+all <span class="arithmatex">\(n\)</span>.</p>
+<p>Finally, <span class="arithmatex">\(f_{n}\to f\)</span> uniformly because</p>
+<div class="arithmatex">\[
+\left|f_{n}\left(s\right)-f\left(s\right)\right|\leq\left|\frac{m}{n}-\frac{m+1}{n}\right|=\frac{1}{n}.
+\]</div>
+</details>
+<p>Other results will follow and are left stated without proof:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 23.6</p>
+<p>Let <span class="arithmatex">\(f,g\)</span> be measurable functions and <span class="arithmatex">\(\alpha\in\mathbb{R}\)</span> then:</p>
+<ol>
+<li><span class="arithmatex">\(f+g\)</span> is measurable.</li>
+<li><span class="arithmatex">\(\alpha f\)</span> is measurable.</li>
+<li><span class="arithmatex">\(fg\)</span> is measurable.</li>
+<li><span class="arithmatex">\(\frac{1}{f}\)</span> is measurable provided that <span class="arithmatex">\(f\left(s\right)\neq0\)</span>.</li>
+</ol>
+</div>
+<p>Finally continuity of functions is used to strengthen the intuition
+around measurability.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 23.7</p>
+<p>Let <span class="arithmatex">\(f,g\)</span> be equivalent function defined on an interval <span class="arithmatex">\(E\)</span>, that
+is they are equal a.e. If <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> are continuous then they coincide.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>Suppose not, then there exists <span class="arithmatex">\(x\in E\)</span> such that <span class="arithmatex">\(f\left(x\right)\neq g\left(x\right)\)</span>.
+Let <span class="arithmatex">\(\epsilon=\left|f\left(x\right)-g\left(x\right)\right|\)</span>, because
+<span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> are continuous there exists <span class="arithmatex">\(\delta\)</span> such that for
+<span class="arithmatex">\(x^{\prime}\in B_{\delta}\left(x\right)\)</span> it holds that <span class="arithmatex">\(\left|f\left(x\right)-f\left(x^{\prime}\right)\right|&lt;\frac{\epsilon}{2}\)</span>
+and <span class="arithmatex">\(\left|g\left(x\right)-g\left(x^{\prime}\right)\right|&lt;\frac{\epsilon}{2}\)</span>.
+Then for all <span class="arithmatex">\(x^{\prime}\in B_{\delta}\left(x\right)\)</span> it holds that <span class="arithmatex">\(f\left(x^{\prime}\right)\neq g\left(x^{\prime}\right)\)</span>,
+but <span class="arithmatex">\(B_{\delta}\left(x\right)\)</span> has strictly positive measure, contradicting
+<span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> being equivalent.</p>
+</details>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 23.8</p>
+<p>A function <span class="arithmatex">\(f\)</span> equivalent to a measurable function <span class="arithmatex">\(g\)</span> is measurable.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>Because the functions are equivalent the sets <span class="arithmatex">\(\left\lbrace  x|f\left(x\right)\leq c\right\rbrace\)</span>
+and <span class="arithmatex">\(\left\lbrace  x|g\left(x\right)\leq c\right\rbrace\)</span> can differ in at most
+by a set of measure zero. Then if the second set is measurable so
+is the first one (taking into account the completion of the <span class="arithmatex">\(\sigma\)</span>-algebra).
+This proves measurability.</p>
+</details>
+<div class="admonition abstract">
+<p class="admonition-title">Corollary 23.4</p>
+<p>A function <span class="arithmatex">\(f\)</span> equivalent to a continuous function is measurable.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>Immediate from continuous functions being measurable.</p>
+</details>
+<p>This implies that if a function is continuous a.e. then it is measurable,
+again the behavior of functions in sets of measure zero carries no
+consequence. It turns out that this corollary can be strengthened.
+The result is powerful and is stated without a proof:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 23.2: Luzin</p>
+<p>Let <span class="arithmatex">\(f:\left[a,b\right]\to\mathbb{R}\)</span> be a function.
+<span class="arithmatex">\(f\)</span> is measurable if and only if for all <span class="arithmatex">\(\epsilon&gt;0\)</span> there exists
+a continuous function <span class="arithmatex">\(g\)</span> such that <span class="arithmatex">\(\mu\left\lbrace  x\in\left[a,b\right]\,|\,f\left(x\right)\neq g\left(x\right)\right\rbrace &lt;\epsilon\)</span>.</p>
+</div>
+<p>This theorem shows that for the case of functions of real variable
+and real value measurability is equivalent to continuity, except on
+a set of arbitrarily small size. In other words a measurable function
+can be made continuous by altering its values on a set of arbitrarily
+small measure.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="section-22-measure.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Measure">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Measure
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="section-24-the-lebesgue-integral.html" class="md-footer__link md-footer__link--next" aria-label="Next: The Lebesgue integral">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                The Lebesgue integral
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Sergio Ocampo Díaz · Western University
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

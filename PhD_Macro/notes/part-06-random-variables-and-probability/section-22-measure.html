@@ -1,0 +1,2434 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Searchable course website generated from Ocampo-Macro_Notes.tex">
+      
+      
+      
+        <link rel="canonical" href="https://ocamp020.github.io/PhD_Macro/notes/part-06-random-variables-and-probability/section-22-measure.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="section-23-measurable-functions.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Measure - EC9604 Advanced Macroeconomics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#measure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-header__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EC9604 Advanced Macroeconomics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Measure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-nav__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EC9604 Advanced Macroeconomics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-01-preliminaries/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preliminaries
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Preliminaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-01-macroeconomic-variables-and-distributions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macroeconomic Variables and Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-02-aggregation-complete-markets-preferences-and-technology.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation: Complete Markets, Preferences, and Technology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-03-markov-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markov Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-02-dynamic-programming/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dynamic Programming
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-05-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Recursive Competitive Equilibrium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-03-heterogeneous-agent-models/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heterogeneous Agent Models
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Heterogeneous Agent Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-07-the-income-fluctuations-model-and-precautionary-savings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Income Fluctuations Model and Precautionary Savings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-08-an-endowment-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    An Endowment Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-09-a-production-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-10-a-production-economy-with-aggregate-risk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy with Aggregate Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-04-firm-heterogeneity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firm Heterogeneity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Firm Heterogeneity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-11-span-of-control.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Span of Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-12-market-power.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Market Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-13-monopolistic-competition.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monopolistic Competition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-14-variable-markups.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variable Markups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-15-aggregation-and-misallocation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation and Misallocation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-05-input-output-networks-and-economic-activity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks and Economic Activity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input-Output Networks and Economic Activity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-16-a-domar-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Domar Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-17-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-18-examples-of-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples of Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-19-hulten-s-theorem-for-efficient-economies.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hulten's Theorem for Efficient Economies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-20-beyond-hulten-second-order-effects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Second order effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-21-beyond-hulten-distortions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Distortions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Variables and Probability
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Random Variables and Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measure
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="section-22-measure.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#measurable-spaces-sigma-algebras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measurable spaces (\(\sigma\)-algebras)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Measures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measures-in-sigma-algebras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measures in \(\sigma\)-algebras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measures-in-algebras-and-extensions-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measures in algebras and extensions [Optional]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#completion-of-a-measure-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completion of a measure [Optional]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-23-measurable-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measurable functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-24-the-lebesgue-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Lebesgue integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-25-the-stieltjes-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Stieltjes integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-07-stochastic-calculus/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Calculus
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Calculus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-26-stochastic-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-27-ito-s-lemma.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ito's Lemma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-28-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-29-the-kolmogorov-forward-equation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Kolmogorov Forward Equation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-30-application-real-options.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Real Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-31-application-menu-cost-stokey-2009-ch-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Menu cost Stokey (2009, Ch. 7)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#measurable-spaces-sigma-algebras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measurable spaces (\(\sigma\)-algebras)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Measures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measures-in-sigma-algebras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measures in \(\sigma\)-algebras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measures-in-algebras-and-extensions-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measures in algebras and extensions [Optional]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#completion-of-a-measure-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completion of a measure [Optional]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="ref-part-random-variables-and-probability" class="course-anchor"></a>
+<a id="ref-sec-measure" class="course-anchor"></a></p>
+<div class="section-meta">
+  <a href="index.html">Part 6: Random Variables and Probability</a>
+  <span>Section 22</span>
+</div>
+
+<h1 id="measure">Measure<a class="headerlink" href="#measure" title="Permanent link">&para;</a></h1>
+<h2 id="measurable-spaces-sigma-algebras">Measurable spaces (<span class="arithmatex">\(\sigma\)</span>-algebras)<a class="headerlink" href="#measurable-spaces-sigma-algebras" title="Permanent link">&para;</a></h2>
+<p>Before we define a measure recall that a measure has for domain a
+collection of sets. For a measure to have some desirable properties
+this collection of sets cannot be left unrestricted. It turns out
+that the appropriate family of sets to be consider is that of <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 22.1: <span class="arithmatex">\(\sigma\)</span>-algebra</p>
+<p>Let <span class="arithmatex">\(S\)</span> be a set and <span class="arithmatex">\(\mathcal{A}\subseteq2^{S}\)</span>
+a family of its subsets. <span class="arithmatex">\(\mathcal{A}\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra if and
+only if:</p>
+<ol>
+<li><span class="arithmatex">\(\emptyset,S\in\mathcal{A}\)</span>.</li>
+<li><span class="arithmatex">\(A\in\mathcal{A}\)</span> implies <span class="arithmatex">\(A^{c}=S\backslash A\in\mathcal{A}\)</span>. We say
+    that <span class="arithmatex">\(\mathcal{A}\)</span> is closed under complement.</li>
+<li>
+<p><span class="arithmatex">\(A_{n}\in\mathcal{A}\)</span> for <span class="arithmatex">\(n=1,\ldots\)</span> implies <span class="arithmatex">\(\cup A_{n}\in\mathcal{A}\)</span>.
+    We say that <span class="arithmatex">\(\mathcal{A}\)</span> is closed under countable union.</p>
+<ol>
+<li><span class="arithmatex">\(\mathcal{A}\)</span> is closed under countable intersection because <span class="arithmatex">\(\cap A_{n}=\left(\cup A_{n}^{c}\right)^{c}\)</span>.</li>
+</ol>
+</li>
+</ol>
+<p>If <span class="arithmatex">\(\mathcal{A}\)</span> is only closed under finite union (or intersection)
+then <span class="arithmatex">\(\mathcal{A}\)</span> is an algebra.</p>
+</div>
+<p>A <span class="arithmatex">\(\sigma\)</span>-algebra imposes certain consistency to the family of sets
+under consideration. The way to interpret it is that only subsets
+of the <span class="arithmatex">\(\sigma\)</span>-algebra can be known, hence measured. Because of
+property (i) it is possible to know when none or all of the outcomes
+occurred. Also if there is an outcome that occurred it must be possible
+to determine if it didn't. Finally if it is possible to determine
+that some outcomes occurred individually it can also be determined
+if at least one or all of them were realized.</p>
+<p>It is instructive to consider two simple examples of <span class="arithmatex">\(\sigma\)</span>-algebras
+that arise from throwing a 4 sided dice, then <span class="arithmatex">\(S=\left\lbrace  1,2,3,4\right\rbrace\)</span>.
+One (trivial) <span class="arithmatex">\(\sigma\)</span>-algebra is:</p>
+<div class="arithmatex">\[
+\mathcal{A}=\left\lbrace  \emptyset,S\right\rbrace
+\]</div>
+<p>Another one is the <span class="arithmatex">\(\sigma\)</span>-algebra generated by the collection <span class="arithmatex">\(\left\lbrace  \left\lbrace  1\right\rbrace ,\left\lbrace  2\right\rbrace ,\left\lbrace  3\right\rbrace ,\left\lbrace  4\right\rbrace \right\rbrace\)</span>,
+then:</p>
+<div class="arithmatex">\[
+\mathcal{A}=\left\lbrace  \begin{array}{c}
+\left\lbrace  1\right\rbrace ,\left\lbrace  2\right\rbrace ,\left\lbrace  3\right\rbrace ,\left\lbrace  4\right\rbrace ,\left\lbrace  2,3,4\right\rbrace ,\left\lbrace  1,3,4\right\rbrace ,\left\lbrace  1,2,4\right\rbrace ,\left\lbrace  1,2,3\right\rbrace ,\\
+\left\lbrace  1,2\right\rbrace ,\left\lbrace  2,3\right\rbrace ,\left\lbrace  3,4\right\rbrace ,\left\lbrace  1,3\right\rbrace ,\left\lbrace  1,4\right\rbrace ,\left\lbrace  2,4\right\rbrace ,\emptyset,S
+\end{array}\right\rbrace
+\]</div>
+<p>In this case <span class="arithmatex">\(\mathcal{A}=2^{S}\)</span>, but this is not necessarily true,
+imagine that one can only determine if an even number was thrown,
+then the outcomes are <span class="arithmatex">\(\left\lbrace  \left\lbrace  1,3\right\rbrace ,\left\lbrace  2,4\right\rbrace \right\rbrace\)</span>,
+the <span class="arithmatex">\(\sigma\)</span>-algebra is:</p>
+<div class="arithmatex">\[
+\mathcal{A}=\left\lbrace  \left\lbrace  1,3\right\rbrace ,\left\lbrace  2,4\right\rbrace ,\emptyset,S\right\rbrace
+\]</div>
+<p>When <span class="arithmatex">\(S\)</span> has uncountably many elements this process cannot be exemplified
+as easily but one can always define the <span class="arithmatex">\(\sigma\)</span>-algebra generated
+by a subset <span class="arithmatex">\(\mathcal{A}\subseteq2^{S}\)</span> as the intersection of all <span class="arithmatex">\(\sigma\)</span>-algebras
+that contain <span class="arithmatex">\(\mathcal{A}\)</span>. Clearly the arbitrary intersection of <span class="arithmatex">\(\sigma\)</span>-algebras
+is again a <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+<p>Now that we have defined a <span class="arithmatex">\(\sigma\)</span>-algebra its possible to say what
+a measurable set and a measurable space are:</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 22.2: Measurable Space</p>
+<p>A pair <span class="arithmatex">\(\left(S,\mathcal{A}\right)\)</span> where
+<span class="arithmatex">\(S\)</span> is any set and <span class="arithmatex">\(\mathcal{A}\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra is called a
+measurable space. A set <span class="arithmatex">\(A\in\mathcal{A}\)</span> is called <span class="arithmatex">\(\mathcal{A}\)</span>-measurable.</p>
+</div>
+<p>We say that <span class="arithmatex">\(A\subseteq S\)</span> is measurable with respect to a <span class="arithmatex">\(\sigma\)</span>-algebra
+<span class="arithmatex">\(\mathcal{A}\)</span> if its elements are identifiable, that is, if the outcomes
+represented in <span class="arithmatex">\(A\)</span> can be told apart from other outcomes given the
+information in <span class="arithmatex">\(\mathcal{A}\)</span>. For example the set <span class="arithmatex">\(A=\left\lbrace  4\right\rbrace\)</span>
+is not measurable in the last example above, because its impossible
+to know if a <span class="arithmatex">\(4\)</span> was the outcome of the throw.</p>
+<p>A <span class="arithmatex">\(\sigma\)</span>-algebra of special importance is the Borel <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 22.3: Borel <span class="arithmatex">\(\sigma\)</span>-algebra</p>
+<p>Let <span class="arithmatex">\(S=\mathbb{R}\)</span> and <span class="arithmatex">\(\mathcal{A}\)</span>
+be the set of open and half open intervals. The Borel algebra, noted
+by <span class="arithmatex">\(\mathcal{B}\)</span>, is the <span class="arithmatex">\(\sigma\)</span>-algebra generated by <span class="arithmatex">\(\mathcal{A}\)</span>.
+A set <span class="arithmatex">\(B\in\mathcal{B}\)</span> is called a Borel set.</p>
+</div>
+<p>The Borel algebra could have been defined equivalently with the closed
+and half closed intervals (use complement). In general one can define
+the Borel algebra for any metric space <span class="arithmatex">\(\left(S,\rho\right)\)</span> as the
+smallest <span class="arithmatex">\(\sigma\)</span>-algebra containing all the open balls. In the case
+of the Euclidean spaces it can also be generated with open rectangles.</p>
+<p>What follows is to define the measure of a measurable set.</p>
+<h2 id="measures">Measures<a class="headerlink" href="#measures" title="Permanent link">&para;</a></h2>
+<h3 id="measures-in-sigma-algebras">Measures in <span class="arithmatex">\(\sigma\)</span>-algebras<a class="headerlink" href="#measures-in-sigma-algebras" title="Permanent link">&para;</a></h3>
+<p>Given a measurable space <span class="arithmatex">\(\left(S,\mathcal{A}\right)\)</span> a measure is nothing
+but a function <span class="arithmatex">\(\mu:\mathcal{A}\to\overline{\mathbb{R}}\)</span> with certain
+restrictions that guarantee its consistency:</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 22.4: Measure</p>
+<p>Let <span class="arithmatex">\(\left(S,\mathcal{A}\right)\)</span> be a measurable
+space. A measure is an extended real-valued function <span class="arithmatex">\(\mu:\mathcal{A}\to\overline{\mathbb{R}}\)</span>
+such that:</p>
+<ol>
+<li><span class="arithmatex">\(\mu\left(\emptyset\right)=0\)</span></li>
+<li><span class="arithmatex">\(\mu\left(A\right)\geq0\)</span> for all <span class="arithmatex">\(A\in\mathcal{A}\)</span>.</li>
+<li>
+<p><span class="arithmatex">\(\mu\)</span> is countably additive. If <span class="arithmatex">\(\left\lbrace  A_{n}\right\rbrace _{n=1}^{\infty}\)</span>
+    is a countable, disjoint sequence in <span class="arithmatex">\(\mathcal{A}\)</span>, then:</p>
+<div class="arithmatex">\[
+\mu\left(\cup A_{n}\right)=\sum\mu\left(A_{n}\right)
+\]</div>
+</li>
+</ol>
+<p>If furthermore <span class="arithmatex">\(\mu\left(S\right)&lt;\infty\)</span> then <span class="arithmatex">\(\mu\)</span> is said to
+be a finite measure, and if <span class="arithmatex">\(\mu\left(S\right)=1\)</span> then <span class="arithmatex">\(\mu\)</span> is
+said to be a probability measure.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 22.5: Measure Space</p>
+<p>A triple <span class="arithmatex">\(\left(S,\mathcal{A},\mu\right)\)</span> where
+<span class="arithmatex">\(S\)</span> is a set, <span class="arithmatex">\(\mathcal{A}\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra of its subsets and
+<span class="arithmatex">\(\mu\)</span> is a measure on <span class="arithmatex">\(\mathcal{A}\)</span> is called a measure space. The
+triple is called a probability space if <span class="arithmatex">\(\mu\)</span> is a probability measure.</p>
+</div>
+<p>An important concept is that of almost everywhere and almost surely.
+These are qualifiers for a given proposition that can be evaluated
+in sets of <span class="arithmatex">\(\mathcal{A}\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 22.6: Almost Everywhere and Almost Surely</p>
+<p>Let <span class="arithmatex">\(\left(S,\mathcal{A},\mu\right)\)</span>
+be a measure space. A proposition is said to hold almost everywhere
+(a.e.) or almost surely (a.s.) if there exists a set <span class="arithmatex">\(A\in\mathcal{A}\)</span>
+such that <span class="arithmatex">\(\mu\left(A\right)=0\)</span> and the proposition holds in <span class="arithmatex">\(A^{c}\)</span>.</p>
+</div>
+<p>An example of the use of a.e. or a.s. is when treating functions that
+are similar to each other. One can say that two functions are equivalent
+a.e. or that a function is continuous a.e. Then the functions <span class="arithmatex">\(f\)</span>
+and <span class="arithmatex">\(g\)</span> satisfy <span class="arithmatex">\(f\left(x\right)=g\left(x\right)\)</span> and <span class="arithmatex">\(A=\left\lbrace  x|f\left(x\right)\neq f\left(y\right)\right\rbrace\)</span>
+satisfies <span class="arithmatex">\(\mu\left(A\right)=0\)</span>. In measure theory the behavior of
+functions a.e. is all that matters, then we can treat functions that
+have anomalies as long as those anomalies occur only in sets of measure
+zero.</p>
+<p>There are some properties of a measure that are useful to keep in
+mind, a crucial one is used for Bayes law and the definition of conditional
+probability.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 22.1</p>
+<p>Let <span class="arithmatex">\(\left(S,\mathcal{A},\mu\right)\)</span> be a measure space and <span class="arithmatex">\(B\in\mathcal{A}\)</span>
+a set. Define <span class="arithmatex">\(\lambda:\mathcal{A}\to\overline{\mathbb{R}}\)</span> as <span class="arithmatex">\(\lambda\left(A\right)=\mu\left(A\cap B\right)\)</span>.
+Then <span class="arithmatex">\(\lambda\)</span> is a measure on <span class="arithmatex">\(\left(S,\mathcal{A}\right)\)</span>. If in
+addition <span class="arithmatex">\(\mu\left(B\right)&lt;\infty\)</span> then <span class="arithmatex">\(\tilde{\lambda}\)</span> defined
+as <span class="arithmatex">\(\tilde{\lambda}\left(A\right)=\frac{\mu\left(A\cap B\right)}{\mu\left(B\right)}\)</span>
+is a probability measure on <span class="arithmatex">\(\left(S,\mathcal{A}\right)\)</span>.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>First, if <span class="arithmatex">\(A,B\in\mathcal{A}\)</span> then <span class="arithmatex">\(A\cap B\in\mathcal{A}\)</span>, this follows
+from a <span class="arithmatex">\(\sigma\)</span>-algebra being closed under countable intersection,
+by letting <span class="arithmatex">\(A_{1}=A\)</span> and <span class="arithmatex">\(A_{n}=B\)</span> for <span class="arithmatex">\(n\geq2\)</span> the result obtains.
+It is left to check the three properties of a measure:</p>
+<ol>
+<li><span class="arithmatex">\(\lambda\left(\emptyset\right)=\mu\left(\emptyset\cap B\right)=\mu\left(\emptyset\right)=0\)</span>.</li>
+<li><span class="arithmatex">\(\lambda\left(A\right)=\mu\left(A\cap B\right)\geq0\)</span>.</li>
+<li>
+<p>Let <span class="arithmatex">\(\left\lbrace  A_{n}\right\rbrace _{n=1}^{\infty}\)</span> be a countable, disjoint
+    sequence in <span class="arithmatex">\(\mathcal{A}\)</span>, then the sequence <span class="arithmatex">\(\left\lbrace  A_{n}\cap B\right\rbrace _{n=1}^{\infty}\)</span>
+    is also disjoint and that:</p>
+<div class="arithmatex">\[
+\lambda\left(\cup A_{n}\right)=\mu\left(\left(\cup A_{n}\right)\cap B\right)=\mu\left(\cup\left(A_{n}\cap B\right)\right)=\sum\mu\left(A_{n}\cap B\right)=\sum\lambda\left(A_{n}\right)
+\]</div>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\mu\left(B\right)&lt;\infty\)</span> then all the previous results hold
+    for <span class="arithmatex">\(\tilde{\lambda}\)</span> by dividing everything by <span class="arithmatex">\(\mu\left(B\right)\)</span>.
+    Furthermore <span class="arithmatex">\(\tilde{\lambda}\left(S\right)=\frac{\mu\left(S\cap B\right)}{\mu\left(B\right)}=\frac{\mu\left(B\right)}{\mu\left(B\right)}=1\)</span>.</p>
+</li>
+</ol>
+</details>
+<p>Another useful property is given by the following proposition, it
+reflects the intuitive property of measures being 'increasing':</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 22.2</p>
+<p>Let <span class="arithmatex">\(\left(S,\mathcal{A},\mu\right)\)</span> be a measure space and <span class="arithmatex">\(A,B\in\mathcal{A}\)</span>
+sets. If <span class="arithmatex">\(A\subseteq B\)</span> then <span class="arithmatex">\(\mu\left(A\right)\leq\mu\left(B\right)\)</span>,
+if in addition <span class="arithmatex">\(\mu\)</span> is finite then <span class="arithmatex">\(\mu\left(B\backslash A\right)=\mu\left(B\right)-\mu\left(A\right)\)</span>.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>Because <span class="arithmatex">\(A\subseteq B\)</span>, there exits <span class="arithmatex">\(C=B\backslash A=B\cap A^{c}\)</span>
+such that <span class="arithmatex">\(A\cup C=B\)</span> and <span class="arithmatex">\(A\cap C=\emptyset\)</span>. Then</p>
+<div class="arithmatex">\[
+\mu\left(A\right)+\mu\left(C\right)=\mu\left(B\right).
+\]</div>
+<p>Moreover, <span class="arithmatex">\(\mu\left(A\right)\leq\mu\left(B\right)\)</span> because <span class="arithmatex">\(\mu\left(C\right)\geq0\)</span>.
+If <span class="arithmatex">\(\mu\)</span> is finite then all elements above are well defined and:
+<span class="arithmatex">\(\mu\left(B\backslash A\right)=\mu\left(B\right)-\mu\left(A\right)\)</span>.</p>
+</details>
+<p>The following property is widely used to establish properties of limits
+of functions, and of the Lebesgue integral:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 22.3</p>
+<p>Let <span class="arithmatex">\(\left(S,\mathcal{A},\mu\right)\)</span> be a measure space:</p>
+<ol>
+<li>
+<p>If <span class="arithmatex">\(\left\lbrace  A_{n}\right\rbrace\)</span> is an increasing sequence in <span class="arithmatex">\(\mathcal{A}\)</span>,
+    that is, if <span class="arithmatex">\(A_{n}\subseteq A_{n+1}\)</span> for all <span class="arithmatex">\(n\)</span>, then:</p>
+<div class="arithmatex">\[
+\mu\left(\cup A_{n}\right)=\lim\mu\left(A_{n}\right)
+\]</div>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\left\lbrace  B_{n}\right\rbrace\)</span> is an decreasing sequence in <span class="arithmatex">\(\mathcal{A}\)</span>,
+    that is, if <span class="arithmatex">\(B_{n}\supseteq B_{n+1}\)</span> for all <span class="arithmatex">\(n\)</span>, then:</p>
+<div class="arithmatex">\[
+\mu\left(\cap B_{n}\right)=\lim\mu\left(B_{n}\right)
+\]</div>
+</li>
+</ol>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p><a href="https://books.google.com/books?id=tWYo0QolyLAC">Stokey et al. (1989, Sec. 7.2)</a>. Satisfying these two properties makes a
+measure continuous.</p>
+</details>
+<h3 id="measures-in-algebras-and-extensions-optional">Measures in algebras and extensions [Optional]<a class="headerlink" href="#measures-in-algebras-and-extensions-optional" title="Permanent link">&para;</a></h3>
+<p>So far we have defined a measure on an <span class="arithmatex">\(\sigma\)</span>-algebra, but a <span class="arithmatex">\(\sigma\)</span>-algebra
+is usually a large collection of sets and defining a function on such
+a set while preserving the consistency required for a measure is not
+an easy task. An alternative is given by defining measures on algebras,
+which are smaller and less complicated collections of sets. It can
+be shown that these measures preserve all the desirable properties
+of the more complicated spaces, and also allow for an extension to
+<span class="arithmatex">\(\sigma\)</span>-algebras, once the measure is properly constructed.</p>
+<p>We start by defining a measure on an algebra.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 22.7: Measure</p>
+<p>Let <span class="arithmatex">\(\left(S,\mathcal{A}\right)\)</span> be a measurable
+space. A measure is an extended real-valued function <span class="arithmatex">\(\mu:\mathcal{A}\to\overline{\mathbb{R}}\)</span>
+such that:</p>
+<ol>
+<li><span class="arithmatex">\(\mu\left(\emptyset\right)=0\)</span></li>
+<li><span class="arithmatex">\(\mu\left(A\right)\geq0\)</span> for all <span class="arithmatex">\(A\in\mathcal{A}\)</span>.</li>
+<li>
+<p>If <span class="arithmatex">\(\left\lbrace  A_{n}\right\rbrace _{n=1}^{\infty}\)</span> is a countable, disjoint
+    sequence in <span class="arithmatex">\(\mathcal{A}\)</span>, and <span class="arithmatex">\(\cup A_{n}\in\mathcal{A}\)</span>, then:</p>
+<div class="arithmatex">\[
+\mu\left(\cup A_{n}\right)=\sum\mu\left(A_{n}\right)
+\]</div>
+</li>
+</ol>
+<p>If furthermore <span class="arithmatex">\(\mu\left(S\right)&lt;\infty\)</span> then <span class="arithmatex">\(\mu\)</span> is said to
+be a finite measure, and if <span class="arithmatex">\(\mu\left(S\right)=1\)</span> then <span class="arithmatex">\(\mu\)</span> is
+said to be a probability measure.</p>
+<p>Condition (iii) also includes finite union of disjoint sets as a special
+case.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 22.8: <span class="arithmatex">\(\sigma\)</span>-finite measure</p>
+<p>Let <span class="arithmatex">\(S\)</span> be a set, <span class="arithmatex">\(\mathcal{A}\)</span>
+an algebra of its subsets and <span class="arithmatex">\(\mu\)</span> a measure defined on <span class="arithmatex">\(\mathcal{A}\)</span>.
+If there is a countable sequence of sets in <span class="arithmatex">\(\mathcal{A}\)</span>, <span class="arithmatex">\(\left\lbrace  A_{n}\right\rbrace\)</span>,
+such that <span class="arithmatex">\(\mu\left(A_{n}\right)&lt;\infty\)</span> and <span class="arithmatex">\(S=\cup A_{n}\)</span> then
+<span class="arithmatex">\(\mu\)</span> is <span class="arithmatex">\(\sigma\)</span>-finite</p>
+</div>
+<p>It is now possible to extend the notion of this measure to a <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 22.1</p>
+<p>\textbf{\textup{(Caratheodory extension theorem) }}\textup{Let <span class="arithmatex">\(S\)</span>
+be a set, <span class="arithmatex">\(\mathcal{A}\)</span> an algebra of its subsets and <span class="arithmatex">\(\mu\)</span> a measure
+defined on <span class="arithmatex">\(\mathcal{A}\)</span>. Let <span class="arithmatex">\(\mathcal{A}^{\star}\)</span> be the smallest <span class="arithmatex">\(\sigma\)</span>-algebra
+containing <span class="arithmatex">\(\mathcal{A}\)</span>. There exists a measure <span class="arithmatex">\(\mu^{\star}\)</span> on <span class="arithmatex">\(\mathcal{A}^{\star}\)</span>
+such that <span class="arithmatex">\(\mu^{\star}\left(A\right)=\mu\left(A\right)\)</span> for all <span class="arithmatex">\(A\in\mathcal{A}\)</span>.}</p>
+</div>
+<p>The problem of uniqueness is also solved.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 22.2</p>
+<p>\textbf{\textup{(Hahn extension theorem) }}\textup{Let <span class="arithmatex">\(S\)</span> be a set,
+<span class="arithmatex">\(\mathcal{A}\)</span> an algebra of its subsets, <span class="arithmatex">\(\mu\)</span> a measure defined on
+<span class="arithmatex">\(\mathcal{A}\)</span> and <span class="arithmatex">\(\mathcal{A}^{\star}\)</span> the minimal <span class="arithmatex">\(\sigma\)</span>-algebra
+of <span class="arithmatex">\(\mathcal{A}\)</span>. If <span class="arithmatex">\(\mu\)</span> is <span class="arithmatex">\(\sigma\)</span>-finite then the extension <span class="arithmatex">\(\mu^{\star}\)</span>
+is unique. }</p>
+</div>
+<p>To see how these theorems and the extension of a measure are used
+consider defining a measure on the Borel <span class="arithmatex">\(\sigma\)</span>-algebra. It seems
+logical to define the measure of an interval <span class="arithmatex">\(A=\left(a,b\right)\)</span>
+as <span class="arithmatex">\(\mu\left(A\right)=b-a\)</span> if <span class="arithmatex">\(b\geq a\)</span> and <span class="arithmatex">\(\mu\left(A\right)=0\)</span>
+otherwise (because the interval would be empty). Yet the Borel <span class="arithmatex">\(\sigma\)</span>-algebra
+contains sets beyond simple intervals, and the countable union of
+intervals can give rise to weird sets. An answer to this problem is
+given by defining a measure on the Borel algebra, formed by all types
+of intervals and their finite unions. Defining a measure on this set
+seems straightforward:</p>
+<ol>
+<li><span class="arithmatex">\(\mu\left(\emptyset\right)=0\)</span></li>
+<li><span class="arithmatex">\(\mu\left(\left(a,b\right)\right)=\mu\left(\left[a,b\right]\right)=\mu\left(\left(a,b\right]\right)=\mu\left(\left[a,b\right)\right)=b-a\)</span></li>
+<li><span class="arithmatex">\(\mu\left(\left(-\infty,\infty\right)\right)=\mu\left(\left(-\infty,b\right]\right)=\mu\left(\left[a,\infty\right)\right)=\infty\)</span></li>
+<li><span class="arithmatex">\(\mu\left(\cup\left(a_{n},b_{n}\right)\right)=\sum\left(b_{n}-a_{n}\right)\)</span>
+    if the intervals are disjoint.</li>
+</ol>
+<p>The function <span class="arithmatex">\(\mu\)</span> can be verified to be a measure on the Borel algebra,
+and hence an extension to the Borel <span class="arithmatex">\(\sigma\)</span>-algebra exists. If we
+restrict our attention to <span class="arithmatex">\(S=\left[a,b\right]\)</span> and the intervals
+contained in it we can define a <span class="arithmatex">\(\sigma\)</span>-finite measure, obtaining
+uniqueness of the extension. This is how we can deal with complicated
+environments.</p>
+<p>Once the measure is extended to the <span class="arithmatex">\(\sigma\)</span>-algebra all the results
+obtained above apply.</p>
+<h3 id="completion-of-a-measure-optional">Completion of a measure [Optional]<a class="headerlink" href="#completion-of-a-measure-optional" title="Permanent link">&para;</a></h3>
+<p>One small detail is left to be checked. Sometimes there is a set <span class="arithmatex">\(B\subseteq S\)</span>
+such that <span class="arithmatex">\(B\subseteq A\in\mathcal{A}\)</span> and <span class="arithmatex">\(\mu\left(A\right)=0\)</span>, but
+if <span class="arithmatex">\(B\notin\mathcal{A}\)</span> then its measure is undefined, while it should
+be clearly zero. The completion of a <span class="arithmatex">\(\sigma\)</span>-algebra to include
+these type of 'harmless' sets is what follows. As before, including
+sets or behaviors of measure zero is of no consequence.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 22.9: Completion of a <span class="arithmatex">\(\sigma\)</span>-algebra</p>
+<p>Let <span class="arithmatex">\(\left(S,\mathcal{A},\mu\right)\)</span>
+be a measure space. Define a collection <span class="arithmatex">\(\mathcal{C}\)</span> as:</p>
+<div class="arithmatex">\[
+\mathcal{C}=\left\lbrace  C\subset S|\exists_{A\in\mathcal{A}}\mu\left(A\right)=0\quad\land\quad C\subset A\right\rbrace
+\]</div>
+<p>The completion of <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{A}\)</span> is:</p>
+<div class="arithmatex">\[
+\mathcal{A}^{\prime}=\left\lbrace  B^{\prime}\subseteq S\,|\,B^{\prime}=\left(A\cup C_{1}\right)\backslash C_{2}\qquad A\in\mathcal{A}\quad\land\quad C_{1},C_{2}\in\mathcal{C}\right\rbrace
+\]</div>
+<p>By letting <span class="arithmatex">\(C_{1}=C_{2}=\emptyset\)</span> we get <span class="arithmatex">\(\mathcal{A}\subseteq\mathcal{A}^{\prime}\)</span>,
+<span class="arithmatex">\(\mathcal{A}^{\prime}\)</span> includes all sets in <span class="arithmatex">\(2^{S}\)</span> that differ from a set
+in <span class="arithmatex">\(\mathcal{A}\)</span> by a set of measure <span class="arithmatex">\(0\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 22.10: Completion of a measure</p>
+<p>Let <span class="arithmatex">\(\left(S,\mathcal{A},\mu\right)\)</span>
+be a measure space and <span class="arithmatex">\(\mathcal{A}^{\prime}\)</span> the completion of <span class="arithmatex">\(\mathcal{A}\)</span>.
+<span class="arithmatex">\(\mu\left(B^{\prime}\right)=\mu\left(B\right)\)</span> for any <span class="arithmatex">\(B^{\prime}\in\mathcal{A}^{\prime}\)</span>
+that differs from <span class="arithmatex">\(B\in\mathcal{A}\)</span> by a set of measure <span class="arithmatex">\(0\)</span>.</p>
+</div>
+<p>The Caratheodory and Hahn extension theorems also apply for completions.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="section-23-measurable-functions.html" class="md-footer__link md-footer__link--next" aria-label="Next: Measurable functions">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Measurable functions
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Sergio Ocampo Díaz · Western University
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

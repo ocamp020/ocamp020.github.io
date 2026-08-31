@@ -1,0 +1,3016 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Searchable course website generated from Ocampo-Macro_Notes.tex">
+      
+      
+      
+        <link rel="canonical" href="https://ocamp020.github.io/PhD_Macro/notes/part-01-preliminaries/section-03-markov-processes.html">
+      
+      
+        <link rel="prev" href="section-02-aggregation-complete-markets-preferences-and-technology.html">
+      
+      
+        <link rel="next" href="../part-02-dynamic-programming/index.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Markov Processes - EC9604 Advanced Macroeconomics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#markov-processes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-header__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EC9604 Advanced Macroeconomics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Markov Processes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-nav__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EC9604 Advanced Macroeconomics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preliminaries
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Preliminaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-01-macroeconomic-variables-and-distributions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macroeconomic Variables and Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-02-aggregation-complete-markets-preferences-and-technology.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation: Complete Markets, Preferences, and Technology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markov Processes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="section-03-markov-processes.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markov Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transition-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transition functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability-measures-on-spaces-of-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probability measures on spaces of sequences
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markov-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Markov chains
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weak-convergence-of-monotone-markov-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weak convergence of monotone Markov processes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-02-dynamic-programming/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dynamic Programming
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-05-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Recursive Competitive Equilibrium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-03-heterogeneous-agent-models/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heterogeneous Agent Models
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Heterogeneous Agent Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-07-the-income-fluctuations-model-and-precautionary-savings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Income Fluctuations Model and Precautionary Savings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-08-an-endowment-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    An Endowment Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-09-a-production-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-10-a-production-economy-with-aggregate-risk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy with Aggregate Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-04-firm-heterogeneity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firm Heterogeneity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Firm Heterogeneity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-11-span-of-control.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Span of Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-12-market-power.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Market Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-13-monopolistic-competition.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monopolistic Competition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-14-variable-markups.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variable Markups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-15-aggregation-and-misallocation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation and Misallocation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-05-input-output-networks-and-economic-activity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks and Economic Activity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input-Output Networks and Economic Activity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-16-a-domar-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Domar Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-17-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-18-examples-of-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples of Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-19-hulten-s-theorem-for-efficient-economies.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hulten's Theorem for Efficient Economies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-20-beyond-hulten-second-order-effects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Second order effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-21-beyond-hulten-distortions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Distortions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-06-random-variables-and-probability/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Variables and Probability
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Random Variables and Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-22-measure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-23-measurable-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measurable functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-24-the-lebesgue-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Lebesgue integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-25-the-stieltjes-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Stieltjes integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-07-stochastic-calculus/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Calculus
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Calculus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-26-stochastic-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-27-ito-s-lemma.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ito's Lemma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-28-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-29-the-kolmogorov-forward-equation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Kolmogorov Forward Equation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-30-application-real-options.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Real Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-31-application-menu-cost-stokey-2009-ch-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Menu cost Stokey (2009, Ch. 7)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transition-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transition functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability-measures-on-spaces-of-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probability measures on spaces of sequences
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markov-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Markov chains
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weak-convergence-of-monotone-markov-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weak convergence of monotone Markov processes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="ref-sec-markov-processes" class="course-anchor"></a></p>
+<div class="section-meta">
+  <a href="index.html">Part 1: Preliminaries</a>
+  <span>Section 3</span>
+</div>
+
+<h1 id="markov-processes">Markov Processes<a class="headerlink" href="#markov-processes" title="Permanent link">&para;</a></h1>
+<p>As we will see in <a href="../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.html#ref-sec-the-bellman-equation">The Bellman Equation</a> a great
+deal of problems can be expressed in a recursive setting, and the
+use of recursive methods can provide solutions to problems that would
+otherwise be impossible to handle. When dealing with random variables
+the same issue arises. In particular, one can think of a sequence
+formed by the realizations of a random variable. Because the sequence
+is ordered, one can think of each element as being realized sequentially.
+In this way, it is natural to consider the case in which one element
+of the sequence depends on the value of the previous element. More
+formally, Markov processes are those in which the distribution of
+one element of the sequence depends on the realization of the previous
+one.</p>
+<p>The objective is to introduce shocks to a dynamic program, so we start
+by considering the deterministic dynamic program of <a href="../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.html#ref-sec-the-bellman-equation">The Bellman Equation</a>,
+characterized by the Bellman equation:
+<a id="ref-eq-000020fe-2" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+v\left(x\right)=\sup_{y\in\Gamma\left(x\right)}\left\lbrace  F\left(x,y\right)+\beta v\left(y\right)\right\rbrace \tag{3.1}
+\end{equation}\]</div>
+<p>The idea is to add a random variable whose realization <span class="arithmatex">\(z\)</span> will affect
+the problem, <span class="arithmatex">\(z\)</span> is a state of the problem and its drawn each period
+from a distribution characterized by the measure <span class="arithmatex">\(\lambda\)</span>. Formally
+consider <span class="arithmatex">\(\left(Z,\mathcal{Z},\lambda\right)\)</span> a probability space, then
+we can define the problem to be::
+<a id="ref-eq-000020fe-3" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+v\left(x,z\right)=\sup_{y\in\Gamma\left(x\right)}\left\lbrace  F\left(x,y,z\right)+\beta\int v\left(y,z^{\prime}\right)\lambda\left(dz^{\prime}\right)\right\rbrace \tag{3.2}
+\end{equation}\]</div>
+<p>Recall that <span class="arithmatex">\(\lambda:\mathcal{Z}\to\mathbb{R}_{+}\)</span> maps sets of the
+<span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{Z}\)</span> to real numbers. The problem above can
+be solved using the results of Sections (<a href="../part-06-random-variables-and-probability/section-22-measure.html#ref-sec-measure">Section 22: Measure</a>) to (<a href="../part-06-random-variables-and-probability/section-25-the-stieltjes-integral.html#ref-sec-the-stieltjes-integral">Section 25: The Stieltjes integral</a>),
+but it is not general enough for our purposes because the distribution
+of <span class="arithmatex">\(z\)</span> is fixed, and each draw is taken (each period) from the same
+distribution.</p>
+<p>In general we want the distribution of <span class="arithmatex">\(z^{\prime}\)</span> to be influenced by
+the previous draw <span class="arithmatex">\(z\)</span>, for this we need a special type of function,
+<span class="arithmatex">\(Q:Z\times\mathcal{Z}\to\mathbb{R}\)</span>, such that for all <span class="arithmatex">\(z\in Z\)</span> it
+holds that <span class="arithmatex">\(Q\left(z,\cdot\right)\)</span> is a probability distribution
+for <span class="arithmatex">\(z^{\prime}\)</span>. This is called a transition function and it allows to
+express the problem as:
+<a id="ref-eq-000020fe-3-1" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+v\left(x,z\right)=\sup_{y\in\Gamma\left(x\right)}\left\lbrace  F\left(x,y,z\right)+\beta\int v\left(y,z^{\prime}\right)Q\left(z,dz^{\prime}\right)\right\rbrace \tag{3.3}
+\end{equation}\]</div>
+<p>The objective is now to characterize transition functions and the
+properties of the process that they generate.</p>
+<h2 id="transition-functions">Transition functions<a class="headerlink" href="#transition-functions" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.1: Transition Function</p>
+<p>Let <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span> be a
+measurable space. A transition function is a function <span class="arithmatex">\(Q:Z\times\mathcal{Z}\to\left[0,1\right]\)</span>
+such that:</p>
+<ol>
+<li>For each <span class="arithmatex">\(z\in Z\)</span> the function <span class="arithmatex">\(Q\left(z,\cdot\right)\)</span> is a probability
+    measure on <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span>.</li>
+<li>For each <span class="arithmatex">\(A\in\mathcal{Z}\)</span> the function <span class="arithmatex">\(Q\left(\cdot,A\right)\)</span> is
+    a <span class="arithmatex">\(\mathcal{Z}\)</span>-measurable function.</li>
+</ol>
+</div>
+<p>The interpretation is that for all current value of the random variable
+the transition function induces a probability measure for next period's
+value of the variable. Then <span class="arithmatex">\(Q\left(a,A\right)\)</span> is the probability
+that <span class="arithmatex">\(z^{\prime}\in A\)</span> if the current value of the variable is <span class="arithmatex">\(a\)</span>.</p>
+<div class="arithmatex">\[
+Q\left(a,A\right)=\Pr\left(z^{\prime}\in A|z=a\right)
+\]</div>
+<p>Any transition function defines two operators that will be of great
+importance later.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.2</p>
+<p>Let <span class="arithmatex">\(Q\)</span> be a transition function on a measurable space <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span>.
+Define <span class="arithmatex">\(\mathcal{F}\)</span> as the set of <span class="arithmatex">\(\mathcal{Z}\)</span>-measurable functions
+and <span class="arithmatex">\(\Lambda\)</span> the set of probability measures on <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span>.</p>
+<ol>
+<li>
+<p>The Markov operator of <span class="arithmatex">\(Q\)</span> is an operator <span class="arithmatex">\(T\)</span> defined on the set
+    of <span class="arithmatex">\(\mathcal{Z}\)</span>-measurable functions:</p>
+<div class="arithmatex">\[
+Tf\left(z\right)=\int f\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)
+\]</div>
+<p>for all <span class="arithmatex">\(z\in Z\)</span>. <span class="arithmatex">\(T\)</span> is the expected value of <span class="arithmatex">\(f\)</span> in the next
+period if today's realization is <span class="arithmatex">\(z\)</span>.</p>
+</li>
+<li>
+<p>The Adjoint operator of <span class="arithmatex">\(Q\)</span> is <span class="arithmatex">\(T^{\star}\)</span> is an operator defined
+    on probability measures on <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span>:</p>
+<div class="arithmatex">\[
+T^{\star}\lambda\left(A\right)=\int Q\left(z,A\right)\lambda\left(dz\right)
+\]</div>
+<p>for all <span class="arithmatex">\(A\in\mathcal{Z}\)</span>. <span class="arithmatex">\(T\)</span> gives the probability that <span class="arithmatex">\(z^{\prime}\in A\)</span>
+if the current value of <span class="arithmatex">\(z\)</span> is drawn from probability distribution
+<span class="arithmatex">\(\lambda\)</span>.</p>
+</li>
+</ol>
+</div>
+<p>These operators are important because they will allow to characterize
+the distribution of a sequence of random variables starting at some
+initial distribution. This is the objective when solving a stochastic
+dynamic programming problem. In order for <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(T^{\star}\)</span> to
+be useful it is first necessary to check that they are sufficiently
+well behaved. The following propositions will establish that the operators
+can be used recursively and their proof will be instructive of how
+proofs go in measure theory.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 3.1</p>
+<p>Let <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span> be a measurable space and <span class="arithmatex">\(Q\)</span> a transition
+function on that space with Markov operator <span class="arithmatex">\(T\)</span>. Then <span class="arithmatex">\(T:M^{+}\left(Z,\mathcal{Z}\right)\to M^{+}\left(Z,\mathcal{Z}\right)\)</span>
+where <span class="arithmatex">\(M^{+}\left(Z,\mathcal{Z}\right)\)</span> is the space of nonnegative,
+extended variable <span class="arithmatex">\(\mathcal{Z}\)</span>-measurable functions.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>The proof is done iteratively, first for indicator functions, then
+it is generalized to simple functions and then to arbitrary nonnegative
+measurable functions.</p>
+<p>First, for any <span class="arithmatex">\(f\in M^{+}\)</span> we have that <span class="arithmatex">\(Tf\)</span> is a nonnegative function
+of extended real value, this follows immediately, then it is left
+to check that <span class="arithmatex">\(Tf\)</span> is also measurable.</p>
+<ul>
+<li>
+<p>Let <span class="arithmatex">\(A\in\mathcal{Z}\)</span> and <span class="arithmatex">\(f=\chi_{A}\)</span>, where <span class="arithmatex">\(\chi_{A}\)</span> is by construction
+    measurable and nonnegative. Then:</p>
+<div class="arithmatex">\[
+Tf\left(z\right)=\int f\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)=\int\chi_{A}\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)=\int_{A}Q\left(z,dz^{\prime}\right)=Q\left(z,A\right)
+\]</div>
+<p>Because <span class="arithmatex">\(Q\left(\cdot,A\right)\)</span> is measurable (as a function of <span class="arithmatex">\(z\)</span>
+for fixed <span class="arithmatex">\(A\)</span>) by definition we establish measurability of <span class="arithmatex">\(Tf\)</span>.</p>
+</li>
+<li>
+<p>Let <span class="arithmatex">\(f\)</span> be a simple function then there exists (finitely many) indicator
+    functions such that: <span class="arithmatex">\(f\left(z\right)=\underset{i=1}{\overset{n}{\sum}}a_{i}\chi_{A_{i}}\left(z\right)\)</span>.
+    Then the Markov operator gives:</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+Tf\left(z\right) &amp; = &amp; \int f\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
+&amp; = &amp; \int\sum_{i=1}^{n}a_{i}\chi_{A_{i}}\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
+&amp; = &amp; \sum_{i=1}^{n}a_{i}\int_{A}\chi_{A_{i}}\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
+&amp; = &amp; \sum_{i=1}^{n}a_{i}T\chi_{A_{i}}
+\end{eqnarray*}\]</div>
+<p>By the previous case each <span class="arithmatex">\(T\chi_{A_{i}}\)</span> is measurable. Then, <span class="arithmatex">\(Tf\)</span>
+is also measurable because the sum and scalar product of measurable
+functions is also measurable .</p>
+</li>
+<li>
+<p>Let <span class="arithmatex">\(f\)</span> be an arbitrary nonnegative, extended real value, measurable
+    function. By <a href="../part-06-random-variables-and-probability/section-23-measurable-functions.html#ref-simple-000020functions-000020and-000020measurability">Proposition 23.5</a>
+    we know that <span class="arithmatex">\(f\)</span> can be expressed as the limit of point-wise convergent
+    sequence of simple functions because it is measurable and nonnegative.
+    So for all <span class="arithmatex">\(z\)</span> we have:</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+Tf\left(z\right) &amp; = &amp; \int f\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
+&amp; = &amp; \int\lim\phi_{n}\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
+&amp; = &amp; \lim\int\phi_{n}\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
+&amp; = &amp; \lim T\phi_{n}\left(z\right)
+\end{eqnarray*}\]</div>
+<p>where the third step of interchanging the limit and the integral follows
+from Lebesgue's Monotone Convergence theorem.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The theorem states that if <span class="arithmatex">\(\left\lbrace  f_{n}\right\rbrace\)</span> is a monotone increasing sequence of nonnegative measurable functions that converges pointwise to <span class="arithmatex">\(f\)</span>, then <span class="arithmatex">\(\int fd\mu=\lim\int f_{n}d\mu\)</span>. Recall from <a href="../part-06-random-variables-and-probability/section-23-measurable-functions.html#ref-simple-000020functions-000020and-000020measurability">Proposition 23.5</a> that the sequence <span class="arithmatex">\(\left\lbrace  \phi_{n}\right\rbrace\)</span> of simple functions can be chosen to be monotone increasing.</p>
+<p>Finally the pointwise limit of measurable functions is a measurable
+function (<a href="../part-06-random-variables-and-probability/section-23-measurable-functions.html#ref-prop-000020pointwise-000020limit-000020and-000020measurability">Proposition 23.4</a>).
+The result follows because <span class="arithmatex">\(T\phi_{n}\)</span> is measurable by the previous
+case.</p>
+</div>
+</details>
+<div class="admonition abstract">
+<p class="admonition-title">Corollary 3.1</p>
+<p>Let <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span> be a measurable space and <span class="arithmatex">\(Q\)</span> a transition
+function on that space with Markov operator <span class="arithmatex">\(T\)</span>. Then <span class="arithmatex">\(T:B\left(Z,\mathcal{Z}\right)\to B\left(Z,\mathcal{Z}\right)\)</span>
+where <span class="arithmatex">\(B\left(Z,\mathcal{Z}\right)\)</span> is the space of bounded <span class="arithmatex">\(\mathcal{Z}\)</span>-measurable
+functions.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>Let <span class="arithmatex">\(f\)</span> be a bounded measurable function, then if <span class="arithmatex">\(0\leq f\leq m\)</span>
+it holds that <span class="arithmatex">\(0\leq Tf\leq m\)</span>, because <span class="arithmatex">\(Q\left(z,\cdot\right)\)</span>
+is a probability measure. Then <span class="arithmatex">\(Tf\)</span> is bounded. Measurability follows
+from the proposition above by applying it to <span class="arithmatex">\(f=f^{+}-f^{-}\)</span>.</p>
+</details>
+<p>This allows us to apply iteratively the operator to a function because
+if <span class="arithmatex">\(f\in B\left(Z,\mathcal{Z}\right)\)</span> then <span class="arithmatex">\(Tf\in B\left(Z,\mathcal{Z}\right)\)</span>,
+which allows to evaluate <span class="arithmatex">\(T\left(Tf\right)\)</span>, and so on. It will also
+be important to apply the adjoint operator iteratively to a probability
+measure. The following proposition will enable us to do so.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 3.2</p>
+<p>Let <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span> be a measurable space and <span class="arithmatex">\(Q\)</span> a transition
+function on that space with Adjoint operator <span class="arithmatex">\(T^{\star}\)</span>. Then <span class="arithmatex">\(T^{\star}:\Lambda\left(Z,\mathcal{Z}\right)\to\Lambda\left(Z,\mathcal{Z}\right)\)</span>
+where <span class="arithmatex">\(\Lambda\left(Z,\mathcal{Z}\right)\)</span> is the space of probability
+measures on <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span>.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>Let <span class="arithmatex">\(\lambda\in\Lambda\left(Z,\mathcal{Z}\right)\)</span> and consider <span class="arithmatex">\(T^{\star}\lambda\left(A\right)=\int Q\left(z,A\right)d\lambda\left(dz\right)\)</span>.</p>
+<ol>
+<li><span class="arithmatex">\(T^{\star}\lambda\geq0\)</span> for all <span class="arithmatex">\(\left(z,A\right)\)</span> because <span class="arithmatex">\(Q\left(z,A\right)\geq0\)</span>.</li>
+<li><span class="arithmatex">\(T^{\star}\lambda\left(\emptyset\right)=\int Q\left(z,\emptyset\right)\lambda\left(dz\right)=\int0\lambda\left(dz\right)=0\)</span>,
+    because <span class="arithmatex">\(Q\left(z,\cdot\right)\)</span> is a probability measure.</li>
+<li><span class="arithmatex">\(T^{\star}\lambda\left(Z\right)=\int Q\left(z,Z\right)\lambda\left(dz\right)=\int1\lambda\left(dz\right)=1\)</span>,
+    because <span class="arithmatex">\(Q\left(z,\cdot\right)\)</span> is a probability measure.</li>
+<li>
+<p>It is left to show that <span class="arithmatex">\(T^{\star}\lambda\)</span> is countably additive.
+    Let <span class="arithmatex">\(\left\lbrace  A_{i}\right\rbrace \subseteq\mathcal{Z}\)</span> be a sequence of disjoint
+    sets and <span class="arithmatex">\(A=\cup A_{i}\)</span>, then:</p>
+<div class="arithmatex">\[
+\sum_{i=1}^{\infty}T^{\star}\lambda\left(A_{i}\right)=\sum_{i=1}^{\infty}\int Q\left(z,A_{i}\right)\lambda\left(dz_{i}\right)=\int\left(\sum_{i=1}^{\infty}Q\left(z,A_{i}\right)\right)\lambda\left(dz_{i}\right)=\int Q\left(z,A\right)\lambda\left(dz_{i}\right)=T^{\star}\lambda\left(A\right)
+\]</div>
+<p>where <span class="arithmatex">\(\sum Q\left(z,A_{i}\right)=Q\left(z,A\right)\)</span> follows from
+<span class="arithmatex">\(Q\)</span> being a <span class="arithmatex">\(\sigma\)</span>-additive measure and interchange of the sum
+and the integral can be done because of the Lebesgue's monotone convergence
+theorem.</p>
+</li>
+</ol>
+</details>
+<p>The following result establishes a duality between the Markov operator
+and its adjoint, in words it says that the expected value of a function
+tomorrow can be computed with either operator.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 3.3</p>
+<p>Let <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span> be a measurable space and <span class="arithmatex">\(Q\)</span> a transition
+function on that space. Then for any function <span class="arithmatex">\(f\in B\left(Z,\mathcal{Z}\right)\)</span>
+(or more generally <span class="arithmatex">\(f\in M^{+}\left(Z,\mathcal{Z}\right)\)</span>) it holds
+that:</p>
+<div class="arithmatex">\[
+\int\left(Tf\left(z\right)\right)\lambda\left(dz\right)=\int f\left(z^{\prime}\right)T^{\star}\lambda\left(dz^{\prime}\right)=\int\int f\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)\lambda\left(dz\right)
+\]</div>
+</div>
+<p>Then to obtain the expected value of function <span class="arithmatex">\(f\)</span> tomorrow given
+a distribution <span class="arithmatex">\(\lambda\)</span> of <span class="arithmatex">\(z\)</span> today the order of integration does
+not matter.</p>
+<details class="success">
+<summary>Proof</summary>
+<p><a href="https://books.google.com/books?id=tWYo0QolyLAC">Stokey et al. (1989, Sec. 8.1)</a>.</p>
+</details>
+<p>We can now define a sequence of probability measures over the sequence
+of random variables by iterating over <span class="arithmatex">\(Q\)</span> with the Markov operator.</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+Q^{1}\left(z,A\right) &amp; = &amp; Q\left(z,A\right)\\
+&amp; \vdots\\
+Q^{n+1}\left(z,A\right) &amp; = &amp; \left(TQ^{n}\left(\cdot,A\right)\right)\left(z\right)=\int Q^{n}\left(z^{\prime},A\right)Q\left(z,dz^{\prime}\right)
+\end{eqnarray*}\]</div>
+<p>Then if a shock is drawn sequentially from <span class="arithmatex">\(Q\)</span> the function <span class="arithmatex">\(Q^{n}\left(z,A\right)\)</span>
+will give the probability of going from initial point <span class="arithmatex">\(z\)</span> to a value
+in set <span class="arithmatex">\(A\)</span> in exactly <span class="arithmatex">\(n\)</span> periods. Its easy to show that each <span class="arithmatex">\(Q^{n}\)</span>
+is a transition function.</p>
+<p>Finally, it is clear that starting from an initial probability <span class="arithmatex">\(\left(\lambda\right)\)</span>
+the Adjoint operator can be used to define a sequence of probability
+measures <span class="arithmatex">\(\left\lbrace  \lambda^{n}\right\rbrace\)</span> as <span class="arithmatex">\(\lambda^{n}=T^{\star}\lambda^{n-1}\)</span>,
+we interpret <span class="arithmatex">\(\lambda\)</span> as the distribution of the state <span class="arithmatex">\(z\)</span> in the
+initial period and <span class="arithmatex">\(\lambda_{n}\)</span> the (unconditional) distribution
+of <span class="arithmatex">\(z\)</span> in the <span class="arithmatex">\(n^{th}\)</span> period.</p>
+<p>As a side note a transition function can have stronger properties
+that are of great use in stochastic dynamic programming:
+<a id="ref-def-feller-property" class="course-anchor"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.3: Feller Property</p>
+<p>A transition
+function <span class="arithmatex">\(Q\)</span> has the feller property if its Markov operator maps
+the set of continuous bounded function into itself. <span class="arithmatex">\(T:C\left(Z\right)\to C\left(Z\right)\)</span>.</p>
+</div>
+<p><a id="ref-def-000020monotonicity-000020markov-000020" class="course-anchor"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.4: Monotone transition functions</p>
+<p>A transition function <span class="arithmatex">\(Q\)</span> is said to be monotone
+if its Markov operator maps nondecreasing functions to nondecreasing
+functions.</p>
+</div>
+<h2 id="probability-measures-on-spaces-of-sequences">Probability measures on spaces of sequences<a class="headerlink" href="#probability-measures-on-spaces-of-sequences" title="Permanent link">&para;</a></h2>
+<p>The idea now is to study sequences of random variables and their probability
+distributions, this can be done using the transition function defined
+above.</p>
+<p>The first task at hand is to define a probability distribution on
+a finite sequence of variables. For this let <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span>
+be a measurable space and for <span class="arithmatex">\(t&lt;\infty\)</span> let <span class="arithmatex">\(\left(Z^{t},\mathcal{Z}^{t}\right)=\left(Z\times\ldots\times Z,\mathcal{Z}\times\ldots\times\mathcal{Z}\right)\)</span>
+be a product space. Now let <span class="arithmatex">\(Q\)</span> be a transition function on <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span>.
+A probability measure on the sequence given <span class="arithmatex">\(z_{0}\)</span>, the initial
+value of the variable is:
+<a id="ref-def-probability-measure-sequences" class="course-anchor"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.5: Probability measure on finite sequence</p>
+<p><span class="arithmatex">\(\mu^{t}:Z\times\mathcal{Z}^{t}\to\left[0,1\right]\)</span>
+is the probability distribution for the finite sequence and its defined
+as:</p>
+<div class="arithmatex">\[
+\mu^{t}\left(z_{0},B\right)=\int_{A_{1}}\ldots\int_{A_{t}}Q\left(z_{t-1},dz_{t}\right)\cdot Q\left(z_{t-2},dz_{t-1}\right)\cdots Q\left(z_{0},dz_{1}\right)
+\]</div>
+<p>where <span class="arithmatex">\(B=A_{1}\times\ldots\times A_{t}\in\mathcal{Z}^{t}\)</span> is a rectangle
+in <span class="arithmatex">\(\mathcal{Z}^{t}\)</span>. It can be shown that it is sufficient to define
+<span class="arithmatex">\(\mu^{t}\)</span> only for this type of set, because it can then be extended
+uniquely to measurable sets on <span class="arithmatex">\(\mathcal{Z}^{t}\)</span> by the Caratheodory
+and Hahn extension theorems.</p>
+</div>
+<p>The next task is to handle infinite sequences of realizations of <span class="arithmatex">\(z\)</span>.
+To do this we need to be able to induce a <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{Z}^{\infty}\)</span>
+on the set of infinite sequences and then a probability measure on
+that <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+<p>To do this define the set of finite-measurable rectangles. These sets
+establish outcomes for the variables for the first <span class="arithmatex">\(T\)</span> periods, leaving
+unspecified what happens to the sequence afterwards.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.6: Finite-Measurable Rectangles</p>
+<p><span class="arithmatex">\(B\)</span> is a finite measurable
+rectangle if its of the form:</p>
+<div class="arithmatex">\[
+B=A_{1}\times\ldots\times A_{T}\times Z\times Z\times\ldots
+\]</div>
+<p>for some finite <span class="arithmatex">\(T\)</span>. Let <span class="arithmatex">\(\mathcal{C}\)</span> be the set of all finite measurable
+rectangles. Let <span class="arithmatex">\(\mathcal{A}^{\infty}\)</span> be the set of all finite unions
+of set in <span class="arithmatex">\(\mathcal{C}\)</span>.</p>
+</div>
+<p>It can be shown that <span class="arithmatex">\(\mathcal{A}^{\infty}\)</span> is an algebra, then one
+can define <span class="arithmatex">\(\mathcal{Z}^{\infty}\)</span> to be the <span class="arithmatex">\(\sigma\)</span>-algebra induced
+by <span class="arithmatex">\(\mathcal{A}^{\infty}\)</span>. Then one can define a measure on finite-measurable
+rectangles <span class="arithmatex">\(\mathcal{C}\)</span> just as before, extend it to the algebra <span class="arithmatex">\(\mathcal{A}^{\infty}\)</span>,
+and the extend the extension to <span class="arithmatex">\(\mathcal{Z}^{\infty}\)</span>. This proves
+the existence of a measure for infinite sequences that coincides with
+our notion of measure for finite-measurable rectangles.</p>
+<p>Now we can define what a stochastic process is:
+<a id="ref-def-stochastic-process" class="course-anchor"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.7: Stochastic Process</p>
+<p>Let <span class="arithmatex">\(\left(\Omega,\mathcal{F},P\right)\)</span>
+be a probability space. A stochastic process on <span class="arithmatex">\(\left(\Omega,\mathcal{F},P\right)\)</span>
+is an increasing sequence of <span class="arithmatex">\(\sigma\)</span>-algebras <span class="arithmatex">\(\mathcal{F}_{1}\subseteq\mathcal{F}_{2}\subseteq\ldots\subseteq\mathcal{F}\)</span>,
+a measurable space <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span> and a sequence of functions
+<span class="arithmatex">\(\sigma_{t}:\Omega\to Z\)</span> such that each <span class="arithmatex">\(\sigma_{t}\)</span> is <span class="arithmatex">\(\mathcal{F}_{t}\)</span>-measurable.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.8: Sample Path</p>
+<p>Let <span class="arithmatex">\(\omega\in\Omega\)</span>, then <span class="arithmatex">\(\left(\sigma_{1}\left(\omega\right),\sigma_{2}\left(\omega\right),\ldots\right)\)</span>
+is called the sample path of the stochastic process given <span class="arithmatex">\(\omega\)</span>.</p>
+</div>
+<p>Each <span class="arithmatex">\(\sigma_{t}\)</span> is just a random variable that takes a value on
+<span class="arithmatex">\(Z\)</span> given some event on <span class="arithmatex">\(\Omega\)</span>. In almost all cases we will have
+<span class="arithmatex">\(\left(Z,\mathcal{Z}\right)=\left(\mathbb{R},\mathcal{B}\right)\)</span>. The selection
+of the probability space <span class="arithmatex">\(\left(\Omega,\mathcal{F},P\right)\)</span> is also
+standard. Because we are interested in the behavior of infinite sequences
+of the realizations of the random variable we can set <span class="arithmatex">\(\left(\Omega,\mathcal{F},P\right)=\left(Z^{\infty},\mathcal{Z}^{\infty},\mu\left(z_{0},\cdot\right)\right)\)</span>.
+The restriction that the <span class="arithmatex">\(\sigma\)</span>-algebras are increasing follows
+from the draws being taken sequentially, this <span class="arithmatex">\(\sigma\)</span>-algebras will
+be interpreted as possible histories, and any future history must
+include all of the possible previous histories from which it could
+have followed.</p>
+<p>Given a stochastic process we can use probability measure <span class="arithmatex">\(P\)</span> to
+induce measures on finite sets of sample paths.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.9: Probabilities on Paths</p>
+<p>Let <span class="arithmatex">\(C\in\mathcal{Z}^{n}\)</span> we can define:</p>
+<div class="arithmatex">\[
+P_{t+1,\ldots,t+n}\left(C\right)=P\left(\left\lbrace  \omega\in\Omega | \left(\sigma_{t+1}\left(\omega\right),\ldots\sigma_{t+n}\left(\omega\right)\right)\in C\right\rbrace \right)
+\]</div>
+<p>This is the probability that an event occurs and the sample path lies
+in <span class="arithmatex">\(C\)</span> between periods <span class="arithmatex">\(t+1\)</span> and <span class="arithmatex">\(t+n\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.10: Stationary Stochastic Process</p>
+<p>A stochastic process is said
+to be stationary if <span class="arithmatex">\(P_{t+1,\ldots,t+n}\left(C\right)\)</span> is independent
+of <span class="arithmatex">\(t\)</span> for all <span class="arithmatex">\(n\)</span> and <span class="arithmatex">\(C\)</span>. That is, if it does not matter the
+point in time where we start the sequence.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.11: Conditional probability</p>
+<p>Let <span class="arithmatex">\(P_{t+1,\ldots,t+n}\left(C|a_{t-s},\ldots,a_{t-1},a_{t}\right)\)</span>
+be the conditional probability of the event <span class="arithmatex">\(\left\lbrace  \omega\in\Omega | \left(\sigma_{t+1}\left(\omega\right),\ldots\sigma_{t+n}\left(\omega\right)\right)\in C\right\rbrace\)</span>
+given that the event <span class="arithmatex">\(\left\lbrace  \omega\in\Omega | \sigma_{\tau}\left(\omega\right)=a_{\tau}\right\rbrace\)</span>
+happened.</p>
+</div>
+<p>Now we can define what a Markov process is:</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.12: Markov Process</p>
+<p>A stochastic process is a Markov process
+if:</p>
+<div class="arithmatex">\[
+P_{t+1,\ldots,t+n}\left(C|a_{t-s},\ldots,a_{t}\right)=P_{t+1,\ldots t+n}\left(C|a_{t}\right)
+\]</div>
+<p>for <span class="arithmatex">\(t=1,2,\ldots\)</span>, <span class="arithmatex">\(n=1,2,\ldots\)</span>, <span class="arithmatex">\(s=1,2,\ldots,t-1\)</span> and <span class="arithmatex">\(C\in\mathcal{Z}^{n}\)</span>.</p>
+</div>
+<p>The distribution of the path of a Markov process only depends on the
+last realization.</p>
+<p>A general setting is easy to construct using a transition function
+<span class="arithmatex">\(Q\)</span>. Let <span class="arithmatex">\(\left(\Omega,\mathcal{F},P\right)=\left(Z^{\infty},\mathcal{Z}^{\infty},\mu\left(z_{0},\cdot\right)\right)\)</span>
+and for each <span class="arithmatex">\(T\)</span> define <span class="arithmatex">\(\mathcal{A}^{T}\)</span> as the collection of all
+finite-measurable sets:</p>
+<div class="arithmatex">\[
+B=A_{1}\times\ldots\times A_{T}\times Z\times Z\times\ldots
+\]</div>
+<p>As before this forms an algebra, let <span class="arithmatex">\(\mathcal{F}^{T}\)</span> be the
+<span class="arithmatex">\(\sigma\)</span>-algebra generated by <span class="arithmatex">\(\mathcal{A}^{T}\)</span>. Clearly <span class="arithmatex">\(\mathcal{F}^{t}\subseteq\mathcal{F}^{t+1}\)</span>.
+Then we can define the sequence of functions <span class="arithmatex">\(\tilde{z}_{t}:\Omega\to Z\)</span>
+as:</p>
+<div class="arithmatex">\[
+\tilde{z}_{t}\left(\omega\right)=\tilde{z}_{t}\left(a_{1},a_{2},\ldots\right)=a_{t}
+\]</div>
+<p>so that it selects the <span class="arithmatex">\(t^{th}\)</span> realization of the sequence <span class="arithmatex">\(\omega\)</span>.
+These functions are clearly <span class="arithmatex">\(\mathcal{F}^{t}\)</span> measurable, because they
+don't contain information about future realizations of the variable.</p>
+<p>The definition of <span class="arithmatex">\(P\)</span> through <span class="arithmatex">\(Q\)</span> can be used to verify that this
+process is a Markov process. Moreover it holds that:</p>
+<div class="arithmatex">\[
+P_{t+1}\left(C|a_{t-s},\ldots,a_{t}\right)=P_{t+1}\left(C|a_{t}\right)=Q\left(a_{t},C\right)
+\]</div>
+<p>for <span class="arithmatex">\(C\in\mathcal{Z}\)</span>.</p>
+<h2 id="markov-chains">Markov chains<a class="headerlink" href="#markov-chains" title="Permanent link">&para;</a></h2>
+<p>We now zoom into a special type of Markov process that is particularly
+useful in applications of dynamic programming. A Markov chain (or
+finite state Markov chain):</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.13: Markov Chain</p>
+<p>A Markov chain is a Markov process defined
+on a space <span class="arithmatex">\(Z=\left\lbrace  z_{1},\ldots,z_{l}\right\rbrace\)</span> with finite dimension
+(finitely many elements).</p>
+</div>
+<p>The relevance of Markov chains resides in two observations. First,
+they allow for a simple characterization of their transition function,
+as shown below. Second, most computational methods (and thus applications)
+of dynamic programming discretize the state space, effectively imposing
+that the space <span class="arithmatex">\(Z\)</span> is finite.</p>
+<p>Before characterizing the transition function of a Markov chain it
+is useful to recall that the natural <span class="arithmatex">\(\sigma\)</span>-algebra over <span class="arithmatex">\(Z\)</span> is
+<span class="arithmatex">\(\mathcal{Z}=2^{Z}\)</span> (the power set), and that the space of probabilities
+distributions over <span class="arithmatex">\(Z\)</span> is formed by vectors <span class="arithmatex">\(p\in\mathbb{R}^{l}\)</span>
+such that <span class="arithmatex">\(p_{i}\geq0\)</span> and <span class="arithmatex">\(\underset{i=1}{\overset{l}{\sum}}p_{i}=1\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Formally <span class="arithmatex">\(p\in\Delta^{l}\)</span>, where <span class="arithmatex">\(\Delta^{l}=\left\lbrace  p\in\mathbb{R}_{+}^{l}|\underset{i=1}{\overset{l}{\sum}}p_{i}=1\right\rbrace\)</span> is the <span class="arithmatex">\(l-1\)</span> dimensional simplex. This same set is particularly useful in characterizing price systems in finite dimensional exchange economies.</p>
+</div>
+<p>. The transition function of the Markov process can be then characterized
+by a matrix:</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.14: Markov Matrix / Stochastic Matrix</p>
+<p>A square matrix <span class="arithmatex">\(\Pi=\left[\pi_{ij}\right]\)</span>
+of dimensions <span class="arithmatex">\(l\times l\)</span> is considered a Markov (or stochastic)
+matrix if <span class="arithmatex">\(\pi_{ij}\geq0\)</span> for all <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span>, and <span class="arithmatex">\(\underset{j=1}{\overset{l}{\sum}}\pi_{ij}=1\)</span>
+for all <span class="arithmatex">\(i\)</span>. Equivalently, if its rows are probability distributions
+on <span class="arithmatex">\(Z\)</span>: <span class="arithmatex">\(\pi_{i}\in\Delta^{l}\)</span>.</p>
+</div>
+<p>The transition function of a Markov chain is a function <span class="arithmatex">\(Q:Z\times\mathcal{Z}\to\mathbb{R}_{+}\)</span>
+that gives the probability of a given set <span class="arithmatex">\(A\in\mathcal{Z}\)</span> given a
+current state <span class="arithmatex">\(z_{i}\)</span>. We can then construct a Markov matrix by setting:</p>
+<div class="arithmatex">\[
+\pi_{ij}=Q\left(z_{i},\left\lbrace  z_{j}\right\rbrace \right)=\Pr\left(z_{t+1}=z_{j}|z_{t}=z_{i}\right)
+\]</div>
+<p>So <span class="arithmatex">\(\pi_{ij}\)</span> is interpreted as the probability that <span class="arithmatex">\(z_{t+1}=z_{j}\)</span>
+conditional on <span class="arithmatex">\(z_{t}=z_{i}\)</span>. The row <span class="arithmatex">\(\pi_{i}=\left(\pi_{i1},\ldots,\pi_{il}\right)\)</span>
+is the conditional probability of <span class="arithmatex">\(z_{t+1}\)</span>, given that <span class="arithmatex">\(z_{t}=z_{i}\)</span>.</p>
+<p>We can also go the other way, constructing a transition function <span class="arithmatex">\(Q\)</span>
+from a Markov matrix <span class="arithmatex">\(\Pi\)</span>. Let <span class="arithmatex">\(A\in\mathcal{Z}\)</span>, because <span class="arithmatex">\(Z\)</span> is
+finite we can define <span class="arithmatex">\(A=\left\lbrace  z_{a_{1}},\ldots,z_{a_{n}}\right\rbrace\)</span>
+where <span class="arithmatex">\(a_{1}\)</span>, <span class="arithmatex">\(\ldots\)</span>, <span class="arithmatex">\(a_{n}\)</span> are <span class="arithmatex">\(n\le l\)</span> indices. This gives:</p>
+<div class="arithmatex">\[
+Q\left(z_{i},A\right)=\sum_{j=1}^{n}\pi_{ia_{j}}
+\]</div>
+<p>We can now define the Markov operator and the adjoint Markov operator
+of a Markov chain making use of the Markov matrix (Markov!).</p>
+<ol>
+<li>
+<p>Recall that The Markov operator of <span class="arithmatex">\(Q\)</span> is an operator <span class="arithmatex">\(T\)</span> defined
+    on the set of <span class="arithmatex">\(\mathcal{Z}\)</span>-measurable functions:</p>
+<div class="arithmatex">\[
+Tf\left(z\right)=\int f\left(z^{\prime}\right)Q\left(z,dz^{\prime}\right)
+\]</div>
+<p>for all <span class="arithmatex">\(z\in Z\)</span>. <span class="arithmatex">\(T\)</span> is the expected value of <span class="arithmatex">\(f\)</span> in the next
+period if today's realization is <span class="arithmatex">\(z\)</span>. For Markov chains the function
+<span class="arithmatex">\(f\)</span> can be reduced to a row-vector <span class="arithmatex">\(\vec{f}=\left(f\left(z_{1}\right),\ldots,f\left(z_{l}\right)\right)\in\mathbb{R}^{l}\)</span>,
+which reduces the integral to:</p>
+<div class="arithmatex">\[
+Tf\left(z_{i}\right)=\vec{f}\pi_{i}^{\prime}
+\]</div>
+<p>more generally we have:</p>
+<div class="arithmatex">\[
+Tf=\vec{f}\Pi^{\prime}
+\]</div>
+<p>the <span class="arithmatex">\(i^{th}\)</span> element of <span class="arithmatex">\(Tf\)</span> (which is an <span class="arithmatex">\(l\)</span>-dimensional vector)
+corresponds to: <span class="arithmatex">\(E\left[f\left(z_{t+1}\right)|z_{t}=z_{i}\right]\)</span>.
+1. Recall that the adjoint operator of <span class="arithmatex">\(Q\)</span> is <span class="arithmatex">\(T^{\star}\)</span> is an operator
+defined on probability measures on <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span>:</p>
+<div class="arithmatex">\[
+T^{\star}\lambda\left(A\right)=\int Q\left(z,A\right)\lambda\left(dz\right)
+\]</div>
+<p>for all <span class="arithmatex">\(A\in\mathcal{Z}\)</span>. <span class="arithmatex">\(T\)</span> gives the probability that <span class="arithmatex">\(z^{\prime}\in A\)</span>
+if the current value of <span class="arithmatex">\(z\)</span> is drawn from probability distribution
+<span class="arithmatex">\(\lambda\)</span>. Because the space is finite we can represent probabilities
+distributions as vectors in <span class="arithmatex">\(\Delta^{l}\)</span>. Let <span class="arithmatex">\(p\in\Delta^{l}\)</span> be
+an initial distribution on <span class="arithmatex">\(Z\)</span>, we want to know the distribution
+on <span class="arithmatex">\(Z\)</span> for the next period <span class="arithmatex">\(\left(\hat{p}\right)\)</span>:</p>
+<div class="arithmatex">\[
+T^{\star}p=\hat{p}=p\Pi\qquad\text{where: }\hat{p}_{j}=\sum_{i=1}^{l}p_{i}\pi_{ij}
+\]</div>
+<p>The <span class="arithmatex">\(j^{th}\)</span> element of <span class="arithmatex">\(T^{\star}p\)</span> (which is an <span class="arithmatex">\(l\)</span>-dimensional
+row-vector) corresponds to the unconditional probability that <span class="arithmatex">\(z_{t+1}=z_{j}\)</span>:
+<span class="arithmatex">\(\Pr\left(z_{t+1}=z_{j}\right)\)</span>.</p>
+</li>
+</ol>
+<p>It shouldn't be a surprise that the Markov operator is characterized
+by <span class="arithmatex">\(\Pi^{\prime}\)</span> and the adjoint operator by its transpose <span class="arithmatex">\(\Pi\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If vectors are assumed to be columns instead of rows then <span class="arithmatex">\(Tf=\Pi f\)</span> and <span class="arithmatex">\(T^{\star}p=\Pi^{\prime}p\)</span>. The adjoint is characterized as the transpose of the Markov operator in any case.</p>
+</div>
+<p>As with general Markov processes there is a special interest in the
+limit behavior of the adjoint operator <span class="arithmatex">\(\left(\underset{n\to\infty}{\lim}p\Pi^{n}\right)\)</span>,
+in particular the existence and properties of an invariant distribution,
+that is <span class="arithmatex">\(p^{\star}\)</span> such that <span class="arithmatex">\(p^{\star}=p^{\star}\Pi\)</span> (generally
+<span class="arithmatex">\(\lambda^{\star}=T^{\star}\lambda^{\star}\)</span>). The problem of finding an invariant
+distribution is frequently cast as an eigenvector problem. <span class="arithmatex">\(p^{\star}\)</span>
+is the eigenvector associated with any unit-eigenvalue of <span class="arithmatex">\(\Pi\)</span>.</p>
+<p>Another property that will be of interest is the presence of Ergodic
+sets. These are subsets of the space <span class="arithmatex">\(E\subseteq Z\)</span> that the process
+never leaves once it takes a value in them. Formally:</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.15: Ergodic Set</p>
+<p>A set <span class="arithmatex">\(E\subseteq Z\)</span> is ergodic if and only
+if <span class="arithmatex">\(Q\left(z_{i},E\right)=1\)</span> for all <span class="arithmatex">\(z_{i}\in E\)</span> and there does
+not exist a proper subset <span class="arithmatex">\(E^{\prime}\subset E\)</span> that is ergodic.</p>
+</div>
+<p>The ergodic sets are important because they tell us sections of the
+state space that are of interest. Only ergodic sets have positive
+mass in the invariant distribution.</p>
+<p>Following SLP we now show 5 examples of the possible limit behavior
+of Markov chains. After the examples we state the main results on
+the existence and uniqueness of ergodic sets, invariant distributions,
+and the convergence of the sequences <span class="arithmatex">\(\left\lbrace  \frac{1}{n}\underset{k=0}{\overset{n}{\sum}}\Pi^{k}\right\rbrace\)</span>
+and <span class="arithmatex">\(\left\lbrace  \Pi^{n}\right\rbrace\)</span>. (clearly if the second sequence converges
+so does the first one).</p>
+<div class="admonition example">
+<p class="admonition-title">Example 3.1: Uniqueness of ergodic set, convergence of <span class="arithmatex">\(\left\lbrace \Pi^{n}\right\rbrace\)</span></p>
+<p>Let <span class="arithmatex">\(l=2\)</span> and consider the Markov matrix:</p>
+<div class="arithmatex">\[
+\Pi=\left[\begin{array}{cc}
+\frac{3}{4} &amp; \frac{1}{4}\\
+\frac{1}{4} &amp; \frac{3}{4}
+\end{array}\right]
+\]</div>
+<p>Clearly the only ergodic set is <span class="arithmatex">\(Z\)</span> because one has positive probability
+of going to <span class="arithmatex">\(z_{1}\)</span> or <span class="arithmatex">\(z_{2}\)</span> starting in any state. Moreover:</p>
+<div class="arithmatex">\[
+\lim_{n\to\infty}\Pi^{n}=\left[\begin{array}{cc}
+\frac{1}{2} &amp; \frac{1}{2}\\
+\frac{1}{2} &amp; \frac{1}{2}
+\end{array}\right]
+\]</div>
+<p>The invariant distribution is then <span class="arithmatex">\(p^{\star}=\left(\frac{1}{2},\frac{1}{2}\right)\)</span>.
+Moreover <span class="arithmatex">\(\lim\left(p_{0}\Pi^{n}\right)=p^{\star}\)</span> for all <span class="arithmatex">\(p_{0}\in\Delta^{2}\)</span>.</p>
+</div>
+<p><strong>Note: </strong>Convergence is easily defined in this setup because
+the limit is taken element wise.</p>
+<div class="admonition example">
+<p class="admonition-title">Example 3.2: Uniqueness of a ergodic set, convergence of <span class="arithmatex">\(\left\lbrace \Pi^{n}\right\rbrace\)</span></p>
+<p>Let <span class="arithmatex">\(l=3\)</span> and <span class="arithmatex">\(\gamma\in\left(0,1\right)\)</span>. Consider the Markov
+matrix:</p>
+<div class="arithmatex">\[
+\Pi=\left[\begin{array}{ccc}
+1-\gamma &amp; \frac{\gamma}{2} &amp; \frac{\gamma}{2}\\
+0 &amp; \frac{1}{2} &amp; \frac{1}{2}\\
+0 &amp; \frac{1}{2} &amp; \frac{1}{2}
+\end{array}\right]
+\]</div>
+<p>There is a unique ergodic set <span class="arithmatex">\(E=\left\lbrace  z_{2},z_{3}\right\rbrace \neq Z\)</span>.
+The state <span class="arithmatex">\(z_{1}\)</span> is never reached again once you leave it. One can
+also show:</p>
+<div class="arithmatex">\[
+\Pi^{n}=\left[\begin{array}{ccc}
+\left(1-\gamma\right)^{n} &amp; \frac{\left(1-\left(1-\gamma\right)^{n}\right)}{2} &amp; \frac{\left(1-\left(1-\gamma\right)^{n}\right)}{2}\\
+0 &amp; \frac{1}{2} &amp; \frac{1}{2}\\
+0 &amp; \frac{1}{2} &amp; \frac{1}{2}
+\end{array}\right]
+\]</div>
+<p>clearly <span class="arithmatex">\(\left\lbrace  \Pi^{n}\right\rbrace\)</span> converges:</p>
+<div class="arithmatex">\[
+\lim_{n\to\infty}\Pi^{n}=\left[\begin{array}{ccc}
+0 &amp; \frac{1}{2} &amp; \frac{1}{2}\\
+0 &amp; \frac{1}{2} &amp; \frac{1}{2}\\
+0 &amp; \frac{1}{2} &amp; \frac{1}{2}
+\end{array}\right]
+\]</div>
+<p>and the invariant distribution is <span class="arithmatex">\(p^{\star}=\left(0,\frac{1}{2},\frac{1}{2}\right)\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 3.3: Cyclical sets , convergence of <span class="arithmatex">\(\left\lbrace \frac{1}{n}\underset{k=0}{\overset{n}{\sum}}\Pi^{k}\right\rbrace\)</span></p>
+<p>Consider an <span class="arithmatex">\(l\)</span>-dimensional Markov chain and order its states into
+two subsets, the first one with <span class="arithmatex">\(k\)</span> elements and the second one with
+<span class="arithmatex">\(l-k\)</span> elements. Suppose the Markov matrix has the form:</p>
+<div class="arithmatex">\[
+\Pi=\left[\begin{array}{cc}
+0 &amp; \Pi_{1}\\
+\Pi_{2} &amp; 0
+\end{array}\right]
+\]</div>
+<p>where the first matrix <span class="arithmatex">\(\Pi_{1}\)</span> is of dimension <span class="arithmatex">\(k\times\left(l-k\right)\)</span>
+and matrix <span class="arithmatex">\(\Pi_{2}\)</span> of dimension <span class="arithmatex">\(\left(l-k\right)\times k\)</span>. Clearly
+if at one period one is in the first subset the next period one will
+be in the second subset, and vice-versa. So there are no proper subsets
+that form an ergodic subset, instead the process cycles from the first
+subset to the second period by period.</p>
+<div class="arithmatex">\[
+\Pi^{2n}=\left[\begin{array}{cc}
+\left(\Pi_{1}\Pi_{2}\right)^{n} &amp; 0\\
+0 &amp; \left(\Pi_{2}\Pi_{1}\right)^{n}
+\end{array}\right]\qquad\Pi^{2n+1}=\left[\begin{array}{cc}
+0 &amp; \left(\Pi_{1}\Pi_{2}\right)^{n}\Pi_{1}\\
+\left(\Pi_{2}\Pi_{1}\right)^{n}\Pi_{2} &amp; 0
+\end{array}\right]
+\]</div>
+<p>In this example the sequence <span class="arithmatex">\(\left\lbrace  \Pi^{n}\right\rbrace\)</span> does not
+converge but its odd and even elements do, then the sequence <span class="arithmatex">\(\left\lbrace  \frac{1}{n}\underset{k=0}{\overset{n}{\sum}}\Pi^{k}\right\rbrace\)</span>
+does converge.</p>
+<p>For example if <span class="arithmatex">\(l=4\)</span>, <span class="arithmatex">\(k=2\)</span> and <span class="arithmatex">\(\Pi_{1}=\Pi_{2}\)</span>:</p>
+<div class="arithmatex">\[
+\lim_{n\to\infty}\Pi^{2n}=\left[\begin{array}{cccc}
+\frac{1}{2} &amp; \frac{1}{2} &amp; 0 &amp; 0\\
+\frac{1}{2} &amp; \frac{1}{2} &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; \frac{1}{2} &amp; \frac{1}{2}\\
+0 &amp; 0 &amp; \frac{1}{2} &amp; \frac{1}{2}
+\end{array}\right]\qquad\lim_{n\to\infty}\Pi^{2n+1}=\left[\begin{array}{cccc}
+0 &amp; 0 &amp; \frac{1}{2} &amp; \frac{1}{2}\\
+0 &amp; 0 &amp; \frac{1}{2} &amp; \frac{1}{2}\\
+\frac{1}{2} &amp; \frac{1}{2} &amp; 0 &amp; 0\\
+\frac{1}{2} &amp; \frac{1}{2} &amp; 0 &amp; 0
+\end{array}\right]
+\]</div>
+<div class="arithmatex">\[
+\lim_{n\to\infty}\frac{1}{n}\underset{k=0}{\overset{n}{\sum}}\Pi^{k}=\left[\begin{array}{cccc}
+\frac{1}{4} &amp; \frac{1}{4} &amp; \frac{1}{4} &amp; \frac{1}{4}\\
+\frac{1}{4} &amp; \frac{1}{4} &amp; \frac{1}{4} &amp; \frac{1}{4}\\
+\frac{1}{4} &amp; \frac{1}{4} &amp; \frac{1}{4} &amp; \frac{1}{4}\\
+\frac{1}{4} &amp; \frac{1}{4} &amp; \frac{1}{4} &amp; \frac{1}{4}
+\end{array}\right]
+\]</div>
+<p>An invariant distribution is found as one of the rows of the last
+limit: <span class="arithmatex">\(p^{\star}=\left(\frac{1}{4},\frac{1}{4},\frac{1}{4},\frac{1}{4}\right)\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 3.4: Two ergodic sets, Infinitely many invariant distributions</p>
+<p>Consider an <span class="arithmatex">\(l\)</span>-dimensional Markov chain and order its states into
+two subsets, the first one with <span class="arithmatex">\(k\)</span> elements and the second one with
+<span class="arithmatex">\(l-k\)</span> elements. Suppose the Markov matrix has the form:</p>
+<div class="arithmatex">\[
+\Pi=\left[\begin{array}{cc}
+\Pi_{1} &amp; 0\\
+0 &amp; \Pi_{2}
+\end{array}\right]
+\]</div>
+<p>where the first matrix <span class="arithmatex">\(\Pi_{1}\)</span> is of dimension <span class="arithmatex">\(k\times k\)</span>
+and matrix <span class="arithmatex">\(\Pi_{2}\)</span> of dimension <span class="arithmatex">\(\left(l-k\right)\times\left(l-k\right)\)</span>. Clearly
+once the process enters the first subset it never leaves it. The same
+goes for the second subset. Then they are both ergodic. Also <span class="arithmatex">\(\Pi^{n}=\left[\begin{array}{cc}
+\Pi_{1}^{n} &amp; 0\\
+0 &amp; \Pi_{2}^{n}
+\end{array}\right]\)</span>. This sequence converges if and only if the sequences
+<span class="arithmatex">\(\left\lbrace  \Pi_{1}^{n}\right\rbrace\)</span> and <span class="arithmatex">\(\left\lbrace  \Pi_{2}^{n}\right\rbrace\)</span> converge.
+Let <span class="arithmatex">\(l=4\)</span>, <span class="arithmatex">\(k=2\)</span> and
+<span class="arithmatex">\(\Pi_{1}=\Pi_{2}=\left[\begin{array}{cc}
+\frac{3}{4} &amp; \frac{1}{4}\\
+\frac{1}{4} &amp; \frac{3}{4}
+\end{array}\right]\)</span>, then:</p>
+<div class="arithmatex">\[
+\lim_{n\to\infty}\Pi^{n}=\left[\begin{array}{cccc}
+\frac{1}{2} &amp; \frac{1}{2} &amp; 0 &amp; 0\\
+\frac{1}{2} &amp; \frac{1}{2} &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; \frac{1}{2} &amp; \frac{1}{2}\\
+0 &amp; 0 &amp; \frac{1}{2} &amp; \frac{1}{2}
+\end{array}\right]
+\]</div>
+<p>There are two invariant distributions:<span class="arithmatex">\(p_{1}^{\star}=\left(\frac{1}{2},\frac{1}{2},0,0\right)\)</span>
+and <span class="arithmatex">\(p_{2}^{\star}=\left(0,0,\frac{1}{2},\frac{1}{2}\right)\)</span>.
+But any convex combination of them is also an invariant distribution.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 3.5: Two ergodic sets, Infinitely many invariant distributions</p>
+<p>Let <span class="arithmatex">\(l=3\)</span>, <span class="arithmatex">\(\gamma\in\left(0,2\right)\)</span> and <span class="arithmatex">\(\alpha,\beta\geq0\)</span>
+such that <span class="arithmatex">\(\alpha+\beta=1\)</span>. Consider the Markov matrix:</p>
+<div class="arithmatex">\[
+\Pi=\left[\begin{array}{ccc}
+1-\gamma &amp; \gamma\alpha &amp; \gamma\beta\\
+0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 1
+\end{array}\right]
+\]</div>
+<p>As in the second example <span class="arithmatex">\(s_{1}\)</span> is a transient state (once you leave
+it you never come back), but there are now two ergodic sets <span class="arithmatex">\(\left\lbrace  s_{2}\right\rbrace\)</span>
+and <span class="arithmatex">\(\left\lbrace  s_{3}\right\rbrace\)</span>. We also have:</p>
+<div class="arithmatex">\[
+\lim_{n\to\infty}\Pi^{n}=\lim_{n\to\infty}\left[\begin{array}{ccc}
+\left(1-\gamma\right)^{n} &amp; \left(1-\left(1-\gamma\right)^{n}\right)\alpha &amp; \left(1-\left(1-\gamma\right)^{n}\right)\beta\\
+0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 1
+\end{array}\right]=\left[\begin{array}{ccc}
+0 &amp; \alpha &amp; \beta\\
+0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 1
+\end{array}\right]
+\]</div>
+<p>The sequence <span class="arithmatex">\(\left\lbrace  \Pi^{n}\right\rbrace\)</span> converges and there are two
+invariant distributions <span class="arithmatex">\(p_{1}^{\star}=\left(0,1,0\right)\)</span> and <span class="arithmatex">\(p_{2}^{\star}=\left(0,0,1\right)\)</span>
+given by the second and third rows of the limiting matrix. The first
+row is a convex combination of the limiting distribution.</p>
+</div>
+<p>Now we turn to the general results. The following theorem encompasses
+all the possible outcomes of a Markov chain. In particular, an ergodic
+set and a limit distribution always exist, but they need not be unique,
+and although the sequence <span class="arithmatex">\(\left\lbrace  \Pi^{n}\right\rbrace\)</span> need not converge,
+the sequence <span class="arithmatex">\(\left\lbrace  \frac{1}{n}\underset{k=0}{\overset{n}{\sum}}\Pi^{k}\right\rbrace\)</span>
+always converges, and its limit characterizes the invariant distributions.
+<a id="ref-thm-000020markov-000020chains" class="course-anchor"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 3.1</p>
+<p>Let <span class="arithmatex">\(Z=\left(z_{1},\ldots,z_{l}\right)\)</span>
+and denote the stochastic matrix by its elements: <span class="arithmatex">\(\Pi=\left[\pi_{ij}\right]\)</span>.
+The powers of <span class="arithmatex">\(\Pi\)</span> are also denoted by its elements <span class="arithmatex">\(\Pi^{n}=\left[\pi_{ij}^{\left(n\right)}\right]\)</span>.</p>
+<ol>
+<li><span class="arithmatex">\(Z\)</span> can be partitioned into <span class="arithmatex">\(M\geq1\)</span> ergodic sets and a transient
+    set (an ergodic set always exists).</li>
+<li>
+<p>The sequence <span class="arithmatex">\(\left\lbrace  \frac{1}{n}\underset{k=0}{\overset{n}{\sum}}\Pi^{k}\right\rbrace\)</span>
+    always converges to a Markov matrix <span class="arithmatex">\(\overline{\Pi}\)</span>.</p>
+<ol>
+<li>For any <span class="arithmatex">\(p_{0}\in\Delta^{l}\)</span> and <span class="arithmatex">\(p_{k}=p_{0}\Pi^{k}\)</span> it holds that:
+    <span class="arithmatex">\(\frac{1}{n}\underset{k=0}{\overset{n}{\sum}}p_{k}\to p_{0}\overline{\Pi}\)</span>.</li>
+</ol>
+</li>
+<li>
+<p>Each row of <span class="arithmatex">\(\overline{\Pi}\)</span> is an invariant distribution, and every
+    invariant distribution is a convex combination of the rows of <span class="arithmatex">\(\overline{\Pi}\)</span>
+    (so <span class="arithmatex">\(p_{0}\overline{\Pi}\)</span> is an invariant distribution for all <span class="arithmatex">\(p_{0}\in\Delta^{l}\)</span>).</p>
+</li>
+</ol>
+</div>
+<p>We can strengthen these results by imposing extra structure on <span class="arithmatex">\(\Pi\)</span>.
+We can get uniqueness of the ergodic set and the invariant distribution
+under a "reachability" condition (at least one state should be
+reachable in finite time starting from anywhere).
+<a id="ref-thm-000020markov-000020chains-0000202" class="course-anchor"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 3.2</p>
+<p>Let <span class="arithmatex">\(Z\)</span> and <span class="arithmatex">\(\Pi\)</span>
+as in <a href="#ref-thm-000020markov-000020chains">Theorem 3.1</a>. <span class="arithmatex">\(\Pi\)</span> has a
+unique ergodic set if and only if there exists a state <span class="arithmatex">\(z_{j}\)</span> such
+that for all <span class="arithmatex">\(i\in\left(1,\ldots,l\right)\)</span> there exist <span class="arithmatex">\(n\geq1\)</span>
+such that <span class="arithmatex">\(\pi_{ij}^{\left(n\right)}&gt;0\)</span>.</p>
+<p>Moreover, if this is the case <span class="arithmatex">\(\Pi\)</span> has a unique invariant distribution
+<span class="arithmatex">\(p^{\star}\)</span> and all rows of <span class="arithmatex">\(\overline{\Pi}\)</span> are equal to <span class="arithmatex">\(p^{\star}\)</span>
+(so for any <span class="arithmatex">\(p_{0}\in\Delta^{l}\)</span> we have <span class="arithmatex">\(p_{0}\overline{\Pi}=p^{\star}\)</span>).</p>
+</div>
+<p>The previous result still does not rule out cyclicality in the ergodic
+set. We can get this under a "mixing" condition.
+<a id="ref-thm-000020markov-000020chains-0000203" class="course-anchor"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 3.3</p>
+<p>Let <span class="arithmatex">\(Z\)</span> and <span class="arithmatex">\(\Pi\)</span>
+as in <a href="#ref-thm-000020markov-000020chains">Theorem 3.1</a>. For <span class="arithmatex">\(n=1,2,\ldots\)</span>
+and <span class="arithmatex">\(j=1,\ldots,l\)</span> define <span class="arithmatex">\(\epsilon_{j}^{\left(n\right)}=\underset{i}{\min}\pi_{ij}^{\left(n\right)}\)</span>
+and <span class="arithmatex">\(\epsilon^{\left(n\right)}=\underset{j=1}{\overset{l}{\sum}}\epsilon_{j}^{\left(n\right)}\)</span>.
+<span class="arithmatex">\(Z\)</span> has a unique ergodic set without cyclically moving subsets if
+and only if for some <span class="arithmatex">\(N\geq1\)</span> it holds that <span class="arithmatex">\(\epsilon^{\left(N\right)}&gt;0\)</span>.</p>
+<p>Moreover, if this is the case <span class="arithmatex">\(\Pi\)</span> has a unique invariant distribution
+<span class="arithmatex">\(p^{\star}\)</span> and the sequence <span class="arithmatex">\(\left\lbrace  \Pi^{n}\right\rbrace\)</span> converges
+(so for any <span class="arithmatex">\(p_{0}\in\Delta^{l}\)</span> we have <span class="arithmatex">\(\lim p_{0}\Pi^{n}=p^{\star}\)</span>).</p>
+</div>
+<p>In this notation, <span class="arithmatex">\(\pi_{ij}^{\left(n\right)}\)</span> is the probability
+that state <span class="arithmatex">\(j\)</span> is reached from state <span class="arithmatex">\(i\)</span> in <span class="arithmatex">\(n\)</span> steps. <span class="arithmatex">\(\epsilon_{j}^{\left(n\right)}\)</span>
+measures the lowest such probability, because we don't know from which
+state we start from we need to know that the condition is satisfied
+for all states. This mixing property is stronger than the first one
+because we need there to be at least one column of non-zero elements,
+guaranteeing mixing towards one state <span class="arithmatex">\(\left(j\right)\)</span> starting from
+any state <span class="arithmatex">\(\left(i\right)\)</span>, uniformly in time (the same time <span class="arithmatex">\(\left(N\right)\)</span>
+for all the initial states).</p>
+<h2 id="weak-convergence-of-monotone-markov-processes">Weak convergence of monotone Markov processes<a class="headerlink" href="#weak-convergence-of-monotone-markov-processes" title="Permanent link">&para;</a></h2>
+<p>In the previous section we obtained results characterizing the limiting
+behavior of Markov processes when the state space is finite. Unfortunately
+these results do not extend immediately to general Markov processes.
+The problem at hand is to establish when the sequence of distribution
+functions <span class="arithmatex">\(\left\lbrace  \lambda_{n}\right\rbrace\)</span>, constructed as <span class="arithmatex">\(\lambda_{n}=T^{\star}\lambda_{n-1}\)</span>
+with <span class="arithmatex">\(\lambda_{0}\)</span> given, converges. We must first define what it
+means for a sequence of distributions to converge. The simplest definition
+comes in the form of set-wise convergence (the equivalent of point-wise
+convergence for functions):</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.16: Set-wise Convergence</p>
+<p>Let <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span> be
+a measurable space and <span class="arithmatex">\(\Lambda\left(Z,\mathcal{Z}\right)\)</span> the set of
+probability distributions. Consider a sequence <span class="arithmatex">\(\left\lbrace  \lambda_{n}\right\rbrace \subseteq\Lambda\left(Z,\mathcal{Z}\right)\)</span>,
+we say that <span class="arithmatex">\(\lambda_{n}\overset{s.w}{\to}\lambda\in\Lambda\left(Z,\mathcal{Z}\right)\)</span>
+if <span class="arithmatex">\(\lambda_{n}\left(A\right)\to\lambda\left(A\right)\)</span> for all <span class="arithmatex">\(A\in\mathcal{Z}\)</span>.</p>
+</div>
+<p>This notion of convergence is intuitive but it turns out to be too
+strong for most applications. The following proposition shows why:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 3.4</p>
+<p>Let <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span> be a measurable space and <span class="arithmatex">\(\Lambda\left(Z,\mathcal{Z}\right)\)</span>
+the set of probability distributions. Consider a sequence <span class="arithmatex">\(\left\lbrace  \lambda_{n}\right\rbrace \subseteq\Lambda\left(Z,\mathcal{Z}\right)\)</span>.
+<span class="arithmatex">\(\left\lbrace  \lambda_{n}\right\rbrace\)</span> converges set-wise to <span class="arithmatex">\(\lambda\)</span> if
+and only if <span class="arithmatex">\(\lim\int f\left(z\right)d\lambda_{n}=\int f\left(z\right)d\lambda\)</span>
+for all bounded and measurable functions <span class="arithmatex">\(f\in B\left(Z,\mathcal{Z}\right)\)</span>.</p>
+</div>
+<p>Thus asking for set-wise convergence requires the expected value of
+a large class of functions to converge. A way to weaken this is to
+limit the space of functions for which convergence is required.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.17: Weak Convergence</p>
+<p>Let <span class="arithmatex">\(\left(Z,\rho\right)\)</span> be a metric
+space and <span class="arithmatex">\(\mathcal{Z}\)</span> the Borel set of <span class="arithmatex">\(Z\)</span>. Define <span class="arithmatex">\(\Lambda\left(Z,\mathcal{Z}\right)\)</span>
+as the set of probability distributions. Consider a sequence <span class="arithmatex">\(\left\lbrace  \lambda_{n}\right\rbrace \subseteq\Lambda\left(Z,\mathcal{Z}\right)\)</span>,
+we say that <span class="arithmatex">\(\left\lbrace  \lambda_{n}\right\rbrace\)</span> converges weakly to <span class="arithmatex">\(\lambda\in\Lambda\left(Z,\mathcal{Z}\right)\)</span>
+if <span class="arithmatex">\(\lim\int f\left(z\right)d\lambda_{n}=\int f\left(z\right)d\lambda\)</span>
+for all bounded and continuous functions <span class="arithmatex">\(f\in C\left(Z\right)\)</span>.</p>
+</div>
+<p>The main results we will obtain establish the existence of an invariant
+distribution under a continuity assumption on the Markov operator
+(the Feller property). We can then ensure uniqueness if the Markov
+operator is monotone and a mixing condition is satisfied, along with
+uniqueness we will obtain the weak convergence of <span class="arithmatex">\(\left\lbrace  T^{\star n}\lambda_{0}\right\rbrace\)</span>.</p>
+<p>In what follows we consider <span class="arithmatex">\(Z\subseteq\mathbb{R}^{l}\)</span> for <span class="arithmatex">\(l&lt;\infty\)</span>,
+with <span class="arithmatex">\(\mathcal{Z}\)</span> the Borel <span class="arithmatex">\(\sigma\)</span>-algebra of <span class="arithmatex">\(Z\)</span>. The Markov process
+is characterized by its transition function <span class="arithmatex">\(Q\)</span>, its Markov operator
+<span class="arithmatex">\(T:B\left(Z,\mathcal{Z}\right)\to B\left(Z,\mathcal{Z}\right)\)</span> and its
+adjoint operator <span class="arithmatex">\(T^{\star}:\Lambda\left(Z,\mathcal{Z}\right)\to\Lambda\left(Z,\mathcal{Z}\right)\)</span>.
+We also define the inner product <span class="arithmatex">\(\left\langle f,\lambda\right\rangle =\int f\left(z\right)d\lambda\)</span>.</p>
+<p>We first expand on the Feller property through the following proposition:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 3.5</p>
+<p>The following three statements are equivalent:</p>
+<ol>
+<li>(Feller property) If <span class="arithmatex">\(f\in C\left(Z\right)\)</span> then <span class="arithmatex">\(Tf\in C\left(Z\right)\)</span>.</li>
+<li>If <span class="arithmatex">\(z_{n}\to z\)</span> then <span class="arithmatex">\(Q\left(z_{n},\cdot\right)\to Q\left(z,\cdot\right)\)</span>
+    (that is for all <span class="arithmatex">\(A\in\mathcal{Z}\)</span>).</li>
+<li>If <span class="arithmatex">\(\lambda_{n}\to\lambda\)</span> then <span class="arithmatex">\(T^{\star}\lambda_{n}\to T^{\star}\lambda\)</span></li>
+</ol>
+</div>
+<p>Then preserving continuity in conditional expected values (<span class="arithmatex">\(Tf\)</span> is
+a conditional expected value) has equivalent statements in terms of
+the conditional distributions <span class="arithmatex">\(\left(Q\left(z_{n},\cdot\right)\right)\)</span>
+and unconditional distributions <span class="arithmatex">\(\left(T^{\star}\lambda_{n}\right)\)</span>.
+It turns out that continuity is enough to guarantee that an invariant
+distribution exists.
+<a id="ref-thm-feller-invariant-distribution" class="course-anchor"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 3.4</p>
+<p>If <span class="arithmatex">\(Z\subseteq\mathbb{R}^{l}\)</span>
+is compact and <span class="arithmatex">\(Q\)</span> satisfies the Feller property then an invariant
+distribution exists. That is, there is <span class="arithmatex">\(\lambda^{\star}\in\Lambda\left(Z,\mathcal{Z}\right)\)</span>
+such that <span class="arithmatex">\(\lambda^{\star}=T^{\star}\lambda^{\star}\)</span>.</p>
+</div>
+<p>Yet, continuity is not enough to rule out the existence of many invariant
+distributions or of cycling sets. Monotonicity is needed for this.
+As before it is first useful to take a detour on what monotonicity
+(as in <a href="#ref-def-000020monotonicity-000020markov-000020">Definition 3.4</a>)
+implies for distribution functions. We then have to impose an ordering
+of distribution functions to be able to talk about monotonicity.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.18: First Order Stochastic Dominance</p>
+<p>A distribution <span class="arithmatex">\(\mu\)</span>
+(first order stochastically) dominates <span class="arithmatex">\(\lambda\left(\mu\geq\lambda\right)\)</span>
+if <span class="arithmatex">\(\int f\left(z\right)d\mu\geq\int f\left(z\right)d\lambda\)</span> for
+all increasing, bounded and measurable function <span class="arithmatex">\(f\)</span>.</p>
+</div>
+<p>In what follows we call a sequence <span class="arithmatex">\(\left\lbrace  \lambda_{n}\right\rbrace\)</span>
+monotone if <span class="arithmatex">\(\lambda_{n+1}\geq\lambda_{n}\)</span> for all <span class="arithmatex">\(n\)</span>, or if <span class="arithmatex">\(\lambda_{n+1}\leq\lambda_{n}\)</span>
+for all <span class="arithmatex">\(n\)</span>. We can now establish the following result:
+<a id="ref-prop-monotonicity-markov" class="course-anchor"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 3.6</p>
+<p>The following three statements are
+equivalent:</p>
+<ol>
+<li>(Monotone property) If <span class="arithmatex">\(f\in B\left(Z,\mathcal{Z}\right)\)</span> is weakly
+    increasing then <span class="arithmatex">\(Tf\)</span> is also weakly increasing.</li>
+<li>Let <span class="arithmatex">\(\lambda,\mu\in\Lambda\left(Z,\mathcal{Z}\right)\)</span>. If <span class="arithmatex">\(\mu\geq\lambda\)</span>
+    then <span class="arithmatex">\(T^{\star}\mu\geq T^{\star}\lambda\)</span>.</li>
+<li>If <span class="arithmatex">\(z\geq z^{\prime}\)</span> then <span class="arithmatex">\(Q\left(z,\cdot\right)\geq Q\left(z^{\prime},\cdot\right)\)</span>
+    (in the stochastic dominance sense)</li>
+</ol>
+</div>
+<p>The last statement is particularly useful because it translates monotonicity
+of the Markov operator directly into monotonicity of the transition
+function ("better" states lead to "better" distributions).</p>
+<p>Now we introduce the final condition needed for the main result of
+this section. It is a mixing condition akin to that in Theorems <a href="#ref-thm-000020markov-000020chains-0000202">Theorem 3.2</a>
+and <a href="#ref-thm-000020markov-000020chains-0000203">Theorem 3.3</a>, along with a restriction
+on the form of the set <span class="arithmatex">\(Z\)</span>. To see why it is necessary to go SLP
+exercises 12.12 and 12.13.</p>
+<div class="admonition assumption">
+<p class="admonition-title">Assumption: Mixing Property</p>
+<p>The set <span class="arithmatex">\(Z=\left[a,b\right]\)</span> is a closed
+and bounded rectangle in <span class="arithmatex">\(\mathbb{R}^{l}\)</span> characterized by <span class="arithmatex">\(a\)</span> and
+<span class="arithmatex">\(b\)</span>,</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A set <span class="arithmatex">\(Z\subseteq\mathbb{R}^{l}\)</span> is a closed and bounded rectangle if there are two vectors <span class="arithmatex">\(a,b\in\mathbb{R}^{l}\)</span> such that <span class="arithmatex">\(a\leq b\)</span> and <span class="arithmatex">\(Z=\left[a_{1},b_{1}\right]\times\ldots\times\left[a_{l},b_{l}\right]\)</span>.</p>
+</div>
+<p>and there exists <span class="arithmatex">\(c\in Z\)</span>, <span class="arithmatex">\(\epsilon&gt;0\)</span> and <span class="arithmatex">\(N\geq1\)</span> such that:</p>
+<div class="arithmatex">\[
+Q^{N}\left(a,\left[c,b\right]\right)\geq\epsilon\qquad Q^{N}\left(b,\left[a,c\right]\right)\geq\epsilon
+\]</div>
+</div>
+<p>Under this assumption it is possible to reach the "upper" region
+of the rectangle, <span class="arithmatex">\(\left[c,b\right]\)</span>, in finite time starting from
+the "lower" corner <span class="arithmatex">\(\left(a\right)\)</span>, and it is possible to reach
+the "lower" region of the rectangle, <span class="arithmatex">\(\left[a,c\right]\)</span>, in finite
+time starting from the "upper" corner <span class="arithmatex">\(\left(b\right)\)</span>. It is
+possible to show that if one can move through the set from the corners
+it is possible to do it from anywhere (under a monotonicity assumption).</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 3.7</p>
+<p>Let <span class="arithmatex">\(Q\)</span> satisfy monotonicity and the previous assumption for some
+tuple <span class="arithmatex">\(\left(c,\epsilon,N\right)\)</span>, then:</p>
+<div class="arithmatex">\[
+Q^{N}\left(z,\left[c,b\right]\right)\geq\epsilon\qquad Q^{N}\left(z,\left[a,c\right]\right)\geq\epsilon\qquad\text{for all z\in Z}
+\]</div>
+</div>
+<p>Finally we establish the convergence result.
+<a id="ref-thm-monotone-invariant-distribution" class="course-anchor"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 3.5</p>
+<p>Let <span class="arithmatex">\(Z=\left[a,b\right]\in\mathbb{R}^{l}\)</span>
+be a rectangle. If <span class="arithmatex">\(Q\)</span> is monotone and satisfies the Feller property
+and the mixing property, then <span class="arithmatex">\(Q\)</span> has a unique invariant distribution
+<span class="arithmatex">\(\lambda^{\star}\)</span> and <span class="arithmatex">\(T^{\star n}\lambda_{0}\to\lambda^{\star}\)</span>
+for all <span class="arithmatex">\(\lambda_{0}\in\Lambda\left(Z,\mathcal{Z}\right)\)</span>.</p>
+</div>
+<p>This completes the tools we need to tackle stochastic dynamic programming
+problems. In that note, it is interesting to note the similarities
+between <a href="#ref-thm-monotone-invariant-distribution">Theorem 3.5</a> and the
+contraction mapping theorem and Blackwell's conditions used below
+to establish a unique solution for Bellman equations and the convergence
+to that solution from any starting point by iteratively applying the
+Bellman operator(see <a href="../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.html#ref-sec-contraction-mapping-theorem">Contraction Mapping Theorem</a>).
+While <a href="#ref-thm-monotone-invariant-distribution">Theorem 3.5</a> does not
+establish a sense of distance (inherent in complete metric spaces)
+it does provide a very similar answer to the question of the existence
+and uniqueness of a fixed point characterizing the solution to a functional
+equation.</p>
+<p>The stationary distribution of a Markov process solves the functional
+equation:</p>
+<div class="arithmatex">\[
+\lambda=T^{\star}\lambda.
+\]</div>
+<p>The result in the theorem is a set of sufficient conditions for there
+to be a unique solution, <span class="arithmatex">\(\lambda^{\star}\)</span>. These conditions have
+the Markov operator <span class="arithmatex">\(T\)</span> preserve the continuity and boundedness of
+functions (recalling that the space of continuous and bounded functions
+is a complete metric space) and monotonicity (as in Blackwell's first
+sufficient condition for a contraction). Moreover, the Theorem establishes
+the converges to <span class="arithmatex">\(\lambda^{\star}\)</span> from any initial distribution
+<span class="arithmatex">\(\lambda_{0}\)</span> by iteratively applying the adjoint Markov operator
+(as implied by the contraction mapping theorem for the Bellman operator).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="section-02-aggregation-complete-markets-preferences-and-technology.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Aggregation: Complete Markets, Preferences, and Technology">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Aggregation: Complete Markets, Preferences, and Technology
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../part-02-dynamic-programming/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Sergio Ocampo Díaz · Western University
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

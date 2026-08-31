@@ -1,0 +1,2622 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Searchable course website generated from Ocampo-Macro_Notes.tex">
+      
+      
+      
+        <link rel="canonical" href="https://ocamp020.github.io/PhD_Macro/notes/part-07-stochastic-calculus/section-28-dynamic-programming.html">
+      
+      
+        <link rel="prev" href="section-27-ito-s-lemma.html">
+      
+      
+        <link rel="next" href="section-29-the-kolmogorov-forward-equation.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Dynamic Programming - EC9604 Advanced Macroeconomics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dynamic-programming" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-header__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EC9604 Advanced Macroeconomics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dynamic Programming
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-nav__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EC9604 Advanced Macroeconomics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-01-preliminaries/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preliminaries
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Preliminaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-01-macroeconomic-variables-and-distributions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macroeconomic Variables and Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-02-aggregation-complete-markets-preferences-and-technology.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation: Complete Markets, Preferences, and Technology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-03-markov-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markov Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-02-dynamic-programming/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dynamic Programming
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-05-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Recursive Competitive Equilibrium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-03-heterogeneous-agent-models/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heterogeneous Agent Models
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Heterogeneous Agent Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-07-the-income-fluctuations-model-and-precautionary-savings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Income Fluctuations Model and Precautionary Savings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-08-an-endowment-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    An Endowment Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-09-a-production-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-10-a-production-economy-with-aggregate-risk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy with Aggregate Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-04-firm-heterogeneity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firm Heterogeneity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Firm Heterogeneity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-11-span-of-control.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Span of Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-12-market-power.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Market Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-13-monopolistic-competition.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monopolistic Competition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-14-variable-markups.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variable Markups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-15-aggregation-and-misallocation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation and Misallocation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-05-input-output-networks-and-economic-activity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks and Economic Activity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input-Output Networks and Economic Activity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-16-a-domar-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Domar Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-17-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-18-examples-of-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples of Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-19-hulten-s-theorem-for-efficient-economies.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hulten's Theorem for Efficient Economies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-20-beyond-hulten-second-order-effects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Second order effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-21-beyond-hulten-distortions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Distortions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-06-random-variables-and-probability/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Variables and Probability
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Random Variables and Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-22-measure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-23-measurable-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measurable functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-24-the-lebesgue-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Lebesgue integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-25-the-stieltjes-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Stieltjes integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Calculus
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Calculus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-26-stochastic-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-27-ito-s-lemma.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ito's Lemma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="section-28-dynamic-programming.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#discrete-time-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discrete time overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Discrete time overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-programming_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Programming
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimal-stopping-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimal Stopping Time
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-time-dynamic-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Continuous time dynamic programming
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuous time dynamic programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimal-stopping-time-and-the-smooth-pasting-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimal Stopping Time and the Smooth Pasting Condition
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-29-the-kolmogorov-forward-equation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Kolmogorov Forward Equation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-30-application-real-options.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Real Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-31-application-menu-cost-stokey-2009-ch-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Menu cost Stokey (2009, Ch. 7)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#discrete-time-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discrete time overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Discrete time overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-programming_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Programming
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimal-stopping-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimal Stopping Time
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-time-dynamic-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Continuous time dynamic programming
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuous time dynamic programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimal-stopping-time-and-the-smooth-pasting-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimal Stopping Time and the Smooth Pasting Condition
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div class="section-meta">
+  <a href="index.html">Part 7: Stochastic Calculus</a>
+  <span>Section 28</span>
+</div>
+
+<h1 id="dynamic-programming">Dynamic Programming<a class="headerlink" href="#dynamic-programming" title="Permanent link">&para;</a></h1>
+<p>In dynamic programming we aim to develop tools for solving problems
+that involve actions through time, that in turn affect the total value
+obtained by the agent takin the decisions. The key of dynamic programming
+is that it focuses on the current decision being taken and its effect
+on the continuation value for the agent, rather than try to solve
+for the whole sequence of actions at once.</p>
+<h2 id="discrete-time-overview">Discrete time overview<a class="headerlink" href="#discrete-time-overview" title="Permanent link">&para;</a></h2>
+<h3 id="dynamic-programming_1">Dynamic Programming<a class="headerlink" href="#dynamic-programming_1" title="Permanent link">&para;</a></h3>
+<p>To build up to the concepts of dynamic programming in continuous time
+we will first consider a simple discrete time problem of a firm that
+must invest a fixed amount <span class="arithmatex">\(I\)</span> to set up the operation of the firm.
+Once the firm is operational the firm produces one unit of good every
+period.The current price of the good is known and given by <span class="arithmatex">\(p_{0}\)</span>,
+in the second period the price can go up or down:</p>
+<div class="arithmatex">\[
+p_{1}=\begin{cases}
+\left(1+u\right)p_{0} &amp; \text{ with prob. }q\\
+\left(1-d\right)p_{0} &amp; \text{ with prob. }1-q
+\end{cases}
+\]</div>
+<p>After that the price is constant. Hence, the firm's decision is whether
+to invest in the first period, in the second, or not to invest at
+all. It makes no sense to wait any longer because no new information
+will arrive after the initial change in price. The firm discounts
+future payments with an interest rate <span class="arithmatex">\(r\)</span>.</p>
+<p>We can solve the problem by tracing the decisions that the firm can
+take. In the second period, once the price is known and assuming that
+the firm is not yet in operation, the firm can either invest or not.
+If the firm does not invest it gets zero payoff, if it invests it
+gets:</p>
+<div class="arithmatex">\[
+F_{1}\left(p_{1}\right)=p_{1}+\frac{p_{1}}{1+r}+\frac{p_{1}}{\left(1+r\right)^{2}}=p_{1}\sum_{i=0}^{\infty}\frac{1}{\left(1+r\right)^{i}}=\frac{1+r}{r}p_{1}
+\]</div>
+<p>The payoff of the firm is then:</p>
+<div class="arithmatex">\[
+V_{1}\left(p_{1}\right)=\max\left\lbrace  F_{1}\left(p_{1}\right)-0,0\right\rbrace
+\]</div>
+<p>Knowing this is relevant because if the firm does not invest in the
+first period it can always do so later, so <span class="arithmatex">\(V_{1}\)</span> constitutes the
+continuation payoff of the firm. The payoff to the firm if it does
+not invest in the first period is then:</p>
+<div class="arithmatex">\[
+\frac{1}{1+r}E\left[V_{1}\left(p_{1}\right)\right]=\frac{1}{1+r}\left(qV_{1}\left(\left(1+u\right)p_{0}\right)+\left(1-q\right)V_{1}\left(\left(1-d\right)p_{0}\right)\right)
+\]</div>
+<p>If the firm invests in the first period the payoff is:</p>
+<div class="arithmatex">\[\begin{align*}
+F_{0}\left(p_{0}\right) &amp; =p_{0}+\frac{1}{1+r}E\left[F_{1}\left(p_{1}\right)\right]\\
+&amp; =p_{0}+\frac{1}{1+r}\left(qF_{1}\left(\left(1+u\right)p_{0}\right)+\left(1-q\right)F_{1}\left(\left(1-d\right)p_{0}\right)\right)\\
+&amp; =p_{0}+\left(\frac{q}{r}\left(1+u\right)p_{0}+\frac{1-q}{r}\left(1-d\right)p_{0}\right)\\
+&amp; =\frac{1}{r}\left(1+r+q\left(u+d\right)-d\right)p_{0}
+\end{align*}\]</div>
+<p>So, the value of the firm is:</p>
+<div class="arithmatex">\[
+V_{0}\left(p_{0}\right)=\max\left\lbrace  F_{0}\left(p_{0}\right)-I,\frac{1}{1+r}E\left[V_{1}\left(p_{1}\right)\right]\right\rbrace
+\]</div>
+<p>In this example we already see the basics of dynamics programming,
+splitting the problem into the decision at hand (invest or not invest)
+and the continuation value that they entail. The example also highlights
+one of the recurring topics of the course: option value. The firm
+has an option that allows it to invest any of the two dates. Waiting
+in this problem has value, because investing in the future also means
+to invest with better information. In fact we can compute the value
+of this option (to wait) by comparing the value that the firm would
+have if it was forced to take a decision in the first period:</p>
+<div class="arithmatex">\[
+\Omega_{0}\left(p_{0}\right)=\max\left\lbrace  F_{0}\left(p_{0}\right)-I,0\right\rbrace
+\]</div>
+<p>with the value that includes the possibility of action in the second
+period:</p>
+<div class="arithmatex">\[
+V_{0}\left(p_{0}\right)-\Omega_{0}\left(p_{0}\right)
+\]</div>
+<p>We can now extend this simple model to allow for action in many periods
+(more than two). Consider a firm that operates for <span class="arithmatex">\(T&lt;\infty\)</span> periods.
+In each period the firm will choose the value of a control variable
+<span class="arithmatex">\(u\)</span> that affects (potentially) the per-period payoffs of the firm,
+namely the profits, and the evolution of a random variable <span class="arithmatex">\(x\)</span>. <span class="arithmatex">\(x\)</span>
+is assumed to follow a Markov process so that the CDF of <span class="arithmatex">\(x_{t+1}\)</span>
+is <span class="arithmatex">\(\Phi_{t}\left(x_{t+1}|x_{t},u_{t}\right)\)</span>. The random variable
+<span class="arithmatex">\(x\)</span> is also allowed to affect payoffs, so per-period payoffs are:
+<span class="arithmatex">\(\pi\left(u_{t},x_{t}\right)\)</span>.</p>
+<p>The firm discounts the future at rate <span class="arithmatex">\(\frac{1}{1+\rho}\)</span> and receives
+a final payoff pf <span class="arithmatex">\(\Omega_{T}\left(x_{T}\right)\)</span> in the last period.
+The objective is:</p>
+<div class="arithmatex">\[\begin{equation}
+V_{0}\left(x_{0}\right)=\max_{\left\lbrace  u_{t}\right\rbrace _{t=0}^{T-1}}E\left[\sum_{t=0}^{T-1}\left(\frac{1}{1+\rho}\right)^{t}\pi\left(u_{t},x_{t}\right)+\left(\frac{1}{1+\rho}\right)^{T}\Omega_{T}\left(x_{T}\right)\right] \tag{28.1}
+\end{equation}\]</div>
+<p>dynamic programming allows us to write the problem recursively. In
+the last period we have:</p>
+<div class="arithmatex">\[\begin{equation}
+V_{T-1}\left(x_{T-1}\right)=\max_{u_{T-1}}\pi\left(u_{T-1},x_{T-1}\right)+\left(\frac{1}{1+\rho}\right)E\left[\Omega_{T}\left(x_{T}\right)|x_{T-1},u_{T-1}\right] \tag{28.2}
+\end{equation}\]</div>
+<p>For all other periods we can use the notion of continuation payoffs
+to obtain:</p>
+<div class="arithmatex">\[\begin{equation}
+V_{t}\left(x_{t}\right)=\max_{u_{t}}\pi\left(u_{t},x_{t}\right)+\left(\frac{1}{1+\rho}\right)E\left[V_{t+1}\left(x_{t+1}\right)|x_{t},u_{t}\right] \tag{28.3}
+\end{equation}\]</div>
+<p>The problem can then be solved by backwards induction, choosing contingent
+plans for <span class="arithmatex">\(u_{t}\left(x_{t}\right)\)</span> one period at a time, instead
+of tackling the more complicated problem of choosing the whole sequence
+of <span class="arithmatex">\(\left\lbrace  u_{t}\right\rbrace\)</span>.</p>
+<p>When time is not finite, there is no terminal date, and we cannot
+use backwards induction to solve the problem. In this case the value
+of the firm itself is also independent of time, because each period
+is just like the next. We then have:</p>
+<div class="arithmatex">\[\begin{equation}
+V\left(x\right)=\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{\prime}\right)|x,u\right] \tag{28.4}
+\end{equation}\]</div>
+<p>the problem is now to find a function <span class="arithmatex">\(V\)</span> that satisfies the equation
+above. The details behind the solution to this problem can be found
+in <a href="https://books.google.com/books?id=tWYo0QolyLAC">Stokey et al. (1989)</a>.</p>
+<p>This setup is very versatile and can be applied to firm problems as
+the one above, but it is also at the core of modern macroeconomic
+theory. The following examples make this point in a non-stochastic
+version of the model.</p>
+<div class="admonition example">
+<p class="admonition-title">Example 28.1</p>
+<p>Consider an economy in which the representative consumer lives forever.
+There is a good in each period that can be consumed or saved as capital
+as well as labor. The consumer' s utility function is</p>
+<div class="arithmatex">\[
+V\left(\overline{k}_{0}\right)=\sum_{t=0}^{\infty}\beta^{t}\log c_{t}
+\]</div>
+<p>Here <span class="arithmatex">\(0&lt;\beta&lt;1\)</span>. The consumer is endowed with 1 unit of labor in
+each period and with <span class="arithmatex">\(\overline{k}_{0}\)</span> units of capital in period
+0. Capital fully depreciates each period. Feasible allocations satisfy</p>
+<div class="arithmatex">\[
+c_{t}+k_{t+1}\leq\theta k_{t}^{\alpha}l_{t}^{1-\alpha}
+\]</div>
+<p>Here <span class="arithmatex">\(\theta&gt;0\)</span> and <span class="arithmatex">\(0&lt;\alpha&lt;1.\)</span> We can formulate the problem
+of maximizing the representative consumer' s utility
+subject to feasibility conditions as a dynamic programming problem.
+The appropriate Bellman' s equation is:</p>
+<div class="arithmatex">\[\begin{align*}
+V\left(k\right) &amp; =\max_{c,k^{\prime},l}\left\lbrace  \log c+\beta V\left(k^{\prime}\right)\right\rbrace \\
+s.t.   &amp; c+k^{\prime}\leq\theta k^{\alpha}l^{1-\alpha}\\
+&amp; c,k^{\prime}\geq0\\
+&amp; 0\leq l\leq1
+\end{align*}\]</div>
+<p>To solve it we guess that the value function has the form <span class="arithmatex">\(a_{0}+a_{1}\log k\)</span>
+and solve for the decisions of the consumer. The constraint will hold
+with equality because the utility function is strictly increasing
+in consumption, also production increases with labor and there is
+no disutility of it, hence there is a corner solution for labor indicating
+<span class="arithmatex">\(l=1\)</span>, so with the guess the problem becomes</p>
+<div class="arithmatex">\[
+a_{0}+a_{1}\log k=\max_{k^{\prime}\in\left[0,\theta k^{\alpha}l^{1-\alpha}\right]}\log\left(\theta k^{\alpha}l^{1-\alpha}-k^{\prime}\right)+\beta\left(a_{0}+a_{1}\log k^{\prime}\right)
+\]</div>
+<p>Then the FOC is</p>
+<div class="arithmatex">\[
+\frac{1}{\theta k^{\alpha}l^{1-\alpha}-k^{\prime}}=\frac{\beta a_{1}}{k^{\prime}}
+\]</div>
+<p>solving for <span class="arithmatex">\(k^{\prime}\)</span></p>
+<div class="arithmatex">\[\begin{align*}
+k^{\prime} &amp; =\beta a_{1}\left(\theta k^{\alpha}l^{1-\alpha}-k^{\prime}\right)\\
+&amp; =\frac{\beta a_{1}\left(\theta k^{\alpha}l^{1-\alpha}\right)}{1+\beta a_{1}}
+\end{align*}\]</div>
+<p>Then plugging this back into the value function you get</p>
+<div class="arithmatex">\[
+a_{0}+a_{1}\log k=\log\left(\theta k^{\alpha}l^{1-\alpha}-\frac{\beta a_{1}\left(\theta k^{\alpha}l^{1-\alpha}\right)}{1+\beta a_{1}}\right)+\beta\left(a_{0}+a_{1}\log\left(\frac{\beta a_{1}\left(\theta k^{\alpha}l^{1-\alpha}\right)}{1+\beta a_{1}}\right)\right)
+\]</div>
+<p>Collection terms with <span class="arithmatex">\(k\)</span> you get</p>
+<div class="arithmatex">\[\begin{align*}
+a_{1}\log k &amp; =\alpha\log k+\beta a_{1}\alpha\log k\\
+a_{1}\left(\log k-\beta\alpha\log k\right) &amp; =\alpha\log k\\
+a_{1} &amp; =\frac{\alpha}{1-\beta\alpha}
+\end{align*}\]</div>
+<p>which means the policy function is</p>
+<div class="arithmatex">\[\begin{align*}
+k^{\prime} &amp; =\frac{\beta\frac{\alpha}{1-\beta\alpha}\left(\theta k^{\alpha}l^{1-\alpha}\right)}{1+\beta\frac{\alpha}{1-\beta\alpha}}=\beta\alpha\theta k^{\alpha}l^{1-\alpha}\\
+l &amp; =1\\
+c &amp; =\theta k^{\alpha}l^{1-\alpha}-\beta\alpha\theta k^{\alpha}l^{1-\alpha}
+\end{align*}\]</div>
+</div>
+<p><a id="ref-subsec-optimal-stopping-time" class="course-anchor"></a></p>
+<h3 id="optimal-stopping-time">Optimal Stopping Time<a class="headerlink" href="#optimal-stopping-time" title="Permanent link">&para;</a></h3>
+<p>There is another type of problem that deserves special treatment.
+Optimal stopping time problems are at the core of the continuous time
+applications in the rest of the course. In these problems the agent
+faces a binary choice (instead of a continuous choice as in the example
+above), they resemble the example of the firm at the beginning of
+the Section where the firm has to choose whether or not to invest.
+This problems are characterized by the inaction of the agent, because
+the agent usually acts just once, and most of the time the optimal
+choice is to do nothing. To characterize these problems let <span class="arithmatex">\(\Omega\left(x\right)\)</span>
+be the termination payoff received once the action is taken (and time
+is stopped). It depends on the value of state <span class="arithmatex">\(x\)</span>. The Bellman equation
+is now:
+<a id="ref-eq-000020bellman-000020for-000020stopping-000020time-000020in-000020discrete-000020time" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+V\left(x\right)=\max\left\lbrace  \Omega\left(x\right),\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{\prime}\right)|x,u\right]\right\rbrace \tag{28.5}
+\end{equation}\]</div>
+<p>We can now define a stopping time as a random variable that signals
+the decision to stop and take the termination payoff <span class="arithmatex">\(\Omega\left(x\right)\)</span>.
+So:</p>
+<div class="arithmatex">\[\begin{equation}
+T^{\star}=\left\lbrace  x|\Omega\left(x\right)\geq\max_{u}\pi\left(u,x\right)+\left(\frac{1}{1+\rho}\right)E\left[V\left(x^{\prime}\right)|x,u\right]\right\rbrace \tag{28.6}
+\end{equation}\]</div>
+<p>In general <span class="arithmatex">\(T^{\star}\)</span> can take many forms, but in most (if not all)
+of the relevant economic applications it will take the form: <span class="arithmatex">\(T^{\star}=\left[\overline{x},\infty\right)\)</span>,
+<span class="arithmatex">\(T^{\star}=\left(-\infty,\underline{x}\right]\)</span> or <span class="arithmatex">\(T^{\star}=\left(-\infty,\underline{x}\right]\cup\left[\overline{x},\infty\right)\)</span>.
+As an example we apply these ideas to the problem of search and unemployment,
+the McCall search model.</p>
+<div class="admonition example">
+<p class="admonition-title">Example 28.2</p>
+<p>Consider the following infinite horizon model. An agent searches for
+a job. Each period the agent receives a wage offer from a distribution
+<span class="arithmatex">\(F\left(w\right)\)</span> with bounded support <span class="arithmatex">\(W=\left[0,\overline{W}\right]\)</span>.
+If accepted the agent will remain employed at that wage forever. If
+rejected the worker receives unemployment benefits <span class="arithmatex">\(b\)</span>. Wage offers
+are iid over time. The worker preferences are <span class="arithmatex">\(\sum\beta^{t}c_{t}\)</span>.
+Assume no borrowing or lending.</p>
+<p>We first set up the workers decision as a dynamic programming problem:</p>
+<div class="arithmatex">\[\begin{align*}
+V^{E}\left(w\right) &amp; =\frac{w}{1-\beta}\\
+V^{U} &amp; =b+\beta\int\max\left\lbrace  V^{E}\left(\tilde{w}\right),V^{U}\right\rbrace dF\left(\tilde{w}\right)
+\end{align*}\]</div>
+<p>The decision of a worker when facing a wage offer <span class="arithmatex">\(w\)</span> is to accept
+it or reject it, the worker will accept if <span class="arithmatex">\(V^{E}\left(w\right)&gt;V^{u}\)</span>
+and reject otherwise. Then the value of the worker is:</p>
+<div class="arithmatex">\[\begin{align*}
+V\left(w\right) &amp; =\max\left[V^{E}\left(w\right),V^{U}\right]\\
+V\left(w\right) &amp; =\max\left[\frac{w}{1-\beta},b+\beta\int V\left(\tilde{w}\right)dF\left(\tilde{w}\right)\right]
+\end{align*}\]</div>
+<p>Now we need to show that the decision to take action (accept a job
+offer) is given by <span class="arithmatex">\(T^{\star}=\left[\overline{w},\infty\right)\)</span>,
+where <span class="arithmatex">\(\overline{w}\)</span> is the reservation wage. To show this, note
+that <span class="arithmatex">\(V^{U}\)</span> is independent of the wage and that <span class="arithmatex">\(V^{E}\)</span> is increasing
+in wages. The reservation wage satisfies:</p>
+<div class="arithmatex">\[
+\frac{\overline{w}}{1-\beta}=b+\beta\int V\left(\tilde{w}\right)dF\left(\tilde{w}\right)
+\]</div>
+<p>This implies that <span class="arithmatex">\(V\)</span> is constant for <span class="arithmatex">\(w&lt;\overline{w}\)</span>, because
+the offers are rejected, and it is equal to <span class="arithmatex">\(V^{E}\)</span> for <span class="arithmatex">\(w\geq\overline{w}\)</span>:</p>
+<div class="arithmatex">\[
+V\left(w\right)=\begin{cases}
+\frac{\overline{w}}{1-\beta} &amp; \text{if }w&lt;\overline{w}\\
+\frac{w}{1-\beta} &amp; \text{if }w\geq\overline{w}
+\end{cases}
+\]</div>
+<p>It is left to find <span class="arithmatex">\(\overline{w}\)</span>. To do this we should first solve
+for <span class="arithmatex">\(V^{U}\)</span>:</p>
+<div class="arithmatex">\[\begin{align*}
+V^{U} &amp; =b+\beta\int\max\left\lbrace  V^{E}\left(\tilde{w}\right),V^{U}\right\rbrace dF\left(\tilde{w}\right)\\
+&amp; =b+\beta\int_{0}^{\overline{w}}\frac{\overline{w}}{1-\beta}dF\left(\tilde{w}\right)+\beta\int_{\overline{w}}^{\overline{W}}\frac{\tilde{w}}{1-\beta}dF\left(\tilde{w}\right)\\
+&amp; =b+\frac{\beta}{1-\beta}\left(\int_{0}^{\overline{w}}\overline{w}dF\left(\tilde{w}\right)+\int_{\overline{w}}^{\overline{W}}\tilde{w}dF\left(\tilde{w}\right)\right)\\
+&amp; =b+\frac{\beta}{1-\beta}\left(\overline{w}-\int_{\overline{w}}^{\overline{W}}\overline{w}dF\left(\tilde{w}\right)+\int_{\overline{w}}^{\overline{W}}\tilde{w}dF\left(\tilde{w}\right)\right)\\
+&amp; =b+\frac{\beta}{1-\beta}\left(\overline{w}+\int_{\overline{w}}^{\overline{W}}\left(\tilde{w}-\overline{w}\right)dF\left(\tilde{w}\right)\right)
+\end{align*}\]</div>
+<p>The agent knows she is guaranteed to have <span class="arithmatex">\(\overline{w}\)</span> forever,
+finding a job just adds to the value with the wage in excess of <span class="arithmatex">\(\overline{w}\)</span>.</p>
+<p>Turning back to determining <span class="arithmatex">\(\overline{w}\)</span> we can replace <span class="arithmatex">\(V^{U}\)</span>
+to get:</p>
+<div class="arithmatex">\[
+\overline{w}=b+\frac{\beta}{1-\beta}\int_{\overline{w}}^{\overline{W}}\left(\tilde{w}-\overline{w}\right)dF\left(\tilde{w}\right)
+\]</div>
+<p>This equation is guaranteed to have a solution for <span class="arithmatex">\(\overline{w}\in\left[c,\overline{W}\right]\)</span>.
+The LHS is increasing in <span class="arithmatex">\(\overline{w}\)</span>, while the RHS is decreasing
+in <span class="arithmatex">\(\overline{w}\)</span>.</p>
+</div>
+<h2 id="continuous-time-dynamic-programming">Continuous time dynamic programming<a class="headerlink" href="#continuous-time-dynamic-programming" title="Permanent link">&para;</a></h2>
+<p>We can now turn to develop a general framework to solve dynamic problems
+in continuous time. To start consider the problem developed in the
+previous section with periods of length <span class="arithmatex">\(\Delta t\)</span>. The agent receives
+a payoff <span class="arithmatex">\(\pi\left(u,x\right)\Delta t\)</span> every period (where <span class="arithmatex">\(\pi\)</span>
+is the payoff flow), and discounts the future at a rate <span class="arithmatex">\(\rho\)</span> per
+unit of time, so the effective discount rate for the period of length
+<span class="arithmatex">\(\Delta t\)</span> is: <span class="arithmatex">\(\frac{1}{1-\rho\Delta t}\)</span>. This leads to the following
+Bellman-type equation</p>
+<div class="arithmatex">\[\begin{equation}
+V\left(x\right)=\max_{u}\pi\left(u,x\right)\Delta t+\left(\frac{1}{1+\rho\Delta t}\right)E\left[V\left(x^{\prime}\right)|x,u\right] \tag{28.7}
+\end{equation}\]</div>
+<p>Rearranging we get:</p>
+<div class="arithmatex">\[\begin{equation}
+\rho V\left(x\right)=\max_{u}\left(1+\rho\Delta t\right)\pi\left(u,x\right)+\frac{E\left[\left(V\left(x^{\prime}\right)-V\left(x\right)\right)|x,u\right]}{\Delta t} \tag{28.8}
+\end{equation}\]</div>
+<p>Taking the limit as <span class="arithmatex">\(\Delta t\to0\)</span> we get our continuous time Bellman
+equation:
+<a id="ref-eq-000020continuous-000020time-000020bellman" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+\rho V\left(x\right)=\max_{u}\pi\left(u,x\right)+\frac{1}{dt}E\left[dV\left(x\right)|x,u\right]\tag{28.9}
+\end{equation}\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+\frac{E\left[dV\right]}{dt}=\lim_{\Delta t\to0}\frac{1}{\Delta t}E\left[\Delta V\right]
+\]</div>
+<p><a href="#ref-eq-000020continuous-000020time-000020bellman">Equation (28.9)</a> works
+just like a non-arbitrage condition. We can thing of the agent as
+holding an asset with value <span class="arithmatex">\(V\)</span>. The LHS gives the normal rate of
+return per unit time that the agent requires to hold the asset, given
+the discount rate <span class="arithmatex">\(\rho\)</span>. The RHS gives the effective payoff of the
+asset, composed by the immediate flow payoff <span class="arithmatex">\(\pi\)</span>, and the expected
+capital gains (brought up by changes in the value of the asset).</p>
+<p>We can further characterize the problem given knowledge of the stochastic
+process that <span class="arithmatex">\(x\)</span> follows. This will allow us to evaluate the expectation
+in <a href="#ref-eq-000020continuous-000020time-000020bellman">(28.9)</a>. If <span class="arithmatex">\(x\)</span>
+follows an Ito process, as in <a href="section-26-stochastic-processes.html#ref-eq-000020def-000020ito-000020process">equation (26.1)</a>,
+then Ito's Lemma gives the following result:</p>
+<div class="arithmatex">\[\begin{align*}
+dV &amp; =\left(\mu\left(x,t\right)V^{\prime}+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{"}\right)dt+\sigma\left(x,t\right)V^{\prime}dW\\
+E\left[dV\right] &amp; =\left(\mu\left(x,t\right)V^{\prime}+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{"}\right)dt
+\end{align*}\]</div>
+<p>Replacing we get the Hamilton-Jacobi-Bellman equation:
+<a id="ref-eq-000020hjb" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+\rho V\left(x\right)=\max_{u}\pi\left(u,x\right)+\mu\left(x,t\right)V^{\prime}\left(x\right)+\frac{1}{2}\sigma^{2}\left(x,t\right)V^{"}\left(x\right)\tag{28.10}
+\end{equation}\]</div>
+<p>We can take FOC with respect to <span class="arithmatex">\(u\)</span> and then get a differential equation
+for <span class="arithmatex">\(V\)</span> that we can solve.</p>
+<p>If <span class="arithmatex">\(x\)</span> follows a Poisson process, like the one in <a href="section-26-stochastic-processes.html#ref-eq-000020poisson-000020process">equation (26.2)</a>,
+we can obtain a similar result. From <a href="section-27-ito-s-lemma.html#ref-eq-000020ito-s-000020lemma-000020for-000020poisson">equation (27.4)</a>
+we can compute <span class="arithmatex">\(E\left[dV\right]\)</span>:</p>
+<div class="arithmatex">\[
+E\left[dV\right]=\left(f\left(x,t\right)V^{\prime}\left(x\right)\right)dt+\lambda E_{u}\left[V\left(x+ug\left(x,t\right)\right)-V\left(x\right)\right]dt
+\]</div>
+<h3 id="optimal-stopping-time-and-the-smooth-pasting-condition">Optimal Stopping Time and the Smooth Pasting Condition<a class="headerlink" href="#optimal-stopping-time-and-the-smooth-pasting-condition" title="Permanent link">&para;</a></h3>
+<p>We now go back to the stopping time problem reviewed in <a href="#ref-subsec-optimal-stopping-time">Optimal Stopping Time</a>.
+Consider then the problem of an agent that is engaged in some activity
+(say running a firm). The agent gets a flow payoff of <span class="arithmatex">\(\pi\left(x\right)\)</span>
+if she continues with the activity, and <span class="arithmatex">\(\Omega\left(x,t\right)\)</span>
+if she quits the activity (stops). The value of the agent is:
+<a id="ref-eq-bellman-000020eq-000020stopping-000020time" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+V\left(x,t\right)=\max\left\lbrace  \Omega\left(x,t\right),\pi\left(x\right)\Delta t+\frac{1}{1+\rho\Delta t}E\left[V\left(x+dx,t+\Delta t\right)\right]\right\rbrace \tag{28.11}
+\end{equation}\]</div>
+<p>where <span class="arithmatex">\(x\)</span> follows a diffusion process and in <a href="section-26-stochastic-processes.html#ref-eq-000020def-000020ito-000020process">equation (26.1)</a>.
+We assume that <span class="arithmatex">\(\Omega\)</span> is continuous and weakly increasing in <span class="arithmatex">\(x\)</span>.</p>
+<p>In order to solve the problem we need to find regions of <span class="arithmatex">\(x\)</span> where
+it is best for the agent to continue and those for which it is best
+to stop. If <span class="arithmatex">\(x\)</span> is in the continuation region then:</p>
+<div class="arithmatex">\[
+V\left(x\right)=\pi\left(x\right)\Delta t+\frac{1}{1+\rho\Delta t}E\left[V\left(x^{\prime}\right)\right]
+\]</div>
+<p>From above we know that this implies that for <span class="arithmatex">\(x\)</span> in the continuation
+region we have (by applying Ito's lemma):</p>
+<div class="arithmatex">\[
+\rho V\left(x,t\right)=\pi\left(x\right)+V_{t}\left(x,t\right)+\mu\left(x,t\right)V_{x}\left(x,t\right)+\frac{1}{2}\sigma^{2}\left(x,t\right)V_{xx}\left(x,t\right)
+\]</div>
+<p>For simplicity we assume now that the continuation region has the
+form <span class="arithmatex">\(x\geq x^{\star}\left(t\right)\)</span>. It is only for <span class="arithmatex">\(x\geq x^{\star}\left(t\right)\)</span>
+that the equation above holds. In order to solve it we need to impose
+certain boundary conditions.</p>
+<p>By assumption we know that <span class="arithmatex">\(V\left(x\right)=\Omega\left(x,t\right)\)</span>
+for <span class="arithmatex">\(x&lt;x^{\star}\left(t\right)\)</span>, then, by continuity we can impose
+that:</p>
+<div class="arithmatex">\[
+V\left(x^{\star}\left(t\right),t\right)=\Omega\left(x^{\star}\left(t\right),t\right)
+\]</div>
+<p>this is called "value-matching". Continuity at <span class="arithmatex">\(x^{\star}\)</span> is
+actually necessary for a solution. Suppose for a contradiction that
+it is optimal to stop for <span class="arithmatex">\(x&lt;x^{\star}\left(t\right)\)</span>, but that <span class="arithmatex">\(V\left(x^{\star}\left(t\right),t\right)&lt;\Omega\left(x^{\star}\left(t\right),t\right)\)</span>,
+because <span class="arithmatex">\(V\)</span> has to be continuous in the domain <span class="arithmatex">\(x\geq x^{\star}\left(t\right)\)</span>
+(because it is the solution to a differential equation), and <span class="arithmatex">\(\Omega\)</span>
+is continuous by definition, then it holds that for <span class="arithmatex">\(x\)</span> to the right
+of <span class="arithmatex">\(x^{\star}\left(t\right)\)</span>, but sufficiently close to <span class="arithmatex">\(x^{\star}\left(t\right)\)</span>
+it also holds that <span class="arithmatex">\(V\left(x,t\right)&lt;\Omega\left(x,t\right)\)</span>, which
+contradicts <span class="arithmatex">\(x\geq x^{\star}\left(t\right)\)</span> being the continuation
+region. A similar argument applies for the other inequality.</p>
+<p>But this condition is not sufficient to solve the problem, because
+the value of <span class="arithmatex">\(x^{\star}\left(t\right)\)</span> is still unknown. The condition
+that allows us to solve the problem (of jointly finding <span class="arithmatex">\(V\)</span> and <span class="arithmatex">\(x^{\star}\)</span>)
+is to impose further smoothness to our value function, it must not
+only be continuous, but continuously differentiable. This condition
+is called "smooth pasting" and it requires the first derivative
+of the value function to be continuous, that is:</p>
+<div class="arithmatex">\[
+V_{x}\left(x^{\star}\left(t\right),t\right)=\Omega_{x}\left(x^{\star}\left(t\right),t\right)
+\]</div>
+<p>The reason behind the smooth pasting condition is not at all evident.
+I will illustrate it below, but I recommend checking Appendix C of
+Chapter 4 in <a href="http://www.jstor.org/stable/j.ctt7sncv">Dixit and Pindyck (1994)</a>, or <a href="http://www.jstor.org/stable/j.ctt7sfgq">Stokey (2009, Prop 6.4 pg 124)</a>.</p>
+<p>To see why the smooth pasting condition arise consider the following
+case built for a contradiction: the value matching condition holds,
+but the smooth pasting condition fails, hence <span class="arithmatex">\(V\)</span> and <span class="arithmatex">\(\Omega\)</span> must
+meet at a kink. There are two options:</p>
+<ol>
+<li>There is an upward kink (forming a concave function). If this is the
+    case then, by continuity, <span class="arithmatex">\(\Omega\)</span> would be higher than <span class="arithmatex">\(F\)</span> for
+    some value <span class="arithmatex">\(x&gt;x^{\star}\)</span>. Contradicting that the continuation region
+    starts at <span class="arithmatex">\(x^{\star}\)</span>.</li>
+<li>
+<p>There is a downward kink (forming a convex function). If this is the
+    case then <span class="arithmatex">\(x^{\star}\)</span> cannot be a point of indifference either. There
+    is a better strategy, namely continuing for some time <span class="arithmatex">\(\Delta t\)</span>
+    and then choosing what to do. This strategy give higher (expected)
+    payoff. \
+    To see this recall the random walk formulation of the brownian motion,
+    in a time lapse <span class="arithmatex">\(\Delta tx\)</span> can either go up by <span class="arithmatex">\(h\)</span> with probability
+    <span class="arithmatex">\(p\)</span> or down by <span class="arithmatex">\(-h\)</span> with probability <span class="arithmatex">\(1-p\)</span>, where:</p>
+<div class="arithmatex">\[
+h=\sigma\sqrt{\Delta t}\qquad p=\frac{1}{2}\left(1+\frac{\mu}{\sigma}\sqrt{\Delta t}\right)
+\]</div>
+<p>Then the agent can continue if the step is upward and stop if it is
+downward. The expected payoff of this strategy is:</p>
+<div class="arithmatex">\[
+V\left(x^{\star}\left(t\right),t\right)=\pi\left(x^{\star}\left(t\right),t\right)\Delta t+\frac{1}{1+\rho\Delta t}\left[pV\left(x^{\star}\left(t\right)+h,t+\Delta t\right)+\left(1-p\right)\Omega\left(x^{\star}\left(t\right)-h,t+\Delta t\right)\right]
+\]</div>
+<p>We can take a Taylor expansion around <span class="arithmatex">\(\left(x^{\star}\left(t\right),t\right)\)</span>
+to approximate the value of <span class="arithmatex">\(V\left(x^{\star}\left(t\right)+h,t+\Delta t\right)\)</span>
+and <span class="arithmatex">\(\Omega\left(x^{\star}\left(t\right)-h,t+\Delta t\right)\)</span>:</p>
+<div class="arithmatex">\[\begin{align*}
+V\left(x^{\star}\left(t\right)+h,t+\Delta t\right) &amp; \approx V\left(x^{\star}\left(t\right),t\right)+V_{x}\left(x^{\star}\left(t\right),t\right)h+V_{t}\left(x^{\star}\left(t\right),t\right)\Delta t\\
+\Omega\left(x^{\star}\left(t\right)-h,t+\Delta t\right) &amp; \approx\Omega\left(x^{\star}\left(t\right),t\right)-\Omega{}_{x}\left(x^{\star}\left(t\right),t\right)h+\Omega_{t}\left(x^{\star}\left(t\right),t\right)\Delta t
+\end{align*}\]</div>
+<p>Replacing gives:</p>
+<div class="arithmatex">\[\begin{align*}
+V\left(x^{\star}\left(t\right),t\right) &amp; =\pi\left(x^{\star}\left(t\right),t\right)\Delta t+\frac{1}{1+\rho\Delta t}\left(V\left(x^{\star}\left(t\right),t\right)+\frac{1}{2}\left[\left(V_{x}\left(x^{\star}\left(t\right),t\right)-\Omega{}_{x}\left(x^{\star}\left(t\right),t\right)\right)h+\left(V_{t}\left(x^{\star}\left(t\right),t\right)+\Omega_{t}\left(x^{\star}\left(t\right),t\right)\right)\Delta t\right]\right)
+\end{align*}\]</div>
+<p>where we use the value matching condition and the fact that <span class="arithmatex">\(ph\approx\frac{1}{2}\sigma\sqrt{\Delta t}\)</span>
+and <span class="arithmatex">\(p\Delta t\approx\frac{1}{2}\Delta t\)</span>.\
+What matters for evaluating the strategy is the continuation value,
+and that <span class="arithmatex">\(\Delta t\)</span> is of order <span class="arithmatex">\(h^{2}\)</span>, so the first two terms
+in the continuation value <span class="arithmatex">\(\left(V\left(x^{\star}\left(t\right),t\right)+\frac{1}{2}h\left(V_{x}\left(x^{\star}\left(t\right),t\right)-\Omega{}_{x}\left(x^{\star}\left(t\right),t\right)\right)\right)\)</span>
+will dictate the behavior of the gain as <span class="arithmatex">\(\Delta t\to0\)</span> (or equivalently
+<span class="arithmatex">\(h\to0\)</span>). These terms are positive as long as <span class="arithmatex">\(V_{x}\left(x^{\star}\left(t\right),t\right)&gt;\Omega{}_{x}\left(x^{\star}\left(t\right),t\right)\)</span>,
+which is the case if there is a downward kink. \
+Then there cannot be a downward kink, because it would contradict
+the optimality of the strategy of stopping at <span class="arithmatex">\(x^{\star}\left(t\right)\)</span>.</p>
+</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Example 28.3</p>
+<p>Consider a firm that has flow revenues of <span class="arithmatex">\(e^{x_{t}}\)</span>, and that can
+be closed at any time and sold for a value <span class="arithmatex">\(\Omega&gt;0\)</span>. The owner
+of the firm is risk neutral and discounts the future at a rate <span class="arithmatex">\(\rho&gt;0\)</span>.
+<span class="arithmatex">\(x_{t}\)</span> follows:</p>
+<div class="arithmatex">\[
+dx_{t}=\mu dt+\sigma dW
+\]</div>
+<p>The problem of the firm's owner is then:</p>
+<div class="arithmatex">\[
+V\left(x\right)=\max\left\lbrace  \Omega,e^{x}\Delta t+\frac{1}{1+\rho\Delta t}E\left[V\left(x+dx\right)\right]\right\rbrace
+\]</div>
+<p>where continuation is optimal for <span class="arithmatex">\(x\geq x^{\star}\)</span>. This problem
+is independent of time.</p>
+<p>As long as <span class="arithmatex">\(x\)</span> is in the continuation region the value function satisfies
+the HJB equation:</p>
+<div class="arithmatex">\[
+\rho V\left(x\right)=e^{x}+\mu V_{x}\left(x\right)+\frac{1}{2}\sigma^{2}V_{xx}\left(x\right)
+\]</div>
+<p>This is a second order ordinary differential equation with constant
+coefficients. Then we know that the solution has the form:</p>
+<div class="arithmatex">\[
+V\left(x\right)=V^{P}\left(x\right)+A_{1}H_{1}\left(x\right)+A_{2}H_{2}\left(x\right)
+\]</div>
+<p>where <span class="arithmatex">\(V^{P}\)</span> is a particular solution to the differential equation,
+<span class="arithmatex">\(H_{1}\)</span> and <span class="arithmatex">\(H_{2}\)</span> are homogenous solutions, and <span class="arithmatex">\(A_{1}\)</span> and <span class="arithmatex">\(A_{2}\)</span>
+are constants to be determined.</p>
+<p>The particular solution is easy to obtain. We can solve for the value
+of never stopping:</p>
+<div class="arithmatex">\[
+V^{P}\left(x\right)=E\left[\int_{0}^{\infty}e^{-\rho t}e^{x}dt\right]
+\]</div>
+<p>We can solve this expectation using the results in <a href="section-27-ito-s-lemma.html#ref-ex-000020expected-000020value-000020of-000020geometric-000020brownian-000020motion">Example 27.1</a>.
+We get:</p>
+<div class="arithmatex">\[
+V^{P}\left(x\right)=\frac{x}{\rho-\left(\mu+\frac{1}{2}\sigma^{2}\right)}
+\]</div>
+<p>we assume that <span class="arithmatex">\(\rho-\left(\mu+\frac{1}{2}\sigma^{2}\right)&gt;0\)</span> in
+order to guarantee the existence of this solution.</p>
+<p>The homogenous solutions are obtained from the homogenous equation:</p>
+<div class="arithmatex">\[
+\rho H\left(x\right)=\mu H_{x}\left(x\right)+\frac{1}{2}\sigma^{2}H_{xx}\left(x\right)
+\]</div>
+<p>by guessing that <span class="arithmatex">\(H\left(x\right)=e^{\xi x}\)</span> and replacing we get:</p>
+<div class="arithmatex">\[\begin{align*}
+\rho e^{\xi x} &amp; =\mu\xi e^{\xi x}+\frac{1}{2}\sigma^{2}\xi^{2}e^{\xi x}\\
+0 &amp; =-\rho+\mu\xi+\frac{1}{2}\sigma^{2}\xi^{2}
+\end{align*}\]</div>
+<p>our guess is verified for <span class="arithmatex">\(\xi\)</span> a root of the equation above. There
+are two roots:</p>
+<div class="arithmatex">\[
+\xi_{2}=-\frac{\mu+\sqrt{\mu^{2}+2\sigma^{2}\rho}}{\sigma^{2}}\qquad\xi_{2}=\frac{-\mu+\sqrt{\mu^{2}+2\sigma^{2}\rho}}{\sigma^{2}},
+\]</div>
+<p>where <span class="arithmatex">\(\xi_{1}&lt;0&lt;1&lt;\xi_{2}\)</span>, this follows from <span class="arithmatex">\(\rho&gt;0\)</span> and the
+assumption <span class="arithmatex">\(\rho-\left(\mu+\frac{1}{2}\sigma^{2}\right)&gt;0\)</span>. Joining
+we get the solution for our HJB equation:</p>
+<div class="arithmatex">\[
+V\left(x\right)=V^{P}\left(x\right)+A_{1}e^{\xi_{1}x}+A_{2}e^{\xi_{2}x}
+\]</div>
+<p>Now we must determine the values of <span class="arithmatex">\(A_{1}\)</span> and <span class="arithmatex">\(A_{2}\)</span>. To do so
+we first need to impose certain conditions on our value function.</p>
+<ol>
+<li>From optimality in exit it must be that: <span class="arithmatex">\(V\left(x\right)\geq\Omega\)</span>.</li>
+<li>From feasibility it must be that: <span class="arithmatex">\(V\left(x\right)\leq V^{P}\left(x\right)+\Omega\)</span>.</li>
+<li>Value matching implies: <span class="arithmatex">\(V\left(x^{\star}\right)=\Omega\)</span>.</li>
+</ol>
+<p>We will show that <span class="arithmatex">\(A_{2}=0\)</span>. Suppose for a contradiction that <span class="arithmatex">\(A_{2}&gt;0\)</span>,
+then as <span class="arithmatex">\(x\to\infty\)</span> we have <span class="arithmatex">\(e^{\xi_{1}x}\to0\)</span> (because <span class="arithmatex">\(\xi_{1}&lt;0\)</span>),
+and <span class="arithmatex">\(e^{\xi_{2}x}\to\infty\)</span> (because <span class="arithmatex">\(\xi_{2}&gt;0\)</span>), because <span class="arithmatex">\(A_{2}&gt;0\)</span>
+this implies that <span class="arithmatex">\(V\)</span> violates its upper bound. Now suppose for a
+contradiction that <span class="arithmatex">\(A_{2}&lt;0\)</span>, as before <span class="arithmatex">\(e^{\xi_{1}x}\to0\)</span> and <span class="arithmatex">\(e^{\xi_{2}x}\to\infty\)</span>,
+because <span class="arithmatex">\(\xi_{2}&gt;1\)</span> the last term will grow faster than the first
+one, thus violating the lower bound (the value goes to <span class="arithmatex">\(-\infty\)</span>).
+Then it must be that <span class="arithmatex">\(A_{2}=0\)</span>.</p>
+</div>
+<p>Then we can obtain <span class="arithmatex">\(A_{1}\)</span> from the value matching condition:</p>
+<div class="arithmatex">\[\begin{align*}
+V\left(x^{\star}\right) &amp; =V^{P}\left(x^{\star}\right)+A_{1}e^{\xi_{1}x^{\star}}\\
+\left(\Omega-V^{P}\left(x^{\star}\right)\right)e^{-\xi_{1}x^{\star}} &amp; =A_{1}
+\end{align*}\]</div>
+<p>with this the solution is complete, given a value for <span class="arithmatex">\(x^{\star}\)</span>.
+It is left to find such value, for that we make use of the smooth
+pasting condition:</p>
+<div class="arithmatex">\[\begin{align*}
+V_{x}\left(x^{\star}\right) &amp; =0\\
+V_{x}^{P}\left(x^{\star}\right)+A_{1}\xi_{1}e^{\xi_{1}x^{\star}} &amp; =0\\
+\frac{1}{\rho-\left(\mu+\frac{1}{2}\sigma^{2}\right)}+\left(\Omega-\frac{x^{\star}}{\rho-\left(\mu+\frac{1}{2}\sigma^{2}\right)}\right)\xi_{1} &amp; =0\\
+\frac{1}{\xi_{1}}+\left(\rho-\left(\mu+\frac{1}{2}\sigma^{2}\right)\right)\Omega &amp; =x^{\star}
+\end{align*}\]</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="section-27-ito-s-lemma.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Ito&#39;s Lemma">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Ito's Lemma
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="section-29-the-kolmogorov-forward-equation.html" class="md-footer__link md-footer__link--next" aria-label="Next: The Kolmogorov Forward Equation">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                The Kolmogorov Forward Equation
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Sergio Ocampo Díaz · Western University
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

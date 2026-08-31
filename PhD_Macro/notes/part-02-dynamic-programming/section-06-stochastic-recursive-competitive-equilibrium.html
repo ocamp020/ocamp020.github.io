@@ -1,0 +1,2896 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Searchable course website generated from Ocampo-Macro_Notes.tex">
+      
+      
+      
+        <link rel="canonical" href="https://ocamp020.github.io/PhD_Macro/notes/part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.html">
+      
+      
+        <link rel="prev" href="section-05-stochastic-dynamic-programming.html">
+      
+      
+        <link rel="next" href="../part-03-heterogeneous-agent-models/index.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Stochastic Recursive Competitive Equilibrium - EC9604 Advanced Macroeconomics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stochastic-recursive-competitive-equilibrium" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-header__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EC9604 Advanced Macroeconomics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Stochastic Recursive Competitive Equilibrium
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-nav__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EC9604 Advanced Macroeconomics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-01-preliminaries/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preliminaries
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Preliminaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-01-macroeconomic-variables-and-distributions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macroeconomic Variables and Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-02-aggregation-complete-markets-preferences-and-technology.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation: Complete Markets, Preferences, and Technology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-03-markov-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markov Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dynamic Programming
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-04-non-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-05-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Recursive Competitive Equilibrium
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="section-06-stochastic-recursive-competitive-equilibrium.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Recursive Competitive Equilibrium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-competitive-equilibrium" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursive Competitive Equilibrium
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stationary-equilibrium-what-does-it-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stationary Equilibrium: What does it mean?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profit-maximization-a-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profit Maximization: A note
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computing-the-equilibrium-value-function-iteration-the-discrete-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computing the Equilibrium: Value function iteration (the discrete case)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-competitive-equilibrium-example-sovereign-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursive Competitive Equilibrium Example: Sovereign Default
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#welfare-comparisons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Welfare comparisons
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-03-heterogeneous-agent-models/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heterogeneous Agent Models
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Heterogeneous Agent Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-07-the-income-fluctuations-model-and-precautionary-savings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Income Fluctuations Model and Precautionary Savings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-08-an-endowment-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    An Endowment Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-09-a-production-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-10-a-production-economy-with-aggregate-risk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy with Aggregate Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-04-firm-heterogeneity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firm Heterogeneity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Firm Heterogeneity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-11-span-of-control.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Span of Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-12-market-power.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Market Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-13-monopolistic-competition.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monopolistic Competition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-14-variable-markups.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variable Markups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-15-aggregation-and-misallocation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation and Misallocation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-05-input-output-networks-and-economic-activity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks and Economic Activity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input-Output Networks and Economic Activity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-16-a-domar-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Domar Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-17-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-18-examples-of-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples of Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-19-hulten-s-theorem-for-efficient-economies.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hulten's Theorem for Efficient Economies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-20-beyond-hulten-second-order-effects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Second order effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-21-beyond-hulten-distortions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Distortions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-06-random-variables-and-probability/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Variables and Probability
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Random Variables and Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-22-measure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-23-measurable-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measurable functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-24-the-lebesgue-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Lebesgue integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-25-the-stieltjes-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Stieltjes integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-07-stochastic-calculus/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Calculus
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Calculus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-26-stochastic-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-27-ito-s-lemma.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ito's Lemma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-28-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-29-the-kolmogorov-forward-equation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Kolmogorov Forward Equation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-30-application-real-options.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Real Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-31-application-menu-cost-stokey-2009-ch-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Menu cost Stokey (2009, Ch. 7)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-competitive-equilibrium" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursive Competitive Equilibrium
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stationary-equilibrium-what-does-it-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stationary Equilibrium: What does it mean?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profit-maximization-a-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profit Maximization: A note
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computing-the-equilibrium-value-function-iteration-the-discrete-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computing the Equilibrium: Value function iteration (the discrete case)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-competitive-equilibrium-example-sovereign-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursive Competitive Equilibrium Example: Sovereign Default
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#welfare-comparisons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Welfare comparisons
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="ref-sec-stochastic-recursive-competitive-equilibrium" class="course-anchor"></a></p>
+<div class="section-meta">
+  <a href="index.html">Part 2: Dynamic Programming</a>
+  <span>Section 6</span>
+</div>
+
+<h1 id="stochastic-recursive-competitive-equilibrium">Stochastic Recursive Competitive Equilibrium<a class="headerlink" href="#stochastic-recursive-competitive-equilibrium" title="Permanent link">&para;</a></h1>
+<p>We now turn to study dynamic economies subject to shocks using the
+tools developed above. The type of economies we are interested in
+are those in which individual agents interact with each other through
+markets. The main feature of these economies is therefore the price-taking
+behavior of agents. This is as opposed to models of imperfect competition
+or models of search friction with bilateral trading covered later
+in the course.</p>
+<p>We start by describing the Neoclassical Growth Model, which constitutes
+the backbone of most models used in macroeconomics. The economy is
+populated by a representative firm and a representative household.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A more formal and complete formulation of the model would introduce a continuum of agents (or households) and firms who populate the economy. The households would be price takers and their preferences would have to be homothetic. The price-taking assumption makes their constraints linear, or put another way homogeneous of degree one, the homotheticity ensures that their choices are scale free, so that the choice of an agent with half the income of another agent is to consume half as much of every good. The firms would also be price takers and operate a technology that has constant-returns-to-scale (homogeneous of degree one). This ensures that the production choices of the firms scale one-to-one. These assumptions are enough for aggregation into a representative household and a representative firm.</p>
+</div>
+<p>For now, there is no government. We first outline the problem of
+the firm and the household and then discuss how to cast them recursively,
+how to understand the stationary equilibrium, and how to compute the
+solution.</p>
+<p>The firm produces using a constant-returns-to-scale technology that
+combines capital and labor. The firm chooses capital and labor to
+maximize its profits every period taking as given its current productivity
+<span class="arithmatex">\(\left(z_{t}\right)\)</span> the period's prices: the rental rate of capital
+<span class="arithmatex">\(\left(r_{t}\right)\)</span> and the wage rate <span class="arithmatex">\(\left(w_{t}\right)\)</span>. In
+this formulation, the problem of the firm is static:</p>
+<div class="arithmatex">\[
+\pi_{t}=\max_{\left\lbrace  k_{t},\ell_{t}^{d}\right\rbrace }f\left(z_{t},k_{t},\ell_{t}^{d}\right)-\left(r_{t}+\delta\right)k_{t}-w_{t}\ell_{t}^{d}.
+\]</div>
+<p>The household chooses contingent plans for consumption and labor (or
+equivalently leisure) taking as given the return on their assets <span class="arithmatex">\(\left(r_{t}\right)\)</span>
+and the wage rate <span class="arithmatex">\(\left(w_{t}\right)\)</span>. The household owns the firms
+and hence receives the profits the firm generates <span class="arithmatex">\(\left(\pi_{t}\right)\)</span>,
+which are also taken as given by the household. In the deterministic
+case, the household problem is</p>
+<div class="arithmatex">\[
+\max_{\left\lbrace  c_{t},\ell_{t}\right\rbrace _{t=0}^{\infty}}\sum_{t=0}^{\infty}\beta^{t}u\left(c,\ell\right)\qquad\text{s.t. }c_{t}+a_{t+1}=\left(1+r_{t}\right)a_{t}+w_{t}\ell_{t}+\pi_{t},
+\]</div>
+<p>for some initial value of assets <span class="arithmatex">\(a_{0}\)</span>. The solution of the household
+problem is complex because the consumption and labor plans have to
+be contingent on any sequence of <span class="arithmatex">\(\left\lbrace  \left(r_{t},w_{t},\pi_{t}\right)\right\rbrace\)</span>
+that can arise. We will return to this problem later.</p>
+<p>Equilibrium requires that markets clear along any sequence of prices,
+so that</p>
+<div class="arithmatex">\[
+\ell_{t}=\ell_{t}^{d};\qquad a_{t}=k_{t};\qquad c_{t}+a_{t+1}=f\left(z_{t},k_{t},\ell_{t}\right)+\left(1-\delta\right)a_{t}.
+\]</div>
+<p>However, the variable <span class="arithmatex">\(z_{t}\)</span> is exogenous (it is not determined
+by any decision maker in the economy) and random. In particular <span class="arithmatex">\(\left\lbrace  z_{t}\right\rbrace\)</span>
+follows a Markov Process with transition function <span class="arithmatex">\(Q\)</span> and initial
+value <span class="arithmatex">\(z_{0}\)</span>. This requires some extra notation can help describe
+the economy. To make things simpler we assume (for now) that <span class="arithmatex">\(z\)</span>
+takes on finitely many values. Let <span class="arithmatex">\(z^{t}=\left(z_{0},z_{1},\ldots,z_{t}\right)\)</span>
+be the history of shocks in the economy, taking <span class="arithmatex">\(z_{0}\)</span> as given,
+and <span class="arithmatex">\(S^{t}\)</span> the space of all histories, and <span class="arithmatex">\(\mu_{t}\left(z^{t}\right)\)</span>
+give the probability of history <span class="arithmatex">\(z^{t}\left(\sum_{z^{t}\in S^{t}}\mu\left(z^{t}\right)=1\right)\)</span>.
+Then, the problem of the household can be formally written as</p>
+<div class="arithmatex">\[\begin{align*}
+v\left(a_{0}\right) &amp; =\max_{\left\lbrace  a_{t}\left(\cdot\right),c_{t}\left(\cdot\right),\ell_{t}\left(\cdot\right)\right\rbrace }\sum_{t=0}^{\infty}\sum_{z^{t}\in Z^{t}}\beta^{t}u\left(c_{t}\left(z^{t}\right),\ell_{t}\left(z^{t}\right)\right)\mu_{t}\left(z^{t}\right)\\
+\text{s.t. } &amp; \sum_{t=0}^{\infty}\sum_{z^{t}\in Z^{t}}p_{t}\left(z^{t}\right)\left[\left(1+r_{t}\left(z^{t}\right)\right)a_{t}\left(z^{t-1}\right)+w_{t}\left(z^{t}\right)\ell_{t}\left(z^{t}\right)+\pi_{t}\left(z^{t}\right)-c_{t}\left(z^{t}\right)-a_{t+1}\left(z^{t}\right)\right]\geq0,
+\end{align*}\]</div>
+<p>where we abuse notation by writing <span class="arithmatex">\(a_{0}\left(z^{-1}\right)=k_{0}\)</span>
+and <span class="arithmatex">\(p_{t}\left(z^{t}\right)\)</span> is the price of future resources (the
+stochastic discount factor).</p>
+<p>An Arrow-Debreu equilibrium of this economy is therefore defined as
+sequences of functions that depend on histories of shocks. That is,
+an equilibrium is a set of sequences for quantities <span class="arithmatex">\(\left\lbrace  a_{t}\left(\cdot\right),c_{t}\left(\cdot\right),\ell_{t}\left(\cdot\right),k_{t}\left(\cdot\right),\ell_{t}^{d}\left(\cdot\right),\pi_{t}\left(\cdot\right)\right\rbrace\)</span>
+and prices <span class="arithmatex">\(\left\lbrace  p_{t}\left(\cdot\right),r_{t}\left(\cdot\right),w_{t}\left(\cdot\right)\right\rbrace\)</span>
+such that</p>
+<ol>
+<li>Households maximize the present discounted value of utility with <span class="arithmatex">\(\left\lbrace  a_{t}\left(\cdot\right),c_{t}\left(\cdot\right),\ell_{t}\left(\cdot\right)\right\rbrace\)</span>,
+    taking as given prices <span class="arithmatex">\(\left\lbrace  p_{t}\left(\cdot\right),r_{t}\left(\cdot\right),w_{t}\left(\cdot\right)\right\rbrace\)</span>
+    and transfers <span class="arithmatex">\(\left\lbrace  \pi_{t}\left(s^{t}\right)\right\rbrace\)</span>.</li>
+<li>
+<p>Firms maximize their period profits with <span class="arithmatex">\(\left\lbrace  k_{t}\left(\cdot\right),\ell_{t}^{d}\left(\cdot\right)\right\rbrace\)</span>
+    taking as given prices <span class="arithmatex">\(\left\lbrace  r_{t}\left(\cdot\right),w_{t}\left(\cdot\right)\right\rbrace\)</span></p>
+<div class="arithmatex">\[
+\pi_{t}\left(z^{t}\right)=f\left(z_{t},k_{t}\left(z^{t}\right),\ell_{t}^{d}\left(z^{t}\right)\right)-\left(r_{t}\left(z^{t}\right)+\delta\right)k_{t}\left(z^{t}\right)-w_{t}\left(z^{t}\right)\ell_{t}^{d}\left(z^{t}\right).
+\]</div>
+</li>
+<li>
+<p>Markets clear for every history</p>
+<div class="arithmatex">\[
+\ell_{t}\left(z^{t}\right)=\ell_{t}^{d}\left(z^{t}\right);\qquad a_{t}\left(z^{t-1}\right)=k_{t}\left(z^{t}\right);
+\]</div>
+<div class="arithmatex">\[
+c_{t}\left(z^{t}\right)+a_{t+1}\left(z^{t}\right)=f\left(z_{t},k_{t}\left(z^{t}\right),\ell_{t}\left(z^{t}\right)\right)+\left(1-\delta\right)a_{t}\left(z^{t-1}\right).
+\]</div>
+</li>
+<li>
+<p>The initial conditions are satisfied, so that <span class="arithmatex">\(a_{0}\left(z^{-1}\right)=k_{0}\)</span>.</p>
+</li>
+</ol>
+<p>In the Arrow-Debreu equilibrium all trading happens at time 0, taking
+as given <span class="arithmatex">\(\left(k_{0},z_{0}\right)\)</span>. We can alternatively define
+a sequential markets equilibrium for this economy. This definition
+avoids introducing the stochastic discount factor. We instead define
+the equilibrium as a set of sequences for quantities <span class="arithmatex">\(\left\lbrace  a_{t}\left(\cdot\right),c_{t}\left(\cdot\right),\ell_{t}\left(\cdot\right),k_{t}\left(\cdot\right),\ell_{t}^{d}\left(\cdot\right),\pi_{t}\left(\cdot\right)\right\rbrace\)</span>
+and prices <span class="arithmatex">\(\left\lbrace  r_{t}\left(\cdot\right),w_{t}\left(\cdot\right)\right\rbrace\)</span>
+such that</p>
+<ol>
+<li>
+<p>Households maximize the present discounted value of utility with <span class="arithmatex">\(\left\lbrace  a_{t}\left(\cdot\right),c_{t}\left(\cdot\right),\ell_{t}\left(\cdot\right)\right\rbrace\)</span>,
+    taking as given prices <span class="arithmatex">\(\left\lbrace  r_{t}\left(\cdot\right),w_{t}\left(\cdot\right)\right\rbrace\)</span>
+    and transfers <span class="arithmatex">\(\left\lbrace  \pi_{t}\left(s^{t}\right)\right\rbrace\)</span>.</p>
+<div class="arithmatex">\[\begin{align*}
+v\left(a_{0}\right) &amp; =\max_{\left\lbrace  a_{t}\left(\cdot\right),c_{t}\left(\cdot\right),\ell_{t}\left(\cdot\right)\right\rbrace }\sum_{t=0}^{\infty}\sum_{z^{t}\in Z^{t}}\beta^{t}u\left(c_{t}\left(z^{t}\right),\ell_{t}\left(z^{t}\right)\right)\mu_{t}\left(z^{t}\right)\\
+\text{s.t. } &amp; \left(1+r_{t}\left(z^{t}\right)\right)a_{t}\left(z^{t-1}\right)+w_{t}\left(z^{t}\right)\ell_{t}\left(z^{t}\right)+\pi_{t}\left(z^{t}\right)\geq c_{t}\left(z^{t}\right)+a_{t+1}\left(z^{t}\right)\qquad\forall_{t}\forall_{z^{t}\in Z^{t}},
+\end{align*}\]</div>
+</li>
+<li>
+<p>Firms maximize their period profits with <span class="arithmatex">\(\left\lbrace  k_{t}\left(\cdot\right),\ell_{t}^{d}\left(\cdot\right)\right\rbrace\)</span>
+    taking as given prices <span class="arithmatex">\(\left\lbrace  r_{t}\left(\cdot\right),w_{t}\left(\cdot\right)\right\rbrace\)</span></p>
+<div class="arithmatex">\[
+\pi_{t}\left(z^{t}\right)=f\left(z_{t},k_{t}\left(z^{t}\right),\ell_{t}^{d}\left(z^{t}\right)\right)-\left(r_{t}\left(z^{t}\right)+\delta\right)k_{t}\left(z^{t}\right)-w_{t}\left(z^{t}\right)\ell_{t}^{d}\left(z^{t}\right).
+\]</div>
+</li>
+<li>
+<p>Markets clear for every history</p>
+<div class="arithmatex">\[
+\ell_{t}\left(z^{t}\right)=\ell_{t}^{d}\left(z^{t}\right);\qquad a_{t}\left(z^{t-1}\right)=k_{t}\left(z^{t}\right);
+\]</div>
+<div class="arithmatex">\[
+c_{t}\left(z^{t}\right)+a_{t+1}\left(z^{t}\right)=f\left(z_{t},k_{t}\left(z^{t}\right),\ell_{t}\left(z^{t}\right)\right)+\left(1-\delta\right)a_{t}\left(z^{t-1}\right).
+\]</div>
+</li>
+<li>
+<p>The initial conditions are satisfied, so that <span class="arithmatex">\(a_{0}\left(z^{-1}\right)=k_{0}\)</span>.</p>
+</li>
+</ol>
+<p>The sequential problem of the agents in this economy must therefore
+keep track of an impossibly large state vector because the optimal
+choices depend on its complete history. Tackling this problem proves
+to be impractical if not impossible. Because of that we seek to re-formulate
+the household's problem in its recursive form. Doing so will also
+provide us with a definition of recursive competitive equilibrium
+(RCE).</p>
+<h2 id="recursive-competitive-equilibrium">Recursive Competitive Equilibrium<a class="headerlink" href="#recursive-competitive-equilibrium" title="Permanent link">&para;</a></h2>
+<p>The objective now is to cast the problem recursively. This allows
+us to provide a clearer definition of equilibrium and (later) to solve
+the problem using the tools of dynamic programming developed above
+and the computational tools introduced below.</p>
+<p>The main question of the recursive problem is what constitute the
+relevant state of the economy. Crucially, the household is a price
+taker: they have no clue about the aggregate effect of their choices.
+Equivalently you can think of the household as atomistic, so that
+they know that their (individual) actions have no effect on the aggregates
+of the economy. However, the states must provide enough information
+to solve the problem and to forecast how the states themselves evolve.</p>
+<p>In general we have <span class="arithmatex">\(s_{t}=\left(a_{t},z_{t},\Gamma_{t}\right)\)</span> be
+the state of the individual representative household, it includes
+the household's capital <span class="arithmatex">\(\left(a\right)\)</span>, the aggregate productivity
+<span class="arithmatex">\(\left(z\right)\)</span>, and the distribution of states in the economy <span class="arithmatex">\(\left(\Gamma\right)\)</span>.
+Keeping track of the distribution of states is in principle necessary
+in order to compute prices. The sequential problem circumvents this
+problem by making all variables (prices included) depend on the full
+history of exogenous shocks. That, of course, contains all the information
+necessary. However, the recursive problem cannot depend the history
+of states, <span class="arithmatex">\(s^{t}=\left(s_{0},s_{1},\ldots,s_{t}\right)\)</span>.</p>
+<p>To solve this issue we use the structure of the economy. The key is
+that the economy we are studying can be aggregated. This means that
+the underlying distribution of households does not matter and that
+only the aggregate (average) capital is relevant: <span class="arithmatex">\(K_{t}=\int a_{t}d\Gamma_{t}\)</span>.
+Because of this, an individual household only needs to keep track
+of aggregate capital and not of the whole distribution. Crucially,
+knowing the aggregate capital is enough to compute the relevant prices
+in the economy. This makes the state <span class="arithmatex">\(s_{t}=\left(a,z,K\right)\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The state is often written as <span class="arithmatex">\(\left(k,z,K\right)\)</span> emphasizing the difference between the "little <span class="arithmatex">\(k\)</span>" faced by an individual household and the "big <span class="arithmatex">\(K\)</span>" faced by the economy as a whole.</p>
+</div>
+<p>The household's recursive problem is then</p>
+<div class="arithmatex">\[\begin{align*}
+V(\underbrace{\quad a\quad}_{\text{Ind. State}},\underbrace{\;z\;,\;K\;}_{\text{Agg. States}}) &amp; =\max_{\left\lbrace  c,\ell,a^{\prime}\right\rbrace }\,u\left(c,\ell\right)+\beta\int_{z^{\prime}}V\left(a^{\prime},z^{\prime},K^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
+\text{s.t.} &amp; \qquad c+a^{\prime}=\left(1+R\left(z,K\right)\right)a+W\left(z,K\right)\ell+\Pi\left(z,K\right);\\
+&amp; \qquad K^{\prime}=G_{k}\left(z,K\right).
+\end{align*}\]</div>
+<p>This problem looks a lot like the dynamic programming problems we
+have discussed before, with the exception that it has to include functions
+that map the aggregate states into prices, <span class="arithmatex">\(r=R\left(z,K\right)\)</span>
+and <span class="arithmatex">\(w=W\left(z,K\right)\)</span>, and profits, <span class="arithmatex">\(\Pi\left(z,K\right)\)</span>, and
+that incorporate the evolution of the aggregate state, <span class="arithmatex">\(G_{k}\left(z,K\right)\)</span>.
+These functions are taken as given by the household and are found
+as part of the equilibrium defined below.</p>
+<p>An Recursive Competitive Equilibrium (RCE) is a set of a value function
+<span class="arithmatex">\(V\)</span>, policy functions <span class="arithmatex">\(g_{k}\)</span> and <span class="arithmatex">\(g_{\ell}\)</span>, updating functions
+<span class="arithmatex">\(G_{k}\)</span> and price and profit functions <span class="arithmatex">\(R\)</span>, <span class="arithmatex">\(W\)</span>, and <span class="arithmatex">\(\Pi\)</span>, such
+that:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The definition of an RCE can be equivalently be done in terms of stochastic processes for the equilibrium variables (capital, labor, prices, etc.). That is, the equilibrium is the processes for quantities and prices. These stochastic processes are the equivalent of the sequences of quantities and prices that define a non-stochastic equilibrium. However, defining the equilibrium in that way is cumbersome. The stochastic processes are all constructed from the underlying Markov process for <span class="arithmatex">\(z\)</span> and the policy and price functions that define the RCE. The construction is carried out as shown in <a href="section-05-stochastic-dynamic-programming.html#ref-subsec-markov-processes-over-states">Markov Processes over States</a>.</p>
+</div>
+<ol>
+<li>The value function <span class="arithmatex">\(V\)</span> and policy functions <span class="arithmatex">\(\left\lbrace  g_{a},g_{\ell}\right\rbrace\)</span>
+    solve the household's dynamic programming problem, taking as given
+    the updating and price functions <span class="arithmatex">\(G_{k}\)</span>, <span class="arithmatex">\(R\)</span>, <span class="arithmatex">\(W\)</span>, <span class="arithmatex">\(\Pi\)</span>.</li>
+<li>
+<p>The firms <em>behave optimally</em> taking prices as given. This implies
+    that the pricing functions <span class="arithmatex">\(R\)</span> and <span class="arithmatex">\(W\)</span> satisfy the firm's first
+    order conditions (from cost-minization, see <a href="#ref-subsec-profit-maximization-crs">Profit Maximization: A note</a>)</p>
+<div class="arithmatex">\[
+R\left(z,K\right)=f_{k}\left(z,K,G_{\ell}\left(z,K\right)\right)-\delta\qquad W\left(z,K\right)=f_{\ell}\left(z,K,G_{\ell}\left(z,K\right)\right),
+\]</div>
+<p>where <span class="arithmatex">\(L=G_{\ell}\left(z,K\right)\)</span> gives the aggregate equilibrium
+level of labor as a function of the aggregate states. And profits
+satisfy</p>
+<div class="arithmatex">\[
+\Pi\left(z,K\right)=f\left(z,K,G_{\ell}\left(z,K\right)\right)-\left(R\left(z,K\right)+\delta\right)K-W\left(z,K\right)G_{\ell}\left(z,K\right).
+\]</div>
+<p><strong>Note: </strong>The price and profit functions are evaluated at the
+equilibrium levels of capital, <span class="arithmatex">\(K\)</span>, and labor, <span class="arithmatex">\(L=G_{\ell}\left(z,K\right)\)</span>,
+and not at the firms' capital and labor demand. This already imposes
+market clearing for the capital and labor markets because the aggregate
+variables are consistent with households' supply of assets and labor,
+as noted below. Walras' law then implies that the good's market clears.
+1. Updating functions <span class="arithmatex">\(G_{k}\)</span> and <span class="arithmatex">\(G_{\ell}\)</span> are consistent with individual
+optimization</p>
+<div class="arithmatex">\[\begin{align*}
+G_{k}\left(z,K\right) &amp; =g_{a}\left(K,z,K\right);\\
+G_{\ell}\left(z,K\right) &amp; =g_{\ell}\left(K,z,K\right).
+\end{align*}\]</div>
+<p><strong>Note:</strong> This consistency condition plays two roles. First,
+it acknowledges that the household is a representative agent, so that,
+even though the household acts individually without having any effect
+on aggregates, the household assets <span class="arithmatex">\(a\)</span> are equal to the aggregate
+capital <span class="arithmatex">\(K\)</span> (from the point of the view of the economy, but not of
+an individual household). This is captured by evaluating the policy
+functions of the household in <span class="arithmatex">\(\left(K,z,K\right)\)</span> and by making
+the evolution equation for aggregate capital <span class="arithmatex">\(G_{k}\)</span> consistent with
+household savings <span class="arithmatex">\(g_{a}\)</span>. Second, it acknowledges market clearing
+by making the aggregate equilibrium labor <span class="arithmatex">\(L=G_{\ell}\left(z,K\right)\)</span>
+be consistent with household labor supply, <span class="arithmatex">\(g_{\ell}\)</span>.</p>
+</li>
+</ol>
+<p>Crucially, consistency only has to apply in equilibrium. This allows
+us device an algorithm to solve for the RCE. The key is that consistency
+does not have to hold as you converge to the equilibrium because the
+household dynamic problem can be solved given any update functions.</p>
+<div class="admonition algorithm">
+<p class="admonition-title">Algorithm: RCE Algorithm</p>
+<p><strong>Input:</strong> Guess for updating functions <span class="arithmatex">\((G_k,G_{\ell})\)</span></p>
+<p><strong>Output:</strong> <span class="arithmatex">\(V,g_k,g_\ell,G_k,G_\ell\)</span></p>
+<ol>
+<li>
+<p>Solve the DP problem of the agent given <span class="arithmatex">\(G_k,G_{\ell}\)</span>: <br> <span class="arithmatex">\((V,g_k,g_\ell)=T(V;G_k,G_\ell)\)</span> (a fixed point problem)</p>
+</li>
+<li>
+<p>Update updating functions: <br> <span class="arithmatex">\(G_k(z,K)=g_k(K,z,K) G_\ell(z,K)=g_\ell(K,z,K)\)</span></p>
+</li>
+<li>
+<p>Check convergence in updating functions</p>
+</li>
+<li>
+<p>Repeat (1)-(3) until convergence</p>
+</li>
+</ol>
+</div>
+<p>Solving the problem requires solving the fixed point characterizing
+the solution to the household's Bellman equation. Unfortunately, this
+implies that the curse of dimensionality applies because you have
+to solve the agent's problem off-equilibrium. That is, you need to
+know <span class="arithmatex">\(g_{k}\left(a,z,K\right)\)</span> for any combination of <span class="arithmatex">\(\left(a,K\right)\)</span>,
+even though in equilibrium <span class="arithmatex">\(a=K\)</span>. For efficient economies, where
+the first welfare theorem applies, we can avoid this problem by focusing
+on the planner's problem and then constructing the equilibrium prices.
+However, most applications involve economies with market failures,
+or distortions (like taxes!) that prevent us from doing this.</p>
+<h2 id="stationary-equilibrium-what-does-it-mean">Stationary Equilibrium: What does it mean?<a class="headerlink" href="#stationary-equilibrium-what-does-it-mean" title="Permanent link">&para;</a></h2>
+<p>We now discuss a key property of the equilibrium. When the process
+for the exogenous shocks is stationary and the problem of the firm
+and the household satisfy certain regularity conditions, the equilibrium
+converges to a stationary equilibrium. The objective of this subsection
+is to discuss what that means.</p>
+<p>First we discuss informally what the regularity conditions are. What
+we want is to establish conditions that produce "well-behaved"
+policy functions for the endogenous states (capital in this case),
+that is, continuous and monotone. The problem must also satisfy standard
+Inada and transversality conditions that guarantee that it is effectively
+bounded.</p>
+<p>Continuity is inherited from the continuity of payoff functions (in
+this case <span class="arithmatex">\(u\)</span> and <span class="arithmatex">\(f\)</span>) and the properties of the feasible correspondence.
+See the Theorem of the Maximum for more on this. It also requires
+that the Markov Process for <span class="arithmatex">\(z\)</span> satisfies the Feller property (because
+of the expectation in the value function).</p>
+<p>Monotonicity requires having a sense of what is "better" in the
+context of the problem. We interpret <span class="arithmatex">\(z\)</span> as productivity and hence
+it makes sense to interpret higher values of <span class="arithmatex">\(z\)</span> as being better.
+For the resulting solution to be monotone in the states <span class="arithmatex">\(\left(k,z,K\right)\)</span>
+we need the payoffs to be monotone (as we usually assume), the transition
+function <span class="arithmatex">\(Q\)</span> to be monotone (see <a href="../part-01-preliminaries/section-03-markov-processes.html#ref-def-000020monotonicity-000020markov-000020">Definition 3.4</a>
+and <a href="../part-01-preliminaries/section-03-markov-processes.html#ref-prop-monotonicity-markov">Proposition 3.6</a>).</p>
+<p>Crucially, the conditions imposed over the Markov process for <span class="arithmatex">\(z\)</span>
+already guarantee that it is a stationary process with a unique invariant
+distribution to which it converges, regardless of its initial condition,
+<span class="arithmatex">\(z_{0}\)</span>. The question is whether the stochastic process followed
+by the equilibrium variables (capital) are also stationary and converge
+to an invariant distribution. The stationary equilibrium is then just
+a recursive competitive equilibrium for which the stochastic process
+of the endogenous variables is stationary.</p>
+<p>The concept of the stationary equilibrium is immediate in the non-stochastic
+case. Then, policy functions map (deterministically) a value of the
+endogenous state (capital) into a new value for itself. A sequential
+markets equilibrium and a recursive competitive equilibrium are defined
+just as in the previous subsection, except that they do not depend
+on the history of shocks (as there are none). The equivalent of being
+stationary and having an invariant distribution is then to have a
+single steady-state value that satisfies the equilibrium conditions.
+Intuitively, the deterministic case is like the stochastic one with
+degenerate distributions, so the invariant degenerate distribution
+puts full probability on a single value of the variable. That is the
+steady state.</p>
+<p>In the stochastic case, the equilibrium is composed by functions that
+map the realization of the stochastic process for productivity <span class="arithmatex">\(\left(z\right)\)</span>
+into values for quantities <span class="arithmatex">\(\left(K\right)\)</span> and prices <span class="arithmatex">\(\left(r,w\right)\)</span>.
+When these functions are measurable with respect to the underlying
+productivity process they form themselves a stochastic processes (the
+sequence of the random variables for quantities and prices). The construction
+of these stochastic processes is carried out as in <a href="section-05-stochastic-dynamic-programming.html#ref-subsec-markov-processes-over-states">Markov Processes over States</a>.
+Then, the stationary equilibrium is an endogenously determined probability
+distribution over the state variables, with the properties of a Markov
+chain induced by the policy functions and the exogenous process for
+shocks.</p>
+<p><a id="ref-subsec-profit-maximization-crs" class="course-anchor"></a></p>
+<h2 id="profit-maximization-a-note">Profit Maximization: A note<a class="headerlink" href="#profit-maximization-a-note" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Remark</p>
+<p>This sub-section reproduces lessons taught by Tim Kehoe at the University
+of Minnesota.</p>
+</div>
+<p>We often assume that the production function has constant returns
+to scale, that is, that it is homogenous of degree 1. This is in part
+for making possible the aggregation of the economy from individual
+competitive firms having the same behavior (at scale) than a representative
+price-taking firm. This assumption has important consequences for
+how we set up the firms' problem. The objective of this note is to
+make these consequences apparent. Before tackling them, it is useful
+to state Euler's theorem for homogeneous functions.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 6.1: Homogeneous Function</p>
+<p>A function <span class="arithmatex">\(f:\mathbb{R}^{N}\to\mathbb{R}\)</span>
+is homogeneous of degree <span class="arithmatex">\(g&gt;0\)</span> if <span class="arithmatex">\(f\left(\lambda\cdot\vec{x}\right)=\lambda^{g}\cdot f\left(\vec{x}\right)\)</span>
+for <span class="arithmatex">\(\lambda&gt;0\)</span>.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 6.1: Euler's Theorem for Homogeneous Functions</p>
+<p>Let <span class="arithmatex">\(f:\mathbb{R}^{N}\to\mathbb{R}\)</span>
+be differentiable function homogeneous of degree <span class="arithmatex">\(g\)</span>. Then <span class="arithmatex">\(\frac{\partial f\left(x\right)}{\partial x_{i}}\)</span>
+is homogenous of degree <span class="arithmatex">\(g-1\)</span> for all <span class="arithmatex">\(i\in\left\lbrace  1,\ldots,N\right\rbrace\)</span>
+and</p>
+<div class="arithmatex">\[
+g\,f\left(x\right)=\sum_{i=1}^{N}\frac{\partial f\left(x\right)}{\partial x_{i}}x_{i}.
+\]</div>
+</div>
+<p>There are three main implications of Euler's theorem for the equilibria
+of macroeconomic models with constant returns to scale production
+functions.</p>
+<p><strong>1) Profit maximization is ill-defined</strong></p>
+<p>Consider the profits of a price-taking firm that produces renting
+capital and hiring labor with a technology described by <span class="arithmatex">\(Y=zF\left(K^{d},L^{d}\right)\)</span>
+that has constant returns to scale, so that <span class="arithmatex">\(F\left(\lambda K^{d},\lambda L^{d}\right)=\lambda F\left(K^{d},L^{d}\right)\)</span>
+for <span class="arithmatex">\(\lambda&gt;0\)</span>. The profits of the firm, <span class="arithmatex">\(\pi\)</span>, also have constant
+returns to scale. To see this let</p>
+<div class="arithmatex">\[
+\pi\left(K^{d},L^{d}\right)=zF\left(K^{d},L^{d}\right)-\left(r+\delta\right)K^{d}-wL^{d}
+\]</div>
+<p>and consider an increase in the scale of the firm by a factor of <span class="arithmatex">\(\lambda&gt;0\)</span>.
+It is immediate that</p>
+<div class="arithmatex">\[
+\pi\left(\lambda K^{d},\lambda L^{d}\right)=zF\left(\lambda K^{d},\lambda L^{d}\right)-\left(r+\delta\right)\lambda K^{d}-w\lambda L^{d}=\lambda\pi\left(K^{d},L^{d}\right).
+\]</div>
+<p>This has an important implication for firm behavior: If the firm makes
+a profit when demanding <span class="arithmatex">\(K^{d}\)</span> units of capital and <span class="arithmatex">\(L^{d}\)</span> units
+of labor, <span class="arithmatex">\(\pi\left(K^{d},L^{d}\right)&gt;0\)</span>, then it can scale up that
+profit by scaling up that demand. Hence the optimal scale of the firm,
+and hence it demand for inputs, would be ill-defined (it would be
+infinite). If the firm makes a loss for all <span class="arithmatex">\(\left(K^{d},L^{d}\right)\)</span>,
+<span class="arithmatex">\(\pi\left(K^{d},L^{d}\right)&lt;0\)</span>, then it is optimal to set <span class="arithmatex">\(K^{d}=L^{d}=0\)</span>
+and not produce. Finally there is a knife edge case where <span class="arithmatex">\(\pi\left(K^{d},L^{d}\right)=0\)</span>
+for all <span class="arithmatex">\(\left(K^{d},L^{d}\right)\)</span>, but the firm's scale and demand
+for inputs is still ill-defined because the firm is indifferent between
+any scale of production.</p>
+<p>This makes the profit maximization problem ill-defined because the
+answer to</p>
+<div class="arithmatex">\[
+\max_{\left\lbrace  K^{d},L^{d}\right\rbrace }\pi\left(K^{d},L^{d}\right)
+\]</div>
+<p>is either 0 or infinity and there is no optimal scale for the firm
+(other than the case in which the firm does not operate) .</p>
+<p><strong>2) Equilibrium profits must be zero</strong></p>
+<p>Despite the profit maximization problem being ill-defined it does
+tell us that the only equilibrium outcome arises in the knife edge
+case of zero profits. This is has to be the case for the firm to operate
+but have a finite scale, and hence a finite demand for inputs.</p>
+<p>Turns out that this is precisely the case that arises when prices
+reflect the marginal product of inputs. The reason lies in Euler's
+theorem. The constant returns to scale technology implies that</p>
+<div class="arithmatex">\[\begin{align*}
+\pi\left(K^{d},L^{d}\right) &amp; =zF\left(K^{d},L^{d}\right)-\left(r+\delta\right)K^{d}-wL^{d}\\
+&amp; =zF\left(K^{d},L^{d}\right)-zF_{K}\left(K^{d},L^{d}\right)K^{d}-zF_{L}\left(K^{d},L^{d}\right)L^{d}\\
+&amp; =zF\left(K^{d},L^{d}\right)-zF\left(K^{d},L^{d}\right)\\
+&amp; =0.
+\end{align*}\]</div>
+<p><strong>3) Firms cost minimize</strong></p>
+<p>The condition for zero profits above is true only if the prices coincide
+with the marginal product of inputs given the firms' input demand.
+How can we guarantee this coincidence? The answer lies in the firms'
+cost minimization problem. Regardless of the scale of the firm, the
+firm will always minimize its cost given that scale. So it holds true
+that</p>
+<div class="arithmatex">\[
+C\left(Y\right)=\min_{\left\lbrace  K^{d},L^{d}\right\rbrace }\left(r+\delta\right)K^{d}-wL^{d}\qquad\text{s.t. }zF\left(K^{d},L^{d}\right)\leq Y
+\]</div>
+<p>The first order conditions of this problem give us</p>
+<div class="arithmatex">\[
+\left(r+\delta\right)=\mu zF_{K}\left(K^{d},L^{d}\right)\qquad w=\mu zF_{L}\left(K^{d},L^{d}\right),
+\]</div>
+<p>where <span class="arithmatex">\(\mu\)</span> is the Lagrange multiplier of the constraint that we
+can (later) normalize to one.</p>
+<p>Euler's theorem helps again. The marginal products are homogeneous
+of degree zero because the production function is homogeneous of degree
+1. Put another way, the marginal products are scale-invariant. That
+means that we can write</p>
+<div class="arithmatex">\[
+\left(r+\delta\right)=\mu zF_{K}\left(\frac{K^{d}}{L^{d}},1\right)\qquad w=\mu zF_{L}\left(\frac{K^{d}}{L^{d}},1\right).
+\]</div>
+<p>This has two important implications. First, the marginal products
+of inputs depend only on their ratio and not on the their individual
+scale. So, the condition for zero profits only requires that the firm
+input demand has the same ratio as the one implied by prices. Second,
+the optimal ratio of input demand is determined by the ratio of prices,
+implicitly by the following equation:</p>
+<div class="arithmatex">\[
+\frac{r+\delta}{w}=\frac{F_{K}\left(\frac{K^{d}}{L^{d}},1\right)}{F_{L}\left(\frac{K^{d}}{L^{d}},1\right)}.
+\]</div>
+<p>This is actually crucial, because it guarantees that, given prices
+<span class="arithmatex">\(r\)</span> and <span class="arithmatex">\(w\)</span>, the firm will optimally choose the precise ratio of
+inputs that makes zero profits hold.</p>
+<p>It is left to determine prices and the scale of production. This is
+done in equilibrium. Market clearing demands that the level of output
+is consistent with the aggregate demand in the economy (consumption,
+savings, government spending, etc.) and that the labor and capital
+used in production are the same as the assets and labor supplied by
+households. Then, the same equation of the ratio of prices and inputs
+used to determine the optimal demand of inputs given prices, is used
+in the inverse manner to determine the equilibrium ratio of prices
+given the supply of assets and labor. Similarly, the scale of production
+is obtained by agree An equilibrium allocation equates the demand
+and supply of capital and labor. The scale is then provided given
+<span class="arithmatex">\(Y\)</span> coming from aggregate demand.</p>
+<p>The bottom line is that, in equilibrium, the ratio of prices and the
+ratio of inputs are determined by technology and the scale of production
+is demand-determined.</p>
+<p>This can be seen in the definition of the RCE at the beginning of
+this section where prices were obtained as</p>
+<div class="arithmatex">\[
+R\left(z,K\right)=f_{k}\left(z,K,G_{\ell}\left(z,K\right)\right)-\delta\qquad W\left(z,K\right)=f_{\ell}\left(z,K,G_{\ell}\left(z,K\right)\right),
+\]</div>
+<p>with <span class="arithmatex">\(K\)</span> being the aggregate assets in the economy (a state) and
+<span class="arithmatex">\(L=G_{\ell}\left(z,K\right)\)</span> the aggregate supply of labor in the
+economy (consistent with household optimization).</p>
+<h2 id="computing-the-equilibrium-value-function-iteration-the-discrete-case">Computing the Equilibrium: Value function iteration (the discrete case)<a class="headerlink" href="#computing-the-equilibrium-value-function-iteration-the-discrete-case" title="Permanent link">&para;</a></h2>
+<p>The objective is now to illustrate how to compute the equilibrium.
+We take advantage of the fact that the the economy we described is
+efficient and that we can therefore use the planner's problem to construct
+all the equilibrium functions. We further simplify the problem by
+getting rid of the labor choice. This simplifies the exposition. The
+planner's problem is to choose aggregate quantities subject to feasibility:</p>
+<div class="arithmatex">\[\begin{align*}
+V(K,z) &amp; =\max_{\left\lbrace  C,K\right\rbrace }\,u\left(C\right)+\beta\int_{z^{\prime}}V\left(K^{\prime},z^{\prime}\right)Q\left(z,dz^{\prime}\right)\\
+\text{s.t.} &amp; \qquad C+K^{\prime}=f\left(z,K\right)+\left(1-\delta\right)K.
+\end{align*}\]</div>
+<p>The solution to the planner's problem immediately gives us the equilibrium
+for individual quantities <span class="arithmatex">\(\left\lbrace  c,a,k\right\rbrace\)</span> and prices <span class="arithmatex">\(\left\lbrace  r\right\rbrace\)</span>
+by setting</p>
+<div class="arithmatex">\[
+c=C\qquad k=a=K\qquad r=f_{k}\left(z,K,L\right)-\delta.
+\]</div>
+<p>We can solve the problem using value function iteration. The key is
+that, unlike the household problem above, we do not need to condition
+on the functions for prices or aggregates.</p>
+<div class="admonition algorithm">
+<p class="admonition-title">Algorithm: Value Function Iteration</p>
+<p><strong>Result:</strong> Fixed Point of Bellman Operator <span class="arithmatex">\(T\)</span></p>
+<div class="highlight"><pre><span></span><code>n=0; V^0 in S; dist_V=1
+while n &lt;= N and dist_V&gt;tol_V:
+    V^n+1 = TV^n
+    dist_V = d(V^n+1, V^n)
+if dist_V &lt;= tol_V:
+    Obtain g from TV^n
+else:
+    You are in trouble... something went wrong
+</code></pre></div>
+</div>
+<p>While actually solving the problem as posed can be challenging (because
+of the difficulties in making continuous choices and taking expectations)
+it is possible to approximate it with a related (and much simpler
+problem) in which the whole problem is discretized. This is the simplest
+implementation of value function iteration. The key advantage is that
+there are no continuous choices (or integral), instead, the problem
+consists in choosing the best value of capital from a pre-specified
+and fixed grid (hence its common name of grid search).</p>
+<p>The approximation of the (continuous) dynamic programming problem
+with a discrete one does not require the use of derivatives and is
+robust to complications such as kinks in the choice set, or asymmetries
+in the functions being used. It is also very easy to implement. However,
+it is not (in general) a very precise approximation, and it has a
+low rate of convergence, making it slow. This problem is compounded
+by the curse of dimensionality, which bites particularly hard for
+discrete problems because they require large state spaces in order
+to improve the accuracy of the approximation (more on how to gauge
+accuracy at the end of this section).</p>
+<p>The discrete problem is</p>
+<div class="arithmatex">\[
+V\left(k_{i},z_{j}\right)=\max_{k^{\prime}\in\left\lbrace  k_{1},\ldots,k_{I}\right\rbrace }\,U\left(z_{j}k_{i}^{\alpha}+\left(1-\delta\right)k_{i}-k^{\prime}\right)+\beta\sum_{j^{\prime}=1}^{J}\Pi_{jj'}V\left(k^{\prime},z_{j^{\prime}}\right)
+\]</div>
+<p>where we have replaced the constraint, leaving consumption implicitly
+defined by the choice of capital which is now discrete. Conveniently,
+everything in the problem is now a vector or a matrix:</p>
+<div class="arithmatex">\[
+V=\left[V_{ij}\right];\qquad\vec{k}=\left[k_{1},\ldots,k_{I}\right]^{T};\qquad\vec{z}=\left[z_{1},\ldots,z_{J}\right]^{T};\qquad\Pi=\left[\Pi_{jj^{\prime}}=Q\left(z_{j},\left\lbrace  z_{j^{\prime}}\right\rbrace \right)\right];
+\]</div>
+<div class="arithmatex">\[
+U=\left[U_{ijh}=u\left(z_{j}k_{i}^{\alpha}\qquad\vec{k}=\left[k_{1},\ldots,k_{I}\right]^{T}-k_{h}^{\prime}\right)\right];
+\]</div>
+<p>This allows us to solve the problem of choosing <span class="arithmatex">\(k^{\prime}\in\left\lbrace  k_{1},\ldots,k_{I}\right\rbrace\)</span>
+for every pair of <span class="arithmatex">\(\left(k_{i},z_{j}\right)\)</span> in two different ways.
+Either looping through all the pairs of states, or collapsing the
+matrix of payoffs along its third dimension.</p>
+<div class="admonition algorithm">
+<p class="admonition-title">Algorithm: Bellman Operator: Discrete grid with loops</p>
+<div class="highlight"><pre><span></span><code>function T(V_old, k_grid, z_grid, alpha, beta):
+
+    n_k = length(k_grid)
+    n_z = length(z_grid)
+    V = zeros(n_k, n_z); G_kp = zeros(n_k, n_z); G_c = zeros(n_k, n_z)
+
+    for i = 1:n_k:
+        for j = 1:n_z:
+            V_aux = zeros(n_k)
+
+            for h = 1:n_k:
+                V_aux[h] = u(k_grid[i], z_grid[j], k_grid[h]; alpha, beta) + beta * sum(Pi[j, j&#39;] * V_old[h, j&#39;])
+
+            V[i, j], G_kp[i, j] = findmax(V_aux)
+
+            G_c[i, j] = f(k_grid[i], z_grid[j]) + (1- delta)k_grid[i] - k_grid[G_kp[i, j]]
+    return V, G_kp, G_c
+</code></pre></div>
+</div>
+<p>This algorithm can be sped up in many programming languages by operating
+directly on matrices, instead of relying on loops. This also leads
+to a more concise program.</p>
+<p>In order to evaluate the accuracy of the solution we make use of <strong>Euler
+Residuals</strong>. These are the residuals in the first order conditions
+of the actual problem, which should be zero for the correct solution.</p>
+<div class="arithmatex">\[
+\mathbf{Res}\left(k,z_{j}|g\right)=\underbrace{\frac{\beta\sum_{j^{\prime}=1}^{J}\Pi_{jj^{\prime}}U^{\prime}\left(f\left(z_{j^{\prime}},g\left(k,z_{j}\right)\right)+\left(1-\delta\right)k-g\left(g\left(k,z_{j}\right),z_{j^{\prime}}\right)\right)\frac{\partial f\left(z_{j^{\prime}},g\left(k,z_{j}\right)\right)}{dk}}{U^{\prime}\left(f\left(z_{j},k\right)+\left(1-\delta\right)k-g\left(k,z_{j}\right)\right)}-1}_{\text{\% Error in Euler Equation}}
+\]</div>
+<p>We can evaluate these residuals for values of capital in the grid
+used to solve the problem. The Euler residuals can help diagnose if
+there are parts of the state space that need to be denser (say having
+more grid points near low-levels of capital where the curvature of
+the problem is higher) or whether the approximation to the solution
+is satisfactory in general.</p>
+<p>Having approximated the solution to the dynamic programming problem
+we can construct a Markov process for the states in the economy and
+obtain their stationary distribution. In the special case of discrete
+grid search, this is facilitated by the fact that the choice of future
+capital is always in the grid. We can then construct a Markov transition
+matrix for the state vector of the economy. In this case, the state
+is <span class="arithmatex">\(s=\left(k,z\right)\)</span>, and the state space can be express as a
+long vector</p>
+<div class="arithmatex">\[
+\vec{s}=\left(\left(k_{1},z_{1}\right),\left(k_{1},z_{2}\right),\ldots,\left(k_{1},z_{J}\right),\left(k_{2},z_{1}\right),\ldots,\left(k_{2},z_{J}\right),\ldots,\left(k_{I},z_{1}\right),\ldots,\left(k_{I},z_{J}\right)\right).
+\]</div>
+<p>The Markov transition matrix is therefore a square matrix with <span class="arithmatex">\(I\times J\)</span>
+rows and columns. We can build the matrix following the steps in <a href="section-05-stochastic-dynamic-programming.html#ref-subsec-markov-processes-over-states">Markov Processes over States</a>. The key is that <span class="arithmatex">\(z\)</span> evolves
+independently following the transition matrix <span class="arithmatex">\(\Pi\)</span>, while <span class="arithmatex">\(k\)</span> evolves
+deterministically. The matrix is then</p>
+<div class="arithmatex">\[
+\Psi_{\left(ij,i^{\prime}j^{\prime}\right)}=\Pi_{jj^{\prime}}\chi_{\left\lbrace  i^{\prime}=G_{kp}\left(i,j\right)\right\rbrace }.
+\]</div>
+<p>The properties of the stochastic process for capital and productivity
+then follow from this matrix. For instance, the stationary distribution
+is obtained from the eigenvector associated with the matrix unit eigenvalue.</p>
+<h2 id="recursive-competitive-equilibrium-example-sovereign-default">Recursive Competitive Equilibrium Example: Sovereign Default<a class="headerlink" href="#recursive-competitive-equilibrium-example-sovereign-default" title="Permanent link">&para;</a></h2>
+<p>Sovereign default models form a large literature on international
+economics and are also a great example of stochastic dynamic programming.
+The choice to default required dynamics in order to have an opportunity
+and a reason to borrow and to introduce a relevant tradeoff around
+default. The model must also be stochastic in order to induce the
+situations in which a decision maker borrows and then finds themselves
+in a situation where they opt to default. These models are also inherently
+inefficient, preventing the use of the planner's problem. The reason
+is that markets must be incomplete in order for the decision maker
+not to be able to fully insure against risk. Further, the borrowing
+and default decisions depend on prices, which are taken as given by
+the decision maker, but that respond endogenously (in equilibrium)
+to the decision maker's choices.</p>
+<p>The basic sovereign default model follows <a href="https://www.aeaweb.org/articles?id=10.1257/aer.98.3.690">Arellano (2008)</a>.
+It is a stochastic endowment economy. Output (or income) follows an
+exogenous (discrete) Markov process described by an underlying state
+<span class="arithmatex">\(s\in\left\lbrace  s_{1},\ldots,s_{N}\right\rbrace =S\)</span>. The decision maker,
+say the government, chooses borrowing/saving and whether to default
+on debt. The decision is made taking as given a price schedule for
+debt <span class="arithmatex">\(\left(q\right)\)</span> that depends on the state of the economy and
+the debt of the government.</p>
+<p>The dynamic programming problem is then split in two. First there
+is the (discrete) choice of whether to default. The state of the government
+is the pair <span class="arithmatex">\(\left(s,b\right)\)</span>, where <span class="arithmatex">\(s\)</span> is the exogenous state
+of the economy and <span class="arithmatex">\(b\)</span> is the level of outstanding bonds to be paid
+to the government (so <span class="arithmatex">\(b&gt;0\)</span> means savings and <span class="arithmatex">\(b&lt;0\)</span> means debt).
+If the government pays they get to access the lending markets and
+gets a value of <span class="arithmatex">\(V\left(s,b\right)\)</span> but if it defaults it is thrown
+into financial autarky and gets a value <span class="arithmatex">\(V^{A}\left(s\right)\)</span> (that
+no longer depends on <span class="arithmatex">\(b\)</span> because there is no debt and no access no
+markets). The value of the government, <span class="arithmatex">\(V^{\star}\)</span>, reflects the
+upper envelope of this choice,</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+V^{\star}\left(s,b\right) &amp; = &amp; \max_{d\in\left\lbrace  0,1\right\rbrace }\left\lbrace  \left(1-d\left(s,b\right)\right)V\left(s,b\right)+d\left(s,b\right)V^{A}\left(s\right)\right\rbrace .
+\end{eqnarray*}\]</div>
+<p>The value of having access to the financial markets is</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+V\left(s,b\right) &amp; = &amp; \underset{\left\lbrace  c,b'\right\rbrace }{\max}\left\lbrace  \frac{c\left(s,b\right)^{1-\sigma}-1}{1-\sigma}+\beta\sum_{s^{\prime}\in S}\pi\left(s,s^{\prime}\right)V^{\star}\left(s',b'\right)\right\rbrace \\
+&amp;  s.t.  &amp; c\left(s,b\right)\leq y\left(s\right)+b-q\left(s,b\right)b^{\prime}\left(s,b\right)\\
+&amp;  &amp; -B\leq b^{\prime}\left(s,b\right)\qquad\text{[B: borrowing limit]}\\
+&amp;  &amp; 0\leq c\left(s,b\right).
+\end{eqnarray*}\]</div>
+<p>The value of going into autarky is</p>
+<div class="arithmatex">\[
+V^{A}\left(s\right)=\frac{\left(h\left(y\left(s\right)\right)\right)^{1-\sigma}-1}{1-\sigma}+\beta\underset{s'\in S}{\sum}\pi\left(s,s'\right)\left(\theta V^{\star}\left(s',0\right)+\left(1-\theta\right)V^{A}\left(s'\right)\right),
+\]</div>
+<p>where <span class="arithmatex">\(h\left(y\right)&lt;y\)</span> is a function that penalizes output, representing
+the costs of autarky. There is no choice for the government as there
+are no markets that allow it to smooth consumption. The government
+returns to the markets with probability <span class="arithmatex">\(\theta\geq0\)</span>.</p>
+<p>There is also a sector of financial intermediaries that operate in
+perfect competition. They are risk neutral and lend in an actuarially
+fair manner, meaning that their prices reflect the expected costs
+of default and so they break even in expectation. The profits of one
+of these financial intermediaries are</p>
+<div class="arithmatex">\[
+\text{Pr}=qb^{\prime}-\frac{1-\delta}{1+r}b^{\prime},
+\]</div>
+<p>where <span class="arithmatex">\(\delta\)</span> is the (endogenously determined) probability of default
+taken as given by the intermediary. This probability comes, in equilibrium,
+from the optimal default choice of the government, <span class="arithmatex">\(g^{D}\left(s,b\right)\)</span>,
+and satisfies</p>
+<div class="arithmatex">\[
+\delta=E_{s^{\prime}}\left[g^{D}\left(s^{\prime},b^{\prime}\right)|s\right]\qquad\text{where }g^{D}\left(s^{\prime},b^{\prime}\right)=\begin{cases}
+1 &amp; \text{if default}\\
+0 &amp; \text{if no default }
+\end{cases}.
+\]</div>
+<p>Free entry gives the zero profit (break even) condition that <span class="arithmatex">\(\text{Pr}=0\)</span>
+and so the debt price is (in equilibrium):</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+q\left(s,b'\right) &amp; = &amp; \begin{cases}
+\frac{1-\underset{s^{\prime}\in S}{\sum}\pi\left(s'\right)g^{D}\left(s',b'\right)}{R} &amp;   if  b'&lt;0\\
+\frac{1}{R} &amp;   if  b'\geq0
+\end{cases}
+\end{eqnarray*}\]</div>
+<p>A <strong>Recursive Competitive Equilibrium</strong> is then a set of value
+functions <span class="arithmatex">\(\left\lbrace  V^{\star},V^{A},V\right\rbrace\)</span>, policy functions
+<span class="arithmatex">\(\left\lbrace  g^{c},g^{b},g^{D}\right\rbrace\)</span>, and a price functional <span class="arithmatex">\(\left\lbrace  q\left(s,b^{\prime}\right)\right\rbrace\)</span>
+such that</p>
+<ol>
+<li>The value functions solve the Bellman equations of the government
+    and the policy functions achieve the maximum in those equations taking
+    the price <span class="arithmatex">\(q\)</span> as given.</li>
+<li>The price <span class="arithmatex">\(q\)</span> satisfies the zero profit or break even condition of
+    the financial intermediaries</li>
+</ol>
+<h2 id="welfare-comparisons">Welfare comparisons<a class="headerlink" href="#welfare-comparisons" title="Permanent link">&para;</a></h2>
+<p>We have focused so far on the behavior of aggregates, the positive
+implications of the models. We now turn briefly to how to make welfare
+comparisons between models. This is most often needed when evaluating
+policy changes, or counterfactuals in which missing markets are completed.
+In these scenarios there are two specifications of the economy, a
+"benchmark" economy that we call <span class="arithmatex">\(B\)</span>, and an alternative economy
+that we call <span class="arithmatex">\(A\)</span>. The question at hand is <em>how much</em> better
+(or worse) are consumers when moving from economy <span class="arithmatex">\(B\)</span> to economy
+<span class="arithmatex">\(A\)</span>.</p>
+<p>The challenge for welfare comparisons resides in how to make sense
+of the units of value functions (indirect utility). The most standard
+solution is to compute welfare in "consumption-equivalent" units.
+That is, what percentage of consumption are consumers willing to give
+up <em>in all states and times</em> to avoid the change (in case welfare
+is lower in <span class="arithmatex">\(A\)</span> relative to <span class="arithmatex">\(B\)</span>) or how much they need to be compensated
+with for not making the change (in case welfare is higher in <span class="arithmatex">\(A\)</span>
+relative to <span class="arithmatex">\(B\)</span>). The derivation follows closely the concept of "certainty-equivalent"
+for lotteries.</p>
+<p>To compute the consumption-equivalent welfare gain (or loss) between
+economies <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> we first define the value of consumers in
+each economy as</p>
+<div class="arithmatex">\[
+V^{B}\left(s\right)=E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(c_{t}^{B}\left(s^{t}\right)\right)\right|s_{0}=s\right]\qquad\text{and}\qquad V^{A}\left(s\right)=E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(c_{t}^{A}\left(s^{t}\right)\right)\right|s_{0}=s\right],
+\]</div>
+<p>where <span class="arithmatex">\(V^{B}\left(s\right)\)</span> and <span class="arithmatex">\(V^{A}\left(s\right)\)</span> are the values
+in each economy of being in state <span class="arithmatex">\(s\)</span>, and <span class="arithmatex">\(c^{B}\)</span> and <span class="arithmatex">\(c^{A}\)</span>
+are the consumption contingent plans in each economy. These can be
+obtained from the solution to the recursive problem (recall that the
+principle of optimality applies, <a href="section-05-stochastic-dynamic-programming.html#ref-subsec-the-principle-of-optimality-stochastic">The Principle of Optimality</a>).</p>
+<p>The consumption-equivalent welfare <span class="arithmatex">\(\text{CE}\left(s\right)\)</span> at state
+<span class="arithmatex">\(s\)</span>, is such that consumers are indifferent between the two economies
+when, in the benchmark economy, they give/receive <span class="arithmatex">\(100\times\text{CE}\%\)</span>
+more/less consumption in all states and times:</p>
+<div class="arithmatex">\[
+E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(\left(1+\text{CE}\left(s\right)\right)c_{t}^{B}\left(s^{t}\right)\right)\right|s_{0}=s\right]=E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(c_{t}^{A}\left(s^{t}\right)\right)\right|s_{0}=s\right].
+\]</div>
+<p>Computing these expectations as they are is almost impossible. We
+can make progress by using the principle of optimality and imposing
+some structure over payoffs.</p>
+<p>Assume now that utility is homothetic. In practice this implies that</p>
+<div class="arithmatex">\[
+u\left(c\right)=\frac{c^{1-\sigma}}{1-\sigma}.
+\]</div>
+<p>We can then write, for <span class="arithmatex">\(\sigma\neq1\)</span>,</p>
+<div class="arithmatex">\[
+\text{CE}\left(s\right)\;=\;\left(\frac{E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(c_{t}^{A}\left(s^{t}\right)\right)\right|s_{0}=s\right]}{E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(c_{t}^{B}\left(s^{t}\right)\right)\right|s_{0}=s\right]}\right)^{\frac{1}{1-\sigma}}-1\;=\;\left(\frac{V^{B}\left(s\right)}{V^{A}\left(s\right)}\right)^{\frac{1}{1-\sigma}}-1,
+\]</div>
+<p>and, for <span class="arithmatex">\(\sigma=1\)</span>,</p>
+<div class="arithmatex">\[
+\text{CE}\left(s\right)\;=\;\exp\left(\left(1-\beta\right)\left(V^{A}\left(s\right)-V^{B}\left(s\right)\right)\right)-1.
+\]</div>
+<p>This welfare gain measure depends on the state. This shows that the
+desirability of the change (say a policy) is state dependent. We have
+two ways in which to aggregate these gains that take into account
+the distribution over states. (i) We can aggregate welfare gains measured
+at every state with respect to the stationary distribution of states.
+(ii) We can define a single measure that applies across states, to
+an agent who does not know what state they will face.</p>
+<p>Let <span class="arithmatex">\(\Gamma^{B}\)</span> and <span class="arithmatex">\(\Gamma^{A}\)</span> be stationary distribution over
+states. The first option is just <span class="arithmatex">\(E_{\Gamma^{B}}\left[\text{CE}\left(s\right)\right]=\int\text{CE}\left(s\right)d\Gamma^{B}\left(s\right)\)</span>,
+where we take the expectation with respect to the stationary distribution
+in the benchmark economy, so as to know how the agents in that economy
+value the potential change to the alternative economy. The second
+option defines <span class="arithmatex">\(\overline{\text{CE}}\)</span> as the solution to</p>
+<div class="arithmatex">\[
+\int E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(\left(1+\overline{\text{CE}}\right)c_{t}^{B}\left(s^{t}\right)\right)\right|s_{0}=s\right]d\Gamma^{B}\left(s\right)=\int E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(c_{t}^{A}\left(s^{t}\right)\right)\right|s_{0}=s\right]d\Gamma^{A}\left(s\right),
+\]</div>
+<p>so as to know how an agent who does not know what state they will
+face values being dropped in either economy. We can further solve
+for <span class="arithmatex">\(\overline{\text{CE}}\)</span> as</p>
+<div class="arithmatex">\[
+\overline{\text{CE}}\;=\;\left(\frac{\int V^{B}\left(s\right)d\Gamma^{A}\left(s\right)}{\int V^{A}\left(s\right)d\Gamma^{B}\left(s\right)}\right)^{\frac{1}{1-\sigma}}-1.
+\]</div>
+<p>There is one important issue that remains: <em>What is the source
+of the welfare gains (or losses)?</em> We can use the computation of welfare
+to obtain some answers. The gains come from changes in the level of
+consumption or from the distribution of consumption across states.
+The expected value of consumption in each economy is, respectively,
+<span class="arithmatex">\(C^{B}=\int c^{B}\left(s\right)d\Gamma^{B}\left(s\right)\)</span> and <span class="arithmatex">\(C^{A}=\int c^{A}\left(s\right)d\Gamma^{A}\left(s\right)\)</span>.
+We can now think of the welfare gain as happening in steps. First,
+we move the level of consumption without changing its distribution
+over states. This amounts to scaling consumption in the benchmark
+economy by <span class="arithmatex">\(\frac{C^{A}}{C^{B}}\)</span>. That is, define</p>
+<div class="arithmatex">\[
+\hat{c}^{B}\left(\cdot\right)=\frac{C^{A}}{C^{B}}c^{B}\left(\cdot\right);
+\]</div>
+<p>Second, we change the distribution from <span class="arithmatex">\(\Gamma^{B}\)</span> to <span class="arithmatex">\(\Gamma^{A}\)</span>
+and we update <span class="arithmatex">\(\hat{c}^{B}\)</span> to <span class="arithmatex">\(c^{A}\)</span> to capture the change in
+the distribution of outcomes, holding the average level of consumption
+constant (that is why both <span class="arithmatex">\(\Gamma\)</span> and <span class="arithmatex">\(c\)</span> are updated in this
+step). The welfare gain in the first case captures the change in levels,
+we denote it <span class="arithmatex">\(\overline{\text{CE}}^{L}\)</span>, and the welfare gain in
+the second case captures the change in distributions, we denote it
+<span class="arithmatex">\(\overline{\text{CE}}^{D}\)</span>.</p>
+<p>The level gain is defined as <span class="arithmatex">\(\overline{\text{CE}}^{L}\)</span> such that</p>
+<div class="arithmatex">\[\begin{align*}
+\int E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(\left(1+\overline{\text{CE}}^{L}\right)c_{t}^{B}\left(s^{t}\right)\right)\right|s_{0}=s\right]d\Gamma^{B}\left(s\right) &amp; =\int E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(\hat{c}_{t}^{B}\left(s^{t}\right)\right)\right|s_{0}=s\right]d\Gamma^{B}\left(s\right)\\
+\left(1+\overline{\text{CE}}^{L}\right)^{1-\sigma}V^{B}\left(s\right) &amp; =\left(\frac{C^{A}}{C^{B}}\right)^{1-\sigma}V^{B}\left(s\right)\\
+\overline{\text{CE}}^{L} &amp; =\frac{C^{A}}{C^{B}}-1
+\end{align*}\]</div>
+<p>The distributional gain is defined as <span class="arithmatex">\(\overline{\text{CE}}^{D}\)</span>
+such that</p>
+<div class="arithmatex">\[\begin{align*}
+\int E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(\left(1+\overline{\text{CE}}^{D}\right)\times\hat{c}_{t}^{B}\left(s^{t}\right)\right)\right|s_{0}=s\right]d\Gamma^{B}\left(s\right) &amp; =\int E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(c_{t}^{A}\left(s^{t}\right)\right)\right|s_{0}=s\right]d\Gamma^{A}\left(s\right)\\
+\left(\left(1+\overline{\text{CE}}^{D}\right)\frac{C^{A}}{C^{B}}\right)^{1-\sigma}\int E_{0}\left[\left.\sum_{t=0}^{\infty}\beta^{t}u\left(c_{t}^{B}\left(s^{t}\right)\right)\right|s_{0}=s\right]d\Gamma^{B}\left(s\right) &amp; =V^{A}\left(s\right)\\
+\left(1+\overline{\text{CE}}^{D}\right)\frac{C^{A}}{C^{B}} &amp; =\left(\frac{V^{A}\left(s\right)}{V^{B}\left(s\right)}\right)^{\frac{1}{1-\sigma}}\\
+\left(1+\overline{\text{CE}}^{D}\right)\left(1+\overline{\text{CE}}^{L}\right) &amp; =1+\overline{\text{CE}}
+\end{align*}\]</div>
+<p>Showing that the total gain is decomposed into the level and the distributional
+gain. Similar ideas apply when utility also depends on leisure, or
+on other factors (like bequests). We will return to these ideas in
+the context of heterogeneous agent economies, where there are differences
+across individuals.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="section-05-stochastic-dynamic-programming.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Stochastic Dynamic Programming">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Stochastic Dynamic Programming
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../part-03-heterogeneous-agent-models/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Sergio Ocampo Díaz · Western University
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

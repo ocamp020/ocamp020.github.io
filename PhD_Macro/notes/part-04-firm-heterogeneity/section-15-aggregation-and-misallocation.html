@@ -1,0 +1,2422 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Searchable course website generated from Ocampo-Macro_Notes.tex">
+      
+      
+      
+        <link rel="canonical" href="https://ocamp020.github.io/PhD_Macro/notes/part-04-firm-heterogeneity/section-15-aggregation-and-misallocation.html">
+      
+      
+        <link rel="prev" href="section-14-variable-markups.html">
+      
+      
+        <link rel="next" href="../part-05-input-output-networks-and-economic-activity/index.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Aggregation and Misallocation - EC9604 Advanced Macroeconomics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aggregation-and-misallocation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-header__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EC9604 Advanced Macroeconomics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aggregation and Misallocation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-nav__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EC9604 Advanced Macroeconomics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-01-preliminaries/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preliminaries
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Preliminaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-01-macroeconomic-variables-and-distributions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macroeconomic Variables and Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-02-aggregation-complete-markets-preferences-and-technology.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation: Complete Markets, Preferences, and Technology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-03-markov-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markov Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-02-dynamic-programming/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dynamic Programming
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-05-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Recursive Competitive Equilibrium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-03-heterogeneous-agent-models/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heterogeneous Agent Models
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Heterogeneous Agent Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-07-the-income-fluctuations-model-and-precautionary-savings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Income Fluctuations Model and Precautionary Savings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-08-an-endowment-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    An Endowment Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-09-a-production-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-10-a-production-economy-with-aggregate-risk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy with Aggregate Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firm Heterogeneity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Firm Heterogeneity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-11-span-of-control.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Span of Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-12-market-power.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Market Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-13-monopolistic-competition.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monopolistic Competition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-14-variable-markups.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variable Markups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation and Misallocation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="section-15-aggregation-and-misallocation.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation and Misallocation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aggregation-and-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aggregation, and Efficiency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wedges-and-misallocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wedges and Misallocation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-financial-frictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application: Financial Frictions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-05-input-output-networks-and-economic-activity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks and Economic Activity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input-Output Networks and Economic Activity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-16-a-domar-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Domar Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-17-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-18-examples-of-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples of Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-19-hulten-s-theorem-for-efficient-economies.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hulten's Theorem for Efficient Economies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-20-beyond-hulten-second-order-effects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Second order effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-21-beyond-hulten-distortions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Distortions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-06-random-variables-and-probability/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Variables and Probability
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Random Variables and Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-22-measure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-23-measurable-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measurable functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-24-the-lebesgue-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Lebesgue integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-25-the-stieltjes-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Stieltjes integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-07-stochastic-calculus/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Calculus
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Calculus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-26-stochastic-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-27-ito-s-lemma.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ito's Lemma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-28-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-29-the-kolmogorov-forward-equation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Kolmogorov Forward Equation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-30-application-real-options.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Real Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-31-application-menu-cost-stokey-2009-ch-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Menu cost Stokey (2009, Ch. 7)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aggregation-and-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aggregation, and Efficiency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wedges-and-misallocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wedges and Misallocation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-financial-frictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application: Financial Frictions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div class="section-meta">
+  <a href="index.html">Part 4: Firm Heterogeneity</a>
+  <span>Section 15</span>
+</div>
+
+<h1 id="aggregation-and-misallocation">Aggregation and Misallocation<a class="headerlink" href="#aggregation-and-misallocation" title="Permanent link">&para;</a></h1>
+<p>Once we have a theory of firm heterogeneity we can start asking questions
+about misallocation of resources and hence of economic activity. The
+question is the same of the welfare theorems: is the market equilibrium
+efficient? Here we will focus on efficiency in terms of production.
+The exposition here follows the review of the literature in <a href="https://doi.org/10.1146/annurev-economics-082912-110223">Hopenhayn (2014)</a>.</p>
+<h2 id="aggregation-and-efficiency">Aggregation, and Efficiency<a class="headerlink" href="#aggregation-and-efficiency" title="Permanent link">&para;</a></h2>
+<p>Lets start by revisiting the span of control model. As we have seen
+already, the key for firm heterogeneity is to introduce decreasing
+returns to scale. This can be done from the technology side as in
+<a href="https://doi.org/10.2307/3003596">Lucas (1978)</a> or from the demand side as in <a href="https://www.jstor.org/stable/1831401">Dixit and Stiglitz (1977)</a>.
+Both setups deliver similar results and so we start with the span
+of control problem in its simpler form. We show that both setups are
+efficient.</p>
+<p>There is a population of <span class="arithmatex">\(N\)</span> workers with preferences for good consumption
+(no disutility from labor). There is a mass <span class="arithmatex">\(M\)</span> of firms that differ
+in their productivity distributed according to <span class="arithmatex">\(\Gamma\)</span>. The firms'
+production technology uses only labor and is</p>
+<div class="arithmatex">\[
+y_{i}=z_{i}n_{i}^{\alpha}.
+\]</div>
+<p>There are no operational costs.</p>
+<p>The notation changed relative to the one above to make results more
+comparable, so that <span class="arithmatex">\(y_{i}\)</span> is the quantity produced by firm <span class="arithmatex">\(i\)</span>.</p>
+<p><strong>Market Economy</strong></p>
+<p>Markets are competitive. The wage rate is <span class="arithmatex">\(w\)</span>, the price of the final
+good is normalized to 1. We know that the optimal size is</p>
+<div class="arithmatex">\[
+n^{\star}\left(z\right)=\left(\frac{\alpha z}{w}\right)^{\frac{1}{1-\alpha}}\qquad\text{and}\qquad y^{\star}\left(z\right)=z^{\frac{1}{1-\alpha}}\left(\frac{\alpha}{w}\right)^{\frac{\alpha}{1-\alpha}}.
+\]</div>
+<p>To clear the labor market we need that</p>
+<div class="arithmatex">\[
+N=\int_{0}^{M}n^{\star}\left(z_{i}\right)di=\left(\frac{\alpha}{w^{\star}}\right)^{\frac{1}{1-\alpha}}\int_{0}^{M}z_{i}^{\frac{1}{1-\alpha}}di,
+\]</div>
+<p>so the equilibrium wage is</p>
+<div class="arithmatex">\[
+w^{\star}=\alpha\left(\int_{0}^{M}z_{i}^{\frac{1}{1-\alpha}}di\right)^{1-\alpha}N^{\alpha-1}.
+\]</div>
+<p>Thus, the equilibrium firm size is</p>
+<div class="arithmatex">\[
+y^{\star}\left(z_{i}\right)=z_{i}^{\frac{1}{1-\alpha}}\left(\frac{N}{\int_{0}^{M}z_{j}^{\frac{1}{1-\alpha}}dj}\right)^{\alpha}
+\]</div>
+<p>and total output is</p>
+<div class="arithmatex">\[
+Y=\int_{0}^{M}y^{\star}\left(z_{i}\right)di=\underbrace{\left(\int_{0}^{M}z_{i}^{\frac{1}{1-\alpha}}di\right)^{1-\alpha}}_{\text{Agg. Productivity}}N^{\alpha}.
+\]</div>
+<p>Therefore, this economy has an aggregate production function that
+looks the same as the individual production function of a firm but
+with an aggregate productivity given by the distribution of firms.
+This production function has decreasing returns to scale if we take
+as firms as a fixed production factor.</p>
+<p>We can get a different and more informative expression if we focus
+on the distribution of firm productivity and separate from the number
+of firms:</p>
+<div class="arithmatex">\[
+Y=\overbrace{Z}^{\text{Avg. Prod.}}\underbrace{M^{1-\alpha}}_{\text{Firm Scale}}N^{\alpha}.
+\]</div>
+<p>Here, <span class="arithmatex">\(Z\)</span> is the average productivity across firms in the economy,
+we define it as</p>
+<div class="arithmatex">\[
+Z=\left(E\left[z_{i}^{\frac{1}{1-\alpha}}\right]\right)^{1-\alpha}=\left(\int z^{\frac{1}{1-\alpha}}d\Gamma\left(z\right)\right)^{1-\alpha}.
+\]</div>
+<p>Seen this way, aggregate production has constant returns to scale,
+and is increasing in the number of firms. This is, unsurprisingly,
+the same result as in the taste for variety explored above. Another
+important result is that the decreasing returns to scale make the
+harmonic mean the way to aggregate</p>
+<p><strong>Efficient Allocation</strong></p>
+<p>The planner's objective is to maximize output as that maximizes utility,
+so,</p>
+<div class="arithmatex">\[
+\max_{\left\lbrace  n_{i}\right\rbrace }\int_{0}^{M}z_{i}n_{i}^{\alpha}di\qquad\text{s.t. }N=\int_{0}^{M}n_{i}di.
+\]</div>
+<p>The market economy is efficient. To see this, note that the efficient
+allocation equates average products across firms</p>
+<div class="arithmatex">\[\begin{align*}
+\alpha z_{i}n_{i}^{\alpha-1} &amp; =\lambda\\
+\frac{y_{i}}{n_{i}} &amp; =\frac{\lambda}{\alpha}
+\end{align*}\]</div>
+<p>This already happened in the market solution with <span class="arithmatex">\(\lambda=w\)</span>. Hence,
+firm size and the aggregate results above hold unchanged in the efficient
+allocation. <strong>There is no misallocation in this economy</strong>.</p>
+<p><strong>Connection to The Monopolistic Competition Case</strong></p>
+<p>Under monopolistic competition we have constant returns to scale technology
+<span class="arithmatex">\(\left(y_{i}=z_{i}n_{i}\right)\)</span> but curvature in demand (with constant
+elasticity) we know that the market solution has</p>
+<div class="arithmatex">\[
+y_{i}=\left(\frac{c_{i}}{\left(\int_{0}^{M}c_{i}^{1-\varepsilon}di\right)^{\frac{1}{1-\varepsilon}}}\right)^{-\varepsilon}Y=\left(\frac{z_{i}}{\left(\int_{0}^{M}z_{i}^{\varepsilon-1}di\right)^{\frac{1}{\varepsilon-1}}}\right)^{\varepsilon}Y,
+\]</div>
+<p>To clear the labor market the wage must be such that</p>
+<div class="arithmatex">\[
+N=\int_{0}^{M}n_{i}di=\frac{y_{i}}{z_{i}}di=\int_{0}^{M}z_{i}^{\varepsilon-1}\left(\int_{0}^{M}z_{i}^{\varepsilon-1}di\right)^{\frac{-\varepsilon}{\varepsilon-1}}Ydi=\left(\int_{0}^{M}z_{i}^{\varepsilon-1}di\right)^{\frac{-1}{\varepsilon-1}}Y
+\]</div>
+<p>Therefore, aggregate output (or utility) is</p>
+<div class="arithmatex">\[
+Y=\overbrace{Z}^{\text{Avg. Prod.}}\underbrace{M^{\frac{1}{\varepsilon-1}}}_{\text{Taste for Variety}}N,
+\]</div>
+<p>where <span class="arithmatex">\(Z=\left(E\left[z^{\varepsilon-1}\right]\right)^{\frac{1}{\varepsilon-1}}=\left(\int z^{\varepsilon-1}d\Gamma\left(z\right)\right)^{\frac{1}{\varepsilon-1}}\)</span>
+is the average productivity.</p>
+<p>This is the same result we had above once we adjust for the curvature
+of the problem. Notice that aggregation is linear (as above) for a
+monotone transformation of output <span class="arithmatex">\(\tilde{Y}=Y^{\frac{\varepsilon-1}{\varepsilon}}\)</span>
+and <span class="arithmatex">\(\tilde{y}_{i}=y_{i}^{\frac{\varepsilon-1}{\varepsilon}}\)</span>. In
+this case the aggregation gives the same result as in the span of
+control model</p>
+<div class="arithmatex">\[
+\tilde{Y}=\overbrace{\tilde{Z}}^{\text{Avg. Prod.}}\underbrace{M^{\frac{1}{\varepsilon}}}_{\text{Taste for Variety}}N^{\frac{\varepsilon-1}{\varepsilon}}
+\]</div>
+<p>with <span class="arithmatex">\(\alpha=\frac{\varepsilon-1}{\varepsilon}\)</span> and <span class="arithmatex">\(\tilde{Z}=Z^{\frac{\varepsilon-1}{\varepsilon}}\)</span>.</p>
+<p>We already know that entry is (constrained) efficient in this setup.</p>
+<p>The planner's problem is (for the monotone transformation) is</p>
+<div class="arithmatex">\[
+\max_{\left\lbrace  n_{i}\right\rbrace }\underbrace{\int_{0}^{M}\left(z_{i}n_{i}\right)^{\frac{\varepsilon-1}{\varepsilon}}di}_{\tilde{Y}}\qquad\text{s.t. }N=\int_{0}^{M}n_{i}di.
+\]</div>
+<p>Optimality requires</p>
+<div class="arithmatex">\[\begin{align*}
+\frac{\varepsilon-1}{\varepsilon}\left(z_{i}\right)^{\frac{\varepsilon-1}{\varepsilon}}n_{i}^{\frac{\varepsilon-1}{\varepsilon}-1} &amp; =\lambda\\
+\frac{\tilde{y}_{i}}{n_{i}} &amp; =\frac{\varepsilon}{\varepsilon-1}\lambda
+\end{align*}\]</div>
+<p>so all firms have the same average product (as before). This condition
+is satisfied in equilibrium because the pricing choice implies</p>
+<div class="arithmatex">\[\begin{align*}
+p_{i} &amp; =\frac{\varepsilon}{\varepsilon-1}\frac{w}{z_{i}}\\
+\frac{y_{i}^{\frac{\varepsilon-1}{\varepsilon}}}{n_{i}} &amp; =\frac{\varepsilon}{\varepsilon-1}\frac{w}{P}Y^{\frac{1}{\varepsilon}}\\
+\frac{\tilde{y}_{i}}{n_{i}} &amp; =\frac{\varepsilon}{\varepsilon-1}\frac{w}{P}Y^{\frac{1}{\varepsilon}}
+\end{align*}\]</div>
+<p>So, the market solution is efficient as average products are dutifully
+equalized across firms.</p>
+<h2 id="wedges-and-misallocation">Wedges and Misallocation<a class="headerlink" href="#wedges-and-misallocation" title="Permanent link">&para;</a></h2>
+<p>The key for the efficiency of the models above is that firms in the
+market economy had the same marginal product of labor as they are
+all responding to the same costs (in the case of the examples above,
+the same wage rate). Equating the marginal products across firms is
+precisely what you need if you want to maximize output. This is not
+the case in the data. The discrepancies come from firm-specific frictions
+that distort the firm problem. For example, some firms can be subject
+to certain forms of taxation while some others are not (or just evade
+taxes).</p>
+<p><strong>Example: Labor wedge</strong></p>
+<p>Consider an example with firm-specific labor taxes (or equivalently,
+additional labor costs that vary across firms):</p>
+<div class="arithmatex">\[
+\max z_{i}n_{i}^{\alpha}-\left(1+\tau_{i}\right)w.
+\]</div>
+<p>In this case the optimal labor choice and output of a firm become</p>
+<div class="arithmatex">\[
+n^{\star}\left(z_{i}\right)=\left(\frac{\alpha z_{i}}{\left(1+\tau_{i}\right)w}\right)^{\frac{1}{1-\alpha}}\qquad\text{and}\qquad y^{\star}\left(z_{i}\right)=z_{i}^{\frac{1}{1-\alpha}}\left(\frac{\alpha}{\left(1+\tau_{i}\right)w}\right)^{\frac{\alpha}{1-\alpha}}.
+\]</div>
+<p>When we aggregate we can see the role of the distortions. Market clearing
+now requires the wage to be</p>
+<div class="arithmatex">\[
+w^{\star}=\alpha\left(\int_{0}^{M}\left(\frac{z_{i}}{1+\tau_{i}}\right)^{\frac{1}{1-\alpha}}di\right)^{1-\alpha}N^{\alpha-1},
+\]</div>
+<p>and aggregate output becomes</p>
+<div class="arithmatex">\[
+Y=\left(\overbrace{\int\underbrace{\frac{\left(\frac{z_{i}}{1+\tau_{i}}\right)^{\frac{1}{1-\alpha}}}{\int\left(\frac{z_{i}}{1+\tau_{i}}\right)^{\frac{1}{1-\alpha}}d\Gamma\left(z_{i}\right)}}_{\omega_{i}\text{ Distorted Prod. Weights}}\left(1+\tau_{i}\right)d\Gamma\left(z_{i}\right)}^{\text{Weighted Distortion}}\right)\underbrace{\left(\int\left(\frac{z_{i}}{1+\tau_{i}}\right)^{\frac{1}{1-\alpha}}d\Gamma\left(z_{i}\right)\right)^{1-\alpha}}_{\text{Distorted Productivity}}M^{1-\alpha}N^{\alpha}
+\]</div>
+<p>where the distortions affect the problem twice, once distorting productivity
+and then also as an average distortion weighted by productivity.</p>
+<p>An important implication of this result is that distortions must vary
+across firms for them to actually distort. If <span class="arithmatex">\(\tau_{i}=\tau\)</span> we
+can easily see that it cancels out of the expression above.</p>
+<p><strong>TFPR</strong></p>
+<p>In the one input case studied so far (say, only labor) misallocation
+comes from differences in marginal product or average products. When
+there are several inputs this is not necessarily the case. Instead,
+for a production function <span class="arithmatex">\(y_{i}=z_{i}\left(f\left(\vec{x}_{i}\right)\right)^{\alpha}\)</span>
+with <span class="arithmatex">\(f\)</span> a constant returns to scale function in inputs <span class="arithmatex">\(\vec{x}=\left(x_{1},\ldots,x_{N}\right)\)</span>,
+what must be equated across firms is the ratio</p>
+<div class="arithmatex">\[
+\frac{y_{i}}{f\left(\vec{x}_{i}\right)}=\text{TFPR}
+\]</div>
+<p>This ratio is called the total factor productivity of revenue.</p>
+<p>We can see how the TFPR determines the importance of distortions by
+focusing in the one-input case again. In that case <span class="arithmatex">\(\text{TFPR}_{i}=\frac{y_{i}}{n_{i}}\)</span>.
+The efficient (planner's) choice would have been to have <span class="arithmatex">\(\kappa=\frac{y_{i}^{p}}{n_{i}^{p}}=\text{TFPR}^{p}\)</span>
+and so variation in TFPR captures misallocation in this model.</p>
+<p>We can see the effect of distortions as the ratio of the market's
+allocation to the planner's labor choice:</p>
+<div class="arithmatex">\[
+\theta_{i}=\frac{n_{i}}{n_{i}^{p}}=\frac{y_{i}^{p}}{n_{i}^{p}}\frac{n_{i}}{y_{i}}\frac{y_{i}}{y_{i}^{p}}=\frac{\kappa}{\text{TFPR}_{i}}\left(\frac{n_{i}}{n_{i}^{p}}\right)^{\alpha}=\frac{\kappa}{\text{TFPR}_{i}}\theta_{i}^{\alpha}=\longrightarrow\theta_{i}=\left(\frac{\text{TFPR}_{i}}{\kappa}\right)^{\frac{-1}{1-\alpha}}
+\]</div>
+<p>So the variation in TFPR goes hand in hand with the distortions to
+the allocation, captured by <span class="arithmatex">\(\theta\)</span>.</p>
+<p>In the context of the example above with a wedge for labor costs we
+get <span class="arithmatex">\(\theta_{i}\propto\left(1+\tau_{i}\right)^{\frac{1}{1-\alpha}}\)</span>,
+so we can obtain the distortion as function of wedges as well. The
+advantage of <span class="arithmatex">\(\text{TFPR}\)</span> is that, unlike wedges, we can often measure
+it.</p>
+<p>We can now relate the allocation distortions <span class="arithmatex">\(\left\lbrace  \theta_{i}\right\rbrace\)</span>
+and the TFPR to productivity. Total output in the distorted economy
+is</p>
+<div class="arithmatex">\[
+Y^{d}=\int_{0}^{M}z_{i}n_{i}^{\alpha}di=\int_{0}^{M}\theta_{i}^{\alpha}\left(z_{i}\left(n_{i}^{p}\right)^{\alpha}\right)di=\int_{0}^{M}\theta_{i}^{\alpha}y_{i}^{p}di=\kappa\int_{0}^{M}\theta_{i}^{\alpha}n_{i}^{p}di
+\]</div>
+<p>But, notice that <span class="arithmatex">\(\kappa\)</span> is the average labor productivity in the
+undistorted (planner's) economy. So it must be true that <span class="arithmatex">\(Y^{p}=\kappa N.\)</span>
+Replacing we get</p>
+<div class="arithmatex">\[
+\frac{Y^{d}}{Y^{p}}=\int_{0}^{M}\theta_{i}^{\alpha}\underbrace{\frac{n_{i}^{p}}{N}}_{\text{Efficient Labor Weights}}di
+\]</div>
+<p>Moreover, this ratio is also equal to the ratio of TFP between the
+distorted and the undistorted economies because the total labor input
+is the same (recall from the problem above that the only difference
+between the aggregate production functions is in productivity). This
+gives</p>
+<div class="arithmatex">\[
+\frac{\text{TFP}^{d}}{\text{TFP}^{p}}=\int\theta^{\alpha}dN\left(\theta\right),
+\]</div>
+<p>where <span class="arithmatex">\(N\left(\theta\right)=\int_{\left\lbrace  i|\theta_{i}&lt;\theta\right\rbrace }\frac{n_{i}^{p}}{N}di\)</span>
+is the distribution of employment in the efficient allocation of firms
+with distortions <span class="arithmatex">\(\theta_{i}&lt;\theta\)</span>. However, this expression still
+depends on unknown quantities.</p>
+<p>This formula is nevertheless useful because it highlight an important
+property of distortions. In the words of Hopenhayn:</p>
+<blockquote>
+<p>Notice that this formula is silent about the productivity of the firms
+underlying these distortions, so whether they are correlated is not
+important per se. Correlation matters for a different reason. For
+example, consider two groups of firms <span class="arithmatex">\(m_{1}\)</span> and <span class="arithmatex">\(m_{2}\)</span> with productivities
+<span class="arithmatex">\(z_{1}&lt;z_{2}\)</span> and optimal employments <span class="arithmatex">\(n_{1}&lt;n_{2}\)</span>. Suppose further
+that optimal total employment in both groups is identical, i.e., <span class="arithmatex">\(m_{1}n_{1}^{p}=m_{2}n_{2}^{p}\)</span>.
+Then the impact on productivity from shifting a fixed number of workers
+from one group to the other is the same regardless of whether they
+are shifted from the lower- to higher-productivity group or vice versa.</p>
+</blockquote>
+<p>Finally, to see the role of TFPR we can write the TFP gap between
+the efficient and the market allocation using only measured quantities.
+Specifically, we can write (inverse of) the TFP gap as a curved harmonic
+mean of the relative TFPR of firms, weighted by their employment (or
+labor share). This is not obvious. We can construct the formula in
+steps. First, the employment share of a firm is</p>
+<div class="arithmatex">\[
+\frac{n_{i}}{N}\left(=\frac{wn_{i}}{wN}\right)=\left(1+\tau_{i}\right)^{-\frac{1}{1-\alpha}}\frac{z_{i}^{\frac{1}{1-\alpha}}}{\int_{0}^{M}\left(\frac{z_{i}}{1+\tau_{i}}\right)^{\frac{1}{1-\alpha}}di}.
+\]</div>
+<p>Second, the relative TFPR is defined as</p>
+<div class="arithmatex">\[
+\frac{\text{TFPR}_{i}}{\overline{\text{TFPR}}}=\frac{\frac{y_{i}}{n_{i}}}{\frac{Y}{N}}=\frac{\frac{\left(1+\tau_{i}\right)w}{\alpha}}{\frac{Y}{N}}=\left(1+\tau_{i}\right)\left(\int_{0}^{M}\frac{\left(\frac{z_{i}}{1+\tau_{i}}\right)^{\frac{1}{1-\alpha}}}{\int_{0}^{M}\left(\frac{z_{i}}{1+\tau_{i}}\right)^{\frac{1}{1-\alpha}}di}\left(1+\tau_{i}\right)di\right)^{-1}.
+\]</div>
+<p>Finally, we can bring them together to express</p>
+<div class="arithmatex">\[
+\frac{\text{TFP}^{p}}{\text{TFP}^{d}}=\left(\int_{0}^{M}\left(\frac{\text{TFPR}_{i}}{\overline{\text{TFPR}}}\right)^{\frac{1}{1-\alpha}}\frac{n_{i}}{N}di\right)^{1-\alpha}=\frac{\left(\int_{0}^{M}z_{i}^{\frac{1}{1-\alpha}}di\right)^{1-\alpha}}{\left(\int_{0}^{M}\frac{\left(\frac{z_{i}}{1+\tau_{i}}\right)^{\frac{1}{1-\alpha}}}{\int_{0}^{M}\left(\frac{z_{i}}{1+\tau_{i}}\right)^{\frac{1}{1-\alpha}}di}\left(1+\tau_{i}\right)di\right)\left(\int_{0}^{M}\left(\frac{z_{i}}{1+\tau_{i}}\right)^{\frac{1}{1-\alpha}}di\right)^{1-\alpha}}.
+\]</div>
+<p>Notice that this is the inverse to the expression above. A higher
+value implies more misallocation.</p>
+<h2 id="application-financial-frictions">Application: Financial Frictions<a class="headerlink" href="#application-financial-frictions" title="Permanent link">&para;</a></h2>
+<p>Consider the economy described in <a href="https://doi.org/10.1093/qje/qjac047">Guvenen et al. (2023)</a> that
+follows the derivations in <a href="https://doi.org/10.1162/qjec.2009.124.4.1403">Hsieh and Klenow (2009)</a>.</p>
+<p>Entrepreneurs differ in productivity (<span class="arithmatex">\(z_{i}&gt;0)\)</span> and produce a differentiated
+good according to a linear technology:</p>
+<div class="arithmatex">\[
+x_{i}=z_{i}k_{i},
+\]</div>
+<p>where <span class="arithmatex">\(k_{i}\)</span> is the final good used in production by entrepreneur
+<span class="arithmatex">\(i\)</span> at age <span class="arithmatex">\(h\)</span>. The final good, <span class="arithmatex">\(Y,\)</span> is produced according to a
+Cobb-Douglas technology:</p>
+<div class="arithmatex">\[
+Y=Q^{\alpha}L^{1-\alpha},
+\]</div>
+<p>where <span class="arithmatex">\(Q\)</span> is the CES composite of intermediate inputs:</p>
+<div class="arithmatex">\[
+Q=\left(\int x_{i}^{\mu}di\right)^{1/\mu}.
+\]</div>
+<p>To distinguish <span class="arithmatex">\(Q\)</span> from the unadjusted capital stock, <span class="arithmatex">\(K=\int k_{i}di,\)</span>
+we refer to the former as the "quality-adjusted capital stock,"
+since its level depends on the allocation of capital across entrepreneurs.
+Total Factor Productivity in the intermediate goods sector can be
+written as</p>
+<div class="arithmatex">\[
+\text{TFP}_{Q}=\frac{Q}{K},
+\]</div>
+<p>where <span class="arithmatex">\(\text{TFP}_{Q}\)</span> captures the extent of misallocation of capital.
+We write total output as a Cobb-Douglas function of <span class="arithmatex">\(K\)</span> and <span class="arithmatex">\(L\)</span>:
+<span class="arithmatex">\(Y=\text{TFP}\cdot K^{\alpha}L^{1-\alpha},\)</span> where <span class="arithmatex">\(\text{TFP}\equiv\text{TFP}_{Q}^{\alpha}\)</span>
+is the aggregate TFP of the economy.</p>
+<p>The final good producing sector is competitive, so the profit maximization
+problem is</p>
+<div class="arithmatex">\[
+\max_{\{x_{i}\},L}\left(\int x_{i}^{\mu}di\right)^{\alpha/\mu}L^{1-\alpha}-\int\left(p\left(x_{i}\right)\times x_{i}\right)di-\overline{w}L.
+\]</div>
+<p>The first-order optimality conditions yield the inverse demand (price)
+function for each intermediate input and for the market wage:</p>
+<div class="arithmatex">\[
+p\left(x\right)=\alpha Q^{\alpha-\mu}L^{1-\alpha}x^{\mu-1}\qquad\overline{w}=\left(1-\alpha\right)Q^{\alpha}L^{-\alpha}.
+\]</div>
+<p>The economy is distorted because of the existence of financial frictions
+in the form of collateral constraints:</p>
+<div class="arithmatex">\[
+k_{i}\le\vartheta\left(z_{i}\right)\times a_{i},
+\]</div>
+<p>This makes the entrepreneurial problem be</p>
+<div class="arithmatex">\[
+\pi\left(a,z\right)=\max_{k\leq\vartheta(z)a}\left\lbrace  p\left(zk\right)\times zk-\left(r+\delta\right)k\right\rbrace ,
+\]</div>
+<p>where <span class="arithmatex">\(\delta\)</span> is the depreciation rate. The price of the differentiated
+good can be written as <span class="arithmatex">\(p\left(zk\right)=\mathcal{R}\times\left(zk\right)^{\mu-1},\)</span>
+where <span class="arithmatex">\(\mathcal{R}\equiv\alpha Q^{\alpha-\mu}L^{1-\alpha}\)</span>,
+yielding the solution</p>
+<div class="arithmatex">\[
+k\left(a,z\right)=\min\left[\left(\frac{\mu\mathcal{R}z^{\mu}}{r+\delta}\right)^{\frac{1}{1-\mu}},\vartheta\left(z\right)a\right].
+\]</div>
+<p>However, this makes it difficult to aggregate because the level of
+capital (and hence the scale of each entrepreneurial firm) depends
+on the distribution of wealth. Nevertheless, We can measure the effects
+of these distortions on aggregate TFP and output, following a large
+and growing literature that frames the discussion on misallocation
+in terms of various wedges, such as capital, labor, and output wedges.
+In particular, we follow <a href="https://doi.org/10.1162/qjec.2009.124.4.1403">Hsieh and Klenow (2009)</a> and compute
+measures of misallocation for this economy.</p>
+<p>Instead of modeling and capturing the effect of a particular distortion,
+or distortions, we infer the underlying distortions and wedges in
+the economy by studying the extent to which the marginal revenue products
+of capital and labor differ across firms. This is based on the insight
+that without any distortions, the marginal revenue products of capital
+and labor have to be equalized across all firms.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the case in the monopolistic competition models, such as in <a href="https://doi.org/10.1162/qjec.2009.124.4.1403">Hsieh and Klenow (2009)</a>. Alternatively, in environments like the ones in <a href="http://www.jstor.org/stable/3003596">Lucas (1978)</a> and <a href="https://doi.org/10.1016/j.red.2008.05.002">Restuccia and Rogerson (2008)</a>, in which firms feature decreasing returns to scale but produce the same homogeneous good, the marginal products of capital and labor have to be equalized in the non-distorted economy</p>
+</div>
+<p><strong>TFP in the <span class="arithmatex">\(Q\)</span> sector.</strong></p>
+<p>We will first focus on the intermediate goods sector. Under the alternative
+capital-wedge approach, the problem of each intermediate goods producer
+is</p>
+<div class="arithmatex">\[
+\pi_{i}=\max_{k_{i}}p\left(z_{i}k_{i}\right)z_{i}k_{i}-\left(1+\tau_{i}\right)\left(R+\delta\right)k_{i}\,\,,
+\]</div>
+<p>where <span class="arithmatex">\(\tau_{i}\)</span> is a firm-specific wedge. There are no collateral
+constraints. There is only one input and, as a result, only one wedge
+can be identified.</p>
+<p>The revenue TFP in sector <span class="arithmatex">\(Q\)</span> for each firm <span class="arithmatex">\(i\)</span> is</p>
+<div class="arithmatex">\[
+TFPR_{Q,i}\equiv\frac{p\left(x_{i}\right)x_{i}}{k_{i}}=\frac{1}{\mu}\left(1+\tau_{i}\right)\left(R+\delta\right).
+\]</div>
+<p>The aggregate TFP in sector <span class="arithmatex">\(Q\)</span> can be expressed as</p>
+<div class="arithmatex">\[
+TFP_{Q}\equiv\frac{Q}{K}=\left(\int_{i}\left(z_{i}\frac{\overline{TFPR_{Q}}}{TFPR_{Q,i}}\right)^{\frac{\mu}{1-\mu}}di\right)^{\frac{1-\mu}{\mu}},
+\]</div>
+<p>where the average <span class="arithmatex">\(TFPR_{Q}\)</span> is</p>
+<div class="arithmatex">\[
+\overline{TFPR_{Q}}=\left(\int\frac{1}{TFPR_{Q,i}}\frac{p\left(x_{i}\right)x_{i}}{p_{q}Q}di\right)^{-1}.
+\]</div>
+<p>In the non-distorted economy, without capital wedges, the level of
+TFP in the <span class="arithmatex">\(Q\)</span> sector is</p>
+<div class="arithmatex">\[
+TFP_{Q}^{\star}=\left(\int_{i}\left(z_{i}\right)^{\frac{\mu}{1-\mu}}di\right)^{\frac{1-\mu}{\mu}}\equiv\overline{z}.
+\]</div>
+<p>Therefore, we can measure the improvement in TFP in the <span class="arithmatex">\(Q\)</span> sector,
+<span class="arithmatex">\(\Omega_{Q}\)</span>, as a result of eliminating the capital wedges, or equivalently,
+as a result of eliminating the collateral constraints:</p>
+<div class="arithmatex">\[
+\Omega_{Q}\equiv1-\frac{TFP_{Q}}{TFP_{Q}^{\star}}=1-\left(\int_{i}\left(\frac{\overline{z}}{z_{i}}\frac{TFPR_{Q,i}}{\overline{TFPR_{Q}}}\right)^{\frac{\mu}{1-\mu}}di\right)^{\frac{\mu-1}{\mu}}.
+\]</div>
+<p>This measure does not capture the aggregate effect on the economy
+because (i) it applies only to the <span class="arithmatex">\(Q\)</span> sector and not to the production
+of the final good, and (ii) it does not take into account changes
+in aggregate capital in the efficient economy with respect to the
+equilibrium of the distorted economy. In the benchmark calibration
+of <a href="https://doi.org/10.1093/qje/qjac047">Guvenen et al. (2023)</a> this variable has value of <span class="arithmatex">\(\Omega_{Q}=0.35\)</span>,
+implying TFP gains of 35\% in the <span class="arithmatex">\(Q\)</span> sector coming from eliminating
+the collateral constraints.</p>
+<p><strong>Aggregate TFP.</strong></p>
+<p>The final goods producers operate competitively and face no constraints
+or distortions, so there is no labor misallocation in the model. Because
+of this, the only source of misallocation and TFP losses is the <span class="arithmatex">\(Q\)</span>
+sector. We can therefore write output as</p>
+<div class="arithmatex">\[
+Y=\text{TFP}\cdot K^{\alpha}L^{1-\alpha},
+\]</div>
+<p>where <span class="arithmatex">\(\text{TFP}\equiv\text{TFP}_{Q}^{\alpha}\)</span> captures the aggregate
+TFP of the model. Similarly, we can define the efficient TFP level
+of the economy as <span class="arithmatex">\(\text{TFP}^{\star}\equiv\left(\text{TFP}^{\star}\right)^{\alpha}\)</span>
+and the aggregate TFP gain from eliminating distortions in the economy
+as</p>
+<div class="arithmatex">\[\begin{equation}
+\Omega_{Y}\equiv1-\frac{TFP}{TFP^{\star}}=1-\left(\frac{TFP_{Q}}{TFP_{Q}^{\star}}\right)^{\alpha}. \tag{15.1}
+\end{equation}\]</div>
+<p>In the benchmark calibration, the total productivity gain from eliminating
+the collateral constraints in the <span class="arithmatex">\(Q\)</span> sector amounts to <span class="arithmatex">\(16\%\)</span> higher
+TFP.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="section-14-variable-markups.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Variable Markups">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Variable Markups
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../part-05-input-output-networks-and-economic-activity/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Sergio Ocampo Díaz · Western University
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

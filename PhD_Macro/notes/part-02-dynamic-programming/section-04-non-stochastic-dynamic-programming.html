@@ -1,0 +1,2874 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Searchable course website generated from Ocampo-Macro_Notes.tex">
+      
+      
+      
+        <link rel="canonical" href="https://ocamp020.github.io/PhD_Macro/notes/part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="section-05-stochastic-dynamic-programming.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Non-Stochastic Dynamic Programming - EC9604 Advanced Macroeconomics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#non-stochastic-dynamic-programming" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-header__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EC9604 Advanced Macroeconomics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Non-Stochastic Dynamic Programming
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-nav__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EC9604 Advanced Macroeconomics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-01-preliminaries/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preliminaries
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Preliminaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-01-macroeconomic-variables-and-distributions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macroeconomic Variables and Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-02-aggregation-complete-markets-preferences-and-technology.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation: Complete Markets, Preferences, and Technology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-03-markov-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markov Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dynamic Programming
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="section-04-non-stochastic-dynamic-programming.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contraction-mapping-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contraction Mapping Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bellman-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Bellman Equation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-general-framework-and-the-principle-of-optimality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A general framework and the principle of optimality
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bounded-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bounded problems
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-05-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-06-stochastic-recursive-competitive-equilibrium.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Recursive Competitive Equilibrium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-03-heterogeneous-agent-models/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heterogeneous Agent Models
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Heterogeneous Agent Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-07-the-income-fluctuations-model-and-precautionary-savings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Income Fluctuations Model and Precautionary Savings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-08-an-endowment-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    An Endowment Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-09-a-production-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-10-a-production-economy-with-aggregate-risk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy with Aggregate Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-04-firm-heterogeneity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firm Heterogeneity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Firm Heterogeneity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-11-span-of-control.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Span of Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-12-market-power.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Market Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-13-monopolistic-competition.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monopolistic Competition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-14-variable-markups.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variable Markups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-15-aggregation-and-misallocation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation and Misallocation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-05-input-output-networks-and-economic-activity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks and Economic Activity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input-Output Networks and Economic Activity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-16-a-domar-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Domar Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-17-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-18-examples-of-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples of Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-19-hulten-s-theorem-for-efficient-economies.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hulten's Theorem for Efficient Economies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-20-beyond-hulten-second-order-effects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Second order effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-21-beyond-hulten-distortions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Distortions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-06-random-variables-and-probability/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Variables and Probability
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Random Variables and Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-22-measure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-23-measurable-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measurable functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-24-the-lebesgue-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Lebesgue integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-25-the-stieltjes-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Stieltjes integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-07-stochastic-calculus/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Calculus
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Calculus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-26-stochastic-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-27-ito-s-lemma.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ito's Lemma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-28-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-29-the-kolmogorov-forward-equation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Kolmogorov Forward Equation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-30-application-real-options.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Real Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-31-application-menu-cost-stokey-2009-ch-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Menu cost Stokey (2009, Ch. 7)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contraction-mapping-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contraction Mapping Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bellman-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Bellman Equation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-general-framework-and-the-principle-of-optimality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A general framework and the principle of optimality
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bounded-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bounded problems
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="ref-sec-non-stochastic-dp" class="course-anchor"></a></p>
+<div class="section-meta">
+  <a href="index.html">Part 2: Dynamic Programming</a>
+  <span>Section 4</span>
+</div>
+
+<h1 id="non-stochastic-dynamic-programming">Non-Stochastic Dynamic Programming<a class="headerlink" href="#non-stochastic-dynamic-programming" title="Permanent link">&para;</a></h1>
+<p>The topic of this section is how to state and solve (deterministic)
+dynamic programming problems. That is how to solve a Bellman equation
+of the form:</p>
+<div class="arithmatex">\[
+v\left(x\right)=\sup_{y\in\Gamma\left(x\right)}\left\lbrace  F\left(x,y\right)+\beta v\left(y\right)\right\rbrace
+\]</div>
+<p>where the solution is given by a function <span class="arithmatex">\(v\)</span> satisfying the equation.
+The final objective is to establish conditions for a solution to exist
+and characterize the properties of such a solution. To do this some
+mathematical background has to be set up, this is done in <a href="#ref-sec-contraction-mapping-theorem">Contraction Mapping Theorem</a> where the contraction mapping
+theorem is stated and proven, and sufficient conditions for an operator
+to be a contraction are established.</p>
+<p>Once the basic tools are in place the problem at hand is to express
+usual sequential problems (stated in terms of infinite sums) in a
+recursive way, the equivalence between the two representations of
+the problem is established by optimality principle which is presented
+in <a href="#ref-sec-the-bellman-equation">The Bellman Equation</a>, along with it the conditions
+for existence of a solution and the properties it can inherit from
+the objective function <span class="arithmatex">\(F\)</span> and the correspondence <span class="arithmatex">\(\Gamma\)</span> are listed.</p>
+<p>All the exposition of the theoretical aspects follows (very) closely
+Section 3.2 and all of chapter 4 of <a href="https://books.google.com/books?id=tWYo0QolyLAC">Stokey et al. (1989)</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no reason to deviate.</p>
+</div>
+<p>Most proofs are relegated to the book because their treatment would
+require more time than the one the course has.</p>
+<p><a id="ref-sec-contraction-mapping-theorem" class="course-anchor"></a></p>
+<h2 id="contraction-mapping-theorem">Contraction Mapping Theorem<a class="headerlink" href="#contraction-mapping-theorem" title="Permanent link">&para;</a></h2>
+<p>Three results are covered in this section that will be essential for
+studying dynamic programming (DP) problems. These results are the
+contraction mapping theorem, its corollary and the Blackwell sufficiency
+conditions. Before stating them recall the definition of a complete
+metric space and of a contraction mapping (or simply contraction)
+in a metric space:</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.1</p>
+<p>A metric space is a pair <span class="arithmatex">\(\left(S,\rho\right)\)</span> of a set and a metric
+(or distance) <span class="arithmatex">\(\rho:S\times S\to\mathbb{R}\)</span> such that for all <span class="arithmatex">\(x,y,z\in S\)</span>:</p>
+</div>
+<ol>
+<li><span class="arithmatex">\(\rho\left(x,y\right)\geq0\)</span> and <span class="arithmatex">\(\rho\left(x,y\right)=0\iff x=y\)</span>.</li>
+<li><span class="arithmatex">\(\rho\left(x,y\right)=\rho\left(y,x\right)\)</span>.</li>
+<li><span class="arithmatex">\(\rho\left(x,z\right)\leq\rho\left(x,y\right)+\rho\left(y,z\right)\)</span>.</li>
+</ol>
+<p>A metric space is furthermore complete if all Cauchy sequences in
+<span class="arithmatex">\(S\)</span> converge to an element in <span class="arithmatex">\(S\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.2</p>
+<p>Let <span class="arithmatex">\(\left(S,\rho\right)\)</span> be a metric space and <span class="arithmatex">\(T:S\to S\)</span> a function
+mapping <span class="arithmatex">\(S\)</span> into itself. <span class="arithmatex">\(T\)</span> is a contraction (with modulus <span class="arithmatex">\(\beta\)</span>)
+if and only if there exists <span class="arithmatex">\(\beta\in\left(0,1\right)\)</span> such that
+for all <span class="arithmatex">\(x,y\in S\)</span>:</p>
+<div class="arithmatex">\[
+\rho\left(Tx,Ty\right)\leq\beta\rho\left(x,y\right)
+\]</div>
+<p>The iterates of <span class="arithmatex">\(T\)</span> are the mappings <span class="arithmatex">\(\left\lbrace  T^{n}\right\rbrace\)</span> defined
+by <span class="arithmatex">\(T^{0}x=x\)</span> and <span class="arithmatex">\(T^{n}x=T\left(T^{n-1}x\right)\)</span> for <span class="arithmatex">\(n=1,2,\ldots\)</span>.</p>
+</div>
+<p>The contraction mapping theorem establishes the existence and uniqueness
+of a fixed point in <span class="arithmatex">\(S\)</span> for any contraction mapping, moreover it
+provides a simple algorithm to approximate the fixed point from any
+arbitrary point in the space. A fixed point is a point <span class="arithmatex">\(x\in S\)</span> such
+that <span class="arithmatex">\(x=Tx\)</span>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 4.1: Contraction Mapping Theorem</p>
+<p>Let <span class="arithmatex">\(\left(S,\rho\right)\)</span>
+be a complete metric space and <span class="arithmatex">\(T:S\to S\)</span> a contraction with modulus
+<span class="arithmatex">\(\beta\)</span>, then:</p>
+<ol>
+<li><span class="arithmatex">\(T\)</span> has exactly one fixed point <span class="arithmatex">\(v\in S\)</span>.</li>
+<li>
+<p>For any <span class="arithmatex">\(v_{0}\in S\)</span> and <span class="arithmatex">\(n=0,1,\ldots\)</span> it holds that:</p>
+<div class="arithmatex">\[
+\rho\left(T^{n}v_{0},v\right)\leq\beta^{n}\rho\left(v_{0},v\right)
+\]</div>
+</li>
+</ol>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>The outline of the proof is to establish that the sequence <span class="arithmatex">\(\left\lbrace  v_{n}\right\rbrace \subset S\)</span>
+with <span class="arithmatex">\(v_{n}=T^{n}v_{0}\)</span> is Cauchy and the use completeness of the
+space to argue that its limit is the fixed point of the mapping.</p>
+<p>Let <span class="arithmatex">\(v_{0}\in S\)</span> and define <span class="arithmatex">\(v_{n+1}=Tv_{n}\)</span> so that <span class="arithmatex">\(v_{n}=T^{n}v_{0}\)</span>.
+Because <span class="arithmatex">\(T\)</span> is a contraction mapping:</p>
+<div class="arithmatex">\[
+\rho\left(v_{2},v_{1}\right)=\rho\left(Tv_{1},Tv_{0}\right)\leq\beta\rho\left(v_{1},v_{0}\right)
+\]</div>
+<p>By induction we get:</p>
+<div class="arithmatex">\[
+\rho\left(v_{n+1},v_{n}\right)\leq\beta^{n}\rho\left(v_{1},v_{0}\right)
+\]</div>
+<p>Then for <span class="arithmatex">\(m&gt;n\)</span> we get:</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+\rho\left(v_{m},v_{n}\right) &amp; \leq &amp; \rho\left(v_{m},v_{m-1}\right)+\rho\left(v_{m-1},v_{m-2}\right)+\ldots+\rho\left(v_{n+1},v_{n}\right)\\
+&amp; \leq &amp; \left(\beta^{m-1}+\beta^{m-2}+\ldots+\beta^{n}\right)\rho\left(v_{1},v_{0}\right)\\
+&amp; = &amp; \beta^{n}\left(\beta^{m-n-1}+\beta^{m-n-2}+\ldots+1\right)\rho\left(v_{1},v_{0}\right)\\
+&amp; \leq &amp; \frac{\beta^{n}}{1-\beta}\rho\left(v_{1},v_{0}\right)
+\end{eqnarray*}\]</div>
+<p>Because <span class="arithmatex">\(\frac{\rho\left(v_{1},v_{0}\right)}{1-\beta}\)</span> is fixed,
+and finite, and <span class="arithmatex">\(\beta^{n}\to0\)</span>, it is clear that for any <span class="arithmatex">\(\epsilon&gt;0\)</span>
+there exists <span class="arithmatex">\(N\)</span> large enough for <span class="arithmatex">\(\rho\left(v_{m},v_{n}\right)\leq\epsilon\)</span>
+for all <span class="arithmatex">\(m,n\geq N\)</span>. Then <span class="arithmatex">\(\left\lbrace  v_{n}\right\rbrace\)</span> is Cauchy and
+there exists <span class="arithmatex">\(v\in S\)</span> such that <span class="arithmatex">\(v_{n}\to v\)</span> because <span class="arithmatex">\(S\)</span> is complete.</p>
+<p>Now we show that <span class="arithmatex">\(v\)</span> is a fixed point of <span class="arithmatex">\(T\)</span>. For all <span class="arithmatex">\(n\)</span> and <span class="arithmatex">\(v_{0}\)</span>:</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+\rho\left(Tv,v\right) &amp; \leq &amp; \rho\left(Tv,T^{n}v\right)+\rho\left(T^{n}v,v\right)\\
+&amp; \leq &amp; \beta\rho\left(v,T^{n-1}v\right)+\rho\left(T^{n}v,v\right)\\
+&amp; = &amp; \beta\rho\left(v,v_{n-1}\right)+\rho\left(v_{n},v\right)
+\end{eqnarray*}\]</div>
+<p>It follows that <span class="arithmatex">\(\rho\left(v,v_{n-1}\right)\to0\)</span> and <span class="arithmatex">\(\rho\left(v_{n},v\right)\to0\)</span>
+because <span class="arithmatex">\(v_{n}\to v\)</span>. Because this is done for arbitrary <span class="arithmatex">\(n\)</span> we
+get <span class="arithmatex">\(\rho\left(Tv,v\right)\leq\epsilon\)</span> for all <span class="arithmatex">\(\epsilon&gt;0\)</span> which
+implies <span class="arithmatex">\(\rho\left(Tv,v\right)=0\)</span>. By definition this is <span class="arithmatex">\(Tv=v\)</span>,
+a fixed point.</p>
+<p>To show uniqueness suppose for a contradiction that there is <span class="arithmatex">\(v^{\prime}\neq v\)</span>
+such that <span class="arithmatex">\(Tv^{\prime}=v^{\prime}\)</span>, then:</p>
+<div class="arithmatex">\[
+0\neq\rho\left(v^{\prime},v\right)=\rho\left(Tv^{\prime},Tv\right)\leq\beta\rho\left(v^{\prime},v\right)
+\]</div>
+<p>But this contradicts <span class="arithmatex">\(\beta&lt;1\)</span>. Then <span class="arithmatex">\(v\)</span> is the unique fixed point.</p>
+<p>The second part of the theorem follows by induction. For <span class="arithmatex">\(n=0\)</span>,</p>
+<div class="arithmatex">\[
+\rho\left(Tv_{0},v\right)=\rho\left(Tv_{0},Tv\right)\leq\beta\rho\left(v_{0},v\right)
+\]</div>
+<p>and for any <span class="arithmatex">\(n\geq1\)</span>,</p>
+<div class="arithmatex">\[
+\rho\left(T^{n}v_{0},v\right)=\rho\left(T^{n}v_{0},Tv\right)\leq\beta\rho\left(T^{n-1}v_{0},v\right)
+\]</div>
+<p>The result follows.</p>
+</details>
+<p>The contraction mapping theorem is a very powerful and simple theorem,
+yet its results can be strengthened by further characterizing the
+fixed point. So far it has been established its existence in <span class="arithmatex">\(S\)</span>
+and its uniqueness, the following corollary to the theorem allows
+to locate the fixed point in a given subset of <span class="arithmatex">\(S\)</span>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Corollary 4.1</p>
+<p>Let <span class="arithmatex">\(\left(S,\rho\right)\)</span> be a complete metric space and <span class="arithmatex">\(T:S\to S\)</span>
+a contraction mapping with fixed point <span class="arithmatex">\(v\in S\)</span>.</p>
+<ol>
+<li>If <span class="arithmatex">\(S^{\prime}\subseteq S\)</span> is closed and <span class="arithmatex">\(T\left(S^{\prime}\right)\subseteq S^{\prime}\)</span>,
+    then <span class="arithmatex">\(v\in S^{\prime}\)</span>.</li>
+<li>If in addition there exists <span class="arithmatex">\(S^{"}\subseteq S^{\prime}\)</span> such that <span class="arithmatex">\(T\left(S^{\prime}\right)\subseteq S^{"}\)</span>,
+    then <span class="arithmatex">\(v\in S^{"}\)</span>.</li>
+</ol>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>Let <span class="arithmatex">\(v_{0}\in S^{\prime}\)</span> and <span class="arithmatex">\(\left\lbrace  T^{n}v_{0}\right\rbrace\)</span> a sequence
+in <span class="arithmatex">\(S^{\prime}\)</span> so that <span class="arithmatex">\(T^{n}v_{0}\to v\)</span>, because <span class="arithmatex">\(S^{\prime}\)</span> is closed
+it follows that <span class="arithmatex">\(v\in S^{\prime}\)</span>. If in addition <span class="arithmatex">\(T\left(S^{\prime}\right)\subseteq S^{"}\)</span>
+then it follows that <span class="arithmatex">\(v=Tv\in S^{"}\)</span>.</p>
+</details>
+<p>Finally a set of sufficiency conditions are established for a mapping
+on the space of bounded functions to be a contraction. In most economic
+applications these conditions are trivial to check.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 4.2: Blackwell conditions</p>
+<p>Let <span class="arithmatex">\(X\subseteq\mathbb{R}^{l}\)</span> and
+<span class="arithmatex">\(B\left(X\right)\)</span> be the space of bounded functions on <span class="arithmatex">\(X\left(f:X\to\mathbb{R}\right)\)</span>
+with the sup-norm. Let <span class="arithmatex">\(T:B\left(X\right)\to B\left(X\right)\)</span>, <span class="arithmatex">\(T\)</span>
+is a contraction (with modulus <span class="arithmatex">\(\beta\)</span>) if it satisfies the following
+two conditions:</p>
+<ol>
+<li>(monotonicity) Let <span class="arithmatex">\(f,g\in B\left(X\right)\)</span> and <span class="arithmatex">\(f\left(x\right)\leq g\left(x\right)\)</span>
+    for all <span class="arithmatex">\(x\in X\)</span>. Then <span class="arithmatex">\(Tf\left(x\right)\leq Tg\left(x\right)\)</span> for
+    all <span class="arithmatex">\(x\in X\)</span>.</li>
+<li>(discounting) There exists <span class="arithmatex">\(\beta\in\left(0,1\right)\)</span> such that <span class="arithmatex">\(T\left(f+a\right)\left(x\right)\leq Tf\left(x\right)+\beta a\)</span>
+    for all <span class="arithmatex">\(f\in B\left(X\right)\)</span>, <span class="arithmatex">\(x\in X\)</span> and <span class="arithmatex">\(a\geq0\)</span>.</li>
+</ol>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>If <span class="arithmatex">\(f\left(x\right)\leq g\left(x\right)\)</span> for all <span class="arithmatex">\(x\)</span> we say that
+<span class="arithmatex">\(f\leq g\)</span>.</p>
+<p>Let <span class="arithmatex">\(f,g\in B\left(X\right)\)</span>, by definition of the sup-norm <span class="arithmatex">\(f\left(x\right)-g\left(x\right)\leq\left\Vert f-g\right\Vert\)</span>
+for all <span class="arithmatex">\(x\in X\)</span>, then <span class="arithmatex">\(f\left(x\right)\leq g\left(x\right)+\left\Vert f-g\right\Vert\)</span>,
+using the notation defined at the beginning of the proof this is <span class="arithmatex">\(f\leq g+\left\Vert f-g\right\Vert\)</span>,
+where <span class="arithmatex">\(\left\Vert f-g\right\Vert &gt;0\)</span> is a scalar. Then by hypothesis
+we have:</p>
+<div class="arithmatex">\[
+Tf\leq T\left(g+\left\Vert f-g\right\Vert \right)\leq Tg+\beta\left\Vert f-g\right\Vert \longrightarrow Tf-Tg\leq\beta\left\Vert f-g\right\Vert
+\]</div>
+<p>But it also holds that <span class="arithmatex">\(g\left(x\right)-f\left(x\right)\leq\left\Vert f-g\right\Vert\)</span>
+which implies <span class="arithmatex">\(Tg-Tf\leq\beta\left\Vert f-g\right\Vert\)</span>. Joining
+we have, for all <span class="arithmatex">\(x\in X\)</span>:</p>
+<div class="arithmatex">\[
+\left|Tf\left(x\right)-Tg\left(x\right)\right|\leq\beta\left\Vert f-g\right\Vert
+\]</div>
+<p>Taking sup we get:</p>
+<div class="arithmatex">\[
+\left\Vert Tf-Tg\right\Vert \leq\beta\left\Vert f-g\right\Vert
+\]</div>
+<p>which establishes that <span class="arithmatex">\(T\)</span> is a contraction.</p>
+</details>
+<p><strong>Extended Blackwell conditions</strong></p>
+<p>I also present a modified version of Blackwell's sufficiency conditions
+for vector valued functions. I first define the relevant set of functions.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 4.1</p>
+<p>Let <span class="arithmatex">\(X\subset\mathbb{R}^{n}\)</span> and <span class="arithmatex">\(B\left(X\right)=\left\lbrace  f|f:X\to\mathbb{R}\land\exists_{M_{f}}\forall_{x\in X}\left|f\left(x\right)\right|\leq M_{f}\right\rbrace\)</span>
+the set of bounded functions defined on the set <span class="arithmatex">\(X\)</span>. The space <span class="arithmatex">\(S=B\left(X\right)\times B\left(X\right)\)</span>
+equipped with the norm <span class="arithmatex">\(\left\Vert f\right\Vert =\max\left\lbrace  \left\Vert f_{1}\right\Vert _{\infty},\left\Vert f_{2}\right\Vert _{\infty}\right\rbrace =\max\left\lbrace  \underset{x\in X}{\sup}\left|f_{1}\left(x\right)\right|,\underset{x\in X}{\sup}\left|f_{2}\left(x\right)\right|\right\rbrace\)</span>
+is a normed vector space. It is also a metric space with the metric
+<span class="arithmatex">\(\rho\left(f,g\right)=\left\Vert f-g\right\Vert\)</span>.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>The proof proceeds by showing that <span class="arithmatex">\(\left\Vert \cdot\right\Vert\)</span>
+is a norm.</p>
+<ol>
+<li>
+<p>Clearly <span class="arithmatex">\(\left\Vert f\right\Vert \geq0\)</span> and if <span class="arithmatex">\(f\left(x\right)=0\)</span>
+    for all <span class="arithmatex">\(x\in X\)</span> then <span class="arithmatex">\(\left\Vert f\right\Vert =0\)</span>. Finally:</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+\left\Vert f\right\Vert  &amp; = &amp; 0\\
+\max\left\lbrace  \underset{x\in X}{\sup}\left|f_{1}\left(x\right)\right|,\underset{x\in X}{\sup}\left|f_{2}\left(x\right)\right|\right\rbrace  &amp; = &amp; 0
+\end{eqnarray*}\]</div>
+<p>which happens if and only if <span class="arithmatex">\(\underset{x\in X}{\sup}\left|f_{1}\left(x\right)\right|=0\)</span>
+and <span class="arithmatex">\(\underset{x\in X}{\sup}\left|f_{2}\left(x\right)\right|=0\)</span>.
+Again, this happens if and only if <span class="arithmatex">\(f_{1}\left(x\right)=f_{2}\left(x\right)=0\)</span>
+for all <span class="arithmatex">\(x\in X\)</span>. That is, if <span class="arithmatex">\(f\left(x\right)=0\)</span> for all <span class="arithmatex">\(x\in X\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\left\Vert \alpha f\right\Vert =\max\left\lbrace  \underset{x\in X}{\sup}\left|\alpha f_{1}\left(x\right)\right|,\underset{x\in X}{\sup}\left|\alpha f_{2}\left(x\right)\right|\right\rbrace =\left|\alpha\right|\max\left\lbrace  \underset{x\in X}{\sup}\left|f_{1}\left(x\right)\right|,\underset{x\in X}{\sup}\left|f_{2}\left(x\right)\right|\right\rbrace =\left|\alpha\right|\left\Vert f\right\Vert\)</span></p>
+</li>
+<li>
+<p>Triangle Inequality:</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+\left\Vert f+g\right\Vert  &amp; = &amp; \max\left\lbrace  \underset{x\in X}{\sup}\left|f_{1}\left(x\right)-g_{1}\left(x\right)\right|,\underset{x\in X}{\sup}\left|f_{2}\left(x\right)-g_{2}\left(x\right)\right|\right\rbrace \\
+&amp; \leq &amp; \max\left\lbrace  \left(\underset{x\in X}{\sup}\left|f_{1}\left(x\right)\right|+\underset{x\in X}{\sup}\left|g_{1}\left(x\right)\right|\right),\left(\underset{x\in X}{\sup}\left|f_{2}\left(x\right)\right|+\underset{x\in X}{\sup}\left|g_{2}\left(x\right)\right|\right)\right\rbrace \\
+&amp; \leq &amp; \max\left\lbrace  \underset{x\in X}{\sup}\left|f_{1}\left(x\right)\right|,\underset{x\in X}{\sup}\left|f_{2}\left(x\right)\right|\right\rbrace +\max\left\lbrace  \underset{x\in X}{\sup}\left|g_{1}\left(x\right)\right|,\underset{x\in X}{\sup}\left|g_{2}\left(x\right)\right|\right\rbrace \\
+&amp; = &amp; \left\Vert f\right\Vert +\left\Vert g\right\Vert
+\end{eqnarray*}\]</div>
+<p>The first inequality follows from properties of the absolute value
+and the second one from the inequality:</p>
+<div class="arithmatex">\[
+\underset{x\in X}{\sup}\left|f_{i}\left(x\right)\right|+\underset{x\in X}{\sup}\left|g_{i}\left(x\right)\right|\leq\max\left\lbrace  \underset{x\in X}{\sup}\left|f_{1}\left(x\right)\right|+\underset{x\in X}{\sup}\left|g_{1}\left(x\right)\right|,\underset{x\in X}{\sup}\left|f_{2}\left(x\right)\right|+\underset{x\in X}{\sup}\left|g_{2}\left(x\right)\right|\right\rbrace
+\]</div>
+</li>
+<li>
+<p>Under the above three conditions <span class="arithmatex">\(\left\Vert f\right\Vert\)</span> is a
+    norm.</p>
+</li>
+<li>Clearly the sum and scalar product of bounded functions is bounded.</li>
+</ol>
+</details>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 4.2</p>
+<p>Consider <span class="arithmatex">\(\left(S,\rho\right)\)</span> with <span class="arithmatex">\(S=B\left(X\right)\times B\left(X\right)\)</span>
+and <span class="arithmatex">\(\rho\left(f,g\right)=\left\Vert f-g\right\Vert\)</span>. <span class="arithmatex">\(\left(S,\rho\right)\)</span>
+is a complete space.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>The proof starts by showing that a Cauchy sequence in <span class="arithmatex">\(S\)</span> is formed
+by Cauchy sequences in <span class="arithmatex">\(B\left(X\right)\)</span>. Then the completeness of
+<span class="arithmatex">\(B\left(X\right)\)</span> is used to establish the result.</p>
+<ol>
+<li>
+<p>Let <span class="arithmatex">\(\left\lbrace  f_{n}\right\rbrace \subset S\)</span> be a Cauchy sequence and <span class="arithmatex">\(\epsilon&gt;0\)</span>.
+    There exists <span class="arithmatex">\(N\)</span> such that <span class="arithmatex">\(\forall_{n,m&gt;N}\left\Vert f_{n}-f_{m}\right\Vert &lt;\epsilon\)</span>
+    which is:</p>
+<div class="arithmatex">\[
+\max\left\lbrace  \underset{x\in X}{\sup}\left|f_{1n}\left(x\right)-f_{1m}\left(x\right)\right|,\underset{x\in X}{\sup}\left|f_{2n}\left(x\right)-f_{2m}\left(x\right)\right|\right\rbrace &lt;\epsilon
+\]</div>
+<div class="arithmatex">\[
+\underset{x\in X}{\sup}\left|f_{1n}\left(x\right)-f_{1m}\left(x\right)\right|&lt;\epsilon\qquad\land\qquad\underset{x\in X}{\sup}\left|f_{2n}\left(x\right)-f_{2m}\left(x\right)\right|&lt;\epsilon
+\]</div>
+<p>This implies that the sequences <span class="arithmatex">\(\left\lbrace  f_{1n}\right\rbrace \subset B\left(X\right)\)</span>
+and <span class="arithmatex">\(\left\lbrace  f_{2n}\right\rbrace \subset B\left(X\right)\)</span> are Cauchy with
+respect to the sup-norm <span class="arithmatex">\(\left\Vert f\right\Vert _{\infty}=\underset{x\in X}{\sup}\left|f\left(x\right)\right|\)</span>.</p>
+</li>
+<li>
+<p>Because the space <span class="arithmatex">\(\left(B\left(X\right),\left\Vert f\right\Vert _{\infty}\right)\)</span>
+    is complete, the above implies that the sequences <span class="arithmatex">\(\left\lbrace  f_{1n}\right\rbrace\)</span>
+    and <span class="arithmatex">\(\left\lbrace  f_{2n}\right\rbrace\)</span> are convergent in the sup norm. <span class="arithmatex">\(\exists_{f_{1},f_{2}\in B\left(X\right)}f_{1n}\to f_{1}\land f_{2n}\to f_{2}\)</span>.
+    Denote <span class="arithmatex">\(f:S\to\mathbb{R}^{2}\)</span> as <span class="arithmatex">\(f\left(x\right)=\left[f_{1}\left(x\right) f_{2}\left(x\right)\right]^{\prime}\)</span>.</p>
+</li>
+<li>
+<p>Let <span class="arithmatex">\(\epsilon&gt;0\)</span>. By convergence of <span class="arithmatex">\(\left\lbrace  f_{1n}\right\rbrace\)</span> and
+    <span class="arithmatex">\(\left\lbrace  f_{2n}\right\rbrace\)</span> there exist numbers <span class="arithmatex">\(N_{1}\)</span> and <span class="arithmatex">\(N_{2}\)</span>
+    such that:</p>
+<div class="arithmatex">\[
+\forall_{n\geq N_{1}}\left\Vert f_{1n}-f_{1}\right\Vert _{\infty}&lt;\epsilon\qquad\land\qquad\forall_{n\geq N_{2}}\left\Vert f_{2n}-f_{2}\right\Vert _{\infty}&lt;\epsilon
+\]</div>
+<p>Then for <span class="arithmatex">\(N=\max\left\lbrace  N_{1},N_{2}\right\rbrace\)</span> it holds that:</p>
+<div class="arithmatex">\[
+\forall_{n\geq N}\left\Vert f_{1n}-f_{1}\right\Vert _{\infty}&lt;\epsilon\qquad\land\qquad\left\Vert f_{2n}-f_{2}\right\Vert _{\infty}&lt;\epsilon
+\]</div>
+<p>which is:</p>
+<div class="arithmatex">\[
+\forall_{n\geq N}\sup_{x\in X}\left|f_{1n}\left(x\right)-f_{1}\left(x\right)\right|&lt;\epsilon\qquad\land\qquad\sup_{x\in X}\left|f_{2n}\left(x\right)-f_{2}\left(x\right)\right|&lt;\epsilon
+\]</div>
+<p>implying then:</p>
+<div class="arithmatex">\[
+\forall_{n\geq N}\max\left\lbrace  \sup_{x\in X}\left|f_{1n}\left(x\right)-f_{1}\left(x\right)\right|,\sup_{x\in X}\left|f_{2n}\left(x\right)-f_{2}\left(x\right)\right|\right\rbrace &lt;\epsilon
+\]</div>
+<p>which is:</p>
+<div class="arithmatex">\[
+\forall_{n\geq N}\left\Vert f_{n}-f\right\Vert &lt;\epsilon
+\]</div>
+</li>
+<li>
+<p>The above proves that a Cauchy sequence converges on <span class="arithmatex">\(S\)</span> over the
+    given norm.</p>
+</li>
+</ol>
+</details>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 4.3: Extended Blackwell</p>
+<p>Consider <span class="arithmatex">\(\left(S,\rho\right)\)</span> with
+<span class="arithmatex">\(S=B\left(X\right)\times B\left(X\right)\)</span> and <span class="arithmatex">\(\rho\left(f,g\right)=\left\Vert f-g\right\Vert\)</span>.
+Let <span class="arithmatex">\(T:S\to S\)</span> be an operator satisfying</p>
+<ol>
+<li>(Monotonicity) <span class="arithmatex">\(f,g\in S\)</span> and <span class="arithmatex">\(f\left(x\right)\leq g\left(x\right)\)</span>,
+    for all <span class="arithmatex">\(x\in X\)</span>, implies <span class="arithmatex">\(Tf\left(x\right)\leq Tg\left(x\right)\)</span>,
+    for all <span class="arithmatex">\(x\in X\)</span>, (where <span class="arithmatex">\(f\left(x\right)\leq g\left(x\right)\)</span> is
+    taken in the vector sense, i.e. <span class="arithmatex">\(f_{1}\left(x\right)\leq g_{1}\left(x\right)\)</span>
+    and <span class="arithmatex">\(f_{2}\left(x\right)\leq g_{2}\left(x\right)\)</span>).</li>
+<li>(Discounting) there exists some <span class="arithmatex">\(\beta\in\left(0,1\right)\)</span> such that
+    <span class="arithmatex">\(T\left(f+A\right)\leq Tf\left(x\right)+\beta A\)</span> for <span class="arithmatex">\(f\in S\)</span>, <span class="arithmatex">\(A=\left[a a\right]^{\prime}\in\mathbb{R}_{+}^{2}\)</span>
+    and <span class="arithmatex">\(x\in X\)</span>.</li>
+</ol>
+<p>Then <span class="arithmatex">\(T\)</span> is a contraction in <span class="arithmatex">\(S\)</span> with modulus <span class="arithmatex">\(\beta\)</span>.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>The proof follows closely that of Blackwell's conditions</p>
+<ol>
+<li>
+<p>Let <span class="arithmatex">\(f,g\in S\)</span>, and define <span class="arithmatex">\(A=\left[\begin{array}{cc}
+    \left\Vert f-g\right\Vert  &amp; \left\Vert f-g\right\Vert \end{array}\right]^{\prime}\)</span>, it holds that:</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+f_{1}\left(x\right)-g_{1}\left(x\right) &amp; \leq &amp; \left|f_{1}\left(x\right)-g_{1}\left(x\right)\right|\leq\underset{x\in X}{\sup}\left|f_{1}\left(x\right)-g_{1}\left(x\right)\right|\\
+&amp; \leq &amp; \max\left\lbrace  \underset{x\in X}{\sup}\left|f_{1}\left(x\right)-g_{1}\left(x\right)\right|,\underset{x\in X}{\sup}\left|f_{2}\left(x\right)-g_{2}\left(x\right)\right|\right\rbrace =\left\Vert f-g\right\Vert _{\infty}
+\end{eqnarray*}\]</div>
+<p>By a similar argument <span class="arithmatex">\(f_{2}\left(x\right)-g_{2}\left(x\right)\leq\left\Vert f-g\right\Vert _{\infty}\)</span>
+then it holds that: <span class="arithmatex">\(f\left(x\right)\leq g\left(x\right)+A\)</span> for all
+<span class="arithmatex">\(x\in X\)</span></p>
+</li>
+<li>
+<p>By monotonicity and discounting:</p>
+<div class="arithmatex">\[
+Tf\left(x\right)\leq T\left(g+a\right)\left(x\right)\leq Tg\left(x\right)+\beta A
+\]</div>
+<p>which holds for all <span class="arithmatex">\(x\in X\)</span>.</p>
+</li>
+<li>
+<p>The same argument applies to show that <span class="arithmatex">\(g\left(x\right)\leq f\left(x\right)+A\)</span>
+    and <span class="arithmatex">\(Tg\left(x\right)\leq Tf\left(x\right)+\beta A\)</span> for all <span class="arithmatex">\(x\in X\)</span>.</p>
+</li>
+<li>
+<p>Joining:</p>
+<div class="arithmatex">\[
+Tf_{i}\left(x\right)-Tg_{i}\left(x\right)\leq\beta\left\Vert f-g\right\Vert \qquad\land\qquad Tg_{i}\left(x\right)-Tf_{i}\left(x\right)\leq\beta\left\Vert f-g\right\Vert
+\]</div>
+<p>which implies:</p>
+<div class="arithmatex">\[
+\left|Tf_{1}\left(x\right)-Tg_{1}\left(x\right)\right|\leq\beta\left\Vert f-g\right\Vert \qquad\land\qquad\left|Tf_{2}\left(x\right)-Tg_{2}\left(x\right)\right|\leq\beta\left\Vert f-g\right\Vert
+\]</div>
+<p>and then:</p>
+<div class="arithmatex">\[
+\sup_{x\in X}\left|Tf_{1}\left(x\right)-Tg_{1}\left(x\right)\right|\leq\beta\left\Vert f-g\right\Vert \qquad\land\qquad\sup_{x\in X}\left|Tf_{2}\left(x\right)-Tg_{2}\left(x\right)\right|\leq\beta\left\Vert f-g\right\Vert
+\]</div>
+</li>
+<li>
+<p>Finally:</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+\left\Vert Tf-Tg\right\Vert _{\infty} &amp; = &amp; \max\left\lbrace  \underset{x\in X}{\sup}\left|Tf_{1}\left(x\right)-Tg_{1}\left(x\right)\right|,\underset{x\in X}{\sup}\left|Tf_{2}\left(x\right)-Tg_{2}\left(x\right)\right|\right\rbrace \\
+&amp; \leq &amp; \max\left\lbrace  \beta\left\Vert f-g\right\Vert ,\beta\left\Vert f-g\right\Vert \right\rbrace =\beta\left\Vert f-g\right\Vert
+\end{eqnarray*}\]</div>
+<p>This is the definition of <span class="arithmatex">\(T\)</span> being a contraction with modulus <span class="arithmatex">\(\beta\)</span>.</p>
+</li>
+</ol>
+</details>
+<p><a id="ref-sec-the-bellman-equation" class="course-anchor"></a></p>
+<h2 id="the-bellman-equation">The Bellman Equation<a class="headerlink" href="#the-bellman-equation" title="Permanent link">&para;</a></h2>
+<p>We start with the infinite horizon consumption savings model. This
+is the workhorse model of modern macroeconomics and is known as the
+neoclassical growth model. There are two (related) ways of setting
+up the problem. One resembles the finite horizon problem already discussed,
+it is called sequence problem, the other form is to cast the problem
+as the solution to a functional equation, this dynamic programming
+approach has several advantages that will be presented in the next
+section.</p>
+<p>As before, consider a discrete time, consumption-savings problem where
+the agent can either consume or save (invest) in capital that will
+be productive in the following period. The agent derives utility from
+consumption according to utility function <span class="arithmatex">\(u\)</span> and discounts the future
+at a constant rate <span class="arithmatex">\(\beta&lt;1\)</span>. Production only uses capital and the
+technology is described by a function <span class="arithmatex">\(f\)</span>.</p>
+<p>The problem of an agent endowed with <span class="arithmatex">\(k_{0}\)</span> units of capital is:</p>
+<div class="arithmatex">\[
+v\left(k_{0}\right)=\max_{\left\lbrace  c_{t},k_{t+1}\right\rbrace _{t=0}^{\infty}}\sum_{t=0}^{\infty}\beta^{t}u\left(c_{t}\right)\qquad s.t.  c_{t}+k_{t+1}\leq f\left(k_{t}\right)\quad c_{t},k_{t}\geq0\quad k_{0}  given
+\]</div>
+<p>Provided that <span class="arithmatex">\(u\)</span> is strictly increasing, a sustained assumption,
+we can eliminate consumption as before to get:</p>
+<div class="arithmatex">\[
+v\left(k_{0}\right)=\max_{\left\lbrace  k_{t+1}\right\rbrace }\sum_{t=0}^{\infty}\beta^{t}u\left(f\left(k_{t}\right)-k_{t+1}\right)\qquad s.t.  0\leq k_{t+1}\leq f\left(k_{t}\right)\quad k_{0}  given
+\]</div>
+<p>In the sequence problem, much like in the finite horizon problem before,
+the objective is to look for an infinite sequence that solves the
+problem and attains the maximum. This can prove to be too difficult
+in practice.</p>
+<p>The dynamic programming problem takes a different approach. Instead
+of trying to solve the problem for all periods simultaneously the
+objective is to solve the problem one period at a time. That is, given
+the capital stock at the beginning of the period take an optimal investment
+decision for the next period. The problem is that, in order to make
+the decision, its necessary to know the extra value for the agent
+of the capital to be saved, we need a function that represents preferences
+over next period's capital.</p>
+<p>The DP starts by assuming that we already know such a function. It
+is called a value function and is defined as <span class="arithmatex">\(v\)</span> above. The value
+function is the maximum value given to the agent if she starts in
+a given period with initial capital <span class="arithmatex">\(k\)</span>. Knowing <span class="arithmatex">\(v\)</span> it is possible
+to cast the following problem:</p>
+<div class="arithmatex">\[
+\max_{0\leq k_{1}\leq f\left(k_{0}\right)} \left\lbrace  u\left(f\left(k_{0}\right)-k_{1}\right)+\beta v\left(k_{1}\right)\right\rbrace
+\]</div>
+<p>If we knew <span class="arithmatex">\(v\)</span> the problem above could be solved. The solution to
+the problem is a policy function <span class="arithmatex">\(g:\mathbb{R}_{+}\to\mathbb{R}_{+}\)</span>
+that gives the optimal capital next period given a capital level today.
+That is <span class="arithmatex">\(k_{1}=g\left(k_{0}\right)\)</span>.</p>
+<p>It should be clear now that if <span class="arithmatex">\(v\left(k_{1}\right)\)</span> gives the maximum
+value starting in period 1 and the problem above maximizes that value
+and the value in period 0 (given by <span class="arithmatex">\(u\left(f\left(k_{0}\right)-k_{1}\right)\)</span>)
+then the value of the whole problem is given by the maximum above.
+But that is the definition of <span class="arithmatex">\(v\)</span>, then:</p>
+<div class="arithmatex">\[
+v\left(k_{0}\right)=\max_{0\leq k_{1}\leq f\left(k_{0}\right)} \left\lbrace  u\left(f\left(k_{0}\right)-k_{1}\right)+\beta v\left(k_{1}\right)\right\rbrace
+\]</div>
+<p>This is a functional equation, where <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(u\)</span> are known functions,
+<span class="arithmatex">\(k_{1}\)</span> is a variable of choice and <span class="arithmatex">\(k_{0}\)</span> is given. Then this
+is an equation in the function <span class="arithmatex">\(v\)</span>, the solution to this equation
+is the value function needed to solve the problem (to find the policy
+function).</p>
+<p>In general solving functional equations is not easy, but this type
+of functional equation can be reinterpreted to both establish the
+existence of a solution and to obtain a method to find it.</p>
+<p>Let <span class="arithmatex">\(u\)</span> and <span class="arithmatex">\(f\)</span> be bounded and continuous functions and define an
+operator <span class="arithmatex">\(T:C\left(X\right)\to C\left(X\right)\)</span> as:</p>
+<div class="arithmatex">\[
+Tv\left(k\right)=\max_{0\leq k^{\prime}\leq f\left(k\right)} \left\lbrace  u\left(f\left(k\right)-k^{\prime}\right)+\beta v\left(k^{\prime}\right)\right\rbrace
+\]</div>
+<p>boundedness of <span class="arithmatex">\(Tv\)</span> is immediate for the sum of bounded is also bounded.
+Continuity is a consequence of the ToM, the objective function is
+continuous and the correspondence <span class="arithmatex">\(\Gamma\left(k\right)=\left\lbrace  k^{\prime}|0\leq k^{\prime}\leq f\left(k\right)\right\rbrace\)</span>
+is continuous and compact valued because <span class="arithmatex">\(f\)</span> is continuous and bounded.</p>
+<p>The solution to the functional equation, <span class="arithmatex">\(v\)</span>, is then a fixed point
+of the mapping <span class="arithmatex">\(T\)</span>. It is left to verify that <span class="arithmatex">\(T\)</span> is a contraction
+to establish the existence and uniqueness of the solution to the neoclassical
+growth model. It turns out that Blackwell's sufficient conditions
+are immediate:</p>
+<ol>
+<li>
+<p>(monotonicity) Let <span class="arithmatex">\(v,w\in C\left(X\right)\)</span> and <span class="arithmatex">\(v\left(k\right)\leq w\left(k\right)\)</span>
+    for all <span class="arithmatex">\(k\)</span>. Then:</p>
+<div class="arithmatex">\[
+Tv\left(k\right)=\max_{0\leq k^{\prime}\leq f\left(k\right)} \left\lbrace  u\left(f\left(k\right)-k^{\prime}\right)+\beta v\left(k^{\prime}\right)\right\rbrace \leq\max_{0\leq k^{\prime}\leq f\left(k\right)} \left\lbrace  u\left(f\left(k\right)-k^{\prime}\right)+\beta w\left(k^{\prime}\right)\right\rbrace =Tw\left(k\right)
+\]</div>
+</li>
+<li>
+<p>(discounting) Let <span class="arithmatex">\(v\in C\left(X\right)\)</span> and <span class="arithmatex">\(a&gt;0\)</span>. Then:</p>
+<div class="arithmatex">\[
+T\left(v+a\right)\left(k\right)=\max_{0\leq k^{\prime}\leq f\left(k\right)} \left\lbrace  u\left(f\left(k\right)-k^{\prime}\right)+\beta\left(v\left(k^{\prime}\right)+a\right)\right\rbrace =\max_{0\leq k^{\prime}\leq f\left(k\right)} \left\lbrace  u\left(f\left(k\right)-k^{\prime}\right)+\beta v\left(k^{\prime}\right)\right\rbrace +\beta a
+\]</div>
+<p>In particular:</p>
+<div class="arithmatex">\[
+T\left(v+a\right)\left(k\right)\leq Tv\left(k\right)+\beta a
+\]</div>
+</li>
+</ol>
+<p>It is possible to further characterize <span class="arithmatex">\(v\)</span> and the policy function
+<span class="arithmatex">\(g\)</span>, for that extra results are needed.</p>
+<h2 id="a-general-framework-and-the-principle-of-optimality">A general framework and the principle of optimality<a class="headerlink" href="#a-general-framework-and-the-principle-of-optimality" title="Permanent link">&para;</a></h2>
+<p>The problem to be studied in terms of infinite sequences is of the
+form:
+<a id="ref-eq-000020sp" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+v^{\star}\left(x_{0}\right)=\sup_{\left\lbrace  x_{t+1}\right\rbrace _{t=0}^{\infty}}\sum_{t=0}^{\infty}\beta^{t}F\left(x_{t},x_{t+1}\right)\qquad s.t.  x_{t+1}\in\Gamma\left(x_{t}\right)\tag{4.1}
+\end{equation}\]</div>
+<p>Corresponding to this problem is the following functional equation:
+<a id="ref-eq-000020fe" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+v\left(x\right)=\sup_{y\in\Gamma\left(x\right)}\left\lbrace  F\left(x,y\right)+\beta v\left(y\right)\right\rbrace \tag{4.2}
+\end{equation}\]</div>
+<p>Above, <span class="arithmatex">\(X\)</span> is the set of possible values for <span class="arithmatex">\(x\)</span>, and it is not
+necessarily an euclidean space, <span class="arithmatex">\(\Gamma:X\rightrightarrows X\)</span> is
+a correspondence that assigns feasible values of the choice variable
+and <span class="arithmatex">\(F: Gr \left(\Gamma\right)\to\mathbb{R}\)</span> is a return or
+payoff function. <span class="arithmatex">\(\beta&gt;0\)</span> is a discount factor.</p>
+<p>Some conditions have to be met for both problems to give the same
+solution, in the sense that <span class="arithmatex">\(v\left(x\right)=v^{\star}\left(x\right)\)</span>
+and that the optimal choice of one problem is the same as the
+choice for the other. This equivalence between both problems is called
+the <em>principle of optimality</em>. After the validity of the principle
+has been established the properties of the solution to FE can be studied.</p>
+<p>The conditions for the principle of optimality are stated below and
+the two propositions that constitute the principle are shown without
+proof.</p>
+<p>It will be convenient to define the set of all possible feasible sequences
+for <span class="arithmatex">\(x\)</span>, given an starting point <span class="arithmatex">\(x_{0}\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.3</p>
+<p>The set of all possible feasible sequences starting at <span class="arithmatex">\(x_{0}\in X\)</span>
+is:</p>
+<div class="arithmatex">\[
+\Pi\left(x_{0}\right)=\left\lbrace  \left\lbrace  x_{t}\right\rbrace _{t=0}^{\infty}|x_{t+1}\in\Gamma\left(x_{t}\right)\quad\land\quad x_{0}  given \right\rbrace
+\]</div>
+<p>and <span class="arithmatex">\(\underline{x}=\left(x_{0},x_{1},x_{2},\ldots\right)\)</span> is an element.</p>
+</div>
+<div class="admonition assumption">
+<p class="admonition-title">Assumption: A.1</p>
+<p><span class="arithmatex">\(\Gamma\)</span> is a nonempty valued correspondence.</p>
+</div>
+<div class="admonition assumption">
+<p class="admonition-title">Assumption: A.2</p>
+<p>For all <span class="arithmatex">\(x_{0}\in X\)</span> and <span class="arithmatex">\(\underline{x}\in\Pi\left(x_{0}\right)\)</span>
+the following limit exists (although it might be infinite):</p>
+<div class="arithmatex">\[
+\lim_{n\to\infty}\sum_{t=0}^{n}\beta^{t}F\left(x_{t},x_{t+1}\right)
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Remark</p>
+<p>Assumption A.2 holds if <span class="arithmatex">\(F\)</span> is bounded and <span class="arithmatex">\(\beta\in\left(0,1\right)\)</span>.</p>
+</div>
+<p>Under assumptions A.1 and A.2 <span class="arithmatex">\(\Pi\left(x_{0}\right)\)</span> is nonempty
+valued and problem <a href="#ref-eq-000020sp">(4.1)</a> is well posed, moreover they
+are enough to guarantee that the function <span class="arithmatex">\(v^{\star}\)</span> satisfies <a href="#ref-eq-000020fe">equation (4.2)</a>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 4.3</p>
+<p>Let <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(\Gamma\)</span>, <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(\beta\)</span> satisfy assumption A.1 and
+A.2, then <span class="arithmatex">\(v^{\star}\)</span> is a solution to the FE <a href="#ref-eq-000020fe">(4.2)</a>:</p>
+<div class="arithmatex">\[
+v^{\star}\left(x\right)=\sup_{y\in\Gamma\left(x\right)}\left\lbrace  F\left(x,y\right)+\beta v^{\star}\left(y\right)\right\rbrace
+\]</div>
+</div>
+<p>For <span class="arithmatex">\(v^{\star}\)</span> to be the only solution to the FE an extra condition
+is needed.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 4.4</p>
+<p>Let <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(\Gamma\)</span>, <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(\beta\)</span> satisfy assumption A.1 and
+A.2, if <span class="arithmatex">\(v\)</span> is a solution to the FE <a href="#ref-eq-000020fe">(4.2)</a> and for
+all <span class="arithmatex">\(x_{0}\in X\)</span> and <span class="arithmatex">\(\underline{x}\in\Pi\left(x_{0}\right)\)</span> it
+holds that:</p>
+<div class="arithmatex">\[
+\lim_{n\to\infty}\beta^{n}v\left(x_{n}\right)=0
+\]</div>
+<p>then <span class="arithmatex">\(v=v^{\star}\)</span>.</p>
+</div>
+<p>The previous two propositions establish equivalence between the value
+of the two problems. It can also be shown that the optimizer of the
+SP problem also solves the FE in the following sense:
+<a id="ref-eq-000020" class="course-anchor"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 4.5</p>
+<p>Let <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(\Gamma\)</span>, <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(\beta\)</span> satisfy assumption A.1 and
+A.2. Let <span class="arithmatex">\(\underline{x}^{\star}\in\Pi\left(x_{0}\right)\)</span> be a feasible
+plan that attains the supremum in <a href="#ref-eq-000020sp">(4.1)</a>, then:</p>
+<div class="arithmatex">\[\begin{equation}
+v^{\star}\left(x_{t}^{\star}\right)=F\left(x_{t}^{\star},x_{t+1}^{\star}\right)+\beta v^{\star}\left(x_{t+1}^{\star}\right)\tag{4.3}
+\end{equation}\]</div>
+</div>
+<p>Again, under an extra boundedness condition a plan that solves the
+problem in <a href="#ref-eq-000020fe">(4.2)</a> also solves the problem in the SP.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 4.6</p>
+<p>Let <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(\Gamma\)</span>, <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(\beta\)</span> satisfy assumption A.1 and
+A.2. Let <span class="arithmatex">\(\underline{x}^{\star}\in\Pi\left(x_{0}\right)\)</span> be a feasible
+plan that satisfies <a href="#ref-eq-000020">equation (4.3)</a> and for which
+<span class="arithmatex">\(\limsup\beta^{t}v^{\star}\left(x_{t}^{\star}\right)\leq0\)</span>, then
+<span class="arithmatex">\(\underline{x}^{\star}\)</span> attains the supremum in <a href="#ref-eq-000020sp">(4.1)</a>
+for initial state <span class="arithmatex">\(x_{0}\)</span>.</p>
+</div>
+<p>Now we can define the optimal policy correspondence as:</p>
+<div class="arithmatex">\[
+G^{\star}\left(x\right)=\left\lbrace  y\in\Gamma\left(x\right)|v^{\star}\left(x\right)=F\left(x,y\right)+\beta v^{\star}\left(y\right)\right\rbrace
+\]</div>
+<p>We say that a plan <span class="arithmatex">\(\underline{x}\)</span> is generated by <span class="arithmatex">\(G\)</span> if it satisfies
+<span class="arithmatex">\(x_{t+1}\in G\left(x_{t}\right)\)</span>. The previous two propositions imply
+that any optimal plan of the sequence problem is generated by <span class="arithmatex">\(G^{\star}\)</span>
+and that if a plan is generated by <span class="arithmatex">\(G^{\star}\)</span> and satisfies the
+additional boundedness condition then it is also optimal.</p>
+<p>Now we can concentrate in studying the properties of the DP in <a href="#ref-eq-000020fe">(4.2)</a>.</p>
+<h2 id="bounded-problems">Bounded problems<a class="headerlink" href="#bounded-problems" title="Permanent link">&para;</a></h2>
+<p>Now we concentrate in establishing properties of the solution to the
+following problem:
+<a id="ref-eq-000020fe-1" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+v\left(x\right)=\max_{y\in\Gamma\left(x\right)}\left\lbrace  F\left(x,y\right)+\beta v\left(y\right)\right\rbrace \tag{4.4}
+\end{equation}\]</div>
+<div class="arithmatex">\[
+G\left(x\right)=\left\lbrace  y\in\Gamma\left(x\right)|v\left(x\right)=F\left(x,y\right)+\beta v\left(y\right)\right\rbrace
+\]</div>
+<p>where <span class="arithmatex">\(v\)</span> is the value function and <span class="arithmatex">\(G\)</span> the policy correspondence.</p>
+<p>Assumptions A.1 and A.2 have to be met for the implications of this
+sections to be valid on the original sequence problem. Additional
+assumptions are also imposed that ensure that the previous ones are
+met.</p>
+<div class="admonition assumption">
+<p class="admonition-title">Assumption: A.3</p>
+<p><span class="arithmatex">\(X\)</span> is a convex subset of <span class="arithmatex">\(\mathbb{R}^{l}\)</span> and <span class="arithmatex">\(\Gamma\)</span> is a
+nonempty, compact valued and continuous correspondence.</p>
+</div>
+<div class="admonition assumption">
+<p class="admonition-title">Assumption: A.4</p>
+<p>The function <span class="arithmatex">\(F: Gr \left(\Gamma\right)\to\mathbb{R}\)</span> is bounded
+and continuous and <span class="arithmatex">\(\beta\in\left(0,1\right)\)</span>.</p>
+</div>
+<p>Because <span class="arithmatex">\(F\)</span> is bounded and continuous it is natural to think that
+the solution to <a href="#ref-eq-000020fe-1">equation (4.4)</a> lies in the set <span class="arithmatex">\(C\left(X\right)\)</span>.
+What follows it to establish the existence of a solution by means
+of the contraction mapping theorem.</p>
+<p>Define a mapping <span class="arithmatex">\(T:C\left(X\right)\to C\left(X\right)\)</span> as:
+<a id="ref-eq-000020mapping-000020t" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+Tf\left(x\right)=\max_{y\in\Gamma\left(x\right)}\left\lbrace  F\left(x,y\right)+\beta f\left(y\right)\right\rbrace \tag{4.5}
+\end{equation}\]</div>
+<p>The solution to <a href="#ref-eq-000020fe-1">(4.4)</a> is then a <span class="arithmatex">\(v\in C\left(X\right)\)</span>
+such that <span class="arithmatex">\(v=Tv\)</span>. The following proposition establishes that <span class="arithmatex">\(T\)</span>
+is a contraction from <span class="arithmatex">\(C\left(X\right)\)</span> into itself and also some
+properties of the policy correspondence <span class="arithmatex">\(G\)</span>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 4.7</p>
+<p>Let <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(\Gamma\)</span>, <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(\beta\)</span> satisfy assumption A.3 and
+A.4, and consider <span class="arithmatex">\(C\left(X\right)\)</span> the space of continuous bounded
+function on <span class="arithmatex">\(X\)</span> along with the sup norm. Then:</p>
+<ol>
+<li><span class="arithmatex">\(T\)</span> defined in <a href="#ref-eq-000020mapping-000020t">(4.5)</a> maps <span class="arithmatex">\(C\left(X\right)\)</span>
+    into itself.</li>
+<li>
+<p><span class="arithmatex">\(T\)</span> defined in <a href="#ref-eq-000020mapping-000020t">(4.5)</a> has a unique fixed
+    point <span class="arithmatex">\(v\in C\left(X\right)\)</span>, and for all <span class="arithmatex">\(v_{0}\in C\left(X\right)\)</span></p>
+<div class="arithmatex">\[
+\left\Vert T^{n}v_{0}-v\right\Vert \leq\beta^{n}\left\Vert v_{0}-v\right\Vert
+\]</div>
+</li>
+<li>
+<p>Given <span class="arithmatex">\(v\)</span> the optimal policy correspondence <span class="arithmatex">\(G\left(x\right)=\left\lbrace  y\in\Gamma\left(x\right)|v\left(x\right)=F\left(x,y\right)+\beta v\left(y\right)\right\rbrace\)</span>
+    is nonempty, compact valued and u.h.c.</p>
+</li>
+</ol>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>Each part is established separately.</p>
+<ol>
+<li>
+<p>Under A.3 and A.4 and given <span class="arithmatex">\(f\)</span> continuous and bounded the function
+    <span class="arithmatex">\(F\left(x,y\right)+\beta f\left(y\right)\)</span> is continuous in <span class="arithmatex">\(\left(x,y\right)\)</span>
+    and <span class="arithmatex">\(\Gamma\)</span> satisfies all assumptions of the ToM, thus establishing
+    that <span class="arithmatex">\(Tf\)</span> is continuous.</p>
+<p>Because <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(f\)</span> are bounded then <span class="arithmatex">\(Tf\)</span> is bounded as well. There
+exists <span class="arithmatex">\(M\geq0\)</span> such that <span class="arithmatex">\(-M\leq F\left(x,y\right)+\beta f\left(y\right)\leq M\)</span>
+for all <span class="arithmatex">\(\left(x,y\right)\)</span>, then for all <span class="arithmatex">\(x\)</span> we have: <span class="arithmatex">\(-M\leq\underset{y\in\Gamma\left(x\right)}{\max}\left\lbrace  F\left(x,y\right)+\beta f\left(y\right)\right\rbrace \leq M\)</span>
+which establishes boundedness of <span class="arithmatex">\(Tf\)</span>.</p>
+<p>Then <span class="arithmatex">\(Tf\in C\left(X\right)\)</span> for any <span class="arithmatex">\(f\in C\left(X\right)\)</span>.</p>
+</li>
+<li>
+<p>Blackwell conditions are met:</p>
+<ol>
+<li>
+<p>(monotonicity) Let <span class="arithmatex">\(f,g\in C\left(X\right)\)</span> and <span class="arithmatex">\(f\left(x\right)\leq g\left(x\right)\)</span>
+    for all <span class="arithmatex">\(x\)</span>. Then:</p>
+<div class="arithmatex">\[
+Tf\left(x\right)=\max_{y\in\Gamma\left(x\right)} \left\lbrace  F\left(x,y\right)+\beta f\left(y\right)\right\rbrace \leq\max_{y\in\Gamma\left(x\right)} \left\lbrace  F\left(x,y\right)+\beta g\left(y\right)\right\rbrace =Tg\left(x\right)
+\]</div>
+</li>
+<li>
+<p>(discounting) Let <span class="arithmatex">\(f\in C\left(X\right)\)</span> and <span class="arithmatex">\(a&gt;0\)</span>. Then:</p>
+<div class="arithmatex">\[
+T\left(f+a\right)\left(x\right)=\max_{y\in\Gamma\left(x\right)} \left\lbrace  F\left(x,y\right)+\beta\left(f\left(y\right)+a\right)\right\rbrace =\max_{y\in\Gamma\left(x\right)} \left\lbrace  F\left(x,y\right)+\beta f\left(y\right)\right\rbrace +\beta a
+\]</div>
+<p>In particular:</p>
+<div class="arithmatex">\[
+T\left(f+a\right)\left(x\right)\leq Tf\left(x\right)+\beta a
+\]</div>
+</li>
+</ol>
+<p>Then <span class="arithmatex">\(T\)</span> is a contraction. By the contraction mapping theorem the
+result follows.</p>
+</li>
+<li>
+<p>The properties of <span class="arithmatex">\(G\)</span> follow from the ToM which applies as shown
+    before.</p>
+</li>
+</ol>
+</details>
+<p>Additional assumption will help to characterize <span class="arithmatex">\(v\)</span> and <span class="arithmatex">\(G\)</span> better.
+The corollary of the contraction mapping theorem is the tool to be
+used now. First monotonicity can be inherited by the solution.</p>
+<div class="admonition assumption">
+<p class="admonition-title">Assumption: A.5</p>
+<p>For all <span class="arithmatex">\(y\)</span>, <span class="arithmatex">\(F\left(\cdot,y\right)\)</span> is strictly increasing in its
+first <span class="arithmatex">\(l\)</span> arguments.</p>
+</div>
+<div class="admonition assumption">
+<p class="admonition-title">Assumption: A.6</p>
+<p><span class="arithmatex">\(\Gamma\)</span> is monotone in the sense that if <span class="arithmatex">\(x\leq x^{\prime}\)</span>, then <span class="arithmatex">\(\Gamma\left(x\right)\subseteq\Gamma\left(x^{\prime}\right)\)</span>.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 4.8</p>
+<p>Let <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(\Gamma\)</span>, <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(\beta\)</span> satisfy assumption A.3 to A.6,
+and let <span class="arithmatex">\(v\)</span> be the unique solution to <a href="#ref-eq-000020fe-1">(4.4)</a>, then
+<span class="arithmatex">\(v\)</span> is strictly increasing.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>Let <span class="arithmatex">\(C^{\prime}\left(X\right)\subseteq C\left(X\right)\)</span> be the set of
+bounded, continuous and non-decreasing functions and <span class="arithmatex">\(C^{"}\left(X\right)\subseteq C^{\prime}\left(X\right)\)</span>
+the set of strictly increasing functions. Clearly <span class="arithmatex">\(C^{\prime}\left(X\right)\)</span>
+is closed. By the corollary of the contraction mapping theorem it
+suffices to show that <span class="arithmatex">\(T\left(C^{\prime}\left(X\right)\right)\subseteq C^{"}\left(X\right)\)</span>.</p>
+<p>Let <span class="arithmatex">\(f\in C^{\prime}\left(X\right)\)</span> and consider <span class="arithmatex">\(x&lt;x^{\prime}\)</span>. We want to
+show that <span class="arithmatex">\(Tf\)</span> is strictly increasing. This follows with A.5 and
+A.6:</p>
+<div class="arithmatex">\[
+Tf\left(x\right)=\max_{y\in\Gamma\left(x\right)}F\left(x,y\right)+\beta f\left(y\right)\leq\max_{y\in\Gamma\left(x^{\prime}\right)}F\left(x,y\right)+\beta f\left(y\right)&lt;\max_{y\in\Gamma\left(x^{\prime}\right)}F\left(x^{\prime},y\right)+\beta f\left(y\right)=Tf\left(x^{\prime}\right)
+\]</div>
+<p>where the first inequality follows from <span class="arithmatex">\(\Gamma\left(x\right)\subseteq\Gamma\left(x^{\prime}\right)\)</span>,
+a larger choice set implies a higher than or equal maximum, the second
+inequality follows from <span class="arithmatex">\(F\)</span> being strictly increasing.</p>
+</details>
+<p>It is also possible to induce convexity as follows:</p>
+<div class="admonition assumption">
+<p class="admonition-title">Assumption: A.7</p>
+<p><span class="arithmatex">\(F\)</span> is strictly concave in both arguments.</p>
+</div>
+<div class="admonition assumption">
+<p class="admonition-title">Assumption: A.8</p>
+<p><span class="arithmatex">\(\Gamma\)</span> has a convex graph.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 4.9</p>
+<p>Let <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(\Gamma\)</span>, <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(\beta\)</span> satisfy assumption A.3, A.4,
+A.7 and A.8, and let <span class="arithmatex">\(v\)</span> be the unique solution to <a href="#ref-eq-000020fe-1">(4.4)</a>,
+then <span class="arithmatex">\(v\)</span> is strictly concave and <span class="arithmatex">\(G\)</span> is a continuous single valued
+function.</p>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p>Let <span class="arithmatex">\(C^{\prime}\left(X\right)\)</span> be the set of concave, bounded and continuous
+functions and <span class="arithmatex">\(C^{"}\left(X\right)\)</span> the set of strictly concave,
+bounded and continuous functions. The set <span class="arithmatex">\(C^{\prime}\left(X\right)\subseteq C\left(X\right)\)</span>
+is closed and that <span class="arithmatex">\(C^{"}\left(X\right)\subseteq C^{\prime}\left(X\right)\)</span>.
+To show that <span class="arithmatex">\(v\)</span> is strictly concave we use the corollary of the
+contraction mapping theorem.</p>
+<p>We want to show that for all <span class="arithmatex">\(f\in C^{\prime}\left(X\right)\)</span> it follows
+that <span class="arithmatex">\(Tf\in C^{"}\left(X\right)\)</span> where</p>
+<div class="arithmatex">\[
+Tf\left(x\right)=Tf\left(x\right)=\max_{y\in\Gamma\left(x\right)}F\left(x,y\right)+\beta f\left(y\right)
+\]</div>
+<p>So let <span class="arithmatex">\(f\)</span> be weakly concave on <span class="arithmatex">\(x\)</span>, bounded and continuous. let
+<span class="arithmatex">\(x_{1},x_{2}\in X\)</span> and <span class="arithmatex">\(\lambda\in\left(0,1\right)\)</span> and define <span class="arithmatex">\(x_{\lambda}=\lambda x_{1}+\left(1-\lambda\right)x_{2}\)</span>.
+Let <span class="arithmatex">\(y_{i}\in G\left(x_{i}\right)\subseteq\Gamma\left(x_{i}\right)\)</span>
+and, by A.8, <span class="arithmatex">\(y_{\lambda}=\lambda y_{1}+\left(1-\lambda\right)y_{2}\in\Gamma\left(x_{\lambda}\right)\)</span>:</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+Tf\left(x_{\lambda}\right) &amp; = &amp; \max_{y\in\Gamma\left(x_{\lambda}\right)}F\left(x_{\lambda},y\right)+\beta f\left(y\right)\\
+&amp; \geq &amp; F\left(x_{\lambda},y_{\lambda}\right)+\beta f\left(y_{\lambda}\right)\\
+&amp; \geq &amp; F\left(x_{\lambda},y_{\lambda}\right)+\lambda\beta f\left(y_{1}\right)+\left(1-\lambda\right)\beta f\left(y_{2}\right)\\
+&amp; &gt; &amp; \lambda F\left(x_{1},y_{1}\right)+\left(1-\lambda\right)F\left(x_{2},y_{2}\right)+\lambda\beta f\left(y_{1}\right)+\left(1-\lambda\right)\beta f\left(y_{2}\right)\\
+&amp; = &amp; \lambda Tf\left(x_{1}\right)+\left(1-\lambda\right)Tf\left(x_{2}\right)
+\end{eqnarray*}\]</div>
+<p>where the first inequality follows from <span class="arithmatex">\(y_{\lambda}\)</span> being feasible
+at <span class="arithmatex">\(x_{\lambda}\)</span>, the second one from <span class="arithmatex">\(f\)</span> being concave and the
+third one from A.7. The final equality is obtained rearranging and
+recalling the optimality of <span class="arithmatex">\(y_{1}\)</span> and <span class="arithmatex">\(y_{2}\)</span> under <span class="arithmatex">\(x_{1}\)</span> and
+<span class="arithmatex">\(x_{2}\)</span> respectively. Joining results we get</p>
+<div class="arithmatex">\[
+Tf\left(x_{\lambda}\right)&gt;\lambda Tf\left(x_{1}\right)+\left(1-\lambda\right)Tf\left(x_{2}\right)
+\]</div>
+<p>Then the "image" of any concave function is a strictly concave
+function. This proves that <span class="arithmatex">\(Tf\in C^{"}\left(X\right)\)</span>. Then by
+the corollary of the contraction mapping theorem the unique fix point
+of <span class="arithmatex">\(T\)</span> belongs to <span class="arithmatex">\(C^{"}\)</span>. That is, <span class="arithmatex">\(v\)</span> is strictly concave.</p>
+<p>Finally, consider the policy function <span class="arithmatex">\(G\left(x\right)=\underset{y\in\Gamma\left(x\right)}{ argmax }F\left(x,y\right)+v\left(y\right)\)</span>.
+Because <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(v\)</span> are strictly concave the single valuedness and
+continuity of <span class="arithmatex">\(G\)</span> follow as an immediate consequence of the ToM under
+convexity part (ii).</p>
+</details>
+<p>Finally there are conditions for <span class="arithmatex">\(v\)</span> to be differentiable, allowing
+the use of first order conditions.</p>
+<div class="admonition assumption">
+<p class="admonition-title">Assumption: A.9</p>
+<p><span class="arithmatex">\(F\)</span> is continuously differentiable on the interior of its domain,
+<span class="arithmatex">\(Gr \left(A\right)\)</span>.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 4.10</p>
+<p>Let <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(\Gamma\)</span>, <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(\beta\)</span> satisfy assumption A.3, A.4,
+and A.7 to A.9, and let <span class="arithmatex">\(v\)</span> be the unique solution to <a href="#ref-eq-000020fe-1">(4.4)</a>.
+If <span class="arithmatex">\(x_{0}\in Int X\)</span> and <span class="arithmatex">\(g\left(x_{0}\right)\in Int \Gamma\left(x_{0}\right)\)</span>
+then <span class="arithmatex">\(v\)</span> is continuously differentiable at <span class="arithmatex">\(x_{0}\)</span> with derivatives
+given by:</p>
+<div class="arithmatex">\[
+v_{i}\left(x_{0}\right)=F_{i}\left(x_{0},g\left(x_{0}\right)\right)
+\]</div>
+</div>
+<details class="success">
+<summary>Proof</summary>
+<p><a href="https://books.google.com/books?id=tWYo0QolyLAC">Stokey et al. (1989, sec. 4.2, pp. 85)</a>.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="section-05-stochastic-dynamic-programming.html" class="md-footer__link md-footer__link--next" aria-label="Next: Stochastic Dynamic Programming">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Stochastic Dynamic Programming
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Sergio Ocampo Díaz · Western University
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

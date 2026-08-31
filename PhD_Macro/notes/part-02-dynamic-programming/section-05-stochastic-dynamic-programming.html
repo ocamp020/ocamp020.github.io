@@ -1,0 +1,2374 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Searchable course website generated from Ocampo-Macro_Notes.tex">
+      
+      
+      
+        <link rel="canonical" href="https://ocamp020.github.io/PhD_Macro/notes/part-02-dynamic-programming/section-05-stochastic-dynamic-programming.html">
+      
+      
+        <link rel="prev" href="section-04-non-stochastic-dynamic-programming.html">
+      
+      
+        <link rel="next" href="section-06-stochastic-recursive-competitive-equilibrium.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Stochastic Dynamic Programming - EC9604 Advanced Macroeconomics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stochastic-dynamic-programming" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-header__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EC9604 Advanced Macroeconomics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Stochastic Dynamic Programming
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-nav__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EC9604 Advanced Macroeconomics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-01-preliminaries/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preliminaries
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Preliminaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-01-macroeconomic-variables-and-distributions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macroeconomic Variables and Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-02-aggregation-complete-markets-preferences-and-technology.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation: Complete Markets, Preferences, and Technology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-01-preliminaries/section-03-markov-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markov Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dynamic Programming
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-04-non-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="section-05-stochastic-dynamic-programming.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-sequential-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Sequential Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-recursive-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Recursive Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-principle-of-optimality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Principle of Optimality
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markov-processes-over-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Markov Processes over States
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-06-stochastic-recursive-competitive-equilibrium.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Recursive Competitive Equilibrium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-03-heterogeneous-agent-models/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heterogeneous Agent Models
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Heterogeneous Agent Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-07-the-income-fluctuations-model-and-precautionary-savings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Income Fluctuations Model and Precautionary Savings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-08-an-endowment-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    An Endowment Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-09-a-production-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-10-a-production-economy-with-aggregate-risk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy with Aggregate Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-04-firm-heterogeneity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firm Heterogeneity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Firm Heterogeneity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-11-span-of-control.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Span of Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-12-market-power.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Market Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-13-monopolistic-competition.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monopolistic Competition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-14-variable-markups.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variable Markups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-15-aggregation-and-misallocation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation and Misallocation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-05-input-output-networks-and-economic-activity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks and Economic Activity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input-Output Networks and Economic Activity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-16-a-domar-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Domar Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-17-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-18-examples-of-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples of Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-19-hulten-s-theorem-for-efficient-economies.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hulten's Theorem for Efficient Economies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-20-beyond-hulten-second-order-effects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Second order effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-21-beyond-hulten-distortions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Distortions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-06-random-variables-and-probability/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Variables and Probability
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Random Variables and Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-22-measure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-23-measurable-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measurable functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-24-the-lebesgue-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Lebesgue integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-25-the-stieltjes-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Stieltjes integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-07-stochastic-calculus/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Calculus
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Calculus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-26-stochastic-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-27-ito-s-lemma.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ito's Lemma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-28-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-29-the-kolmogorov-forward-equation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Kolmogorov Forward Equation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-30-application-real-options.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Real Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-31-application-menu-cost-stokey-2009-ch-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Menu cost Stokey (2009, Ch. 7)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-sequential-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Sequential Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-recursive-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Recursive Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-principle-of-optimality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Principle of Optimality
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markov-processes-over-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Markov Processes over States
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div class="section-meta">
+  <a href="index.html">Part 2: Dynamic Programming</a>
+  <span>Section 5</span>
+</div>
+
+<h1 id="stochastic-dynamic-programming">Stochastic Dynamic Programming<a class="headerlink" href="#stochastic-dynamic-programming" title="Permanent link">&para;</a></h1>
+<p>We now want to establish the basics of dynamic programming problems
+where (some of) the states are subject to stochastic variation. We
+want to allow the variation in the stochastic variables to be serially
+correlated and for that we use the concepts developed for Markov processes
+in <a href="../part-01-preliminaries/section-03-markov-processes.html#ref-sec-markov-processes">Section 3</a>. The results below are a summary
+of those in Chapter 9 of <a href="https://books.google.com/books?id=tWYo0QolyLAC">Stokey et al. (1989)</a>.</p>
+<p>The basic problem takes one of two forms:
+<a id="ref-eq-dp-stochastic-type-1" class="course-anchor"></a>
+<a id="ref-eq-dp-stochastic-type-2" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{align}
+v\left(k,z\right) &amp; =\max_{k^{\prime}\in\left[0,zf\left(k\right)\right]}\left\lbrace  U\left(zf\left(k\right)-k^{\prime}\right)+\beta\int_{z}v\left(k^{\prime},z^{\prime}\right)Q\left(z,dz^{\prime}\right)\right\rbrace \tag{5.1}\\
+v\left(k,z\right) &amp; =\max_{y\in\left[0,f\left(k\right)\right]}\left\lbrace  U\left(f\left(k\right)-y\right)+\beta\int_{z}v\left(y-z^{\prime},z^{\prime}\right)Q\left(z,dz^{\prime}\right)\right\rbrace \tag{5.2}
+\end{align}\]</div>
+<p>The key mathematical feature in the two models is the expectation
+over future values of the state <span class="arithmatex">\(z\)</span> taking as given the state's current
+value. The conditional distribution of <span class="arithmatex">\(z^{\prime}\)</span> is given by the transition
+function <span class="arithmatex">\(Q\)</span>.</p>
+<p>The key economic difference between the two problems is the degree
+of control over the future value of the states. In the first problem
+the future value of state <span class="arithmatex">\(k\)</span> is perfectly controlled and there is
+only uncertainty over the future value of <span class="arithmatex">\(z\)</span>. In the second problem
+the value of the first state is only known until the following period.
+Only the choice <span class="arithmatex">\(y\)</span> is known by the decision maker, but the value
+of <span class="arithmatex">\(k^{\prime}=y-z^{\prime}\)</span> depends on <span class="arithmatex">\(z^{\prime}\)</span>.</p>
+<p>The second problem is of course more general and it also allows for
+more flexible numerical methods for the solution of the functional
+equation. See <a href="https://www.sciencedirect.com/science/article/pii/S0165188922001427">Phelan and Eslami (2022)</a>.</p>
+<p>The general form of the stochastic dynamic programming problem is
+cumbersome because of the required notation to take into account the
+stochastic process induced by the choices of the decision maker. However,
+the end result is basically the same as in the non-stochastic case
+of <a href="section-04-non-stochastic-dynamic-programming.html#ref-sec-non-stochastic-dp">Section 4</a>. Most importantly, the principle
+of optimality and the contraction mapping theorem still apply.</p>
+<p>In what follows we cover the basic definitions that will be useful
+to establish what constitutes a solution to the stochastic dynamic
+programming problem. We will later use these to construct a competitive
+equilibrium in decentralized economies. We will do this for the first
+type of problem shown above. Even though it is less general, the basic
+concepts are clearer in it and it maps better to the neoclassical
+growth model, leading example to come.</p>
+<p>We start by defining measurable spaces for the endogenous state <span class="arithmatex">\(\left(X,\mathcal{X}\right)\)</span>
+and the exogenous (stochastic) state <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span>, as
+well as their product that forms the state space of the problem <span class="arithmatex">\(\left(S,\mathcal{S}\right)=\left(X\times Z,\mathcal{X}\times\mathcal{Z}\right)\)</span>.
+We also impose that <span class="arithmatex">\(Q\)</span> is a stationary transition function, particularly
+that it satisfies the Feller property (<a href="../part-01-preliminaries/section-03-markov-processes.html#ref-def-feller-property">Definition 3.3</a>)
+preserving continuity and boundedness.</p>
+<p>The decision problem consists in choosing the future value of the
+endogenous state, a choice <span class="arithmatex">\(y\)</span> from a feasible set characterized
+by the correspondence <span class="arithmatex">\(\Gamma:X\times Z\to Z\)</span>. The graph of <span class="arithmatex">\(\Gamma\)</span>
+is <span class="arithmatex">\(A=\left\lbrace  \left(x,y,z\right)|y\in\Gamma\left(x,z\right)\right\rbrace\)</span>.
+The payoff function is <span class="arithmatex">\(F:A\to\mathbb{R}\)</span> and the decision maker
+discounts future payoffs at a rate <span class="arithmatex">\(\beta\geq0\)</span>.</p>
+<h2 id="the-sequential-problem">The Sequential Problem<a class="headerlink" href="#the-sequential-problem" title="Permanent link">&para;</a></h2>
+<p>The sequential problem is where most of the notational complications
+arise. The decision maker takes as given some initial state <span class="arithmatex">\(\left(x_{0},z_{0}\right)\)</span>
+and then makes <em>contingency plans </em>that specify actions in
+future periods depending on the realization of shocks up until then
+(the information available). Importantly, the plans depend only on
+the history of shocks (the exogenous state) as the endogenous state,
+<span class="arithmatex">\(x\)</span>, is chosen every period, except for the first. The objective
+is to maximize the present discounted expected payoff. The expectation
+is over the possible sample paths for the realization of the shocks.
+This requires dusting off the notation on stochastic processes developed
+after <a href="../part-01-preliminaries/section-03-markov-processes.html#ref-def-stochastic-process">Definition 3.7</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 5.1: Contingency Feasible Plan</p>
+<p>Let <span class="arithmatex">\(\left(Z^{t},\mathcal{Z}^{t}\right)\)</span>
+be a measurable space over the partial history of shocks in periods
+1 through <span class="arithmatex">\(t\)</span>. A feasible plan is a value <span class="arithmatex">\(\pi_{0}\in\Gamma\left(x_{0},z_{0}\right)\)</span>
+and a sequence of measurable functions <span class="arithmatex">\(\pi_{t}:Z^{t}\to\Gamma\left(\pi_{t-1}\left(z^{t-1}\right),z_{t}\right)\)</span>.
+Denote by <span class="arithmatex">\(\Pi\left(s_{0}\right)\)</span> the set of plans feasible given
+<span class="arithmatex">\(s_{0}=\left(x_{0},z_{0}\right)\)</span>.</p>
+</div>
+<p>The measurability conditions over the (choice) functions <span class="arithmatex">\(\pi_{t}\)</span>
+implies that we can compute probabilities over the outcomes (decisions)
+given the probabilities on paths implied by <span class="arithmatex">\(Q\)</span>. Recall that <span class="arithmatex">\(Q\)</span>
+is a function over <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span> so that, given <span class="arithmatex">\(s_{0}\)</span>,
+we can define the probability measure <span class="arithmatex">\(\mu^{t}\left(z_{0},\cdot\right):\mathcal{Z}^{t}\to\left[0,1\right]\)</span>
+as in <a href="../part-01-preliminaries/section-03-markov-processes.html#ref-def-probability-measure-sequences">Definition 3.5</a>. This function
+establishes probabilities over sequences of shocks <span class="arithmatex">\(z^{t}\)</span> and allows
+to compute expectations over payoffs <span class="arithmatex">\(F\left(\cdot\right)\)</span> provided
+that <span class="arithmatex">\(F\)</span> is measurable with respect to the appropriate <span class="arithmatex">\(\sigma\)</span>-algebra
+on <span class="arithmatex">\(A\)</span> (defined as <span class="arithmatex">\(\mathcal{A}=\left\lbrace  C\in{\mathcal{X}\times X\times Z}|C\in A\right\rbrace\)</span>)
+and that the function <span class="arithmatex">\(F\)</span> is integrable (either by being always positive
+or negative, or by being integrable with respect to <span class="arithmatex">\(\mu^{t}\)</span> given
+any feasible plan <span class="arithmatex">\(\pi\in\Pi\left(s_{0}\right)\)</span>). These conditions
+allow us to define the (period-t) discounted payoffs</p>
+<div class="arithmatex">\[\begin{align*}
+u_{0}\left(\pi,s_{0}\right) &amp; =F\left(x_{0},\pi_{0},z_{0}\right);\\
+u_{n}\left(\pi,s_{0}\right) &amp; =F\left(x_{0},\pi_{0},z_{0}\right)+\sum_{t=1}^{n}\beta^{t}\int_{Z^{t}}F\left(\pi_{t-1}\left(z^{-1}\right),\pi_{t}\left(z^{t}\right),z_{t}\right)\mu^{t}\left(z_{0},dz^{t}\right);
+\end{align*}\]</div>
+<p>and its limit</p>
+<div class="arithmatex">\[
+u\left(\pi,s_{0}\right)=\lim_{n\to\infty}u_{n}\left(\pi,s_{0}\right).
+\]</div>
+<p>This finally allow us to define the sequential problem of the decision
+maker:
+<a id="ref-eq-sequential-problem-stochastic" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+v^{\star}\left(s\right)=\max_{\pi\in\Pi\left(s\right)}u\left(\pi,s\right)\tag{5.3}
+\end{equation}\]</div>
+<p>Just posing this problem is a mouthful. Solving it is even worse.
+First, just evaluating the probabilities along the sample path becomes
+increasingly taxing. For instance, even if the exogenous state could
+take only two values, there are over a thousand possible histories
+after 10 periods (and the number gets prohibitively large for 100
+periods). Each of these histories has its own contingent plan, that
+is evaluated depending on its probability.</p>
+<p>When the decision maker does not have perfect control over the endogenous
+state variable as in the second problem in <a href="#ref-eq-dp-stochastic-type-2">(5.2)</a>
+we must also define a law of motion for the endogenous state variable</p>
+<div class="arithmatex">\[
+\phi:X\times X\times Z\to X
+\]</div>
+<p>so that <span class="arithmatex">\(x^{\prime}=\phi\left(x,y,z^{\prime}\right)\)</span> is the next period's endogenous
+state. This law of motion interacts with the contingent choices of
+the control, <span class="arithmatex">\(y\)</span>, to generate a contingent plan, that is now</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 5.2: Contingency Feasible Plan'</p>
+<p>Let <span class="arithmatex">\(\left(Z^{t},\mathcal{Z}^{t}\right)\)</span>
+be a measurable space over the partial history of shocks in periods
+1 through <span class="arithmatex">\(t\)</span>. A feasible plan is a value <span class="arithmatex">\(\pi_{0}\in\Gamma\left(x_{0},z_{0}\right)\)</span>
+and a sequence of measurable functions <span class="arithmatex">\(\pi_{t}:Z^{t}\to\Gamma\left(x_{t}^{\pi}\left(z^{t}\right),z_{t}\right)\)</span>,
+where <span class="arithmatex">\(x_{t}^{\pi}\left(z^{t}\right)\equiv\phi\left(x_{t-1}^{\pi}\left(z^{t-1}\right),\pi_{t-1}\left(z^{t-1}\right),z_{t}\right)\)</span>
+is defined as the (contingent) path of the endogenous variable given
+the plan <span class="arithmatex">\(\pi\)</span>. Denote by <span class="arithmatex">\(\Pi\left(s_{0}\right)\)</span> the set of plans
+feasible given <span class="arithmatex">\(s_{0}=\left(x_{0},z_{0}\right)\)</span>.</p>
+</div>
+<p>The implication of the changes to the problem is that we now have
+two stochastic processes. One is the exogenous state variable <span class="arithmatex">\(z\)</span>,
+that we treat just as before. In the first type of problem this process
+is enough to describe the problem as it completely describes the process
+of choices, <span class="arithmatex">\(y\)</span>, and hence of the endogenous state <span class="arithmatex">\(x^{\prime}=y\)</span>. In
+this more general case we have to interface the process for <span class="arithmatex">\(z\)</span> through
+the law of motion <span class="arithmatex">\(\phi\)</span> to obtain the process for <span class="arithmatex">\(x\)</span> given a plan
+<span class="arithmatex">\(\pi\)</span>.</p>
+<h2 id="the-recursive-problem">The Recursive Problem<a class="headerlink" href="#the-recursive-problem" title="Permanent link">&para;</a></h2>
+<p>The alternative to the sequential problem is to exploit the Markov
+nature of the exogenous (stochastic) state. Because <span class="arithmatex">\(z_{t}\)</span> follows
+a Markov process we do not actually have to carry around the whole
+history of shocks and instead we can subsume it in its current realization
+<span class="arithmatex">\(z_{t}\)</span>. However, this is not enough to determine the choice of the
+decision maker. In the sequential problem, the sequence of the exogenous
+state <span class="arithmatex">\(z^{t}\)</span>, along with the initial value of the endogenous state
+<span class="arithmatex">\(x_{0}\)</span>, contained all the information needed to know the current
+state given a contingent plan. If we drop the history of the exogenous
+state in favor of just its current realization, we have to introduce
+the current value of <span class="arithmatex">\(x\)</span> that contains the (relevant) information
+about the previous shocks.</p>
+<p>The problem is now
+<a id="ref-eq-dp-stochastic" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+v\left(x,z\right)=\max_{y\in\Gamma\left(x,z\right)}\left\lbrace  F\left(x,y,z\right)+\beta\int v\left(y,z^{\prime}\right)Q\left(z,dz^{\prime}\right)\right\rbrace ,\tag{5.4}
+\end{equation}\]</div>
+<p>with its associated policy function (or in general a correspondence)
+<a id="ref-eq-pf-stochastic" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+G\left(x,z\right)=\left\lbrace  y\in\Gamma\left(x,z\right)\;|\;v\left(x,z\right)=F\left(x,y,z\right)+\beta\int v\left(y,z^{\prime}\right)Q\left(z,dz^{\prime}\right)\right\rbrace .\tag{5.5}
+\end{equation}\]</div>
+<p>The policy function <span class="arithmatex">\(G\)</span> is the object of interest for most problems
+as it describes the actions of the decision maker and, as we will
+discuss below, it induces a distribution over the outcomes of the
+model at the core of representative and heterogeneous agent models.</p>
+<p>In the second type of problem in <a href="#ref-eq-dp-stochastic-type-2">(5.2)</a>
+the recursive formulation introduces the law of motion <span class="arithmatex">\(\phi\)</span>:</p>
+<div class="arithmatex">\[\begin{equation}
+v\left(x,z\right)=\max_{y\in\Gamma\left(x,z\right)}\left\lbrace  F\left(x,y,z\right)+\beta\int v\left(\phi\left(x,y,z^{\prime}\right),z^{\prime}\right)Q\left(z,dz^{\prime}\right)\right\rbrace . \tag{5.6}
+\end{equation}\]</div>
+<p><a id="ref-subsec-the-principle-of-optimality-stochastic" class="course-anchor"></a></p>
+<h2 id="the-principle-of-optimality">The Principle of Optimality<a class="headerlink" href="#the-principle-of-optimality" title="Permanent link">&para;</a></h2>
+<p>The first half of the principle of optimality comes easily. We can
+construct the optimal contingency plans <span class="arithmatex">\(\pi_{t}\)</span> out of <span class="arithmatex">\(G\)</span>. The
+general construction is simple but required worrying about measurability
+when <span class="arithmatex">\(G\)</span> is a correspondence. When <span class="arithmatex">\(G\)</span> is a function we can simply
+construct the contingent plans recursively as</p>
+<div class="arithmatex">\[
+\pi_{0}=G\left(s_{0}\right),\ldots,\pi_{t}\left(z^{t}\right)=G\left(\pi_{t-1}\left(z^{t}\right),z_{t}\right),\ldots
+\]</div>
+<p>This construction of <span class="arithmatex">\(\pi\)</span> is immediately feasible and measurable.
+It is left to show that a contingent plan constructed this way satisfies
+the optimal value of the sequential problem, <span class="arithmatex">\(v^{\star}\)</span>. The following
+theorem gives conditions for this, the proof is in Theorem 9.2 of
+<a href="https://books.google.com/books?id=tWYo0QolyLAC">Stokey et al. (1989)</a>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 5.1</p>
+<p>Let <span class="arithmatex">\(\left(X,\mathcal{X}\right)\)</span>, <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span>, Q, <span class="arithmatex">\(F\)</span>,
+<span class="arithmatex">\(\Gamma\)</span>, and <span class="arithmatex">\(\beta\)</span> be given. <span class="arithmatex">\(\Gamma\)</span> is non-empty valued and
+allows for a measurable selection. <span class="arithmatex">\(F\)</span> is <span class="arithmatex">\(\mathcal{A}\)</span>-measurable
+and integrable (see Assumption 9.2 in <a href="https://books.google.com/books?id=tWYo0QolyLAC">Stokey et al. 1989</a>). Let <span class="arithmatex">\(v^{\star}\)</span>
+be as in <a href="#ref-eq-sequential-problem-stochastic">(5.3)</a> and <span class="arithmatex">\(v\)</span> as in
+<a href="#ref-eq-dp-stochastic">(5.4)</a> such that</p>
+<div class="arithmatex">\[
+\lim_{t\to\infty}\int_{Z^{t}}\beta^{t}v\left(\pi_{t-1}\left(z^{t-1}\right),z_{t}\right)\mu^{t}\left(z_{0},dz^{t}\right)=0
+\]</div>
+<p>for all feasible plans <span class="arithmatex">\(\pi\in\Pi\left(s_{0}\right)\)</span> and all initial
+states <span class="arithmatex">\(s_{0}\in X\times Z\)</span>. Finally, let <span class="arithmatex">\(G\)</span> be defined as in <a href="#ref-eq-pf-stochastic">(5.5)</a>
+and suppose that it is non-empty and allows for a measurable selection.</p>
+<p>Then, <span class="arithmatex">\(v=v^{\star}\)</span> and any plan <span class="arithmatex">\(\pi^{\star}\)</span> generated by <span class="arithmatex">\(G\)</span>
+achieves the maximum in <a href="#ref-eq-sequential-problem-stochastic">(5.3)</a>.</p>
+</div>
+<p>The result can be strengthened to show that a contingent plan is optimal
+if and only if it is generated by <span class="arithmatex">\(G\)</span>. But the details do not add
+to the intuition of these problems. It can also be shown to apply
+to the more general problem in <a href="#ref-eq-dp-stochastic-type-2">(5.2)</a> under
+slight modifications to the assumptions of the theorem.</p>
+<p>Section 9.2 of <a href="https://books.google.com/books?id=tWYo0QolyLAC">Stokey et al. (1989)</a> focuses on bounded problems of the type
+most commonly encountered in economic applications and establishes
+how to apply a version of the contraction mapping theorem that leads
+to the construction of solutions to the dynamic programing problem
+in <a href="#ref-eq-dp-stochastic">(5.4)</a> and shows that the Envelope theorem applies
+to these problems (under additional continuity assumptions) so as
+to obtain the derivatives of the value function <span class="arithmatex">\(v\)</span> in therms of
+the payoff function <span class="arithmatex">\(F\)</span>.</p>
+<p><a id="ref-subsec-markov-processes-over-states" class="course-anchor"></a></p>
+<h2 id="markov-processes-over-states">Markov Processes over States<a class="headerlink" href="#markov-processes-over-states" title="Permanent link">&para;</a></h2>
+<p>Consider again the dynamic programming problem in <a href="#ref-eq-dp-stochastic">(5.4)</a>
+and suppose that its solution is a policy function <span class="arithmatex">\(G\)</span> (single-valued).
+The objective is to describe the behavior and properties of the sequence
+of states <span class="arithmatex">\(\left\lbrace  s_{t}\right\rbrace =\left\lbrace  \left(x_{t},z_{t}\right)\right\rbrace\)</span>
+as a function of the properties of the transition function of <span class="arithmatex">\(z\)</span>,
+<span class="arithmatex">\(Q\)</span>, and the policy function <span class="arithmatex">\(G\)</span>. More precisely, the objective
+is to show that <span class="arithmatex">\(\left\lbrace  s_{t}\right\rbrace\)</span> follows itself a Markov
+process with some transition function <span class="arithmatex">\(P\)</span>.</p>
+<p>The main result here is</p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 5.2</p>
+<p>Let <span class="arithmatex">\(\left(X,\mathcal{X}\right)\)</span> and <span class="arithmatex">\(\left(Z,\mathcal{Z}\right)\)</span> be measurable
+spaces with their product space <span class="arithmatex">\(\left(S,\mathcal{S}\right)\)</span> also measurable.
+Let <span class="arithmatex">\(Q:Z\times\mathcal{Z}\to\left[0,1\right]\)</span> be a transition function
+for the exogenous state <span class="arithmatex">\(z\)</span> and <span class="arithmatex">\(G:S\to X\)</span> a policy function for
+the endogenous state <span class="arithmatex">\(x\)</span>.</p>
+<p>If <span class="arithmatex">\(G\)</span> is measurable with respect to <span class="arithmatex">\(\mathcal{Z}\)</span> then the function
+<span class="arithmatex">\(P:S\times\mathcal{S}\to\left[0,1\right]\)</span> defined as</p>
+<div class="arithmatex">\[
+P\left(\left(x,z\right),A\times B\right)=\begin{cases}
+Q\left(z,B\right) &amp; \text{ if }G\left(x,z\right)\in A\\
+0 &amp; \text{ if }G\left(x,z\right)\notin A
+\end{cases}
+\]</div>
+<p>is a transition function on the state space <span class="arithmatex">\(\left(S,\mathcal{S}\right)\)</span>
+defining a Markov process.</p>
+</div>
+<p>So, out of the solution of the dynamic problem comes a stochastic
+process for states. In this case the process is quite straightforward:
+the exogenous state evolves according to <span class="arithmatex">\(Q\left(z,\cdot\right)\)</span>
+and the endogenous state evolves deterministically because the decision
+maker has full control over it <span class="arithmatex">\(\left(\phi\left(x,y,z^{\prime}\right)=y\right)\)</span>.
+Because the evolution of the endogenous state is deterministic it
+either is in a set <span class="arithmatex">\(A\in\mathcal{X}\)</span>, or it is not. If it is, then the
+transition function <span class="arithmatex">\(P\)</span> just needs to care about the conditional
+probability of <span class="arithmatex">\(z^{\prime}\in B\in\mathcal{Z}\)</span> given the current value of
+the exogenous state, <span class="arithmatex">\(z\)</span>.</p>
+<p>This construction of the Markov process will be crucial for the study
+of heterogeneous agent models in <a href="../part-03-heterogeneous-agent-models/section-07-the-income-fluctuations-model-and-precautionary-savings.html#ref-part-heterogeneous-agent-models">Part 3</a>.</p>
+<p>We now turn to the properties of the Markov process characterized
+by <span class="arithmatex">\(P\)</span>. Unsurprisingly, <span class="arithmatex">\(P\)</span> inherits its properties from <span class="arithmatex">\(Q\)</span>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 5.3</p>
+<p>Consider the following conditions:</p>
+<ol>
+<li><span class="arithmatex">\(X\)</span> is a convex Borel set in <span class="arithmatex">\(\mathbb{R}^{\ell}\)</span> with Borel subsets
+    <span class="arithmatex">\(\mathcal{X}\)</span>;</li>
+<li>either <span class="arithmatex">\(Z\)</span> is countable with <span class="arithmatex">\(\mathcal{Z}=2^{Z}\)</span> its power set (set
+    of all subsets) or <span class="arithmatex">\(Z\)</span> is a compact (Borel) set in <span class="arithmatex">\(\mathbb{R}^{k}\)</span> with
+    Borel subsets <span class="arithmatex">\(\mathcal{Z}\)</span> and <span class="arithmatex">\(Q\)</span> satisfies the Feller property;</li>
+<li><span class="arithmatex">\(G\)</span> is continuous.</li>
+</ol>
+<p>If all conditions are satisfied, then <span class="arithmatex">\(P\)</span> satisfies the Feller property.</p>
+</div>
+<p>This result is important because, as seen in <a href="../part-01-preliminaries/section-03-markov-processes.html#ref-sec-markov-processes">Section 3</a>,
+the Feller property is key for most results in Markov processes that
+we care about. All the conditions in the theorem are used so that
+continuity makes sense. When <span class="arithmatex">\(Z\)</span> is countable continuity is immediate
+on <span class="arithmatex">\(z\)</span> and so <span class="arithmatex">\(Q\)</span> already satisfies the Feller property. The insistence
+on Borel sets plays a similar role when the sets are uncountable.</p>
+<p>The main offshoot of this Theorem is establishing the existence of
+an invariant distribution for the states under the solution of the
+dynamic programming problem. This is what we refer to as the <em>stationary
+distribution</em> of the states. See <a href="../part-01-preliminaries/section-03-markov-processes.html#ref-thm-feller-invariant-distribution">Theorem 3.4</a>.
+When <span class="arithmatex">\(P\)</span> also satisfies the Monotone property the invariant distribution
+is unique and the distribution of states converges to it, as in <a href="../part-01-preliminaries/section-03-markov-processes.html#ref-thm-monotone-invariant-distribution">Theorem 3.5</a> when <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Z\)</span> are
+rectangles in Euclidean spaces.</p>
+<p>When the endogenous state evolves according to the law of motion <span class="arithmatex">\(\phi\left(x,y,z^{\prime}\right)\)</span>
+we must adjust the construction of the transition function for the
+states. The key difference is that <span class="arithmatex">\(x^{\prime}\)</span> is now stochastic and
+there is therefore a distribution over its possible values given the
+previous state <span class="arithmatex">\(\left(x,z\right)\)</span>. This distribution is constructed
+from <span class="arithmatex">\(G\)</span> and <span class="arithmatex">\(Q\)</span> similar to the case above.</p>
+<p>To better understand the construction of the Markov process take a
+step back. The transition function <span class="arithmatex">\(P\left(\left(x,z\right),A\times B\right)\)</span>
+is answering the question of how likely is it that <span class="arithmatex">\(\left(x^{\prime},z^{\prime}\right)\in A\times B\)</span>
+given the values of <span class="arithmatex">\(\left(x,z\right)\)</span>. But the value of <span class="arithmatex">\(x^{\prime}=\phi\left(x,y,z^{\prime}\right)\)</span>
+depends on <span class="arithmatex">\(z^{\prime}\)</span>. In fact, <span class="arithmatex">\(z^{\prime}\)</span> is the only unknown given that
+we have <span class="arithmatex">\(\left(x,z\right)\)</span>. So, we can ask what is the set of values
+of <span class="arithmatex">\(z^{\prime}\)</span> that would make <span class="arithmatex">\(x^{\prime}\in A\)</span> hold and then see if those
+values of <span class="arithmatex">\(z^{\prime}\)</span> are also in <span class="arithmatex">\(B\)</span>. Call that set <span class="arithmatex">\(H\)</span> and define
+it (in general as a correspondence) as</p>
+<div class="arithmatex">\[
+H\left(\left(x,z\right),A\right)=\left\lbrace  z^{\prime}\in Z\,|\,x^{\prime}=\phi\left(x,G\left(x,z\right),z^{\prime}\right)\in A\right\rbrace .
+\]</div>
+<p>The probability that <span class="arithmatex">\(\left(x^{\prime},z^{\prime}\right)\in A\times B\)</span> given
+<span class="arithmatex">\(\left(x,z\right)\)</span> is then the probability that <span class="arithmatex">\(z^{\prime}\in H\cap B\)</span>
+given <span class="arithmatex">\(z\)</span>, so we define the transition function as</p>
+<div class="arithmatex">\[
+P\left(\left(x,z\right),A\times B\right)=Q\left(z,H\left(\left(x,z\right),A\right)\cap B\right).
+\]</div>
+<p>Under appropriate assumptions <span class="arithmatex">\(P\)</span> inherits the Feller property from
+<span class="arithmatex">\(Q\)</span> as above.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="section-04-non-stochastic-dynamic-programming.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Non-Stochastic Dynamic Programming">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Non-Stochastic Dynamic Programming
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="section-06-stochastic-recursive-competitive-equilibrium.html" class="md-footer__link md-footer__link--next" aria-label="Next: Stochastic Recursive Competitive Equilibrium">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Stochastic Recursive Competitive Equilibrium
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Sergio Ocampo Díaz · Western University
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

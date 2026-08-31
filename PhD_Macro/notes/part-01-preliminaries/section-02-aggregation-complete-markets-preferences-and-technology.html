@@ -1,0 +1,2105 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Searchable course website generated from Ocampo-Macro_Notes.tex">
+      
+      
+      
+        <link rel="canonical" href="https://ocamp020.github.io/PhD_Macro/notes/part-01-preliminaries/section-02-aggregation-complete-markets-preferences-and-technology.html">
+      
+      
+        <link rel="prev" href="section-01-macroeconomic-variables-and-distributions.html">
+      
+      
+        <link rel="next" href="section-03-markov-processes.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Aggregation: Complete Markets, Preferences, and Technology - EC9604 Advanced Macroeconomics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aggregation-complete-markets-preferences-and-technology" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-header__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EC9604 Advanced Macroeconomics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aggregation: Complete Markets, Preferences, and Technology
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="EC9604 Advanced Macroeconomics" class="md-nav__button md-logo" aria-label="EC9604 Advanced Macroeconomics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EC9604 Advanced Macroeconomics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preliminaries
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Preliminaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-01-macroeconomic-variables-and-distributions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macroeconomic Variables and Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="section-02-aggregation-complete-markets-preferences-and-technology.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation: Complete Markets, Preferences, and Technology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="section-03-markov-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markov Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-02-dynamic-programming/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dynamic Programming
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-04-non-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-05-stochastic-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Recursive Competitive Equilibrium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-03-heterogeneous-agent-models/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heterogeneous Agent Models
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Heterogeneous Agent Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-07-the-income-fluctuations-model-and-precautionary-savings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Income Fluctuations Model and Precautionary Savings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-08-an-endowment-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    An Endowment Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-09-a-production-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-03-heterogeneous-agent-models/section-10-a-production-economy-with-aggregate-risk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Production Economy with Aggregate Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-04-firm-heterogeneity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firm Heterogeneity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Firm Heterogeneity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-11-span-of-control.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Span of Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-12-market-power.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Market Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-13-monopolistic-competition.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monopolistic Competition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-14-variable-markups.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variable Markups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-04-firm-heterogeneity/section-15-aggregation-and-misallocation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aggregation and Misallocation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-05-input-output-networks-and-economic-activity/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks and Economic Activity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input-Output Networks and Economic Activity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-16-a-domar-economy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Domar Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-17-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-18-examples-of-input-output-networks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples of Input-Output Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-19-hulten-s-theorem-for-efficient-economies.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hulten's Theorem for Efficient Economies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-20-beyond-hulten-second-order-effects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Second order effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-05-input-output-networks-and-economic-activity/section-21-beyond-hulten-distortions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond Hulten: Distortions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-06-random-variables-and-probability/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Variables and Probability
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Random Variables and Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-22-measure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-23-measurable-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measurable functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-24-the-lebesgue-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Lebesgue integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-06-random-variables-and-probability/section-25-the-stieltjes-integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Stieltjes integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../part-07-stochastic-calculus/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Calculus
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Calculus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-26-stochastic-processes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-27-ito-s-lemma.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ito's Lemma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-28-dynamic-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-29-the-kolmogorov-forward-equation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Kolmogorov Forward Equation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-30-application-real-options.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Real Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-07-stochastic-calculus/section-31-application-menu-cost-stokey-2009-ch-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application: Menu cost Stokey (2009, Ch. 7)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div class="section-meta">
+  <a href="index.html">Part 1: Preliminaries</a>
+  <span>Section 2</span>
+</div>
+
+<h1 id="aggregation-complete-markets-preferences-and-technology">Aggregation: Complete Markets, Preferences, and Technology<a class="headerlink" href="#aggregation-complete-markets-preferences-and-technology" title="Permanent link">&para;</a></h1>
+<p>This course is mostly devoted to the development of macroeconomic
+models with heterogeneity, where the distribution of assets, consumption,
+or investment is relevant for the determination of macroeconomic aggregates.
+However, there are many questions for which these distributional concerns
+are not of first order importance. Representative agent models are
+often used to address those questions. Before going into the material
+of the course, it is useful to stop and ask: When can we aggregate?
+Why do we use representative agent models?</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section draws heavily Larry Jones lecture notes found in <a href="https://sites.google.com/umn.edu/larryjones/teaching">https://sites.google.com/umn.edu/larryjones/teaching</a></p>
+</div>
+<p>The answer to this questions takes the form of (mathematical) conditions
+under which the outcome (the equilibrium) of a model with full heterogeneity
+looks the same as the outcome of a model with a representative agent.
+So, we consider first a heterogeneous agents economy.</p>
+<p><strong>Firms:</strong></p>
+<p>The economy has two kinds of firms: investment firms and consumption
+firms. Both use capital and labor to produce, respectively, investment
+specific goods for the formation of capital or general consumption
+goods. The production technologies are potentially firm- and time-specific:</p>
+<div class="arithmatex">\[
+\underbrace{x_{h,t}=F_{h,t}^{x}\left(k_{h,t}^{x},n_{h,t}^{x}\right)}_{\text{Investment Firm }h};\qquad\underbrace{y_{j,t}=F_{j,t}^{y}\left(k_{j,t}^{y},n_{j,t}^{y}\right)}_{\text{Consumption Firm }j}.
+\]</div>
+<p><strong>Households:</strong></p>
+<p>There are also households indexed by <span class="arithmatex">\(i\)</span>. They are infinitely lived
+and supply labor and consume every period. Household <span class="arithmatex">\(i\)</span> owns a share
+<span class="arithmatex">\(\theta_{i,h}^{x}\)</span> of investment firm <span class="arithmatex">\(h\)</span> and a share <span class="arithmatex">\(\theta_{i,j}^{y}\)</span>
+of consumption firm <span class="arithmatex">\(j\)</span>. These shares are constant (but we can allow
+for a market in which they are traded). The entirety of the firms
+are owned by households so that</p>
+<div class="arithmatex">\[
+\theta_{i,h}^{x},\theta_{i,j}^{y}\geq0;\qquad\sum_{i=1}^{I}\theta_{i,h}^{x}=1;\qquad\sum_{i=1}^{I}\theta_{i,j}^{y}=1.
+\]</div>
+<p>We assume that households make investment decisions. The initial endowment
+of households (that determines their lifetime wealth) is an amount
+of initial capital <span class="arithmatex">\(k_{i,0}\)</span> and a sequence of potential labor supplies
+(or labor productivities) <span class="arithmatex">\(\overline{n}_{i,t}\)</span>. The payoff of a household
+is the lifetime value of their consumption and labor choices captured
+by a utility <span class="arithmatex">\(U^{i}\left(\cdot\right)\)</span>, a function of the sequence
+<span class="arithmatex">\(\left(c_{i,t},n_{i,t}\right)_{t=0}^{\infty}\)</span>.</p>
+<p><strong>Competitive equilibrium:</strong></p>
+<p>An equilibrium is a sequence of prices <span class="arithmatex">\(\left\lbrace  p_{t}^{c},p_{t}^{x},r_{t},w_{t}\right\rbrace _{t=0}^{\infty}\)</span>
+a sequence of input demands and output from firms <span class="arithmatex">\(\left\lbrace  x_{h,t},k_{h,t}^{x},n_{h,t}^{x},y_{j,t},k_{j,t}^{y},n_{j,t}^{y}\right\rbrace _{t=0;h=1;j=1}^{t=\infty;h=H;j=J}\)</span>
+and a sequence of household actions <span class="arithmatex">\(\left\lbrace  c_{i,t},n_{i,t},k_{i,t+1},x_{i,t}\right\rbrace _{t=0;i=1}^{t=\infty;i=I}\)</span>,
+such that, given the ownership of firms <span class="arithmatex">\(\left\lbrace  \theta_{i,h}^{x},\theta_{i,j}^{y}\right\rbrace\)</span>
+and endowments <span class="arithmatex">\(\left\lbrace  k_{i,0},\left\lbrace  \overline{n}_{i,t}\right\rbrace _{t=0}^{\infty}\right\rbrace _{i=1}^{I}\)</span>,</p>
+<ol>
+<li>
+<p>For all <span class="arithmatex">\(i=1,\ldots,I\)</span>, the sequence <span class="arithmatex">\(\left\lbrace  c_{i,t},n_{i,t},k_{i,t+1},x_{i,t}\right\rbrace _{t=0}^{t=\infty}\)</span>
+    solves (given endowments and prices)</p>
+<div class="arithmatex">\[\begin{align*}
+\max &amp; U^{i}\left(\cdot\right)\\
+&amp; \text{s.t. }\sum_{t=0}^{\infty}p_{t}^{c}c_{i,t}+p_{t}^{x}x_{i,t}\leq\sum_{t=0}^{\infty}w_{t}n_{i,t}+r_{t}k_{it}+\theta_{i,h}^{x}\pi_{h,t}^{x}+\theta_{i,j}^{y}\pi_{j,t}^{y}\\
+&amp; \phantom{\text{s.t. }}k_{i,t+1}\leq\left(1-\delta\right)k_{i,t}+x_{i,t}\\
+&amp; \phantom{\text{s.t. }}n_{i,t}\leq\overline{n}_{i,t}
+\end{align*}\]</div>
+</li>
+<li>
+<p>For all <span class="arithmatex">\(h=1,\ldots,H\)</span>, the sequence <span class="arithmatex">\(\left\lbrace  x_{h,t},k_{h,t}^{x},n_{h,t}^{x}\right\rbrace _{t=0}^{t=\infty}\)</span>
+    solves (given prices)</p>
+<div class="arithmatex">\[
+\pi_{h,t}^{x}\,=\,\max\,p_{t}^{x}F_{h,t}^{x}\left(k_{h,t}^{x},n_{h,t}^{x}\right)-w_{t}n_{h,t}^{x}-r_{t}k_{h,t}^{x}\qquad\text{s.t. }x_{h,t}\leq F_{h,t}^{x}\left(k_{h,t}^{x},n_{h,t}^{x}\right)
+\]</div>
+</li>
+<li>
+<p>For all <span class="arithmatex">\(j=1,\ldots,J\)</span>, the sequence <span class="arithmatex">\(\left\lbrace  y_{j,t},k_{j,t}^{y},n_{j,t}^{y}\right\rbrace _{t=0}^{t=\infty}\)</span>
+    solves (given prices)</p>
+<div class="arithmatex">\[
+\pi_{j,t}^{y}\,=\,\max\,p_{t}^{c}y_{j,t}-w_{t}n_{j,t}^{y}-r_{t}k_{j,t}^{y}\qquad\text{s.t. }y_{j,t}\leq F_{j,t}^{y}\left(k_{j,t}^{y},n_{j,t}^{y}\right)
+\]</div>
+</li>
+<li>
+<p>Markets clear, so that for all <span class="arithmatex">\(t\)</span>,</p>
+<div class="arithmatex">\[\begin{align*}
+\sum_{i=1}^{I}c_{i,t} &amp; =\sum_{j=1}^{J}y_{j,t} &amp; \sum_{i=1}^{I}x_{i,t} &amp; =\sum_{h=1}^{H}x_{j,t}\\
+\sum_{i=1}^{I}k_{i,t} &amp; =\sum_{h=1}^{H}k_{j,t}^{x}+\sum_{j=1}^{J}k_{j,t}^{y} &amp; \sum_{i=1}^{I}n_{i,t} &amp; =\sum_{h=1}^{H}n_{j,t}^{x}+\sum_{j=1}^{J}n_{j,t}^{y}
+\end{align*}\]</div>
+</li>
+</ol>
+<p><strong>Aggregation</strong></p>
+<p>Now that we have our economy and have defined its equilibrium, we
+can ask about the conditions under which we could obtain the same
+aggregate allocations coming from representative firms and a representative
+household.</p>
+<p>One immediate way in which we get aggregation is all firms and households
+are identical. This implies that the production technologies do not
+depend on the identity of the firm <span class="arithmatex">\(\left(F_{h,t}^{x}\left(\cdot\right)=F_{h^{\prime},t}^{x}\left(\cdot\right),\,F_{j,t}^{y}\left(\cdot\right)=F_{j^{\prime},t}^{y}\left(\cdot\right)\right)\)</span>,
+and the utility function and endowments do not depend on the identity
+of the household <span class="arithmatex">\(\left(U^{i}\left(\cdot\right)=U^{i'}\left(\cdot\right),\:\theta_{i,h}^{x}=\theta_{i,j}^{y}=\frac{1}{I},\:k_{i,0}=k_{i^{\prime},0},\:\overline{n}_{i,t}=\overline{n}_{i^{\prime},t}\right)\)</span>,
+with the common utility function strictly concave so that it admits
+a unique solution. In this case all individual firms and households
+make the same choices. In this case the distribution of agents in
+the economy does not matter because there is no actual heterogeneity.</p>
+<p>However, there can be heterogeneity while allowing for aggregation.
+The conditions are nevertheless strong. The basic theory is developed
+by <a href="http://www.jstor.org/stable/1906943">Gorman (1953)</a>; <a href="https://doi.org/10.1111/j.1467-999X.1961.tb00819.x">Gorman (1961)</a> for the household side. I also recommend
+<a href="http://dx.doi.org/10.2139/ssrn.2684776">Jackson and Yariv (2024)</a> for a more complete treatment
+of cases where a representative agent is implicitly assumed when none
+actually exists.</p>
+<p><strong>Firms</strong></p>
+<p>Assume firms have constant returns to scale. Then, firms make no profits
+in equilibrium. If they did they would want to scale up production
+without bound, along with input demand. Because firms make no profits,
+differences in ownership <span class="arithmatex">\(\left\lbrace  \theta_{i,h}^{x},\theta_{i,j}^{y}\right\rbrace\)</span>
+are now irrelevant. In this case, input demand is determined by cost
+minimization. See <a href="../part-02-dynamic-programming/section-06-stochastic-recursive-competitive-equilibrium.html#ref-subsec-profit-maximization-crs">Profit Maximization: A note</a> for
+more on this.</p>
+<p>If we further assume that the production technology is common across
+firms then the problem is reduced to that of two firms that produce
+the entirety of output in each sector. The many firms we have are
+just scaled-down copies of the aggregated firms. We can relax this
+condition by assuming instead that technology is described by</p>
+<div class="arithmatex">\[
+F_{h,t}^{x}\left(k_{h,t}^{x},n_{h,t}^{x}\right)=z_{h,t}^{x}F_{t}^{x}\left(k_{h,t}^{x},n_{h,t}^{x}\right);\qquad F_{j,t}^{y}\left(k_{j,t}^{y},n_{j,t}^{y}\right)=z_{j,t}^{y}F_{t}^{y}\left(k_{j,t}^{y},n_{j,t}^{y}\right),
+\]</div>
+<p>with <span class="arithmatex">\(F_{t}^{x}\)</span> and <span class="arithmatex">\(F_{t}^{y}\)</span> constant returns to scale. In this
+case firms have a common technology scaled up by firm-specific Hicks-neutral
+productivity.</p>
+<p><strong>Households</strong></p>
+<p>When utility is common across households <span class="arithmatex">\(\left(U^{i}\left(\cdot\right)=U^{i'}\left(\cdot\right)\right)\)</span>
+and homothetic aggregation holds even under heterogeneous endowments.
+In this case the distribution of wealth does not matter for aggregates.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 2.1: Homothetic Preferences</p>
+<p>A preference relation <span class="arithmatex">\(\succeq\)</span>
+is homothetic if and only if <span class="arithmatex">\(x\succeq y\)</span> if and only if <span class="arithmatex">\(\lambda x\succeq\lambda y\)</span>
+for all <span class="arithmatex">\(\lambda\geq0\)</span>.</p>
+</div>
+<p>The implication of homotheticity is that if two bundles are in the
+same indifference curve, then any scaled version of the bundles are
+also in the same indifference curve. That is, if <span class="arithmatex">\(U\left(x\right)=U\left(y\right)\)</span>
+then <span class="arithmatex">\(U\left(\lambda x\right)=U\left(\lambda y\right)\)</span>. The most
+common example of homothetic utility functions is homogeneous functions,
+so that <span class="arithmatex">\(U\left(\lambda x\right)=\lambda^{\alpha}U\left(x\right)\)</span>
+for some <span class="arithmatex">\(\alpha\geq0\)</span>, for this to happen <span class="arithmatex">\(U\left(\cdot\right)\)</span>
+must be a homogeneous function. In words, the shape of indifference
+curves does not depend on the scale of the consumption bundles.</p>
+<p>How does homotheticity deliver aggregation? It implies that the Marshallian
+demands are proportional to total income: <span class="arithmatex">\(x\left(\vec{p},Y\right)=\phi\left(\vec{p}\right)\times Y\)</span>,
+where <span class="arithmatex">\(\vec{p}\)</span> is the vector of prices of the bundle <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(Y\)</span>
+is total resources (or lifetime income or wealth). That is, the demand
+of individuals with different income are always scaled versions of
+one another, as the slope of the budget constraint is given by common
+market prices and their problems differ only in the parallel shifts
+of their budget constraints. This implies that the allocation of a
+household that has resources <span class="arithmatex">\(Y_{i}\)</span>, corresponding to a fraction
+<span class="arithmatex">\(\omega_{i}=\frac{Y_{i}}{Y}\)</span> of the aggregate resources, is equal
+to a fraction <span class="arithmatex">\(\omega_{i}\)</span> of the aggregate allocation:</p>
+<div class="arithmatex">\[
+x\left(\vec{p},Y_{i}\right)=\omega_{i}x\left(\vec{p},Y\right).
+\]</div>
+<p>The implication is that aggregate allocations correspond exactly to
+the weighted sum over individual allocations:</p>
+<div class="arithmatex">\[
+x\left(\vec{p},\sum_{i=1}^{I}Y_{i}\right)=\sum_{i=1}^{I}x\left(\vec{p},Y_{i}\right).
+\]</div>
+<p>In our problem above the differences between households correspond
+only to differences in lifetime resources coming from differences
+in the endowment of initial capital and potential labor supply (you
+can see this by expressing the budget constraint in the Beckerian
+fashion, buying leisure out of the value of the time endowment, and
+replacing the investment choices).</p>
+<p>Gorman shows that exact aggregation (so that aggregates depend only
+on the aggregate amount of resources and not on their distribution)
+requires that Engel curves are linear with common slopes across individuals.
+For this to happen the indirect utility must be of the Gorman polar
+form,</p>
+<div class="arithmatex">\[
+v_{i}\left(\vec{p},Y_{i}\right)=\varphi_{i}\left(\vec{p}\right)+\eta\left(\vec{p}\right)Y_{i}.
+\]</div>
+<p>Homothetic preferences are a special case of this in which <span class="arithmatex">\(\varphi_{i}\left(\vec{p}\right)=0\)</span>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="section-01-macroeconomic-variables-and-distributions.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Macroeconomic Variables and Distributions">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Macroeconomic Variables and Distributions
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="section-03-markov-processes.html" class="md-footer__link md-footer__link--next" aria-label="Next: Markov Processes">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Markov Processes
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Sergio Ocampo Díaz · Western University
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>
