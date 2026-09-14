@@ -2,17 +2,17 @@
 
 :root {
   --md-primary-fg-color: #403844;
-  --md-primary-fg-color--light: #6b5570;
+  --md-primary-fg-color--light: #654291;
   --md-primary-fg-color--dark: #2e2931;
-  --md-accent-fg-color: #806b83;
+  --md-accent-fg-color: #654291;
   --course-ink: #403844;
-  --course-ink-soft: #6b5570;
-  --course-heading-tertiary: #6b5570;
-  --course-paper: #fffefc;
-  --course-paper-deep: #f0eaee;
-  --course-canvas: #f4f1ec;
-  --course-accent: #806b83;
-  --course-accent-soft: #b7a7ba;
+  --course-ink-soft: #654291;
+  --course-heading-tertiary: #5f318a;
+  --course-paper: #ffffff;
+  --course-paper-deep: #f3eef8;
+  --course-canvas: #fbfaf8;
+  --course-accent: #654291;
+  --course-accent-soft: #ccb9df;
   --course-blue: #667280;
   --course-sage: #788476;
   --course-text: #302d32;
@@ -27,7 +27,7 @@ html {
 
 body {
   color: var(--course-text);
-  background: linear-gradient(180deg, #f4f1ec 0, #f8f6f2 24rem, #fbfaf8 100%);
+  background: linear-gradient(180deg, #fbfaf8 0, #fdfcfb 24rem, #ffffff 100%);
 }
 
 body,
@@ -75,7 +75,7 @@ body,
   margin-bottom: 2.5rem;
   padding: 2rem 2.25rem 2.8rem;
   background:
-    linear-gradient(180deg, rgba(240, 234, 238, 0.34), transparent 18rem),
+    linear-gradient(180deg, rgba(243, 238, 248, 0.36), transparent 18rem),
     var(--course-paper);
   border: 1px solid rgba(64, 56, 68, 0.09);
   border-radius: 1.35rem;
@@ -120,7 +120,7 @@ body,
 }
 
 .md-nav__item .md-nav__link--active {
-  background: rgba(128, 107, 131, 0.07);
+  background: rgba(95, 49, 138, 0.07);
 }
 
 .md-typeset {
@@ -176,8 +176,8 @@ body,
 }
 
 .md-typeset a {
-  color: #6b5570;
-  text-decoration-color: rgba(107, 85, 112, 0.34);
+  color: #5f318a;
+  text-decoration-color: rgba(95, 49, 138, 0.34);
   text-underline-offset: 0.14em;
 }
 
@@ -214,7 +214,7 @@ body,
   align-items: start;
   margin: 1.6rem 0;
   padding: 1.1rem;
-  background: linear-gradient(145deg, rgba(240, 234, 238, 0.54), #fffefc);
+  background: linear-gradient(145deg, rgba(243, 238, 248, 0.62), #ffffff);
   border: 1px solid var(--course-line);
   border-left: 0.24rem solid var(--course-accent);
   border-radius: 0.9rem;
@@ -278,7 +278,7 @@ body,
   padding: clamp(1.7rem, 4vw, 3.1rem);
   color: white;
   background:
-    radial-gradient(circle at 88% 18%, rgba(183, 167, 186, 0.22), transparent 17rem),
+    radial-gradient(circle at 88% 18%, rgba(204, 185, 223, 0.24), transparent 17rem),
     linear-gradient(135deg, #403844 0%, #514958 64%, #403844 100%);
   border-radius: 1.35rem;
   box-shadow: 0 20px 46px rgba(64, 56, 68, 0.16);
@@ -395,7 +395,7 @@ body,
 .course-route {
   min-width: 0;
   color: inherit;
-  background: rgba(255, 254, 252, 0.96);
+  background: rgba(255, 255, 255, 0.97);
   border: 1px solid var(--course-line);
   border-radius: 1rem;
   box-shadow: 0 10px 28px rgba(64, 56, 68, 0.045);
@@ -419,8 +419,8 @@ body,
 
 .course-panel.accent {
   background:
-    linear-gradient(150deg, rgba(128, 107, 131, 0.07), transparent 70%),
-    rgba(255, 254, 252, 0.97);
+    linear-gradient(150deg, rgba(95, 49, 138, 0.07), transparent 70%),
+    rgba(255, 255, 255, 0.98);
 }
 
 .course-list {
@@ -462,7 +462,7 @@ body,
 .section-card:hover,
 .course-route:hover {
   transform: translateY(-2px);
-  border-color: rgba(128, 107, 131, 0.36);
+  border-color: rgba(95, 49, 138, 0.34);
   box-shadow: 0 18px 34px rgba(64, 56, 68, 0.08);
 }
 
@@ -505,8 +505,8 @@ body,
   margin: -0.55rem 0 1.55rem;
   padding: clamp(1.35rem, 3vw, 2rem);
   background:
-    radial-gradient(circle at 92% 5%, rgba(183, 167, 186, 0.12), transparent 15rem),
-    linear-gradient(135deg, rgba(240, 234, 238, 0.5), rgba(255, 254, 252, 0.98));
+    radial-gradient(circle at 92% 5%, rgba(204, 185, 223, 0.16), transparent 15rem),
+    linear-gradient(135deg, rgba(243, 238, 248, 0.58), rgba(255, 255, 255, 0.99));
   border: 1px solid var(--course-line);
   border-radius: 1.2rem;
 }
@@ -531,7 +531,7 @@ body,
   margin: 0 0 1.8rem;
   padding: clamp(1rem, 2.5vw, 1.5rem) clamp(1.1rem, 3vw, 1.75rem);
   color: var(--course-ink);
-  background: linear-gradient(135deg, rgba(255, 254, 252, 0.98), rgba(240, 234, 238, 0.42));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.99), rgba(243, 238, 248, 0.48));
   border-left: 0.22rem solid var(--course-accent);
   border-radius: 0 0.85rem 0.85rem 0;
   box-shadow: 0 0 0 1px rgba(64, 56, 68, 0.06);
@@ -589,7 +589,7 @@ body,
   padding: 0.85rem 1rem;
   flex-direction: column;
   color: var(--course-text) !important;
-  background: rgba(255, 254, 252, 0.96);
+  background: rgba(255, 255, 255, 0.97);
   border: 1px solid var(--course-line);
   border-radius: 0.8rem;
   text-decoration: none !important;
@@ -657,7 +657,7 @@ body,
   overflow: hidden;
   font-size: 0.86rem;
   line-height: 1.68;
-  background: rgba(255, 254, 252, 0.97);
+  background: rgba(255, 255, 255, 0.98);
   border: 1px solid var(--course-line);
   border-left-width: 0.24rem;
   border-radius: 0.8rem;
@@ -715,8 +715,8 @@ body,
 .md-typeset details.algorithm {
   border-left-color: var(--course-accent);
   background:
-    linear-gradient(150deg, rgba(128, 107, 131, 0.055), transparent 55%),
-    rgba(255, 254, 252, 0.98);
+    linear-gradient(150deg, rgba(95, 49, 138, 0.055), transparent 55%),
+    rgba(255, 255, 255, 0.99);
 }
 
 .md-typeset .admonition > :last-child,
@@ -781,7 +781,7 @@ body,
   margin: 1.25rem 0;
   padding: 1rem;
   overflow-x: auto;
-  background: rgba(240, 234, 238, 0.42);
+  background: rgba(243, 238, 248, 0.48);
   border: 1px solid var(--course-line);
   border-radius: 0.8rem;
 }
