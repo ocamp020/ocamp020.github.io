@@ -320,6 +320,8 @@
       
         
       
+        
+      
     
     
     
@@ -457,6 +459,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section-04-examples-and-applications-of-the-ces-production-function/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples and Applications of the CES Production Function
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -542,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../part-02-task-based-theories-of-production/section-04-task-based-model-of-production/index.html" class="md-nav__link">
+      <a href="../../part-02-task-based-theories-of-production/section-05-task-based-model-of-production/index.html" class="md-nav__link">
         
   
   
@@ -570,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../part-02-task-based-theories-of-production/section-05-examples-and-applications-of-the-task-based-model/index.html" class="md-nav__link">
+      <a href="../../part-02-task-based-theories-of-production/section-06-examples-and-applications-of-the-task-based-model/index.html" class="md-nav__link">
         
   
   
@@ -649,48 +679,25 @@
 <p>As we hinted at in the discussion of the Cobb--Douglas technology, the elasticity of substitution also determines how the division of income between capital and labor responds to changes in relative prices.
 When <span class="arithmatex">\(\sigma=1\)</span>, the shares are constant.
 When <span class="arithmatex">\(\sigma\neq1\)</span>, they change.</p>
-<p>For cost minimization, let <span class="arithmatex">\(\lambda\)</span> denote the multiplier on the output
-constraint. The first-order conditions are
-<span class="arithmatex">\(r=\lambda\,\partial Y/\partial K\)</span> and
-<span class="arithmatex">\(w=\lambda\,\partial Y/\partial L\)</span>. Under constant returns and perfect
-competition, <span class="arithmatex">\(\lambda=p\)</span>. Using the marginal products derived above gives</p>
+<p>We have already established that optimality involves equating the relative price <span class="arithmatex">\(w/r\)</span> to the marginal rate of transformation, this gave us from <a href="overview.html#ref-eq-ces-mrt">(3.7)</a></p>
 <div class="arithmatex">\[\begin{align}
-rK &amp;\;=\; pz^{\frac{\sigma-1}{\sigma}}\alpha \left(A_K K\right)^{\frac{\sigma-1}{\sigma}} Y^{\frac{1}{\sigma}}, \tag{3.11}\\
-wL &amp;\;=\; pz^{\frac{\sigma-1}{\sigma}}(1-\alpha) \left(A_L L\right)^{\frac{\sigma-1}{\sigma}}Y^{\frac{1}{\sigma}}. \tag{3.12}
+\frac{w}{r} \;=\;\frac{1-\alpha}{\alpha}\left(\frac{A_L}{A_K}\right)^{\frac{\sigma-1}{\sigma}}
+\left(\frac{L}{K}\right)^{-\frac{1}{\sigma}}
+\quad \longleftrightarrow \quad
+\frac{K}{L}  \;=\; \left(\frac{\alpha}{1-\alpha}\right)^{\sigma}\left(\frac{A_L}{A_K}\right)^{1-\sigma} \left(\frac{r}{w}\right)^{-\sigma} \tag{3.20}
 \end{align}\]</div>
-<p>Dividing each payment by total cost
-cancels the common factor <span class="arithmatex">\(pz^{\frac{\sigma-1}{\sigma}}Y^{1/\sigma}\)</span>:</p>
+<p>We can use this to get the ratio of input shares.
+Recall that the input shares are <span class="arithmatex">\(\alpha_K\,=\,\frac{rK}{rK+wL}\)</span> and <span class="arithmatex">\(\alpha_L\,=\,\frac{wL}{rK+wL}\)</span>.
+So their ratio is,</p>
 <div class="arithmatex">\[\begin{align}
-\alpha_K &amp;\;\equiv\; \frac{rK}{rK+wL}
-\;=\;\frac{\alpha (A_K K)^{\frac{\sigma-1}{\sigma}}}
-{\alpha (A_K K)^{\frac{\sigma-1}{\sigma}}+(1-\alpha)(A_L L)^{\frac{\sigma-1}{\sigma}}}, \tag{3.13}\\
-\alpha_L &amp;\;\equiv\; \frac{wL}{rK+wL} \;=\; \frac{(1-\alpha) \left(A_L L\right)^{\frac{\sigma-1}{\sigma}}}{\alpha \left(A_K K          \right)^{\frac{\sigma-1}{\sigma}}+(1-\alpha) \left(A_L L\right)^{\frac{\sigma-1}{\sigma}}}. \tag{3.14}
+\frac{\alpha_K}{\alpha_L} \;=\; \frac{rK}{wL}
+\;=\; \left(\frac{r}{w}\right)\left(\frac{K}{L}\right) \tag{3.21}
 \end{align}\]</div>
-<p>To express the shares in terms of prices and technologies, first take their ratio and use the MRT condition:
-<a id="ref-eq-effective-factor-ratio" class="course-anchor"></a></p>
+<p>Replacing <span class="arithmatex">\(K/L\)</span> from the MRT condition gives us the ratio of input shares taking into account how the firm combines capital and labor given prices</p>
 <div class="arithmatex">\[\begin{align}
 \frac{\alpha_K}{\alpha_L}
-&amp;=\frac{\alpha}{1-\alpha}
-\left(\frac{A_KK}{A_LL}\right)^{\frac{\sigma-1}{\sigma}}, \quad\text{where the MRT gives}\;
-\frac{A_KK}{A_LL}
-=\left[\frac{\alpha}{1-\alpha}\frac{A_K}{A_L}\frac{w}{r}\right]^\sigma.
-\tag{3.15}
-\end{align}\]</div>
-<p>Substituting the second equation into the first gives</p>
-<div class="arithmatex">\[\begin{align}
-\frac{\alpha_K}{\alpha_L}
-&amp;\;=\;\frac{\alpha}{1-\alpha}
-\left[\frac{\alpha}{1-\alpha}\frac{A_K}{A_L}\frac{w}{r}\right]^{\sigma-1} \;=\;\left(\frac{\alpha}{1-\alpha}\right)^\sigma
-\left(\frac{r/A_K}{w/A_L}\right)^{1-\sigma}. \tag{3.16}
-\end{align}\]</div>
-<p>Since <span class="arithmatex">\(\alpha_K+\alpha_L=1\)</span>, the individual shares are</p>
-<div class="arithmatex">\[\begin{align}
-\alpha_K
-&amp;=\frac{\alpha^\sigma(r/A_K)^{1-\sigma}}
-{\alpha^\sigma(r/A_K)^{1-\sigma}+(1-\alpha)^\sigma(w/A_L)^{1-\sigma}}, \tag{3.17}\\
-\alpha_L
-&amp;=\frac{(1-\alpha)^\sigma(w/A_L)^{1-\sigma}}
-{\alpha^\sigma(r/A_K)^{1-\sigma}+(1-\alpha)^\sigma(w/A_L)^{1-\sigma}}. \tag{3.18}
+\;=\; \left(\frac{r}{w}\right)\left(\left(\frac{\alpha}{1-\alpha}\right)^{\sigma}\left(\frac{A_L}{A_K}\right)^{1-\sigma} \left(\frac{r}{w}\right)^{-\sigma}\right)
+\;=\; \left(\frac{\alpha}{1-\alpha}\right)^{\sigma}\left(\frac{A_L}{A_K}\frac{r}{w}\right)^{1-\sigma} \tag{3.22}
 \end{align}\]</div>
 <p>At <span class="arithmatex">\(\sigma=1\)</span>, we recover <span class="arithmatex">\(\alpha_K=\alpha\)</span> and <span class="arithmatex">\(\alpha_L=1-\alpha\)</span>.</p>
 <p>These expressions are useful because they tell us about how inequality in income between input factors changes with relative prices and with technology:
@@ -702,18 +709,18 @@ cancels the common factor <span class="arithmatex">\(pz^{\frac{\sigma-1}{\sigma}
 \log\left(\frac{r}{w}\right)
 -\log\left(\frac{A_K}{A_L}\right)
 \right].
-\tag{3.19}
+\tag{3.23}
 \end{equation}\]</div>
 <p>Holding technology fixed, the relative-share response is</p>
 <div class="arithmatex">\[\begin{equation}
 \dd\log\frac{\alpha_K}{\alpha_L}
-\;=\;(1-\sigma)\dd\log\frac{r}{w}. \tag{3.20}
+\;=\;(1-\sigma)\dd\log\frac{r}{w}. \tag{3.24}
 \end{equation}\]</div>
 <p>A fall in <span class="arithmatex">\(r/w\)</span> raises capital's share when <span class="arithmatex">\(\sigma&gt;1\)</span> and lowers it when <span class="arithmatex">\(\sigma&lt;1\)</span>.
 A change in technology has the opposite effect as being more productive is equivalent to being cheaper.</p>
 <div class="arithmatex">\[\begin{equation}
 \dd\log\frac{\alpha_K}{\alpha_L}
-\;=\;(\sigma-1)\dd\log\frac{A_K}{A_L}. \tag{3.21}
+\;=\;(\sigma-1)\dd\log\frac{A_K}{A_L}. \tag{3.25}
 \end{equation}\]</div>
 <nav class="course-pager" aria-label="Subsection navigation">
 <a class="course-pager__link previous" href="subsection-01-factor-augmenting-technological-change.html"><span>Previous</span><strong>Factor-augmenting technological change</strong></a>

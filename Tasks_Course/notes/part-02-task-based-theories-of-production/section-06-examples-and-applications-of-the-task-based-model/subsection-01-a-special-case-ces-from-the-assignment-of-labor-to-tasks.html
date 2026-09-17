@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://ocamp020.github.io/Tasks_Course/notes/part-02-task-based-theories-of-production/section-04-task-based-model-of-production/subsection-06-the-link-to-aggregate-production-functions.html">
+        <link rel="canonical" href="https://ocamp020.github.io/Tasks_Course/notes/part-02-task-based-theories-of-production/section-06-examples-and-applications-of-the-task-based-model/subsection-01-a-special-case-ces-from-the-assignment-of-labor-to-tasks.html">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>The link to aggregate production functions - ECON 3399 · AI and Robots at Work</title>
+        <title>A special case: CES from the assignment of labor to tasks - ECON 3399 · AI and Robots at Work</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-link-to-aggregate-production-functions" class="md-skip">
+        <a href="#a-special-case-ces-from-the-assignment-of-labor-to-tasks" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The link to aggregate production functions
+              A special case: CES from the assignment of labor to tasks
             
           </span>
         </div>
@@ -320,6 +320,8 @@
       
         
       
+        
+      
     
     
     
@@ -457,6 +459,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part-01-aggregate-production-functions/section-04-examples-and-applications-of-the-ces-production-function/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples and Applications of the CES Production Function
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -542,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../section-05-task-based-model-of-production/index.html" class="md-nav__link">
         
   
   
@@ -570,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section-05-examples-and-applications-of-the-task-based-model/index.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         
   
   
@@ -626,6 +656,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#effective-elasticity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effective elasticity
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -642,44 +691,128 @@
 
 
 <div class="section-meta">
-<p><a href="../index.html">Part 2</a> / <a href="index.html">Section 4: Task-Based Model of Production</a>
-  <span>Section 4.6</span></p>
+<p><a href="../index.html">Part 2</a> / <a href="index.html">Section 6: Examples and Applications of the Task-Based Model</a>
+  <span>Section 6.1</span></p>
 </div>
-<h1 id="the-link-to-aggregate-production-functions">The link to aggregate production functions<a class="headerlink" href="#the-link-to-aggregate-production-functions" title="Permanent link">&para;</a></h1>
-<p>For a given assignment, holding fixed <span class="arithmatex">\(I\)</span>, we can show that the task-based production function has a CES representation following <a href="https://www.web.stanford.edu/~chadj/JonesTonetti_Automation.pdf">Jones and Tonetti (2026)</a>.
-The assignment divides tasks between capital and labor.
-For each task assigned to capital, <span class="arithmatex">\(i\in[0,I]\)</span>, we can write the amount of capital assigned to that task as</p>
+<h1 id="a-special-case-ces-from-the-assignment-of-labor-to-tasks">A special case: CES from the assignment of labor to tasks<a class="headerlink" href="#a-special-case-ces-from-the-assignment-of-labor-to-tasks" title="Permanent link">&para;</a></h1>
+<p><a id="ref-subsec-task-ces-case" class="course-anchor"></a></p>
+<p>This special case shows that the substitutability of tasks and inputs need not coincide.
+To make the things simple we start with a Cobb--Douglas aggregator for tasks, so <span class="arithmatex">\(\eta=1\)</span> as in <a href="../section-05-task-based-model-of-production/subsection-02-canonical-task-based-model-capital-and-labor.html#ref-eq-task-aggregator-cd">(5.2)</a>, and then we show that the effective elasticity of substitution between inputs is higher than one.
+The higher elasticity reflects the fact that the assignment also responds to changes in relative prices.</p>
+<p>This model was developed in <a href="https://doi.org/10.1162/00335530151144104">Acemoglu and Zilibotti (2001)</a> in the context of wage inequality between high and low-skilled workers.
+Accordingly, we consider two types of labor, with supplies <span class="arithmatex">\(L\)</span> and <span class="arithmatex">\(H\)</span>.
+Task production is
+<a id="ref-eq-task-ces-technology" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+y(i)\;=\;A_L(1-i)^{\frac{1}{\kappa}}n_L(i)
+\;+\;A_H i^{\frac{1}{\kappa}}n_H(i),
+\qquad \kappa&gt;0.
+\tag{6.1}
+\end{equation}\]</div>
+<p>where we are giving a specific functional form to the task-worker productivity, so that
+<a id="ref-eq-task-ces-productivities" class="course-anchor"></a></p>
 <div class="arithmatex">\[\begin{align}
-k(i)\;=\; a_K(i)^{\eta-1} \frac{K}{H_K(I)}. \tag{4.28}
+a_L(i) &amp;\;\equiv\; A_L (1-i)^{\frac{1}{\kappa}}
+&amp; a_H(i) &amp;\;\equiv\; A_H (i)^{\frac{1}{\kappa}}
+\tag{6.2}
 \end{align}\]</div>
-<p>We can then use this to write capital's total contribution to the task aggregator as</p>
+<p>Relative productivity of <span class="arithmatex">\(H\)</span> is
+<span class="arithmatex">\(\frac{A_H}{A_L}\left(\frac{i}{1-i}\right)^{\frac{1}{\kappa}}\)</span>,
+which increases with <span class="arithmatex">\(i\)</span>.
+So, worker productivity is such that the low-skill workers have comparative advantage at low-index tasks and high-skill workers at high-index tasks</p>
+<p>Group <span class="arithmatex">\(L\)</span> therefore produces tasks below a cutoff
+<span class="arithmatex">\(I\)</span>, and group <span class="arithmatex">\(H\)</span> produces those above it.
+At the boundary, the two unit costs are equal:
+<a id="ref-eq-task-ces-cutoff" class="course-anchor"></a></p>
 <div class="arithmatex">\[\begin{equation}
-\int_0^I[a_K(i)k(i)]^{(\eta-1)/\eta}\,\dd i
-\;=\;K^{(\eta-1)/\eta}H_K(I)^{1/\eta}
-\;=\;[A_K(I)K]^{(\eta-1)/\eta}. \tag{4.29}
+\frac{w_L}{A_L(1-I)^{\frac{1}{\kappa}}}
+\;=\;\frac{w_H}{A_H I^{\frac{1}{\kappa}}}
+\quad\longrightarrow\quad
+\frac{I}{1-I}
+\;=\;\left(\frac{w_H/A_H}{w_L/A_L}\right)^\kappa.
+\tag{6.3}
 \end{equation}\]</div>
-<p>where we define</p>
+<p>Solving for the lengths of the two task intervals gives</p>
 <div class="arithmatex">\[\begin{equation}
-A_K(I)\;=\;H_K(I)^{\frac{1}{\eta-1}},\qquad A_L(I)\;=\;H_L(I)^{\frac{1}{\eta-1}}. \tag{4.30}
-\end{equation}\]</div>
-<p>We use <span class="arithmatex">\(A_L\)</span> to follow the same steps and obtain
-<a id="ref-eq-task-ces-representation" class="course-anchor"></a></p>
-<div class="arithmatex">\[\begin{equation}
-Y\;=\;\left([A_K(I)K]^{\frac{\eta-1}{\eta}}
-+[A_L(I)L]^{\frac{\eta-1}{\eta}}\right)^{\frac{\eta}{\eta-1}},
+I\;=\;\frac{(w_H/A_H)^\kappa}
+{(w_H/A_H)^\kappa+(w_L/A_L)^\kappa},
 \qquad
-\alpha_K\;=\;\left(\frac{A_K(I)K}{Y}\right)^{\frac{\eta-1}{\eta}}.
-\tag{4.31}
+1-I\;=\;\frac{(w_L/A_L)^\kappa}
+{(w_H/A_H)^\kappa+(w_L/A_L)^\kappa}. \tag{6.4}
 \end{equation}\]</div>
-<p>This looks like the CES function from Section 3, but <span class="arithmatex">\(A_K(I)\)</span> and <span class="arithmatex">\(A_L(I)\)</span> depend on the task assignment.
-Holding <span class="arithmatex">\(I\)</span> fixed gives elasticity <span class="arithmatex">\(\eta\)</span>;
-allowing the cutoff to move adds substitution through reassignment. Thus the aggregate elasticity <span class="arithmatex">\(\sigma\)</span> need not equal <span class="arithmatex">\(\eta\)</span>.
-The special cases below show this explicitly.
-Standard factor-share formulas remain valid at the optimal assignment: the marginal task has equal unit costs, so a small
-boundary reallocation has no first-order effect on optimized output by itself.</p>
+<p>With Cobb--Douglas task demand, every equal-length interval receives the same expenditure.
+So, integrating over the assigned intervals gives
+<a id="ref-eq-task-ces-wage-bills" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+w_LL\;=\;I\,PY,
+\qquad w_HH\;=\;(1-I)PY.
+\tag{6.5}
+\end{equation}\]</div>
+<h3 id="effective-elasticity">Effective elasticity<a class="headerlink" href="#effective-elasticity" title="Permanent link">&para;</a></h3>
+<p>Divide the wage bills and then substitute the cutoff condition:
+<a id="ref-eq-task-ces-factor-ratio" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{align}
+\frac{H}{L}
+&amp;\;=\;\frac{w_L}{w_H}\frac{1-I}{I}
+\;=\;\frac{w_L}{w_H}
+\left(\frac{w_L/A_L}{w_H/A_H}\right)^\kappa
+\;=\;\left(\frac{A_H}{A_L}\right)^\kappa
+\left(\frac{w_H}{w_L}\right)^{-(1+\kappa)}.
+\tag{6.6}
+\end{align}\]</div>
+<p>Taking logs, holding technology fixed, and using the same relative-price definition as in our earlier two-input models gives
+<a id="ref-eq-task-ces-elasticity" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+\sigma\;=\;-\frac{\dd\log(H/L)}{\dd\log(w_H/w_L)}
+\;=\;\underbrace{1}_{\text{across tasks}}
+\;+\;\underbrace{\kappa}_{\text{task reassignment}}.
+\tag{6.7}
+\end{equation}\]</div>
+<p>If assignment were fixed, a higher <span class="arithmatex">\(w_H/w_L\)</span> would reduce demand for
+<span class="arithmatex">\(H\)</span>-produced tasks relative to <span class="arithmatex">\(L\)</span>-produced tasks with unit elasticity.
+With endogenous assignment, it also
+raises <span class="arithmatex">\(I\)</span>: some tasks move from <span class="arithmatex">\(H\)</span> to <span class="arithmatex">\(L\)</span>. The aggregate response is larger.</p>
+<p>The parameter <span class="arithmatex">\(\kappa\)</span> makes comparative advantage change more slowly across tasks.
+This makes them more substitutable in the margin so a given change in relative wages then moves the boundary farther.
+Indeed,</p>
+<div class="arithmatex">\[\begin{equation}
+\frac{\dd}{\dd i}\log\frac{a_H(i)}{a_L(i)}
+\;=\;\frac{1}{\kappa i(1-i)}. \tag{6.8}
+\end{equation}\]</div>
+<p>Figure~<a href="#ref-fig-task-ces-kappa">Figure 10</a> compares low <span class="arithmatex">\(\kappa\)</span> (solid lines) with high <span class="arithmatex">\(\kappa\)</span> (dashed lines).
+Higher <span class="arithmatex">\(\kappa\)</span> raises both groups' productivities (panel a); nevertheless, relative productivity does not change monotonically and varies less sharply around the illustrated cutoffs (panel b), making assignment more responsive to relative wages.
+At the fixed wage ratio shown, where <span class="arithmatex">\(w_H&gt;w_L\)</span>, increasing <span class="arithmatex">\(\kappa\)</span> moves the cutoff to the right and expands the low-skill task bundle.</p>
+<p><a id="ref-fig-task-ces-kappa" class="course-anchor"></a></p>
+<figure class="course-figure"><img src="../../../figures/task-ces-kappa.svg" alt="Changes in Productivity and Elasticity $\kappa$"></figure>
+
+<p>Ultimately, we can recover the output as a CES with elasticity <span class="arithmatex">\(\sigma=1+\kappa\)</span>:
+<a id="ref-eq-task-ces-aggregate" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+Y\;=\;e^{-\frac{1}{\kappa}}
+\left((A_LL)^{\frac{\kappa}{1+\kappa}}
++(A_HH)^{\frac{\kappa}{1+\kappa}}\right)^{\frac{1+\kappa}{\kappa}}.
+\tag{6.9}
+\end{equation}\]</div>
+<p>However, the steps are somewhat cumbersome and do not deliver any additional insight.
+The derivation involves replacing the labor quantities for each task into the continuous Cobb-Douglas aggregator.
+The labor quantities satisfy</p>
+<div class="arithmatex">\[\begin{equation}
+n_L(i)\;=\;\frac{PY}{w_L}\;=\;\frac{L}{I}
+\quad(i&lt;I),
+\qquad
+n_H(i)\;=\;\frac{PY}{w_H}\;=\;\frac{H}{1-I}
+\quad(i&gt;I). \tag{6.10}
+\end{equation}\]</div>
+<p>which, replaced into the aggregator give</p>
+<div class="arithmatex">\[\begin{align}
+\log Y
+&amp;\;=\;\int_0^I\log\left[A_L(1-i)^{\frac{1}{\kappa}}\frac{L}{I}\right]\dd i
+\;+\;\int_I^1\log\left[A_Hi^{\frac{1}{\kappa}}\frac{H}{1-I}\right]\dd i. \tag{6.11}
+\end{align}\]</div>
+<p>Solving these integrals delivers the CES representation.</p>
 <nav class="course-pager" aria-label="Subsection navigation">
-<a class="course-pager__link previous" href="subsection-05-comparative-statics-of-task-assignment.html"><span>Previous</span><strong>Comparative statics of task assignment</strong></a>
-<a class="course-pager__link next" href="subsection-07-the-ricardian-roots-of-task-assignment.html"><span>Next</span><strong>The Ricardian roots of task assignment</strong></a>
+<a class="course-pager__link previous" href="overview.html"><span>Previous</span><strong>Overview</strong></a>
+<a class="course-pager__link next" href="subsection-02-a-special-case-cobb-douglas-from-capital-labor-assignment.html"><span>Next</span><strong>A special case: Cobb--Douglas from capital--labor assignment</strong></a>
 </nav>
 
 

@@ -320,6 +320,8 @@
       
         
       
+        
+      
     
     
     
@@ -457,6 +459,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section-04-examples-and-applications-of-the-ces-production-function/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples and Applications of the CES Production Function
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -542,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../part-02-task-based-theories-of-production/section-04-task-based-model-of-production/index.html" class="md-nav__link">
+      <a href="../../part-02-task-based-theories-of-production/section-05-task-based-model-of-production/index.html" class="md-nav__link">
         
   
   
@@ -570,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../part-02-task-based-theories-of-production/section-05-examples-and-applications-of-the-task-based-model/index.html" class="md-nav__link">
+      <a href="../../part-02-task-based-theories-of-production/section-06-examples-and-applications-of-the-task-based-model/index.html" class="md-nav__link">
         
   
   
@@ -625,6 +655,25 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#where-does-the-weird-power-in-the-ces-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where does the weird power in the CES come from?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -741,6 +790,55 @@ When <span class="arithmatex">\(\sigma&lt;1\)</span>, it is weaker.</p>
 percent. In both cases the firm uses a more capital-intensive technique; the
 size of the movement differs.</p>
 </div>
+<h3 id="where-does-the-weird-power-in-the-ces-come-from">Where does the weird power in the CES come from?<a class="headerlink" href="#where-does-the-weird-power-in-the-ces-come-from" title="Permanent link">&para;</a></h3>
+<p>The CES can look daunting because of the many terms it has.
+But it does not have to be that complicated.
+We can see why we write the function the way we do by re-deriving our results starting from a simpler function.
+Consider the following production function:</p>
+<div class="arithmatex">\[\begin{align}
+Y\;=\; z\left(\, K^\beta \;+\; L^\beta \,\right)^{\frac{1}{\beta}} \,. \tag{3.10}
+\end{align}\]</div>
+<p>We have dropped the weights and assumed <span class="arithmatex">\(A_K=A_L=1\)</span>.</p>
+<p>The first order conditions give us</p>
+<div class="arithmatex">\[\begin{align}
+r &amp;\;=\; pz\left(\cdot\right)^{\frac{1}{\beta}-1} K^{\beta-1} \;=\; pz\left(\cdot\right)^{\frac{1-\beta}{\beta}} K^{\beta-1} \;=\; pz\left(\left(\cdot\right)^{\frac{1}{\beta}}\right)^{1-\beta} K^{\beta-1} \;=\; pz^\beta \left(\frac{K}{Y}\right)^{\beta-1} \tag{3.11} \\
+w &amp;\;=\; pz\left(\cdot\right)^{\frac{1}{\beta}-1} L^{\beta-1} \;=\;  pz^\beta \left(\frac{L}{Y}\right)^{\beta-1} \tag{3.12}
+\end{align}\]</div>
+<p>So, optimality requires (by taking the ratio of the two equations)</p>
+<div class="arithmatex">\[\begin{align}
+\frac{w}{r} \;=\; \text{MRT}_{L,K} \;=\; \left(\frac{L}{K}\right)^{\beta-1} \,. \tag{3.13}
+\end{align}\]</div>
+<p>From this we also get the ratio of income shares:</p>
+<div class="arithmatex">\[\begin{align}
+\frac{\alpha_L}{\alpha_K} \;=\;  \frac{wL}{rK} \;=\;  \left(\frac{L}{K}\right)^{\beta} \,. \tag{3.14}
+\end{align}\]</div>
+<blockquote>
+<p>*Why do we write the power of the CES as <span class="arithmatex">\((\sigma-1)/\sigma\)</span> and not just as <span class="arithmatex">\(\beta\)</span>?   *</p>
+</blockquote>
+<p>The reason is that we do not actually care about <span class="arithmatex">\(\beta\)</span> directly.
+Just like in Section 1, we care about the elasticity of substitution:</p>
+<div class="arithmatex">\[\begin{align}
+\sigma \;=\; \frac{\partial \log \frac{K}{L}}{\partial \log \frac{w}{r}} \,. \tag{3.15}
+\end{align}\]</div>
+<p>We can figure out the elasticity from the optimality condition:</p>
+<div class="arithmatex">\[\begin{align}
+\log \frac{w}{r} \;=\; \left(\beta-1\right) \log \frac{L}{K}
+\quad \longrightarrow\quad
+\log \frac{K}{L} \;=\; \frac{1}{1-\beta} \log \frac{w}{r} \,. \tag{3.16}
+\end{align}\]</div>
+<p>From this we see that the elasticity of substitution is</p>
+<div class="arithmatex">\[\begin{align}
+\sigma \;=\; \frac{1}{1-\beta} \,. \tag{3.17}
+\end{align}\]</div>
+<p>So, we can replace <span class="arithmatex">\(\beta\)</span> in terms of <span class="arithmatex">\(\sigma\)</span>:</p>
+<div class="arithmatex">\[\begin{align}
+\sigma \;=\; \frac{1}{1-\beta}
+\;\longrightarrow\; 1-\beta \;=\; \frac{1}{\sigma}
+\;\longrightarrow\; \beta \;=\; 1 - \frac{1}{\sigma}
+\;\longrightarrow\; \beta \;=\; \frac{\sigma-1}{\sigma} \;. \tag{3.18}
+\end{align}\]</div>
+<p>This gives us the power we use in the CES.
+Now we can obtain our results directly in terms of the elasticity of substitution without having to translate the level of <span class="arithmatex">\(\beta\)</span> into a level of <span class="arithmatex">\(\sigma\)</span>.</p>
 <nav class="course-pager" aria-label="Subsection navigation">
 <a class="course-pager__link previous" href="index.html"><span>Section overview</span><strong>Contents</strong></a>
 <a class="course-pager__link next" href="subsection-01-factor-augmenting-technological-change.html"><span>Next</span><strong>Factor-augmenting technological change</strong></a>
