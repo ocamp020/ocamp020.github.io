@@ -656,6 +656,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cheaper-machines-versus-more-productive-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheaper machines versus more productive machines
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -678,7 +697,16 @@
 <h1 id="comparative-statics-of-task-assignment">Comparative statics of task assignment<a class="headerlink" href="#comparative-statics-of-task-assignment" title="Permanent link">&para;</a></h1>
 <p>We can now look at how the firm's cost-minimizing choices respond to the relative input price <span class="arithmatex">\(w/r\)</span>.
 This response is summarized by the change in the assignment cutoff <span class="arithmatex">\(I\)</span>, which satisfies <span class="arithmatex">\(a_L(I)/a_K(I)=w/r\)</span>.
-Taking logs and differentiating gives
+<a href="#ref-fig-task-cutoff-slope">Figure 17</a> shows what determines the size of this response.
+A fall in <span class="arithmatex">\(r\)</span>, with <span class="arithmatex">\(w\)</span> fixed, raises the horizontal <span class="arithmatex">\(\log(w/r)\)</span> line by the same amount in both panels.
+When log relative productivity changes slowly across nearby tasks, the new intersection is much farther to the right.
+Many tasks are close substitutes in who can perform them cheaply, so many change hands.
+A steep schedule instead means sharp differences in comparative advantage, and few tasks switch.
+The shaded widths measure the change in the assignment cutoff.</p>
+<p><a id="ref-fig-task-cutoff-slope" class="course-anchor"></a></p>
+<figure class="course-figure"><img src="../../../figures/task-cutoff-slope.svg" alt="Comparative advantage and the reassignment response"></figure>
+
+<p>Taking logs and differentiating gives
 <a id="ref-eq-task-cutoff-price-response" class="course-anchor"></a></p>
 <div class="arithmatex">\[\begin{equation}
 \left[\frac{a_L'(I)}{a_L(I)}-\frac{a_K'(I)}{a_K(I)}\right]\dd I
@@ -686,7 +714,7 @@ Taking logs and differentiating gives
 \quad\longrightarrow\quad
 \frac{\dd I}{\dd\log(w/r)}
 \;=\;\frac{1}{\dfrac{a_L'(I)}{a_L(I)}-\dfrac{a_K'(I)}{a_K(I)}}\;&gt;\;0.
-\tag{5.20}
+\tag{5.19}
 \end{equation}\]</div>
 <p>The denominator is positive because labor's relative productivity increases with the task index.
 A higher wage relative to the rental rate therefore expands the machine bundle and contracts the human bundle.
@@ -699,16 +727,16 @@ The response is larger when comparative advantage changes less sharply around th
 \qquad
 \frac{\dd\log I}{\dd\log(w/r)}
 \;=\;\frac{1}{\varepsilon_L(I)-\varepsilon_K(I)}.
-\tag{5.21}
+\tag{5.20}
 \end{equation}\]</div>
 <p>Under our assumptions, <span class="arithmatex">\(\varepsilon_L(I)&gt;0\)</span> and <span class="arithmatex">\(\varepsilon_K(I)&lt;0\)</span>, so the gap in these elasticities is positive.</p>
 <p>This result is particularly useful to characterize how the aggregate demand for capital and labor reacts to changes in prices.</p>
 <blockquote>
 <p>How does reassignment affect substitution between the aggregate inputs?</p>
 </blockquote>
-<p>Dividing the input demands in <a href="subsection-04-input-demand-and-input-shares.html#ref-eq-capital-labor-market-clearing">(5.16)</a> cancels their common output and price terms:</p>
+<p>Dividing the input demands in <a href="subsection-04-input-demand-and-input-shares.html#ref-eq-capital-labor-market-clearing">(5.15)</a> cancels their common output and price terms:</p>
 <div class="arithmatex">\[\begin{equation}
-\frac{K}{L}\;=\;\left(\frac{w}{r}\right)^\eta\frac{H_K(I)}{H_L(I)}. \tag{5.22}
+\frac{K}{L}\;=\;\left(\frac{w}{r}\right)^\eta\frac{H_K(I)}{H_L(I)}. \tag{5.21}
 \end{equation}\]</div>
 <p>The limits of integration imply <span class="arithmatex">\(H_K'(I)=a_K(I)^{\eta-1}\)</span> and <span class="arithmatex">\(H_L'(I)=-a_L(I)^{\eta-1}\)</span>.
 We use this to get the elasticity of substitution with task assignment:
@@ -720,7 +748,7 @@ We use this to get the elasticity of substitution with task assignment:
 \frac{a_K(I)^{\eta-1}}{H_K(I)}
 +\frac{a_L(I)^{\eta-1}}{H_L(I)}
 \right]\frac{\dd I}{\dd\log(w/r)}}_{\text{task reassignment}},
-\tag{5.23}\\
+\tag{5.22}\\
 &amp;\;=\;\eta+
 \frac{I}{\varepsilon_L(I)-\varepsilon_K(I)}
 \left[\frac{a_K(I)^{\eta-1}}{H_K(I)}
@@ -732,14 +760,14 @@ Allowing assignment to change adds a positive response: capital takes over margi
 Thus aggregate inputs are more substitutable than tasks at an interior cutoff, although <span class="arithmatex">\(\sigma\)</span> need not be constant or exceed one when <span class="arithmatex">\(\eta&lt;1\)</span>.</p>
 <p>For example, with Cobb--Douglas task aggregation, <span class="arithmatex">\(\eta=1\)</span>, we have <span class="arithmatex">\(H_K(I)=I\)</span> and <span class="arithmatex">\(H_L(I)=1-I\)</span>, so</p>
 <div class="arithmatex">\[\begin{equation}
-\sigma\;=\;1+\frac{1}{(1-I)}\frac{\dd \log I}{\dd\log(w/r)}. \tag{5.24}
+\sigma\;=\;1+\frac{1}{(1-I)}\frac{\dd \log I}{\dd\log(w/r)}. \tag{5.23}
 \end{equation}\]</div>
 <p>The productivity schedules in <a href="../section-06-examples-and-applications-of-the-task-based-model/subsection-01-a-special-case-ces-from-the-assignment-of-labor-to-tasks.html#ref-subsec-task-ces-case">Section 6.1</a>, after relabeling its two labor inputs as capital and labor, imply <span class="arithmatex">\(\dd \log I/\dd\log(w/r)=\kappa (1-I)\)</span> and hence <span class="arithmatex">\(\sigma=1+\kappa\)</span>.
 <a href="../section-06-examples-and-applications-of-the-task-based-model/subsection-02-a-special-case-cobb-douglas-from-capital-labor-assignment.html#ref-subsec-task-cd-case">Section 6.2</a> instead shows how reassignment can raise an across-task elasticity <span class="arithmatex">\(\eta&lt;1\)</span> to an aggregate elasticity of exactly one.</p>
 <p>The same reasoning applies to study changes in technology.
 Write task productivity as</p>
 <div class="arithmatex">\[\begin{equation}
-a_K(i)=\overline{a}_K\alpha_K(i),\qquad a_L(i)=\overline{a}_L\alpha_L(i), \tag{5.25}
+a_K(i)=\overline{a}_K\alpha_K(i),\qquad a_L(i)=\overline{a}_L\alpha_L(i), \tag{5.24}
 \end{equation}\]</div>
 <p>where <span class="arithmatex">\(\overline{a}_K,\overline{a}_L&gt;0\)</span> scale productivity across all tasks and the fixed schedules <span class="arithmatex">\(\alpha_K(i),\alpha_L(i)\)</span> describe its task-specific pattern.
 The cutoff condition becomes
@@ -750,7 +778,7 @@ The cutoff condition becomes
 \quad\longrightarrow\quad
 \big[\varepsilon_L(I)-\varepsilon_K(I)\big]\dd\log I
 \;=\;\dd\log(w/r)+\dd\log(\overline{a}_K/\overline{a}_L).
-\tag{5.26}
+\tag{5.25}
 \end{equation}\]</div>
 <p>Multiplying a productivity schedule by a constant does not change its elasticity with respect to the task index, so the same <span class="arithmatex">\(\varepsilon_j(I)\)</span> apply.
 Holding <span class="arithmatex">\(w/r\)</span> fixed therefore gives
@@ -758,11 +786,34 @@ Holding <span class="arithmatex">\(w/r\)</span> fixed therefore gives
 <div class="arithmatex">\[\begin{equation}
 \left.\frac{\dd\log I}{\dd\log(\overline{a}_K/\overline{a}_L)}\right|_{w/r}
 \;=\;\frac{1}{\varepsilon_L(I)-\varepsilon_K(I)}\;&gt;\;0.
-\tag{5.27}
+\tag{5.26}
 \end{equation}\]</div>
 <p>An increase in <span class="arithmatex">\(\overline{a}_K\)</span> lowers capital's cost of performing every task and expands the machine bundle.
 An increase in <span class="arithmatex">\(\overline{a}_L\)</span> has the opposite effect.
 For assignment, a proportional increase in <span class="arithmatex">\(\overline{a}_K/\overline{a}_L\)</span> has the same effect as the same proportional increase in <span class="arithmatex">\(w/r\)</span>.</p>
+<h3 id="cheaper-machines-versus-more-productive-machines">Cheaper machines versus more productive machines<a class="headerlink" href="#cheaper-machines-versus-more-productive-machines" title="Permanent link">&para;</a></h3>
+<p><a href="#ref-fig-task-two-margins">Figure 18</a> separates changing task quantities from changing who performs the tasks.
+First lower the rental price from <span class="arithmatex">\(r\)</span> to <span class="arithmatex">\(r/m\)</span>, where <span class="arithmatex">\(m&gt;1\)</span>, holding <span class="arithmatex">\(w\)</span>, technology, and final output fixed.
+Even if assignment is frozen, the firm changes the relative quantities of machine-produced and human-produced services.
+Allowing assignment to adjust also transfers a band of tasks from labor to capital, adding the reassignment response in <a href="#ref-eq-task-substitution-decomposition">(5.22)</a>.</p>
+<p>Now compare this with keeping <span class="arithmatex">\(r\)</span> fixed and multiplying the entire capital-productivity schedule by the same <span class="arithmatex">\(m\)</span>.
+At every task, the two experiments give the same machine unit cost:</p>
+<div class="arithmatex">\[\begin{equation}
+\frac{r/m}{a_K(i)}=\frac{r}{m a_K(i)}. \tag{5.27}
+\end{equation}\]</div>
+<p>Consequently, they give the same assignment, task-service quantities, final-good unit cost, and labor use at the same output target.
+But they do not give the same physical capital use: producing each machine task service with the better technology requires <span class="arithmatex">\(1/m\)</span> as much capital as producing it with the cheaper rental price.
+In terms of local responses to <span class="arithmatex">\(m\)</span>,</p>
+<div class="arithmatex">\[\begin{equation}
+\left.\frac{\dd\log(K/L)}{\dd\log m}\right|_{r\,\mapsto\,r/m}=\sigma,
+\qquad
+\left.\frac{\dd\log(K/L)}{\dd\log m}\right|_{a_K\,\mapsto\,m a_K}=\sigma-1. \tag{5.28}
+\end{equation}\]</div>
+<p>The fixed-assignment components are respectively <span class="arithmatex">\(\eta\)</span> and <span class="arithmatex">\(\eta-1\)</span>; the additional reassignment component is the same in both experiments.
+This is why equivalent improvements in the cost of machine services need not have the same effect on the number of machines used.</p>
+<p><a id="ref-fig-task-two-margins" class="course-anchor"></a></p>
+<figure class="course-figure"><img src="../../../figures/task-two-margins.svg" alt="Task quantities and task reassignment"></figure>
+
 <nav class="course-pager" aria-label="Subsection navigation">
 <a class="course-pager__link previous" href="subsection-04-input-demand-and-input-shares.html"><span>Previous</span><strong>Input demand and input shares</strong></a>
 <a class="course-pager__link next" href="subsection-06-the-link-to-aggregate-production-functions.html"><span>Next</span><strong>The link to aggregate production functions</strong></a>

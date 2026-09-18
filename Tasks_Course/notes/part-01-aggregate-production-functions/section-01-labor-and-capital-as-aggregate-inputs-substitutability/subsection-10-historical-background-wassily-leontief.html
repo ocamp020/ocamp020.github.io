@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://ocamp020.github.io/Tasks_Course/notes/part-01-aggregate-production-functions/section-01-labor-and-capital-as-aggregate-inputs-substitutability/subsection-01-the-neoclassical-production-function.html">
+        <link rel="canonical" href="https://ocamp020.github.io/Tasks_Course/notes/part-01-aggregate-production-functions/section-01-labor-and-capital-as-aggregate-inputs-substitutability/subsection-10-historical-background-wassily-leontief.html">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>The neoclassical production function - ECON 3399 · AI and Robots at Work</title>
+        <title>Historical background: Wassily Leontief - ECON 3399 · AI and Robots at Work</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-neoclassical-production-function" class="md-skip">
+        <a href="#historical-background-wassily-leontief" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The neoclassical production function
+              Historical background: Wassily Leontief
             
           </span>
         </div>
@@ -663,10 +663,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#constant-returns-to-scale-and-eulers-theorem" class="md-nav__link">
+  <a href="#wassily-w-leontief-1906-1999" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Constant returns to scale and Euler's theorem
+        Wassily W. Leontief (1906--1999)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-leontief-production-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Leontief production function
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-a-firm-to-a-production-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From a firm to a production network
       
     </span>
   </a>
@@ -692,67 +714,84 @@
 
 <div class="section-meta">
 <p><a href="../index.html">Part 1</a> / <a href="index.html">Section 1: Labor and Capital as Aggregate Inputs: Substitutability</a>
-  <span>Section 1.1</span></p>
+  <span>Section 1.10</span></p>
 </div>
-<h1 id="the-neoclassical-production-function">The neoclassical production function<a class="headerlink" href="#the-neoclassical-production-function" title="Permanent link">&para;</a></h1>
-<p>We start from the most general description of the production technology, embodied in the production function,
-<a id="ref-eq-aggregate-production" class="course-anchor"></a></p>
+<h1 id="historical-background-wassily-leontief">Historical background: Wassily Leontief<a class="headerlink" href="#historical-background-wassily-leontief" title="Permanent link">&para;</a></h1>
+<p>Finally, it is worth mentioning the work of Wassily Leontief on production networks.
+His work greatly influenced how we think about the way production is organized in the economy.
+From the point of view of this course, his most salient contribution is what we call  the Leontief function which captures perfect complements.
+This function implies an elasticity of substitution of zero (<span class="arithmatex">\(\sigma=0\)</span>) so that the ratio of inputs does not change with prices.
+This key feature means that the ratio of inputs is constant and given entirely as a property of production.</p>
+<div class="economist-card">
+<p><img src="../../../figures/portraits/Wassily-Leontief-1973.jpg" alt="Portrait for Wassily W. Leontief (1906--1999)"></p>
+<div class="economist-card__body">
+<h3 id="wassily-w-leontief-1906-1999">Wassily W. Leontief (1906--1999)<a class="headerlink" href="#wassily-w-leontief-1906-1999" title="Permanent link">&para;</a></h3>
+<p>Leontief was born in St. Petersburg, studied at the University of Leningrad and the University of Berlin, and moved to the United States in 1931.
+At Harvard he turned the interdependence of industries into an empirical system of input--output accounts: tables that record which industries supply inputs to other industries and which industries use them.
+This made the production network of an entire economy measurable rather than leaving it as an abstract general-equilibrium idea.</p>
+<p>Leontief received the 1973 Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel for developing the input--output method and applying it to important economic problems.
+His framework became part of modern economic accounting and remains useful for tracing the direct and indirect consequences of changes in demand, technology, trade, and production bottlenecks.</p>
+<p><em>Sources:</em>
+<a href="https://www.nobelprize.org/prizes/economic-sciences/1973/leontief/facts/">Nobel Prize, Wassily Leontief facts</a>;
+<a href="https://apps.bea.gov/scb/issues/2020/12-december/1220-reprint-input-output-tables.htm">U.S. Bureau of Economic Analysis, The Development of BEA's Input--Output Framework</a>.</p>
+</div>
+</div>
+<h3 id="the-leontief-production-function">The Leontief production function<a class="headerlink" href="#the-leontief-production-function" title="Permanent link">&para;</a></h3>
+<p>The firm-level version of his fixed-coefficient logic is the Leontief production function
+<a id="ref-eq-leontief-production" class="course-anchor"></a></p>
 <div class="arithmatex">\[\begin{equation}
-Y=zF(K,L),
-\tag{1.1}
+Y\;=\;z\min\left\lbrace \frac{K}{a_K},\frac{L}{a_L}\right\rbrace,
+\qquad a_K&gt;0,\quad a_L&gt;0.
+\tag{1.24}
 \end{equation}\]</div>
-<p>where <span class="arithmatex">\(Y\)</span> is output, <span class="arithmatex">\(K\)</span> is aggregate capital, <span class="arithmatex">\(L\)</span> is aggregate labor, and <span class="arithmatex">\(z&gt;0\)</span> is total factor productivity.
-The function <span class="arithmatex">\(F\)</span> describes how physical inputs become output;
-<span class="arithmatex">\(z\)</span> measures how effective the entire production process is.
-Later on we will introduce <em>factor-augmenting productivity</em> that affects a given input directly.</p>
-<p>Formally, let <span class="arithmatex">\(F:\R_+^2\rightarrow\R_+\)</span> be twice continuously differentiable and satisfy</p>
-<ol>
-<li>
-<p><strong>Productive inputs:</strong> Holding the other input fixed, more capital or labor raises output.</p>
-<div class="arithmatex">\[
-F_K(K,L)&gt;0, \qquad F_L(K,L)&gt;0.
-\]</div>
-</li>
-<li>
-<p><strong>Marginal products diminish:</strong> Adding more machines or workers increases output, but ever less so.</p>
-<div class="arithmatex">\[
-F_{KK}(K,L)&lt;0, \qquad F_{LL}(K,L)&lt;0.
-\]</div>
-</li>
-<li>
-<p><strong>Constant returns to
-    scale:</strong> Doubling all inputs doubles output.</p>
-<div class="arithmatex">\[
-F(\lambda K,\lambda L)=\lambda F(K,L), \qquad \lambda&gt;0.
-\]</div>
-</li>
-<li>
-<p><strong>The production function is jointly concave.</strong> We need this assumption to ensure the firm's problem is well posed mathematically.</p>
-</li>
-</ol>
-<h3 id="constant-returns-to-scale-and-eulers-theorem">Constant returns to scale and Euler's theorem<a class="headerlink" href="#constant-returns-to-scale-and-eulers-theorem" title="Permanent link">&para;</a></h3>
-<p>The fact that the production function has constant returns to scale has a very useful consequence that follows from <a href="https://en.wikipedia.org/wiki/Homogeneous_function#Euler's_theorem">Euler's Theorem for Homogeneous Functions</a>:
-The production function can be expressed in terms of the marginal product of capital and labor.
-<a id="ref-eq-euler-production" class="course-anchor"></a></p>
+<p>The coefficients <span class="arithmatex">\(a_K\)</span> and <span class="arithmatex">\(a_L\)</span> describe a technological recipe: before the productivity multiplier <span class="arithmatex">\(z\)</span>, one unit of production requires <span class="arithmatex">\(a_K\)</span> units of capital together with <span class="arithmatex">\(a_L\)</span> units of labor.
+Additional capital cannot replace missing labor, and additional labor cannot replace missing capital.
+One input becomes a bottleneck while any amount of the other input beyond the required proportion does not raise output.</p>
+<p>For positive input prices, a firm producing <span class="arithmatex">\(\overline{Y}\)</span> therefore chooses
+<a id="ref-eq-leontief-conditional-demands" class="course-anchor"></a></p>
 <div class="arithmatex">\[\begin{equation}
-\text{Euler's Theorem:}\quad F(K,L)\;=\;F_K(K,L)K\,+\,F_L(K,L)L.
-\tag{1.2}
+K\;=\;\frac{a_K\overline{Y}}{z},
+\qquad
+L\;=\;\frac{a_L\overline{Y}}{z},
+\qquad
+C(\overline{Y},r,w)\;=\;\frac{ra_K+wa_L}{z}\overline{Y}.
+\tag{1.25}
 \end{equation}\]</div>
-<p>The reason this identity is so useful is that when markets are competitive we can express output in terms of the cost of inputs.
-In a competitive market, factors receive the value of their marginal products, so <span class="arithmatex">\(\,r\,=\,pzF_K\,\)</span> and <span class="arithmatex">\(\,w\,=\,pzF_L\)</span>.
-So, if output sells at price <span class="arithmatex">\(\,p\,\)</span> we can write
-<a id="ref-eq-factor-exhaustion" class="course-anchor"></a></p>
+<p>The required input ratio is consequently <span class="arithmatex">\(K/L=a_K/a_L\)</span>, independent of <span class="arithmatex">\(w/r\)</span>.
+Consequently, the elasticity of substitution is zero:
+<a id="ref-eq-leontief-zero-elasticity" class="course-anchor"></a></p>
 <div class="arithmatex">\[\begin{equation}
-rK\,+\,wL \;=\; pzF_K(K,L)K\,+\,pzF_L(K,L)L \;=\; pz\left(F_K(K,L)K\,+\,F_L(K,L)L\right)  \;=\; pY
-\tag{1.3}
+\dd\log(K/L)\;=\;\underbrace{0}_{\sigma}\dd\log(w/r)\;=\;0.
+\tag{1.26}
 \end{equation}\]</div>
-<p>Thus constant returns imply that all revenue is paid to factors according to their marginal products in competitive markets.
-In other words, profits are zero when the production function has constant returns to scale.
-So, the real question is not about profits, but about how labor and capital are remunerated.
-Going forward we will focus on how the firm chooses inputs, how this choice is affected by input prices, and how inputs are remunerated.</p>
+<p>This extreme case makes our earlier comparative statics transparent.
+At fixed output and technology, a change in relative input prices changes neither conditional labor demand nor conditional capital demand, consistent with <a href="subsection-06-input-shares-and-input-responses.html#ref-eq-general-conditional-substitution">(1.18)</a> when <span class="arithmatex">\(\sigma=0\)</span>.
+Only expenditures change: <a href="subsection-05-payment-to-factors-how-does-inequality-change-between-capital-and-labor.html#ref-eq-share-price-substitution">(1.13)</a> becomes</p>
+<div class="arithmatex">\[\begin{equation}
+\dd\log\frac{\alpha_K}{\alpha_L}\;=\;-\dd\log\frac{w}{r}. \tag{1.27}
+\end{equation}\]</div>
+<p>There is no quantity substitution to offset the direct price effect.
+For example, cheaper machines lower the cost of the capital required by the recipe, but they do not cause the firm to replace workers with more machines unless the recipe itself changes.</p>
+<h3 id="from-a-firm-to-a-production-network">From a firm to a production network<a class="headerlink" href="#from-a-firm-to-a-production-network" title="Permanent link">&para;</a></h3>
+<p>Leontief applied the same fixed-requirements logic to the links among industries.
+Let <span class="arithmatex">\(x\)</span> be the vector of gross outputs, let <span class="arithmatex">\(d\)</span> be final demand, and let the element <span class="arithmatex">\(a_{ij}\)</span> of the matrix <span class="arithmatex">\(A\)</span> be the amount of input from industry <span class="arithmatex">\(i\)</span> required per unit of output in industry <span class="arithmatex">\(j\)</span>.
+Each industry's output must cover both intermediate demand from other industries and final demand:
+<a id="ref-eq-leontief-input-output" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+x\;=\;Ax+d
+\qquad\longrightarrow\qquad
+x\;=\;(I-A)^{-1}d,
+\tag{1.28}
+\end{equation}\]</div>
+<p>The <em>Leontief inverse</em> <span class="arithmatex">\((I-A)^{-1}\)</span> adds the direct and indirect production requirements generated throughout the network.
+A rise in demand for automobiles, for example, requires not only more automobile production but also more steel, electricity, transportation, and the inputs used to produce each of those inputs.</p>
+<p>Input--output tables were used for wartime and postwar planning and became a core component of national economic accounts.
+Statistical agencies still use supply, use, and requirements tables to measure transactions across industries, while economists use them to study supply-chain propagation, structural change, productivity, trade, environmental demands, and the economy-wide effects of sector-specific shocks.
+The simplification is also its limitation: the coefficients in <span class="arithmatex">\(A\)</span> treat production recipes as fixed, so the basic model deliberately sets aside the price-induced substitution that is central to the rest of this course.</p>
+<p>I cover input-output networks in another course.
+<a href="https://ocamp020.github.io/PhD_Macro/notes/part-05-input-output-networks-and-economic-activity/index.html">Click here for my notes.</a></p>
 <nav class="course-pager" aria-label="Subsection navigation">
-<a class="course-pager__link previous" href="overview.html"><span>Previous</span><strong>Overview</strong></a>
-<a class="course-pager__link next" href="subsection-02-the-firm-s-input-choice.html"><span>Next</span><strong>The firm's input choice</strong></a>
+<a class="course-pager__link previous" href="subsection-09-historical-background-john-hicks.html"><span>Previous</span><strong>Historical background: John Hicks</strong></a>
 </nav>
 
 

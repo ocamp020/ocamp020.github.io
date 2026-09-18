@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://ocamp020.github.io/Tasks_Course/notes/part-01-aggregate-production-functions/section-01-labor-and-capital-as-aggregate-inputs-substitutability/subsection-01-the-neoclassical-production-function.html">
+        <link rel="canonical" href="https://ocamp020.github.io/Tasks_Course/notes/part-01-aggregate-production-functions/section-01-labor-and-capital-as-aggregate-inputs-substitutability/subsection-06-input-shares-and-input-responses.html">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>The neoclassical production function - ECON 3399 · AI and Robots at Work</title>
+        <title>Input shares and input responses - ECON 3399 · AI and Robots at Work</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-neoclassical-production-function" class="md-skip">
+        <a href="#input-shares-and-input-responses" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The neoclassical production function
+              Input shares and input responses
             
           </span>
         </div>
@@ -656,25 +656,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#constant-returns-to-scale-and-eulers-theorem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Constant returns to scale and Euler's theorem
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -692,67 +673,50 @@
 
 <div class="section-meta">
 <p><a href="../index.html">Part 1</a> / <a href="index.html">Section 1: Labor and Capital as Aggregate Inputs: Substitutability</a>
-  <span>Section 1.1</span></p>
+  <span>Section 1.6</span></p>
 </div>
-<h1 id="the-neoclassical-production-function">The neoclassical production function<a class="headerlink" href="#the-neoclassical-production-function" title="Permanent link">&para;</a></h1>
-<p>We start from the most general description of the production technology, embodied in the production function,
-<a id="ref-eq-aggregate-production" class="course-anchor"></a></p>
+<h1 id="input-shares-and-input-responses">Input shares and input responses<a class="headerlink" href="#input-shares-and-input-responses" title="Permanent link">&para;</a></h1>
+<p>The results we just derived give us a way to see how the combination of capital and labor responds optimally to changes in market prices.
+But we also want to know how capital and labor respond individually.
+The elasticity of substitution and the income shares determine how strong the response is of the <em>levels</em> of each input.</p>
+<p>To see this we start from the output constraint that defines the isoquant in <a href="subsection-03-isoquants-and-the-marginal-rate-of-transformation-mrt.html#ref-eq-isoquant-initial">(1.7)</a>.
+We take advantage of the fact that <span class="arithmatex">\(\log x\,=\,\frac{\dd x}{x}\)</span> to write
+<a id="ref-eq-isoquant-log" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{align}
+KF_K\dd\log K\;+\;L F_L\dd\log L\;=\;0 &amp;\longrightarrow\quad rK\dd\log K\;+\;wL\dd\log L\;=\;0  \tag{1.15} \\
+&amp;\longrightarrow\quad \frac{rK}{rK+wL}\dd\log K\;+\;\frac{wL}{rK+wL}\dd\log L\;=\;0 \nonumber \\
+&amp;\longrightarrow\quad \alpha_K\dd\log K\;+\;\alpha_L\dd\log L\;=\;0\nonumber
+\end{align}\]</div>
+<p>The only issue outstanding is that we need a way to connect <span class="arithmatex">\(K\)</span> and <span class="arithmatex">\(L\)</span>.
+The elasticity of substitution does that for us.
+From its definition and the optimality condition of the firm we write</p>
 <div class="arithmatex">\[\begin{equation}
-Y=zF(K,L),
-\tag{1.1}
+\dd\log K \,-\,\dd\log L\;=\; \sigma\dd\log \operatorname{MRT} \;=\; \sigma\dd\log \frac{w}{r}. \tag{1.16}
 \end{equation}\]</div>
-<p>where <span class="arithmatex">\(Y\)</span> is output, <span class="arithmatex">\(K\)</span> is aggregate capital, <span class="arithmatex">\(L\)</span> is aggregate labor, and <span class="arithmatex">\(z&gt;0\)</span> is total factor productivity.
-The function <span class="arithmatex">\(F\)</span> describes how physical inputs become output;
-<span class="arithmatex">\(z\)</span> measures how effective the entire production process is.
-Later on we will introduce <em>factor-augmenting productivity</em> that affects a given input directly.</p>
-<p>Formally, let <span class="arithmatex">\(F:\R_+^2\rightarrow\R_+\)</span> be twice continuously differentiable and satisfy</p>
-<ol>
-<li>
-<p><strong>Productive inputs:</strong> Holding the other input fixed, more capital or labor raises output.</p>
-<div class="arithmatex">\[
-F_K(K,L)&gt;0, \qquad F_L(K,L)&gt;0.
-\]</div>
-</li>
-<li>
-<p><strong>Marginal products diminish:</strong> Adding more machines or workers increases output, but ever less so.</p>
-<div class="arithmatex">\[
-F_{KK}(K,L)&lt;0, \qquad F_{LL}(K,L)&lt;0.
-\]</div>
-</li>
-<li>
-<p><strong>Constant returns to
-    scale:</strong> Doubling all inputs doubles output.</p>
-<div class="arithmatex">\[
-F(\lambda K,\lambda L)=\lambda F(K,L), \qquad \lambda&gt;0.
-\]</div>
-</li>
-<li>
-<p><strong>The production function is jointly concave.</strong> We need this assumption to ensure the firm's problem is well posed mathematically.</p>
-</li>
-</ol>
-<h3 id="constant-returns-to-scale-and-eulers-theorem">Constant returns to scale and Euler's theorem<a class="headerlink" href="#constant-returns-to-scale-and-eulers-theorem" title="Permanent link">&para;</a></h3>
-<p>The fact that the production function has constant returns to scale has a very useful consequence that follows from <a href="https://en.wikipedia.org/wiki/Homogeneous_function#Euler's_theorem">Euler's Theorem for Homogeneous Functions</a>:
-The production function can be expressed in terms of the marginal product of capital and labor.
-<a id="ref-eq-euler-production" class="course-anchor"></a></p>
-<div class="arithmatex">\[\begin{equation}
-\text{Euler's Theorem:}\quad F(K,L)\;=\;F_K(K,L)K\,+\,F_L(K,L)L.
-\tag{1.2}
-\end{equation}\]</div>
-<p>The reason this identity is so useful is that when markets are competitive we can express output in terms of the cost of inputs.
-In a competitive market, factors receive the value of their marginal products, so <span class="arithmatex">\(\,r\,=\,pzF_K\,\)</span> and <span class="arithmatex">\(\,w\,=\,pzF_L\)</span>.
-So, if output sells at price <span class="arithmatex">\(\,p\,\)</span> we can write
-<a id="ref-eq-factor-exhaustion" class="course-anchor"></a></p>
-<div class="arithmatex">\[\begin{equation}
-rK\,+\,wL \;=\; pzF_K(K,L)K\,+\,pzF_L(K,L)L \;=\; pz\left(F_K(K,L)K\,+\,F_L(K,L)L\right)  \;=\; pY
-\tag{1.3}
-\end{equation}\]</div>
-<p>Thus constant returns imply that all revenue is paid to factors according to their marginal products in competitive markets.
-In other words, profits are zero when the production function has constant returns to scale.
-So, the real question is not about profits, but about how labor and capital are remunerated.
-Going forward we will focus on how the firm chooses inputs, how this choice is affected by input prices, and how inputs are remunerated.</p>
+<p>This equation gives a link between the percentage change in capital and labor (approximated by the change in their logs).
+The final step is using it to get isolated expressions for the response of each input.
+For labor we have</p>
+<div class="arithmatex">\[\begin{align}
+\alpha_K\dd\log K\;+\;\alpha_L\dd\log L\;=\;0 &amp; \longrightarrow\quad \alpha_K \dd\log K\;+\;\left(1-\alpha_K\right)\dd\log L\;=\;0 \tag{1.17} \\
+&amp; \longrightarrow\quad \alpha_K \left(\sigma\dd\log \frac{w}{r}\,+\, \dd\log L \right) \;+\;\left(1-\alpha_K\right)\dd\log L\;=\;0 \nonumber \\
+&amp; \longrightarrow\quad \alpha_K \sigma\dd\log \frac{w}{r} \,+\, \dd\log L \;=\;0 \nonumber \\
+&amp; \longrightarrow\quad \dd\log L \;=\; - \alpha_K \sigma\dd\log \frac{w}{r}   \nonumber
+\end{align}\]</div>
+<p>Similar steps deliver
+<a id="ref-eq-general-conditional-substitution" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{align}
+\dd\log K \;=\; \alpha_L\sigma\dd\log \frac{w}{r}
+\tag{1.18}
+\end{align}\]</div>
+<p>These are local responses at fixed output and technology.
+For example, if capital's cost share is <span class="arithmatex">\(0.4\)</span> and <span class="arithmatex">\(\sigma=0.5\)</span>, a one-percent rise in the wage with the rental price fixed reduces conditional labor demand by approximately <span class="arithmatex">\(0.2\)</span> percent and raises conditional capital demand by approximately <span class="arithmatex">\(0.3\)</span> percent.
+The ratio rises by <span class="arithmatex">\(0.5\)</span> percent.</p>
+<p>The responses depend on the input share of the other input, or in other words, on the complement input shares.
+The higher the input share of the input, the less scope the firm has to substitute into it.
+Similarly, the larger the input share of the other inputs the more substitutability there can be.</p>
 <nav class="course-pager" aria-label="Subsection navigation">
-<a class="course-pager__link previous" href="overview.html"><span>Previous</span><strong>Overview</strong></a>
-<a class="course-pager__link next" href="subsection-02-the-firm-s-input-choice.html"><span>Next</span><strong>The firm's input choice</strong></a>
+<a class="course-pager__link previous" href="subsection-05-payment-to-factors-how-does-inequality-change-between-capital-and-labor.html"><span>Previous</span><strong>Payment to factors: How does inequality change between capital and labor?</strong></a>
+<a class="course-pager__link next" href="subsection-07-solving-the-firm-s-problem-lagrangian-approach.html"><span>Next</span><strong>Solving the firm's problem: Lagrangian approach</strong></a>
 </nav>
 
 

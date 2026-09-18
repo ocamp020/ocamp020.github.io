@@ -686,30 +686,38 @@ Suppose that the firm wants to produce <span class="arithmatex">\(\overline{Y}\)
 \qquad\text{subject to}\qquad zF(K,L)\,\geq\, \overline{Y}.
 \tag{1.4}
 \end{equation}\]</div>
-<p>The Lagrangian of this problem is</p>
-<div class="arithmatex">\[\begin{equation}
-\mathcal{L}\;=\;rK\,+\,wL\,+\,\lambda\left(\overline{Y}\,-\,zF(K,L)\right). \tag{1.5}
-\end{equation}\]</div>
-<p>The first-order conditions are
-<a id="ref-eq-foc-capital" class="course-anchor"></a>
-<a id="ref-eq-foc-labor" class="course-anchor"></a>
-<a id="ref-eq-foc-output" class="course-anchor"></a></p>
+<p>We can analyze this problem graphically by looking at the properties of the cost and the output constraint.
+Our graph deals with the choice of capital and labor and so those will be the axes.
+The cost function is linear in the inputs and so we can graph different levels of cost with what we call an <em>isocost</em> curve:</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.1: Isocost curve</p>
+<p>It is the combinations of capital and labor <span class="arithmatex">\((K,L)\)</span> that deliver the same cost level <span class="arithmatex">\(\overline{c}\)</span>:</p>
 <div class="arithmatex">\[\begin{align}
-r &amp;=\; \lambda zF_K(K,L),\tag{1.6}\\
-w &amp;=\; \lambda zF_L(K,L),\tag{1.7}\\
-\overline{Y} &amp;=\; zF(K,L).\tag{1.8}
+\overline{c} \;=\; rK \,+\, wL
+\qquad\longleftrightarrow\qquad
+K \;=\; \frac{\overline{c}}{r} \,-\, \frac{w}{r}L \;. \tag{1.5}
 \end{align}\]</div>
-<p>The multiplier <span class="arithmatex">\(\lambda\)</span> is marginal cost: by the envelope theorem,
-<span class="arithmatex">\(\lambda\,=\,\frac{\partial C(\overline{Y},r,w)}{\partial\overline{Y}}\)</span>.</p>
-<p>The solution is characterized by the ratio of the first two conditions,
-<a href="#ref-eq-foc-labor">(1.7)</a> by <a href="#ref-eq-foc-capital">(1.6)</a> yields
-<a id="ref-eq-mrt-price" class="course-anchor"></a></p>
-<div class="arithmatex">\[\begin{equation}
-\frac{F_L(K,L)}{F_K(K,L)}\;=\;\frac{w}{r}.
-\tag{1.9}
-\end{equation}\]</div>
-<p>Under constant returns, the first-order conditions determine factor
-proportions but not a unique scale.</p>
+<p>The isocost is a downward-sloping line because increasing either input raises the cost, and so the other input must go down to keep the cost constant.
+The slope of the isocost tells the rate at which the two inputs must be exchanged to keep the cost constant.
+That is, the rate at which we can exchange one input for another at market prices.
+The slope is therefore the relative price, in our case <span class="arithmatex">\(w/r\)</span>.</p>
+</div>
+<p>The firm's objective is to choose the lowest isocost curve that satisfies the production constraint.
+That constraint is characterized by an <em>isoquant</em> curve:</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.2: Isoquant curve</p>
+<p>It is the combinations of capital and labor <span class="arithmatex">\((K,L)\)</span> that deliver the same output level <span class="arithmatex">\(\overline{Y}\)</span>:</p>
+<div class="arithmatex">\[\begin{align}
+\overline{Y} \;=\; zF\left(K\,,\,L\right)\;. \tag{1.6}
+\end{align}\]</div>
+<p>The isoquant is a downward-sloping curve because increasing either input raises output (reflecting positive marginal products), and so the other input must go down to keep output constant.
+The shape of the isoquant depends on the properties of the production technology.</p>
+</div>
+<p>The graphical representation of the problem is in <a href="#ref-fig-input-choice-isocosts">Figure 1</a>.
+The firm will take as given the isoquant and move to lower isocost curves as much as possible.</p>
+<p><a id="ref-fig-input-choice-isocosts" class="course-anchor"></a></p>
+<figure class="course-figure"><img src="../../../figures/input-choice-isocosts.svg" alt="Finding the lowest feasible isocost"></figure>
+
 <nav class="course-pager" aria-label="Subsection navigation">
 <a class="course-pager__link previous" href="subsection-01-the-neoclassical-production-function.html"><span>Previous</span><strong>The neoclassical production function</strong></a>
 <a class="course-pager__link next" href="subsection-03-isoquants-and-the-marginal-rate-of-transformation-mrt.html"><span>Next</span><strong>Isoquants and the marginal rate of transformation (MRT)</strong></a>

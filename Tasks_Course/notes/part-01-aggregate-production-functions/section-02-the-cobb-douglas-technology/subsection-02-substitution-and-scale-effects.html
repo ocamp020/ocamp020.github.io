@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://ocamp020.github.io/Tasks_Course/notes/part-01-aggregate-production-functions/section-01-labor-and-capital-as-aggregate-inputs-substitutability/subsection-01-the-neoclassical-production-function.html">
+        <link rel="canonical" href="https://ocamp020.github.io/Tasks_Course/notes/part-01-aggregate-production-functions/section-02-the-cobb-douglas-technology/subsection-02-substitution-and-scale-effects.html">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>The neoclassical production function - ECON 3399 · AI and Robots at Work</title>
+        <title>Substitution and scale effects - ECON 3399 · AI and Robots at Work</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-neoclassical-production-function" class="md-skip">
+        <a href="#substitution-and-scale-effects" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The neoclassical production function
+              Substitution and scale effects
             
           </span>
         </div>
@@ -382,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../section-01-labor-and-capital-as-aggregate-inputs-substitutability/index.html" class="md-nav__link">
         
   
   
@@ -410,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section-02-the-cobb-douglas-technology/index.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         
   
   
@@ -656,25 +656,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#constant-returns-to-scale-and-eulers-theorem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Constant returns to scale and Euler's theorem
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -691,68 +672,75 @@
 
 
 <div class="section-meta">
-<p><a href="../index.html">Part 1</a> / <a href="index.html">Section 1: Labor and Capital as Aggregate Inputs: Substitutability</a>
-  <span>Section 1.1</span></p>
+<p><a href="../index.html">Part 1</a> / <a href="index.html">Section 2: The Cobb--Douglas technology</a>
+  <span>Section 2.2</span></p>
 </div>
-<h1 id="the-neoclassical-production-function">The neoclassical production function<a class="headerlink" href="#the-neoclassical-production-function" title="Permanent link">&para;</a></h1>
-<p>We start from the most general description of the production technology, embodied in the production function,
-<a id="ref-eq-aggregate-production" class="course-anchor"></a></p>
+<h1 id="substitution-and-scale-effects">Substitution and scale effects<a class="headerlink" href="#substitution-and-scale-effects" title="Permanent link">&para;</a></h1>
+<p>So far we have held output fixed.
+That isolates substitution, but it leaves out another important response:
+cheaper production can lower the output price, increase sales, and raise the scale of production.
+We now add that channel (and will return to it later on in the course).
+Suppose the market has isoelastic product demand
+<a id="ref-eq-product-demand" class="course-anchor"></a></p>
 <div class="arithmatex">\[\begin{equation}
-Y=zF(K,L),
-\tag{1.1}
+Y \;=\; Bp^{-\varepsilon},\qquad \varepsilon&gt;0,
+\tag{2.13}
 \end{equation}\]</div>
-<p>where <span class="arithmatex">\(Y\)</span> is output, <span class="arithmatex">\(K\)</span> is aggregate capital, <span class="arithmatex">\(L\)</span> is aggregate labor, and <span class="arithmatex">\(z&gt;0\)</span> is total factor productivity.
-The function <span class="arithmatex">\(F\)</span> describes how physical inputs become output;
-<span class="arithmatex">\(z\)</span> measures how effective the entire production process is.
-Later on we will introduce <em>factor-augmenting productivity</em> that affects a given input directly.</p>
-<p>Formally, let <span class="arithmatex">\(F:\R_+^2\rightarrow\R_+\)</span> be twice continuously differentiable and satisfy</p>
-<ol>
-<li>
-<p><strong>Productive inputs:</strong> Holding the other input fixed, more capital or labor raises output.</p>
-<div class="arithmatex">\[
-F_K(K,L)&gt;0, \qquad F_L(K,L)&gt;0.
-\]</div>
-</li>
-<li>
-<p><strong>Marginal products diminish:</strong> Adding more machines or workers increases output, but ever less so.</p>
-<div class="arithmatex">\[
-F_{KK}(K,L)&lt;0, \qquad F_{LL}(K,L)&lt;0.
-\]</div>
-</li>
-<li>
-<p><strong>Constant returns to
-    scale:</strong> Doubling all inputs doubles output.</p>
-<div class="arithmatex">\[
-F(\lambda K,\lambda L)=\lambda F(K,L), \qquad \lambda&gt;0.
-\]</div>
-</li>
-<li>
-<p><strong>The production function is jointly concave.</strong> We need this assumption to ensure the firm's problem is well posed mathematically.</p>
-</li>
-</ol>
-<h3 id="constant-returns-to-scale-and-eulers-theorem">Constant returns to scale and Euler's theorem<a class="headerlink" href="#constant-returns-to-scale-and-eulers-theorem" title="Permanent link">&para;</a></h3>
-<p>The fact that the production function has constant returns to scale has a very useful consequence that follows from <a href="https://en.wikipedia.org/wiki/Homogeneous_function#Euler's_theorem">Euler's Theorem for Homogeneous Functions</a>:
-The production function can be expressed in terms of the marginal product of capital and labor.
-<a id="ref-eq-euler-production" class="course-anchor"></a></p>
+<p>The key question is:</p>
+<blockquote>
+<p>What happens to the demand for inputs when capital becomes cheaper?</p>
+</blockquote>
+<p>To answer this question we need to know how the output price responds to changes in input prices.
+We derive the unit cost from the cost minimization problem in <a href="../section-01-labor-and-capital-as-aggregate-inputs-substitutability/subsection-02-the-firm-s-input-choice.html#ref-eq-cost-minimization">(1.4)</a>:
+<a id="ref-eq-cd-cost" class="course-anchor"></a></p>
 <div class="arithmatex">\[\begin{equation}
-\text{Euler's Theorem:}\quad F(K,L)\;=\;F_K(K,L)K\,+\,F_L(K,L)L.
-\tag{1.2}
+C(Y;r,w) \;=\; Y\underbrace{ \frac{1}{z}
+\left(\frac{r}{\alpha}\right)^\alpha
+\left(\frac{w}{1-\alpha}\right)^{1-\alpha}
+}_{\text{per-unit cost of production }c(r,w)}.
+\tag{2.14}
 \end{equation}\]</div>
-<p>The reason this identity is so useful is that when markets are competitive we can express output in terms of the cost of inputs.
-In a competitive market, factors receive the value of their marginal products, so <span class="arithmatex">\(\,r\,=\,pzF_K\,\)</span> and <span class="arithmatex">\(\,w\,=\,pzF_L\)</span>.
-So, if output sells at price <span class="arithmatex">\(\,p\,\)</span> we can write
-<a id="ref-eq-factor-exhaustion" class="course-anchor"></a></p>
+<p>Total cost is proportional to
+output, so <span class="arithmatex">\(c(r,w)=C(1;r,w)=C(Y;r,w)/Y\)</span>.</p>
+<p>We now hold <span class="arithmatex">\(w\)</span>, <span class="arithmatex">\(z\)</span>, <span class="arithmatex">\(\alpha\)</span>, and the demand parameters fixed and change <span class="arithmatex">\(r\)</span>.
+Taking logs of unit cost makes its response transparent:</p>
+<p>\begin{align}</p>
+<p>\frac{\partial\log c}{\partial\log r}&amp;\;=\;\alpha. \tag{2.15}
+\end{align}</p>
+<p>Since <span class="arithmatex">\(p\,=\,c(r,w)\)</span>, market demand becomes <span class="arithmatex">\(Y\,=\,Bc(r,w)^{-\varepsilon}\)</span>.
+Taking logs and applying the chain rule gives</p>
+<div class="arithmatex">\[\begin{align}
+\log Y \;=\; \log B\,-\,\varepsilon\log c(r,w)
+\quad \longrightarrow\quad
+\frac{\partial\log Y}{\partial\log r} \;=\; -\varepsilon\frac{\partial\log c}{\partial\log r} \;=\; -\varepsilon\alpha. \tag{2.16}
+\end{align}\]</div>
+<p>A one-percent fall in <span class="arithmatex">\(r\)</span> therefore lowers unit cost and the output price by
+approximately <span class="arithmatex">\(\alpha\)</span> percent, increasing output by
+<span class="arithmatex">\(\varepsilon\alpha\)</span> percent.</p>
+<p>Finally, the optimality condition for labor coming from cost minimization gives
+<a id="ref-eq-cd-labor-demand" class="course-anchor"></a></p>
 <div class="arithmatex">\[\begin{equation}
-rK\,+\,wL \;=\; pzF_K(K,L)K\,+\,pzF_L(K,L)L \;=\; pz\left(F_K(K,L)K\,+\,F_L(K,L)L\right)  \;=\; pY
-\tag{1.3}
+w\;=\;(1-\alpha)c\frac{Y}{L}
+\quad\longrightarrow\quad
+\log L\;=\;\log(1-\alpha)\,+\,\log c\,+\,\log Y\,-\,\log w.
+\tag{2.17}
 \end{equation}\]</div>
-<p>Thus constant returns imply that all revenue is paid to factors according to their marginal products in competitive markets.
-In other words, profits are zero when the production function has constant returns to scale.
-So, the real question is not about profits, but about how labor and capital are remunerated.
-Going forward we will focus on how the firm chooses inputs, how this choice is affected by input prices, and how inputs are remunerated.</p>
+<p>Since <span class="arithmatex">\(w\)</span> is fixed, differentiating gives the total labor response:
+<a id="ref-eq-cd-total-labor-response" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+\frac{\partial\log L}{\partial\log r}
+\;=\; \frac{\partial\log c}{\partial\log r} \;+\;\frac{\partial\log Y}{\partial\log r}\\
+\;=\; \underbrace{\alpha}_{\text{substitution}} \;-\;\underbrace{\varepsilon\alpha}_{\text{scale}}
+\;=\; \alpha(1-\varepsilon).
+\tag{2.18}
+\end{equation}\]</div>
+<p>The first term is the substitution effect derived above: at a fixed level of output, cheaper capital reduces labor demand.
+The second term is the scale effect: cheaper production expands output and raises demand for inputs.
+If <span class="arithmatex">\(\varepsilon&gt;1\)</span>, the scale effect is larger, so a fall in <span class="arithmatex">\(r\)</span> raises labor demand.
+If <span class="arithmatex">\(\varepsilon&lt;1\)</span>, substitution dominates and labor demand falls.</p>
 <nav class="course-pager" aria-label="Subsection navigation">
-<a class="course-pager__link previous" href="overview.html"><span>Previous</span><strong>Overview</strong></a>
-<a class="course-pager__link next" href="subsection-02-the-firm-s-input-choice.html"><span>Next</span><strong>The firm's input choice</strong></a>
+<a class="course-pager__link previous" href="subsection-01-the-direction-of-technical-change.html"><span>Previous</span><strong>The direction of technical change</strong></a>
+<a class="course-pager__link next" href="subsection-03-historical-background-cobb-douglas-and-factor-shares.html"><span>Next</span><strong>Historical background: Cobb--Douglas and factor shares</strong></a>
 </nav>
 
 

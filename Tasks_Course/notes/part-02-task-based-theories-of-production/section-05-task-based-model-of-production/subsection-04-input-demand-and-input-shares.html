@@ -656,6 +656,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-productivity-schedules-to-expenditure-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From productivity schedules to expenditure areas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -686,7 +705,7 @@ y(i)\;=\;
 Y\left(\dfrac{P a_K(i)}{r}\right)^\eta,&amp;i&lt;I,\\[4pt]
 Y\left(\dfrac{P a_L(i)}{w}\right)^\eta,&amp;i&gt;I.
 \end{cases}
-\tag{5.15}
+\tag{5.14}
 \end{equation}\]</div>
 <p>where we replace <span class="arithmatex">\(\lambda\)</span> for <span class="arithmatex">\(P\)</span>, the price of the final good.</p>
 <p>We also know the demand for capital and labor:</p>
@@ -696,9 +715,32 @@ K&amp;\;=\int_0^I\frac{y(i)}{a_K(i)}\dd i
 \;=\;YP^{\eta}r^{-\eta}\underbrace{\int_0^I a_K(i)^{\eta-1}\dd i}_{H_K(I)}, \nonumber \\
 L&amp;\;=\;\int_I^1\frac{y(i)}{a_L(i)}\dd i
 \;=\;YP^{\eta}w^{-\eta}\underbrace{\int_I^1 a_L(i)^{\eta-1}\dd i}_{H_L(I)}.
-\tag{5.16}
+\tag{5.15}
 \end{align}\]</div>
 <p>Where <span class="arithmatex">\(H_K\)</span> and <span class="arithmatex">\(H_L\)</span> are productivity indexes that capture how productive capital and labor are, respectively, in the tasks they are assigned to (hence the indexes depend on <span class="arithmatex">\(I\)</span>).</p>
+<h3 id="from-productivity-schedules-to-expenditure-areas">From productivity schedules to expenditure areas<a class="headerlink" href="#from-productivity-schedules-to-expenditure-areas" title="Permanent link">&para;</a></h3>
+<p>To connect the integrals to a picture, multiply the input used in each task by its price.
+Expenditure per unit of task length is
+<a id="ref-eq-task-expenditure-density" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+\begin{cases}
+rk(i)=YP^\eta r^{1-\eta}a_K(i)^{\eta-1},&amp;i&lt;I,\\[3pt]
+w\ell(i)=YP^\eta w^{1-\eta}a_L(i)^{\eta-1},&amp;i&gt;I.
+\end{cases}
+\tag{5.16}
+\end{equation}\]</div>
+<p><a href="#ref-fig-task-expenditure-areas">Figure 16</a> maps the productivity schedules on the left into these expenditure schedules on the right.
+Their heights depend on productivity, factor prices, output, and the final-good price <span class="arithmatex">\(P\)</span>, which equals unit cost.
+The blue area sums <span class="arithmatex">\(rk(i)\)</span> over machine tasks and is therefore <span class="arithmatex">\(rK\)</span>; the orange area sums <span class="arithmatex">\(w\ell(i)\)</span> over human tasks and is <span class="arithmatex">\(wL\)</span>.
+Dividing either area by the total area <span class="arithmatex">\(PY\)</span> gives its factor share.</p>
+<p>When <span class="arithmatex">\(\eta=1\)</span>, the productivity powers vanish and both expenditure schedules have the same height <span class="arithmatex">\(PY\)</span>.
+Area shares then equal lengths: <span class="arithmatex">\(\alpha_K=I\)</span> and <span class="arithmatex">\(\alpha_L=1-I\)</span>.
+For <span class="arithmatex">\(\eta\neq1\)</span>, task lengths alone do not determine the expenditure shares.
+In the <span class="arithmatex">\(\eta=1/2\)</span> example, tasks with lower productivity have higher expenditure per unit of task length because they are costly and hard to substitute away from.
+For <span class="arithmatex">\(\eta&gt;1\)</span>, the productivity exponent is positive and the direction reverses.</p>
+<p><a id="ref-fig-task-expenditure-areas" class="course-anchor"></a></p>
+<figure class="course-figure"><img src="../../../figures/task-expenditure-areas.svg" alt="From task productivity to factor payments"></figure>
+
 <p>Multiplying input demands by their prices gives input shares:
 <a id="ref-eq-task-factor-shares" class="course-anchor"></a></p>
 <div class="arithmatex">\[\begin{equation}
@@ -708,12 +750,11 @@ L&amp;\;=\;\int_I^1\frac{y(i)}{a_L(i)}\dd i
 \;=\;\left(\frac wP\right)^{1-\eta}H_L(I).
 \tag{5.17}
 \end{equation}\]</div>
-<p><a id="ref-eq-task-cost-exhaustion" class="course-anchor"></a></p>
 <p>When <span class="arithmatex">\(\eta=1\)</span> we aggregate with a Cobb-Douglas technology and optimality conditions give
 <a id="ref-eq-task-cd-prices" class="course-anchor"></a></p>
 <div class="arithmatex">\[\begin{equation}
 rk(i)=PY\quad(i&lt;I),\qquad wn(i)=PY\quad(i&gt;I).
-\tag{5.19}
+\tag{5.18}
 \end{equation}\]</div>
 <p>Every equal-length task interval then receives the same input payment.
 Integrating gives the special result <span class="arithmatex">\(\alpha_K=I\)</span> and <span class="arithmatex">\(\alpha_L=1-I\)</span>.</p>
