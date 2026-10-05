@@ -331,6 +331,12 @@ body,
   margin-top: 1.4rem;
 }
 
+.course-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
 .course-button {
   display: inline-flex;
   align-items: center;
