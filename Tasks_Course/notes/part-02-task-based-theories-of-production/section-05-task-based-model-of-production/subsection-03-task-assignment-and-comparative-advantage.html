@@ -736,6 +736,7 @@
   <span>Section 5.3</span></p>
 </div>
 <h1 id="task-assignment-and-comparative-advantage">Task assignment and comparative advantage<a class="headerlink" href="#task-assignment-and-comparative-advantage" title="Permanent link">&para;</a></h1>
+<p><a id="ref-subsec-task-assignment" class="course-anchor"></a></p>
 <p>The firm chooses the capital and labor allocated to every task,  jointly determining which input performs each task and the quality of the tasks. Taking the rental
 rate <span class="arithmatex">\(r\)</span>, and the wage <span class="arithmatex">\(w\)</span> as given, it solves
 <a id="ref-eq-task-firm-problem" class="course-anchor"></a></p>
@@ -755,16 +756,18 @@ rate <span class="arithmatex">\(r\)</span>, and the wage <span class="arithmatex
 \end{equation}\]</div>
 <p>One additional unit of capital produces <span class="arithmatex">\(a_K(i)\)</span> units of that service;
 one additional unit of labor produces <span class="arithmatex">\(a_L(i)\)</span>.
+Let <span class="arithmatex">\(\lambda\)</span> denote the multiplier on the output constraint, equal to the marginal cost of final output.
+Competitive pricing implies <span class="arithmatex">\(P=\lambda\)</span>, where <span class="arithmatex">\(P\)</span> is the price of the final good; we use <span class="arithmatex">\(P\)</span> throughout the rest of this section.
 Applying the chain rule, the optimality conditions at a positive-output allocation are
 <a id="ref-eq-task-capital-foc" class="course-anchor"></a>
 <a id="ref-eq-task-labor-foc" class="course-anchor"></a></p>
 <div class="arithmatex">\[\begin{align}
-\lambda\left(\frac{Y}{y(i)}\right)^{1/\eta}a_K(i)&amp;\leq r,
+P\left(\frac{Y}{y(i)}\right)^{1/\eta}a_K(i)&amp;\leq r,
 &amp;\text{with equality if }k(i)&gt;0,\tag{5.6}\\
-\lambda\left(\frac{Y}{y(i)}\right)^{1/\eta}a_L(i)&amp;\leq w,
-&amp;\text{with equality if }n(i)&gt;0.\tag{5.7}
+P\left(\frac{Y}{y(i)}\right)^{1/\eta}a_L(i)&amp;\leq w,
+&amp;\text{with equality if }\ell(i)&gt;0.\tag{5.7}
 \end{align}\]</div>
-<p>If the input its used, then it is demanded so that its marginal contribution to revenue equals its marginal cost (recall that <span class="arithmatex">\(\lambda\)</span> is the marginal cost).
+<p>If the input is used, then it is demanded so that its marginal contribution to revenue equals its marginal cost.
 An unused input cannot contribute more to revenue than it costs.</p>
 <h3 id="the-principle-of-comparative-advantage">The principle of comparative-advantage<a class="headerlink" href="#the-principle-of-comparative-advantage" title="Permanent link">&para;</a></h3>
 <p>The term <span class="arithmatex">\(P(Y/y(i))^{1/\eta}\)</span> is common to both inputs.
@@ -797,18 +800,18 @@ Moving right makes labor better in absolute terms and capital worse, so labor ne
 <em>relative to capital</em> but not necessarily more productive than capital.
 We further assume that <span class="arithmatex">\(\,q(0)\,&lt;\,w/r\,&lt;\,q(1)\,\)</span> so that both inputs are used by the firm.
 If <span class="arithmatex">\(w/r\)</span> lies below <span class="arithmatex">\(q(0)\)</span> all tasks go to labor; if it lies above <span class="arithmatex">\(q(1)\)</span> all go to capital.</p>
-<p>The fact that the relative productivity <span class="arithmatex">\(q\)</span> is increasing means that there is a unique interior cutoff <span class="arithmatex">\(I\)</span> satisfying
-<a id="ref-eq-capital-labor-cutoff" class="course-anchor"></a></p>
-<div class="arithmatex">\[\begin{equation}
-q(I)\;=\; \frac{a_L{I}}{a_K(I)}\;=\;\frac{w}{r}
-\tag{5.11}
-\end{equation}\]</div>
-<p>Thus <span class="arithmatex">\([0,I]\)</span> is the machine bundle, with <span class="arithmatex">\(q(i)\leq w/R\)</span>, and <span class="arithmatex">\([I,1]\)</span> is the labor bundle, with <span class="arithmatex">\(q(i)\geq w/R\)</span>.
-This is what we see in <a href="#ref-fig-capital-labor-productivities">Figure 14</a>.
-Tasks to the left of <span class="arithmatex">\(I\)</span> lie below <span class="arithmatex">\(w/r\)</span>, so capital is cheaper. Tasks to its right lie above <span class="arithmatex">\(w/r\)</span>, so labor is cheaper.</p>
 <p><a id="ref-fig-capital-labor-productivities" class="course-anchor"></a></p>
 <figure class="course-figure"><img src="../../../figures/capital-labor-productivities.svg" alt="Optimal Task Assignment"></figure>
 
+<p>The fact that the relative productivity <span class="arithmatex">\(q\)</span> is increasing means that there is a unique interior cutoff <span class="arithmatex">\(I\)</span> satisfying
+<a id="ref-eq-capital-labor-cutoff" class="course-anchor"></a></p>
+<div class="arithmatex">\[\begin{equation}
+q(I)\;=\; \frac{a_L(I)}{a_K(I)}\;=\;\frac{w}{r}
+\tag{5.11}
+\end{equation}\]</div>
+<p>Thus <span class="arithmatex">\([0,I]\)</span> is the machine bundle, with <span class="arithmatex">\(q(i)\leq w/r\)</span>, and <span class="arithmatex">\([I,1]\)</span> is the labor bundle, with <span class="arithmatex">\(q(i)\geq w/r\)</span>.
+This is what we see in <a href="#ref-fig-capital-labor-productivities">Figure 14</a>.
+Tasks to the left of <span class="arithmatex">\(I\)</span> lie below <span class="arithmatex">\(w/r\)</span>, so capital is cheaper. Tasks to its right lie above <span class="arithmatex">\(w/r\)</span>, so labor is cheaper.</p>
 <h3 id="comparative-advantage-is-different-from-absolute-advantage">Comparative advantage is different from absolute advantage<a class="headerlink" href="#comparative-advantage-is-different-from-absolute-advantage" title="Permanent link">&para;</a></h3>
 <p>Capital has an absolute productivity advantage at a task if <span class="arithmatex">\(a_K(i)&gt;a_L(i)\)</span>.
 But this does not determine the assignment unless <span class="arithmatex">\(w=r\)</span>.
@@ -822,6 +825,9 @@ The cost cutoff is</p>
 I\;=\;\frac{7}{16}\;=\;0.4375. \tag{5.12}
 \end{equation}\]</div>
 <p>In the optimal assignment, workers perform some tasks at which machines are more productive because workers are sufficiently cheaper.</p>
+<p><a id="ref-fig-capital-absolute-advantage" class="course-anchor"></a></p>
+<figure class="course-figure"><img src="../../../figures/capital-absolute-advantage.svg" alt="Changes in Absolute Advantage"></figure>
+
 <p>Now shift capital productivity up to <span class="arithmatex">\(a_K^+(i)=3-i\)</span>, holding <span class="arithmatex">\(w/r=0.6\)</span>.
 Capital is more productive than labor at <em>every</em> task, but labor still performs the highest-index tasks</p>
 <div class="arithmatex">\[\begin{equation}
@@ -829,12 +835,9 @@ Capital is more productive than labor at <em>every</em> task, but labor still pe
 I^+\;=\;\frac{13}{16}\;=\;0.8125\;&lt;\;1. \tag{5.13}
 \end{equation}\]</div>
 <p>Absolute advantage everywhere does not eliminate the other input's comparative advantage or its task bundle.</p>
-<p><a id="ref-fig-capital-absolute-advantage" class="course-anchor"></a></p>
-<figure class="course-figure"><img src="../../../figures/capital-absolute-advantage.svg" alt="Changes in Absolute Advantage"></figure>
-
 <nav class="course-pager" aria-label="Subsection navigation">
 <a class="course-pager__link previous" href="subsection-02-canonical-task-based-model-capital-and-labor.html"><span>Previous</span><strong>Canonical task-based model: capital and labor</strong></a>
-<a class="course-pager__link next" href="subsection-04-input-demand-and-input-shares.html"><span>Next</span><strong>Input demand and input shares</strong></a>
+<a class="course-pager__link next" href="subsection-04-the-link-to-aggregate-production-functions.html"><span>Next</span><strong>The link to aggregate production functions</strong></a>
 </nav>
 
 

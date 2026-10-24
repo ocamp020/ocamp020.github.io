@@ -746,7 +746,7 @@ y(i)\;=\;a_K(i)k(i)+a_L(i)\ell(i). \tag{7.1}
 <p>The key question is how tasks are assigned between capital and labor.
 We saw that this assignment follows the principle of <em>comparative advantage</em>, so that we assign tasks to the input with the lowest effective unit cost.
 The unit cost incorporates both the direct cost of paying for the capital or labor being used and the productivity that each input has in performing the task.
-Both margin matter because the assignment changes in a similar way if the input gets cheaper (say, a lower <span class="arithmatex">\(r\)</span>) or if the input gets more productivity (a higher <span class="arithmatex">\(a_k(i)\)</span>).
+Both margins matter because assignment changes in a similar way if the input gets cheaper (say, a lower <span class="arithmatex">\(r\)</span>) or becomes more productive (a higher <span class="arithmatex">\(a_K(i)\)</span>).
 In both cases we need to pay less to produce the same.</p>
 <p>Accordingly, we give the two unit costs short names:
 <a id="ref-eq-auto-input-costs" class="course-anchor"></a></p>
@@ -766,12 +766,12 @@ The tasks assigned to capital are those being <em>automated</em>; we refer to th
 \;=\;\{i:c_K^1(i)&lt;c_L(i)\leq c_K^0(i)\}.
 \tag{7.4}
 \end{align}\]</div>
-<p>When technology changes (going from <span class="arithmatex">\(t=0\)</span> to <span class="arithmatex">\(t=1\)</span>) the set of automated expands tasks in <span class="arithmatex">\(\Delta \mathcal A\)</span> were performed by labor and are now performed by machines.
+<p>When technology changes (going from <span class="arithmatex">\(t=0\)</span> to <span class="arithmatex">\(t=1\)</span>) the set of automated tasks expands: tasks in <span class="arithmatex">\(\Delta \mathcal A\)</span> were performed by labor and are now performed by machines.
 This is the <em>extensive margin</em> of automation.
 The arrival of the capability and its adoption are different: a machine that can perform a task will only be used if doing so makes sense for the firm; only if the unit cost falls below that of labor.</p>
 <h3 id="three-possibilities-for-a-better-machine">Three possibilities for a better machine<a class="headerlink" href="#three-possibilities-for-a-better-machine" title="Permanent link">&para;</a></h3>
 <p>Suppose capital becomes more productive in a task, so <span class="arithmatex">\(c_K^1(i)&lt;c_K^0(i)\)</span>.
-The effect depends on where these costs lie relative to <span class="arithmatex">\(c_L(i)\)</span> as we show in <a href="#ref-fig-automation-cost-regions">Figure 22</a> (<a href="https://jonsteinsson.com/teaching/production.pdf">Steinsson 2026, Section~7.3</a>):</p>
+The effect depends on where these costs lie relative to <span class="arithmatex">\(c_L(i)\)</span> as we show in <a href="#ref-fig-automation-cost-regions">Figure 23</a> (<a href="https://jonsteinsson.com/teaching/production.pdf">Steinsson 2026, Section~7.3</a>):</p>
 <ol>
 <li><strong>The task was already automated.</strong>
     If <span class="arithmatex">\(c_K^1(i)&lt;c_K^0(i)&lt;c_L(i)\)</span>, the machine continues to perform it at a lower cost.
@@ -780,8 +780,7 @@ The effect depends on where these costs lie relative to <span class="arithmatex"
 <li><strong>Labor remains cheaper.</strong>
     If <span class="arithmatex">\(c_L(i)&lt;c_K^1(i)&lt;c_K^0(i)\)</span>, the firm continues to use labor.
     The improvement does not yet change the assignment of tasks and so there are no effects.
-    Think of this as the development of LLM models before the release of chatGPT.
-    They were better than previous technology, but were not good enough to perform any task.</li>
+    A model may become more capable while still being too inaccurate or costly to replace a worker at the particular task.</li>
 <li><strong>The task switches from labor to capital.</strong>
     If <span class="arithmatex">\(c_K^1(i)&lt;c_L(i)\leq c_K^0(i)\)</span>, the task enters <span class="arithmatex">\(\Delta \mathcal A\)</span>.
     The innovation both reduces production costs and displaces labor from the task.
@@ -791,12 +790,12 @@ The effect depends on where these costs lie relative to <span class="arithmatex"
 <figure class="course-figure"><img src="../../../figures/automation-cost-regions.svg" alt="A Better Machine Can Change Costs, Assignment, or Both"></figure>
 
 <h3 id="moving-the-assignment-cutoff">Moving the assignment cutoff<a class="headerlink" href="#moving-the-assignment-cutoff" title="Permanent link">&para;</a></h3>
-<p>When <span class="arithmatex">\(a_L(i)/a_K(i)\)</span> is increasing, we can summarize assignment with the cutoff <span class="arithmatex">\(I\)</span> from <a href="../section-05-task-based-model-of-production/subsection-02-canonical-task-based-model-capital-and-labor.html#ref-subsec-capital-labor-tasks">Section 5.2</a>.
+<p>When <span class="arithmatex">\(a_L(i)/a_K(i)\)</span> is increasing, we can summarize assignment with the cutoff <span class="arithmatex">\(I\)</span> from <a href="../section-05-task-based-model-of-production/subsection-03-task-assignment-and-comparative-advantage.html#ref-subsec-task-assignment">Section 5.3</a>.
 In this case, relative labor productivity is higher for higher-indexed tasks and so only low-indexed tasks are automated.
 A technology that expands the capital bundle from <span class="arithmatex">\([0,I_0]\)</span> to <span class="arithmatex">\([0,I_1]\)</span> automates <span class="arithmatex">\(\Delta\mathcal{A}=(I_0,I_1]\)</span>.</p>
 <p>A rise in capital productivity lowers the relative productivity of labor and can end in automation at given <span class="arithmatex">\(w/r\)</span>.
 But, as we just discussed, the technology may also improve tasks already assigned to capital, so a single innovation can combine extensive and intensive effects.
-<a href="#ref-fig-automation-local-cutoffs">Figure 23</a> expands the three cases of <a href="#ref-fig-automation-cost-regions">Figure 22</a> to the full relative-productivity schedule.
+<a href="#ref-fig-automation-local-cutoffs">Figure 24</a> expands the three cases of <a href="#ref-fig-automation-cost-regions">Figure 23</a> to the full relative-productivity schedule.
 In the first two panels the improvement leaves the cutoff unchanged; in the third, the local downward shift moves the cutoff to the right and expands the machine bundle.</p>
 <p><a id="ref-fig-automation-local-cutoffs" class="course-anchor"></a></p>
 <figure class="course-figure"><img src="../../../figures/automation-local-cutoffs.svg" alt="Local Productivity Improvements and Task Assignment"></figure>
