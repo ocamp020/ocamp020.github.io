@@ -904,3 +904,55 @@ body,
     transition: none;
   }
 }
+
+/* Published student cases: descriptive, keyboard-accessible download cards. */
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.md-typeset .case-study-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.3rem;
+  border: 1px solid rgba(95, 49, 138, 0.16);
+  border-radius: 1.1rem;
+  background: linear-gradient(145deg, #fff, #faf7fd);
+  color: var(--course-ink);
+  text-decoration: none;
+  box-shadow: 0 7px 22px rgba(64, 56, 68, 0.04);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+.md-typeset .case-study-card:hover,
+.md-typeset .case-study-card:focus-visible {
+  border-color: var(--course-accent);
+  box-shadow: 0 12px 28px rgba(64, 56, 68, 0.1);
+}
+.md-typeset .case-study-card:focus-visible {
+  outline: 2px solid var(--course-accent);
+  outline-offset: 3px;
+}
+.md-typeset .case-study-card h2 {
+  margin: 0 0 0.75rem;
+  color: var(--course-accent);
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+.md-typeset .case-study-card p {
+  margin: 0 0 1.1rem;
+  font-size: 0.8rem;
+  line-height: 1.65;
+}
+.case-study-download {
+  margin-top: auto;
+  color: var(--course-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+@media (max-width: 700px) {
+  .case-study-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .case-study-card { transition: none; }
+}
