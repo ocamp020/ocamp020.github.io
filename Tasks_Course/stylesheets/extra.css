@@ -970,5 +970,7 @@ body,
 .md-typeset .presentation-card .presentation-resources{font-size:.7rem;line-height:1.5}
 .presentation-actions{margin-top:auto;padding-top:.35rem}
 .presentation-actions .course-button{font-size:.75rem}
+.presentation-actions .course-button.secondary{background:var(--course-accent);border-color:var(--course-accent)}
+.presentation-actions .course-button.secondary:hover{background:var(--course-ink);border-color:var(--course-ink)}
 .presentation-card a:focus-visible{outline:2px solid var(--course-accent);outline-offset:3px;border-radius:.2rem}
 @media(max-width:700px){.presentation-grid{grid-template-columns:1fr}}
