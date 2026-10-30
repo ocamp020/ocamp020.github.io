@@ -1,0 +1,34 @@
+group,unit,code,title,display_label,rate,percent,unweighted_n,small_cell
+major,SOC major,15-0000,Computer and Mathematical Occupations,Computer and mathematical,0.7277517318725586,72.77517318725586,1183,False
+major,SOC major,11-0000,Management Occupations,Management,0.6510875225067139,65.10875225067139,2953,False
+major,SOC major,13-0000,Business and Financial Operations Occupations,Business and financial operations,0.5819947123527527,58.19947123527527,829,False
+major,SOC major,41-0000,Sales and Related Occupations,Sales and related,0.3863041400909424,38.63041400909424,1039,False
+analysts,SOC broad,13-1160,Market Research Analysts and Marketing Specialists,Market research and marketing analysts,0.7865949273109436,78.65949273109436,31,True
+analysts,SOC broad,13-2050,Financial Analysts and Advisors,Financial analysts and advisors,0.6599351763725281,65.99351763725281,165,False
+analysts,SOC broad,13-1110,Management Analysts,Management analysts,0.6176753640174866,61.76753640174866,125,False
+analysts,SOC broad,13-1080,Logisticians and Project Management Specialists,Logisticians and project specialists,0.5992972254753113,59.92972254753113,91,False
+analysts,SOC broad,13-2010,Accountants and Auditors,Accountants and auditors,0.5902751088142395,59.02751088142395,114,False
+analysts,SOC broad,15-2030,Operations Research Analysts,Operations research analysts,0.32979658246040344,32.979658246040344,22,True
+management_sales,SOC broad,11-3030,Financial Managers,Financial managers,0.7637031674385071,76.37031674385071,165,False
+management_sales,SOC broad,11-1020,General and Operations Managers,General and operations managers,0.7067909836769104,70.67909836769104,214,False
+management_sales,SOC broad,11-2020,Marketing and Sales Managers,Marketing and sales managers,0.6195952296257019,61.95952296257019,190,False
+management_sales,SOC broad,41-3020,Insurance Sales Agents,Insurance sales agents,0.5942012071609497,59.42012071609497,50,False
+management_sales,SOC broad,41-3030,"Securities, Commodities, and Financial Services Sales Agents",Securities and financial services sales,0.553498387336731,55.349838733673096,36,True
+management_sales,SOC broad,41-4010,"Sales Representatives, Wholesale and Manufacturing",Wholesale and manufacturing sales,0.45456433296203613,45.45643329620361,51,False
+management_sales,SOC broad,41-3090,"Miscellaneous Sales Representatives, Services",Other services sales representatives,0.34060442447662354,34.06044244766235,29,True
+management_sales,SOC broad,41-2030,Retail Salespersons,Retail salespersons,0.29195308685302734,29.195308685302734,297,False
+analysis_tasks,DWA,4.A.3.b.6.I03.D03,Prepare research reports.,Prepare research reports,0.6074507832527161,60.745078325271606,69,False
+analysis_tasks,DWA,4.A.3.b.1.I06.D07,Prepare data for analysis.,Prepare data for analysis,0.5544596910476685,55.445969104766846,212,False
+analysis_tasks,DWA,4.A.2.a.4.I07.D12,Analyze data to inform operational decisions or activities.,Analyze data for operational decisions,0.5133829116821289,51.33829116821289,521,False
+analysis_tasks,DWA,4.A.2.a.4.I07.D08,Analyze forecasting data to improve business decisions.,Analyze forecasts for business decisions,0.5063289403915405,50.63289403915405,100,False
+analysis_tasks,DWA,4.A.2.a.4.I11.D07,Analyze financial records to improve efficiency.,Analyze financial records for efficiency,0.46163150668144226,46.163150668144226,108,False
+analysis_tasks,DWA,4.A.3.b.6.I01.D02,"Prepare financial documents, reports, or budgets.",Prepare financial documents and budgets,0.4147122800350189,41.47122800350189,522,False
+analysis_tasks,DWA,4.A.2.a.2.I01.D05,Verify accuracy of financial information.,Verify accuracy of financial information,0.2707570791244507,27.07570791244507,88,False
+client_tasks,DWA,4.A.2.b.2.I03.D03,Develop marketing plans or strategies.,Develop marketing plans or strategies,0.5504053831100464,55.04053831100464,43,True
+client_tasks,DWA,4.A.4.b.4.I12.D12,"Manage operations, research, or logistics projects.",Manage operations or research projects,0.47239217162132263,47.23921716213226,406,False
+client_tasks,DWA,4.A.4.b.4.I12.D03,"Direct sales, marketing, or customer service activities.","Direct sales, marketing or service",0.3863045871257782,38.63045871257782,257,False
+client_tasks,DWA,4.A.4.a.4.I01.D02,Develop business relationships.,Develop business relationships,0.2969680726528168,29.696807265281677,71,False
+client_tasks,DWA,4.A.4.b.6.I11.D03,Advise others on financial matters.,Advise others on financial matters,0.26161888241767883,26.161888241767883,152,False
+client_tasks,DWA,4.A.4.a.6.I03.D05,Contact current or potential customers to promote products or services.,Contact customers to promote products,0.22924304008483887,22.924304008483887,85,False
+client_tasks,DWA,4.A.4.a.7.I02.D07,Negotiate prices or other sales terms.,Negotiate prices or sales terms,0.1658696085214615,16.58696085214615,108,False
+client_tasks,DWA,4.A.4.b.4.I01.D16,Supervise sales or support personnel.,Supervise sales or support personnel,0.10077192634344101,10.077192634344101,131,False

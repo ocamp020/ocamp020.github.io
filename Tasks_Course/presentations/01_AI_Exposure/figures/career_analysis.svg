@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
+<title id="title">Analytical occupations and education-group exposure means</title>
+<desc id="desc">Human beta exposure, 0–100. All occupations: 30.27; bachelor’s: 46.29; postgraduate: 42.25. All six selected analytical occupations exceed the overall mean.</desc>
+<style>text{font-family:Palatino,"Palatino Linotype",Georgia,serif;fill:#242126}</style>
+<rect width="1200" height="390" fill="white"/>
+<line x1="405.0" y1="60" x2="405.0" y2="297" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="405.0" y="325" font-size="22" text-anchor="middle" style="fill:#242126">0</text>
+<line x1="547.0" y1="60" x2="547.0" y2="297" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="547.0" y="325" font-size="22" text-anchor="middle" style="fill:#242126">20</text>
+<line x1="689.0" y1="60" x2="689.0" y2="297" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="689.0" y="325" font-size="22" text-anchor="middle" style="fill:#242126">40</text>
+<line x1="831.0" y1="60" x2="831.0" y2="297" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="831.0" y="325" font-size="22" text-anchor="middle" style="fill:#242126">60</text>
+<line x1="973.0" y1="60" x2="973.0" y2="297" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="973.0" y="325" font-size="22" text-anchor="middle" style="fill:#242126">80</text>
+<line x1="1115.0" y1="60" x2="1115.0" y2="297" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="1115.0" y="325" font-size="22" text-anchor="middle" style="fill:#242126">100</text>
+<text x="760.0" y="361" font-size="24" text-anchor="middle" style="fill:#242126">Human β exposure index (0–100)</text>
+<line x1="22" y1="23" x2="57" y2="23" stroke="#625b68" stroke-width="2.5" stroke-dasharray="6 5"/>
+<text x="69" y="31" font-size="24" text-anchor="start" style="fill:#625b68">All occupations: 30.27</text>
+<line x1="619.8963067613116" y1="57" x2="619.8963067613116" y2="297" stroke="#625b68" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="445" y1="23" x2="480" y2="23" stroke="#9a5b11" stroke-width="2.5" stroke-dasharray="10 5"/>
+<text x="492" y="31" font-size="24" text-anchor="start" style="fill:#9a5b11">Bachelor’s: 46.29</text>
+<line x1="733.6376103067405" y1="57" x2="733.6376103067405" y2="297" stroke="#9a5b11" stroke-width="2" stroke-dasharray="10 5"/>
+<line x1="815" y1="23" x2="850" y2="23" stroke="#4f2683" stroke-width="2.5" stroke-dasharray="2 5"/>
+<text x="862" y="31" font-size="24" text-anchor="start" style="fill:#4f2683">Postgraduate: 42.25</text>
+<line x1="705.0074439183858" y1="57" x2="705.0074439183858" y2="297" stroke="#4f2683" stroke-width="2" stroke-dasharray="2 5"/>
+<text x="390" y="95" font-size="24" text-anchor="end" style="fill:#242126">Economists</text>
+<rect x="405" y="75" width="325.41666666666663" height="25" rx="2" fill="#4f2683"/>
+<text x="739.4166666666666" y="95" font-size="24" text-anchor="start" style="fill:#4f2683">45.8</text>
+<text x="390" y="132" font-size="24" text-anchor="end" style="fill:#242126">Management analysts</text>
+<rect x="405" y="112" width="355.0" height="25" rx="2" fill="#4f2683"/>
+<text x="769.0" y="132" font-size="24" text-anchor="start" style="fill:#4f2683">50.0</text>
+<text x="390" y="169" font-size="24" text-anchor="end" style="fill:#242126">Market research analysts</text>
+<rect x="405" y="149" width="409.6153846153847" height="25" rx="2" fill="#4f2683"/>
+<text x="823.6153846153848" y="169" font-size="24" text-anchor="start" style="fill:#4f2683">57.7</text>
+<text x="390" y="206" font-size="24" text-anchor="end" style="fill:#242126">Business intelligence analysts</text>
+<rect x="405" y="186" width="408.7878787878788" height="25" rx="2" fill="#4f2683"/>
+<text x="822.7878787878788" y="206" font-size="24" text-anchor="start" style="fill:#4f2683">57.6</text>
+<text x="390" y="243" font-size="24" text-anchor="end" style="fill:#242126">Data scientists</text>
+<rect x="405" y="223" width="421.5625" height="25" rx="2" fill="#4f2683"/>
+<text x="835.5625" y="243" font-size="24" text-anchor="start" style="fill:#4f2683">59.4</text>
+<text x="390" y="280" font-size="24" text-anchor="end" style="fill:#242126">Operations research analysts</text>
+<rect x="405" y="260" width="446.61290322580646" height="25" rx="2" fill="#4f2683"/>
+<text x="860.6129032258065" y="280" font-size="24" text-anchor="start" style="fill:#4f2683">62.9</text>
+</svg>

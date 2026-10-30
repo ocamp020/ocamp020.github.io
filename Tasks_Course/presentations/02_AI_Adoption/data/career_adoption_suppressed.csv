@@ -1,0 +1,4 @@
+code,title,unweighted_n,rate,status
+13-2040,Credit Analysts,9,,Suppressed: fewer than 20 observations
+15-2050,Data Scientists,8,,Suppressed: fewer than 20 observations
+19-3010,Economists,14,,Suppressed: fewer than 20 observations

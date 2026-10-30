@@ -1,0 +1,5 @@
+Anthropic Economic Index data
+Source: https://huggingface.co/datasets/Anthropic/EconomicIndex
+Data: CC-BY, as stated in the official dataset card (retrieved 2026-10-28). Code: MIT.
+Attribution: Anthropic; Massenkoff and McCrory (2026), Labor market impacts of AI: A new measure and early evidence.
+The occupation CSV is preserved as released. Selected scores are multiplied by 100; the histogram gives equal weight to each occupation. Published worker statistics are separately attributed to the report.

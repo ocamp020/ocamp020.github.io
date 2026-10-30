@@ -956,3 +956,19 @@ body,
 @media (prefers-reduced-motion: reduce) {
   .md-typeset .case-study-card { transition: none; }
 }
+
+/* Topic slide cards share the case-study page's shape and type scale. */
+.presentation-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.5rem 0}
+.md-typeset .presentation-card{display:flex;flex-direction:column;padding:1.3rem;border:1px solid rgba(95,49,138,.16);border-radius:1.1rem;background:linear-gradient(145deg,#fff,#faf7fd);box-shadow:0 7px 22px rgba(64,56,68,.04)}
+.md-typeset .presentation-card h2{margin:0 0 .75rem;font-size:1.2rem;line-height:1.3}
+.md-typeset .presentation-card h2 a{color:var(--course-accent);text-decoration:none}
+.md-typeset .presentation-card h2 a:hover{text-decoration:underline}
+.md-typeset .presentation-card>p{margin:0 0 1rem;font-size:.8rem;line-height:1.65}
+.md-typeset .presentation-references h3{margin:0 0 .4rem;font-size:.8rem;color:var(--course-ink);font-weight:700}
+.md-typeset .presentation-references ul{margin:.2rem 0 1rem;padding-left:1rem;font-size:.73rem;line-height:1.55}
+.md-typeset .presentation-references li{margin:.3rem 0}
+.md-typeset .presentation-card .presentation-resources{font-size:.7rem;line-height:1.5}
+.presentation-actions{margin-top:auto;padding-top:.35rem}
+.presentation-actions .course-button{font-size:.75rem}
+.presentation-card a:focus-visible{outline:2px solid var(--course-accent);outline-offset:3px;border-radius:.2rem}
+@media(max-width:700px){.presentation-grid{grid-template-columns:1fr}}

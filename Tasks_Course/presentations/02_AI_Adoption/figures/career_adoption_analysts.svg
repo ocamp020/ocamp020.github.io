@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="352" viewBox="0 0 1200 352" role="img">
+<style>text{font-family:Palatino,"Palatino Linotype",Georgia,serif;fill:#242126}</style>
+<rect width="1200" height="352" fill="white"/>
+<line x1="460.0" y1="32" x2="460.0" y2="274" stroke="#ded8e5"/>
+<text x="460.0" y="302" font-size="20" text-anchor="middle" style="fill:#242126">0</text>
+<line x1="586.0" y1="32" x2="586.0" y2="274" stroke="#ded8e5"/>
+<text x="586.0" y="302" font-size="20" text-anchor="middle" style="fill:#242126">20</text>
+<line x1="712.0" y1="32" x2="712.0" y2="274" stroke="#ded8e5"/>
+<text x="712.0" y="302" font-size="20" text-anchor="middle" style="fill:#242126">40</text>
+<line x1="838.0" y1="32" x2="838.0" y2="274" stroke="#ded8e5"/>
+<text x="838.0" y="302" font-size="20" text-anchor="middle" style="fill:#242126">60</text>
+<line x1="964.0" y1="32" x2="964.0" y2="274" stroke="#ded8e5"/>
+<text x="964.0" y="302" font-size="20" text-anchor="middle" style="fill:#242126">80</text>
+<line x1="1090.0" y1="32" x2="1090.0" y2="274" stroke="#ded8e5"/>
+<text x="1090.0" y="302" font-size="20" text-anchor="middle" style="fill:#242126">100</text>
+<text x="775.0" y="334" font-size="23" text-anchor="middle" style="fill:#242126">Share of workers using GenAI for their job (%)</text>
+<text x="1170" y="22" font-size="22" text-anchor="end" style="fill:#242126">N</text>
+<text x="445" y="67" font-size="24" text-anchor="end" style="fill:#242126">Market research and marketing analysts</text>
+<rect x="460" y="46" width="495.55480420589447" height="27" fill="#9682af"/>
+<text x="963.5548042058945" y="67" font-size="23" text-anchor="start" style="fill:#4f2683">78.7</text>
+<text x="1170" y="67" font-size="22" text-anchor="end" style="fill:#242126">31 *</text>
+<text x="445" y="105" font-size="24" text-anchor="end" style="fill:#242126">Financial analysts and advisors</text>
+<rect x="460" y="84" width="415.7591611146927" height="27" fill="#4f2683"/>
+<text x="883.7591611146927" y="105" font-size="23" text-anchor="start" style="fill:#4f2683">66.0</text>
+<text x="1170" y="105" font-size="22" text-anchor="end" style="fill:#242126">165</text>
+<text x="445" y="143" font-size="24" text-anchor="end" style="fill:#242126">Management analysts</text>
+<rect x="460" y="122" width="389.13547933101654" height="27" fill="#4f2683"/>
+<text x="857.1354793310165" y="143" font-size="23" text-anchor="start" style="fill:#4f2683">61.8</text>
+<text x="1170" y="143" font-size="22" text-anchor="end" style="fill:#242126">125</text>
+<text x="445" y="181" font-size="24" text-anchor="end" style="fill:#242126">Logisticians and project specialists</text>
+<rect x="460" y="160" width="377.5572520494461" height="27" fill="#4f2683"/>
+<text x="845.5572520494461" y="181" font-size="23" text-anchor="start" style="fill:#4f2683">59.9</text>
+<text x="1170" y="181" font-size="22" text-anchor="end" style="fill:#242126">91</text>
+<text x="445" y="219" font-size="24" text-anchor="end" style="fill:#242126">Accountants and auditors</text>
+<rect x="460" y="198" width="371.8733185529709" height="27" fill="#4f2683"/>
+<text x="839.8733185529709" y="219" font-size="23" text-anchor="start" style="fill:#4f2683">59.0</text>
+<text x="1170" y="219" font-size="22" text-anchor="end" style="fill:#242126">114</text>
+<text x="445" y="257" font-size="24" text-anchor="end" style="fill:#242126">Operations research analysts</text>
+<rect x="460" y="236" width="207.77184695005417" height="27" fill="#9682af"/>
+<text x="675.7718469500542" y="257" font-size="23" text-anchor="start" style="fill:#4f2683">33.0</text>
+<text x="1170" y="257" font-size="22" text-anchor="end" style="fill:#242126">22 *</text>
+</svg>

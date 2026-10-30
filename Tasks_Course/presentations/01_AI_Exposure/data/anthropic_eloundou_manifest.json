@@ -1,0 +1,51 @@
+{
+  "sample_n": 684,
+  "excluded_n": 72,
+  "exclusion_counts": {
+    "Multiple detailed O*NET occupations": 64,
+    "Broader SOC category versus detailed occupation": 8
+  },
+  "x": "Eloundou human_rating_beta ×100; core/supplemental task weights",
+  "y": "Anthropic observed_exposure ×100; estimated task-time and automation weights",
+  "matching": "One Eloundou detailed occupation per six-digit SOC prefix, exact code match to Anthropic, and case-insensitive exact title agreement. No fuzzy-name matches or averaging across detailed occupations.",
+  "bins": {
+    "requested_quantiles": 20,
+    "actual_bins": 19,
+    "rule": "pandas.qcut, duplicates=drop; ties kept together; points are within-bin arithmetic means of x and y",
+    "edges": [
+      0.0,
+      2.5,
+      4.075,
+      6.25,
+      8.0,
+      10.934659090909092,
+      13.88888888888889,
+      16.66666666666666,
+      21.090909090909093,
+      25.0,
+      30.0,
+      34.03404255319149,
+      37.20598006644518,
+      41.07142857142857,
+      44.365828092243184,
+      48.354838709677416,
+      51.75800492610838,
+      56.19318181818183,
+      61.94418604651164,
+      84.375
+    ]
+  },
+  "weighting": "Equal weight per matched occupation, including zero observed exposure",
+  "pearson_r": 0.5970780811719985,
+  "spearman_rho": 0.6535256122649972,
+  "input_sha256": {
+    "occ_level.csv": "40c74f53de40aec91c0017d80690cbba915f83a8bb414bcf2f884692f1749acb",
+    "anthropic_job_exposure.csv": "4f0a3adf5feeb2ec5f5d02ab18cc5e851a2a4b8470bde84c0c9335017be12d68"
+  },
+  "sources": [
+    "https://github.com/openai/GPTs-are-GPTs/blob/main/data/occ_level.csv",
+    "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/labor_market_impacts"
+  ],
+  "interpretation": "Cross-sectional association. Anthropic incorporates Eloundou task feasibility; this is not independent validation. Different task weights and automation treatment mean y minus x is not an adoption gap.",
+  "figure": "anthropic_eloundou_scatter.svg"
+}

@@ -1,0 +1,85 @@
+O*NET-SOC Code,Element ID,Element Name,Scale ID,Category,Data Value,N,Standard Error,Lower CI Bound,Upper CI Bound,Recommend Suppress,Date,Domain Source
+11-2022.00,2.D.1,Required Level of Education,RL,1,0.00,23,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+11-2022.00,2.D.1,Required Level of Education,RL,2,0.00,23,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+11-2022.00,2.D.1,Required Level of Education,RL,3,0.00,23,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+11-2022.00,2.D.1,Required Level of Education,RL,4,4.35,23,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+11-2022.00,2.D.1,Required Level of Education,RL,5,13.04,23,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+11-2022.00,2.D.1,Required Level of Education,RL,6,65.22,23,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+11-2022.00,2.D.1,Required Level of Education,RL,7,8.70,23,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+11-2022.00,2.D.1,Required Level of Education,RL,8,8.70,23,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+11-2022.00,2.D.1,Required Level of Education,RL,9,0.00,23,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+11-2022.00,2.D.1,Required Level of Education,RL,10,0.00,23,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+11-2022.00,2.D.1,Required Level of Education,RL,11,0.00,23,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+11-2022.00,2.D.1,Required Level of Education,RL,12,0.00,23,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+13-1111.00,2.D.1,Required Level of Education,RL,1,0.00,21,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1111.00,2.D.1,Required Level of Education,RL,2,0.00,21,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1111.00,2.D.1,Required Level of Education,RL,3,0.00,21,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1111.00,2.D.1,Required Level of Education,RL,4,9.52,21,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1111.00,2.D.1,Required Level of Education,RL,5,0.00,21,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1111.00,2.D.1,Required Level of Education,RL,6,57.14,21,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1111.00,2.D.1,Required Level of Education,RL,7,9.52,21,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1111.00,2.D.1,Required Level of Education,RL,8,23.81,21,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1111.00,2.D.1,Required Level of Education,RL,9,0.00,21,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1111.00,2.D.1,Required Level of Education,RL,10,0.00,21,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1111.00,2.D.1,Required Level of Education,RL,11,0.00,21,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1111.00,2.D.1,Required Level of Education,RL,12,0.00,21,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1161.00,2.D.1,Required Level of Education,RL,1,0.00,23,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-1161.00,2.D.1,Required Level of Education,RL,2,0.00,23,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-1161.00,2.D.1,Required Level of Education,RL,3,0.00,23,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-1161.00,2.D.1,Required Level of Education,RL,4,0.00,23,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-1161.00,2.D.1,Required Level of Education,RL,5,0.00,23,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-1161.00,2.D.1,Required Level of Education,RL,6,56.52,23,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-1161.00,2.D.1,Required Level of Education,RL,7,4.35,23,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-1161.00,2.D.1,Required Level of Education,RL,8,39.13,23,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-1161.00,2.D.1,Required Level of Education,RL,9,0.00,23,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-1161.00,2.D.1,Required Level of Education,RL,10,0.00,23,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-1161.00,2.D.1,Required Level of Education,RL,11,0.00,23,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-1161.00,2.D.1,Required Level of Education,RL,12,0.00,23,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-2031.00,2.D.1,Required Level of Education,RL,1,0.00,35,0.00,n/a,n/a,N,07/2016,Incumbent
+13-2031.00,2.D.1,Required Level of Education,RL,2,10.06,35,8.38,1.68,42.35,N,07/2016,Incumbent
+13-2031.00,2.D.1,Required Level of Education,RL,3,0.00,35,0.00,n/a,n/a,N,07/2016,Incumbent
+13-2031.00,2.D.1,Required Level of Education,RL,4,3.28,35,2.67,0.61,15.77,N,07/2016,Incumbent
+13-2031.00,2.D.1,Required Level of Education,RL,5,10.63,35,6.20,3.06,30.93,N,07/2016,Incumbent
+13-2031.00,2.D.1,Required Level of Education,RL,6,63.99,35,13.21,35.66,85.07,N,07/2016,Incumbent
+13-2031.00,2.D.1,Required Level of Education,RL,7,0.00,35,0.00,n/a,n/a,N,07/2016,Incumbent
+13-2031.00,2.D.1,Required Level of Education,RL,8,9.37,35,6.15,2.32,31.05,N,07/2016,Incumbent
+13-2031.00,2.D.1,Required Level of Education,RL,9,2.67,35,2.77,0.31,19.33,N,07/2016,Incumbent
+13-2031.00,2.D.1,Required Level of Education,RL,10,0.00,35,0.00,n/a,n/a,N,07/2016,Incumbent
+13-2031.00,2.D.1,Required Level of Education,RL,11,0.00,35,0.00,n/a,n/a,N,07/2016,Incumbent
+13-2031.00,2.D.1,Required Level of Education,RL,12,0.00,35,0.00,n/a,n/a,N,07/2016,Incumbent
+13-2041.00,2.D.1,Required Level of Education,RL,1,0.00,20,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+13-2041.00,2.D.1,Required Level of Education,RL,2,0.00,20,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+13-2041.00,2.D.1,Required Level of Education,RL,3,0.00,20,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+13-2041.00,2.D.1,Required Level of Education,RL,4,0.00,20,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+13-2041.00,2.D.1,Required Level of Education,RL,5,0.00,20,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+13-2041.00,2.D.1,Required Level of Education,RL,6,95.00,20,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+13-2041.00,2.D.1,Required Level of Education,RL,7,0.00,20,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+13-2041.00,2.D.1,Required Level of Education,RL,8,5.00,20,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+13-2041.00,2.D.1,Required Level of Education,RL,9,0.00,20,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+13-2041.00,2.D.1,Required Level of Education,RL,10,0.00,20,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+13-2041.00,2.D.1,Required Level of Education,RL,11,0.00,20,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+13-2041.00,2.D.1,Required Level of Education,RL,12,0.00,20,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+19-3011.00,2.D.1,Required Level of Education,RL,1,0.00,23,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+19-3011.00,2.D.1,Required Level of Education,RL,2,0.00,23,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+19-3011.00,2.D.1,Required Level of Education,RL,3,0.00,23,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+19-3011.00,2.D.1,Required Level of Education,RL,4,0.00,23,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+19-3011.00,2.D.1,Required Level of Education,RL,5,0.00,23,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+19-3011.00,2.D.1,Required Level of Education,RL,6,0.00,23,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+19-3011.00,2.D.1,Required Level of Education,RL,7,0.00,23,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+19-3011.00,2.D.1,Required Level of Education,RL,8,30.43,23,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+19-3011.00,2.D.1,Required Level of Education,RL,9,4.35,23,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+19-3011.00,2.D.1,Required Level of Education,RL,10,0.00,23,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+19-3011.00,2.D.1,Required Level of Education,RL,11,60.87,23,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+19-3011.00,2.D.1,Required Level of Education,RL,12,4.35,23,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+41-3031.00,2.D.1,Required Level of Education,RL,1,0.00,86,0.00,n/a,n/a,N,08/2022,Incumbent
+41-3031.00,2.D.1,Required Level of Education,RL,2,26.83,86,8.09,13.91,45.43,N,08/2022,Incumbent
+41-3031.00,2.D.1,Required Level of Education,RL,3,1.09,86,1.11,0.14,7.85,N,08/2022,Incumbent
+41-3031.00,2.D.1,Required Level of Education,RL,4,5.83,86,3.56,1.68,18.37,N,08/2022,Incumbent
+41-3031.00,2.D.1,Required Level of Education,RL,5,1.10,86,0.85,0.24,4.95,N,08/2022,Incumbent
+41-3031.00,2.D.1,Required Level of Education,RL,6,55.30,86,8.67,38.13,71.30,N,08/2022,Incumbent
+41-3031.00,2.D.1,Required Level of Education,RL,7,6.03,86,2.76,2.38,14.47,N,08/2022,Incumbent
+41-3031.00,2.D.1,Required Level of Education,RL,8,3.80,86,2.42,1.05,12.84,N,08/2022,Incumbent
+41-3031.00,2.D.1,Required Level of Education,RL,9,0.00,86,0.00,n/a,n/a,N,08/2022,Incumbent
+41-3031.00,2.D.1,Required Level of Education,RL,10,0.00,86,0.00,n/a,n/a,N,08/2022,Incumbent
+41-3031.00,2.D.1,Required Level of Education,RL,11,0.00,86,0.00,n/a,n/a,N,08/2022,Incumbent
+41-3031.00,2.D.1,Required Level of Education,RL,12,0.00,86,0.00,n/a,n/a,N,08/2022,Incumbent

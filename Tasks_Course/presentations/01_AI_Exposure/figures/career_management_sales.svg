@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="381" viewBox="0 0 1200 381" role="img">
+<style>text{font-family:Palatino,"Palatino Linotype",Georgia,serif;fill:#242126} .muted{fill:#625b68}</style>
+<rect width="1200" height="381" fill="white"/>
+<line x1="405.0" y1="30" x2="405.0" y2="304" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="405.0" y="330" font-size="20" text-anchor="middle" font-weight="normal">0</text>
+<line x1="547.0" y1="30" x2="547.0" y2="304" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="547.0" y="330" font-size="20" text-anchor="middle" font-weight="normal">20</text>
+<line x1="689.0" y1="30" x2="689.0" y2="304" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="689.0" y="330" font-size="20" text-anchor="middle" font-weight="normal">40</text>
+<line x1="831.0" y1="30" x2="831.0" y2="304" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="831.0" y="330" font-size="20" text-anchor="middle" font-weight="normal">60</text>
+<line x1="973.0" y1="30" x2="973.0" y2="304" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="973.0" y="330" font-size="20" text-anchor="middle" font-weight="normal">80</text>
+<line x1="1115.0" y1="30" x2="1115.0" y2="304" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="1115.0" y="330" font-size="20" text-anchor="middle" font-weight="normal">100</text>
+<text x="760.0" y="361" font-size="22" text-anchor="middle" font-weight="normal">Human β exposure index (0–100)</text>
+<line x1="619.8963067613116" y1="27" x2="619.8963067613116" y2="304" stroke="#4f2683" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1115" y="20" font-size="19" text-anchor="end" font-weight="normal" style="fill:#4f2683">All 923 occupations: mean 30.3</text>
+<text x="390" y="63" font-size="23" text-anchor="end" font-weight="normal">General &amp; operations managers</text>
+<rect x="405" y="45" width="273.0769230769231" height="25" rx="2" fill="#4f2683"/>
+<text x="687.0769230769231" y="65" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">38.5</text>
+<text x="390" y="100" font-size="23" text-anchor="end" font-weight="normal">Financial managers</text>
+<rect x="405" y="82" width="302.4074074074074" height="25" rx="2" fill="#4f2683"/>
+<text x="716.4074074074074" y="102" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">42.6</text>
+<text x="390" y="137" font-size="23" text-anchor="end" font-weight="normal">Sales managers</text>
+<rect x="405" y="119" width="343.16666666666674" height="25" rx="2" fill="#4f2683"/>
+<text x="757.1666666666667" y="139" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">48.3</text>
+<text x="390" y="174" font-size="23" text-anchor="end" font-weight="normal">Securities &amp; financial services sales</text>
+<rect x="405" y="156" width="368.6538461538462" height="25" rx="2" fill="#4f2683"/>
+<text x="782.6538461538462" y="176" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">51.9</text>
+<text x="390" y="211" font-size="23" text-anchor="end" font-weight="normal">Services sales representatives</text>
+<rect x="405" y="193" width="402.33333333333326" height="25" rx="2" fill="#4f2683"/>
+<text x="816.3333333333333" y="213" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">56.7</text>
+<text x="390" y="248" font-size="23" text-anchor="end" font-weight="normal">Marketing managers</text>
+<rect x="405" y="230" width="410.46875" height="25" rx="2" fill="#4f2683"/>
+<text x="824.46875" y="250" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">57.8</text>
+<text x="390" y="285" font-size="23" text-anchor="end" font-weight="normal">Wholesale sales, nontechnical</text>
+<rect x="405" y="267" width="501.8965517241379" height="25" rx="2" fill="#4f2683"/>
+<text x="915.8965517241379" y="287" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">70.7</text>
+</svg>

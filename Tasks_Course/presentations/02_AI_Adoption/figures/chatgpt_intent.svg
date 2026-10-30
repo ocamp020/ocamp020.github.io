@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="330" viewBox="0 0 1100 330" role="img" aria-labelledby="title desc">
+<title id="title">What users ask ChatGPT to do</title>
+<desc id="desc">All messages: Asking 48.9%, Doing 39.8%, Expressing 11.3%. Work-related messages: Asking 35.3%, Doing 55.8%, Expressing 8.9%.</desc>
+<rect width="1100" height="330" fill="white"/>
+<g font-family="Palatino, Palatino Linotype, Georgia, serif" fill="#242126">
+<rect x="20" y="13" width="22" height="22" rx="2" fill="#c6b3df"/>
+<text x="54" y="34" font-size="26">Asking</text>
+<text x="54" y="65" font-size="24" fill="#625b68">Advice or information</text>
+<rect x="410" y="13" width="22" height="22" rx="2" fill="#9fc5e8"/>
+<text x="444" y="34" font-size="26">Doing</text>
+<text x="444" y="65" font-size="24" fill="#625b68">Produce an output</text>
+<rect x="800" y="13" width="22" height="22" rx="2" fill="#ded9e4"/>
+<text x="834" y="34" font-size="26">Expressing</text>
+<text x="834" y="65" font-size="24" fill="#625b68">Neither request</text>
+<text x="0" y="149" font-size="26">All messages</text>
+<rect x="205.000" y="111" width="430.320" height="61" fill="#c6b3df" stroke="white" stroke-width="2"/>
+<text x="420.160" y="150" text-anchor="middle" font-size="26">48.9%</text>
+<rect x="635.320" y="111" width="350.240" height="61" fill="#9fc5e8" stroke="white" stroke-width="2"/>
+<text x="810.440" y="150" text-anchor="middle" font-size="26">39.8%</text>
+<rect x="985.560" y="111" width="99.440" height="61" fill="#ded9e4" stroke="white" stroke-width="2"/>
+<text x="1035.280" y="150" text-anchor="middle" font-size="26">11.3%</text>
+<text x="0" y="252" font-size="26">Work messages</text>
+<rect x="205.000" y="214" width="310.640" height="61" fill="#c6b3df" stroke="white" stroke-width="2"/>
+<text x="360.320" y="253" text-anchor="middle" font-size="26">35.3%</text>
+<rect x="515.640" y="214" width="491.040" height="61" fill="#9fc5e8" stroke="white" stroke-width="2"/>
+<text x="761.160" y="253" text-anchor="middle" font-size="26">55.8%</text>
+<rect x="1006.680" y="214" width="78.320" height="61" fill="#ded9e4" stroke="white" stroke-width="2"/>
+<text x="1045.840" y="253" text-anchor="middle" font-size="26">8.9%</text>
+</g></svg>

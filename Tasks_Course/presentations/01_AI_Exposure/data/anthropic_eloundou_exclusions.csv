@@ -1,0 +1,73 @@
+occ_code,title,reason,eloundou_codes
+11-1011,Chief Executives,Multiple detailed O*NET occupations,11-1011.00; 11-1011.03
+11-3013,Facilities Managers,Multiple detailed O*NET occupations,11-3013.00; 11-3013.01
+11-3031,Financial Managers,Multiple detailed O*NET occupations,11-3031.00; 11-3031.01; 11-3031.03
+11-3051,Industrial Production Managers,Multiple detailed O*NET occupations,11-3051.00; 11-3051.01; 11-3051.02; 11-3051.03; 11-3051.04; 11-3051.06
+11-3071,"Transportation, Storage, and Distribution Managers",Multiple detailed O*NET occupations,11-3071.00; 11-3071.04
+11-9041,Architectural and Engineering Managers,Multiple detailed O*NET occupations,11-9041.00; 11-9041.01
+11-9121,Natural Sciences Managers,Multiple detailed O*NET occupations,11-9121.00; 11-9121.01; 11-9121.02
+11-9179,"Personal Service Managers, All Other",Multiple detailed O*NET occupations,11-9179.01; 11-9179.02
+11-9199,"Managers, All Other",Multiple detailed O*NET occupations,11-9199.01; 11-9199.02; 11-9199.08; 11-9199.09; 11-9199.10; 11-9199.11
+13-1041,Compliance Officers,Multiple detailed O*NET occupations,13-1041.00; 13-1041.01; 13-1041.03; 13-1041.04; 13-1041.06; 13-1041.07; 13-1041.08
+13-1081,Logisticians,Multiple detailed O*NET occupations,13-1081.00; 13-1081.01; 13-1081.02
+13-1161,Market Research Analysts and Marketing Specialists,Multiple detailed O*NET occupations,13-1161.00; 13-1161.01
+13-1199,"Business Operations Specialists, All Other",Multiple detailed O*NET occupations,13-1199.04; 13-1199.05; 13-1199.06; 13-1199.07
+13-2099,"Financial Specialists, All Other",Multiple detailed O*NET occupations,13-2099.01; 13-2099.04
+15-1211,Computer Systems Analysts,Multiple detailed O*NET occupations,15-1211.00; 15-1211.01
+15-1241,Computer Network Architects,Multiple detailed O*NET occupations,15-1241.00; 15-1241.01
+15-1243,Database Architects,Multiple detailed O*NET occupations,15-1243.00; 15-1243.01
+15-1255,Web and Digital Interface Designers,Multiple detailed O*NET occupations,15-1255.00; 15-1255.01
+15-1299,"Computer Occupations, All Other",Multiple detailed O*NET occupations,15-1299.01; 15-1299.02; 15-1299.03; 15-1299.04; 15-1299.05; 15-1299.06; 15-1299.07; 15-1299.08; 15-1299.09
+15-2041,Statisticians,Multiple detailed O*NET occupations,15-2041.00; 15-2041.01
+15-2051,Data Scientists,Multiple detailed O*NET occupations,15-2051.00; 15-2051.01; 15-2051.02
+15-2099,"Mathematical Science Occupations, All Other",Broader SOC category versus detailed occupation,15-2099.01
+17-1022,Surveyors,Multiple detailed O*NET occupations,17-1022.00; 17-1022.01
+17-2051,Civil Engineers,Multiple detailed O*NET occupations,17-2051.00; 17-2051.01; 17-2051.02
+17-2072,"Electronics Engineers, Except Computer",Multiple detailed O*NET occupations,17-2072.00; 17-2072.01
+17-2111,"Health and Safety Engineers, Except Mining Safety Engineers and Inspectors",Multiple detailed O*NET occupations,17-2111.00; 17-2111.02
+17-2112,Industrial Engineers,Multiple detailed O*NET occupations,17-2112.00; 17-2112.01; 17-2112.02; 17-2112.03
+17-2141,Mechanical Engineers,Multiple detailed O*NET occupations,17-2141.00; 17-2141.01; 17-2141.02
+17-2199,"Engineers, All Other",Multiple detailed O*NET occupations,17-2199.03; 17-2199.05; 17-2199.06; 17-2199.07; 17-2199.08; 17-2199.09; 17-2199.10; 17-2199.11
+17-3024,Electro-Mechanical and Mechatronics Technologists and Technicians,Multiple detailed O*NET occupations,17-3024.00; 17-3024.01
+17-3026,Industrial Engineering Technologists and Technicians,Multiple detailed O*NET occupations,17-3026.00; 17-3026.01
+17-3027,Mechanical Engineering Technologists and Technicians,Multiple detailed O*NET occupations,17-3027.00; 17-3027.01
+17-3029,"Engineering Technologists and Technicians, Except Drafters, All Other",Multiple detailed O*NET occupations,17-3029.01; 17-3029.08
+19-1029,"Biological Scientists, All Other",Multiple detailed O*NET occupations,19-1029.01; 19-1029.02; 19-1029.03; 19-1029.04
+19-1031,Conservation Scientists,Multiple detailed O*NET occupations,19-1031.00; 19-1031.02; 19-1031.03
+19-2041,"Environmental Scientists and Specialists, Including Health",Multiple detailed O*NET occupations,19-2041.00; 19-2041.01; 19-2041.02; 19-2041.03
+19-2099,"Physical Scientists, All Other",Broader SOC category versus detailed occupation,19-2099.01
+19-3011,Economists,Multiple detailed O*NET occupations,19-3011.00; 19-3011.01
+19-3039,"Psychologists, All Other",Multiple detailed O*NET occupations,19-3039.02; 19-3039.03
+19-3099,"Social Scientists and Related Workers, All Other",Broader SOC category versus detailed occupation,19-3099.01
+19-4012,Agricultural Technicians,Multiple detailed O*NET occupations,19-4012.00; 19-4012.01
+19-4051,Nuclear Technicians,Multiple detailed O*NET occupations,19-4051.00; 19-4051.02
+19-4099,"Life, Physical, and Social Science Technicians, All Other",Multiple detailed O*NET occupations,19-4099.01; 19-4099.03
+25-2059,"Special Education Teachers, All Other",Broader SOC category versus detailed occupation,25-2059.01
+27-2012,Producers and Directors,Multiple detailed O*NET occupations,27-2012.00; 27-2012.03; 27-2012.04; 27-2012.05
+27-3043,Writers and Authors,Multiple detailed O*NET occupations,27-3043.00; 27-3043.05
+29-1071,Physician Assistants,Multiple detailed O*NET occupations,29-1071.00; 29-1071.01
+29-1122,Occupational Therapists,Multiple detailed O*NET occupations,29-1122.00; 29-1122.01
+29-1129,"Therapists, All Other",Multiple detailed O*NET occupations,29-1129.01; 29-1129.02
+29-1141,Registered Nurses,Multiple detailed O*NET occupations,29-1141.00; 29-1141.01; 29-1141.02; 29-1141.03; 29-1141.04
+29-1229,"Physicians, All Other",Multiple detailed O*NET occupations,29-1229.01; 29-1229.02; 29-1229.03; 29-1229.04; 29-1229.05; 29-1229.06
+29-1299,"Healthcare Diagnosing or Treating Practitioners, All Other",Multiple detailed O*NET occupations,29-1299.01; 29-1299.02
+29-2099,"Health Technologists and Technicians, All Other",Multiple detailed O*NET occupations,29-2099.01; 29-2099.05; 29-2099.08
+29-9099,"Healthcare Practitioners and Technical Workers, All Other",Broader SOC category versus detailed occupation,29-9099.01
+31-9099,"Healthcare Support Workers, All Other",Multiple detailed O*NET occupations,31-9099.01; 31-9099.02
+33-3021,Detectives and Criminal Investigators,Multiple detailed O*NET occupations,33-3021.00; 33-3021.02; 33-3021.06
+33-3051,Police and Sheriff's Patrol Officers,Multiple detailed O*NET occupations,33-3051.00; 33-3051.04
+33-9099,"Protective Service Workers, All Other",Broader SOC category versus detailed occupation,33-9099.02
+35-3023,Fast Food and Counter Workers,Multiple detailed O*NET occupations,35-3023.00; 35-3023.01
+39-9011,Childcare Workers,Multiple detailed O*NET occupations,39-9011.00; 39-9011.01
+41-4011,"Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",Multiple detailed O*NET occupations,41-4011.00; 41-4011.07
+43-5011,Cargo and Freight Agents,Multiple detailed O*NET occupations,43-5011.00; 43-5011.01
+47-1011,First-Line Supervisors of Construction Trades and Extraction Workers,Multiple detailed O*NET occupations,47-1011.00; 47-1011.03
+47-2152,"Plumbers, Pipefitters, and Steamfitters",Multiple detailed O*NET occupations,47-2152.00; 47-2152.04
+47-4011,Construction and Building Inspectors,Multiple detailed O*NET occupations,47-4011.00; 47-4011.01
+49-9099,"Installation, Maintenance, and Repair Workers, All Other",Broader SOC category versus detailed occupation,49-9099.01
+51-8013,Power Plant Operators,Multiple detailed O*NET occupations,51-8013.00; 51-8013.03; 51-8013.04
+51-8099,"Plant and System Operators, All Other",Broader SOC category versus detailed occupation,51-8099.01
+51-9071,Jewelers and Precious Stone and Metal Workers,Multiple detailed O*NET occupations,51-9071.00; 51-9071.06
+51-9195,"Molders, Shapers, and Casters, Except Metal and Plastic",Multiple detailed O*NET occupations,51-9195.00; 51-9195.03; 51-9195.04; 51-9195.05
+53-6051,Transportation Inspectors,Multiple detailed O*NET occupations,53-6051.00; 53-6051.01; 53-6051.07
+53-7062,"Laborers and Freight, Stock, and Material Movers, Hand",Multiple detailed O*NET occupations,53-7062.00; 53-7062.04

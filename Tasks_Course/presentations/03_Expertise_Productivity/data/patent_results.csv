@@ -1,0 +1,13 @@
+task,group,estimate,se,unit,table,column,pdf_page,completed_lawyers,rating_dimension_observations
+Drafting: day 10,All lawyers,0.34,0.16,control-group SD,3,2,21,105,1050
+Drafting: day 10,Junior (<7 years),0.58,0.28,control-group SD,3,4,21,105,1050
+Drafting: day 10,Senior (7+ years),0.22,0.19,control-group SD,3,4,21,105,1050
+Drafting: day 90,All lawyers,0.38,0.15,control-group SD,4,2,22,98,995
+Drafting: day 90,Junior (<7 years),0.6,0.26,control-group SD,4,4,22,98,995
+Drafting: day 90,Senior (7+ years),0.3,0.17,control-group SD,4,4,22,98,995
+"Redlining: day 90, no AI",All lawyers,0.32,0.15,control-group SD,6,2,26,91,925
+"Redlining: day 90, no AI",Junior (<7 years),-0.03,0.2,control-group SD,6,4,26,91,925
+"Redlining: day 90, no AI",Senior (7+ years),0.45,0.19,control-group SD,6,4,26,91,925
+Drafting time: day 10,All lawyers,-9.97,5.11,minutes,8,1,35,102,
+Drafting time: day 10,Junior (<7 years),-17.91,9.13,minutes,8,2,35,102,
+Drafting time: day 10,Senior (7+ years),-4.91,5.22,minutes,8,2,35,102,

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img">
+<style>text{font-family:Palatino,"Palatino Linotype",Georgia,serif;fill:#242126}</style>
+<rect width="1200" height="280" fill="white"/>
+<line x1="460.0" y1="40" x2="460.0" y2="175" stroke="#ded8e5"/>
+<text x="460.0" y="203" font-size="20" text-anchor="middle" style="fill:#242126">0</text>
+<line x1="670.0" y1="40" x2="670.0" y2="175" stroke="#ded8e5"/>
+<text x="670.0" y="203" font-size="20" text-anchor="middle" style="fill:#242126">2</text>
+<line x1="880.0" y1="40" x2="880.0" y2="175" stroke="#ded8e5"/>
+<text x="880.0" y="203" font-size="20" text-anchor="middle" style="fill:#242126">4</text>
+<line x1="1090.0" y1="40" x2="1090.0" y2="175" stroke="#ded8e5"/>
+<text x="1090.0" y="203" font-size="20" text-anchor="middle" style="fill:#242126">6</text>
+<text x="775.0" y="235" font-size="23" text-anchor="middle" style="fill:#242126">Reported additional hours without AI / hours worked (%)</text>
+<text x="445" y="87" font-size="27" text-anchor="end" style="fill:#242126">Among GenAI users</text>
+<rect x="460" y="60" width="546.0" height="36" fill="#4f2683"/>
+<text x="1018.0" y="88" font-size="27" text-anchor="start" style="fill:#4f2683">5.2</text>
+<text x="445" y="151" font-size="27" text-anchor="end" style="fill:#242126">Including non-users</text>
+<rect x="460" y="124" width="147.0" height="36" fill="#4f2683"/>
+<text x="619.0" y="152" font-size="27" text-anchor="start" style="fill:#4f2683">1.4</text>
+</svg>

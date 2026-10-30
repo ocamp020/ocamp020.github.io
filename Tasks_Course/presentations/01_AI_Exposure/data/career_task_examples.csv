@@ -1,0 +1,10 @@
+,O*NET-SOC Code,Task ID,Task,Task Type,Title,human_exposure_agg,gpt4_exposure,gpt4_exposure_alt_rubric,gpt_3_relevant,gpt4_automation,alpha,beta,gamma,automation,human_labels
+1658,13-1111.00,7277.0,Analyze data gathered and develop solutions or alternative methods of proceeding.,Core,Management Analysts,E2,E2,E2,True,T3,0.0,0.5,1.0,0.75,E2
+1660,13-1111.00,7285.0,"Plan study of work problems and procedures, such as organizational change, communications, information flow, integrated production methods, inventory control, or cost analysis.",Core,Management Analysts,E1,E2,E2,False,T2,0.0,0.5,1.0,0.5,E1
+1661,13-1111.00,7281.0,"Interview personnel and conduct on-site observation to ascertain unit functions, work performed, and methods, equipment, and personnel used.",Core,Management Analysts,E0,E0,E0,False,T1,0.0,0.0,0.0,0.25,E0
+1989,13-2041.00,1254.0,"Complete loan applications, including credit analyses and summaries of loan requests, and submit to loan committees for approval.",Core,Credit Analysts,E1,E2,E2,False,T3,0.0,0.5,1.0,0.75,E1
+1990,13-2041.00,1255.0,"Generate financial ratios, using computer programs, to evaluate customers' financial status.",Core,Credit Analysts,E2,E1,E2,True,T3,1.0,1.0,1.0,0.75,E2
+1995,13-2041.00,21164.0,Contact customers to collect payments on delinquent accounts.,Supplemental,Credit Analysts,E0,E2,E1,False,T2,0.0,0.5,1.0,0.5,E0
+12323,41-3031.00,23196.0,"Buy or sell stocks, bonds, commodity futures, foreign currencies, or other securities on behalf of investment dealers.",Core,"Securities, Commodities, and Financial Services Sales Agents",E0,E2,E2,False,T3,0.0,0.5,1.0,0.75,E0
+12333,41-3031.00,23208.0,"Track and analyze factors that affect price movement, such as trade policies, weather conditions, political developments, or supply and demand changes.",Core,"Securities, Commodities, and Financial Services Sales Agents",E2,E2,E2,True,T3,0.0,0.5,1.0,0.75,E2
+12337,41-3031.00,23212.0,Explain stock market terms or trading practices to clients.,Core,"Securities, Commodities, and Financial Services Sales Agents",E1,E1,E1,True,T3,1.0,1.0,1.0,0.75,E1

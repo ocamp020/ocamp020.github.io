@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="335" viewBox="0 0 1150 335" role="img">
+<style>text{font-family:Palatino,Georgia,serif;fill:#242126;font-size:26px}.axis{font-size:20px;fill:#625b68}.value{fill:#4f2683;font-weight:600}</style>
+<rect width="100%" height="100%" fill="white"/>
+<line x1="330" y1="32" x2="330" y2="238" stroke="#ddd6e5"/>
+<text x="330" y="269" class="axis" text-anchor="middle">0</text>
+<line x1="500" y1="32" x2="500" y2="238" stroke="#ddd6e5"/>
+<text x="500" y="269" class="axis" text-anchor="middle">5</text>
+<line x1="670" y1="32" x2="670" y2="238" stroke="#ddd6e5"/>
+<text x="670" y="269" class="axis" text-anchor="middle">10</text>
+<line x1="840" y1="32" x2="840" y2="238" stroke="#ddd6e5"/>
+<text x="840" y="269" class="axis" text-anchor="middle">15</text>
+<line x1="1010" y1="32" x2="1010" y2="238" stroke="#ddd6e5"/>
+<text x="1010" y="269" class="axis" text-anchor="middle">20</text>
+<text x="8" y="100" class="" text-anchor="start">Zero exposure</text>
+<rect x="330" y="66" width="153.0" height="47" fill="#4f2683" opacity="0.55"/>
+<text x="497.0" y="99" class="value" text-anchor="start">4.5%</text>
+<text x="8" y="200" class="" text-anchor="start">Top exposure quartile</text>
+<rect x="330" y="166" width="591.5999999999999" height="47" fill="#4f2683" opacity="1"/>
+<text x="935.5999999999999" y="199" class="value" text-anchor="start">17.4%</text>
+<text x="670" y="321" class="axis" text-anchor="middle">Workers with graduate degrees (%)</text>
+</svg>

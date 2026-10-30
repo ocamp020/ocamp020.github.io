@@ -1,0 +1,243 @@
+:root{--body-size:26px;--table-size:24px;--note-size:20px;--block-gap:28px;--purple:#4f2683;--ink:#242126;--muted:#625b68;--line:#ddd6e5;--pale:#f6f2fa;--gold:#9a5b11}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#ece9ef;color:var(--ink)}body{font-family:Palatino,'Palatino Linotype','Book Antiqua',Georgia,serif}.toolbar{height:44px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;padding:5px 15px;font:13px system-ui,sans-serif}.toolbar a{color:var(--purple);text-decoration:none;margin-right:auto}.toolbar button,.toolbar select,button.action{background:white;border:1px solid #cfc4db;color:var(--purple);border-radius:3px;padding:5px 10px;font:inherit;cursor:pointer}.toolbar button:hover,button.action:hover{background:var(--pale)}.stage{height:calc(100vh - 44px);display:flex;align-items:center;justify-content:center;overflow:hidden}.slide{display:none;flex-direction:column;width:1280px;height:720px;flex-shrink:0;background:white;padding:45px 65px 45px;position:relative;transform-origin:center center;overflow:hidden}.slide.active{display:flex;flex-direction:column}.slide h1{font-size:37px;font-weight:500;color:var(--purple);margin:0 0 30px;line-height:1.16}.slide .body{font-size:26px;line-height:1.36;flex:1;min-height:0}.slide p{margin:0 0 var(--block-gap)}.slide ul,.slide ol{margin:var(--block-gap) 0;padding-left:30px}.slide li{margin:8px 0;text-wrap:pretty}.slide li::marker{color:var(--purple)}.slide strong{color:var(--purple);font-weight:600}.slide .subtle{color:var(--muted);font-size:var(--body-size)}.slide .small{font-size:var(--body-size)}.slide .equation{padding:8px 0;text-align:center;font-size:30px}.slide .takeaway{border-left:4px solid var(--purple);padding:12px 20px;margin-top:var(--block-gap);background:var(--pale);font-size:var(--body-size);line-height:1.3;text-wrap:pretty}.slide .columns{display:grid;grid-template-columns:1fr 1fr;gap:35px}.slide .columns.wide-left{grid-template-columns:1.5fr 1fr}.slide .columns.wide-right{grid-template-columns:1fr 1.5fr}.slide .columns h2{font-size:26px;color:var(--purple);font-weight:500;margin:0 0 18px}.slide table{border-collapse:collapse;width:100%;font-size:var(--table-size);line-height:1.25;margin:0 0 var(--block-gap)}.slide th{font-weight:600;border-top:2px solid var(--purple);border-bottom:1px solid var(--purple);text-align:left;padding:10px}.slide td{padding:10px;border-bottom:1px solid #ddd;vertical-align:top}.slide figure{margin:0;text-align:center}.slide figure img{max-width:100%;max-height:420px;object-fit:contain}.slide figure.tall img{max-height:480px}.slide figcaption{font-size:var(--note-size);line-height:1.25;color:var(--muted);margin-top:10px;text-wrap:pretty;text-align:left}.slide .figure-row{display:grid;grid-template-columns:1.55fr 1fr;gap:25px;align-items:start}.slide .figure-row img{max-height:420px;width:100%;object-fit:contain}.slide a{color:var(--purple);text-decoration-thickness:1px;text-underline-offset:3px}.slide .source{font:13px/1.25 system-ui,sans-serif;color:#69616e;position:absolute;left:65px;right:115px;bottom:18px}.slide .number{position:absolute;bottom:18px;right:40px;font:13px system-ui,sans-serif;color:#69616e}.slide.cover{justify-content:center}.slide.cover h1{font-size:47px;max-width:1050px;margin-bottom:35px}.slide.cover .body{flex:0 0 auto;font-size:var(--body-size)}.slide .reveal{visibility:hidden}.slide .reveal.shown{visibility:visible}.slide .resource{border:1px solid var(--line);padding:18px;font-size:var(--body-size)}.slide .resource .actions{display:flex;gap:16px;align-items:center;margin:20px 0;font-size:var(--note-size)}.slide .resource iframe{width:100%;height:310px;border:1px solid #ddd;background:white}.slide .resource details{font-size:var(--note-size)}.slide .resource ol{font-size:var(--body-size)}.slide .widget{font:20px/1.3 system-ui,sans-serif;padding:20px;background:var(--pale);border:1px solid var(--line)}.widget label{display:block;margin:8px 0}.widget select,.widget input[type=number]{font:20px system-ui,sans-serif;padding:7px;width:100%;border:1px solid #bcb0c9;background:white}.widget input[type=range]{width:100%;accent-color:var(--purple)}.widget output{color:var(--purple);font-weight:650}.widget .metric{font-size:30px;margin:14px 0}.widget table{font-size:20px}.widget .task-list{font-size:20px;max-height:160px;overflow:auto}.widget svg{width:100%;height:240px}.widget .data-note{font-size:20px;color:var(--muted)}dialog{border:1px solid var(--line);max-width:850px;max-height:85vh;padding:28px;box-shadow:0 12px 60px #0003;font-size:21px;line-height:1.5}dialog::backdrop{background:#0006}dialog h2{color:var(--purple);font-weight:500}dialog button{float:right}dialog select{font:18px system-ui}.speaker-notes{white-space:pre-line}.toc-list button{display:block;text-align:left;width:100%;margin:8px 0;padding:7px;font-size:16px;border:0;background:var(--pale);color:var(--purple);cursor:pointer}.note-inline{display:none}.status{font:12px system-ui;color:#6c6274}.progress{height:3px;background:var(--purple);position:fixed;bottom:0;left:0;transition:width .15s}
+body.reading .stage{display:block;height:auto;padding:30px}body.reading .slide{display:flex;margin:0 auto 30px;transform:none!important;width:min(1280px,100%);height:auto;min-height:720px;overflow:visible}body.reading .slide .body{flex:initial}body.reading .reveal{visibility:visible}body.reading .note-inline{display:block;font-size:18px;background:var(--pale);padding:20px;margin:30px 0}body.reading .source{position:static;margin-top:25px;font-size:13px}body.reading .number{display:none}
+@media print{@page{size:13.333in 7.5in;margin:0}html,body{background:white}.toolbar,.progress,dialog{display:none!important}.stage{display:block;height:auto;overflow:visible}.slide,.slide.active,body.reading .slide{display:flex!important;transform:none!important;width:1280px;height:720px;min-height:0;margin:0;padding:45px 65px;page-break-after:always;break-after:page;overflow:hidden}.reveal{visibility:visible!important}.note-inline{display:none!important}.resource iframe{display:none}.slide .source{position:absolute;bottom:18px}a{color:var(--purple);text-decoration:none}}
+
+.slide figure img{cursor:zoom-in}.figure-zoom{width:96vw;max-width:1500px;max-height:96vh;padding:20px}.figure-zoom img{display:block;width:100%;height:80vh;object-fit:contain}.figure-zoom p{font:16px system-ui;color:#625b68;margin:10px 0 0}
+
+
+/* Shared scale and block rhythm. Shorten text before changing these sizes. */
+.slide h1{text-wrap:balance}
+.slide .body>p,.slide .body>ul,.slide .body>ol,.slide .body>table{margin-bottom:0}
+.slide .body>:not(:first-child){margin-top:var(--block-gap)}
+.slide .body>:first-child{margin-top:0}
+.slide .body>p+ul,.slide .body>p+ol{margin-top:var(--block-gap)}
+.slide .body>.table-note{margin-top:10px}
+.slide li:first-child{margin-top:0}.slide li:last-child{margin-bottom:0}
+.slide p{text-wrap:pretty}
+.slide .body>.question-box+p{margin-top:40px}
+.slide table.results{font-size:var(--table-size);line-height:1.25}
+.slide table.results th,.slide table.results td{padding:9px 10px}
+.slide table.results td:not(:first-child){font-variant-numeric:tabular-nums}
+.slide .table-note{font-size:var(--note-size);line-height:1.25;color:var(--muted);margin:10px 0 0}
+.slide .columns>div{min-width:0}
+.slide .columns h2+ul{margin-top:24px}
+.slide .equation mjx-container[display="true"]{margin:0}
+.slide .exposure-measures-heading{color:var(--purple)}
+.slide .exposure-measures{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:60px;align-items:center}
+.slide .exposure-measures .equation{margin:0;min-width:0}
+
+/* Reserve room for captions + takeaways; the exhibit uses the remaining height. */
+.slide .body:has(>figure + .takeaway){display:flex;flex-direction:column;gap:28px}
+.slide .body:has(>figure + .takeaway)>figure{display:flex;flex-direction:column;flex:1;min-height:0;margin:0}
+.slide .body:has(>figure + .takeaway)>figure img{flex:1;min-height:0;height:0;width:100%;object-fit:contain}
+.slide .body:has(>figure + .takeaway)>figure figcaption{flex:none}
+.slide .body:has(>figure + .takeaway)>.takeaway{flex:none;margin:0}
+
+/* Paper pages: complete source image, balanced authors, standard-size bullets. */
+.paper-identity-layout{display:grid;grid-template-columns:400px 1fr;gap:45px;align-items:center}
+.slide.paper-identity .paper-identity-layout figure img{height:460px;max-height:460px;max-width:100%;border:1px solid var(--line)}
+.slide.paper-identity .paper-identity-layout figcaption{text-align:center}
+.paper-details p{margin-bottom:24px}
+.paper-details p:last-child{margin-bottom:0}
+.slide .paper-subtitle{font-size:30px;color:var(--purple);line-height:1.2}
+.slide .paper-landscape figure{margin-bottom:28px}
+.slide .paper-landscape figure img{width:100%;max-height:330px;border:1px solid var(--line)}
+.slide .paper-method-list{font-size:var(--body-size);line-height:1.3;margin:32px 0 0;padding-left:28px}
+.slide .paper-method-list li{margin:10px 0}
+
+/* New comparison sections: full-size type and clear separation of evidence blocks. */
+.slide.felten-content .body>table+ p{margin-top:36px}
+.slide.felten-content .body>ul+table{margin-top:36px}
+.slide.anthropic-content .body>table+ul{margin-top:36px}
+.slide.anthropic-content table.results th,.slide.anthropic-content table.results td,
+.slide.felten-content table.results th,.slide.felten-content table.results td{padding:12px 14px}
+
+/* O*NET: clear blocks, full-size bullets, and consistent data labels. */
+.slide.onet-intro .body{line-height:1.16}
+.slide.onet-intro .collection-sources{margin:18px 0 0;padding-left:26px}
+.slide.onet-intro .collection-sources li{margin:5px 0}
+.slide.onet-intro .occupation-browsers{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px;align-items:start}
+.slide.onet-intro .resource{padding:10px 16px;min-width:0}
+.slide.onet-intro .resource .profile-stats{font-size:var(--table-size);line-height:1.2;margin:10px 0}
+.slide.onet-intro .resource .actions{margin:10px 0 0;gap:14px;flex-wrap:wrap;font-size:var(--note-size)}
+.slide.onet-intro .resource iframe{height:220px}
+.slide.onet-intro .task-skills-bridge{margin-top:36px}
+.slide.onet-intro .task-skills-list{margin:0;padding-left:26px}
+.slide.onet-intro .task-skills-list li{margin:5px 0}
+.slide.onet-intro .task-skills-takeaway{margin-top:24px;padding:10px 18px}
+.slide.onet-intro:has(.live-frame iframe) .collection-sources,.slide.onet-intro:has(.live-frame iframe) .task-skills-bridge{display:none}
+
+/* Two program blocks: table-size text, with intentional breaks at occupation boundaries. */
+.slide.degree-programs table.program-crosswalk{font-size:var(--table-size);line-height:1.2;margin:0;table-layout:fixed}
+.slide.degree-programs table.program-crosswalk th,.slide.degree-programs table.program-crosswalk td{padding:5px 10px}
+.slide.degree-programs table.program-crosswalk th:first-child:not([colspan]),.slide.degree-programs table.program-crosswalk td:first-child{width:40%}
+.slide.degree-programs table.program-crosswalk .block-heading th{background:var(--pale);color:var(--purple);border-top:1px solid var(--purple);border-bottom:0}
+
+/* Table, model, and application remain distinct blocks. */
+.slide.onet-exposure-bridge .body{display:grid;grid-template-rows:auto minmax(80px,1fr) auto;align-items:center}
+.slide.onet-exposure-bridge table{margin:0;align-self:start}
+.slide.onet-exposure-bridge .equation{margin:0;padding:0;align-self:center}
+.slide.onet-exposure-bridge .body>p{margin:0 0 24px;align-self:end}
+
+/* TaskNet uses the same body/caption scale as the other lectures. */
+.slide.tasknet-slide .tasknet-lead{margin:0 0 32px}
+.slide.tasknet-slide .tasknet-two{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.slide.tasknet-slide .tasknet-two .resource{min-height:235px;padding:22px;line-height:1.3}
+.slide.tasknet-slide .resource p{margin:24px 0 0}
+.slide.tasknet-slide .tasknet-scope{margin:32px 0 0}
+.slide.tasknet-slide .tasknet-pipeline{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:0}
+.slide.tasknet-slide .tasknet-pipeline .resource{min-height:280px;padding:20px;line-height:1.3}
+.slide.tasknet-slide .tasknet-metric{font-size:30px;line-height:1.2;color:var(--purple)}
+.slide.tasknet-slide .tasknet-comparison{margin:36px 0 0}
+.slide.tasknet-slide .tasknet-links{font-size:var(--note-size);margin:28px 0 0}
+.slide.tasknet-slide .tasknet-example-card{border-left:5px solid var(--purple);background:var(--pale);padding:22px 28px;margin:0 0 32px}
+.slide.tasknet-slide .tasknet-kicker{font-size:var(--note-size);color:var(--purple);margin:0 0 18px}
+.slide.tasknet-slide .tasknet-example-card p:last-child{margin:0}
+.slide.tasknet-slide .tasknet-example-points p{margin:0 0 28px}
+.slide.tasknet-slide .tasknet-lesson{margin:28px 0 0}
+
+/* Interactive controls share a 20 px interface scale; teaching prose stays 26 px. */
+.slide .widget{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.slide .widget>label{margin:0;min-width:0}
+.slide .widget>.result,.slide .widget>.metrics,.slide .widget>.task-list,.slide .widget>.data-note,.slide .widget>p{grid-column:1/-1}
+.slide .widget p{margin:0 0 16px}
+.slide .widget p:last-child{margin-bottom:0}
+.slide .widget table{margin:0 0 16px}
+.slide .widget table th,.slide .widget table td{padding:8px 10px}
+.slide .widget .metrics table{margin:0}
+.slide .widget[data-widget="wealth"]>p{grid-column:auto}
+
+/* Reading view restores natural figure height; print keeps the slide layout. */
+@media screen{
+ body.reading .slide .body:has(>figure + .takeaway){display:block}
+ body.reading .slide .body:has(>figure + .takeaway)>figure{display:block}
+ body.reading .slide .body:has(>figure + .takeaway)>figure img{height:auto;width:auto}
+ body.reading .slide .body:has(>figure + .takeaway)>.takeaway{margin-top:28px}
+}
+@media print{body.reading .slide .body{flex:1}}
+
+/* Measurement overview: halve the title-to-table gap while keeping the takeaway in place. */
+.slide.measurement-overview .body{display:flex;flex-direction:column;justify-content:flex-start;gap:116px;padding-top:52px}
+.slide.measurement-overview .body>table,.slide.measurement-overview .body>.takeaway{flex:none;margin:0}
+
+.slide.measurement-overview table{table-layout:fixed}
+.slide.measurement-overview th:first-child{width:42%}
+
+/* Survey sequence: distinguish the occupation mapping from workers’ two answers. */
+.slide.rps-survey .rps-survey-steps>li{margin:22px 0}
+.slide.rps-survey .rps-survey-steps>li:first-child{margin-top:0}
+.slide.rps-survey .rps-survey-steps>li:last-child{margin-bottom:0}
+.slide.rps-survey .rps-survey-steps ul{margin:12px 0 0}
+
+/* Reasons for the exposure/adoption gap: related examples nest under each argument. */
+.slide.adoption-gap .adoption-gap-arguments>li{margin:22px 0}
+.slide.adoption-gap .adoption-gap-arguments>li:first-child{margin-top:0}
+.slide.adoption-gap .adoption-gap-arguments>li:last-child{margin-bottom:0}
+.slide.adoption-gap .adoption-gap-arguments ul{margin:12px 0 0}
+
+/* Table headings in the adoption lecture; add breathing room below slide 13’s title. */
+.slide.adoption-fit .body{padding-top:28px}
+.slide.adoption-fit .results .table-heading,.slide.adoption-evidence .results .table-heading{caption-side:top;text-align:center;color:var(--purple);font-size:26px;font-weight:500;line-height:1.3;padding:0 0 18px}
+
+/* Garicano’s supplied tweet: centered screenshot above the reorganization takeaway. */
+.slide.garicano-reorganization .tweet-figure img{display:block;width:874.8px;max-width:100%;height:auto;max-height:none;margin:0 auto}
+
+/* Linked demographic appendix: preserve the figure and keep its summary readable. */
+.slide.rapid-demographic-link .paper-landscape figure img{max-height:240px}
+.slide.rapid-demographic-link .paper-landscape>p:last-child{margin-bottom:0}
+.slide.rapid-demographics .demographic-figure img{display:block;width:100%;height:500px;max-height:500px;object-fit:contain}
+.slide.rapid-demographics .demographic-notes{align-self:center}
+
+/* ChatGPT methods and closing: separate steps and center the concluding content. */
+.slide.chatgpt-methods .body>ul>li{margin:16px 0}
+.slide.chatgpt-methods .body>ul>li:first-child{margin-top:0}
+.slide.chatgpt-methods .body>ul>li:last-child{margin-bottom:0}
+.slide.adoption-closing .body{display:flex;flex-direction:column;justify-content:center;padding-bottom:48px}
+.slide.adoption-closing .body>ul{margin:0}
+.slide.adoption-closing .body>.takeaway{margin:40px 0 0}
+
+/* Expertise lecture: overview, setup tables and closing. */
+.slide.expertise-overview .body{padding-top:30px}
+.slide.expertise-overview table{table-layout:fixed}
+.slide.expertise-overview th:first-child{width:43%}
+.slide.expertise-overview .takeaway{margin-top:44px}
+.slide.expertise-setup table{table-layout:fixed}
+.slide.expertise-motivation .body>ul{margin-top:0}
+.slide.expertise-motivation table{margin-bottom:0}
+.slide.expertise-motivation caption{text-align:left;color:var(--purple);font-size:var(--body-size);line-height:1.36;padding-bottom:16px}
+/* Keep the definitions table and takeaway above the three-stage task diagram. */
+.slide.expertise-task-timeline .body{display:flex;flex-direction:column;gap:16px}
+.slide.expertise-task-timeline .body>table,.slide.expertise-task-timeline .body>.takeaway{flex:none;margin:0}
+.slide.expertise-task-timeline table th,.slide.expertise-task-timeline table td{padding:5px 10px}
+.slide.expertise-task-timeline .body>figure{display:flex;flex-direction:column;flex:1;min-height:0;margin:0}
+.slide.expertise-task-timeline figure img{flex:1;min-height:0;height:0;width:100%;object-fit:contain}
+.slide.expertise-task-timeline figcaption{flex:none;margin-top:8px}
+body.reading .slide.expertise-task-timeline .body>figure{display:block}
+body.reading .slide.expertise-task-timeline figure img{height:auto}
+.slide.appendix-slide .source{right:190px}
+.slide.expertise-closing .body{display:flex;flex-direction:column;justify-content:center;padding-bottom:30px}
+.slide.expertise-closing .takeaway{margin-top:40px}
+
+/* Center the expertise example and equilibrium setup below their headings. */
+.slide.expertise-centered-setup h1{margin-bottom:50px}
+.slide.expertise-centered-setup .body{display:flex;flex-direction:column;justify-content:center;gap:28px}
+.slide.expertise-centered-setup .body>p,.slide.expertise-centered-setup .body>table,.slide.expertise-centered-setup .body>.takeaway{flex:none;margin:0}
+
+/* Bring the wage exhibit and its takeaway inward without changing type size. */
+.slide.expertise-wage-result .body:has(>figure + .takeaway){padding-top:20px;padding-bottom:20px;gap:16px}
+
+/* A centered heading identifies the subject of each theory graph. */
+.slide figure.theory-figure>h2{flex:none;margin:0 0 12px;font-size:var(--body-size);font-weight:500;line-height:1.3;color:var(--purple);text-align:center}
+
+/* The SFI definition stays with its scoring bullet; examples follow the method. */
+.slide.expertise-measurement .body>ul>li>ul{margin:8px 0 0}
+.slide.expertise-measurement .body>ul>li>ul>li{margin:0}
+.slide.expertise-measurement table caption{text-align:left;color:var(--purple);font-size:var(--body-size);line-height:1.3;padding-bottom:12px}
+
+/* Equations share the same block spacing in centered model calculations. */
+.slide.expertise-centered-setup .body>.equation{flex:none;margin:0}
+
+/* Original task histograms with a legible color key beside the exhibit. */
+.slide.expertise-task-distribution .body{display:flex;flex-direction:column;gap:28px}
+.slide.expertise-task-distribution .body>.task-distribution-columns{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:34px;align-items:center;flex:1;min-height:0;margin:0}
+.slide.expertise-task-distribution .body>.takeaway{flex:none;margin:0}
+.slide.expertise-task-distribution .task-distribution-columns>figure{display:flex;align-items:center;justify-content:center;height:100%;min-height:0;margin:0}
+.slide.expertise-task-distribution .task-distribution-columns>figure img{width:100%;height:100%;max-height:100%;min-height:0;object-fit:contain}
+.slide.expertise-task-distribution .task-color-notes{display:flex;flex-direction:column;gap:22px;min-width:0}
+.slide.expertise-task-distribution .task-color-notes p,.slide.expertise-task-distribution .task-color-notes ul{margin:0}
+.slide.expertise-task-distribution .task-color-notes strong{color:var(--ink)}
+.slide.expertise-task-distribution .task-color-legend{padding-left:28px}
+.slide.expertise-task-distribution .task-color-legend li{margin:12px 0}
+.slide.expertise-task-distribution .task-color-legend li:first-child{margin-top:0}
+.slide.expertise-task-distribution .task-color-legend li:last-child{margin-bottom:0}
+.slide.expertise-task-distribution .task-color-legend li::marker{color:var(--task-color);font-size:1.25em}
+body.reading .slide.expertise-task-distribution .task-distribution-columns>figure img{height:auto}
+
+.slide.expertise-task-distribution .task-color-legend li>strong{color:var(--task-color)}
+
+/* Center a slide's content as one group, retaining the spacing within the group.
+   Figures may shrink for captions, but never grow merely to push a takeaway down. */
+.slide.content-centered .body{display:flex;flex-direction:column;justify-content:center;gap:28px;padding:0}
+.slide.content-centered .body>*{flex:0 0 auto;margin:0}
+.slide.content-centered .body>.table-note{margin-top:-18px}
+.slide.content-centered .body>figure,
+.slide.content-centered .body:has(>figure + .takeaway)>figure{display:flex;flex-direction:column;flex:0 1 auto;min-height:0;margin:0}
+.slide.content-centered .body>figure img,
+.slide.content-centered .body:has(>figure + .takeaway)>figure img{flex:0 1 auto;min-height:0;width:100%;height:auto;object-fit:contain}
+.slide.content-centered .body>figure figcaption{flex:none}
+@media screen{
+ body.reading .slide.content-centered .body{display:block}
+ body.reading .slide.content-centered .body>:not(:first-child){margin-top:28px}
+ body.reading .slide.content-centered .body>.table-note{margin-top:10px}
+ body.reading .slide.content-centered .body>figure,
+ body.reading .slide.content-centered .body:has(>figure + .takeaway)>figure{display:block}
+ body.reading .slide.content-centered .body>figure img,
+ body.reading .slide.content-centered .body:has(>figure + .takeaway)>figure img{flex:none;width:auto;height:auto;max-width:100%}
+}
+
+/* Keep each takeaway sentence on its own line with a small visual separation. */
+.slide .takeaway.takeaway-lines{display:flex;flex-direction:column;gap:6px}
+
+/* Color only the base of the coefficient annotation; the tau glyph uses bold math. */
+#patent-estimation .patent-regression g[data-mml-node="mover"] g[data-mml-node="mi"]{color:var(--purple);fill:var(--purple);stroke:var(--purple)}

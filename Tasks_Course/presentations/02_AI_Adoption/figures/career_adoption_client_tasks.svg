@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="428" viewBox="0 0 1200 428" role="img">
+<style>text{font-family:Palatino,"Palatino Linotype",Georgia,serif;fill:#242126}</style>
+<rect width="1200" height="428" fill="white"/>
+<line x1="460.0" y1="32" x2="460.0" y2="350" stroke="#ded8e5"/>
+<text x="460.0" y="378" font-size="20" text-anchor="middle" style="fill:#242126">0</text>
+<line x1="586.0" y1="32" x2="586.0" y2="350" stroke="#ded8e5"/>
+<text x="586.0" y="378" font-size="20" text-anchor="middle" style="fill:#242126">20</text>
+<line x1="712.0" y1="32" x2="712.0" y2="350" stroke="#ded8e5"/>
+<text x="712.0" y="378" font-size="20" text-anchor="middle" style="fill:#242126">40</text>
+<line x1="838.0" y1="32" x2="838.0" y2="350" stroke="#ded8e5"/>
+<text x="838.0" y="378" font-size="20" text-anchor="middle" style="fill:#242126">60</text>
+<line x1="964.0" y1="32" x2="964.0" y2="350" stroke="#ded8e5"/>
+<text x="964.0" y="378" font-size="20" text-anchor="middle" style="fill:#242126">80</text>
+<line x1="1090.0" y1="32" x2="1090.0" y2="350" stroke="#ded8e5"/>
+<text x="1090.0" y="378" font-size="20" text-anchor="middle" style="fill:#242126">100</text>
+<text x="775.0" y="410" font-size="23" text-anchor="middle" style="fill:#242126">Share using GenAI for the task (%)</text>
+<text x="0" y="22" font-size="22" text-anchor="start" style="fill:#355c7d">Tasks (O*NET Detailed Work Activities)</text>
+<text x="1170" y="22" font-size="22" text-anchor="end" style="fill:#242126">N</text>
+<text x="445" y="67" font-size="24" text-anchor="end" style="fill:#242126">Develop marketing plans or strategies</text>
+<rect x="460" y="46" width="346.7553913593292" height="27" fill="#c7ddf0"/>
+<text x="814.7553913593292" y="67" font-size="23" text-anchor="start" style="fill:#355c7d">55.0</text>
+<text x="1170" y="67" font-size="22" text-anchor="end" style="fill:#242126">43 *</text>
+<text x="445" y="105" font-size="24" text-anchor="end" style="fill:#242126">Manage operations or research projects</text>
+<rect x="460" y="84" width="297.60706812143326" height="27" fill="#9fc5e8"/>
+<text x="765.6070681214333" y="105" font-size="23" text-anchor="start" style="fill:#355c7d">47.2</text>
+<text x="1170" y="105" font-size="22" text-anchor="end" style="fill:#242126">406</text>
+<text x="445" y="143" font-size="24" text-anchor="end" style="fill:#242126">Direct sales, marketing or service</text>
+<rect x="460" y="122" width="243.37188988924026" height="27" fill="#9fc5e8"/>
+<text x="711.3718898892403" y="143" font-size="23" text-anchor="start" style="fill:#355c7d">38.6</text>
+<text x="1170" y="143" font-size="22" text-anchor="end" style="fill:#242126">257</text>
+<text x="445" y="181" font-size="24" text-anchor="end" style="fill:#242126">Develop business relationships</text>
+<rect x="460" y="160" width="187.08988577127457" height="27" fill="#9fc5e8"/>
+<text x="655.0898857712746" y="181" font-size="23" text-anchor="start" style="fill:#355c7d">29.7</text>
+<text x="1170" y="181" font-size="22" text-anchor="end" style="fill:#242126">71</text>
+<text x="445" y="219" font-size="24" text-anchor="end" style="fill:#242126">Advise others on financial matters</text>
+<rect x="460" y="198" width="164.81989592313766" height="27" fill="#9fc5e8"/>
+<text x="632.8198959231377" y="219" font-size="23" text-anchor="start" style="fill:#355c7d">26.2</text>
+<text x="1170" y="219" font-size="22" text-anchor="end" style="fill:#242126">152</text>
+<text x="445" y="257" font-size="24" text-anchor="end" style="fill:#242126">Contact customers to promote products</text>
+<rect x="460" y="236" width="144.4231152534485" height="27" fill="#9fc5e8"/>
+<text x="612.4231152534485" y="257" font-size="23" text-anchor="start" style="fill:#355c7d">22.9</text>
+<text x="1170" y="257" font-size="22" text-anchor="end" style="fill:#242126">85</text>
+<text x="445" y="295" font-size="24" text-anchor="end" style="fill:#242126">Negotiate prices or sales terms</text>
+<rect x="460" y="274" width="104.49785336852074" height="27" fill="#9fc5e8"/>
+<text x="572.4978533685207" y="295" font-size="23" text-anchor="start" style="fill:#355c7d">16.6</text>
+<text x="1170" y="295" font-size="22" text-anchor="end" style="fill:#242126">108</text>
+<text x="445" y="333" font-size="24" text-anchor="end" style="fill:#242126">Supervise sales or support personnel</text>
+<rect x="460" y="312" width="63.486313596367836" height="27" fill="#9fc5e8"/>
+<text x="531.4863135963678" y="333" font-size="23" text-anchor="start" style="fill:#355c7d">10.1</text>
+<text x="1170" y="333" font-size="22" text-anchor="end" style="fill:#242126">131</text>
+</svg>

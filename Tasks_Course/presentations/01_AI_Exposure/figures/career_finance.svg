@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="418" viewBox="0 0 1200 418" role="img">
+<style>text{font-family:Palatino,"Palatino Linotype",Georgia,serif;fill:#242126} .muted{fill:#625b68}</style>
+<rect width="1200" height="418" fill="white"/>
+<line x1="405.0" y1="30" x2="405.0" y2="341" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="405.0" y="367" font-size="20" text-anchor="middle" font-weight="normal">0</text>
+<line x1="547.0" y1="30" x2="547.0" y2="341" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="547.0" y="367" font-size="20" text-anchor="middle" font-weight="normal">20</text>
+<line x1="689.0" y1="30" x2="689.0" y2="341" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="689.0" y="367" font-size="20" text-anchor="middle" font-weight="normal">40</text>
+<line x1="831.0" y1="30" x2="831.0" y2="341" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="831.0" y="367" font-size="20" text-anchor="middle" font-weight="normal">60</text>
+<line x1="973.0" y1="30" x2="973.0" y2="341" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="973.0" y="367" font-size="20" text-anchor="middle" font-weight="normal">80</text>
+<line x1="1115.0" y1="30" x2="1115.0" y2="341" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="1115.0" y="367" font-size="20" text-anchor="middle" font-weight="normal">100</text>
+<text x="760.0" y="398" font-size="22" text-anchor="middle" font-weight="normal">Human β exposure index (0–100)</text>
+<line x1="619.8963067613116" y1="27" x2="619.8963067613116" y2="341" stroke="#4f2683" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1115" y="20" font-size="19" text-anchor="end" font-weight="normal" style="fill:#4f2683">All 923 occupations: mean 30.3</text>
+<text x="390" y="63" font-size="23" text-anchor="end" font-weight="normal">Financial &amp; investment analysts</text>
+<rect x="405" y="45" width="355.0" height="25" rx="2" fill="#4f2683"/>
+<text x="769.0" y="65" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">50.0</text>
+<text x="390" y="100" font-size="23" text-anchor="end" font-weight="normal">Accountants and auditors</text>
+<rect x="405" y="82" width="369.2" height="25" rx="2" fill="#4f2683"/>
+<text x="783.2" y="102" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">52.0</text>
+<text x="390" y="137" font-size="23" text-anchor="end" font-weight="normal">Credit analysts</text>
+<rect x="405" y="119" width="394.44444444444446" height="25" rx="2" fill="#4f2683"/>
+<text x="808.4444444444445" y="139" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">55.6</text>
+<text x="390" y="174" font-size="23" text-anchor="end" font-weight="normal">Financial risk specialists</text>
+<rect x="405" y="156" width="414.16666666666674" height="25" rx="2" fill="#4f2683"/>
+<text x="828.1666666666667" y="176" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">58.3</text>
+<text x="390" y="211" font-size="23" text-anchor="end" font-weight="normal">Budget analysts</text>
+<rect x="405" y="193" width="454.4" height="25" rx="2" fill="#4f2683"/>
+<text x="868.4" y="213" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">64.0</text>
+<text x="390" y="248" font-size="23" text-anchor="end" font-weight="normal">Loan officers</text>
+<rect x="405" y="230" width="459.8863636363636" height="25" rx="2" fill="#4f2683"/>
+<text x="873.8863636363636" y="250" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">64.8</text>
+<text x="390" y="285" font-size="23" text-anchor="end" font-weight="normal">Personal financial advisors</text>
+<rect x="405" y="267" width="476.44736842105266" height="25" rx="2" fill="#4f2683"/>
+<text x="890.4473684210527" y="287" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">67.1</text>
+<text x="390" y="322" font-size="23" text-anchor="end" font-weight="normal">Financial quantitative analysts</text>
+<rect x="405" y="304" width="470.13513513513504" height="25" rx="2" fill="#4f2683"/>
+<text x="884.135135135135" y="324" font-size="23" text-anchor="start" font-weight="normal" style="fill:#4f2683">66.2</text>
+</svg>

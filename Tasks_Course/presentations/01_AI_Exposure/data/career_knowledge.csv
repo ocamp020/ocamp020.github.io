@@ -1,0 +1,33 @@
+O*NET-SOC Code,Element ID,Element Name,Scale ID,Data Value,N,Standard Error,Lower CI Bound,Upper CI Bound,Recommend Suppress,Not Relevant,Date,Domain Source
+11-1021.00,2.C.1.a,Administration and Management,IM,4.35,55,0.13,4.09,4.60,N,n/a,07/2015,Incumbent
+11-1021.00,2.C.1.c,Economics and Accounting,IM,3.47,55,0.34,2.79,4.14,N,n/a,07/2015,Incumbent
+11-1021.00,2.C.1.d,Sales and Marketing,IM,3.47,55,0.29,2.89,4.04,N,n/a,07/2015,Incumbent
+11-1021.00,2.C.4.a,Mathematics,IM,3.56,55,0.19,3.18,3.94,N,n/a,07/2015,Incumbent
+11-2022.00,2.C.1.a,Administration and Management,IM,4.00,23,n/a,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+11-2022.00,2.C.1.c,Economics and Accounting,IM,2.91,23,n/a,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+11-2022.00,2.C.1.d,Sales and Marketing,IM,4.70,23,n/a,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+11-2022.00,2.C.4.a,Mathematics,IM,3.09,22,n/a,n/a,n/a,n/a,n/a,07/2016,Occupational Expert
+13-1111.00,2.C.1.a,Administration and Management,IM,4.38,21,n/a,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1111.00,2.C.1.c,Economics and Accounting,IM,3.48,21,n/a,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1111.00,2.C.1.d,Sales and Marketing,IM,3.30,20,n/a,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1111.00,2.C.4.a,Mathematics,IM,3.62,21,n/a,n/a,n/a,n/a,n/a,08/2022,Occupational Expert
+13-1161.00,2.C.1.a,Administration and Management,IM,3.74,23,n/a,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-1161.00,2.C.1.c,Economics and Accounting,IM,3.09,23,n/a,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-1161.00,2.C.1.d,Sales and Marketing,IM,4.09,23,n/a,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-1161.00,2.C.4.a,Mathematics,IM,4.04,23,n/a,n/a,n/a,n/a,n/a,08/2018,Occupational Expert
+13-2031.00,2.C.1.a,Administration and Management,IM,3.71,35,0.18,3.35,4.07,N,n/a,07/2016,Incumbent
+13-2031.00,2.C.1.c,Economics and Accounting,IM,4.03,35,0.19,3.65,4.41,N,n/a,07/2016,Incumbent
+13-2031.00,2.C.1.d,Sales and Marketing,IM,1.15,35,0.09,1.00,1.33,N,n/a,07/2016,Incumbent
+13-2031.00,2.C.4.a,Mathematics,IM,3.90,35,0.22,3.45,4.34,N,n/a,07/2016,Incumbent
+13-2041.00,2.C.1.a,Administration and Management,IM,2.80,20,n/a,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+13-2041.00,2.C.1.c,Economics and Accounting,IM,4.50,20,n/a,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+13-2041.00,2.C.1.d,Sales and Marketing,IM,2.05,19,n/a,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+13-2041.00,2.C.4.a,Mathematics,IM,3.90,20,n/a,n/a,n/a,n/a,n/a,08/2020,Occupational Expert
+19-3011.00,2.C.1.a,Administration and Management,IM,2.57,23,n/a,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+19-3011.00,2.C.1.c,Economics and Accounting,IM,4.50,22,n/a,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+19-3011.00,2.C.1.d,Sales and Marketing,IM,1.87,23,n/a,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+19-3011.00,2.C.4.a,Mathematics,IM,4.57,23,n/a,n/a,n/a,n/a,n/a,08/2019,Occupational Expert
+41-3031.00,2.C.1.a,Administration and Management,IM,3.42,87,0.18,3.06,3.78,N,n/a,08/2022,Incumbent
+41-3031.00,2.C.1.c,Economics and Accounting,IM,3.93,87,0.13,3.67,4.19,N,n/a,08/2022,Incumbent
+41-3031.00,2.C.1.d,Sales and Marketing,IM,3.71,87,0.15,3.41,4.02,N,n/a,08/2022,Incumbent
+41-3031.00,2.C.4.a,Mathematics,IM,3.73,87,0.16,3.41,4.06,N,n/a,08/2022,Incumbent

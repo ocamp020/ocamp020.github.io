@@ -1,0 +1,121 @@
+cip_code,cip_title,onet_soc,occupation
+45.0601,"Economics, General",11-9199.00,"Managers, All Other"
+45.0601,"Economics, General",11-9199.01,Regulatory Affairs Managers
+45.0601,"Economics, General",11-9199.02,Compliance Managers
+45.0601,"Economics, General",11-9199.08,Loss Prevention Managers
+45.0601,"Economics, General",11-9199.09,Wind Energy Operations Managers
+45.0601,"Economics, General",11-9199.10,Wind Energy Development Managers
+45.0601,"Economics, General",11-9199.11,Brownfield Redevelopment Specialists and Site Managers
+45.0601,"Economics, General",19-3011.00,Economists
+45.0601,"Economics, General",19-3011.01,Environmental Economists
+45.0601,"Economics, General",19-3022.00,Survey Researchers
+45.0601,"Economics, General",19-4061.00,Social Science Research Assistants
+45.0601,"Economics, General",25-1063.00,"Economics Teachers, Postsecondary"
+45.0601,"Economics, General",25-2031.00,"Secondary School Teachers, Except Special and Career/Technical Education"
+45.0602,Applied Economics,11-9199.00,"Managers, All Other"
+45.0602,Applied Economics,11-9199.01,Regulatory Affairs Managers
+45.0602,Applied Economics,11-9199.02,Compliance Managers
+45.0602,Applied Economics,11-9199.08,Loss Prevention Managers
+45.0602,Applied Economics,11-9199.09,Wind Energy Operations Managers
+45.0602,Applied Economics,11-9199.10,Wind Energy Development Managers
+45.0602,Applied Economics,11-9199.11,Brownfield Redevelopment Specialists and Site Managers
+45.0602,Applied Economics,13-1161.00,Market Research Analysts and Marketing Specialists
+45.0602,Applied Economics,13-1161.01,Search Marketing Strategists
+45.0602,Applied Economics,19-3011.00,Economists
+45.0602,Applied Economics,19-3011.01,Environmental Economists
+45.0602,Applied Economics,19-3022.00,Survey Researchers
+45.0602,Applied Economics,19-4061.00,Social Science Research Assistants
+45.0602,Applied Economics,25-1063.00,"Economics Teachers, Postsecondary"
+45.0603,Econometrics and Quantitative Economics,11-9199.00,"Managers, All Other"
+45.0603,Econometrics and Quantitative Economics,11-9199.01,Regulatory Affairs Managers
+45.0603,Econometrics and Quantitative Economics,11-9199.02,Compliance Managers
+45.0603,Econometrics and Quantitative Economics,11-9199.08,Loss Prevention Managers
+45.0603,Econometrics and Quantitative Economics,11-9199.09,Wind Energy Operations Managers
+45.0603,Econometrics and Quantitative Economics,11-9199.10,Wind Energy Development Managers
+45.0603,Econometrics and Quantitative Economics,11-9199.11,Brownfield Redevelopment Specialists and Site Managers
+45.0603,Econometrics and Quantitative Economics,15-2041.00,Statisticians
+45.0603,Econometrics and Quantitative Economics,15-2041.01,Biostatisticians
+45.0603,Econometrics and Quantitative Economics,15-2051.00,Data Scientists
+45.0603,Econometrics and Quantitative Economics,15-2051.01,Business Intelligence Analysts
+45.0603,Econometrics and Quantitative Economics,15-2051.02,Clinical Data Managers
+45.0603,Econometrics and Quantitative Economics,19-3011.00,Economists
+45.0603,Econometrics and Quantitative Economics,19-3011.01,Environmental Economists
+45.0603,Econometrics and Quantitative Economics,19-4061.00,Social Science Research Assistants
+45.0603,Econometrics and Quantitative Economics,25-1063.00,"Economics Teachers, Postsecondary"
+52.0201,"Business Administration and Management, General",11-1011.00,Chief Executives
+52.0201,"Business Administration and Management, General",11-1011.03,Chief Sustainability Officers
+52.0201,"Business Administration and Management, General",11-1021.00,General and Operations Managers
+52.0201,"Business Administration and Management, General",11-2022.00,Sales Managers
+52.0201,"Business Administration and Management, General",11-3012.00,Administrative Services Managers
+52.0201,"Business Administration and Management, General",11-3013.00,Facilities Managers
+52.0201,"Business Administration and Management, General",11-3013.01,Security Managers
+52.0201,"Business Administration and Management, General",11-3051.00,Industrial Production Managers
+52.0201,"Business Administration and Management, General",11-3051.01,Quality Control Systems Managers
+52.0201,"Business Administration and Management, General",11-3051.02,Geothermal Production Managers
+52.0201,"Business Administration and Management, General",11-3051.03,Biofuels Production Managers
+52.0201,"Business Administration and Management, General",11-3051.04,Biomass Power Plant Managers
+52.0201,"Business Administration and Management, General",11-3051.06,Hydroelectric Production Managers
+52.0201,"Business Administration and Management, General",11-3071.00,"Transportation, Storage, and Distribution Managers"
+52.0201,"Business Administration and Management, General",11-3071.04,Supply Chain Managers
+52.0201,"Business Administration and Management, General",11-3111.00,Compensation and Benefits Managers
+52.0201,"Business Administration and Management, General",11-3121.00,Human Resources Managers
+52.0201,"Business Administration and Management, General",11-3131.00,Training and Development Managers
+52.0201,"Business Administration and Management, General",11-9021.00,Construction Managers
+52.0201,"Business Administration and Management, General",11-9072.00,"Entertainment and Recreation Managers, Except Gambling"
+52.0201,"Business Administration and Management, General",11-9151.00,Social and Community Service Managers
+52.0201,"Business Administration and Management, General",11-9179.00,"Personal Service Managers, All Other"
+52.0201,"Business Administration and Management, General",11-9179.01,Fitness and Wellness Coordinators
+52.0201,"Business Administration and Management, General",11-9179.02,Spa Managers
+52.0201,"Business Administration and Management, General",11-9199.00,"Managers, All Other"
+52.0201,"Business Administration and Management, General",11-9199.01,Regulatory Affairs Managers
+52.0201,"Business Administration and Management, General",11-9199.02,Compliance Managers
+52.0201,"Business Administration and Management, General",11-9199.08,Loss Prevention Managers
+52.0201,"Business Administration and Management, General",11-9199.09,Wind Energy Operations Managers
+52.0201,"Business Administration and Management, General",11-9199.10,Wind Energy Development Managers
+52.0201,"Business Administration and Management, General",11-9199.11,Brownfield Redevelopment Specialists and Site Managers
+52.0201,"Business Administration and Management, General",13-1051.00,Cost Estimators
+52.0201,"Business Administration and Management, General",13-1071.00,Human Resources Specialists
+52.0201,"Business Administration and Management, General",13-1081.00,Logisticians
+52.0201,"Business Administration and Management, General",13-1081.01,Logistics Engineers
+52.0201,"Business Administration and Management, General",13-1081.02,Logistics Analysts
+52.0201,"Business Administration and Management, General",13-1082.00,Project Management Specialists
+52.0201,"Business Administration and Management, General",13-1111.00,Management Analysts
+52.0201,"Business Administration and Management, General",13-1141.00,"Compensation, Benefits, and Job Analysis Specialists"
+52.0201,"Business Administration and Management, General",13-1199.00,"Business Operations Specialists, All Other"
+52.0201,"Business Administration and Management, General",13-1199.04,Business Continuity Planners
+52.0201,"Business Administration and Management, General",13-1199.05,Sustainability Specialists
+52.0201,"Business Administration and Management, General",13-1199.06,Online Merchants
+52.0201,"Business Administration and Management, General",13-1199.07,Security Management Specialists
+52.0201,"Business Administration and Management, General",25-1011.00,"Business Teachers, Postsecondary"
+52.0601,Business/Managerial Economics,13-1111.00,Management Analysts
+52.0601,Business/Managerial Economics,13-2054.00,Financial Risk Specialists
+52.0601,Business/Managerial Economics,19-3011.00,Economists
+52.0601,Business/Managerial Economics,19-3011.01,Environmental Economists
+52.0601,Business/Managerial Economics,19-3022.00,Survey Researchers
+52.0601,Business/Managerial Economics,25-1063.00,"Economics Teachers, Postsecondary"
+52.0801,"Finance, General",11-1011.00,Chief Executives
+52.0801,"Finance, General",11-1011.03,Chief Sustainability Officers
+52.0801,"Finance, General",11-1021.00,General and Operations Managers
+52.0801,"Finance, General",11-3031.00,Financial Managers
+52.0801,"Finance, General",11-3031.01,Treasurers and Controllers
+52.0801,"Finance, General",11-3031.03,Investment Fund Managers
+52.0801,"Finance, General",13-1141.00,"Compensation, Benefits, and Job Analysis Specialists"
+52.0801,"Finance, General",13-2022.00,Appraisers of Personal and Business Property
+52.0801,"Finance, General",13-2031.00,Budget Analysts
+52.0801,"Finance, General",13-2041.00,Credit Analysts
+52.0801,"Finance, General",13-2051.00,Financial and Investment Analysts
+52.0801,"Finance, General",13-2052.00,Personal Financial Advisors
+52.0801,"Finance, General",13-2054.00,Financial Risk Specialists
+52.0801,"Finance, General",13-2072.00,Loan Officers
+52.0801,"Finance, General",13-2099.00,"Financial Specialists, All Other"
+52.0801,"Finance, General",13-2099.01,Financial Quantitative Analysts
+52.0801,"Finance, General",13-2099.04,"Fraud Examiners, Investigators and Analysts"
+52.0801,"Finance, General",25-1011.00,"Business Teachers, Postsecondary"
+52.1401,"Marketing/Marketing Management, General",11-2011.00,Advertising and Promotions Managers
+52.1401,"Marketing/Marketing Management, General",11-2021.00,Marketing Managers
+52.1401,"Marketing/Marketing Management, General",11-2022.00,Sales Managers
+52.1401,"Marketing/Marketing Management, General",11-2033.00,Fundraising Managers
+52.1401,"Marketing/Marketing Management, General",13-1131.00,Fundraisers
+52.1401,"Marketing/Marketing Management, General",13-1161.00,Market Research Analysts and Marketing Specialists
+52.1401,"Marketing/Marketing Management, General",13-1161.01,Search Marketing Strategists
+52.1401,"Marketing/Marketing Management, General",25-1011.00,"Business Teachers, Postsecondary"

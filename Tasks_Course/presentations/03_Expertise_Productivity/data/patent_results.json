@@ -1,0 +1,151 @@
+{
+  "source": "https://shapingwork.mit.edu/wp-content/uploads/2026/09/Autor-et-al-Sept-2026.pdf",
+  "sha256": "0bfb57d162a388d375c81e4f228a7f25c31b878828bdb27b1da83e9c07ff927f",
+  "notes": "Teaching extracts; human expert ratings. Rounded published coefficients and standard errors. Not replication microdata.",
+  "rows": [
+    {
+      "task": "Drafting: day 10",
+      "group": "All lawyers",
+      "estimate": 0.34,
+      "se": 0.16,
+      "unit": "control-group SD",
+      "table": 3,
+      "column": 2,
+      "pdf_page": 21,
+      "completed_lawyers": 105,
+      "rating_dimension_observations": 1050
+    },
+    {
+      "task": "Drafting: day 10",
+      "group": "Junior (<7 years)",
+      "estimate": 0.58,
+      "se": 0.28,
+      "unit": "control-group SD",
+      "table": 3,
+      "column": 4,
+      "pdf_page": 21,
+      "completed_lawyers": 105,
+      "rating_dimension_observations": 1050
+    },
+    {
+      "task": "Drafting: day 10",
+      "group": "Senior (7+ years)",
+      "estimate": 0.22,
+      "se": 0.19,
+      "unit": "control-group SD",
+      "table": 3,
+      "column": 4,
+      "pdf_page": 21,
+      "completed_lawyers": 105,
+      "rating_dimension_observations": 1050
+    },
+    {
+      "task": "Drafting: day 90",
+      "group": "All lawyers",
+      "estimate": 0.38,
+      "se": 0.15,
+      "unit": "control-group SD",
+      "table": 4,
+      "column": 2,
+      "pdf_page": 22,
+      "completed_lawyers": 98,
+      "rating_dimension_observations": 995
+    },
+    {
+      "task": "Drafting: day 90",
+      "group": "Junior (<7 years)",
+      "estimate": 0.6,
+      "se": 0.26,
+      "unit": "control-group SD",
+      "table": 4,
+      "column": 4,
+      "pdf_page": 22,
+      "completed_lawyers": 98,
+      "rating_dimension_observations": 995
+    },
+    {
+      "task": "Drafting: day 90",
+      "group": "Senior (7+ years)",
+      "estimate": 0.3,
+      "se": 0.17,
+      "unit": "control-group SD",
+      "table": 4,
+      "column": 4,
+      "pdf_page": 22,
+      "completed_lawyers": 98,
+      "rating_dimension_observations": 995
+    },
+    {
+      "task": "Redlining: day 90, no AI",
+      "group": "All lawyers",
+      "estimate": 0.32,
+      "se": 0.15,
+      "unit": "control-group SD",
+      "table": 6,
+      "column": 2,
+      "pdf_page": 26,
+      "completed_lawyers": 91,
+      "rating_dimension_observations": 925
+    },
+    {
+      "task": "Redlining: day 90, no AI",
+      "group": "Junior (<7 years)",
+      "estimate": -0.03,
+      "se": 0.2,
+      "unit": "control-group SD",
+      "table": 6,
+      "column": 4,
+      "pdf_page": 26,
+      "completed_lawyers": 91,
+      "rating_dimension_observations": 925
+    },
+    {
+      "task": "Redlining: day 90, no AI",
+      "group": "Senior (7+ years)",
+      "estimate": 0.45,
+      "se": 0.19,
+      "unit": "control-group SD",
+      "table": 6,
+      "column": 4,
+      "pdf_page": 26,
+      "completed_lawyers": 91,
+      "rating_dimension_observations": 925
+    },
+    {
+      "task": "Drafting time: day 10",
+      "group": "All lawyers",
+      "estimate": -9.97,
+      "se": 5.11,
+      "unit": "minutes",
+      "table": 8,
+      "column": 1,
+      "pdf_page": 35,
+      "completed_lawyers": 102,
+      "rating_dimension_observations": ""
+    },
+    {
+      "task": "Drafting time: day 10",
+      "group": "Junior (<7 years)",
+      "estimate": -17.91,
+      "se": 9.13,
+      "unit": "minutes",
+      "table": 8,
+      "column": 2,
+      "pdf_page": 35,
+      "completed_lawyers": 102,
+      "rating_dimension_observations": ""
+    },
+    {
+      "task": "Drafting time: day 10",
+      "group": "Senior (7+ years)",
+      "estimate": -4.91,
+      "se": 5.22,
+      "unit": "minutes",
+      "table": 8,
+      "column": 2,
+      "pdf_page": 35,
+      "completed_lawyers": 102,
+      "rating_dimension_observations": ""
+    }
+  ]
+}

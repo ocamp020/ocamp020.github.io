@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="190" viewBox="0 0 1150 190" role="img" aria-labelledby="title desc">
+  <title id="title">Generic tasks remain as an occupation's expert tasks are automated</title>
+  <desc id="desc">Three bars show the same occupational bundle from minus theta times one minus varphi to varphi. Green generic tasks, below zero, remain human in every row. Initially all positive tasks are blue expert human tasks. Partial automation replaces tasks from zero to I with pink capital tasks. At I equals varphi every expert task is automated, while the green generic tasks remain human.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4f2683" />
+    </marker>
+    <path id="math-varphi" d="M92 210Q92 176 106 149T142 108T185 85T220 72L235 70L237 71L250 112Q268 170 283 211T322 299T370 375T429 423T502 442Q547 442 582 410T618 302Q618 224 575 152T457 35T299 -10Q273 -10 273 -12L266 -48Q260 -83 252 -125T241 -179Q236 -203 215 -212Q204 -218 190 -218Q159 -215 159 -185Q159 -175 214 -2L209 0Q204 2 195 5T173 14T147 28T120 46T94 71T71 103T56 142T50 190Q50 238 76 311T149 431H162Q183 431 183 423Q183 417 175 409Q134 361 114 300T92 210ZM574 278Q574 320 550 344T486 369Q437 369 394 329T323 218Q309 184 295 109L286 64Q304 62 306 62Q423 62 498 131T574 278" />
+  </defs>
+  <g font-family="Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif" fill="#242126">
+    <text x="840" y="21" font-size="20" fill="#4f2683" text-anchor="middle">Automation</text>
+    <path d="M 585 31 H 1095" stroke="#4f2683" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+    <g font-size="28" text-anchor="middle">
+      <g text-anchor="start" aria-label="−θ(1 − varphi)">
+        <text x="281.844" y="45.0" xml:space="preserve">−θ(1 − </text>
+        <use href="#math-varphi" transform="translate(370.844 45.0) scale(0.028 -0.028)" />
+        <text x="389.156" y="45.0" xml:space="preserve">)</text>
+      </g>
+      <text x="560" y="45">0</text>
+      <g text-anchor="start" aria-label="varphi">
+        <use href="#math-varphi" transform="translate(1110.844 45.0) scale(0.028 -0.028)" />
+      </g>
+    </g>
+    <g font-size="24">
+      <text x="0" y="74">Before automation (I = 0)</text>
+      <g text-anchor="start" aria-label="Partial automation (0 &lt; I &lt; varphi)">
+        <text x="0.000" y="125.0" xml:space="preserve">Partial automation (0 &lt; I &lt; </text>
+        <use href="#math-varphi" transform="translate(286.000 125.0) scale(0.024 -0.024)" />
+        <text x="301.696" y="125.0" xml:space="preserve">)</text>
+      </g>
+      <g text-anchor="start" aria-label="Full automation (I = varphi)">
+        <text x="0.000" y="176.0" xml:space="preserve">Full automation (I = </text>
+        <use href="#math-varphi" transform="translate(218.000 176.0) scale(0.024 -0.024)" />
+        <text x="233.696" y="176.0" xml:space="preserve">)</text>
+      </g>
+    </g>
+    <g stroke-width="1.4">
+      <rect x="340" y="54" width="220" height="28" fill="#d8e8d0" stroke="#52734b" />
+      <rect x="560" y="54" width="560" height="28" fill="#c7dced" stroke="#4e6c8a" />
+      <rect x="340" y="105" width="220" height="28" fill="#d8e8d0" stroke="#52734b" />
+      <rect x="560" y="105" width="280" height="28" fill="#efc9cf" stroke="#b05665" />
+      <rect x="840" y="105" width="280" height="28" fill="#c7dced" stroke="#4e6c8a" />
+      <rect x="340" y="156" width="220" height="28" fill="#d8e8d0" stroke="#52734b" />
+      <rect x="560" y="156" width="560" height="28" fill="#efc9cf" stroke="#b05665" />
+    </g>
+    <g font-size="20" text-anchor="middle">
+      <text x="450" y="75">Generic · human</text>
+      <text x="840" y="75">Expert · human</text>
+      <text x="450" y="126">Generic · human</text>
+      <text x="700" y="126">Automated · capital</text>
+      <text x="980" y="126">Expert · human</text>
+      <text x="450" y="177">Generic · human</text>
+      <text x="840" y="177">Automated · capital</text>
+      <text x="840" y="100" font-style="italic" fill="#4f2683">I</text>
+    </g>
+    <path d="M 840 102 V 135" stroke="#4f2683" stroke-width="2" />
+  </g>
+</svg>

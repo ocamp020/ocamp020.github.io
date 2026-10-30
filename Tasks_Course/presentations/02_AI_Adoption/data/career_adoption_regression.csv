@@ -1,0 +1,10 @@
+term,column,coefficient,standard_error,N,adjusted_R2,occupation_and_exposure_controls,encouragement_control
+Bachelor’s degree,1,0.193,0.014,6898,0.08,False,False
+Bachelor’s degree,2,0.135,0.015,6898,0.12,True,False
+Bachelor’s degree,3,0.045,0.012,6898,0.51,True,True
+Graduate degree,1,0.236,0.017,6898,0.08,False,False
+Graduate degree,2,0.157,0.019,6898,0.12,True,False
+Graduate degree,3,0.044,0.015,6898,0.51,True,True
+Employer encouragement,1,,,6898,0.08,False,False
+Employer encouragement,2,,,6898,0.12,True,False
+Employer encouragement,3,0.651,0.014,6898,0.51,True,True

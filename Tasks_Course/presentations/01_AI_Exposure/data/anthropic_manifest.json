@@ -1,0 +1,61 @@
+{
+  "retrieved": "2026-10-28",
+  "report_date": "2026-03-05",
+  "sources": {
+    "report": "https://www.anthropic.com/research/labor-market-impacts",
+    "report_pdf": "https://cdn.sanity.io/files/4zrzovbb/website/2b5bbaf2c1eb81dbf6e6fb813c1a24e35a64d376.pdf",
+    "appendix": "https://cdn.sanity.io/files/4zrzovbb/website/e5f77fc0e77c0185110b5e4b909602791ae76eae.pdf",
+    "occupation_data": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/labor_market_impacts",
+    "time_weights": "https://www.anthropic.com/research/estimating-productivity-gains"
+  },
+  "inputs_sha256": {
+    "anthropic_report.pdf": "48c941dbdc1053456ec72f893c6a27630559507d3882895bb036d034b6972450",
+    "anthropic_appendix.pdf": "25f3333efae2766a67f3ffaea0431a5e417b89bb680ac1f2587f11ab67a3643e",
+    "job_exposure.csv": "4f0a3adf5feeb2ec5f5d02ab18cc5e851a2a4b8470bde84c0c9335017be12d68",
+    "task_penetration.csv": "85bee872db1d55d3e9a7f4e89da5ae4a5d59aa8ec875d728fbf4b7d820984616"
+  },
+  "hf_file_blob_ids": [
+    {
+      "type": "file",
+      "oid": "aae568975228d5850a1913c0d09f6ce8437e7253",
+      "size": 37176,
+      "path": "labor_market_impacts/job_exposure.csv"
+    },
+    {
+      "type": "file",
+      "oid": "2a20bcc33ccb02ae97c9aa6b2899bfa3911fc75b",
+      "size": 1889822,
+      "path": "labor_market_impacts/task_penetration.csv"
+    }
+  ],
+  "occupation_count": 756,
+  "selection_codes": [
+    "13-1161",
+    "13-2051",
+    "13-2011",
+    "13-1111",
+    "19-3011",
+    "13-2041"
+  ],
+  "transformations": [
+    "Occupation scores multiplied by 100; original six-digit SOC keys retained.",
+    "Histogram: exact zero plus right-closed 20-point bins; unweighted occupations.",
+    "Worker education/earnings values transcribed from report Figure 5 and accompanying text.",
+    "Health-information example uses published rounded appendix inputs, not the later task CSV.",
+    "Report cover rendered from PDF page 1; no data edited."
+  ],
+  "method_notes": "E = sum of estimated task time weights × feasible indicator × work-use cutoff indicator × automation weight. Both positive Eloundou ratings pass feasibility; API calls count as automated. No worker adoption rate or causal employment effect is computed.",
+  "assets": [
+    "paper_anthropic.png",
+    "anthropic_careers.svg",
+    "anthropic_distribution.svg",
+    "anthropic_education.svg"
+  ],
+  "data_license": "Anthropic dataset card: data CC-BY; code MIT. Attribution retained in slide sources.",
+  "asset_sha256": {
+    "paper_anthropic.png": "f29888d7395e9b4d5c1d271045362d7553665ef3e009ca8942fb2152fae6c5df",
+    "anthropic_careers.svg": "43abdfb6df51e7c067fc30f3d153e365065ac9697f30b69d369e5c2d12c7072f",
+    "anthropic_distribution.svg": "9ac8f7fd4f93c0532e03dadda3c9aacd7c931c42bbf6e799ba72f1ae59ce7b47",
+    "anthropic_education.svg": "c80aee6d1dde30462b76b839f6f6f3bfb6604ab43a669459e6656398e0b318ba"
+  }
+}

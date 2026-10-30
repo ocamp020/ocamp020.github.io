@@ -1,0 +1,21 @@
+exhibit,label,value,unit,source,pdf_page
+encouragement,Employer encourages use,86,percent reporting adoption,"Rapid Adoption (2026), Section 4.1, journal p.8448",9
+encouragement,Employer does not encourage,13,percent reporting adoption,"Rapid Adoption (2026), Section 4.1, journal p.8448",9
+time_savings,Users,5.2,mean reported additional hours without AI / hours worked (%),"Rapid Adoption (2026), Section 5.2, journal p.8451",12
+time_savings,All workers,1.4,mean reported additional hours without AI / hours worked (%),"Rapid Adoption (2026), Section 5.2, journal p.8451",12
+industry_time,Finance and insurance / AI-assisted hours,9.6,percent of industry work hours,"Rapid Adoption (2026), Section 5.3 and Figure 9a, journal pp.8452–8453",13
+industry_time,Finance and insurance / reported hours saved,2.3,percent of industry work hours,"Rapid Adoption (2026), Section 5.3 and Figure 9a, journal pp.8452–8453",13
+industry_time,Information / AI-assisted hours,9.4,percent of industry work hours,"Rapid Adoption (2026), Section 5.3 and Figure 9a, journal pp.8452–8453",13
+industry_time,Information / reported hours saved,2.7,percent of industry work hours,"Rapid Adoption (2026), Section 5.3 and Figure 9a, journal pp.8452–8453",13
+industry_time,Accommodation and food / AI-assisted hours,1.5,percent of industry work hours,"Rapid Adoption (2026), Section 5.3 and Figure 9a, journal pp.8452–8453",13
+industry_time,Accommodation and food / reported hours saved,0.6,percent of industry work hours,"Rapid Adoption (2026), Section 5.3 and Figure 9a, journal pp.8452–8453",13
+chat_topics,Management and business / writing,52,"percent of work-related messages, unadjusted","How People Use ChatGPT, Figure 23 C1/C2",36
+chat_topics,Management and business / technical help,8,"percent of work-related messages, unadjusted","How People Use ChatGPT, Figure 23 C1/C2",36
+chat_topics,Computer-related / writing,28,"percent of work-related messages, unadjusted","How People Use ChatGPT, Figure 23 C1/C2",36
+chat_topics,Computer-related / technical help,37,"percent of work-related messages, unadjusted","How People Use ChatGPT, Figure 23 C1/C2",36
+chat_topics,Engineering and science / writing,42,"percent of work-related messages, unadjusted","How People Use ChatGPT, Figure 23 C1/C2",36
+chat_topics,Engineering and science / technical help,16,"percent of work-related messages, unadjusted","How People Use ChatGPT, Figure 23 C1/C2",36
+chat_topics,Other professional / writing,49,"percent of work-related messages, unadjusted","How People Use ChatGPT, Figure 23 C1/C2",36
+chat_topics,Other professional / technical help,8,"percent of work-related messages, unadjusted","How People Use ChatGPT, Figure 23 C1/C2",36
+chat_topics,Nonprofessional / writing,50,"percent of work-related messages, unadjusted","How People Use ChatGPT, Figure 23 C1/C2",36
+chat_topics,Nonprofessional / technical help,9,"percent of work-related messages, unadjusted","How People Use ChatGPT, Figure 23 C1/C2",36

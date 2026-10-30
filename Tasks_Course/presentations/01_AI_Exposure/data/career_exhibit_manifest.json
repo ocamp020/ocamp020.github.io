@@ -1,0 +1,81 @@
+{
+  "created": "2026-10-26",
+  "sources": {
+    "exposure": "https://github.com/openai/GPTs-are-GPTs",
+    "crosswalk": "https://www.onetcenter.org/crosswalks/cip/Education_CIP_to_ONET_SOC.xlsx",
+    "crosswalk_release": "July 2024: CIP 2020 to O*NET-SOC 2019",
+    "onet": "https://www.onetcenter.org/db_releases.html",
+    "onet_release": "27.2"
+  },
+  "inputs": {
+    "occ_level.csv": "40c74f53de40aec91c0017d80690cbba915f83a8bb414bcf2f884692f1749acb",
+    "full_labelset.tsv": "094378905e1f3349e50a9a83dc69643a2ef227954d611c8316a46da08cb3d8de",
+    "Education_CIP_to_ONET_SOC.xlsx": "4802101afb1dfa83acde5d125bc55170410686c6d379a8d893c74447361ea6e8",
+    "onet_27_2_text.zip": "e5f89d41a7dcb4adf93622037a83ac93a8a1e73f2b34115e5b3de423681b843c",
+    "onet_27_2_Knowledge.txt": "13da2dca84e1825ae67d5178cbf6da68f69526430488acfffd4a279d55911b29",
+    "onet_27_2_Education_Training_and_Experience.txt": "f9ee828223003df7d32c03a827a01d4a64dfc6f0f9b860f234d517e583b38c09"
+  },
+  "occupation_count": 923,
+  "unweighted_mean_human_beta": 30.267085459339665,
+  "human_index_checks": 2769,
+  "max_absolute_aggregation_error": 2.220446049250313e-16,
+  "career_groups": {
+    "analysis": [
+      "19-3011.00",
+      "13-1111.00",
+      "13-1161.00",
+      "15-2051.01",
+      "15-2051.00",
+      "15-2031.00"
+    ],
+    "finance": [
+      "13-2051.00",
+      "13-2011.00",
+      "13-2041.00",
+      "13-2054.00",
+      "13-2031.00",
+      "13-2072.00",
+      "13-2052.00",
+      "13-2099.01"
+    ],
+    "management_sales": [
+      "11-1021.00",
+      "11-3031.00",
+      "11-2022.00",
+      "41-3031.00",
+      "41-3091.00",
+      "11-2021.00",
+      "41-4012.00"
+    ]
+  },
+  "education_categories": {
+    "below_bachelors": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "bachelors": [
+      6
+    ],
+    "beyond_bachelors": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "knowledge_scale": "IM, original 1\u20135 scale; no rescaling",
+  "notes": [
+    "Labels are from the paper\u2019s original capability exercise, not a 2026 reassessment.",
+    "Occupation groups are instructor-selected examples, not exhaustive industry samples.",
+    "Short display names are mapped to full official titles in career_exposure.csv.",
+    "Core task weight 1; all other task types weight 0.5 reproduces released human scores. Blank types are retained in source.",
+    "Education bars retain source percentages; rounding may produce totals differing from 100 by 0.01.",
+    "Missing education/knowledge values are not imputed. Financial/investment analysts and financial risk specialists lack these rows in 27.2 and are omitted from those charts.",
+    "CIP links concern program preparation, not advertised demand, graduate destinations, or exclusive major requirements."
+  ]
+}

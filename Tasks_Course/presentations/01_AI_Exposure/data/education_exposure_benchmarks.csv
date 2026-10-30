@@ -1,0 +1,4 @@
+group,label,occupations,mean_human_beta,definition
+all_occupations,All occupations,923,30.267085459339665,All released occupations
+bachelors,Bachelor’s,211,46.286987367146544,Modal required education: bachelor’s (category 6)
+postgraduate,Postgraduate,133,42.25456956596983,Modal required education: master’s/professional/doctoral or subsequent training (categories 8–12)

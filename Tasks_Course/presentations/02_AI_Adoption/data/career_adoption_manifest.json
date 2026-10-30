@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-26",
+  "workbook_generation": "2026-10-19",
+  "survey_waves": [
+    "August 2025",
+    "November 2025",
+    "February 2026",
+    "May 2026"
+  ],
+  "source": "https://sites.google.com/view/covid-rps/data",
+  "input_hashes": {
+    "rps_occupation_indices.xlsx": "0af9ce3d8e410a9a84e7ef5bcfd57da690fbd153a9bdb5fc2405a0a0a64956e9",
+    "rps_task_indices.xlsx": "afdaf801e1024ff3697733c9a11b270d1aa177fe6e37d88ff0225a19aacd02ef"
+  },
+  "occupation_examples": 14,
+  "task_examples": 15,
+  "major_groups": 4,
+  "extracted_cells": 33,
+  "source_crops": [
+    {
+      "asset": "adoption_growth.png",
+      "source": "PDF_Literature/Bick et al. (2026) - What Work Does Generative AI Do (NBER website version).pdf",
+      "pdf_page": 13,
+      "item": "Figure 4, extensive and intensive margins",
+      "crop": [
+        0.145,
+        0.119,
+        0.88,
+        0.49
+      ],
+      "source_sha256": "d292b955d0f3cffaba0122b82b5286adf0dd66fe54bfa1da15e6ed7d93b9b714"
+    },
+    {
+      "asset": "chatgpt_occupation_writing.png",
+      "source": "PDF_Literature/Chatterji et al. (2025) - How People Use ChatGPT.pdf",
+      "pdf_page": 36,
+      "item": "Figure 23 C1, writing: raw and adjusted shares",
+      "crop": [
+        0.147,
+        0.259,
+        0.492,
+        0.465
+      ],
+      "source_sha256": "252782a2c7f105604a4a3c60107e6b7df0c674e4022df0089b044cb4aa5a4467"
+    },
+    {
+      "asset": "industry_productivity_check.png",
+      "source": "PDF_Literature/Bick Blandin Deming Management Science 2026.pdf",
+      "pdf_page": 14,
+      "item": "Published Figure 9(d), journal p.8453; correlation 0.01",
+      "crop": [
+        0.509,
+        0.328,
+        0.841,
+        0.545
+      ],
+      "source_sha256": "eba6169709a20a67ba622c398ff5e794dd9de681a0940b7cd01857f679f94807",
+      "render_scale": 6
+    }
+  ],
+  "notes": [
+    "Rates are survey weighted; N is unweighted respondent-wave or performed-activity observations.",
+    "Small cells (20–49 observations) are shaded and marked *. Their differences should not be interpreted as precise rankings.",
+    "Below-20 rates remain suppressed, never replaced by zero; no survey-design confidence intervals are invented.",
+    "Tasks are pooled across all reporting occupations, not restricted to the named student career areas.",
+    "Broad SOC groups are not interchangeable with detailed O*NET occupations in the first lecture.",
+    "No exposure/adoption merge or occupation weighting using unweighted counts is performed.",
+    "Rapid Adoption results verified against the published 2026 PDF. Table 1 entries, not inconsistent adjacent prose, determine regression coefficients and fit; Figure 9(d) reports 0.01.",
+    "Chat topic chart uses printed unadjusted estimates; source panel with adjusted estimates and confidence intervals is retained in the appendix."
+  ],
+  "rapid_published": {
+    "pdf": "PDF_Literature/Bick Blandin Deming Management Science 2026.pdf",
+    "html": "PDF_Literature/Bick Blandin Deming Management Science 2026.html",
+    "markdown": "Literature_MD/Bick et al. (2026) - The Rapid Adoption of Generative AI (published).md",
+    "pages": 18,
+    "article_pages": "8440–8456",
+    "sha256": "eba6169709a20a67ba622c398ff5e794dd9de681a0940b7cd01857f679f94807",
+    "html_sha256": "8a7f46ba552189a320d41f2c3609146430d0f94ecdafa95c276f17aa496437bc",
+    "doi": "10.1287/mnsc.2025.02523",
+    "version": "Management Science 72(10), October 2026; published online January 20, 2026"
+  },
+  "revision_date": "2026-10-29"
+}

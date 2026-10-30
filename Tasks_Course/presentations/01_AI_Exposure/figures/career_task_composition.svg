@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img">
+<style>text{font-family:Palatino,"Palatino Linotype",Georgia,serif;fill:#242126} .muted{fill:#625b68}</style>
+<rect width="1200" height="340" fill="white"/>
+<rect x="405" y="10" width="17" height="17" rx="0" fill="#4f2683"/>
+<text x="429" y="27" font-size="21" text-anchor="start" font-weight="normal">E1: LLM alone</text>
+<rect x="655" y="10" width="17" height="17" rx="0" fill="#a66012"/>
+<text x="679" y="27" font-size="21" text-anchor="start" font-weight="normal">E2: software needed</text>
+<rect x="905" y="10" width="17" height="17" rx="0" fill="#9e98a6"/>
+<text x="929" y="27" font-size="21" text-anchor="start" font-weight="normal">E0: criterion not met</text>
+<line x1="405.0" y1="55" x2="405.0" y2="245" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="405.0" y="271" font-size="20" text-anchor="middle" font-weight="normal">0</text>
+<line x1="547.0" y1="55" x2="547.0" y2="245" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="547.0" y="271" font-size="20" text-anchor="middle" font-weight="normal">20</text>
+<line x1="689.0" y1="55" x2="689.0" y2="245" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="689.0" y="271" font-size="20" text-anchor="middle" font-weight="normal">40</text>
+<line x1="831.0" y1="55" x2="831.0" y2="245" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="831.0" y="271" font-size="20" text-anchor="middle" font-weight="normal">60</text>
+<line x1="973.0" y1="55" x2="973.0" y2="245" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="973.0" y="271" font-size="20" text-anchor="middle" font-weight="normal">80</text>
+<line x1="1115.0" y1="55" x2="1115.0" y2="245" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="1115.0" y="271" font-size="20" text-anchor="middle" font-weight="normal">100</text>
+<text x="760.0" y="302" font-size="22" text-anchor="middle" font-weight="normal">Weighted task share (%)</text>
+<text x="390" y="88" font-size="23" text-anchor="end" font-weight="normal">Management analysts</text>
+<rect x="405" y="65" width="135.23809523809524" height="32" rx="0" fill="#4f2683"/>
+<text x="472.6190476190476" y="88" font-size="22" text-anchor="middle" font-weight="normal" style="fill:white">19.0</text>
+<rect x="540.2380952380952" y="65" width="439.52380952380946" height="32" rx="0" fill="#a66012"/>
+<text x="759.9999999999999" y="88" font-size="22" text-anchor="middle" font-weight="normal" style="fill:white">61.9</text>
+<rect x="979.7619047619046" y="65" width="135.23809523809527" height="32" rx="0" fill="#9e98a6"/>
+<text x="1047.3809523809523" y="88" font-size="22" text-anchor="middle" font-weight="normal" style="fill:white">19.0</text>
+<text x="390" y="133" font-size="23" text-anchor="end" font-weight="normal">Credit analysts</text>
+<rect x="405" y="110" width="157.77777777777777" height="32" rx="0" fill="#4f2683"/>
+<text x="483.8888888888889" y="133" font-size="22" text-anchor="middle" font-weight="normal" style="fill:white">22.2</text>
+<rect x="562.7777777777778" y="110" width="473.33333333333326" height="32" rx="0" fill="#a66012"/>
+<text x="799.4444444444445" y="133" font-size="22" text-anchor="middle" font-weight="normal" style="fill:white">66.7</text>
+<rect x="1036.111111111111" y="110" width="78.88888888888891" height="32" rx="0" fill="#9e98a6"/>
+<text x="1075.5555555555557" y="133" font-size="22" text-anchor="middle" font-weight="normal" style="fill:white">11.1</text>
+<text x="390" y="178" font-size="23" text-anchor="end" font-weight="normal">Financial managers</text>
+<rect x="405" y="155" width="26.29629629629629" height="32" rx="0" fill="#4f2683"/>
+<text x="418.14814814814815" y="178" font-size="16" text-anchor="middle" font-weight="normal" style="fill:white">3.7</text>
+<rect x="431.2962962962963" y="155" width="552.2222222222222" height="32" rx="0" fill="#a66012"/>
+<text x="707.4074074074074" y="178" font-size="22" text-anchor="middle" font-weight="normal" style="fill:white">77.8</text>
+<rect x="983.5185185185185" y="155" width="131.48148148148147" height="32" rx="0" fill="#9e98a6"/>
+<text x="1049.2592592592591" y="178" font-size="22" text-anchor="middle" font-weight="normal" style="fill:white">18.5</text>
+<text x="390" y="223" font-size="23" text-anchor="end" font-weight="normal">Marketing managers</text>
+<rect x="405" y="200" width="155.3125" height="32" rx="0" fill="#4f2683"/>
+<text x="482.65625" y="223" font-size="22" text-anchor="middle" font-weight="normal" style="fill:white">21.9</text>
+<rect x="560.3125" y="200" width="510.3125" height="32" rx="0" fill="#a66012"/>
+<text x="815.46875" y="223" font-size="22" text-anchor="middle" font-weight="normal" style="fill:white">71.9</text>
+<rect x="1070.625" y="200" width="44.375" height="32" rx="0" fill="#9e98a6"/>
+<text x="1092.8125" y="223" font-size="16" text-anchor="middle" font-weight="normal" style="fill:white">6.2</text>
+</svg>

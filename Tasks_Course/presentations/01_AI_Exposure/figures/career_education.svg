@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img">
+<style>text{font-family:Palatino,"Palatino Linotype",Georgia,serif;fill:#242126} .muted{fill:#625b68}</style>
+<rect width="1200" height="440" fill="white"/>
+<rect x="405" y="10" width="17" height="17" rx="0" fill="#9e98a6"/>
+<text x="429" y="27" font-size="21" text-anchor="start" font-weight="normal">Below bachelor’s</text>
+<rect x="655" y="10" width="17" height="17" rx="0" fill="#4f2683"/>
+<text x="679" y="27" font-size="21" text-anchor="start" font-weight="normal">Bachelor’s degree</text>
+<rect x="905" y="10" width="17" height="17" rx="0" fill="#a66012"/>
+<text x="929" y="27" font-size="21" text-anchor="start" font-weight="normal">Beyond bachelor’s</text>
+<line x1="405.0" y1="60" x2="405.0" y2="357" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="405.0" y="383" font-size="20" text-anchor="middle" font-weight="normal">0</text>
+<line x1="547.0" y1="60" x2="547.0" y2="357" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="547.0" y="383" font-size="20" text-anchor="middle" font-weight="normal">20</text>
+<line x1="689.0" y1="60" x2="689.0" y2="357" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="689.0" y="383" font-size="20" text-anchor="middle" font-weight="normal">40</text>
+<line x1="831.0" y1="60" x2="831.0" y2="357" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="831.0" y="383" font-size="20" text-anchor="middle" font-weight="normal">60</text>
+<line x1="973.0" y1="60" x2="973.0" y2="357" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="973.0" y="383" font-size="20" text-anchor="middle" font-weight="normal">80</text>
+<line x1="1115.0" y1="60" x2="1115.0" y2="357" stroke="#ded8e5" stroke-width="1" stroke-dasharray=""/>
+<text x="1115.0" y="383" font-size="20" text-anchor="middle" font-weight="normal">100</text>
+<text x="760.0" y="414" font-size="22" text-anchor="middle" font-weight="normal">Share of required-education responses (%)</text>
+<text x="390" y="92" font-size="22" text-anchor="end" font-weight="normal">Credit analysts</text>
+<rect x="405" y="70" width="0.0" height="30" rx="0" fill="#9e98a6"/>
+<rect x="405.0" y="70" width="674.5" height="30" rx="0" fill="#4f2683"/>
+<text x="742.25" y="92" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">95</text>
+<rect x="1079.5" y="70" width="35.5" height="30" rx="0" fill="#a66012"/>
+<text x="390" y="133" font-size="22" text-anchor="end" font-weight="normal">Budget analysts</text>
+<rect x="405" y="111" width="170.187" height="30" rx="0" fill="#9e98a6"/>
+<text x="490.0935" y="133" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">24</text>
+<rect x="575.187" y="111" width="454.329" height="30" rx="0" fill="#4f2683"/>
+<text x="802.3515" y="133" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">64</text>
+<rect x="1029.516" y="111" width="85.484" height="30" rx="0" fill="#a66012"/>
+<text x="1072.258" y="133" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">12</text>
+<text x="390" y="174" font-size="22" text-anchor="end" font-weight="normal">Management analysts</text>
+<rect x="405" y="152" width="67.592" height="30" rx="0" fill="#9e98a6"/>
+<text x="438.796" y="174" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">10</text>
+<rect x="472.592" y="152" width="405.694" height="30" rx="0" fill="#4f2683"/>
+<text x="675.439" y="174" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">57</text>
+<rect x="878.2860000000001" y="152" width="236.643" height="30" rx="0" fill="#a66012"/>
+<text x="996.6075000000001" y="174" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">33</text>
+<text x="390" y="215" font-size="22" text-anchor="end" font-weight="normal">Market research analysts</text>
+<rect x="405" y="193" width="0.0" height="30" rx="0" fill="#9e98a6"/>
+<rect x="405.0" y="193" width="401.29200000000003" height="30" rx="0" fill="#4f2683"/>
+<text x="605.646" y="215" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">57</text>
+<rect x="806.292" y="193" width="308.708" height="30" rx="0" fill="#a66012"/>
+<text x="960.6460000000001" y="215" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">43</text>
+<text x="390" y="256" font-size="22" text-anchor="end" font-weight="normal">Securities &amp; financial services sales</text>
+<rect x="405" y="234" width="247.435" height="30" rx="0" fill="#9e98a6"/>
+<text x="528.7175" y="256" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">35</text>
+<rect x="652.435" y="234" width="392.63" height="30" rx="0" fill="#4f2683"/>
+<text x="848.75" y="256" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">55</text>
+<rect x="1045.065" y="234" width="69.793" height="30" rx="0" fill="#a66012"/>
+<text x="1079.9615000000001" y="256" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">10</text>
+<text x="390" y="297" font-size="22" text-anchor="end" font-weight="normal">Sales managers</text>
+<rect x="405" y="275" width="123.469" height="30" rx="0" fill="#9e98a6"/>
+<text x="466.7345" y="297" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">17</text>
+<rect x="528.469" y="275" width="463.06199999999995" height="30" rx="0" fill="#4f2683"/>
+<text x="760.0" y="297" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">65</text>
+<rect x="991.531" y="275" width="123.53999999999998" height="30" rx="0" fill="#a66012"/>
+<text x="1053.301" y="297" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">17</text>
+<text x="390" y="338" font-size="22" text-anchor="end" font-weight="normal">Economists</text>
+<rect x="405" y="316" width="0.0" height="30" rx="0" fill="#9e98a6"/>
+<rect x="405.0" y="316" width="0.0" height="30" rx="0" fill="#4f2683"/>
+<rect x="405.0" y="316" width="710.0" height="30" rx="0" fill="#a66012"/>
+<text x="760.0" y="338" font-size="21" text-anchor="middle" font-weight="normal" style="fill:white">100</text>
+</svg>
