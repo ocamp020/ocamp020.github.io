@@ -1,0 +1,11 @@
+occupation,technology,coefficient,clustered_se,ci95_lower,ci95_upper,observations,source_table,source_column,source_pdf_page
+Managers,Robots,0.014,0.0231,-0.031276,0.059275999999999995,46422,6,1,28
+Science professionals,Robots,0.014,0.0321,-0.04891599999999999,0.07691599999999998,20288,6,2,28
+Technical workers,Robots,-0.0256,0.0256,-0.075776,0.024575999999999997,72857,6,3,28
+Administrative workers,Robots,-0.1331,0.027,-0.18602,-0.08018,134132,6,4,28
+Operational workers,Robots,-0.1936,0.0386,-0.269256,-0.117944,149619,6,5,28
+Managers,Tools,0.0135,0.0271,-0.039616,0.066616,46422,6,1,28
+Science professionals,Tools,0.0116,0.0392,-0.065232,0.088432,20288,6,2,28
+Technical workers,Tools,0.0905,0.0302,0.031307999999999996,0.149692,72857,6,3,28
+Administrative workers,Tools,0.1086,0.0248,0.059992000000000004,0.15720800000000001,134132,6,4,28
+Operational workers,Tools,0.2318,0.0341,0.164964,0.298636,149619,6,5,28
