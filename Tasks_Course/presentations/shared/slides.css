@@ -23,6 +23,7 @@ body.reading .stage{display:block;height:auto;padding:30px}body.reading .slide{d
 .slide .columns>div{min-width:0}
 .slide .columns h2+ul{margin-top:24px}
 .slide .equation mjx-container[display="true"]{margin:0}
+.slide .purple-underbrace-labels mjx-container [data-mml-node="mtext"]{color:var(--purple);fill:var(--purple)}
 .slide .exposure-measures-heading{color:var(--purple)}
 .slide .exposure-measures{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:60px;align-items:center}
 .slide .exposure-measures .equation{margin:0;min-width:0}
