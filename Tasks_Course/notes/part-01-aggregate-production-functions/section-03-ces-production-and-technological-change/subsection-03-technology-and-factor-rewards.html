@@ -747,6 +747,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#two-ways-to-read-the-same-demand-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two ways to read the same demand schedule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixed-prices-inputs-adjust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed prices: inputs adjust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixed-supplies-prices-adjust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed supplies: prices adjust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-about-the-level-of-the-wage" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -774,7 +807,8 @@
 
 
 
-<p><a id="ref-subsec-tech-and-wages" class="course-anchor"></a></p>
+<p><a id="ref-subsec-tech-and-wages" class="course-anchor"></a>
+<a id="ref-subsec-ces-technology-factor-rewards" class="course-anchor"></a></p>
 <div class="section-meta">
 <p><a href="../index.html">Part 1</a> / <a href="index.html">Section 3: CES Production and Technological Change</a>
   <span>Section 3.3</span></p>
@@ -803,6 +837,44 @@ When <span class="arithmatex">\(\sigma=1\)</span>, all technological change is n
 Only when factors are easy to substitute does making one factor more productive raise its relative reward.
 When factors are hard to substitute, making one factor more productive ends up raising the relative reward to the other factor.
 In this second case the rewards go to the factor that is now relatively scarce in effective terms, not to the factor that is now more productive.</p>
+<h3 id="two-ways-to-read-the-same-demand-schedule">Two ways to read the same demand schedule<a class="headerlink" href="#two-ways-to-read-the-same-demand-schedule" title="Permanent link">&para;</a></h3>
+<p>The firm's optimal input mix and the equilibrium relative factor price are linked by the same condition.
+For the CES technology, we can write it as</p>
+<div class="arithmatex">\[\begin{equation}
+\frac{r}{w}
+=\frac{\alpha}{1-\alpha}
+\left(\frac{A_K}{A_L}\right)^{(\sigma-1)/\sigma}
+\left(\frac{K}{L}\right)^{-1/\sigma}. \tag{3.27}
+\end{equation}\]</div>
+<p>Here we switch from <span class="arithmatex">\(w/r\)</span> to <span class="arithmatex">\(r/w\)</span>, the price of <em>capital</em> in units of labor, so that we can draw capital's relative demand curve using capital per worker, <span class="arithmatex">\(K/L\)</span>, and its corresponding relative price.
+<a href="#ref-fig-ces-prices-or-supplies">Figure 9</a> plots this inverse relative demand schedule.
+It slopes downward: a lower rental price relative to the wage makes a higher capital--labor ratio optimal.
+Starting at <span class="arithmatex">\(A\)</span>, increase <span class="arithmatex">\(A_K\)</span> while holding <span class="arithmatex">\(A_L\)</span> and the other technology parameters fixed.
+Where we move next depends on whether prices or factor supplies are being held fixed.</p>
+<p><a id="ref-fig-ces-prices-or-supplies" class="course-anchor"></a></p>
+<figure class="course-figure"><img src="../../../figures/ces-prices-or-supplies.svg" alt="One technology change, two adjustment experiments"></figure>
+
+<h3 id="fixed-prices-inputs-adjust">Fixed prices: inputs adjust<a class="headerlink" href="#fixed-prices-inputs-adjust" title="Permanent link">&para;</a></h3>
+<p>If capital and labor are available at given prices, the relative price stays on the horizontal line.
+The firm moves from <span class="arithmatex">\(A\)</span> to <span class="arithmatex">\(B\)</span> and changes its input mix.
+The relative-demand condition gives</p>
+<div class="arithmatex">\[\begin{equation}
+\left.\dd\log(K/L)\right|_{r,w}=(\sigma-1)\dd\log A_K. \tag{3.28}
+\end{equation}\]</div>
+<p>The chosen <span class="arithmatex">\(K/L\)</span> rises when <span class="arithmatex">\(\sigma&gt;1\)</span> and falls when <span class="arithmatex">\(\sigma&lt;1\)</span>.
+This describes the input-mix adjustment in the fixed-output cost-minimization problem.
+Changes in the scale of production can change the levels of both inputs without altering this ratio.</p>
+<h3 id="fixed-supplies-prices-adjust">Fixed supplies: prices adjust<a class="headerlink" href="#fixed-supplies-prices-adjust" title="Permanent link">&para;</a></h3>
+<p>If the economy instead has given supplies <span class="arithmatex">\(\overline K\)</span> and <span class="arithmatex">\(\overline L\)</span>, it stays on the vertical line.
+The new equilibrium is <span class="arithmatex">\(C\)</span>, where the relative price makes firms willing to employ those supplies:</p>
+<div class="arithmatex">\[\begin{equation}
+\left.\dd\log(r/w)\right|_{K,L}
+=\frac{\sigma-1}{\sigma}\dd\log A_K. \tag{3.29}
+\end{equation}\]</div>
+<p>Capital's relative reward rises when <span class="arithmatex">\(\sigma&gt;1\)</span> and falls when <span class="arithmatex">\(\sigma&lt;1\)</span>.
+In the latter case, labor becomes relatively scarce in effective terms, so its relative reward increases.
+For <span class="arithmatex">\(\sigma=1\)</span>, the relative-demand curve does not shift and neither ratio changes.
+These are statements about relative prices: the graph alone does not determine whether the level of the real wage rises or falls.</p>
 <h3 id="what-about-the-level-of-the-wage">What about the level of the wage?<a class="headerlink" href="#what-about-the-level-of-the-wage" title="Permanent link">&para;</a></h3>
 <p>Does a decrease in the relative factor price <span class="arithmatex">\((w/r)\)</span> mean the wage itself falls when the rental rate rises by more?
 The answer under the CES technology is unambiguous: No.
@@ -811,13 +883,13 @@ In fact, any increase in capital-augmenting technology raises the level of the w
 price <span class="arithmatex">\(w/r\)</span>, not the level of the wage.
 To get at the effect of technological change in the level of wages we can look at the optimality condition for labor demand</p>
 <div class="arithmatex">\[\begin{align}
-\log \frac{w}{p} \;=\; \log(1-\alpha) \;+\;\frac{\sigma-1}{\sigma}\log z \;+\;\frac{\sigma-1}{\sigma}\log A_L \;-\;\frac{1}{\sigma}\log L \;+\;\frac{1}{\sigma}\log Y. \tag{3.27}
+\log \frac{w}{p} \;=\; \log(1-\alpha) \;+\;\frac{\sigma-1}{\sigma}\log z \;+\;\frac{\sigma-1}{\sigma}\log A_L \;-\;\frac{1}{\sigma}\log L \;+\;\frac{1}{\sigma}\log Y. \tag{3.30}
 \end{align}\]</div>
 <p>From here we can get the effect of a change in <span class="arithmatex">\(A_K\)</span> on the real wage <span class="arithmatex">\(w/p\)</span>.</p>
 <div class="arithmatex">\[\begin{align}
 \frac{\partial \log \frac{w}{p}}{\partial \log A_K}
 &amp; \;=\; \frac{1}{\sigma} \frac{\frac{\partial Y}{\partial \log A_K}}{Y}
-\;=\; \frac{1}{\sigma} \frac{\frac{\partial Y}{\partial A_K}}{Y} A_K \tag{3.28} \\
+\;=\; \frac{1}{\sigma} \frac{\frac{\partial Y}{\partial A_K}}{Y} A_K \tag{3.31} \\
 &amp; \;=\; \frac{1}{\sigma} \frac{ z
 \left(
 \alpha\left(A_K K\right)^{\frac{\sigma-1}{\sigma}}
@@ -833,7 +905,7 @@ To get at the effect of technological change in the level of wages we can look a
 \frac{\partial\log(w/p)}{\partial\log A_K}
 =\frac{\partial\log(w/p)}{\partial\log K}
 =\frac{\alpha_K}{\sigma}&gt;0.
-\tag{3.29}
+\tag{3.32}
 \end{equation}\]</div>
 <p>Thus, in this aggregate CES model, both capital deepening (a  term used for capital accumulation) and capital-augmenting technical change raise the real wage for every <span class="arithmatex">\(\sigma&gt;0\)</span>.
 The real rental rate <span class="arithmatex">\(r/p\)</span> may rise even more, causing <span class="arithmatex">\(w/r\)</span> to fall, but that does not undo the positive effect on the level of <span class="arithmatex">\(w/p\)</span>.</p>
