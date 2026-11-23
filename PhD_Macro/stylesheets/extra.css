@@ -751,3 +751,84 @@ body,
     transition: none;
   }
 }
+
+/* Keep equation, callout, and figure edges inside the course reading column. */
+.md-content,
+.md-content__inner,
+.md-typeset .admonition,
+.md-typeset details,
+.md-typeset div.arithmatex {
+  min-inline-size: 0;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  margin: 1.55rem 0;
+  background: var(--course-paper);
+}
+
+.md-typeset .admonition-title,
+.md-typeset details summary {
+  overflow-wrap: anywhere;
+  line-height: 1.38;
+  border-bottom: 1px solid var(--course-line);
+}
+
+.md-typeset details:not([open]) summary {
+  border-bottom: 0;
+}
+
+.md-typeset .admonition > :first-child + *,
+.md-typeset details > :first-child + * {
+  margin-top: 0.78rem;
+}
+
+.md-typeset div.arithmatex {
+  max-inline-size: 100%;
+}
+
+.md-typeset mjx-container[jax="CHTML"][display="true"] {
+  box-sizing: border-box;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--course-accent-soft) transparent;
+}
+
+.md-typeset mjx-container[data-course-scroll]:focus-visible {
+  outline: 2px solid var(--course-accent);
+  outline-offset: -2px;
+  border-radius: 0.3rem;
+}
+
+/* These existing Mermaid diagrams are the PhD site's network figures. */
+.md-typeset .mermaid {
+  box-sizing: border-box;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  margin: 1.6rem auto 2rem;
+  padding: clamp(0.65rem, 2vw, 1.15rem);
+  background: var(--course-paper);
+  border-radius: 0.9rem;
+  box-shadow: 0 10px 26px rgba(23, 53, 44, 0.06);
+}
+
+.md-typeset .mermaid svg {
+  max-width: 100% !important;
+}
+
+@media (max-width: 720px) {
+  .md-typeset .admonition,
+  .md-typeset details {
+    margin: 1.15rem 0;
+  }
+
+  .md-typeset mjx-container[jax="CHTML"][display="true"] {
+    margin-block: 0.9rem !important;
+  }
+
+  .md-typeset .mermaid {
+    margin-block: 1.2rem 1.45rem;
+  }
+}
